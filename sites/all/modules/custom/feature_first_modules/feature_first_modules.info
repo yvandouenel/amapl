@@ -1,0 +1,13 @@
+name = Feature first modules
+description = 4 premiers modules
+core = 7.x
+package = Generic Feature
+version = 7.x-1.0
+project = feature_first_modules
+dependencies[] = admin_menu
+dependencies[] = filter_perms
+dependencies[] = l10n_update
+dependencies[] = locale
+dependencies[] = module_filter
+features[features_api][] = api:2
+project path = sites/all/modules/custom
