@@ -158,38 +158,24 @@ function geofield_field_validate($entity_type, $entity, $field, $instance, $lang
   $backend = ctools_get_plugins('geofield', 'geofield_backend', $field['settings']['backend']);
 
   foreach ($items as $delta => $item) {
-    $geom_empty = geofield_geom_is_empty($item);
-
-    // Required field empty.
-    if ($instance['required'] && $geom_empty) {
-      $errors[$field['field_name']][$langcode][$delta][] = array(
-        'error' => 'data_missing', 
-        'message' => t('%name is required and must not be empty.', array('%name' => $instance['label'])),
-      );
-    }
-    else {
-      // Geometry errors.
-      if ($geom_empty) {
-        return FALSE;
+    // Geometry errors.
+    if (!geofield_geom_is_empty($item)) {
+      $error = geofield_validate_geom($item);
+      if ($error) {
+        $errors[$field['field_name']][$langcode][$delta][] = array(
+          'error' => 'data_faulty',
+          'message' => t('%name: Specified location data is invalid.', array('%name' => $instance['label'])),
+        );
       }
-      else {
-        $error = geofield_validate_geom($item);
+
+      if (!empty($backend['validate'])) {
+        $validate_callback = $backend['validate'];
+        $error = $validate_callback($item);
         if ($error) {
           $errors[$field['field_name']][$langcode][$delta][] = array(
-            'error' => 'data_faulty', 
+            'error' => 'data_faulty',
             'message' => t('%name: Specified location data is invalid.', array('%name' => $instance['label'])),
           );
-        }
-
-        if (!empty($backend['validate'])) {
-          $validate_callback = $backend['validate'];
-          $error = $validate_callback($item);
-          if ($error) {
-            $errors[$field['field_name']][$langcode][$delta][] = array(
-              'error' => 'data_faulty',
-              'message' => t('%name: Specified location data is invalid.', array('%name' => $instance['label'])),
-            );
-          }
         }
       }
     }

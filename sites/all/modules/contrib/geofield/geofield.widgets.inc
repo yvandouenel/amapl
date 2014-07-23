@@ -112,6 +112,9 @@ function geofield_field_widget_form(&$form, &$form_state, $field, $instance,
   switch ($widget['type']) {
     case 'geofield_wkt':
       $default_value = '';
+      if (!empty($instance['default_value'][0]['geom'])) {
+        $default_value = $instance['default_value'][0]['geom'];
+      }
       if (!empty($items[$delta]['geom'])) {
         geophp_load();
         $geometry = geoPHP::load($items[$delta]['geom']);
@@ -129,6 +132,9 @@ function geofield_field_widget_form(&$form, &$form_state, $field, $instance,
       break;
     case 'geofield_geojson':
       $default_value = '';
+      if (!empty($instance['default_value'][0]['geom'])) {
+        $default_value = $instance['default_value'][0]['geom'];
+      }
       if (!empty($items[$delta]['geom'])) {
         geophp_load();
         $geometry = geoPHP::load($items[$delta]['geom']);
@@ -150,6 +156,9 @@ function geofield_field_widget_form(&$form, &$form_state, $field, $instance,
         'lat' => '',
         'lon' => '',
       );
+      if (!empty($instance['default_value'][0]['geom'])) {
+        $latlon_value = $instance['default_value'][0]['geom'];
+      }
       if (isset($items[$delta]['lat'])) {
         $latlon_value['lat'] = floatval($items[$delta]['lat']);
       }
@@ -174,6 +183,9 @@ function geofield_field_widget_form(&$form, &$form_state, $field, $instance,
         'bottom' => '',
         'left' => '',
       );
+      if (!empty($instance['default_value'][0]['geom'])) {
+        $bounds_value = $instance['default_value'][0]['geom'];
+      }
       if (isset($items[$delta]['top'])) {
         $bounds_value['top'] = floatval($items[$delta]['top']);
       }
