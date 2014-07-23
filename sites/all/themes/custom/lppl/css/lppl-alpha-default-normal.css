@@ -1,3 +1,36 @@
-/* This file will hold styles that are loaded using the same media query as the normal grid. */
-/* If you are using the default media queries provided by Omega, these styles will also
- *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
+/* Liste des adhérents ********************************************************/
+body.page-aga-adherentes #block-system-main{
+  float: right;
+  width : 56.25%;
+}
+
+#block-views-aga-adherentes-block-1{
+  width : 39.58%;
+}
+#block-views-aga-adherentes-block-1 .clearfix:after{
+  clear:none;
+}
+body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
+  display : none;
+}
+
+#views-exposed-form-aga-adherentes-block-1:after{
+  content:'';
+  display:block;
+  clear: left;
+}
+.block-views-exp-aga-adherentes-page{
+  height: 50px;
+  width : 39.58%;
+}
+.block-views-exp-aga-adherentes-page label, .block-views-exp-aga-adherentes-page div.views-widget{
+ float: left;
+ margin-right : 20px;
+}
+.block-views-exp-aga-adherentes-page .views-exposed-form .views-exposed-widget .form-submit{
+  margin-top: 0;
+}
+/* fiche d'un adhérent ********************************************************/
+.group-coord div.field{
+  padding-left : 20px;
+}
