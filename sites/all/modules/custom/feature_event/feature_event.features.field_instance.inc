@@ -380,7 +380,7 @@ function feature_event_field_default_field_instances() {
       'active' => 1,
       'module' => 'atom_reference',
       'settings' => array(
-        'context' => 'sdl_editor_representation',
+        'context' => 'list',
       ),
       'type' => 'atom_reference_textfield',
       'weight' => 5,
