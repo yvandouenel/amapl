@@ -16,3 +16,17 @@
 function lppl_preprocess_html(&$vars){
   $vars['attributes_array']['class'][] = 'site-' . current(array_splice(explode('.', $_SERVER['SERVER_NAME']), -2, 1)); 
 }
+/*
+ * Hook preprocess_views_view
+ */
+/*function lppl_preprocess_views_view(&$vars) {
+  $view = &$vars['view'];
+  
+  // Make sure it's the correct view
+  if ($view->name == 'aga_adherentes' and $view->current_display  == 'block_1') {
+    dpm($view->name);
+    // add needed javascript
+    drupal_add_js(drupal_get_path('theme', 'lppl') . '/js/open-close-app.js');
+    
+  }
+}*/
