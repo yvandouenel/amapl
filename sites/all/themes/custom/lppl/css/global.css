@@ -1,22 +1,25 @@
 /* Global *************************************/
-.block-menu-block h2,.block-search h2{
+.block-menu-block h2,.block-search h2,
+.block-main-menu h2{
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
     overflow: hidden;
     position: absolute !important;
 }
-/* Menu haut **********************************/
+/* Menus haut et bas****************************/
 #block-menu-block-1{
   float:right;
 }
-.menu-name-menu-menu-haut ul li{
+.menu-name-menu-menu-haut ul li,
+.menu-name-menu-menu-bas ul li{
   float: left;
   list-style: none;
   border-left:1px solid #d4d4d4;
   margin: 0;
   padding: 0;
 }
-.menu-name-menu-menu-haut ul li a{
+.menu-name-menu-menu-haut ul li a,
+.menu-name-menu-menu-bas ul li a{
   display:block;
   color: #d4d4d4;
   padding : 0.2em 1.5em;
@@ -25,7 +28,71 @@
 #block-search-form{
   float :right;
 }
-/* gallerie ***********************************/
+/* moteur de recherche search engine **********/
+#search-block-form #edit-submit{
+  border: 0;
+  width: 28px;
+  height: 24px;
+  text-indent: -6000px;
+  background: transparent url(../images/icons/loupe.png) no-repeat 50% 5px;
+}
+/*logo ****************************************/
+#zone-branding h1{
+  font-size : 1.4em;
+}
+#region-branding #block-block-1{
+  float: left;
+}
+/* Menu principal *****************************/
+.block-system-main-menu ul.menu{
+  float: right;
+}
+.block-system-main-menu ul.menu>li{
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.block-system-main-menu ul.menu>li>a{
+  display:block;
+  text-decoration: none;
+  padding: 5px 20px;
+  color: #3b3c3e;
+  font-size: 1.4em;
+  border-radius : 6px;
+}
+.block-system-main-menu ul.menu>li>a.active,
+.block-system-main-menu ul.menu>li>a:hover{
+  background-color: #F45A40;
+  color: #f5ffff;
+}
+.block-system-main-menu ul.menu>li.first>a{
+  text-indent: -6000px;
+  background: transparent url(../images/icons/home.png) no-repeat 50% 5px;
+}
+.block-system-main-menu ul.menu>li.first>a.active,
+.block-system-main-menu ul.menu>li.first>a:hover{
+  background: #F45A40 url(../images/icons/home.png) no-repeat 50% 115%;
+}
+/* fil d'ariane *******************************/
+#breadcrumb{
+  
+}
+/* footer *************************************/
+#section-footer{
+  background: #2E2E2E url(../images/bg/bg_half_white.png) no-repeat 50% 0;
+}
+#region-footer-first{
+  background-color: #2E2E2E;
+}
+#block-block-2{
+  float: right;
+}
+#block-block-2 p{
+  margin: 0;
+  padding: 0;
+}
+/* galerie ************************************/
 .galleria-container {
   background: #A89C82;
   border-radius: 8px;
