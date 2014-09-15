@@ -1,3 +1,31 @@
+/* Global *************************************/
+.block-menu-block h2,.block-search h2{
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+}
+/* Menu haut **********************************/
+#block-menu-block-1{
+  float:right;
+}
+.menu-name-menu-menu-haut ul li{
+  float: left;
+  list-style: none;
+  border-left:1px solid #d4d4d4;
+  margin: 0;
+  padding: 0;
+}
+.menu-name-menu-menu-haut ul li a{
+  display:block;
+  color: #d4d4d4;
+  padding : 0.2em 1.5em;
+  text-decoration: none;
+}
+#block-search-form{
+  float :right;
+}
+/* gallerie ***********************************/
 .galleria-container {
   background: #A89C82;
   border-radius: 8px;
