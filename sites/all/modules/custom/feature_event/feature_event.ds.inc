@@ -32,6 +32,9 @@ function feature_event_ds_layout_settings_info() {
         9 => 'field_event_cost_public',
         10 => 'field_cost_members',
         11 => 'field_event_registration',
+        12 => 'field_event_linked',
+        13 => 'field_event_news_linked',
+        14 => 'field_event_article_linked',
       ),
     ),
     'fields' => array(
@@ -47,6 +50,9 @@ function feature_event_ds_layout_settings_info() {
       'field_event_cost_public' => 'ds_content',
       'field_cost_members' => 'ds_content',
       'field_event_registration' => 'ds_content',
+      'field_event_linked' => 'ds_content',
+      'field_event_news_linked' => 'ds_content',
+      'field_event_article_linked' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

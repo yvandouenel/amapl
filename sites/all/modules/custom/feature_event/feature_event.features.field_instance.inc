@@ -78,7 +78,7 @@ function feature_event_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 13,
+        'weight' => 10,
       ),
       'full' => array(
         'label' => 'above',
@@ -134,7 +134,7 @@ function feature_event_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'full' => array(
         'label' => 'above',
@@ -183,6 +183,55 @@ function feature_event_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_event_article_linked'
+  $field_instances['node-event-field_event_article_linked'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 14,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_article_linked',
+    'label' => 'Articles associés',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 20,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_event_cat'
   $field_instances['node-event-field_event_cat'] = array(
     'bundle' => 'event',
@@ -192,16 +241,15 @@ function feature_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 17,
+        'type' => 'hidden',
+        'weight' => 27,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -241,7 +289,7 @@ function feature_event_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 9,
       ),
       'full' => array(
         'label' => 'above',
@@ -296,13 +344,13 @@ function feature_event_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 8,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -343,7 +391,7 @@ function feature_event_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'full',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'above',
@@ -387,6 +435,58 @@ function feature_event_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_event_linked'
+  $field_instances['node-event-field_event_linked'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 12,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_linked',
+    'label' => 'Evénements liés',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 19,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_event_new_window'
   $field_instances['node-event-field_event_new_window'] = array(
     'bundle' => 'event',
@@ -402,13 +502,13 @@ function feature_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 25,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -435,6 +535,58 @@ function feature_event_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_event_news_linked'
+  $field_instances['node-event-field_event_news_linked'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 13,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_event_news_linked',
+    'label' => 'Actualités liées',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete_tags',
+      'weight' => 18,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_event_place'
   $field_instances['node-event-field_event_place'] = array(
     'bundle' => 'event',
@@ -447,7 +599,7 @@ function feature_event_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'above',
@@ -503,13 +655,13 @@ function feature_event_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -563,7 +715,7 @@ function feature_event_field_default_field_instances() {
           'label' => ' S\'inscrire',
         ),
         'type' => 'registration_link',
-        'weight' => 14,
+        'weight' => 11,
       ),
       'full' => array(
         'label' => 'above',
@@ -630,7 +782,7 @@ function feature_event_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'above',
@@ -678,16 +830,15 @@ function feature_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 16,
+        'type' => 'hidden',
+        'weight' => 26,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -726,13 +877,13 @@ function feature_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 24,
       ),
       'full' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -776,7 +927,7 @@ function feature_event_field_default_field_instances() {
         'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'sdl_editor_representation',
-        'weight' => 7,
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'above',
@@ -830,7 +981,7 @@ function feature_event_field_default_field_instances() {
         'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
-        'weight' => 9,
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'above',
@@ -950,7 +1101,9 @@ function feature_event_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Actualités liées');
   t('Affiché en page d\'accueil');
+  t('Articles associés');
   t('Body');
   t('Catégories');
   t('Commentaires');
@@ -959,6 +1112,7 @@ function feature_event_field_default_field_instances() {
   t('Dates d\'événement');
   t('Dates de parution');
   t('Donner ici l\'url qui contient l\'information complète. ');
+  t('Evénements liés');
   t('Fichiers attachés');
   t('Image');
   t('Inscription');
