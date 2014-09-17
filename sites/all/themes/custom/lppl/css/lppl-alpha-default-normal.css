@@ -1,3 +1,65 @@
+#block-bean-je-m-installe{
+  width: 32.29%;
+  height: 270px;
+  float: left;
+  background-color: #F3F2EE;
+}
+#block-bean-je-m-installe a, #block-bean-je-m-installe div,
+#block-bean-je-m-installe h2{
+  display: block;
+  text-align: center;
+}
+#block-bean-je-m-installe div.field-item>a{
+  background-color: #F45A40;
+  border-radius: 6px;
+  text-transform: uppercase;
+  color: #f5ffff;
+  padding: 15px;
+  width: 50%;
+  margin: 0 auto;
+}
+/* bloc édito *****************************************************************/
+#block-bean-edito{
+  width: 67.71%;
+  height: 270px;
+  float: left;
+  background-color: #24CDB8;
+  color: white;
+}
+#block-bean-edito a{ 
+  color: #44484B;
+}
+#block-bean-edito ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#block-bean-edito ul li{
+
+}
+#block-bean-edito ul li a{ 
+  padding-left: 15px;
+  background: url(../images/icons/arrow_dark.png) no-repeat 0 50%;
+}
+#block-bean-edito p{
+  margin: 5px 0;
+  padding: 0;
+}
+#block-bean-edito:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+#block-bean-edito div.field-name-field-texte{
+  padding:  15px 35px 5px 35px;
+  position: relative;
+}
+#block-bean-edito div.image{
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+}
+
 /* Liste des adhérents ********************************************************/
 body.page-aga-adherentes #block-system-main{
   float: right;
@@ -33,4 +95,14 @@ body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
 /* fiche d'un adhérent ********************************************************/
 .group-coord div.field{
   padding-left : 20px;
+}
+/* Actualités page d'accueil **************************************************/
+#block-views-news-block-1{
+  float:left;
+  width: 22.9166666666666%;
+}
+/* Agenda - evenement page d'accueil ******************************************/
+#block-views-events-block-evenements-home{
+  float:left;
+  width: 22.9166666666666%;
 }

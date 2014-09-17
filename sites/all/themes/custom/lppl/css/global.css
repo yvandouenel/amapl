@@ -1,4 +1,7 @@
 /* Global *************************************/
+body,h1, h2, h3, h4, h5, h6{
+  font-family: 'Signika', sans-serif;
+}
 .block-menu-block h2,.block-search h2,
 .block-main-menu h2{
     clip: rect(1px, 1px, 1px, 1px);
@@ -22,11 +25,14 @@
 .menu-name-menu-menu-bas ul li a{
   display:block;
   color: #d4d4d4;
-  padding : 0.2em 1.5em;
+  padding : 0.5em 1.5em;
   text-decoration: none;
 }
 #block-search-form{
   float :right;
+  border-right: 1px solid #d4d4d4;
+  margin-top:0.3em;
+  padding-left: 5px;
 }
 /* moteur de recherche search engine **********/
 #search-block-form #edit-submit{
@@ -44,9 +50,11 @@
   float: left;
 }
 /* Menu principal *****************************/
-.block-system-main-menu ul.menu{
+#block-system-main-menu{
   float: right;
+  margin: 30px 0;
 }
+
 .block-system-main-menu ul.menu>li{
   float: left;
   list-style: none;
@@ -77,6 +85,11 @@
 /* fil d'ariane *******************************/
 #breadcrumb{
   
+}
+/* Block je m'installe ************************/
+#block-bean-je-m-installe h2.block-title{
+  font-size: 3em;
+  color: #44484B;
 }
 /* footer *************************************/
 #section-footer{
