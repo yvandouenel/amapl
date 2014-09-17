@@ -227,6 +227,8 @@ function feature_event_views_default_views() {
 
   /* Display: Bloc événements */
   $handler = $view->new_display('block', 'Bloc événements', 'block_evenements_home');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'block-events-home';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
