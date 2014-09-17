@@ -12,6 +12,70 @@ function feature_block_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['bean-edito'] = array(
+    'cache' => 1,
+    'custom' => 0,
+    'delta' => 'edito',
+    'module' => 'bean',
+    'node_types' => array(),
+    'pages' => '<front>',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'lppl' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'lppl',
+        'weight' => -17,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 1,
+  );
+
+  $export['bean-je-m-installe'] = array(
+    'cache' => 1,
+    'custom' => 0,
+    'delta' => 'je-m-installe',
+    'module' => 'bean',
+    'node_types' => array(),
+    'pages' => '<front>',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'lppl' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'lppl',
+        'weight' => -18,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
   $export['block-logo'] = array(
     'cache' => -1,
     'custom' => 0,

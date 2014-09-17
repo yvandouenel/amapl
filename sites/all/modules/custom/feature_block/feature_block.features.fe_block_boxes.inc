@@ -14,9 +14,8 @@ function feature_block_default_fe_block_boxes() {
   $fe_block_boxes->info = 'logo et baseline';
   $fe_block_boxes->format = 'full_html';
   $fe_block_boxes->machine_name = 'logo';
-  $fe_block_boxes->body = '<h1><a href="/."><img alt="LPPL.fr" src="/sites/lppl.fr/files/images/logo-lppl.png" style="height:60px; width:227px" /></a><br />
-Le Portail des Professions Libérales</h1>
-';
+  $fe_block_boxes->body = '<h1><a href="/."><img alt="LPPL.fr" src="/sites/lppl.fr/files/images/logo-lppl.png" style="height:60px; width:227px" /><br />
+Le Portail des Professions Libérales</a></h1>';
 
   $export['logo'] = $fe_block_boxes;
 
