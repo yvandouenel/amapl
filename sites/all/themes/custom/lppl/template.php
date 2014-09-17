@@ -16,6 +16,13 @@
 function lppl_preprocess_html(&$vars){
   $vars['attributes_array']['class'][] = 'site-' . current(array_splice(explode('.', $_SERVER['SERVER_NAME']), -2, 1)); 
 }
+/**
+ * Add a google font
+ */
+function omega_preprocess_html(&$variables) {
+  drupal_add_css('http://fonts.googleapis.com/css?family=Roboto',array('type' => 'external'));
+  drupal_add_css('http://fonts.googleapis.com/css?family=Signika',array('type' => 'external'));
+}
 /*
  * Hook preprocess_views_view
  */
