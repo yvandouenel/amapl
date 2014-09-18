@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Le savez-vous feature.
+ */
+
+include_once 'le_savez_vous.features.inc';
