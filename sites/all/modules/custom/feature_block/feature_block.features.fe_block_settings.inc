@@ -31,7 +31,7 @@ function feature_block_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'lppl',
-        'weight' => -17,
+        'weight' => -18,
       ),
       'seven' => array(
         'region' => '',
@@ -63,7 +63,7 @@ function feature_block_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'lppl',
-        'weight' => -18,
+        'weight' => -19,
       ),
       'seven' => array(
         'region' => '',
@@ -202,6 +202,38 @@ function feature_block_default_fe_block_settings() {
     ),
     'title' => 'Menu bas',
     'visibility' => 0,
+  );
+
+  $export['views-le_saviez_vous_ss-block'] = array(
+    'cache' => -1,
+    'custom' => 0,
+    'delta' => 'le_saviez_vous_ss-block',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '<front>',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'lppl' => array(
+        'region' => 'content',
+        'status' => 1,
+        'theme' => 'lppl',
+        'weight' => -17,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'LE SAVEZ-VOUS ?',
+    'visibility' => 1,
   );
 
   return $export;
