@@ -64,10 +64,12 @@
 #views_slideshow_controls_text_pause_le_saviez_vous_ss-block{
   display: none;
 }
-
+#block-views-le-saviez-vous-ss-block .views-field-body-1{
+  margin-top: 13px;
+}
 #block-views-le-saviez-vous-ss-block .views-field-body{
   padding: 0 25px;
-  margin-top: 13px;
+  margin-top: 6px;
 }
 #block-views-le-saviez-vous-ss-block .dnd-atom-wrapper{
   display: block;
