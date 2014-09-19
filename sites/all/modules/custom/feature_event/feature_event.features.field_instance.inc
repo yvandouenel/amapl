@@ -824,9 +824,48 @@ function feature_event_field_default_field_instances() {
   // Exported field_instance: 'node-event-field_event_tags'
   $field_instances['node-event-field_event_tags'] = array(
     'bundle' => 'event',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'tid' => 30,
+        'vid' => 1,
+        'name' => 'Tout',
+        'description' => '',
+        'format' => 'full_html',
+        'weight' => 0,
+        'vocabulary_machine_name' => 'tags',
+        'rdf_mapping' => array(
+          'description' => array(
+            'predicates' => array(
+              0 => 'skos:definition',
+            ),
+          ),
+          'name' => array(
+            'predicates' => array(
+              0 => 'rdfs:label',
+              1 => 'skos:prefLabel',
+            ),
+          ),
+          'parent' => array(
+            'predicates' => array(
+              0 => 'skos:broader',
+            ),
+            'type' => 'rel',
+          ),
+          'rdftype' => array(
+            0 => 'skos:Concept',
+          ),
+          'vid' => array(
+            'predicates' => array(
+              0 => 'skos:inScheme',
+            ),
+            'type' => 'rel',
+          ),
+        ),
+      ),
+    ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Mots clés descriptifs de l\'événement pour une éventuelle liaison avec des pages classiques ou d\'atterrissage. Si le terme "Tout" est présent, merci de le laisser.
+Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré 3 lettres.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -850,7 +889,7 @@ function feature_event_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_event_tags',
     'label' => 'Mots clés',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -1120,6 +1159,8 @@ function feature_event_field_default_field_instances() {
   t('Lien vers nouvelle fenêtre');
   t('Lieu');
   t('Mots clés');
+  t('Mots clés descriptifs de l\'événement pour une éventuelle liaison avec des pages classiques ou d\'atterrissage. Si le terme "Tout" est présent, merci de le laisser.
+Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré 3 lettres.');
   t('Tél.');
   t('Url de destination');
   t('Vidéo');
