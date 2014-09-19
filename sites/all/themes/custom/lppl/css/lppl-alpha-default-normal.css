@@ -149,11 +149,20 @@ body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
   
 }
 #block-views-news-block-1 h3 a, 
-#block-views-events-block-evenements-home h3 a{
+#block-views-events-block-evenements-home h3 a,
+#views_slideshow_cycle_main_le_saviez_vous_ss-block a{
   text-decoration: none;
   color: #f45a40;
   display: block;
   margin-top: 12px;
+}
+#views_slideshow_cycle_main_le_saviez_vous_ss-block a:hover{
+  text-decoration: underline;
+}
+#block-views-news-block-1 h3 a, 
+#block-views-events-block-evenements-home h3 a{
+  font-size: 1.1em;
+  font-weight: normal;
 }
 #block-views-events-block-evenements-home .views-field-field-date{
   margin-top: 12px;

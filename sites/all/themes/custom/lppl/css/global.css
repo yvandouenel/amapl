@@ -6,6 +6,22 @@ a:hover, body h3 a:hover, #block-views-news-block-1 h3 a:hover,
 #block-views-events-block-evenements-home h3 a:hover{
   text-decoration: underline;
 }
+a.fleche-sombre{
+  color: #44484B;
+  background: transparent url(../images/icons/arrow_dark_link.png) no-repeat 100% 50%;
+  display: inline-block;
+  padding-right: 20px;
+  text-decoration: none;
+  border-bottom: 1px solid #44484B;
+}
+div.more-link a{
+  color: #f45a40;
+  background: transparent url(../images/icons/arrow_orange_link.png) no-repeat 100% 50%;
+  display: inline-block;
+  padding-right: 20px;
+  text-decoration: none;
+  border-bottom: 1px solid #f45a40;
+}
 h1, h2, h3, h4, h5, h6{
   color: #44484B;
 }
