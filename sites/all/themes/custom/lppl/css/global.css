@@ -2,6 +2,9 @@
 body,h1, h2, h3, h4, h5, h6{
   font-family: 'Signika', sans-serif;
 }
+h2#page-title{
+  font-size: 1.8em;
+}
 a:hover, body h3 a:hover, #block-views-news-block-1 h3 a:hover, 
 #block-views-events-block-evenements-home h3 a:hover{
   text-decoration: underline;

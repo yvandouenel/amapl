@@ -183,3 +183,35 @@ body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
   background: url(../images/icons/icon_calendar.png) no-repeat 0 0;
   padding-left: 20px;
 }
+/* Mise en page sur deux colonnes**********************************************/
+.paragraphs-items-field-2col-first{
+  float: left;
+  width: 48%;
+}
+.paragraphs-items-field-2col-second{
+  float: left;
+  width: 50%;
+  margin-left: 2%
+}
+.paragraphs-items-field-2col-second:after{
+  content: "";
+  display: block;
+  clear: left;
+  margin-bottom: 40px;
+}
+.field-name-field-tpb-button a{
+  display: block;
+  background-color: #3ED3C0;
+  float: right;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+.paragraphs-item-titre-paragraphe-bouton{
+  padding-bottom: 5px;
+  border-bottom: 2px solid #919499;
+  margin-bottom: 20px;
+}
