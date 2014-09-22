@@ -27,10 +27,7 @@
 #block-bean-edito div.field-name-field-texte{
   padding:  15px 35px 5px 35px;
 }
-#block-bean-edito div.image{
-  bottom: 20px;
-  right: 30px;
-}
+
 /* Bloc Le savez-vous *********************************************************/
 #block-views-le-saviez-vous-ss-block{
   float:left;
@@ -61,9 +58,7 @@
   height: 40px;
   background: url(../images/icons/arrow_ss_know_it_right.png) no-repeat 0 50%;
 }
-#views_slideshow_controls_text_pause_le_saviez_vous_ss-block{
-  display: none;
-}
+
 #block-views-le-saviez-vous-ss-block .views-field-body-1{
   margin-top: 13px;
 }
@@ -81,6 +76,7 @@
 #widget_pager_top_le_saviez_vous_ss-block{
   float: right;
   margin: -30px 20px 0 0;
+  display: block;
 }
 #widget_pager_top_le_saviez_vous_ss-block .views-slideshow-pager-field-item{
   float: left;
@@ -193,25 +189,14 @@ body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
   width: 50%;
   margin-left: 2%
 }
+.paragraphs-items-field-2col-second div.image{
+  margin-top: -35px;
+  display: block;
+}
 .paragraphs-items-field-2col-second:after{
   content: "";
   display: block;
   clear: left;
   margin-bottom: 40px;
 }
-.field-name-field-tpb-button a{
-  display: block;
-  background-color: #3ED3C0;
-  float: right;
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
-  padding: 5px 10px;
-  border-radius: 6px;
-  margin-top: 10px;
-}
-.paragraphs-item-titre-paragraphe-bouton{
-  padding-bottom: 5px;
-  border-bottom: 2px solid #919499;
-  margin-bottom: 20px;
-}
+

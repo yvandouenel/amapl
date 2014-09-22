@@ -7,3 +7,11 @@
   float: left;
   background: #F3F2EE url(../images/bg/map_europe.jpg) no-repeat 0 50%;
 }
+#block-bean-edito div.image img{
+  max-width: 100%;
+}
+
+#block-bean-edito div.image{
+  bottom: 20px;
+  right: 30px;
+}

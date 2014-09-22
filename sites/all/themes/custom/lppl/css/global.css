@@ -1,9 +1,16 @@
 /* Global *************************************/
 body,h1, h2, h3, h4, h5, h6{
-  font-family: 'Signika', sans-serif;
+  /*font-family: 'Signika', sans-serif;*/
+  font-family: 'Roboto', sans-serif;
+}
+img{
+  max-width: 100%;
 }
 h2#page-title{
   font-size: 1.8em;
+}
+.field-name-field-tpb-title h3{
+  font-size: 1.5em;
 }
 a:hover, body h3 a:hover, #block-views-news-block-1 h3 a:hover, 
 #block-views-events-block-evenements-home h3 a:hover{
@@ -149,6 +156,9 @@ h1, h2, h3, h4, h5, h6{
   background-color: #24CDB8;
   color: white;
 }
+#block-bean-edito div.image img{
+  max-width: 50%;
+}
 #block-bean-edito a{ 
   color: #44484B;
 }
@@ -172,13 +182,17 @@ h1, h2, h3, h4, h5, h6{
   clear: both;
 }
 #block-bean-edito div.field-name-field-texte{
+  padding:  10px 10px 5px 10px;
+}
+#block-bean-edito div.field-name-field-texte{
   padding:  10px 15px 5px 15px;
   position: relative;
 }
 #block-bean-edito div.image{
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 100px;
+  position: absolute;
+  right: -30px;
 }
 /* footer *************************************/
 #section-footer{
@@ -203,3 +217,60 @@ h1, h2, h3, h4, h5, h6{
   float :left;
   margin : 10px 10px 10px 0;
 }
+/* blocks droite ******************************/
+.block-views-events-block-1, #block-views-liste-articles-block-1{
+  background-color: #f3f2f2;
+  padding: 16px;
+}
+.block-views-events-block-1 h2.block-title,
+#block-views-news-block-2 h2.block-title,
+#block-views-liste-articles-block-1 h2.block-title{
+  text-transform: uppercase;
+  font-size: 1.4em;
+  border-bottom: 2px solid #F45A40;
+  width: 55%;
+}
+#block-views-news-block-2{
+  background-color: #e1e0e1;
+  padding: 16px;
+}
+.block-views-events-block-1 h3 a,
+#block-views-news-block-2 h3 a,
+#block-views-liste-articles-block-1 a{
+  color: #f45a40;
+  text-decoration: none;
+}
+.block-views-events-block-1 h3 a:hover,
+#block-views-news-block-2 h3 a:hover,
+#block-views-liste-articles-block-1 a:hover{
+  text-decoration: underline;
+}
+/* Mise en page sur deux colonnes *********************************************/
+.field-name-field-tpb-button a{
+  display: block;
+  background-color: #3ED3C0;
+  float: right;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+.paragraphs-item-titre-paragraphe-bouton{
+  padding-bottom: 5px;
+  border-bottom: 2px solid #919499;
+  margin-bottom: 20px;
+}
+.paragraphs-items-field-2col-second div.image{
+  display: none;
+}
+/* Block savez-vous slideshow *************************************************/
+#views_slideshow_controls_text_pause_le_saviez_vous_ss-block{
+  display: none;
+}
+#widget_pager_top_le_saviez_vous_ss-block{
+  display: none;
+}
+
+
