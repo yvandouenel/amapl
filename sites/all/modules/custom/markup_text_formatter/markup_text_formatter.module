@@ -1,0 +1,277 @@
+<?php
+
+/**
+ * @file
+ * Advanced Text Formatter
+ */
+
+
+
+/**
+ * Implements hook_field_widget_info_alter().
+ */
+function markup_text_formatter_field_widget_info_alter(&$info) {
+  if (module_exists('token')) {
+    $info['text_textarea']['settings']['show_token_tree'] = FALSE;
+    $info['text_textfield']['settings']['show_token_tree'] = FALSE;
+    $info['text_textarea_with_summary']['settings']['show_token_tree'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function markup_text_formatter_field_widget_text_textarea_form_alter(&$element, &$form_state, $context) {
+  $instance = $context['instance'];
+
+  if (!module_exists('token') || empty($instance['widget']['settings']['show_token_tree'])) {
+    return;
+  }
+
+  $description = trim($element['#description']);
+
+  if (!empty($description)) {
+    if (substr($description, -1) != '.') {
+      $description .= '. ';
+    }
+    else {
+      $description .= ' ';
+    }
+  }
+
+  $description .= _markup_text_formatter_browse_tokens($instance['entity_type']);
+
+  $element['#description'] = $description;
+  $element['value']['#description'] = $description;
+}
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function markup_text_formatter_field_widget_text_textfield_form_alter(&$element, &$form_state, $context) {
+  $instance = $context['instance'];
+
+  if (!module_exists('token') || empty($instance['widget']['settings']['show_token_tree'])) {
+    return;
+  }
+
+  $description = trim($element['#description']);
+
+  if (!empty($description)) {
+    if (substr($description, -1) != '.') {
+      $description .= '. ';
+    }
+    else {
+      $description .= ' ';
+    }
+  }
+
+  $description .= _markup_text_formatter_browse_tokens($instance['entity_type']);
+
+  $element['#description'] = $description;
+  $element['value']['#description'] = $description;
+}
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function markup_text_formatter_field_widget_text_textarea_with_summary_form_alter(&$element, &$form_state, $context) {
+  $instance = $context['instance'];
+
+  if (!module_exists('token') || empty($instance['widget']['settings']['show_token_tree'])) {
+    return;
+  }
+
+  if (empty($element['#pre_render'])) {
+    $info = element_info('text_format');
+    $element['#pre_render'] = empty($info['#pre_render']) ? array() : $info['#pre_render'];
+  }
+
+  $element['#pre_render'][] = '_markup_text_formatter_field_add_token_tree';
+}
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function markup_text_formatter_field_formatter_info() {
+  $default_tags = array(
+    'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'br',
+  );
+
+  return array(
+    'markup_text' => array(
+      'label'       => t('Markup Text'),
+      'field types' => array('text'),
+      'settings'    => array(
+      'markup'   => 'h3',
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_settings_form().
+ */
+function markup_text_formatter_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+  $display  = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+  $element  = array();
+
+  if ($display['type'] == 'markup_text') {
+    
+   $element['markup'] = array(
+      '#type'             => 'textfield',
+      '#title'            => t('Markup'),
+      '#description'      => t("Give the markup with witch to wrap the field."),
+      '#size'             => 10,
+      '#required'         => TRUE,
+    );
+  
+  }
+
+  return $element;
+}
+
+/**
+ * Implements hook_field_formatter_settings_summary().
+ */
+function markup_text_formatter_field_formatter_settings_summary($field, $instance, $view_mode) {
+  $display  = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+  $summary  = array();
+
+  if ($display['type'] == 'markup_text') {
+    $yes = t('Yes');
+    $no  = t('No');
+
+    $summary[] = t('Markup') . ' : ' . $settings['markup'];
+    
+
+    
+  }
+
+  $summary = array_filter($summary);
+
+  return implode('<br/>', $summary);
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function markup_text_formatter_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+  $settings_markup = $display['settings']['markup']; // get the settings
+ 
+  switch ($display['type']) {
+    case 'markup_text':
+      //dpm( $items);
+      if(isset($items[0]['safe_value'])){
+        $output = $items[0]['safe_value'];
+        foreach ($items as $delta => $item) {
+
+          $element[$delta]['#markup'] = $output;
+          $element[$delta]['#suffix'] = '</'.$settings_markup.'>';
+          $element[$delta]['#prefix'] = '<'.$settings_markup.'>';
+
+        }
+      }
+      break;
+  }
+
+  return $element;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function markup_text_formatter_form_field_ui_field_edit_form_alter(&$form, &$form_state) {
+  if (!module_exists('token')) {
+    return;
+  }
+
+  $instance    = $form_state['build_info']['args'][0];
+  $widget_type = $instance['widget']['type'];
+
+  switch ($widget_type) {
+    case 'text_textarea':
+    case 'text_textfield':
+    case 'text_textarea_with_summary':
+      $form['instance']['widget']['settings']['show_token_tree'] = array(
+        '#type'          => 'checkbox',
+        '#title'         => t("Show available tokens in field's description"),
+        '#return_value'  => 1,
+        '#default_value' => empty($instance['widget']['settings']['show_token_tree']) ? 0 : 1,
+      );
+
+      break;
+  }
+}
+
+
+/**
+ * Get a link to browse for available tokens.
+ *
+ * @param mixed $token_types
+ *   A string or array contains the token types. See theme_token_tree() for more
+ *   details.
+ *
+ * @return string
+ *   A HTML link
+ */
+function _markup_text_formatter_browse_tokens($token_types) {
+  if (!module_exists('token')) {
+    return;
+  }
+
+  if (!is_array($token_types)) {
+    $token_types = array($token_types);
+  }
+
+  $vars['token_types'] = $token_types;
+
+  return theme('token_tree_link', $vars);
+}
+
+/**
+ * Add available tokens link to text_format element.
+ *
+ * @param array $element
+ *   Form element
+ *
+ * @return array
+ *   Form element
+ */
+function _markup_text_formatter_field_add_token_tree($element) {
+  $element['format']['show_token'] = array(
+    '#type' => 'container',
+    'link'  => array(
+      '#markup' => _markup_text_formatter_browse_tokens($element['#entity_type']),
+    ),
+    '#attributes' => array(
+      'class' => array('clearfix'),
+    ),
+    '#weight' => 99,
+  );
+
+  return $element;
+}
+
+/**
+ * Change tags from string to array to speed up the formatter view.
+ *
+ * @param array $element
+ *   Form element.
+ *
+ * @param array $form_state
+ *   Form state.
+ */
+function _markup_text_formatter_validate_allowed_html($element, &$form_state) {
+  $tags  = array();
+  $value = isset($element['#value']) ? trim($element['#value']) : '';
+
+  if (!empty($value)) {
+    $tags = preg_split('/\s+|<|>/', $value, -1, PREG_SPLIT_NO_EMPTY);
+  }
+
+  drupal_array_set_nested_value($form_state['values'], $element['#parents'], $tags);
+}
