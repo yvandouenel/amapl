@@ -15,3 +15,7 @@
   bottom: 20px;
   right: 30px;
 }
+.block-views-events-block-1, #block-views-liste-articles-block-1,
+#block-views-le-saviez-vous-ss-block{
+  padding: 16px;
+}

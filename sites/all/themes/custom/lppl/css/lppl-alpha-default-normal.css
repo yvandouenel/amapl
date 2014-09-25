@@ -37,6 +37,7 @@
   margin: 20px 0 0 0;
   position: relative;
   overflow: hidden;
+  clear: none;
 }
 #views_slideshow_controls_text_previous_le_saviez_vous_ss-block{
   position: absolute;
@@ -73,23 +74,9 @@
   display: block;
   text-align: center;
 }
-#widget_pager_top_le_saviez_vous_ss-block{
-  float: right;
-  margin: -30px 20px 0 0;
-  display: block;
-}
-#widget_pager_top_le_saviez_vous_ss-block .views-slideshow-pager-field-item{
-  float: left;
-  width: 10px;
-  height:16px;
-  text-indent: -6000px;
-  margin-left:  10px;
-  background: url(../images/icons/li_do_you_know.png) no-repeat 100% 50%;
-  cursor:pointer;
-}
-#widget_pager_top_le_saviez_vous_ss-block .views-slideshow-pager-field-item.active{
-  background: url(../images/icons/li_do_you_know.png) no-repeat 0 50%;
-  
+
+#views_slideshow_cycle_teaser_section_le_saviez_vous_ss-block{
+  height: 220px !important;
 }
 /* Liste des adhérents ********************************************************/
 body.page-aga-adherentes #block-system-main{
@@ -131,18 +118,14 @@ body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
 #block-views-news-block-1{
   float:left;
   width: 31.25%;
-  background: url(../images/illustrations/actu.png) no-repeat 0 0;
+  background: white url(../images/illustrations/actu.png) no-repeat 0 0;
   padding: 60px 0 0 0;
   margin: 20px 0 0 1.0416667%;
 }
 #block-views-news-block-1 h2.block-title, 
 #block-views-events-block-evenements-home h2.block-title,
 #block-views-le-saviez-vous-ss-block h2.block-title{
-  text-transform: uppercase;
-  width: 135px;
-  padding-bottom: 13px;
-  border-bottom: 2px solid #44484B;
-  
+  padding: 0 0 13px 0;
 }
 #block-views-news-block-1 h3 a, 
 #block-views-events-block-evenements-home h3 a,
@@ -152,9 +135,7 @@ body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
   display: block;
   margin-top: 12px;
 }
-#views_slideshow_cycle_main_le_saviez_vous_ss-block a:hover{
-  text-decoration: underline;
-}
+
 #block-views-news-block-1 h3 a, 
 #block-views-events-block-evenements-home h3 a{
   font-size: 1.1em;

@@ -218,9 +218,10 @@ h1, h2, h3, h4, h5, h6{
   margin : 10px 10px 10px 0;
 }
 /* blocks droite ******************************/
-.block-views-events-block-1, #block-views-liste-articles-block-1{
+.block-views-events-block-1, #block-views-liste-articles-block-1,
+#block-views-le-saviez-vous-ss-block{
   background-color: #f3f2f2;
-  padding: 16px;
+  padding: 8px;
 }
 .block-views-events-block-1 h2.block-title,
 #block-views-news-block-2 h2.block-title,
@@ -239,6 +240,7 @@ h1, h2, h3, h4, h5, h6{
 #block-views-liste-articles-block-1 a{
   color: #f45a40;
   text-decoration: none;
+  font-weight: normal;
 }
 .block-views-events-block-1 h3 a:hover,
 #block-views-news-block-2 h3 a:hover,
@@ -266,11 +268,67 @@ h1, h2, h3, h4, h5, h6{
   display: none;
 }
 /* Block savez-vous slideshow *************************************************/
+#block-views-le-saviez-vous-ss-block{
+  clear: both;
+}
+#widget_pager_top_le_saviez_vous_ss-block{
+  float: right;
+  margin: -30px 20px 0 0;
+  display: block;
+}
+#widget_pager_top_le_saviez_vous_ss-block .views-slideshow-pager-field-item{
+  float: left;
+  width: 10px;
+  height:16px;
+  text-indent: -6000px;
+  margin-left:  10px;
+  background: url(../images/icons/li_do_you_know.png) no-repeat 100% 50%;
+  cursor:pointer;
+}
+#views_slideshow_controls_text_le_saviez_vous_ss{
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+#widget_pager_top_le_saviez_vous_ss-block .views-slideshow-pager-field-item.active{
+  background: url(../images/icons/li_do_you_know.png) no-repeat 0 50%;
+}
 #views_slideshow_controls_text_pause_le_saviez_vous_ss-block{
   display: none;
 }
-#widget_pager_top_le_saviez_vous_ss-block{
-  display: none;
+/* Actualités et Agenda page d'accueil ****************************************/
+#block-views-news-block-1{
+  background-color: #e1e0e1;
+  padding: 16px;
+}
+#block-views-events-block-evenements-home{
+  background-color: #f3f2f2;
+  padding: 16px;
+  margin-bottom:20px;
+}
+
+
+#block-views-news-block-1 h2.block-title, 
+#block-views-events-block-evenements-home h2.block-title,
+#block-views-le-saviez-vous-ss-block h2.block-title{
+  text-transform: uppercase;
+  width: 135px;
+  border-bottom: 2px solid #44484B;
+  padding: 15px 0 13px 0;
+}
+#views_slideshow_cycle_teaser_section_le_saviez_vous_ss-block{
+  height: 140px ! important;
+}
+
+#block-views-news-block-1 h3 a, 
+#block-views-events-block-evenements-home h3 a,
+#views_slideshow_cycle_main_le_saviez_vous_ss-block a{
+  text-decoration: none;
+  color: #f45a40;
+  font-weight: normal;
+}
+#views_slideshow_cycle_main_le_saviez_vous_ss-block a:hover{
+  text-decoration: underline;
 }
 
 
