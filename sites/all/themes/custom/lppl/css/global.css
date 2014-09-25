@@ -3,6 +3,9 @@ body,h1, h2, h3, h4, h5, h6{
   /*font-family: 'Signika', sans-serif;*/
   font-family: 'Roboto', sans-serif;
 }
+a,a:link, a:visited{
+    color: #41D4C1;
+}
 img{
   max-width: 100%;
 }
@@ -35,13 +38,13 @@ div.more-link a{
 h1, h2, h3, h4, h5, h6{
   color: #44484B;
 }
-.block-menu-block h2,.block-search h2,
+/*.block-menu-block h2,.block-search h2,
 .block-main-menu h2{
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
     overflow: hidden;
     position: absolute !important;
-}
+}*/
 /* Menus haut et bas****************************/
 #block-menu-block-1{
   float:right;
@@ -115,9 +118,51 @@ h1, h2, h3, h4, h5, h6{
 .block-system-main-menu ul.menu>li.first>a:hover{
   background: #F45A40 url(../images/icons/home.png) no-repeat 50% 115%;
 }
+#block-system-main-menu ul>li>ul{
+    display: none;
+}
 /* fil d'ariane *******************************/
 #breadcrumb{
   
+}
+/* Menu secondaire ****************************/
+#block-menu-block-3 h2{
+    background-color: #f45a40;
+    padding: 12px;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2em;
+}
+div.menu-block-3 ul.menu>li{
+    list-style: none;
+    margin:0;
+}
+div.menu-block-3>ul.menu>li{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #c4c4c4;
+}
+div.menu-block-3>ul.menu>li.active-trail{
+    background-color: #f0efee;
+}
+div.menu-block-3>ul a{
+    text-decoration: none;
+    color: black;
+}
+div.menu-block-3>ul a.active{
+    color: #F45A40;
+}
+div.menu-block-3>ul>li>a{
+    display: block;
+    padding-left: 10px;
+}
+div.menu-block-3>ul>li>ul>li>a{
+    display: block;
+    padding-left: 20px;
+}
+div.menu-block-3>ul>li>ul>li>a:before{
+    content: "> ";
 }
 /* Block je m'installe ************************/
 #block-bean-je-m-installe h2.block-title{
