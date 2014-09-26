@@ -81,18 +81,26 @@
 /* Liste des adhérents ********************************************************/
 body.page-aga-adherentes #block-system-main{
   float: right;
-  width : 56.25%;
-}
-
-#block-views-aga-adherentes-block-1{
   width : 39.58%;
+}
+#block-views-aga-adherentes-block-1{
+  width : 56.25%;
 }
 #block-views-aga-adherentes-block-1 .clearfix:after{
   clear:none;
 }
-body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
-  display : none;
+/* Détail d'un adhérent ********************************************************/
+.node-aga-membre.ds-2col-fluid > .group-left {
+    width: 56.25%;
+}/* Détail d'un adhérent ********************************************************/
+.node-aga-membre.ds-2col-fluid > .group-right{
+    width: 31.25%;
+    float: left;
+    padding-bottom: 110px;
+    background: url(../images/icons/local.png) no-repeat 65% 100%;
 }
+
+
 
 #views-exposed-form-aga-adherentes-block-1:after{
   content:'';
@@ -106,6 +114,9 @@ body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
 .block-views-exp-aga-adherentes-page label, .block-views-exp-aga-adherentes-page div.views-widget{
  float: left;
  margin-right : 20px;
+}
+.block-views-exp-aga-adherentes-page div.views-widget{
+ margin : 0;
 }
 .block-views-exp-aga-adherentes-page .views-exposed-form .views-exposed-widget .form-submit{
   margin-top: 0;
@@ -180,4 +191,5 @@ body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
   clear: left;
   margin-bottom: 40px;
 }
+
 

@@ -6,11 +6,18 @@ body,h1, h2, h3, h4, h5, h6{
 a,a:link, a:visited{
     color: #41D4C1;
 }
+div.breadcrumb a:last-child{
+  text-decoration: none;
+  color: black;
+}
 img{
   max-width: 100%;
 }
 h2#page-title{
   font-size: 1.8em;
+}
+#logo-lppl{
+    margin: 20px 0 20px 30px;
 }
 .field-name-field-tpb-title h3{
   font-size: 1.5em;
@@ -38,13 +45,15 @@ div.more-link a{
 h1, h2, h3, h4, h5, h6{
   color: #44484B;
 }
-/*.block-menu-block h2,.block-search h2,
-.block-main-menu h2{
+.block-search h2,
+.block-main-menu h2, 
+.block-menu-block-1 h2,
+.block-menu-block-2 h2{
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
     overflow: hidden;
     position: absolute !important;
-}*/
+}
 /* Menus haut et bas****************************/
 #block-menu-block-1{
   float:right;
@@ -161,6 +170,10 @@ div.menu-block-3>ul>li>ul>li>a{
     display: block;
     padding-left: 20px;
 }
+div.menu-block-3>ul>li>ul>li>ul>li>a{
+    display: block;
+    padding-left: 30px;
+}
 div.menu-block-3>ul>li>ul>li>a:before{
     content: "> ";
 }
@@ -193,6 +206,12 @@ div.menu-block-3>ul>li>ul>li>a:before{
   padding: 15px;
   width: 50%;
   margin: 0 auto 0 auto;
+  text-decoration: none;
+  font-weight: bold;
+}
+#block-bean-je-m-installe div.field-item{
+  
+  font-weight: bold;
 }
 /* bloc édito *****************************************************************/
 #block-bean-edito{
@@ -293,7 +312,7 @@ div.menu-block-3>ul>li>ul>li>a:before{
   text-decoration: underline;
 }
 /* Mise en page sur deux colonnes *********************************************/
-.field-name-field-tpb-button a{
+.field-name-field-tpb-button a,a.list-link-aga{
   display: block;
   background-color: #3ED3C0;
   float: right;
@@ -304,6 +323,14 @@ div.menu-block-3>ul>li>ul>li>a:before{
   border-radius: 6px;
   margin-top: 10px;
 }
+a.list-link-aga {
+    float: none;
+    margin: 5px 0 0 35%;
+    text-align: center;
+    width: 60%;
+}
+
+
 .paragraphs-item-titre-paragraphe-bouton{
   padding-bottom: 5px;
   border-bottom: 2px solid #919499;
@@ -375,5 +402,54 @@ div.menu-block-3>ul>li>ul>li>a:before{
 #views_slideshow_cycle_main_le_saviez_vous_ss-block a:hover{
   text-decoration: underline;
 }
+/* Trouver votre interlocuteur aga liste ************************/
+body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
+  display : none;
+}
+#edit-submit-aga-adherentes{
+    width: 25px;
+    height: 23px;
+    background: url(../images/icons/loupe_orange.png) no-repeat 0 50%;
+    border-radius: 0;
+    text-indent: -6000px;
+    border: 0;
+}
+#block-views-aga-adherentes-block-1 h2{
+    text-transform: uppercase;
+    font-size: 1.6em;
+    font-weight: lighter;
+}
+.view-aga-adherentes .views-row{
+    border-bottom: 1px solid #F45A40;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.h3_list_aga a{
+    color: #F45A40;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.view-aga-adherentes .views-row a img{
+   float: right;
+}
+.node-aga-membre .ds-2col-fluid > .group-left {
+    width: 50%;
+}
+.field-name-field-aga-logo img{
+    float: right;
+    margin: 0 10px 10px 10px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background-color: #3ED3C0;
+    background-image: none;
+    margin-bottom: 20px;
+    color: white;
+}
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+    color: white/*{fcDefault}*/;
+    text-decoration: none;
+}
+
+
 
 
