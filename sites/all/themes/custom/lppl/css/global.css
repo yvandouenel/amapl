@@ -449,6 +449,44 @@ body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
     color: white/*{fcDefault}*/;
     text-decoration: none;
 }
+/* Page Agenda - événement - evenement *********************************************************/
+label, div.views-widget{
+    display: inline-block;
+}
+#views-exposed-form-events-page label{
+    font-weight: normal;
+}
+h3.title-event-list a{
+    text-decoration: none;
+    color: #F45A40;
+    font-weight: normal;
+    display: block;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+.views-field .views-label{
+    font-weight: bold;
+}
+.views-field .field-content{
+    display: inline-block;
+}
+div.view-events .views-field-field-event-image{
+    float: right;
+}
+div.view-id-events div.views-row {
+    border-bottom: 1px solid #F45A40;
+    padding-bottom: 5px;
+}
+div.view-id-events h2 {
+    text-transform: uppercase;
+    font-size: 1.6em;
+    font-weight: lighter;
+
+}
+
+
+
+
 
 
 
