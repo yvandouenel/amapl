@@ -30,7 +30,7 @@ function feature_news_views_pre_render(&$view) {
                   }
                   $value->field_field_news_url_target[0]['rendered']['#markup'] = '<h3 class="title-news-list"><a '.$target.' href="'.$custom_url.'">'.$value->node_title.'</a></h3>';
                 }else {
-                  $href = ' href="'.drupal_get_path_alias("node/".$value->nid).'" ';
+                  $href = ' href="/'.drupal_get_path_alias("node/".$value->nid).'" ';
                   $value->field_field_news_url_target[0]['rendered']['#markup'] = '<h3 class="title-news-list"><a href="/node/'.$value->nid.'">'.$value->node_title.'</a></h3>';
                   if (sizeof($value->field_field_news_image) > 0) {
                     $value->field_field_news_image[0]['rendered']['#markup'] = '<a '.$href.'>'.$value->field_field_news_image[0]['rendered']['#markup'].'</a>';

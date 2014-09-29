@@ -52,6 +52,7 @@ function feature_news_field_default_field_instances() {
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
+        'show_token_tree' => FALSE,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
@@ -113,7 +114,7 @@ function feature_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 20,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -199,7 +200,7 @@ function feature_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 20,
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -331,7 +332,7 @@ function feature_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -368,7 +369,7 @@ function feature_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 21,
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -448,13 +449,13 @@ function feature_news_field_default_field_instances() {
     ),
     'deleted' => 0,
     'description' => 'Mots clés descriptifs de l\'actualité pour une éventuelle liaison avec des pages classiques ou d\'atterrissage. Si le terme "Tout" est présent, merci de le laisser.
-Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré 3 lettres.',
+Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré au moins 1 lettre.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -493,7 +494,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -518,6 +519,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'show_token_tree' => FALSE,
         'size' => 60,
       ),
       'type' => 'text_textfield',
@@ -633,7 +635,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
   t('Lien vers nouvelle fenêtre');
   t('Mots clés');
   t('Mots clés descriptifs de l\'actualité pour une éventuelle liaison avec des pages classiques ou d\'atterrissage. Si le terme "Tout" est présent, merci de le laisser.
-Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré 3 lettres.');
+Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré au moins 1 lettre.');
   t('URL de destination');
   t('Vidéo');
 
