@@ -90,14 +90,25 @@ body.page-aga-adherentes #block-system-main{
   clear:none;
 }
 /* Détail d'un adhérent ********************************************************/
-.node-aga-membre.ds-2col-fluid > .group-left {
+.node-aga-membre.ds-2col-fluid > .group-left,
+.node-event > .group-left{
     width: 56.25%;
-}/* Détail d'un adhérent ********************************************************/
-.node-aga-membre.ds-2col-fluid > .group-right{
-    width: 31.25%;
+}
+/* Détail d'un adhérent ********************************************************/
+.node-aga-membre.ds-2col-fluid > .group-right,
+.node-event > .group-right,
+.node-news > .group-right{
+    width: 42.85%;
     float: left;
+}
+.node-aga-membre.ds-2col-fluid > .group-right{
     padding-bottom: 110px;
     background: url(../images/icons/local.png) no-repeat 65% 100%;
+}
+.node-event > .group-left,
+.node-news > .group-left{
+    margin-right: 1.0416666%;
+    width: 56.108334%;
 }
 
 
@@ -133,19 +144,7 @@ body.page-aga-adherentes #block-system-main{
   padding: 60px 0 0 0;
   margin: 20px 0 0 1.0416667%;
 }
-#block-views-news-block-1 h2.block-title, 
-#block-views-events-block-evenements-home h2.block-title,
-#block-views-le-saviez-vous-ss-block h2.block-title{
-  padding: 0 0 13px 0;
-}
-#block-views-news-block-1 h3 a, 
-#block-views-events-block-evenements-home h3 a,
-#views_slideshow_cycle_main_le_saviez_vous_ss-block a{
-  text-decoration: none;
-  color: #f45a40;
-  display: block;
-  margin-top: 12px;
-}
+
 
 #block-views-news-block-1 h3 a, 
 #block-views-events-block-evenements-home h3 a{

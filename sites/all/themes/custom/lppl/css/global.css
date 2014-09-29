@@ -6,6 +6,10 @@ body,h1, h2, h3, h4, h5, h6{
 a,a:link, a:visited{
     color: #41D4C1;
 }
+a:hover{
+    text-decoration: underline;
+}
+
 div.breadcrumb a:last-child{
   text-decoration: none;
   color: black;
@@ -261,6 +265,7 @@ div.menu-block-3>ul>li>ul>li>a:before{
 /* footer *************************************/
 #section-footer{
   background: #2E2E2E url(../images/bg/bg_half_white.png) no-repeat 50% 0;
+  margin-top: 15px;
 }
 #region-footer-first{
   background-color: #2E2E2E;
@@ -289,22 +294,47 @@ div.menu-block-3>ul>li>ul>li>a:before{
 }
 .block-views-events-block-1 h2.block-title,
 #block-views-news-block-2 h2.block-title,
-#block-views-liste-articles-block-1 h2.block-title{
+#block-views-liste-articles-block-1 h2.block-title,
+.field-name-field-event-linked .field-label,
+.field-name-field-event-news-linked .field-label,
+.field-name-field-event-article-linked .field-label,
+.field-name-field-news-linked .field-label,
+.field-name-field-news-event-linked .field-label,
+.field-name-field-news-article-linked .field-label{
   text-transform: uppercase;
-  font-size: 1.4em;
+  font-size: 1.1em;
   border-bottom: 2px solid #F45A40;
-  width: 55%;
+  width: 65%;
 }
-#block-views-news-block-2{
+
+#block-views-news-block-2, .field-name-field-event-linked,
+.field-name-field-event-news-linked,
+.field-name-field-news-event-linked{
   background-color: #e1e0e1;
+  padding: 16px;
+}
+.field-name-field-event-linked,.field-name-field-event-article-linked,
+.field-name-field-news-linked,
+.field-name-field-news-article-linked  {
+  background-color: #f3f2f2;
   padding: 16px;
 }
 .block-views-events-block-1 h3 a,
 #block-views-news-block-2 h3 a,
-#block-views-liste-articles-block-1 a{
+#block-views-liste-articles-block-1 a,
+.field-name-field-event-linked a,
+.field-name-field-event-news-linked a,
+.field-name-field-event-article-linked a,
+.field-name-field-news-article-linked a,
+.field-name-field-news-event-linked a,
+.field-name-field-news-linked a{
   color: #f45a40;
   text-decoration: none;
   font-weight: normal;
+  display: block;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  background: url(../images/icons/arrow_orange_small.png) no-repeat 0 7px;
 }
 .block-views-events-block-1 h3 a:hover,
 #block-views-news-block-2 h3 a:hover,
@@ -329,7 +359,14 @@ a.list-link-aga {
     text-align: center;
     width: 60%;
 }
-
+.group-accordion-appointment{
+    margin-top: 15px;
+    width: 98%;
+}
+.group-accordion-appointment .form-text{
+    width: 80%;
+    float: right;
+}
 
 .paragraphs-item-titre-paragraphe-bouton{
   padding-bottom: 5px;
@@ -378,7 +415,31 @@ a.list-link-aga {
   padding: 16px;
   margin-bottom:20px;
 }
+#block-views-events-block-evenements-home .views-row {
+    background: url("../images/icons/icon_calendar.png") no-repeat scroll 0 2px rgba(0, 0, 0, 0);
+    padding-left: 20px;
+    margin-top: 15px;
+}
 
+#block-views-news-block-1 h2.block-title, 
+#block-views-events-block-evenements-home h2.block-title,
+#block-views-le-saviez-vous-ss-block h2.block-title{
+  padding: 0 0 13px 0;
+}
+#block-views-news-block-1 h3 a, 
+#block-views-events-block-evenements-home h3 a,
+#views_slideshow_cycle_main_le_saviez_vous_ss-block a{
+  text-decoration: none;
+  color: #f45a40;
+  display: block;
+  margin-top: 12px;
+}
+
+body.front .views-field-field-news-image,
+.view-id-news .views-field-field-news-image{
+    float:left;
+    margin-right : 10px;
+}
 
 #block-views-news-block-1 h2.block-title, 
 #block-views-events-block-evenements-home h2.block-title,
@@ -456,7 +517,24 @@ label, div.views-widget{
 #views-exposed-form-events-page label{
     font-weight: normal;
 }
-h3.title-event-list a{
+body.page-s-informer-actualites .views-field-body {
+    width: 60%;
+    float: left;
+}
+
+body.page-s-informer-actualites .views-row:after {
+   content: "";
+   display: block;
+   clear: both;
+
+}
+body.page-s-informer-actualites .views-row{
+    clear: both;
+}
+
+
+h3.title-event-list a,
+h3.title-news-list a{
     text-decoration: none;
     color: #F45A40;
     font-weight: normal;
@@ -473,16 +551,80 @@ h3.title-event-list a{
 div.view-events .views-field-field-event-image{
     float: right;
 }
-div.view-id-events div.views-row {
+body.not-front div.view-id-events div.views-row,
+.page-s-informer-actualites div.views-row {
     border-bottom: 1px solid #F45A40;
     padding-bottom: 5px;
+}
+.page-s-informer-actualites div.views-row.views-row-last {
+    border: 0;
+    margin-bottom: 20px;
 }
 div.view-id-events h2 {
     text-transform: uppercase;
     font-size: 1.6em;
     font-weight: lighter;
-
 }
+div.group-right .group-practical-event{
+    background-color: #23cdb7;
+    padding: 15px;
+    color: white;
+    font-weight : bold;
+}
+div.group-right .group-practical-event{
+    padding: 15px;
+    background: #23cdb7 url(../images/bg/bg_white_line_practical.png) no-repeat 50% 45px;
+    margin-bottom: 10px;
+}
+div.group-right .group-practical-event h3{
+    color: white;
+    padding-bottom: 26px;
+    background: url(../images/icons/feuille.png) no-repeat 95% 50%;
+    font-size: 1.6em;
+}
+div.group-right .group-practical-event span.date-display-start:after{
+    content: "";
+    display:block;
+}
+div.group-right .group-practical-event .date-display-single span.date-display-end:after{
+    content: "";
+    display:block;
+}
+div.group-right .group-practical-event div.image a{
+    color: #44484B;
+    font-weight: normal;
+}
+div.group-right .group-practical-event .subscribe-event a{
+    display: block;
+    padding: 12px 20px;
+    background-color: #f56e57;
+    color: white;
+    font-size: 1.6em;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    width: 50%;
+    margin: 10px auto;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 3px black; 
+}
+div.group-right .group-practical-event a:hover{
+    text-decoration: underline;
+}
+div.field-name-field-event-place{
+    margin-bottom : 15px;
+}
+div.field-name-field-cost-members>div.field-label,
+div.field-name-field-cost-members div.field-item,
+div.field-name-field-event-cost-public>div.field-label,
+div.field-name-field-event-cost-public div.field-item{
+   font-size: 1.2em;
+}
+div.field-name-field-cost-members>div.field-label:before,
+div.field-name-field-event-cost-public>div.field-label:before{
+    content : "  > ";
+}
+
 
 
 
