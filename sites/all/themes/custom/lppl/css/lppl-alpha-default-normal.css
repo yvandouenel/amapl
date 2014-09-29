@@ -91,13 +91,15 @@ body.page-aga-adherentes #block-system-main{
 }
 /* Détail d'un adhérent ********************************************************/
 .node-aga-membre.ds-2col-fluid > .group-left,
-.node-event > .group-left{
+.node-event > .group-left,
+.ds-2col.node-article > .group-left{
     width: 56.25%;
 }
 /* Détail d'un adhérent ********************************************************/
 .node-aga-membre.ds-2col-fluid > .group-right,
 .node-event > .group-right,
-.node-news > .group-right{
+.node-news > .group-right,
+.ds-2col.node-article > .group-right{
     width: 42.85%;
     float: left;
 }

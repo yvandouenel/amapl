@@ -9,6 +9,21 @@ a,a:link, a:visited{
 a:hover{
     text-decoration: underline;
 }
+.field-name-body h3{
+    text-transform: uppercase;
+    border-bottom: 2px solid #44484B;
+    padding: 15px 0 13px 0;
+    margin-bottom: 5px
+    font-weight: normal;
+    font-size: 1.4em;
+}
+.field-name-body h4{
+    text-transform: uppercase;
+    border-bottom: 1px dotted #44484B;
+    padding: 15px 0 5px 0;
+    margin-bottom: 5px
+
+}
 
 div.breadcrumb a:last-child{
   text-decoration: none;
@@ -300,22 +315,29 @@ div.menu-block-3>ul>li>ul>li>a:before{
 .field-name-field-event-article-linked .field-label,
 .field-name-field-news-linked .field-label,
 .field-name-field-news-event-linked .field-label,
-.field-name-field-news-article-linked .field-label{
+.field-name-field-news-article-linked .field-label,
+.field-name-field-article-news-linked .field-label,
+.field-name-field-article-event-linked .field-label,
+.field-name-field-article-linked .field-label{
   text-transform: uppercase;
   font-size: 1.1em;
   border-bottom: 2px solid #F45A40;
-  width: 65%;
+  width: 75%;
+  margin-bottom: 5px;
 }
 
 #block-views-news-block-2, .field-name-field-event-linked,
 .field-name-field-event-news-linked,
-.field-name-field-news-event-linked{
+.field-name-field-news-event-linked,
+.field-name-field-article-event-linked,
+.field-name-field-article-linked{
   background-color: #e1e0e1;
   padding: 16px;
 }
 .field-name-field-event-linked,.field-name-field-event-article-linked,
 .field-name-field-news-linked,
-.field-name-field-news-article-linked  {
+.field-name-field-news-article-linked,
+.field-name-field-article-news-linked {
   background-color: #f3f2f2;
   padding: 16px;
 }
@@ -327,7 +349,10 @@ div.menu-block-3>ul>li>ul>li>a:before{
 .field-name-field-event-article-linked a,
 .field-name-field-news-article-linked a,
 .field-name-field-news-event-linked a,
-.field-name-field-news-linked a{
+.field-name-field-news-linked a,
+.field-name-field-article-news-linked a,
+.field-name-field-article-event-linked a,
+.field-name-field-article-linked a{
   color: #f45a40;
   text-decoration: none;
   font-weight: normal;
@@ -534,13 +559,17 @@ body.page-s-informer-actualites .views-row{
 
 
 h3.title-event-list a,
-h3.title-news-list a{
+h3.title-news-list a,
+a h3.title-articles-list{
     text-decoration: none;
     color: #F45A40;
     font-weight: normal;
     display: block;
     font-size: 1.2em;
     margin-top: 10px;
+}
+.view-liste-articles .views-field-title a{
+    text-decoration : none;
 }
 .views-field .views-label{
     font-weight: bold;
@@ -552,7 +581,8 @@ div.view-events .views-field-field-event-image{
     float: right;
 }
 body.not-front div.view-id-events div.views-row,
-.page-s-informer-actualites div.views-row {
+.page-s-informer-actualites div.views-row,
+ .view-liste-articles div.views-row{
     border-bottom: 1px solid #F45A40;
     padding-bottom: 5px;
 }
@@ -560,7 +590,8 @@ body.not-front div.view-id-events div.views-row,
     border: 0;
     margin-bottom: 20px;
 }
-div.view-id-events h2 {
+div.view-id-events h2,
+div.view-liste-articles h2  {
     text-transform: uppercase;
     font-size: 1.6em;
     font-weight: lighter;
