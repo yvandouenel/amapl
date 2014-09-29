@@ -13,13 +13,13 @@ function feature_event_user_default_roles() {
   // Exported role: administrator.
   $roles['administrator'] = array(
     'name' => 'administrator',
-    'weight' => 3,
+    'weight' => 4,
   );
 
   // Exported role: webmaster.
   $roles['webmaster'] = array(
     'name' => 'webmaster',
-    'weight' => 2,
+    'weight' => 3,
   );
 
   return $roles;

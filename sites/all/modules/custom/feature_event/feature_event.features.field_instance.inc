@@ -22,7 +22,7 @@ function feature_event_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -59,6 +59,7 @@ function feature_event_field_default_field_instances() {
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
+        'show_token_tree' => FALSE,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
@@ -74,11 +75,11 @@ function feature_event_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 35,
       ),
       'full' => array(
         'label' => 'above',
@@ -110,6 +111,7 @@ function feature_event_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'show_token_tree' => FALSE,
         'size' => 60,
       ),
       'type' => 'text_textfield',
@@ -117,27 +119,14 @@ function feature_event_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-event-field_date'
-  $field_instances['node-event-field_date'] = array(
+  // Exported field_instance: 'node-event-field_dates'
+  $field_instances['node-event-field_dates'] = array(
     'bundle' => 'event',
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
-        'weight' => 1,
-      ),
-      'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'long_francais',
@@ -147,7 +136,7 @@ function feature_event_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 1,
+        'weight' => 32,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -157,9 +146,9 @@ function feature_event_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_date',
-    'label' => 'Dates d\'événement',
-    'required' => 1,
+    'field_name' => 'field_dates',
+    'label' => 'Dates de l\'événement',
+    'required' => 0,
     'settings' => array(
       'default_value' => 'now',
       'default_value2' => 'same',
@@ -172,7 +161,7 @@ function feature_event_field_default_field_instances() {
       'module' => 'date',
       'settings' => array(
         'increment' => 15,
-        'input_format' => 'm/d/Y - H:i:s',
+        'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
         'text_parts' => array(),
@@ -197,13 +186,7 @@ function feature_event_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 14,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -243,7 +226,7 @@ function feature_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 24,
       ),
       'full' => array(
         'label' => 'above',
@@ -285,11 +268,11 @@ function feature_event_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 36,
       ),
       'full' => array(
         'label' => 'above',
@@ -321,6 +304,7 @@ function feature_event_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'show_token_tree' => FALSE,
         'size' => 60,
       ),
       'type' => 'text_textfield',
@@ -341,9 +325,8 @@ function feature_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 5,
       ),
       'full' => array(
@@ -385,7 +368,7 @@ function feature_event_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'domainedo_media',
         'settings' => array(
           'link' => 0,
@@ -449,7 +432,7 @@ function feature_event_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 12,
+        'weight' => 9,
       ),
       'full' => array(
         'label' => 'above',
@@ -502,7 +485,7 @@ function feature_event_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 22,
       ),
       'full' => array(
         'label' => 'above',
@@ -549,7 +532,7 @@ function feature_event_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 13,
+        'weight' => 10,
       ),
       'full' => array(
         'label' => 'above',
@@ -595,11 +578,11 @@ function feature_event_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 34,
       ),
       'full' => array(
         'label' => 'above',
@@ -631,6 +614,7 @@ function feature_event_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'show_token_tree' => FALSE,
         'size' => 60,
       ),
       'type' => 'text_textfield',
@@ -646,15 +630,8 @@ function feature_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'full' => array(
@@ -709,13 +686,13 @@ function feature_event_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'registration',
         'settings' => array(
           'label' => ' S\'inscrire',
         ),
         'type' => 'registration_link',
-        'weight' => 11,
+        'weight' => 38,
       ),
       'full' => array(
         'label' => 'above',
@@ -778,11 +755,11 @@ function feature_event_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 0,
       ),
       'full' => array(
         'label' => 'above',
@@ -814,6 +791,7 @@ function feature_event_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'show_token_tree' => FALSE,
         'size' => 60,
       ),
       'type' => 'text_textfield',
@@ -865,13 +843,13 @@ function feature_event_field_default_field_instances() {
     ),
     'deleted' => 0,
     'description' => 'Mots clés descriptifs de l\'événement pour une éventuelle liaison avec des pages classiques ou d\'atterrissage. Si le terme "Tout" est présent, merci de le laisser.
-Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré 3 lettres.',
+Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré au moins 1 lettre.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 23,
       ),
       'full' => array(
         'label' => 'above',
@@ -916,7 +894,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 21,
       ),
       'full' => array(
         'label' => 'above',
@@ -947,6 +925,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'show_token_tree' => FALSE,
         'size' => 60,
       ),
       'type' => 'text_textfield',
@@ -966,7 +945,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'sdl_editor_representation',
-        'weight' => 4,
+        'weight' => 37,
       ),
       'full' => array(
         'label' => 'above',
@@ -1094,6 +1073,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
       'module' => 'text',
       'settings' => array(
         'rows' => 5,
+        'show_token_tree' => FALSE,
       ),
       'type' => 'text_textarea',
       'weight' => 2,
@@ -1131,6 +1111,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'show_token_tree' => FALSE,
         'size' => 60,
       ),
       'type' => 'text_textfield',
@@ -1148,7 +1129,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
   t('Commentaires');
   t('Coût adhérents');
   t('Coût grand public');
-  t('Dates d\'événement');
+  t('Dates de l\'événement');
   t('Dates de parution');
   t('Donner ici l\'url qui contient l\'information complète. ');
   t('Evénements liés');
@@ -1160,7 +1141,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
   t('Lieu');
   t('Mots clés');
   t('Mots clés descriptifs de l\'événement pour une éventuelle liaison avec des pages classiques ou d\'atterrissage. Si le terme "Tout" est présent, merci de le laisser.
-Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré 3 lettres.');
+Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré au moins 1 lettre.');
   t('Tél.');
   t('Url de destination');
   t('Vidéo');

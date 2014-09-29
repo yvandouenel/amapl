@@ -63,14 +63,14 @@ function feature_event_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_long';
-  $strongarm->value = 'l, j F, Y - H:i';
+  $strongarm->value = 'l, F j, Y - H:i';
   $export['date_format_long'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'date_format_long_francais';
-  $strongarm->value = 'l j F Y à H\\hi';
+  $strongarm->value = 'l j F Y - H\\hi';
   $export['date_format_long_francais'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -97,7 +97,7 @@ function feature_event_strongarm() {
         'custom_settings' => TRUE,
       ),
       'full' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'rss' => array(
         'custom_settings' => FALSE,
@@ -125,6 +125,9 @@ function feature_event_strongarm() {
         ),
         'path' => array(
           'weight' => '3',
+        ),
+        'metatags' => array(
+          'weight' => '21',
         ),
       ),
       'display' => array(),
@@ -159,9 +162,7 @@ function feature_event_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_event';
-  $strongarm->value = array(
-    0 => 'status',
-  );
+  $strongarm->value = array();
   $export['node_options_event'] = $strongarm;
 
   $strongarm = new stdClass();

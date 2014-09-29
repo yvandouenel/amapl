@@ -68,13 +68,13 @@ function feature_event_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_date'
-  $field_bases['field_date'] = array(
+  // Exported field_base: 'field_dates'
+  $field_bases['field_dates'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_date',
+    'field_name' => 'field_dates',
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
@@ -91,7 +91,7 @@ function feature_event_field_default_field_bases() {
         'year' => 'year',
       ),
       'timezone_db' => 'UTC',
-      'todate' => '',
+      'todate' => 'optional',
       'tz_handling' => 'site',
     ),
     'translatable' => 0,
