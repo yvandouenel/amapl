@@ -310,15 +310,7 @@ div.menu-block-3>ul>li>ul>li>a:before{
 .block-views-events-block-1 h2.block-title,
 #block-views-news-block-2 h2.block-title,
 #block-views-liste-articles-block-1 h2.block-title,
-.field-name-field-event-linked .field-label,
-.field-name-field-event-news-linked .field-label,
-.field-name-field-event-article-linked .field-label,
-.field-name-field-news-linked .field-label,
-.field-name-field-news-event-linked .field-label,
-.field-name-field-news-article-linked .field-label,
-.field-name-field-article-news-linked .field-label,
-.field-name-field-article-event-linked .field-label,
-.field-name-field-article-linked .field-label{
+.h3-entity-linked{
   text-transform: uppercase;
   font-size: 1.1em;
   border-bottom: 2px solid #F45A40;
@@ -326,33 +318,20 @@ div.menu-block-3>ul>li>ul>li>a:before{
   margin-bottom: 5px;
 }
 
-#block-views-news-block-2, .field-name-field-event-linked,
-.field-name-field-event-news-linked,
-.field-name-field-news-event-linked,
-.field-name-field-article-event-linked,
-.field-name-field-article-linked{
+#block-views-news-block-2,
+.div-link-dark-grey{
   background-color: #e1e0e1;
   padding: 16px;
 }
-.field-name-field-event-linked,.field-name-field-event-article-linked,
-.field-name-field-news-linked,
-.field-name-field-news-article-linked,
-.field-name-field-article-news-linked {
+.div-link-light-grey{
   background-color: #f3f2f2;
   padding: 16px;
 }
 .block-views-events-block-1 h3 a,
 #block-views-news-block-2 h3 a,
 #block-views-liste-articles-block-1 a,
-.field-name-field-event-linked a,
-.field-name-field-event-news-linked a,
-.field-name-field-event-article-linked a,
-.field-name-field-news-article-linked a,
-.field-name-field-news-event-linked a,
-.field-name-field-news-linked a,
-.field-name-field-article-news-linked a,
-.field-name-field-article-event-linked a,
-.field-name-field-article-linked a{
+.div-link-dark-grey a,
+.div-link-light-grey a{
   color: #f45a40;
   text-decoration: none;
   font-weight: normal;
@@ -460,7 +439,6 @@ a.list-link-aga {
   margin-top: 12px;
 }
 
-body.front .views-field-field-news-image,
 .view-id-news .views-field-field-news-image{
     float:left;
     margin-right : 10px;
@@ -484,6 +462,8 @@ body.front .views-field-field-news-image,
   text-decoration: none;
   color: #f45a40;
   font-weight: normal;
+  display: block;
+  clear: both;
 }
 #views_slideshow_cycle_main_le_saviez_vous_ss-block a:hover{
   text-decoration: underline;
@@ -535,6 +515,10 @@ body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
     color: white/*{fcDefault}*/;
     text-decoration: none;
 }
+/* Page AGA ************************************************************************************/
+body.not-logged-in div.tabs.clearfix{
+    display : none;
+}
 /* Page Agenda - événement - evenement *********************************************************/
 label, div.views-widget{
     display: inline-block;
@@ -574,7 +558,7 @@ a h3.title-articles-list{
 .views-field .views-label{
     font-weight: bold;
 }
-.views-field .field-content{
+.view-events.view-display-id-page .views-field .field-content{
     display: inline-block;
 }
 div.view-events .views-field-field-event-image{

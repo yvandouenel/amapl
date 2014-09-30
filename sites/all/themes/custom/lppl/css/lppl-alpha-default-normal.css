@@ -79,7 +79,7 @@
   height: 220px !important;
 }
 /* Liste des adhérents ********************************************************/
-body.page-aga-adherentes #block-system-main{
+body.page-s-entourer-aga-trouver-son-association #block-system-main{
   float: right;
   width : 39.58%;
 }
@@ -92,29 +92,23 @@ body.page-aga-adherentes #block-system-main{
 /* Détail d'un adhérent ********************************************************/
 .node-aga-membre.ds-2col-fluid > .group-left,
 .node-event > .group-left,
+.node-news > .group-left,
 .ds-2col.node-article > .group-left{
-    width: 56.25%;
+    margin-right: 1.0416666%;
+    width: 56.108334%;
 }
 /* Détail d'un adhérent ********************************************************/
 .node-aga-membre.ds-2col-fluid > .group-right,
 .node-event > .group-right,
 .node-news > .group-right,
 .ds-2col.node-article > .group-right{
-    width: 42.85%;
+    width: 42.75%;
     float: left;
 }
 .node-aga-membre.ds-2col-fluid > .group-right{
     padding-bottom: 110px;
     background: url(../images/icons/local.png) no-repeat 65% 100%;
 }
-.node-event > .group-left,
-.node-news > .group-left{
-    margin-right: 1.0416666%;
-    width: 56.108334%;
-}
-
-
-
 #views-exposed-form-aga-adherentes-block-1:after{
   content:'';
   display:block;
