@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Feature AGA Membre feature.
- */
-
-include_once 'feature_aga_membre.features.inc';
