@@ -8,12 +8,21 @@
   .view-id-aga_adherentes :target {
     position: absolute;
     visibility: hidden;
+    border : 1px solid red;
   }
   .view-id-aga_adherentes:hover :target {
     width: 90%;
     height: auto;
     position: static;
     visibility: visible;
+  }
+  .ds-2col-fluid > .group-left {
+    float: none;
+    width: 100%;
+  }
+  .ds-2col-fluid > .group-right {
+    float: none;
+    width: 100%;
   }
   
 }
