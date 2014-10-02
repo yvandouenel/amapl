@@ -39,6 +39,9 @@
   overflow: hidden;
   clear: none;
 }
+#views_slideshow_cycle_teaser_section_le_saviez_vous_ss-block{
+  height: 140px ! important;
+}
 #views_slideshow_controls_text_previous_le_saviez_vous_ss-block{
   position: absolute;
   left: 0;
