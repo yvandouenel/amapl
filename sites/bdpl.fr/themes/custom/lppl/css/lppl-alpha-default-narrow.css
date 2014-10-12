@@ -1,0 +1,24 @@
+#zone-user{
+    display: block;
+  }
+#zone-user-wrapper{
+  background-color: #2E2E2E;
+}
+#block-bean-je-m-installe{
+  width: 100%;
+  height: 150px;
+  float: left;
+  background: #F3F2EE url(../images/bg/map_europe.jpg) no-repeat 0 50%;
+}
+#block-bean-edito div.image img{
+  max-width: 100%;
+}
+
+#block-bean-edito div.image{
+  bottom: 20px;
+  right: 30px;
+}
+.block-views-events-block-1, #block-views-liste-articles-block-1,
+#block-views-le-saviez-vous-ss-block{
+  padding: 16px;
+}
