@@ -7,6 +7,7 @@ db/*
 # Ignore netbeans project files
 nbproject/*
 nbproject/private/*
+
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
