@@ -355,12 +355,14 @@ div.menu-block-3>ul>li>ul>li>a:before{
 .block-views-events-block-1 h2.block-title,
 #block-views-news-block-2 h2.block-title,
 #block-views-liste-articles-block-1 h2.block-title,
-.h3-entity-linked{
+.h3-entity-linked,
+.views-field-field-article-linked span.views-label-field-article-linked{
   text-transform: uppercase;
   font-size: 1.1em;
   border-bottom: 2px solid #F45A40;
-  width: 75%;
+  width: 100%;
   margin-bottom: 5px;
+  display: block;
 }
 
 #block-views-news-block-2,
@@ -371,6 +373,11 @@ div.menu-block-3>ul>li>ul>li>a:before{
 .div-link-light-grey{
   background-color: #f3f2f2;
   padding: 16px;
+}
+.view-liste-articles .div-link-light-grey{
+  float: right;
+  width: 30%;
+  margin-left: 2%
 }
 .block-views-events-block-1 h3 a,
 #block-views-news-block-2 h3 a,
