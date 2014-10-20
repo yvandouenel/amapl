@@ -48,6 +48,15 @@ a,a:link, a:visited{
 a:hover{
     text-decoration: underline;
 }
+blockquote{
+  font-family: Georgia;
+  font-style: italic;
+  font-weight: bold;
+  border-left: 10px solid gainsboro;
+  padding-left: 10px;
+  margin: 20px 0 40px;
+  font-size: 1.4em
+}
 .field-name-body h3{
     text-transform: uppercase;
     border-bottom: 2px solid #44484B;
@@ -78,6 +87,10 @@ h2#page-title{
   font-size: 2em;
   background-color: #EEE;
   padding: 5px 2px 5px 10px;
+}
+.title-articles-list{
+  font-size: 2em;
+  
 }
 #logo-lppl{
     margin: 20px 0 20px 30px;
