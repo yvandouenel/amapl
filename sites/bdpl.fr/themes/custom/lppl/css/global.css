@@ -25,6 +25,11 @@
     width: 100%;
   }
   
+}/*Fin media queries***************************/
+
+div.content table td{
+  border-bottom: 1px solid grey;
+  border-right: 1px solid grey;
 }
 #zone-user{
     display: none;
