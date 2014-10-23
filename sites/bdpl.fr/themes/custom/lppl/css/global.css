@@ -650,7 +650,7 @@ body.not-front div.view-id-events div.views-row,
 .page-s-informer-actualites div.views-row,
  .view-liste-articles div.views-row{
     border-bottom: 1px solid #F45A40;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
 }
 .page-s-informer-actualites div.views-row.views-row-last {
     border: 0;
@@ -661,6 +661,10 @@ div.view-liste-articles h2  {
     text-transform: uppercase;
     font-size: 1.6em;
     font-weight: lighter;
+    margin-top: 1.6em;
+}
+div.view-liste-articles .views-row-first h2  {
+    margin-top: 5px;
 }
 div.group-right .group-practical-event{
     background-color: #23cdb7;
