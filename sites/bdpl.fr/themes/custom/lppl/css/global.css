@@ -734,7 +734,7 @@ div.field-name-field-cost-members>div.field-label:before,
 div.field-name-field-event-cost-public>div.field-label:before{
     content : "  > ";
 }
-.views-row-first.views-row-last h3.h3_taxo{
+.views-row-first.views-row-last div.field-item h2{
   display: none;
 }
 h3.h3_taxo{
