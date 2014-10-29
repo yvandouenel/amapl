@@ -656,10 +656,12 @@ div.view-events .views-field-field-event-image{
     float: right;
 }
 body.not-front div.view-id-events div.views-row,
-.page-s-informer-actualites div.views-row,
- .view-liste-articles div.views-row{
+.page-s-informer-actualites div.views-row{
     border-bottom: 1px solid #F45A40;
     padding-bottom: 15px;
+}
+.view-liste-articles div.views-row{
+  padding-bottom: 15px;
 }
 .page-s-informer-actualites div.views-row.views-row-last {
     border: 0;
