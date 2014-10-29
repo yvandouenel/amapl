@@ -737,6 +737,9 @@ div.field-name-field-event-cost-public>div.field-label:before{
 .views-row-first.views-row-last div.field-item h2{
   display: none;
 }
+div.views-row div.field-item h2{
+  border-bottom: 1px solid #f45a40;
+}
 h3.h3_taxo{
   font-size: 2em;
   border-bottom: 1px solid #f45a40;
