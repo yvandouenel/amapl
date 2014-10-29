@@ -25,6 +25,11 @@
     width: 100%;
   }
   
+}/*Fin media queries***************************/
+
+div.content table td{
+  border-bottom: 1px solid grey;
+  border-right: 1px solid grey;
 }
 #zone-user{
     display: none;
@@ -43,6 +48,15 @@ a,a:link, a:visited{
 a:hover{
     text-decoration: underline;
 }
+blockquote{
+  font-family: Georgia;
+  font-style: italic;
+  font-weight: bold;
+  border-left: 10px solid gainsboro;
+  padding-left: 10px;
+  margin: 20px 0 40px;
+  font-size: 1.4em
+}
 .field-name-body h3{
     text-transform: uppercase;
     border-bottom: 2px solid #44484B;
@@ -58,6 +72,9 @@ a:hover{
     margin-bottom: 5px
 
 }
+div.content p{
+  text-align: justify;
+}
 
 div.breadcrumb a:last-child{
   text-decoration: none;
@@ -66,8 +83,22 @@ div.breadcrumb a:last-child{
 img{
   max-width: 100%;
 }
+.en-valeur{
+  background-color: #f3f2f2;
+  padding: 16px;
+  font-family: arial;
+}
 h2#page-title{
-  font-size: 1.8em;
+  font-size: 2em;
+  background-color: #EEE;
+  padding: 5px 2px 5px 10px;
+}
+.title-articles-list{
+  font-size: 2em;
+  margin-top: 1.6em;
+}
+.views-row-first .title-articles-list{
+  margin-top: 5px;
 }
 #logo-lppl{
     margin: 20px 0 20px 30px;
@@ -345,22 +376,33 @@ div.menu-block-3>ul>li>ul>li>a:before{
 .block-views-events-block-1 h2.block-title,
 #block-views-news-block-2 h2.block-title,
 #block-views-liste-articles-block-1 h2.block-title,
-.h3-entity-linked{
+.h3-entity-linked,
+.views-field-field-article-linked span.views-label-field-article-linked{
   text-transform: uppercase;
   font-size: 1.1em;
   border-bottom: 2px solid #F45A40;
-  width: 75%;
+  width: 100%;
   margin-bottom: 5px;
+  display: block;
 }
 
 #block-views-news-block-2,
 .div-link-dark-grey{
   background-color: #e1e0e1;
   padding: 16px;
+  float: right; 
+  width: 30%; 
+  margin-left: 2%;
+  clear: right;
 }
 .div-link-light-grey{
   background-color: #f3f2f2;
   padding: 16px;
+}
+.view-liste-articles .div-link-light-grey{
+  float: right;
+  width: 30%;
+  margin-left: 2%
 }
 .block-views-events-block-1 h3 a,
 #block-views-news-block-2 h3 a,
@@ -617,7 +659,7 @@ body.not-front div.view-id-events div.views-row,
 .page-s-informer-actualites div.views-row,
  .view-liste-articles div.views-row{
     border-bottom: 1px solid #F45A40;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
 }
 .page-s-informer-actualites div.views-row.views-row-last {
     border: 0;
@@ -628,6 +670,10 @@ div.view-liste-articles h2  {
     text-transform: uppercase;
     font-size: 1.6em;
     font-weight: lighter;
+    margin-top: 1.6em;
+}
+div.view-liste-articles .views-row-first h2  {
+    margin-top: 5px;
 }
 div.group-right .group-practical-event{
     background-color: #23cdb7;
@@ -687,6 +733,23 @@ div.field-name-field-event-cost-public div.field-item{
 div.field-name-field-cost-members>div.field-label:before,
 div.field-name-field-event-cost-public>div.field-label:before{
     content : "  > ";
+}
+.views-row-first.views-row-last h3.h3_taxo{
+  display: none;
+}
+h3.h3_taxo{
+  font-size: 2em;
+  border-bottom: 1px solid #f45a40;
+  margin: 2em 0 5px 0;
+}
+.views-row-first h3.h3_taxo{
+  margin: 5px 0 5px 0;
+}
+
+/* superfish ******************************************************************/
+#block-superfish-1{
+  float: right;
+  margin-top: 40px;
 }
 
 
