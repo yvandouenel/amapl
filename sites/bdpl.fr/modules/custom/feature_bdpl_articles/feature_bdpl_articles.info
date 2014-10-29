@@ -39,4 +39,4 @@ features_exclude[dependencies][features] = features
 features_exclude[dependencies][options] = options
 features_exclude[dependencies][strongarm] = strongarm
 features_exclude[dependencies][taxonomy] = taxonomy
-project path = sites/bdpl/modules/custom/
+project path = sites/bdpl.fr/modules/custom/
