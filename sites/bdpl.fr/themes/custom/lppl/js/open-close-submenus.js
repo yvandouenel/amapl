@@ -1,5 +1,5 @@
 jQuery(function($) {
-  $('#block-menu-block-3 div.menu-block-3 > ul.menu > li:not(.active-trail)')
+  $('#block-menu-block-3 div.menu-block-3 > ul.menu > li.expanded:not(.active-trail)')
   .css({cursor: "pointer"})
   .addClass("close")
   .click(function(){
@@ -13,11 +13,13 @@ jQuery(function($) {
     }else{
        $(this)
               .addClass("close")
-              .removeClass("open")
-              .find('ul').hide();
+              .removeClass("open");
+      var sousmenus = $("ul",this);
+      setTimeout(function(){ sousmenus.hide(); }, 1000);
+      
     }
   });
-  $('#block-menu-block-3 div.menu-block-3 > ul.menu > li > a').click(function(e) {
+  $('#block-menu-block-3 div.menu-block-3 > ul.menu > li.expanded > a').click(function(e) {
         e.preventDefault();
   });
 });
