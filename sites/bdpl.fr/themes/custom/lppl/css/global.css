@@ -213,7 +213,19 @@ h1, h2, h3, h4, h5, h6{
   background: #F45A40 url(../images/icons/home.png) no-repeat 50% 115%;
 }
 #block-system-main-menu ul>li>ul{
-    display: none;
+    /*display: none;*/
+}
+#block-menu-block-3 div.menu-block-3 > ul.menu > li > ul{
+  display: none;
+}
+#block-menu-block-3 div.menu-block-3 > ul.menu > li.active-trail > ul{
+  display: block;
+}
+#block-menu-block-3 div.menu-block-3 > ul.menu > li.close{
+  background: url(../images/icons/plus.png) no-repeat 98% 20px;
+}
+#block-menu-block-3 div.menu-block-3 > ul.menu > li.open{
+  background: url(../images/icons/minus.png) no-repeat 98% 20px;
 }
 /* fil d'ariane *******************************/
 #breadcrumb{
@@ -402,7 +414,8 @@ div.menu-block-3>ul>li>ul>li>a:before{
 .view-liste-articles .div-link-light-grey{
   float: right;
   width: 30%;
-  margin-left: 2%
+  margin-left: 2%;
+  margin-top: 32px;
 }
 .block-views-events-block-1 h3 a,
 #block-views-news-block-2 h3 a,
@@ -741,6 +754,7 @@ div.field-name-field-event-cost-public>div.field-label:before{
 }
 div.views-row div.field-item h2{
   border-bottom: 1px solid #f45a40;
+  margin-bottom: 15px;
 }
 h3.h3_taxo{
   font-size: 2em;
