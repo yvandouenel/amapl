@@ -17,6 +17,7 @@ dependencies[] = feature_event
 dependencies[] = features
 dependencies[] = field_group
 dependencies[] = list
+dependencies[] = markup_text_formatter
 dependencies[] = node
 dependencies[] = options
 dependencies[] = scald_file
