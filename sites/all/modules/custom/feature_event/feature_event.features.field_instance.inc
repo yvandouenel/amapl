@@ -224,15 +224,10 @@ function feature_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 24,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 12,
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 39,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -241,10 +236,11 @@ function feature_event_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_event_cat',
-    'label' => 'Catégories',
-    'required' => 0,
+    'label' => 'Catégorie',
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -325,8 +321,9 @@ function feature_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'list_default',
         'weight' => 5,
       ),
       'full' => array(
@@ -429,7 +426,7 @@ function feature_event_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => 1,
+          'link' => 0,
         ),
         'type' => 'entityreference_label',
         'weight' => 9,
@@ -483,8 +480,9 @@ function feature_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'list_default',
         'weight' => 22,
       ),
       'full' => array(
@@ -630,8 +628,15 @@ function feature_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
         'weight' => 3,
       ),
       'full' => array(
@@ -847,8 +852,9 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'taxonomy_term_reference_link',
         'weight' => 23,
       ),
       'full' => array(
@@ -892,8 +898,11 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'markup_text_formatter',
+        'settings' => array(
+          'markup' => 'h3',
+        ),
+        'type' => 'markup_text',
         'weight' => 21,
       ),
       'full' => array(
@@ -1125,7 +1134,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
   t('Affiché en page d\'accueil');
   t('Articles associés');
   t('Body');
-  t('Catégories');
+  t('Catégorie');
   t('Commentaires');
   t('Coût adhérents');
   t('Coût grand public');

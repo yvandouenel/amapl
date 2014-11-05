@@ -258,7 +258,7 @@ function feature_event_views_default_views() {
   $handler->display->display_options['filters']['field_event_publication_date_value2']['operator'] = '>=';
   $handler->display->display_options['filters']['field_event_publication_date_value2']['granularity'] = 'hour';
   $handler->display->display_options['filters']['field_event_publication_date_value2']['default_date'] = 'now';
-  /* Critère de filtrage: Contenu : Catégories (field_event_cat) */
+  /* Critère de filtrage: Contenu : Catégorie (field_event_cat) */
   $handler->display->display_options['filters']['field_event_cat_tid']['id'] = 'field_event_cat_tid';
   $handler->display->display_options['filters']['field_event_cat_tid']['table'] = 'field_data_field_event_cat';
   $handler->display->display_options['filters']['field_event_cat_tid']['field'] = 'field_event_cat_tid';
@@ -276,7 +276,7 @@ function feature_event_views_default_views() {
     3 => '3',
   );
   $handler->display->display_options['filters']['field_event_cat_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_event_cat_tid']['vocabulary'] = 'categories';
+  $handler->display->display_options['filters']['field_event_cat_tid']['vocabulary'] = 'categorie_evenement';
   $handler->display->display_options['path'] = 's-informer/agenda';
   $handler->display->display_options['menu']['title'] = 'Agenda';
   $handler->display->display_options['menu']['weight'] = '0';

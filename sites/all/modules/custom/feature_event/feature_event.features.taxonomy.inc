@@ -9,8 +9,31 @@
  */
 function feature_event_taxonomy_default_vocabularies() {
   return array(
+    'categorie_evenement' => array(
+      'name' => 'Catégorie d\'événement',
+      'machine_name' => 'categorie_evenement',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'categories' => array(
-      'name' => 'Catégories',
+      'name' => 'Catégories d\'actualités',
       'machine_name' => 'categories',
       'description' => '',
       'hierarchy' => 0,

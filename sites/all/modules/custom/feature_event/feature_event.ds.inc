@@ -16,8 +16,18 @@ function feature_event_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'event';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_2col';
+  $ds_layout->layout = 'ds_2col_fluid';
   $ds_layout->settings = array(
+    'classes' => array(),
+    'wrappers' => array(
+      'left' => 'div',
+      'right' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
     'regions' => array(
       'left' => array(
         0 => 'field_event_speaker',
@@ -26,17 +36,17 @@ function feature_event_ds_layout_settings_info() {
         3 => 'field_scald_video',
       ),
       'right' => array(
-        4 => 'group_practical_event',
-        5 => 'field_event_linked',
-        6 => 'field_event_news_linked',
-        7 => 'field_event_article_linked',
-        8 => 'en_pratique',
-        9 => 'field_dates',
-        10 => 'field_event_place',
-        11 => 'field_cost_members',
-        12 => 'field_event_cost_public',
-        13 => 'field_scald_file',
-        14 => 'field_event_registration',
+        0 => 'group_practical_event',
+        1 => 'field_event_linked',
+        2 => 'field_event_news_linked',
+        3 => 'field_event_article_linked',
+        4 => 'en_pratique',
+        5 => 'field_dates',
+        6 => 'field_event_place',
+        7 => 'field_cost_members',
+        8 => 'field_event_cost_public',
+        9 => 'field_scald_file',
+        10 => 'field_event_registration',
       ),
     ),
     'fields' => array(
@@ -56,16 +66,6 @@ function feature_event_ds_layout_settings_info() {
       'field_scald_file' => 'right',
       'field_event_registration' => 'right',
     ),
-    'classes' => array(),
-    'wrappers' => array(
-      'left' => 'div',
-      'right' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
   );
   $export['node|event|default'] = $ds_layout;
 
