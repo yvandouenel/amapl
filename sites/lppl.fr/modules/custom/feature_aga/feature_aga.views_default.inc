@@ -211,7 +211,7 @@ function feature_aga_views_default_views() {
   $handler->display->display_options['fields']['field_aga_logo']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_aga_logo']['alter']['text'] = '<a href="[path]">[field_aga_logo]</a>';
   $handler->display->display_options['fields']['field_aga_logo']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_aga_logo']['type'] = 'full';
+  $handler->display->display_options['fields']['field_aga_logo']['type'] = 'liste_logo_aga';
   $handler->display->display_options['fields']['field_aga_logo']['settings'] = array(
     'link' => '1',
   );
