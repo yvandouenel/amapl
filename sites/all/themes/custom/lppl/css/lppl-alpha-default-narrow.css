@@ -25,3 +25,6 @@
 .sf-menu.sf-style-space-orange {
   float: left;
 }
+#block-responsive-dropdown-menus-main-menu{
+  display: none;
+}

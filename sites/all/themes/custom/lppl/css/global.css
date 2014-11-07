@@ -1,5 +1,10 @@
 /* media queries **************************************************************/
 @media screen and (max-width:740px){
+  
+  #zone-branding #region-branding #block-block-1 {
+    float: right;
+    margin-top: -50px;
+  }
   /* vue des aga adhérentes******************/
     .view-aga-adherentes .view-content{
        width: 80%;
@@ -24,8 +29,11 @@
     float: none;
     width: 100%;
   }
-  
+  #block-superfish-1{
+    display: none;
+  }
 }
+/* fin media queries **********************************************************/
 #zone-user{
     display: none;
 }
@@ -727,6 +735,11 @@ div.field-name-field-event-cost-public>div.field-label:before{
 }
 #superfish-1 >li.active-trail>a{
   color: white;
+}
+/* Responsive menu ************************************************************/
+ul.responsive-menu{
+  /*position : absolute;
+  z-index : 99;*/
 }
 
 
