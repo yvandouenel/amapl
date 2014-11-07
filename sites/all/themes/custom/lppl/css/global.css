@@ -527,7 +527,7 @@ body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
     font-size: 1.2em;
 }
 .view-aga-adherentes .views-row a img{
-   float: right;
+   float: left;
 }
 .node-aga-membre .ds-2col-fluid > .group-left {
     width: 50%;
