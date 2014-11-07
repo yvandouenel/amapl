@@ -228,6 +228,14 @@ div.menu-block-3>ul>li>ul>li>ul>li>a{
 div.menu-block-3>ul>li>ul>li>a:before{
     content: "> ";
 }
+#region-sidebar-second div.block-menu-block{
+  border-left : 1px solid #000000;
+  margin-top: 32px;
+}
+#region-sidebar-second div.block-menu-block a{
+  color: #F45A40;
+  font-size: 1.4em;
+}
 /* Block je m'installe ************************/
 #block-bean-je-m-installe h2.block-title{
   font-size: 3em;
