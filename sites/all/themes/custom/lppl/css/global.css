@@ -530,7 +530,7 @@ body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
 
 .view-aga-adherentes .views-row a img{
    float: left;
-   margin-right: 5px;
+   margin: 0 5px 10px 0;
 }
 .node-aga-membre .ds-2col-fluid > .group-left {
     width: 50%;
