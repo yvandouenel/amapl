@@ -72,6 +72,7 @@ h2#page-title{
 }
 #logo-lppl{
     margin: 20px 0 20px 30px;
+    float: left;
 }
 .field-name-field-tpb-title h3{
   font-size: 1.5em;
@@ -173,14 +174,7 @@ h1, h2, h3, h4, h5, h6{
   background-color: #F45A40;
   color: #f5ffff;
 }
-.block-system-main-menu ul.menu>li.first>a{
-  text-indent: -6000px;
-  background: transparent url(../images/icons/home.png) no-repeat 50% 5px;
-}
-.block-system-main-menu ul.menu>li.first>a.active,
-.block-system-main-menu ul.menu>li.first>a:hover{
-  background: #F45A40 url(../images/icons/home.png) no-repeat 50% 115%;
-}
+
 #block-system-main-menu ul>li>ul{
     display: none;
 }
@@ -674,6 +668,42 @@ div.field-name-field-event-cost-public div.field-item{
 div.field-name-field-cost-members>div.field-label:before,
 div.field-name-field-event-cost-public>div.field-label:before{
     content : "  > ";
+}
+/* Superfish ******************************************************************/
+#block-superfish-1{
+  margin-bottom: 1em;
+  padding: 0;
+  
+}
+#superfish-1{
+  margin-top: 40px;
+  float:right;
+}
+#superfish-1 >li.first>a{
+  text-indent: -6000px;
+  background: transparent url(../images/icons/home.png) no-repeat 50% 2px;
+}
+#superfish-1 >li.first>a.active,
+#superfish-1 >li.first>a:hover{
+  background: #F45A40 url(../images/icons/home.png) no-repeat 50% 105%;
+}
+#superfish-1 >li{
+  border-radius: 6px;
+}
+#superfish-1 >li.active-trail{
+  background-color: #F45A40;
+}
+.sf-menu.sf-style-space-orange>li{
+  background: transparent;
+}
+#superfish-1 >li>a{
+  border: 0;
+  display: block;
+  text-decoration: none;
+  padding: 5px 30px 5px 10px;
+  color: #3b3c3e;
+  font-size: 1.4em;
+  border-radius: 6px;
 }
 
 
