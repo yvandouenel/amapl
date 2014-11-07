@@ -397,6 +397,7 @@ a.list-link-aga {
     margin: 5px 0 0 35%;
     text-align: center;
     width: 60%;
+    clear: left;
 }
 .group-accordion-appointment{
     margin-top: 15px;
