@@ -68,6 +68,7 @@ img{
 }
 h2#page-title{
   font-size: 1.8em;
+  border-bottom: 1px solid #F45A40;
 }
 #logo-lppl{
     margin: 20px 0 20px 30px;
