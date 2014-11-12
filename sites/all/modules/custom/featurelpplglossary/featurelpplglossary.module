@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the FeatureLPPLGlossary feature.
+ */
+
+include_once 'featurelpplglossary.features.inc';
