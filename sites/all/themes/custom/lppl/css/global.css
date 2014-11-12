@@ -741,8 +741,21 @@ ul.responsive-menu{
   /*position : absolute;
   z-index : 99;*/
 }
-
-
+body.logged-in #block-menu-block-5{
+  display: none;
+}
+/* Glossaire ******************************************************************/
+.views-summary-unformatted a{
+  font-size: 1.6em;
+  padding: 3px;
+}
+.view-glossaire-d-articles a{
+  text-decoration: none;
+}
+.view-glossaire-d-articles .views-field-body{
+  border-bottom: 1px solid #F45A40;
+  padding-bottom: 5px;
+}
 
 
 
