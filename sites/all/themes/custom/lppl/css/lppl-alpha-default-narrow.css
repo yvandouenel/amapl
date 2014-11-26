@@ -29,3 +29,9 @@
 #block-menu-block-6{
   display: none;
 }
+.paragraphs-item-image-2-col .field-name-field-2col-image img{
+  float: right;
+}
+.region-sidebar-second{
+  margin-top: 35px;
+}
