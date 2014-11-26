@@ -29,3 +29,6 @@
 #block-menu-block-6{
   display: none;
 }
+#superfish-1 > li > a.sf-depth-1:hover{
+  color: white;
+}
