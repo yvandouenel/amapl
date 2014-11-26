@@ -758,6 +758,10 @@ body.logged-in #block-menu-block-5{
 div.view-glossaire-d-articles{
   border-bottom: 1px solid #F45A40;
 }
+/* Tableaux *******************************************************************/
+#region-content table td{
+  border-bottom: 1px solid #CCC;
+}
 
 
 
