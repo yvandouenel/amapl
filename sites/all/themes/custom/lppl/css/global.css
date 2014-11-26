@@ -180,6 +180,9 @@ h1, h2, h3, h4, h5, h6{
   font-size: 1.4em;
   border-radius : 6px;
 }
+.block-system-main-menu ul.menu>li>a.sf-depth-1:hover{
+  color: white;
+}
 .block-system-main-menu ul.menu>li>a.active,
 .block-system-main-menu ul.menu>li>a:hover{
   background-color: #F45A40;
@@ -715,6 +718,7 @@ div.field-name-field-event-cost-public>div.field-label:before{
 .sf-menu.sf-style-space-orange>li{
   background: transparent;
 }
+
 #superfish-1 >li>a{
   border: 0;
   display: block;
@@ -724,14 +728,9 @@ div.field-name-field-event-cost-public>div.field-label:before{
   font-size: 1.4em;
   border-radius: 6px;
 }
-#superfish-1 >li>a{
-  border: 0;
-  display: block;
-  text-decoration: none;
-  padding: 5px 30px 5px 10px;
-  color: #3b3c3e;
-  font-size: 1.4em;
-  border-radius: 6px;
+#superfish-1 >li>a:hover{
+  color: #FFFFFF;
+  
 }
 #superfish-1 >li.active-trail>a{
   color: white;
