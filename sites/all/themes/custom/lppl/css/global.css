@@ -763,7 +763,9 @@ div.view-glossaire-d-articles{
   border-bottom: 1px solid #CCC;
   border-left: 1px solid #CCC;
 }
-
+.views-exposed-form .views-exposed-widget .form-submit{
+  margin:0;
+}
 
 
 
