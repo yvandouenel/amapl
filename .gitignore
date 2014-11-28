@@ -1,12 +1,5 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
-sites/sites.php
-tmp/
-# Ignore database dumps
-db/*
-# Ignore netbeans project files
-nbproject/*
-nbproject/private/*
 
 # Ignore paths that contain user-generated content.
 sites/*/files
