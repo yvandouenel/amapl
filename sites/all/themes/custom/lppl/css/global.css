@@ -766,6 +766,17 @@ div.view-glossaire-d-articles{
 .views-exposed-form .views-exposed-widget .form-submit{
   margin:0;
 }
+/* Réseaux sociaux ************************************************************/
+
+/* Liens utiles ***************************************************************/
+body.context-adresses-utiles .container-12 .grid-3,
+body.context-adresses-utiles .container-12 .grid-9 {
+  width: 100%;
+}
+body.context-adresses-utiles h2.block-title{
+  display: none;
+}
+
 
 
 
