@@ -35,3 +35,11 @@
 .region-sidebar-second{
   margin-top: 35px;
 }
+.ds-2col-fluid > .group-right {
+  float: right;
+  width: 220px;
+}
+.ds-2col-fluid > .group-left {
+  float: left;
+  width: 65%;
+}
