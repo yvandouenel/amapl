@@ -773,6 +773,10 @@ body.context-adresses-utiles .container-12 .grid-3,
 body.context-adresses-utiles .container-12 .grid-9 {
   width: 100%;
 }
+body.context-adresses-utiles .container-12 .grid-3{
+  padding: 0;
+  margin: 0;
+}
 body.context-adresses-utiles h2.block-title{
   display: none;
 }
