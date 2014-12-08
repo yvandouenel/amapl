@@ -596,13 +596,17 @@ body.page-s-informer-actualites .views-row{
 
 h3.title-event-list a,
 h3.title-news-list a,
-a h3.title-articles-list{
+a h3.title-articles-list,
+a h3.title-event-list{
     text-decoration: none;
     color: #F45A40;
     font-weight: normal;
     display: block;
     font-size: 1.2em;
     margin-top: 10px;
+}
+.view-display-id-page_2 .views-field-title a{
+  text-decoration: none;
 }
 .view-liste-articles .views-field-title a{
     text-decoration : none;
