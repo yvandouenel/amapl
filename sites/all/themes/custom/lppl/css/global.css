@@ -354,14 +354,15 @@ div.menu-block-3>ul>li>ul>li>a:before{
 }
 /* blocks droite ******************************/
 .block-views-events-block-1, #block-views-liste-articles-block-1,
-#block-views-le-saviez-vous-ss-block{
+#block-views-le-saviez-vous-ss-block,#block-views-events-block-2{
   background-color: #f3f2f2;
   padding: 8px;
 }
 .block-views-events-block-1 h2.block-title,
 #block-views-news-block-2 h2.block-title,
 #block-views-liste-articles-block-1 h2.block-title,
-.h3-entity-linked{
+.h3-entity-linked,
+#block-views-events-block-2 h2.block-title{
   text-transform: uppercase;
   font-size: 1.1em;
   border-bottom: 2px solid #F45A40;
