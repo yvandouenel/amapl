@@ -172,6 +172,44 @@ function feature_event_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_envent_training_topic'
+  $field_instances['node-event-field_envent_training_topic'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'A ne renseigner que dans le cas où l\'événement est une formation',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 40,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_envent_training_topic',
+    'label' => 'Sujet de la formation',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 18,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_event_article_linked'
   $field_instances['node-event-field_event_article_linked'] = array(
     'bundle' => 'event',
@@ -211,7 +249,7 @@ function feature_event_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 20,
+      'weight' => 21,
     ),
   );
 
@@ -463,7 +501,7 @@ function feature_event_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 19,
+      'weight' => 20,
     ),
   );
 
@@ -564,7 +602,7 @@ function feature_event_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 18,
+      'weight' => 19,
     ),
   );
 
@@ -1130,6 +1168,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A ne renseigner que dans le cas où l\'événement est une formation');
   t('Actualités liées');
   t('Affiché en page d\'accueil');
   t('Articles associés');
@@ -1151,6 +1190,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
   t('Mots clés');
   t('Mots clés descriptifs de l\'événement pour une éventuelle liaison avec des pages classiques ou d\'atterrissage. Si le terme "Tout" est présent, merci de le laisser.
 Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré au moins 1 lettre.');
+  t('Sujet de la formation');
   t('Tél.');
   t('Url de destination');
   t('Vidéo');
