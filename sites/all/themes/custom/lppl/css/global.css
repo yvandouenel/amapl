@@ -515,6 +515,10 @@ a.list-link-aga {
   display: block;
   clear: both;
 }
+#views_slideshow_cycle_main_le_saviez_vous_ss-block a{
+  display: inline;
+  clear: none;
+}
 #views_slideshow_cycle_main_le_saviez_vous_ss-block a:hover{
   text-decoration: underline;
 }
