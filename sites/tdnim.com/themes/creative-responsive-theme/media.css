@@ -271,14 +271,14 @@
     text-align: center;
   }
   #site-title{
-    font-size: 18px;
+    font-size: 0.9em;
     display: inline-block;
     margin: 10px 0 0 0;
-    padding: 0;
+    padding: 0 0 0 20px;
   }
   #site-description{
     padding-bottom: 5px;
-    font-size: 10px;
+    font-size: 1em;
   }
   .social-icons li{
     padding: 0px 3px;
