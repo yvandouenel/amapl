@@ -538,13 +538,10 @@ function feature_bdpl_articles_views_default_views() {
     'trim_length' => '200',
   );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Critère de tri: Draggableviews : Poids */
+  /* Critère de tri: Poids : Poids */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
+  $handler->display->display_options['sorts']['weight']['table'] = 'weight_weights';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'liste_articles:page_6';
-  $handler->display->display_options['sorts']['weight']['draggableviews_setting_arguments'] = 'none';
-  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 0;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Filtre contextuel: Contenu : Catégorie (field_categorie) */
   $handler->display->display_options['arguments']['field_categorie_tid']['id'] = 'field_categorie_tid';
