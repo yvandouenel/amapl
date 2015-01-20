@@ -67,7 +67,7 @@ function feature_bdpl_articles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 19,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -240,10 +240,10 @@ function feature_bdpl_articles_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 19,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -337,7 +337,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'hidden',
