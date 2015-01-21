@@ -505,6 +505,46 @@ function feature_event_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_event_mail_manager'
+  $field_instances['node-event-field_event_mail_manager'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 41,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_event_mail_manager',
+    'label' => 'Email du reponsable de l\'événement',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'email',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'email_textfield',
+      'weight' => 23,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_event_new_window'
   $field_instances['node-event-field_event_new_window'] = array(
     'bundle' => 'event',
@@ -1180,6 +1220,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
   t('Dates de l\'événement');
   t('Dates de parution');
   t('Donner ici l\'url qui contient l\'information complète. ');
+  t('Email du reponsable de l\'événement');
   t('Evénements liés');
   t('Fichiers attachés');
   t('Image');
