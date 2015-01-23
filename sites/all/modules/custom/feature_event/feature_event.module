@@ -12,7 +12,8 @@ include_once 'feature_event.features.inc';
  * "event_url_target" field
  */
 function feature_event_views_pre_render(&$view) {
-	//dpm($view);
+	dpm($view->name);
+  dpm($view->current_display);
         if (($view->name == 'events' && $view->current_display == 'page') || 
             ($view->name == 'events' && $view->current_display == 'block_evenements_home') ||
             ($view->name == 'events' && $view->current_display == 'block_1') || 
@@ -39,4 +40,13 @@ function feature_event_views_pre_render(&$view) {
             }
 		
 	}
+}
+function feature_event_node_view_alter(&$build) {
+	// If event bundle
+  //dpm($build['#bundle']);
+  if ($build['#bundle'] == "event") {
+    $find = '<span class="date-display-start"';
+    $replace = '<br /><span class="date-display-start"';
+    $build['field_dates'][0]['#markup'] = str_replace($find, $replace, $build['field_dates'][0]['#markup']);
+  }
 }
