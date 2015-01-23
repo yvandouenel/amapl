@@ -656,10 +656,10 @@ div.group-right .group-practical-event h3{
     background: url(../images/icons/feuille.png) no-repeat 95% 50%;
     font-size: 1.6em;
 }
-div.group-right .group-practical-event span.date-display-start:after{
+/*div.group-right .group-practical-event span.date-display-start:after{
     content: "";
     display:block;
-}
+}*/
 div.group-right .group-practical-event .date-display-single span.date-display-end:after{
     content: "";
     display:block;
