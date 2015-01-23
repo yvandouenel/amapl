@@ -75,11 +75,6 @@ blockquote{
 div.content p{
   text-align: justify;
 }
-
-div.breadcrumb a:last-child{
-  text-decoration: none;
-  color: black;
-}
 img{
   max-width: 100%;
 }
