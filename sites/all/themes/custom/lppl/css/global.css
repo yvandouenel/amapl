@@ -69,11 +69,6 @@ p{
     margin-bottom: 5px
 
 }
-
-div.breadcrumb a:last-child{
-  text-decoration: none;
-  color: black;
-}
 img{
   max-width: 100%;
 }
