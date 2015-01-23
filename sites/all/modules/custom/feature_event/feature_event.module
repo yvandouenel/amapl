@@ -42,7 +42,7 @@ function feature_event_views_pre_render(&$view) {
 		
 	}
 }
-function feature_event_node_view_alter(&$build) {
+/*function feature_event_node_view_alter(&$build) {
 	// If event bundle
   //dpm($build['#bundle']);
   if ($build['#bundle'] == "event") {
@@ -50,4 +50,4 @@ function feature_event_node_view_alter(&$build) {
     $replace = '<br /><span class="date-display-start"';
     $build['field_dates'][0]['#markup'] = str_replace($find, $replace, $build['field_dates'][0]['#markup']);
   }
-}
+}*/
