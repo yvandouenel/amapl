@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Feature Crumbs feature.
+ */
+
+include_once 'feature_crumbs.features.inc';
