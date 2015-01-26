@@ -24,10 +24,21 @@
 }
 #block-views-liste-articles-block-2{
   float: right;
-  width: 30%;
+  background: url("../images/illustrations/savez-vous.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  margin: 20px 3% 0 0;
+  overflow: hidden;
+  padding: 60px 0 0;
+  width: 31.25%;
 }
+
 #block-views-liste-articles-block-3{
   float: right;
   width: 30%;
   clear: right;
+}
+#block-views-liste-articles-block-3 h2.block-title{
+  border-bottom: 2px solid #44484B;
+  padding: 15px 0 13px;
+  text-transform: uppercase;
+  width: 135px;
 }
