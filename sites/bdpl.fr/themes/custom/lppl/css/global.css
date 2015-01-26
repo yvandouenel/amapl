@@ -48,6 +48,9 @@ a,a:link, a:visited{
 a:hover{
     text-decoration: underline;
 }
+.sf-menu.sf-style-space-orange a, .sf-menu.sf-style-space-orange span.nolink {
+  text-decoration: none;
+}
 blockquote{
   font-family: Georgia;
   font-style: italic;
