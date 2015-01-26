@@ -88,12 +88,14 @@ img{
   padding: 16px;
   font-family: arial;
   color: black;
+  margin: 5px 0;
 }
 a.orange{
   background-color: transparent;
   padding: 0;
   font-family: inherit;
   color: #FF4E00;
+  margin: 0;
 }
 h2#page-title{
   font-size: 2em;
