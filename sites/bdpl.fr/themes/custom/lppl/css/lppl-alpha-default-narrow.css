@@ -22,3 +22,11 @@
 #block-views-le-saviez-vous-ss-block{
   padding: 16px;
 }
+#block-views-liste-articles-block-2{
+  float: right;
+}
+#block-views-liste-articles-block-3{
+  float: right;
+  width: 30%;
+  clear: right;
+}
