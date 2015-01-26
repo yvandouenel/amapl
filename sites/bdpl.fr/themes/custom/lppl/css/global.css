@@ -582,16 +582,17 @@ a.list-link-aga {
   margin-top: 12px;
   font-size: 1.1em;
 }
-.view-id-references a h3{
+.view-id-references a h3,.view-id-liste_articles .field-content a h3{
   margin-top: 12px;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 .block-views-references-block-1 a, .view-id-references a, 
 .view-id-liste_articles .field-content a,.view-id-liste_articles .field-content a h3{
   text-decoration: none;
   color: #f45a40;
 }
-.block-views-references-block-1 a:hover, .view-id-references a:hover{
+.block-views-references-block-1 a:hover, .view-id-references a:hover,
+.view-id-liste_articles .field-content a:hover{
   text-decoration: underline;
 }
 #views_slideshow_cycle_main_le_saviez_vous_ss-block a:hover{
