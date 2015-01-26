@@ -321,6 +321,8 @@ div.menu-block-3>ul>li>ul>li>a:before{
   float: left;
   background-color: #24CDB8;
   color: white;
+  clear: both;
+  border: 1px solid red;
 }
 #block-bean-edito div.image img{
   max-width: 50%;
