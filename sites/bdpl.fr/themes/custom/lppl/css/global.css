@@ -584,7 +584,8 @@ a.list-link-aga {
 }
 .view-id-references a h3,.view-id-liste_articles .field-content a h3{
   margin-top: 12px;
-  font-size: 1.2em;
+  font-size: 1em;
+  font-weight: normal;
 }
 .block-views-references-block-1 a, .view-id-references a, 
 .view-id-liste_articles .field-content a,.view-id-liste_articles .field-content a h3{
