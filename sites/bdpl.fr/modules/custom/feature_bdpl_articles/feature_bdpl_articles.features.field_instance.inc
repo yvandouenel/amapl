@@ -146,6 +146,50 @@ function feature_bdpl_articles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-article-field_article_home'
+  $field_instances['node-article-field_article_home'] = array(
+    'bundle' => 'article',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 20,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_article_home',
+    'label' => 'Visible sur l\'accueil',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 43,
+    ),
+  );
+
   // Exported field_instance: 'node-article-field_article_linked'
   $field_instances['node-article-field_article_linked'] = array(
     'bundle' => 'article',
@@ -240,10 +284,11 @@ function feature_bdpl_articles_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -378,6 +423,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
 Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré au moins 1 lettre.');
   t('Tags');
   t('Upload an image to go with this article.');
+  t('Visible sur l\'accueil');
 
   return $field_instances;
 }
