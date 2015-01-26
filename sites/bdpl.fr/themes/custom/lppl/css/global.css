@@ -586,7 +586,8 @@ a.list-link-aga {
   margin-top: 12px;
   font-size: 1.4em;
 }
-.block-views-references-block-1 a, .view-id-references a{
+.block-views-references-block-1 a, .view-id-references a, 
+.view-id-liste_articles .field-content a,.view-id-liste_articles .field-content a h3{
   text-decoration: none;
   color: #f45a40;
 }
