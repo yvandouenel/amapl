@@ -783,6 +783,11 @@ div.views-row div.field-item h2{
   border-bottom: 1px solid #f45a40;
   margin-bottom: 15px;
 }
+.view-liste-articles div.views-row div.field-item h2{
+  background-color: #FFBE00;
+  padding-left: 10px;
+}
+
 h3.h3_taxo{
   font-size: 2em;
   border-bottom: 1px solid #f45a40;
