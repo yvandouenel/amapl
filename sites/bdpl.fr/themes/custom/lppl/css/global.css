@@ -689,6 +689,17 @@ a h3.title-articles-list{
 .view-liste-articles .views-field-title a{
     text-decoration : none;
 }
+.view-liste-articles .field-name-field-article-date,
+.view-liste-articles .field-name-changed-date,
+.view-liste-articles .field-name-lien-impression{
+  float: left;
+  margin: 25px 20px 5px 0;
+}
+.view-liste-articles .field-name-lien-impression a{
+  display: block;
+  padding-left: 30px;
+  background: url(../images/icons/print.png) no-repeat 0 50%;
+}
 .views-field .views-label{
     font-weight: bold;
 }
