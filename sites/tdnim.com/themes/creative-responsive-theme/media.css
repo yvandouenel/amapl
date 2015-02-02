@@ -12,7 +12,19 @@
 }
 
 @media screen and (max-width: 960px) {
-
+  .sidebar-second .block-views {
+    background-image: none;
+    border: 0;
+    border-radius: 0;
+    padding: 5px 2px 2px 5px;
+    clear: both;
+  }
+  .bouton_orange{
+    background: url(images/degrade_jaune.jpg) 0 50%; 
+  }
+  .bouton_orange a{
+    font-size: 1em;
+  }
   #main-menu a{
     padding: 13px 17px;
   }
