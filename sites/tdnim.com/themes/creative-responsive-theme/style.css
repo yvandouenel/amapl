@@ -432,7 +432,7 @@ ul li, ul.menu li, ul.links li, .item-list ul li {
 
 #main-menu a {
   display: block;
-  color: rgb(153, 153, 153);
+  color: #FDFEFE;
   text-align: center;
   padding: 13px 24px;
   text-decoration: none;
