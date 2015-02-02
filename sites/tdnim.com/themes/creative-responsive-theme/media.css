@@ -25,6 +25,9 @@
   .bouton_orange a{
     font-size: 1em;
   }
+  #search-block-form{
+    display: none;
+  }
   #main-menu a{
     padding: 13px 17px;
   }
