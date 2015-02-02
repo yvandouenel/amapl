@@ -135,7 +135,7 @@
       <section id="post-content" role="main">
         <?php print $messages; ?>
         <?php print render($title_prefix); ?>
-        <?php if ($title): ?><h1 class="page-title"><?php print $title; ?></h1><?php endif; ?>
+        <?php if ($title): ?><h2 class="page-title"><?php print $title; ?></h2><?php endif; ?>
         <?php print render($title_suffix); ?>
         <?php if (!empty($tabs['#primary'])): ?><div class="tabs-wrapper"><?php print render($tabs); ?></div><?php endif; ?>
         <?php print render($page['help']); ?>
@@ -185,7 +185,7 @@
    <?php endif; ?>
       
     <div id="copyright">
-     <p class="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <?php print $site_name; ?> </p> <p class="credits"> <?php print t('Theme by'); ?>  <a href="http://www.zymphonies.com">Zymphonies</a></p>
+     <p class="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <?php print $site_name; ?> </p> <p class="credits"> <?php print t('Créé par'); ?>  <a href="http://www.coopernet.fr">Coopernet</a></p>
     <div class="clear"></div>
     </div>
   </div>
