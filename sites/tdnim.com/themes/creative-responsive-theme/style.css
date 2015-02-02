@@ -389,7 +389,7 @@ audio {
   z-index: 11;
   top: -11px;
   border-bottom: 2px solid rgb(43, 150, 250);
-  background: url(images/bg-menu.jpg);
+  
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.03);
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.03);
   -moz-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.03);
@@ -1571,11 +1571,11 @@ h2.page-title{
   font-family: Lucida Grande, Verdana, Arial, sans-serif;
 }
 div.region-content h3{
-  background: url(images/fleche_h3.png) no-repeat 0 50%; 
+  background: url(images/rectangle.png) no-repeat 0 50%; 
   padding-left: 25px;
 }
 div.region-content h4{
-  background: url(images/fleche_h4_vert.png) no-repeat 0 50%; 
+  background: url(images/rectangle_vert.png) no-repeat 0 50%; 
   padding-left: 25px;
 }
 .bouton_orange{
@@ -1621,8 +1621,39 @@ div.region-content h4{
   padding: 5px 2px 2px 5px;
 }
 #block-search-form{
-  margin-bottom: 70px;
+  margin-bottom: 72px;
 }
 body.front #block-search-form{
   margin-bottom: 36px;
+}
+/*Formulaire ******************************************************************/
+.webform-client-form label{
+  width: 80px;
+  display: inline-block;
+}
+.webform-client-form input.form-text{
+  width: 140px;
+}
+.webform-client-form #edit-submitted-votre-message{
+  height: 150px;
+}
+.webform-component--votre-message{
+  float: right;
+}
+/* Menus **********************************************************************/
+#main-menu .menu-navigation-container>.menu{
+  background: url(images/bg-menu.jpg);
+}
+#block-menu-menu-commodite-haut{
+  float: right;
+  margin-bottom: 1px;
+}
+#main-menu #block-menu-menu-commodite-haut ul.menu>li>a {
+    color: #000000;
+    background: transparent url("images/light-header.gif") repeat-x 0 0;
+    border: 1px solid #CCCCCC;
+    border-radius: 6px 6px 0 0;
+    text-transform: none;
+    font-weight: normal;
+    font-size: 1.2em;
 }
