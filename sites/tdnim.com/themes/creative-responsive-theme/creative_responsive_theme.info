@@ -10,6 +10,7 @@ scripts[] = js/custom.js
 regions[slideshow]      = Slideshow
 regions[sidebar_first]  = First Sidebar
 regions[sidebar_second] = Second Sidebar
+regions[menubar] = Menu top
 regions[top_first]      = First top
 regions[top_second]     = Second top
 regions[top_third]      = Third top
