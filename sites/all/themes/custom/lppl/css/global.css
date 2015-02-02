@@ -428,6 +428,9 @@ a.list-link-aga {
 .paragraphs-items-field-2col-second div.image{
   display: none;
 }
+body.node-type-aga-membre .field-name-field-aga-mail{
+  clear: right;
+}
 /* Block savez-vous slideshow *************************************************/
 #block-views-le-saviez-vous-ss-block{
   clear: both;
