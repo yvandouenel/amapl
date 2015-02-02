@@ -25,6 +25,12 @@
   .bouton_orange a{
     font-size: 1em;
   }
+  h2.page-title {
+    font-size: 1.6em;
+  }
+  div.region-content h3 {
+    background: url(images/rectangle.png) no-repeat 0 0.2em;
+  }
   #search-block-form{
     display: none;
   }
