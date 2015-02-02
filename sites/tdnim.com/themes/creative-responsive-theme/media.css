@@ -32,10 +32,15 @@
     background: url(images/rectangle.png) no-repeat 0 0.2em;
   }
   div.region-content h4{
-    background: url(images/rectangle_vert.png) no-repeat 0 0.2em; 
+    background: url(images/rectangle_vert.png) no-repeat 0 0.4em; 
   }
   #search-block-form{
     display: none;
+  }
+  /* Menu de commodité ********************************************************/
+  #block-menu-menu-commodite-haut{
+    float: none;
+    margin-bottom: 1px;
   }
   #main-menu a{
     padding: 13px 17px;
