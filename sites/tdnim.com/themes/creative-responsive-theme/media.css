@@ -292,12 +292,12 @@
     border: 0;
   }
   #logo{
-    margin: 8px 0;
-    text-align: center;
+    margin: 8px 0 0 5px;
+    text-align: left;
   }
    #logo img{
     max-width: 85%;
-    text-align: center;
+    text-align: left;
   }
   #site-title{
     font-size: 0.9em;
