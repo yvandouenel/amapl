@@ -18,7 +18,8 @@ function feature_event_views_pre_render(&$view) {
             ($view->name == 'events' && $view->current_display == 'block_evenements_home') ||
             ($view->name == 'events' && $view->current_display == 'block_1') || 
             ($view->name == 'events' && $view->current_display == 'block_2') ||
-            ($view->name == 'events' && $view->current_display == 'page_2')) {
+            ($view->name == 'events' && $view->current_display == 'page_2') ||
+            ($view->name == 'events' && $view->current_display == 'page_3')) {
             foreach ($view->result as &$value) {
               
 //Test if an url target is specified 
