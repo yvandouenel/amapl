@@ -13,9 +13,9 @@
 /*
  * Hook preprocess_page
  */
-function lppl_preprocess_html(&$vars){
+/*function lppl_preprocess_html(&$vars){
   $vars['attributes_array']['class'][] = 'site-' . current(array_splice(explode('.', $_SERVER['SERVER_NAME']), -2, 1)); 
-}
+}*/
 /**
  * Add a google font
  */
