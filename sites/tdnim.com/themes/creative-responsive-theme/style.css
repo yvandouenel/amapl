@@ -1658,7 +1658,7 @@ body.front #block-search-form{
     font-size: 1.2em;
 }
 /* Page actualités news *******************************************************/
-body.page-actualites div.region-content .field-content h3{
+body.page-actualites div.region-content .views-field-body .field-content h3{
   background-image: none;
   
 }
