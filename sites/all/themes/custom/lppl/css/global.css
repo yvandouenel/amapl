@@ -520,6 +520,20 @@ body.node-type-aga-membre .field-name-field-aga-mail{
 #views_slideshow_cycle_main_le_saviez_vous_ss-block a:hover{
   text-decoration: underline;
 }
+/* Evénements sur la page des événements ************************/
+#block-views-calendrier-block-1{
+  border: 1px solid #CCCCCC;
+  
+}
+#block-views-calendrier-block-1 .view-header{
+  margin-top: -35px;
+}
+.view-calendrier h3 a{
+  color: #F45A40;
+  position: relative;
+  top: 30px;
+  text-decoration: none;
+}
 /* Trouver votre interlocuteur aga liste ************************/
 body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
   display : none;
