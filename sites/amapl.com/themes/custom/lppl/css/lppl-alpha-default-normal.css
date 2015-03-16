@@ -1,0 +1,220 @@
+#block-bean-je-m-installe{
+  width: 32.29%;
+  height: 270px;
+  background: #F3F2EE url(../images/bg/map_europe.jpg) no-repeat 74% 0;
+}
+#block-bean-je-m-installe h2{
+  margin: 30px 0 0 0;
+}
+#block-bean-je-m-installe div.field-item>a{
+  margin: 100px auto 0 auto;
+}
+/* bloc édito *****************************************************************/
+#block-bean-edito{
+  width: 67.71%;
+  height: 270px;
+}
+
+#block-bean-edito ul li a{ 
+  padding-left: 15px;
+  background: url(../images/icons/arrow_dark.png) no-repeat 0 50%;
+}
+#block-bean-edito:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+#block-bean-edito div.field-name-field-texte{
+  padding:  15px 35px 5px 35px;
+}
+
+/* Bloc raisons *********************************************************/
+#block-views-le-saviez-vous-ss-block{
+  float:left;
+  width: 31.25%;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  clear: none;
+}
+#views_slideshow_cycle_teaser_section_le_saviez_vous_ss-block{
+  height: 140px ! important;
+}
+#views_slideshow_controls_text_previous_le_saviez_vous_ss-block{
+  display: none;
+  /*position: absolute;
+  left: 0;
+  top:  50%;
+  z-index: 10;
+  text-indent: -6000px;
+  width: 20px;
+  height: 40px;
+  background: url(../images/icons/arrow_ss_know_it_left.png) no-repeat 0 50%;*/
+}
+#views_slideshow_controls_text_next_le_saviez_vous_ss-block{
+  position: absolute;
+  right: 5px;
+  top:  50%;
+  z-index: 10;
+  text-indent: -6000px;
+  width: 20px;
+  height: 40px;
+  background: url(../images/icons/arrow_ss_know_it_right.png) no-repeat 0 50%;
+}
+
+#block-views-le-saviez-vous-ss-block .views-field-body-1{
+  margin-top: 13px;
+}
+#block-views-le-saviez-vous-ss-block .views-field-body{
+  padding: 0 10px 0 0;
+  margin-top: 30px;
+  color: #44484b;
+  font-size: 0.8em;
+}
+#block-views-le-saviez-vous-ss-block .dnd-atom-wrapper{
+  display: block;
+}
+#block-views-le-saviez-vous-ss-block .dnd-drop-wrapper{
+  display: block;
+  text-align: center;
+}
+
+#views_slideshow_cycle_teaser_section_le_saviez_vous_ss-block{
+  height: 170px !important;
+  overflow: hidden;
+}
+#block-views-le-saviez-vous-ss-block .view-footer a{
+  margin-top: 20px;
+  background-color: #f8a538;
+  border-radius: 4px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5px 20px;
+  width: 50%;
+  font-size: 0.6em;
+  font-weight: bold;
+  -moz-box-shadow: 1px 5px 5px 0px #656565;
+  -webkit-box-shadow: 1px 5px 5px 0px #656565;
+  -o-box-shadow: 1px 5px 5px 0px #656565;
+  box-shadow: 1px 5px 5px 0px #656565;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=168, Strength=5);
+}
+
+/* Liste des adhérents ********************************************************/
+body.page-s-entourer-aga-trouver-son-association #block-system-main{
+  float: right;
+  width : 39.58%;
+}
+#block-views-aga-adherentes-block-1{
+  width : 56.25%;
+}
+#block-views-aga-adherentes-block-1 .clearfix:after{
+  clear:none;
+}
+/* Détail d'un adhérent ********************************************************/
+.node-aga-membre.ds-2col-fluid > .group-left,
+.node-event > .group-left,
+.node-news > .group-left,
+.ds-2col.node-article > .group-left{
+    margin-right: 1.0416666%;
+    width: 56.108334%;
+}
+/* Détail d'un adhérent ********************************************************/
+.node-aga-membre.ds-2col-fluid > .group-right,
+.node-event > .group-right,
+.node-news > .group-right,
+.ds-2col.node-article > .group-right{
+    width: 42.75%;
+    float: left;
+}
+.node-aga-membre.ds-2col-fluid > .group-right{
+    padding-bottom: 110px;
+    background: url(../images/icons/local.png) no-repeat 65% 100%;
+}
+#views-exposed-form-aga-adherentes-block-1:after{
+  content:'';
+  display:block;
+  clear: left;
+}
+.block-views-exp-aga-adherentes-page{
+  height: 50px;
+  width : 39.58%;
+}
+.block-views-exp-aga-adherentes-page label, .block-views-exp-aga-adherentes-page div.views-widget{
+ float: left;
+ margin-right : 20px;
+}
+.block-views-exp-aga-adherentes-page div.views-widget{
+ margin : 0;
+}
+.block-views-exp-aga-adherentes-page .views-exposed-form .views-exposed-widget .form-submit{
+  margin-top: 0;
+}
+/* fiche d'un adhérent ********************************************************/
+.group-coord div.field{
+  padding-left : 20px;
+}
+/* Actualités page d'accueil **************************************************/
+#block-views-news-block-1{
+  float:left;
+  width: 62.5%;
+  padding: 20px 0 0 0;
+  margin: 0px 0 0 1.0416667%;
+}
+#block-views-news-block-1 > .block-inner{
+  padding: 0 0 0 60px;
+}
+
+
+#block-views-news-block-1 h3 a, 
+#block-views-events-block-evenements-home h3 a{
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #013f4c;
+}
+#block-views-news-block-1 .views-field-body p{
+  margin: 0;
+}
+#block-views-events-block-evenements-home .views-field-field-date{
+  margin-top: 12px;
+}
+#block-views-events-block-evenements-home h3 a{
+  margin: 0;
+}
+
+/* Agenda - evenement page d'accueil ******************************************/
+#block-views-events-block-evenements-home{
+  float:left;
+  width: 31.25%;
+  background: url(../images/illustrations/agenda.png) no-repeat 0 0;
+  padding: 60px 0 0 0;
+  margin: 20px 0 0 1.0416667%;
+}
+#block-views-events-block-evenements-home .views-row{
+  background: url(../images/icons/icon_calendar.png) no-repeat 0 2px;
+  padding-left: 20px;
+}
+/* Mise en page sur deux colonnes**********************************************/
+.paragraphs-items-field-2col-first{
+  float: left;
+  width: 48%;
+}
+.paragraphs-items-field-2col-second{
+  float: left;
+  width: 50%;
+  margin-left: 2%
+}
+.paragraphs-items-field-2col-second div.image{
+  display: block;
+}
+.paragraphs-items-field-2col-second:after{
+  content: "";
+  display: block;
+  clear: left;
+  margin-bottom: 40px;
+}
+
+

@@ -1,0 +1,45 @@
+#zone-user{
+    display: block;
+  }
+#zone-user-wrapper{
+  background-color: #239abc;
+}
+#block-bean-je-m-installe{
+  width: 100%;
+  height: 150px;
+  float: left;
+  background: #F3F2EE url(../images/bg/map_europe.jpg) no-repeat 0 50%;
+}
+#block-bean-edito div.image img{
+  max-width: 100%;
+}
+
+#block-bean-edito div.image{
+  bottom: 20px;
+  right: 30px;
+}
+.block-views-events-block-1, #block-views-liste-articles-block-1,
+#block-views-le-saviez-vous-ss-block{
+  padding: 16px;
+}
+.sf-menu.sf-style-space-orange {
+  float: left;
+}
+#block-responsive-dropdown-menus-main-menu,
+#block-menu-block-6{
+  display: none;
+}
+.paragraphs-item-image-2-col .field-name-field-2col-image img{
+  float: right;
+}
+.region-sidebar-second{
+  margin-top: 35px;
+}
+.ds-2col-fluid > .group-right {
+  float: right;
+  width: 220px;
+}
+.ds-2col-fluid > .group-left {
+  float: left;
+  width: 65%;
+}

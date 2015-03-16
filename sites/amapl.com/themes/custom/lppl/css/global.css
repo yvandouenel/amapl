@@ -1,0 +1,874 @@
+/* media queries **************************************************************/
+@media screen and (max-width:740px){
+  
+  #zone-branding #region-branding #block-block-1 {
+    float: right;
+    margin-top: -50px;
+  }
+  /* vue des aga adhérentes******************/
+    .view-aga-adherentes .view-content{
+       width: 80%;
+       margin : 0 auto;
+  }
+  .view-id-aga_adherentes :target {
+    position: absolute;
+    visibility: hidden;
+    border : 1px solid red;
+  }
+  .view-id-aga_adherentes:hover :target {
+    width: 90%;
+    height: auto;
+    position: static;
+    visibility: visible;
+  }
+  .ds-2col-fluid > .group-left {
+    float: none;
+    width: 100%;
+  }
+  .ds-2col-fluid > .group-right {
+    float: none;
+    width: 100%;
+  }
+  #block-superfish-1{
+    display: none;
+  }
+}
+/* fin media queries **********************************************************/
+#zone-user{
+    display: none;
+}
+body.front #breadcrumb{
+    display:none;
+}
+/* Global *************************************/
+body,h1, h2, h3, h4, h5, h6{
+  /*font-family: 'Signika', sans-serif;*/
+  font-family: 'Roboto', sans-serif;
+}
+a,a:link, a:visited{
+    color: #41D4C1;
+}
+a:hover{
+    text-decoration: underline;
+}
+p{
+  margin: 1em 0;
+}
+.orange{
+  color: #f7981d;
+}
+.blue-night{
+  color: #10739a;
+}
+.field-name-body h3{
+    text-transform: uppercase;
+    border-bottom: 2px solid #44484B;
+    padding: 15px 0 13px 0;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 1.4em;
+}
+.field-name-body h4{
+    text-transform: uppercase;
+    border-bottom: 1px dotted #44484B;
+    padding: 15px 0 5px 0;
+    margin-bottom: 5px
+
+}
+img{
+  max-width: 100%;
+}
+h2#page-title{
+  font-size: 1.8em;
+  border-bottom: 1px solid #F45A40;
+}
+#logo-lppl{
+    margin: 20px 0 20px 30px;
+    float: left;
+}
+.field-name-field-tpb-title h3{
+  font-size: 1.5em;
+}
+a:hover, body h3 a:hover, #block-views-news-block-1 h3 a:hover, 
+#block-views-events-block-evenements-home h3 a:hover{
+  text-decoration: underline;
+}
+a.fleche-sombre{
+  color: #44484B;
+  background: transparent url(../images/icons/arrow_dark_link.png) no-repeat 100% 50%;
+  display: inline-block;
+  padding-right: 20px;
+  text-decoration: none;
+  border-bottom: 1px solid #44484B;
+}
+div.more-link a{
+  color: #f45a40;
+  background: transparent url(../images/icons/arrow_orange_link.png) no-repeat 100% 50%;
+  display: inline-block;
+  padding-right: 20px;
+  text-decoration: none;
+  border-bottom: 1px solid #f45a40;
+}
+h1, h2, h3, h4, h5, h6{
+  color: #44484B;
+}
+.block-search h2,
+.block-main-menu h2, 
+.block-menu-block-1 h2,
+.block-menu-block-2 h2{
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+}
+/* Menus haut et bas****************************/
+#block-menu-block-1{
+  float:right;
+}
+.menu-name-menu-menu-haut ul li,
+.menu-name-menu-menu-bas ul li{
+  float: left;
+  list-style: none;
+  border-left:1px solid #d4d4d4;
+  margin: 0;
+  padding: 0;
+}
+.menu-name-menu-menu-haut ul li a,
+.menu-name-menu-menu-bas ul li a{
+  display:block;
+  color: #FFFFFF;
+  padding : 0.5em 1.5em;
+  text-decoration: none;
+}
+#block-search-form{
+  float :right;
+  border-right: 1px solid #d4d4d4;
+  margin-top:0.3em;
+  padding-left: 5px;
+}
+/* moteur de recherche search engine **********/
+#search-block-form #edit-submit{
+  border: 0;
+  width: 28px;
+  height: 24px;
+  text-indent: -6000px;
+  background: transparent url(../images/icons/loupe.png) no-repeat 50% 5px;
+}
+/*logo ****************************************/
+#zone-branding h1{
+  font-size : 1em;
+  font-family: arial;
+  font-weight: normal;
+  color: #00405e;
+}
+#region-branding #block-block-1{
+  float: left;
+}
+/* Menu principal *****************************/
+#block-system-main-menu{
+  float: right;
+  margin: 30px 0;
+}
+
+.block-system-main-menu ul.menu>li{
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.block-system-main-menu ul.menu>li>a{
+  display:block;
+  text-decoration: none;
+  padding: 5px 20px;
+  color: #3b3c3e;
+  font-size: 1.4em;
+  border-radius : 6px;
+}
+.block-system-main-menu ul.menu>li>a.sf-depth-1:hover{
+  color: white;
+}
+.block-system-main-menu ul.menu>li>a.active,
+.block-system-main-menu ul.menu>li>a:hover{
+
+  color: #f5ffff;
+}
+
+#block-system-main-menu ul>li>ul{
+    display: none;
+}
+/* fil d'ariane *******************************/
+#breadcrumb{
+  
+}
+/* Menu secondaire ****************************/
+#block-menu-block-3 h2{
+    background-color: #f45a40;
+    padding: 12px;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2em;
+}
+div.menu-block-3 ul.menu>li{
+    list-style: none;
+    margin:0;
+}
+div.menu-block-3>ul.menu>li{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #c4c4c4;
+}
+div.menu-block-3>ul.menu>li.active-trail{
+    background-color: #f0efee;
+}
+div.menu-block-3>ul a{
+    text-decoration: none;
+    color: black;
+}
+div.menu-block-3>ul a.active{
+    color: #F45A40;
+}
+div.menu-block-3>ul>li>a{
+    display: block;
+    padding-left: 10px;
+}
+div.menu-block-3>ul>li>ul>li>a{
+    display: block;
+    padding-left: 20px;
+}
+div.menu-block-3>ul>li>ul>li>ul>li>a{
+    display: block;
+    padding-left: 30px;
+}
+div.menu-block-3>ul>li>ul>li>a:before{
+    content: "> ";
+}
+#region-sidebar-second div.block-menu-block{
+  border-left : 1px solid #000000;
+  margin-top: 32px;
+}
+#region-sidebar-second div.block-menu-block a{
+  color: #F45A40;
+  font-size: 1.4em;
+}
+/* Block je m'installe ************************/
+#block-bean-je-m-installe h2.block-title{
+  font-size: 3em;
+  color: #44484B;
+}
+/* Block je m'installe ********************************************************/
+#block-bean-je-m-installe{
+  width: 100%;
+  height: 150px;
+  float: left;
+  background: #F3F2EE url(../images/bg/map_europe.jpg) no-repeat 45% 50%;
+}
+#block-bean-je-m-installe a, #block-bean-je-m-installe div,
+#block-bean-je-m-installe h2{
+  display: block;
+  text-align: center;
+}
+#block-bean-je-m-installe h2{
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+#block-bean-je-m-installe div.field-item>a{
+  background-color: #F45A40;
+  border-radius: 6px;
+  text-transform: uppercase;
+  color: #f5ffff;
+  padding: 15px;
+  width: 50%;
+  margin: 0 auto 0 auto;
+  text-decoration: none;
+  font-weight: bold;
+}
+#block-bean-je-m-installe div.field-item{
+  
+  font-weight: bold;
+}
+/* bloc édito *****************************************************************/
+#block-bean-edito{
+  width: 100%;
+  float: left;
+  background-color: #24CDB8;
+  color: white;
+}
+#block-bean-edito div.image img{
+  max-width: 50%;
+}
+#block-bean-edito a{ 
+  color: #44484B;
+}
+#block-bean-edito ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#block-bean-edito ul li a{ 
+  padding-left: 15px;
+  background: url(../images/icons/arrow_dark.png) no-repeat 0 50%;
+}
+#block-bean-edito p{
+  margin: 5px 0;
+  padding: 0;
+}
+#block-bean-edito:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+#block-bean-edito div.field-name-field-texte{
+  padding:  10px 10px 5px 10px;
+}
+#block-bean-edito div.field-name-field-texte{
+  padding:  10px 15px 5px 15px;
+  position: relative;
+}
+#block-bean-edito div.image{
+  position: absolute;
+  bottom: 80px;
+  position: absolute;
+  right: -80px;
+}
+/* footer *************************************/
+#section-footer{
+  background: #239abc url(../images/bg/bg_half_white.png) no-repeat 50% 0;
+  margin-top: 15px;
+}
+#region-footer-first{
+  background-color: #239abc;
+}
+#block-block-2{
+  float: right;
+}
+#block-block-2 p{
+  margin: 0;
+  padding: 0;
+}
+/* galerie ************************************/
+.galleria-container {
+  background: #A89C82;
+  border-radius: 8px;
+}
+.view-liste-artistes .view-content .views-row {
+  float :left;
+  margin : 10px 10px 10px 0;
+}
+/* blocks droite ******************************/
+.block-views-events-block-1, #block-views-liste-articles-block-1,
+#block-views-le-saviez-vous-ss-block,#block-views-events-block-2{
+  padding: 8px;
+}
+.block-views-events-block-1 h2.block-title,
+#block-views-news-block-2 h2.block-title,
+#block-views-liste-articles-block-1 h2.block-title,
+.h3-entity-linked,
+#block-views-events-block-2 h2.block-title{
+  text-transform: uppercase;
+  font-size: 1.1em;
+  border-bottom: 2px solid #F45A40;
+  width: 75%;
+  margin-bottom: 5px;
+}
+
+#block-views-news-block-2,
+.div-link-dark-grey{
+  background-color: #e1e0e1;
+  padding: 16px;
+}
+.div-link-light-grey{
+  background-color: #f3f2f2;
+  padding: 16px;
+}
+.block-views-events-block-1 h3 a,
+#block-views-news-block-2 h3 a,
+#block-views-liste-articles-block-1 a,
+.div-link-dark-grey a,
+.div-link-light-grey a{
+  color: #f45a40;
+  text-decoration: none;
+  font-weight: normal;
+  display: block;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  background: url(../images/icons/arrow_orange_small.png) no-repeat 0 7px;
+}
+.block-views-events-block-1 h3 a:hover,
+#block-views-news-block-2 h3 a:hover,
+#block-views-liste-articles-block-1 a:hover{
+  text-decoration: underline;
+}
+/* Mise en page sur deux colonnes *********************************************/
+.field-name-field-tpb-button a,a.list-link-aga{
+  display: block;
+  background-color: #3ED3C0;
+  float: right;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+a.list-link-aga {
+    float: none;
+    margin: 5px 0 0 35%;
+    text-align: center;
+    width: 60%;
+    clear: left;
+}
+.group-accordion-appointment{
+    margin-top: 15px;
+    width: 98%;
+}
+.group-accordion-appointment .form-text{
+    width: 80%;
+    float: right;
+}
+
+.paragraphs-item-titre-paragraphe-bouton{
+  padding-bottom: 5px;
+  border-bottom: 2px solid #919499;
+  margin-bottom: 20px;
+}
+.paragraphs-items-field-2col-second div.image{
+  display: none;
+}
+body.node-type-aga-membre .field-name-field-aga-mail{
+  clear: right;
+}
+/* Block savez-vous slideshow *************************************************/
+#block-views-le-saviez-vous-ss-block{
+  clear: both;
+  font-size: 1.8em;
+}
+#quatre-raisons{
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.05em;
+}
+#quatre-raisons .orange{
+  font-size: 3em;
+  font-style: italic;
+}
+#quatre-raisons .blue-night{
+  font-style: italic;
+}
+#quatre-raisons .grey-dark{
+  line-height: 0em;
+  display: block;
+}
+.grey-dark{
+  color: #44484b;
+}
+#widget_pager_top_le_saviez_vous_ss-block{
+  display: block;
+  position: absolute;
+  top: 35px;
+  right: 40px;
+}
+#widget_pager_top_le_saviez_vous_ss-block .views-slideshow-pager-field-item{
+  float: left;
+  width: 10px;
+  height:16px;
+  text-indent: -6000px;
+  margin-left:  10px;
+  background: url(../images/icons/bullet-blues.png) no-repeat 0 100%;
+  cursor:pointer;
+}
+#widget_pager_top_le_saviez_vous_ss-block .views-slideshow-pager-field-item.active{
+  background: url(../images/icons/bullet-blues.png) no-repeat 0 7px;
+}
+#views_slideshow_controls_text_le_saviez_vous_ss{
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+#block-views-le-saviez-vous-ss-block > div.block-inner{
+  padding: 0 0 0 5px;
+}
+#views_slideshow_controls_text_pause_le_saviez_vous_ss-block{
+  display: none;
+}
+/* Actualités et Agenda page d'accueil ****************************************/
+#block-views-news-block-1{
+  background-color: #4dc1e2;
+  padding: 16px;
+}
+#block-views-events-block-evenements-home{
+  background-color: #f3f2f2;
+  padding: 16px;
+  margin-bottom:20px;
+}
+#block-views-events-block-evenements-home .views-row {
+    background: url("../images/icons/icon_calendar.png") no-repeat scroll 0 2px rgba(0, 0, 0, 0);
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+#block-views-news-block-1 h2.block-title, 
+#block-views-events-block-evenements-home h2.block-title,
+#block-views-le-saviez-vous-ss-block h2.block-title{
+  padding: 0 0 13px 0;
+}
+#block-views-news-block-1 h3 a, 
+#block-views-events-block-evenements-home h3 a,
+#views_slideshow_cycle_main_le_saviez_vous_ss-block a{
+  text-decoration: none;
+  color: #f45a40;
+  display: block;
+  margin-top: 12px;
+}
+
+.view-id-news .views-field-field-news-image{
+    float:left;
+    margin-right : 10px;
+}
+
+#block-views-news-block-1 h2.block-title, 
+#block-views-events-block-evenements-home h2.block-title,
+#block-views-le-saviez-vous-ss-block h2.block-title{
+  text-transform: uppercase;
+  width: 135px;
+  border-bottom: 2px solid #44484B;
+  padding: 15px 0 13px 0;
+}
+
+#block-views-news-block-1 h3 a, 
+#block-views-events-block-evenements-home h3 a,
+#views_slideshow_cycle_main_le_saviez_vous_ss-block a{
+  text-decoration: none;
+  color: #f45a40;
+  font-weight: normal;
+  display: block;
+  clear: both;
+}
+#views_slideshow_cycle_main_le_saviez_vous_ss-block a{
+  display: inline;
+  clear: none;
+}
+#views_slideshow_cycle_main_le_saviez_vous_ss-block a:hover{
+  text-decoration: underline;
+}
+/* Evénements sur la page des événements ************************/
+#block-views-calendrier-block-1{
+  border: 1px solid #CCCCCC;
+  
+}
+#block-views-calendrier-block-1 .view-header{
+  margin-top: -35px;
+}
+.view-calendrier h3 a{
+  color: #F45A40;
+  position: relative;
+  top: 30px;
+  text-decoration: none;
+}
+/* Trouver votre interlocuteur aga liste ************************/
+body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
+  display : none;
+}
+#edit-submit-aga-adherentes{
+    width: 25px;
+    height: 23px;
+    background: url(../images/icons/loupe_orange.png) no-repeat 0 50%;
+    border-radius: 0;
+    text-indent: -6000px;
+    border: 0;
+}
+#block-views-aga-adherentes-block-1 h2{
+    text-transform: uppercase;
+    font-size: 1.6em;
+    font-weight: lighter;
+}
+.view-aga-adherentes .views-row{
+    border-top: 1px solid #F45A40;
+    margin: 10px 0;
+    padding: 10px 0;
+    clear: left;
+}
+.h3_list_aga a{
+    color: #F45A40;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.view-aga-adherentes .views-row a img{
+   float: left;
+   margin: 0 5px 10px 0;
+}
+.node-aga-membre .ds-2col-fluid > .group-left {
+    width: 50%;
+}
+.field-name-field-aga-logo img{
+    float: right;
+    margin: 0 10px 10px 10px;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background-color: #3ED3C0;
+    background-image: none;
+    margin-bottom: 20px;
+    color: white;
+}
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+    color: white/*{fcDefault}*/;
+    text-decoration: none;
+}
+/* Page AGA ************************************************************************************/
+body.not-logged-in div.tabs.clearfix{
+    display : none;
+}
+/* Page Agenda - événement - evenement *********************************************************/
+label, div.views-widget{
+    display: inline-block;
+}
+#views-exposed-form-events-page label{
+    font-weight: normal;
+}
+body.page-s-informer-actualites .views-field-body {
+    width: 60%;
+    float: left;
+}
+
+body.page-s-informer-actualites .views-row:after {
+   content: "";
+   display: block;
+   clear: both;
+
+}
+body.page-s-informer-actualites .views-row{
+    clear: both;
+}
+
+
+h3.title-event-list a,
+h3.title-news-list a,
+a h3.title-articles-list,
+a h3.title-event-list{
+    text-decoration: none;
+    color: #F45A40;
+    font-weight: normal;
+    display: block;
+    font-size: 1em;
+    margin-top: 10px;
+}
+.view-display-id-page_2 .views-field-title a{
+  text-decoration: none;
+}
+.view-display-id-page_2 .views-field-title a:hover{
+  text-decoration: underline;
+}
+.view-liste-articles .views-field-title a{
+    text-decoration : none;
+}
+.views-field .views-label{
+    font-weight: bold;
+}
+.view-events.view-display-id-page .views-field .field-content{
+    display: inline-block;
+}
+div.view-events .views-field-field-event-image{
+    float: right;
+}
+body.not-front div.view-id-events div.views-row,
+.page-s-informer-actualites div.views-row,
+ .view-liste-articles div.views-row{
+    border-bottom: 1px solid #F45A40;
+    padding-bottom: 5px;
+}
+.page-s-informer-actualites div.views-row.views-row-last {
+    border: 0;
+    margin-bottom: 20px;
+}
+div.view-id-events h2,
+div.view-liste-articles h2  {
+    text-transform: uppercase;
+    font-size: 1.6em;
+    font-weight: lighter;
+}
+div.group-right .group-practical-event{
+    background-color: #23cdb7;
+    padding: 15px;
+    color: white;
+    font-weight : bold;
+}
+div.group-right .group-practical-event{
+    padding: 15px;
+    background: #23cdb7 url(../images/bg/bg_white_line_practical.png) no-repeat 50% 45px;
+    margin-bottom: 10px;
+}
+div.group-right .group-practical-event h3{
+    color: white;
+    padding-bottom: 26px;
+    background: url(../images/icons/feuille.png) no-repeat 95% 50%;
+    font-size: 1.6em;
+}
+/*div.group-right .group-practical-event span.date-display-start:after{
+    content: "";
+    display:block;
+}*/
+div.group-right .group-practical-event .date-display-single span.date-display-end:after{
+    content: "";
+    display:block;
+}
+div.group-right .group-practical-event div.image a{
+    color: #44484B;
+    font-weight: normal;
+}
+div.group-right .group-practical-event .subscribe-event a{
+    display: block;
+    padding: 12px 20px;
+    background-color: #f56e57;
+    color: white;
+    font-size: 1.6em;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    width: 50%;
+    margin: 10px auto;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 3px black; 
+}
+div.group-right .group-practical-event a:hover{
+    text-decoration: underline;
+}
+div.field-name-field-event-place{
+    margin-bottom : 15px;
+}
+div.field-name-field-cost-members>div.field-label,
+div.field-name-field-cost-members div.field-item,
+div.field-name-field-event-cost-public>div.field-label,
+div.field-name-field-event-cost-public div.field-item{
+   font-size: 1.2em;
+}
+div.field-name-field-cost-members>div.field-label:before,
+div.field-name-field-event-cost-public>div.field-label:before{
+    content : "  > ";
+}
+/* Superfish ******************************************************************/
+#block-superfish-1{
+  margin-bottom: 1em;
+  padding: 0;
+  
+}
+#superfish-1{
+  float:right;
+}
+#superfish-1 >li.first>a{
+  text-indent: -6000px;
+  background: transparent url(../images/icons/home.png) no-repeat 90% 15px;
+  width: auto;
+  text-align: left;
+  padding-left: 28px;
+}
+#superfish-1 >li.first>a.active,
+#superfish-1 >li.first>a:hover{
+  background: white url(../images/icons/home.png) no-repeat 90% 130%;
+}
+
+.sf-menu.sf-style-space-orange>li{
+  background: transparent;
+}
+
+#superfish-1>li>a{
+  border: 0;
+  display: block;
+  text-decoration: none;
+  padding: 20px 10px 0px 0px;
+  color: #3b3c3e;
+  font-size: 1.2em;
+  background: white url(../images/bg/bg_menus_01.png) no-repeat 0px 0;
+  height: 30px;
+  width: 140px;
+  text-align: right;
+}
+#superfish-1>li>a:hover{
+  color: #F7981D;
+}
+#superfish-1 >li.last>a{
+  background: #ebebeb;
+  text-align: left;
+  border-radius: 0 8px 8px 0;
+  padding: 20px 0px 0px 0px;
+  width: 160px;
+}
+body.front #superfish-1 >li.last>a{
+  text-align: center;
+  width: 180px;
+  padding: 20px 0 0px 0;
+  /*border-left: 1px solid #f7981d;*/
+}
+body.front #superfish-1 >li.sf-item-2>a{
+  padding: 20px 25px 0px 5px;
+  text-align: center;
+  width: 160px;
+  background: white url(../images/bg/bg_menus_01.png) no-repeat 100% 0;
+}
+#superfish-1 >li.active-trail.sf-item-2>a{
+  background: white url(../images/bg/bg_menus_01.png) no-repeat -560px 0;
+  padding: 20px 25px 0px 5px;
+  text-align: center;
+  width: 160px;
+}
+#superfish-1 >li.active-trail.last>a{
+  background: white url(../images/bg/bg_menus_01.png) no-repeat -816px 0;
+  padding: 20px 20px 0 5px;
+  text-align: right;
+  width: 155px;
+}
+#superfish-1 >li.active-trail>a{
+  color: white;
+}
+/* Responsive menu ************************************************************/
+ul.responsive-menu{
+  /*position : absolute;
+  z-index : 99;*/
+}
+body.logged-in #block-menu-block-5{
+  display: none;
+}
+/* Glossaire ******************************************************************/
+.views-summary-unformatted a{
+  font-size: 1.6em;
+  padding: 3px;
+}
+.view-glossaire-d-articles a{
+  text-decoration: none;
+}
+.view-glossaire-d-articles .views-field-body{
+  border-bottom: 1px solid #F45A40;
+  padding-bottom: 5px;
+}
+div.view-glossaire-d-articles{
+  border-bottom: 1px solid #F45A40;
+}
+/* Tableaux *******************************************************************/
+#region-content table td{
+  border-bottom: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+}
+.views-exposed-form .views-exposed-widget .form-submit{
+  margin:0;
+}
+/* Réseaux sociaux ************************************************************/
+
+/* Liens utiles ***************************************************************/
+body.context-adresses-utiles .container-12 .grid-3,
+body.context-adresses-utiles .container-12 .grid-9 {
+  width: 100%;
+}
+body.context-adresses-utiles .container-12 .grid-3{
+  padding: 0;
+  margin: 0;
+}
+body.context-adresses-utiles h2.block-title{
+  display: none;
+}
+
+
+
+
+
+
+
