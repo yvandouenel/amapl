@@ -69,7 +69,7 @@
   padding: 0 10px 0 0;
   margin-top: 30px;
   color: #44484b;
-  font-size: 0.8em;
+  font-size: 0.6em;
 }
 #block-views-le-saviez-vous-ss-block .dnd-atom-wrapper{
   display: block;
@@ -80,101 +80,79 @@
 }
 
 #views_slideshow_cycle_teaser_section_le_saviez_vous_ss-block{
-  height: 170px !important;
+  height: 90px !important;
   overflow: hidden;
 }
+/* raisons ************************************/
 #block-views-le-saviez-vous-ss-block .view-footer a{
-  margin-top: 20px;
-  background-color: #f8a538;
-  border-radius: 4px;
-  display: block;
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 5px 20px;
-  width: 50%;
-  font-size: 0.6em;
-  font-weight: bold;
-  -moz-box-shadow: 1px 5px 5px 0px #656565;
-  -webkit-box-shadow: 1px 5px 5px 0px #656565;
-  -o-box-shadow: 1px 5px 5px 0px #656565;
-  box-shadow: 1px 5px 5px 0px #656565;
-  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=168, Strength=5);
+  margin: 20px 0 0 0;
 }
 
-/* Liste des adhérents ********************************************************/
-body.page-s-entourer-aga-trouver-son-association #block-system-main{
-  float: right;
-  width : 39.58%;
-}
-#block-views-aga-adherentes-block-1{
-  width : 56.25%;
-}
-#block-views-aga-adherentes-block-1 .clearfix:after{
-  clear:none;
-}
-/* Détail d'un adhérent ********************************************************/
-.node-aga-membre.ds-2col-fluid > .group-left,
-.node-event > .group-left,
-.node-news > .group-left,
-.ds-2col.node-article > .group-left{
-    margin-right: 1.0416666%;
-    width: 56.108334%;
-}
-/* Détail d'un adhérent ********************************************************/
-.node-aga-membre.ds-2col-fluid > .group-right,
-.node-event > .group-right,
-.node-news > .group-right,
-.ds-2col.node-article > .group-right{
-    width: 42.75%;
-    float: left;
-}
-.node-aga-membre.ds-2col-fluid > .group-right{
-    padding-bottom: 110px;
-    background: url(../images/icons/local.png) no-repeat 65% 100%;
-}
-#views-exposed-form-aga-adherentes-block-1:after{
-  content:'';
-  display:block;
-  clear: left;
-}
-.block-views-exp-aga-adherentes-page{
-  height: 50px;
-  width : 39.58%;
-}
-.block-views-exp-aga-adherentes-page label, .block-views-exp-aga-adherentes-page div.views-widget{
- float: left;
- margin-right : 20px;
-}
-.block-views-exp-aga-adherentes-page div.views-widget{
- margin : 0;
-}
-.block-views-exp-aga-adherentes-page .views-exposed-form .views-exposed-widget .form-submit{
-  margin-top: 0;
-}
-/* fiche d'un adhérent ********************************************************/
-.group-coord div.field{
-  padding-left : 20px;
-}
 /* Actualités page d'accueil **************************************************/
+h3#zoom-sur{
+  display: block;
+}
 #block-views-news-block-1{
   float:left;
-  width: 62.5%;
+  width: 64.3%;
   padding: 20px 0 0 0;
   margin: 0px 0 0 1.0416667%;
+  height: 239px;
+  position: relative;
+  overflow: hidden;
+  background: #4dc1e2 url(../images/bg/bg_half_blue_news.png) no-repeat 0 0;
+}
+#block-views-news-block-1 .view-content{
+  height: 150px;
+  overflow: hidden;
+}
+#zoom-sur{
+  position: absolute;
+  color: white;
+  top: 26px;
+  left: 370px;
+  z-index: 1;
+  font-size: 2em;
+}
+#member-home{
+  position: absolute;
+  top: 15px;
+  left: 190px;
+  z-index: 1;
+  font-size: 1em;
+  padding-right: 15px;
+  background: url(../images/icons/arrow-white-small.png) no-repeat 100% 50%;
+  color: white;
+  text-decoration: underline;
+  display: block;
+  z-index: 2;
+}
+#block-views-news-block-1 div.more-link a{
+  position: absolute;
+  bottom: 5px;
+  left: 160px;
+  color: #013f4c;
+  background: transparent url(../images/icons/arrow-white-small.png) no-repeat 100% 50%;
+  border-bottom: 0;
+  text-decoration: underline;
 }
 #block-views-news-block-1 > .block-inner{
   padding: 0 0 0 60px;
 }
-
-
-#block-views-news-block-1 h3 a, 
-#block-views-events-block-evenements-home h3 a{
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #013f4c;
+#block-views-news-block-1 .views-row.views-row-first{
+  position: absolute;
+  width: 36%;
+  padding: 60px 1% 5px 5%;
+  height: 210px;
+  background-color: #dedb00;
+  top: 0;
+  right: 0;
+  overflow: hidden;
 }
+#block-views-news-block-1 .views-row{
+  width: 52%;
+}
+
 #block-views-news-block-1 .views-field-body p{
   margin: 0;
 }
@@ -184,17 +162,25 @@ body.page-s-entourer-aga-trouver-son-association #block-system-main{
 #block-views-events-block-evenements-home h3 a{
   margin: 0;
 }
-
+/* Missions et services *******************************************************/
+#block-bean-missions-et-services-{
+  width : 47.916666666666666666666666666667%;
+  float: left;
+  clear: left;
+  background: url(../images/icons/coches-bleue-blanche.png) no-repeat 0 0;
+  padding: 60px 0 0 0;
+  margin: 20px 0 0 1.0416667%;
+}
 /* Agenda - evenement page d'accueil ******************************************/
 #block-views-events-block-evenements-home{
   float:left;
-  width: 31.25%;
-  background: url(../images/illustrations/agenda.png) no-repeat 0 0;
+  width : 47.916666666666666666666666666667%;
+  background: url(../images/icons/agenda-yellow.png) no-repeat 0 0;
   padding: 60px 0 0 0;
   margin: 20px 0 0 1.0416667%;
 }
 #block-views-events-block-evenements-home .views-row{
-  background: url(../images/icons/icon_calendar.png) no-repeat 0 2px;
+  background: url(../images/icons/icon_calendar.png) no-repeat 0 5px;
   padding-left: 20px;
 }
 /* Mise en page sur deux colonnes**********************************************/
@@ -216,5 +202,27 @@ body.page-s-entourer-aga-trouver-son-association #block-system-main{
   clear: left;
   margin-bottom: 40px;
 }
-
+/* Menu actions ***************************************************************/
+#section-content #block-menu-block-7 ul li a{
+  display: block;
+  height: 80px;
+  padding: 40px 0 0 50%;
+  background: transparent url(../images/icons/adherer.png) no-repeat 0 50%;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+#section-content #block-menu-block-7 ul li.first a{
+  padding: 40px 0 0 50%;
+  margin-left: 25px;
+}
+#section-content #block-menu-block-7 ul li.menu-mlid-879 a{
+  background: transparent url(../images/icons/telecharger.png) no-repeat 0 50%;
+}
+#section-content #block-menu-block-7 ul li.menu-mlid-880 a{
+  background: transparent url(../images/icons/teledeclarer.png) no-repeat 0 50%;
+}
+#section-content #block-menu-block-7 ul li.menu-mlid-881 a{
+  background: transparent url(../images/icons/se-documenter.png) no-repeat 0 50%;
+}
 

@@ -40,19 +40,56 @@
 body.front #breadcrumb{
     display:none;
 }
+#admin-menu .dropdown a, #admin-menu .dropdown li > span {
+  border-right: 1px solid #323232;
+  display: block;
+  padding: 8px 8px;
+  font-size: 1.6em;
+  line-height: 1.5em;
+}
+ul li.leaf {
+  list-style: none;
+}
 /* Global *************************************/
 body,h1, h2, h3, h4, h5, h6{
   /*font-family: 'Signika', sans-serif;*/
   font-family: 'Roboto', sans-serif;
 }
 a,a:link, a:visited{
-    color: #41D4C1;
+    color: #00486E;
 }
 a:hover{
     text-decoration: underline;
 }
 p{
   margin: 1em 0;
+}
+ul {
+  list-style: none;
+}
+#section-content .content ul li{
+  padding-left: 10px;
+  background: transparent url(../images/icons/arrow-blue-dark.png) no-repeat 0 7px;
+}
+#section-content .content ol li{
+  background-image: none;
+}
+#section-content .content .date-nav-wrapper li{
+  padding-left: 0;
+  background-image: none;
+}
+#section-content .content ol { 
+  counter-reset: item;
+}
+#section-content .content ol li{ 
+  display: block;
+  background-image: none;
+  list-style: none;
+}
+#section-content .content ol li:before{ 
+  content: counter(item) ". "; 
+  counter-increment: item;
+  color: #f7981d;
 }
 .orange{
   color: #f7981d;
@@ -73,14 +110,13 @@ p{
     border-bottom: 1px dotted #44484B;
     padding: 15px 0 5px 0;
     margin-bottom: 5px
-
 }
 img{
   max-width: 100%;
 }
 h2#page-title{
   font-size: 1.8em;
-  border-bottom: 1px solid #F45A40;
+  border-bottom: 1px solid #F7981D;
 }
 #logo-lppl{
     margin: 20px 0 20px 30px;
@@ -102,12 +138,12 @@ a.fleche-sombre{
   border-bottom: 1px solid #44484B;
 }
 div.more-link a{
-  color: #f45a40;
+  color: #0c2f43;
   background: transparent url(../images/icons/arrow_orange_link.png) no-repeat 100% 50%;
   display: inline-block;
   padding-right: 20px;
   text-decoration: none;
-  border-bottom: 1px solid #f45a40;
+  border-bottom: 1px solid #0c2f43;
 }
 h1, h2, h3, h4, h5, h6{
   color: #44484B;
@@ -121,6 +157,45 @@ h1, h2, h3, h4, h5, h6{
     overflow: hidden;
     position: absolute !important;
 }
+/* Menu actions ********************************/
+#section-content #block-menu-block-7{
+  background-color: #f2f1ef;
+  border-top: 1px solid #cfcdca;
+  border-bottom: 1px solid #cfcdca;
+}
+#section-content #block-menu-block-7 ul.menu:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+#section-content #block-menu-block-7 ul li{
+  background-image: none;
+  padding: 0;
+  float:left;
+  margin-right: 4%;
+  width:40%;
+}
+#section-content #block-menu-block-7 ul li a{
+  display: block;
+  height: 60px;
+  padding: 40px 0 0 50%;
+  background: transparent url(../images/icons/adherer.png) no-repeat 0 50%;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#section-content #block-menu-block-7 ul li.menu-mlid-879 a{
+  background: transparent url(../images/icons/telecharger.png) no-repeat 0 50%;
+}
+#section-content #block-menu-block-7 ul li.menu-mlid-880 a{
+  background: transparent url(../images/icons/teledeclarer.png) no-repeat 0 50%;
+}
+#section-content #block-menu-block-7 ul li.menu-mlid-881 a{
+  background: transparent url(../images/icons/se-documenter.png) no-repeat 0 50%;
+}
+
+
 /* Menus haut et bas****************************/
 #block-menu-block-1{
   float:right;
@@ -226,7 +301,7 @@ div.menu-block-3>ul a{
     color: black;
 }
 div.menu-block-3>ul a.active{
-    color: #F45A40;
+    color: #F7981D;
 }
 div.menu-block-3>ul>li>a{
     display: block;
@@ -248,7 +323,7 @@ div.menu-block-3>ul>li>ul>li>a:before{
   margin-top: 32px;
 }
 #region-sidebar-second div.block-menu-block a{
-  color: #F45A40;
+  color: #F7981D;
   font-size: 1.4em;
 }
 /* Block je m'installe ************************/
@@ -273,7 +348,7 @@ div.menu-block-3>ul>li>ul>li>a:before{
   padding: 0;
 }
 #block-bean-je-m-installe div.field-item>a{
-  background-color: #F45A40;
+  background-color: #F7981D;
   border-radius: 6px;
   text-transform: uppercase;
   color: #f5ffff;
@@ -368,7 +443,7 @@ div.menu-block-3>ul>li>ul>li>a:before{
 #block-views-events-block-2 h2.block-title{
   text-transform: uppercase;
   font-size: 1.1em;
-  border-bottom: 2px solid #F45A40;
+  border-bottom: 2px solid #F7981D;
   width: 75%;
   margin-bottom: 5px;
 }
@@ -478,28 +553,63 @@ body.node-type-aga-membre .field-name-field-aga-mail{
   cursor:pointer;
 }
 #widget_pager_top_le_saviez_vous_ss-block .views-slideshow-pager-field-item.active{
-  background: url(../images/icons/bullet-blues.png) no-repeat 0 7px;
+  background: url(../images/icons/bullet-blues.png) no-repeat 0 6px;
 }
 #views_slideshow_controls_text_le_saviez_vous_ss{
   position: absolute;
   top: 20px;
   left: 50px;
 }
-#block-views-le-saviez-vous-ss-block > div.block-inner{
-  padding: 0 0 0 5px;
-}
+
 #views_slideshow_controls_text_pause_le_saviez_vous_ss-block{
   display: none;
 }
+#views_slideshow_controls_text_le_saviez_vous_ss-block{
+  display: none;
+}
+#views_slideshow_cycle_teaser_section_le_saviez_vous_ss-block{
+  height: 130px !important;
+  overflow: hidden;
+}
+#block-views-le-saviez-vous-ss-block .view-footer a{
+  margin: 0 auto 20px auto;
+  background-color: #f8a538;
+  border-radius: 4px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5px 20px;
+  width: 50%;
+  font-size: 0.6em;
+  font-weight: bold;
+  -moz-box-shadow: 1px 5px 5px 0px #656565;
+  -webkit-box-shadow: 1px 5px 5px 0px #656565;
+  -o-box-shadow: 1px 5px 5px 0px #656565;
+  box-shadow: 1px 5px 5px 0px #656565;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=168, Strength=5);
+}
 /* Actualités et Agenda page d'accueil ****************************************/
+
+#member-home {
+  font-size: 1em;
+  padding-right: 15px;
+  background: url(../images/icons/arrow-white-small.png) no-repeat 100% 50%;
+  color: white;
+  text-decoration: underline;
+  display: block;
+  float: right;
+}
 #block-views-news-block-1{
   background-color: #4dc1e2;
   padding: 16px;
+  margin-bottom: 20px;
 }
 #block-views-events-block-evenements-home{
   background-color: #f3f2f2;
   padding: 16px;
-  margin-bottom:20px;
+  margin:20px 0 20px 0;
 }
 #block-views-events-block-evenements-home .views-row {
     background: url("../images/icons/icon_calendar.png") no-repeat scroll 0 2px rgba(0, 0, 0, 0);
@@ -526,13 +636,31 @@ body.node-type-aga-membre .field-name-field-aga-mail{
     margin-right : 10px;
 }
 
-#block-views-news-block-1 h2.block-title, 
 #block-views-events-block-evenements-home h2.block-title,
-#block-views-le-saviez-vous-ss-block h2.block-title{
+#block-views-le-saviez-vous-ss-block h2.block-title,
+body.front h2.block-title{
   text-transform: uppercase;
-  width: 135px;
-  border-bottom: 2px solid #44484B;
-  padding: 15px 0 13px 0;
+  padding: 0 0 7px 0;
+  margin: 0 0 10px 0;
+  font-size: 1.6em;
+}
+body.front .block-missions-et-services- h2.block-title{
+  background: url("../images/bg/separator-blue-dark.png") no-repeat 0 100%;
+  color: #5ec0d6;
+}
+body.front .block-events-block-evenements-home h2.block-title{
+  background: url("../images/bg/separator-yellow.png ") no-repeat 0 100%;
+  color: #44484b;
+}
+#block-views-news-block-1 h2.block-title{
+  text-transform: uppercase;
+  padding: 0;
+  color: white;
+  font-size: 1.4em;
+  margin-top: 13px;
+  line-height: 1em;
+  position: relative;
+  top: 5px;
 }
 
 #block-views-news-block-1 h3 a, 
@@ -544,12 +672,21 @@ body.node-type-aga-membre .field-name-field-aga-mail{
   display: block;
   clear: both;
 }
+body.front .view-id-events p{
+  margin: 0;
+}
 #views_slideshow_cycle_main_le_saviez_vous_ss-block a{
   display: inline;
   clear: none;
 }
 #views_slideshow_cycle_main_le_saviez_vous_ss-block a:hover{
   text-decoration: underline;
+}
+#block-views-news-block-1 h3 a, 
+#block-views-events-block-evenements-home h3 a{
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #013f4c;
 }
 /* Evénements sur la page des événements ************************/
 #block-views-calendrier-block-1{
@@ -560,7 +697,7 @@ body.node-type-aga-membre .field-name-field-aga-mail{
   margin-top: -35px;
 }
 .view-calendrier h3 a{
-  color: #F45A40;
+  color: #F7981D;
   position: relative;
   top: 30px;
   text-decoration: none;
@@ -583,13 +720,13 @@ body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
     font-weight: lighter;
 }
 .view-aga-adherentes .views-row{
-    border-top: 1px solid #F45A40;
+    border-top: 1px solid #F7981D;
     margin: 10px 0;
     padding: 10px 0;
     clear: left;
 }
 .h3_list_aga a{
-    color: #F45A40;
+    color: #F7981D;
     text-decoration: none;
     font-size: 1.2em;
 }
@@ -647,11 +784,17 @@ h3.title-news-list a,
 a h3.title-articles-list,
 a h3.title-event-list{
     text-decoration: none;
-    color: #F45A40;
+    color: #F7981D;
     font-weight: normal;
     display: block;
-    font-size: 1em;
+    font-size: 1.6em;
     margin-top: 10px;
+}
+.region-sidebar-second-inner h3.title-event-list a,
+.region-sidebar-second-inner h3.title-news-list a,
+.region-sidebar-second-inner a h3.title-articles-list,
+.region-sidebar-second-inner a h3.title-event-list{
+    font-size: 1.2em;
 }
 .view-display-id-page_2 .views-field-title a{
   text-decoration: none;
@@ -674,7 +817,7 @@ div.view-events .views-field-field-event-image{
 body.not-front div.view-id-events div.views-row,
 .page-s-informer-actualites div.views-row,
  .view-liste-articles div.views-row{
-    border-bottom: 1px solid #F45A40;
+    border-bottom: 1px solid #00486E;
     padding-bottom: 5px;
 }
 .page-s-informer-actualites div.views-row.views-row-last {
@@ -695,7 +838,7 @@ div.group-right .group-practical-event{
 }
 div.group-right .group-practical-event{
     padding: 15px;
-    background: #23cdb7 url(../images/bg/bg_white_line_practical.png) no-repeat 50% 45px;
+    background: #239ABC url(../images/bg/bg_white_line_practical.png) no-repeat 50% 45px;
     margin-bottom: 10px;
 }
 div.group-right .group-practical-event h3{
@@ -837,11 +980,11 @@ body.logged-in #block-menu-block-5{
   text-decoration: none;
 }
 .view-glossaire-d-articles .views-field-body{
-  border-bottom: 1px solid #F45A40;
+  border-bottom: 1px solid #F7981D;
   padding-bottom: 5px;
 }
 div.view-glossaire-d-articles{
-  border-bottom: 1px solid #F45A40;
+  border-bottom: 1px solid #F7981D;
 }
 /* Tableaux *******************************************************************/
 #region-content table td{

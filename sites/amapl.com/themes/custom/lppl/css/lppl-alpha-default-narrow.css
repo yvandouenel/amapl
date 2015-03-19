@@ -22,6 +22,9 @@
 #block-views-le-saviez-vous-ss-block{
   padding: 16px;
 }
+#block-views-le-saviez-vous-ss-block{
+  padding: 0 16px 16px 16px;
+}
 .sf-menu.sf-style-space-orange {
   float: left;
 }
@@ -43,3 +46,35 @@
   float: left;
   width: 65%;
 }
+/* actualités actus ****************************/
+h3#zoom-sur{
+  display: none;
+}
+/* Menu actions ********************************/
+#section-content #block-menu-block-7 ul li{
+  width: 20%;
+}
+#section-content #block-menu-block-7 ul li a{
+  display: block;
+  height: 95px;
+  padding: 40% 0 0 50%;
+  background: transparent url(../images/icons/adherer.png) no-repeat 0 50%;
+  text-decoration: none;
+}
+#section-content #block-menu-block-7 ul li a{
+  height: 110px;
+  padding: 0;
+  background: transparent url(../images/icons/adherer.png) no-repeat 50% 100%;
+  text-align: center;
+  display: block;
+}
+#section-content #block-menu-block-7 ul li.menu-mlid-879 a{
+  background: transparent url(../images/icons/telecharger.png) no-repeat 50% 100%;
+}
+#section-content #block-menu-block-7 ul li.menu-mlid-880 a{
+  background: transparent url(../images/icons/teledeclarer.png) no-repeat 50% 100%;
+}
+#section-content #block-menu-block-7 ul li.menu-mlid-881 a{
+  background: transparent url(../images/icons/se-documenter.png) no-repeat 50% 100%;
+}
+
