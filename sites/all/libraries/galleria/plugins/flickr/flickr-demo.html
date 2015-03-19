@@ -23,7 +23,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 
         <!-- load Galleria -->
-        <script src="../../galleria-1.2.9.min.js"></script>
+        <script src="../../galleria-1.2.7.min.js"></script>
 
         <!-- load flickr plugin -->
         <script src="galleria.flickr.min.js"></script>
@@ -39,7 +39,6 @@
         <div id="galleria"></div>
 
         <p class="cred">Made by <a href="http://galleria.aino.se">Galleria</a>.</p>
-        <a href="#" id="close">cloase</a>
     </div>
     <script>
 
@@ -48,12 +47,8 @@
 
     // Initialize Galleria
     Galleria.run('#galleria', {
-
-        // search flickr for "galleria"
-        flickr: 'search:galleria',
-        
+        flickr: 'search:cityscape',
         flickrOptions: {
-            // sort by interestingness
             sort: 'interestingness-desc'
         }
     });
