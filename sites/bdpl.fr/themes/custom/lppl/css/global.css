@@ -816,6 +816,11 @@ h3.h3_taxo{
   float: right;
   margin-top: 40px;
 }
+/* user login *****************************************************************/
+#user-login-form .form-type-textfield{
+  float: left;
+  margin: 0 20px;
+}
 
 
 
