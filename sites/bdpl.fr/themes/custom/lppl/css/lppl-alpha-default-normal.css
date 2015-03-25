@@ -200,5 +200,9 @@ body.page-s-entourer-aga-trouver-son-association #block-system-main{
   clear: left;
   margin-bottom: 40px;
 }
+/* Aide ***********************************************************************/
+#admin-menu-menu{
+  display: none;
+}
 
 
