@@ -44,6 +44,9 @@
   text-transform: uppercase;
   width: 135px;
 }
+#block-bean-guide-comptable h2{
+  margin-bottom: 12px;
+}
 #block-views-liste-articles-block-2 .view-liste-articles .views-field-title a,
 #block-views-liste-articles-block-3 .view-liste-articles .views-field-title a
 #block-bean-guide-comptable a{
