@@ -851,6 +851,10 @@ h3.h3_taxo{
 .h3_home_guide2035 a{
   text-decoration: none;
   color: #f45a40;
+  display: block;
+  font-weight: normal;
+  font-family: inherit;
+  font-size: 1em;
 }
 
 /* Références *****************************************************************/
