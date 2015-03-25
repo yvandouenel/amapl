@@ -104,9 +104,14 @@ a.orange{
   margin: 0;
 }
 h2#page-title{
-  font-size: 2em;
-  background-color: #EEE;
-  padding: 5px 2px 5px 10px;
+    background-color: #f45a40;
+    padding: 12px;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2em;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
 }
 .title-articles-list{
   font-size: 2em;
@@ -798,13 +803,8 @@ div.views-row div.field-item h2{
   margin-bottom: 15px;
 }
 .view-liste-articles div.views-row div.field-item h2{
-    background-color: #f45a40;
-    padding: 12px;
-    color: white;
-    text-transform: uppercase;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.2em;
-    border-bottom: 1px solid black;
+  background-color: #FFBE00;
+  padding-left: 10px;
 }
 
 h3.h3_taxo{
