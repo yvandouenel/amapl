@@ -110,7 +110,6 @@ h2#page-title{
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
     font-size: 1.4em;
-    border-bottom: 1px solid black;
     margin-bottom: 10px;
 }
 .title-articles-list{
@@ -804,7 +803,7 @@ div.views-row div.field-item h2{
 }
 .view-liste-articles div.views-row div.field-item h2{
     background-color: #f45a40;
-    padding: 12px;
+    padding: 10px;
     color: white;
     text-transform: uppercase;
     font-family: "Roboto", sans-serif;
@@ -833,6 +832,15 @@ h3.h3_taxo{
   margin: 0 20px;
 }
 
+/* Home guide comptable *******************************************************/
+#block-bean-guide-comptable{
+  float: right;
+  background: url("../images/illustrations/compta.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  margin: 20px 0 0 0;
+  overflow: hidden;
+  padding: 60px 0 0 0;
+  width: 30%;
+}
 
 
 
