@@ -833,12 +833,19 @@ h3.h3_taxo{
 }
 
 /* Home guide comptable *******************************************************/
-#block-bean-guide-comptable{
+#block-bean-guide-comptable, #block-bean-2035plus{
   float: right;
   background: url("../images/illustrations/compta.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
   margin: 20px 0 0 0;
   overflow: hidden;
   padding: 60px 0 0 0;
+  width: 30%;
+}
+#block-bean-2035plus{
+  float: right;
+  background-image: none;
+  margin: 20px 0 0 0;
+  padding: 20px 0 0 0;
   width: 30%;
 }
 .h3_home_guide2035 a{
