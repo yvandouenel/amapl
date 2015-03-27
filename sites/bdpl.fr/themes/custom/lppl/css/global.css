@@ -176,6 +176,11 @@ h1, h2, h3, h4, h5, h6{
   padding : 0.5em 1.5em;
   text-decoration: none;
 }
+.menu-name-menu-menu-haut ul li a:hover,
+.menu-name-menu-menu-bas ul li a:hover{
+  background-color: #41d4c1;
+  color: black;
+}
 #block-search-form{
   float :right;
   border-right: 1px solid #d4d4d4;
@@ -220,7 +225,7 @@ h1, h2, h3, h4, h5, h6{
 .block-system-main-menu ul.menu>li>a.active,
 .block-system-main-menu ul.menu>li>a.active-trail,
 .block-system-main-menu ul.menu>li>a:hover{
-  background-color: #F45A40;
+  background-color: #f45a40;/*#F45A40;*/
   color: #f5ffff;
 }
 .block-system-main-menu ul.menu>li.first>a{
@@ -878,7 +883,41 @@ h3.h3_taxo{
 }
 .field-name-field-source{
   float: left;
-  margin-right: 15px;
+  margin-right: 10px;
+}
+#summary-ref .field-name-body{
+  background-color: #eeeeee;
+  padding: 5px;
+  margin: 15px 0;
+}
+body.node-type-references .field-name-lien-impression{
+  float: left; 
+}
+body.node-type-references .field-collection-container {
+    border: 0;
+    margin: 0;
+}
+.node-references > .field-collection-container > .field-name-field-pub-source{
+  float: left; 
+  margin-right: 20px;
+  width: 100%;
+}
+.node-references .field-name-field-date-de-publication-tierce{
+  float: left;
+  clear: none;
+}
+.node-references .field-collection-view .field-label {
+  width: auto;
+}
+.node-references .field-name-lien-impression a{
+  margin-left: 15px;
+}
+.field-collection-container > img{
+  margin-left: 15px;
+  border: 1px solid red;
+}
+.node-references .dnd-drop-wrapper img.scald-file-icon, .node-references img.scald-file-icon {
+    margin-left: 15px;
 }
 
 
