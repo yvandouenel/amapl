@@ -27,7 +27,7 @@ function feature_references_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -66,11 +66,11 @@ function feature_references_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -115,7 +115,7 @@ function feature_references_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
@@ -154,7 +154,7 @@ function feature_references_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -189,7 +189,7 @@ function feature_references_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 31,
+      'weight' => 2,
     ),
   );
 
@@ -207,7 +207,7 @@ function feature_references_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 1,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -233,7 +233,99 @@ function feature_references_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 41,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-references-field_ndlr'
+  $field_instances['node-references-field_ndlr'] = array(
+    'bundle' => 'references',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_ndlr',
+    'label' => 'Ndlr',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+        'show_token_tree' => 0,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-references-field_notes_perso'
+  $field_instances['node-references-field_notes_perso'] = array(
+    'bundle' => 'references',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 27,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_notes_perso',
+    'label' => 'Notes perso',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+        'show_token_tree' => 0,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 3,
     ),
   );
 
@@ -245,11 +337,11 @@ function feature_references_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'domainedo_media',
         'settings' => array(),
-        'type' => 'title',
-        'weight' => 9,
+        'type' => 'file_representation',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -281,7 +373,7 @@ function feature_references_field_default_field_instances() {
         'context' => 'sdl_editor_representation',
       ),
       'type' => 'atom_reference_textfield',
-      'weight' => 49,
+      'weight' => 13,
     ),
   );
 
@@ -302,7 +394,7 @@ function feature_references_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 7,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -335,7 +427,7 @@ function feature_references_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 47,
+      'weight' => 11,
     ),
   );
 
@@ -356,7 +448,7 @@ function feature_references_field_default_field_instances() {
           'multiple_to' => '',
         ),
         'type' => 'date_default',
-        'weight' => 8,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -389,7 +481,7 @@ function feature_references_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 48,
+      'weight' => 12,
     ),
   );
 
@@ -408,7 +500,7 @@ function feature_references_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -432,7 +524,7 @@ function feature_references_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 51,
+      'weight' => 15,
     ),
   );
 
@@ -447,7 +539,7 @@ function feature_references_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -472,7 +564,7 @@ function feature_references_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 50,
+      'weight' => 14,
     ),
   );
 
@@ -484,7 +576,7 @@ function feature_references_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'field_collection',
         'settings' => array(
           'add' => 'Ajouter',
@@ -494,7 +586,7 @@ function feature_references_field_default_field_instances() {
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
-        'weight' => 12,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -516,7 +608,7 @@ function feature_references_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 52,
+      'weight' => 16,
     ),
   );
 
@@ -536,7 +628,7 @@ function feature_references_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 2,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -558,7 +650,7 @@ function feature_references_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 42,
+      'weight' => 7,
     ),
   );
 
@@ -574,7 +666,7 @@ function feature_references_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -604,7 +696,7 @@ function feature_references_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 45,
+      'weight' => 10,
     ),
   );
 
@@ -620,7 +712,7 @@ function feature_references_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 4,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -642,7 +734,7 @@ function feature_references_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 44,
+      'weight' => 9,
     ),
   );
 
@@ -658,7 +750,7 @@ function feature_references_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 3,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -680,7 +772,7 @@ function feature_references_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 43,
+      'weight' => 8,
     ),
   );
 
@@ -697,6 +789,8 @@ function feature_references_field_default_field_instances() {
   t('Lien publication tierce');
   t('Mots clés');
   t('Nature');
+  t('Ndlr');
+  t('Notes perso');
   t('Pièces jointes');
   t('Résumé et contenu');
   t('Source');

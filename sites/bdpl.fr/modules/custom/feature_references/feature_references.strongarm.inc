@@ -42,7 +42,7 @@ function feature_references_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_references';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['comment_preview_references'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -89,17 +89,20 @@ function feature_references_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '40',
+          'weight' => '5',
         ),
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '30',
+          'weight' => '1',
         ),
       ),
       'display' => array(),
