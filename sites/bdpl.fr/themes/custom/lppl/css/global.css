@@ -699,7 +699,7 @@ a h3.title-articles-list{
   float: left;
   margin: 25px 20px 5px 0;
 }
-.view-liste-articles .field-name-lien-impression a{
+.field-name-lien-impression a{
   display: block;
   padding-left: 30px;
   background: url(../images/icons/print.png) no-repeat 0 50%;
@@ -875,6 +875,10 @@ h3.h3_taxo{
   font-size: 1.2em;
   border-bottom: 1px solid black;
   margin-bottom: 10px;
+}
+.field-name-field-source{
+  float: left;
+  margin-right: 15px;
 }
 
 
