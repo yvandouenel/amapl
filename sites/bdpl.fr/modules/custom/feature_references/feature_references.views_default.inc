@@ -63,6 +63,11 @@ function feature_references_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '300',
   );
+  /* Critère de tri: Contenu : Date de décision (field_pub_date_decision) */
+  $handler->display->display_options['sorts']['field_pub_date_decision_value']['id'] = 'field_pub_date_decision_value';
+  $handler->display->display_options['sorts']['field_pub_date_decision_value']['table'] = 'field_data_field_pub_date_decision';
+  $handler->display->display_options['sorts']['field_pub_date_decision_value']['field'] = 'field_pub_date_decision_value';
+  $handler->display->display_options['sorts']['field_pub_date_decision_value']['order'] = 'DESC';
   /* Critère de tri: Contenu : Date de publication */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -85,12 +90,59 @@ function feature_references_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Entête: Global : Texte non filtré */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<h3 class="ref-subtitles">Sélection de jurisprudence</h3>';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'references' => 'references',
+  );
+  /* Critère de filtrage: Contenu : Catégorie (field_ref_cat) */
+  $handler->display->display_options['filters']['field_ref_cat_tid']['id'] = 'field_ref_cat_tid';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['table'] = 'field_data_field_ref_cat';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['field'] = 'field_ref_cat_tid';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['value'] = array(
+    42 => '42',
+  );
+  $handler->display->display_options['filters']['field_ref_cat_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['vocabulary'] = 'categories_ref';
+  /* Critère de filtrage: Contenu : Date de publication */
+  $handler->display->display_options['filters']['created']['id'] = 'created';
+  $handler->display->display_options['filters']['created']['table'] = 'node';
+  $handler->display->display_options['filters']['created']['field'] = 'created';
+  $handler->display->display_options['filters']['created']['value']['value'] = '1970-01-01';
   $handler->display->display_options['path'] = 'references';
 
   /* Display: Bloc */
   $handler = $view->new_display('block', 'Bloc', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Références';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Critère de tri: Contenu : Date de décision (field_pub_date_decision) */
+  $handler->display->display_options['sorts']['field_pub_date_decision_value']['id'] = 'field_pub_date_decision_value';
+  $handler->display->display_options['sorts']['field_pub_date_decision_value']['table'] = 'field_data_field_pub_date_decision';
+  $handler->display->display_options['sorts']['field_pub_date_decision_value']['field'] = 'field_pub_date_decision_value';
+  $handler->display->display_options['sorts']['field_pub_date_decision_value']['order'] = 'DESC';
+  /* Critère de tri: Contenu : Date de publication */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Critère de filtrage: Contenu : Publié */
@@ -115,6 +167,178 @@ function feature_references_views_default_views() {
     1 => '1',
   );
   $handler->display->display_options['block_description'] = 'block références';
+
+  /* Display: Sélection de jurisprudence */
+  $handler = $view->new_display('attachment', 'Sélection de jurisprudence', 'attachment_4');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Sélection de jurisprudence';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Entête: Global : Texte non filtré */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<h3 class="ref-subtitles">Sélection de jurisprudence</h3>';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'references' => 'references',
+  );
+  /* Critère de filtrage: Contenu : Catégorie (field_ref_cat) */
+  $handler->display->display_options['filters']['field_ref_cat_tid']['id'] = 'field_ref_cat_tid';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['table'] = 'field_data_field_ref_cat';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['field'] = 'field_ref_cat_tid';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['value'] = array(
+    42 => '42',
+  );
+  $handler->display->display_options['filters']['field_ref_cat_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['vocabulary'] = 'categories_ref';
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+    'block_1' => 0,
+  );
+  $handler->display->display_options['attachment_position'] = 'after';
+
+  /* Display: Sélection de textes */
+  $handler = $view->new_display('attachment', 'Sélection de textes', 'attachment_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Sélection de jurisprudence';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Entête: Global : Texte non filtré */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<h3 class="ref-subtitles">Sélection de textes</h3>';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'references' => 'references',
+  );
+  /* Critère de filtrage: Contenu : Catégorie (field_ref_cat) */
+  $handler->display->display_options['filters']['field_ref_cat_tid']['id'] = 'field_ref_cat_tid';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['table'] = 'field_data_field_ref_cat';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['field'] = 'field_ref_cat_tid';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['value'] = array(
+    43 => '43',
+  );
+  $handler->display->display_options['filters']['field_ref_cat_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['vocabulary'] = 'categories_ref';
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+    'block_1' => 0,
+  );
+  $handler->display->display_options['attachment_position'] = 'after';
+
+  /* Display: Sélection de textes */
+  $handler = $view->new_display('attachment', 'Sélection de textes', 'attachment_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Téléchargements';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Entête: Global : Texte non filtré */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<h3 class="ref-subtitles">Téléchargements</h3>';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'references' => 'references',
+  );
+  /* Critère de filtrage: Contenu : Catégorie (field_ref_cat) */
+  $handler->display->display_options['filters']['field_ref_cat_tid']['id'] = 'field_ref_cat_tid';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['table'] = 'field_data_field_ref_cat';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['field'] = 'field_ref_cat_tid';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['value'] = array(
+    145 => '145',
+  );
+  $handler->display->display_options['filters']['field_ref_cat_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['vocabulary'] = 'categories_ref';
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+    'block_1' => 0,
+  );
+  $handler->display->display_options['attachment_position'] = 'after';
+
+  /* Display: Tribune Libre */
+  $handler = $view->new_display('attachment', 'Tribune Libre', 'attachment_3');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Téléchargements';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Entête: Global : Texte non filtré */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<h3 class="ref-subtitles">Tribune Libre</h3>';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'references' => 'references',
+  );
+  /* Critère de filtrage: Contenu : Catégorie (field_ref_cat) */
+  $handler->display->display_options['filters']['field_ref_cat_tid']['id'] = 'field_ref_cat_tid';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['table'] = 'field_data_field_ref_cat';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['field'] = 'field_ref_cat_tid';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['value'] = array(
+    172 => '172',
+  );
+  $handler->display->display_options['filters']['field_ref_cat_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['vocabulary'] = 'categories_ref';
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+    'block_1' => 0,
+  );
+  $handler->display->display_options['attachment_position'] = 'after';
   $translatables['references'] = array(
     t('Master'),
     t('Références'),
@@ -133,8 +357,16 @@ function feature_references_views_default_views() {
     t('dernier »'),
     t('<h3>[title]</h3>'),
     t('Page'),
+    t('<h3 class="ref-subtitles">Sélection de jurisprudence</h3>'),
     t('Bloc'),
     t('block références'),
+    t('Sélection de jurisprudence'),
+    t('Sélection de textes'),
+    t('<h3 class="ref-subtitles">Sélection de textes</h3>'),
+    t('Téléchargements'),
+    t('<h3 class="ref-subtitles">Téléchargements</h3>'),
+    t('Tribune Libre'),
+    t('<h3 class="ref-subtitles">Tribune Libre</h3>'),
   );
   $export['references'] = $view;
 
