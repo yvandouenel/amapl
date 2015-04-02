@@ -954,7 +954,12 @@ body.node-type-references .field-collection-container {
 #block-system-user-menu ul li{
   float: left;
   margin-left: 20px;
-  
+  list-style: none;
+}
+#block-system-user-menu ul li.last a{
+  padding-left: 20px;
+  background: url("../images/icons/logout.png") no-repeat 0 50%;
+  display: block;
 }
 #block-system-user-menu ul li.first{
   display: none;
