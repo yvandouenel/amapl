@@ -152,7 +152,7 @@ body.page-s-entourer-aga-trouver-son-association #block-system-main{
   width: 31.25%;
   background: white url(../images/illustrations/actu.png) no-repeat 0 0;
   padding: 60px 0 0 0;
-  margin: 20px 0 0 1.0416667%;
+  margin: 20px 4% 0 0;
 }
 
 
@@ -199,6 +199,10 @@ body.page-s-entourer-aga-trouver-son-association #block-system-main{
   display: block;
   clear: left;
   margin-bottom: 40px;
+}
+/* Aide ***********************************************************************/
+#admin-menu-menu{
+  /*display: none;*/
 }
 
 
