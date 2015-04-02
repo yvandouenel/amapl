@@ -946,7 +946,19 @@ body.node-type-references .field-collection-container {
   margin-top: 40px;
   padding: 3px 5px;
 }
-
+/* user login account *********************************************************/
+#block-system-user-menu{
+  float: right;
+  
+}
+#block-system-user-menu ul li{
+  float: left;
+  margin-left: 20px;
+  
+}
+#block-system-user-menu ul li.first{
+  display: none;
+}
 
 
 
