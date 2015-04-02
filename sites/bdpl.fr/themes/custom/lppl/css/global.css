@@ -48,6 +48,9 @@ a,a:link, a:visited{
 a:hover{
     text-decoration: underline;
 }
+.block-main p{
+  line-height: 1.5em;
+}
 .node ol, .node ul {
     text-align: justify;
 }
@@ -224,9 +227,12 @@ h1, h2, h3, h4, h5, h6{
 }
 .block-system-main-menu ul.menu>li>a.active,
 .block-system-main-menu ul.menu>li>a.active-trail,
-.block-system-main-menu ul.menu>li>a:hover{
-  background-color: #f45a40;/*#F45A40;*/
-  color: #f5ffff;
+.block-system-main-menu ul.menu>li>a:hover,
+.sf-menu.sf-style-space-orange a:hover,
+.sf-menu.sf-style-space-orange a:hover,
+.sf-menu.sf-style-space-orange li:hover{
+  background-color: #41d4c1;
+  color: black;
 }
 .block-system-main-menu ul.menu>li.first>a{
   text-indent: -6000px;
@@ -234,7 +240,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .block-system-main-menu ul.menu>li.first>a.active,
 .block-system-main-menu ul.menu>li.first>a:hover{
-  background: #F45A40 url(../images/icons/home.png) no-repeat 50% 115%;
+  background: #41d4c1 url(../images/icons/home.png) no-repeat 50% 115%;
 }
 #block-system-main-menu ul>li>ul{
     /*display: none;*/
@@ -709,6 +715,14 @@ a h3.title-articles-list{
   padding-left: 30px;
   background: url(../images/icons/print.png) no-repeat 0 50%;
 }
+body.node-type-news .field-name-lien-impression a{
+  float: left;
+  margin-right: 20px;
+  text-indent: -6000px;
+}
+body.node-type-news .group-left .field-name-body{
+  margin-top: 30px;
+}
 .views-field .views-label{
     font-weight: bold;
 }
@@ -887,8 +901,9 @@ h3.h3_taxo{
 }
 #summary-ref .field-name-body{
   background-color: #eeeeee;
-  padding: 5px;
-  margin: 15px 0;
+  padding: 15px;
+  margin: 30px 0 15px 0;
+  width: 50%;
 }
 body.node-type-references .field-name-lien-impression{
   float: left; 
@@ -911,6 +926,7 @@ body.node-type-references .field-collection-container {
 }
 .node-references .field-name-lien-impression a{
   margin-left: 15px;
+  text-indent: -6000px;
 }
 .field-collection-container > img{
   margin-left: 15px;
@@ -919,7 +935,30 @@ body.node-type-references .field-collection-container {
 .node-references .dnd-drop-wrapper img.scald-file-icon, .node-references img.scald-file-icon {
     margin-left: 15px;
 }
-
+.field-name-field-ndlr{
+  margin-top: 40px;
+}
+/* Commentaires ***************************************************************/
+#comments h2.title, h2.comment-form{
+  border-bottom: 2px solid #41D4C1;
+  background-color: #EEEEEE;
+  font-size: 1.2em;
+  margin-top: 40px;
+  padding: 3px 5px;
+}
+/* user login account *********************************************************/
+#block-system-user-menu{
+  float: right;
+  
+}
+#block-system-user-menu ul li{
+  float: left;
+  margin-left: 20px;
+  
+}
+#block-system-user-menu ul li.first{
+  display: none;
+}
 
 
 
