@@ -228,9 +228,15 @@ h1, h2, h3, h4, h5, h6{
 .block-system-main-menu ul.menu>li>a.active,
 .block-system-main-menu ul.menu>li>a.active-trail,
 .block-system-main-menu ul.menu>li>a:hover,
+.sf-menu.sf-style-space-orange li:hover,
+.sf-menu.sf-style-space-orange li.sfHover,
+.sf-menu.sf-style-space-orange a:focus,
 .sf-menu.sf-style-space-orange a:hover,
-.sf-menu.sf-style-space-orange a:hover,
-.sf-menu.sf-style-space-orange li:hover{
+.sf-menu.sf-style-space-orange a:active,
+.sf-menu.sf-style-space-orange span.nolink:hover,
+.sf-menu.sf-style-space-orange.sf-navbar li li,
+div.sf-accordion-toggle.sf-style-space-orange a.sf-expanded,
+.sf-menu.sf-style-space-orange.sf-accordion li.sf-expanded{
   background-color: #41d4c1;
   color: black;
 }
