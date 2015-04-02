@@ -37,13 +37,19 @@
   clear: right;
 }
 #block-views-liste-articles-block-2 h2.block-title,
-#block-views-liste-articles-block-3 h2.block-title{
+#block-views-liste-articles-block-3 h2.block-title,
+#block-bean-guide-comptable h2,
+#block-bean-2035plus h2{
   border-bottom: 2px solid #44484B;
   padding: 15px 0 13px;
   text-transform: uppercase;
   width: 135px;
 }
+#block-bean-guide-comptable h2,#block-bean-2035plus h2{
+  margin-bottom: 12px;
+}
 #block-views-liste-articles-block-2 .view-liste-articles .views-field-title a,
-#block-views-liste-articles-block-3 .view-liste-articles .views-field-title a{
+#block-views-liste-articles-block-3 .view-liste-articles .views-field-title a
+#block-bean-guide-comptable a{
     color: #F45A40;
 }
