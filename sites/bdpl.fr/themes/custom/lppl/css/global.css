@@ -48,6 +48,9 @@ a,a:link, a:visited{
 a:hover{
     text-decoration: underline;
 }
+.block-main p{
+  line-height: 1.5em;
+}
 .node ol, .node ul {
     text-align: justify;
 }
@@ -104,9 +107,13 @@ a.orange{
   margin: 0;
 }
 h2#page-title{
-  font-size: 2em;
-  background-color: #EEE;
-  padding: 5px 2px 5px 10px;
+    background-color: #EEEEEE;
+    padding: 12px;
+    color: black;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.4em;
+    margin-bottom: 10px;
 }
 .title-articles-list{
   font-size: 2em;
@@ -172,6 +179,11 @@ h1, h2, h3, h4, h5, h6{
   padding : 0.5em 1.5em;
   text-decoration: none;
 }
+.menu-name-menu-menu-haut ul li a:hover,
+.menu-name-menu-menu-bas ul li a:hover{
+  background-color: #41d4c1;
+  color: black;
+}
 #block-search-form{
   float :right;
   border-right: 1px solid #d4d4d4;
@@ -215,9 +227,12 @@ h1, h2, h3, h4, h5, h6{
 }
 .block-system-main-menu ul.menu>li>a.active,
 .block-system-main-menu ul.menu>li>a.active-trail,
-.block-system-main-menu ul.menu>li>a:hover{
-  background-color: #F45A40;
-  color: #f5ffff;
+.block-system-main-menu ul.menu>li>a:hover,
+.sf-menu.sf-style-space-orange a:hover,
+.sf-menu.sf-style-space-orange a:hover,
+.sf-menu.sf-style-space-orange li:hover{
+  background-color: #41d4c1;
+  color: black;
 }
 .block-system-main-menu ul.menu>li.first>a{
   text-indent: -6000px;
@@ -225,7 +240,7 @@ h1, h2, h3, h4, h5, h6{
 }
 .block-system-main-menu ul.menu>li.first>a.active,
 .block-system-main-menu ul.menu>li.first>a:hover{
-  background: #F45A40 url(../images/icons/home.png) no-repeat 50% 115%;
+  background: #41d4c1 url(../images/icons/home.png) no-repeat 50% 115%;
 }
 #block-system-main-menu ul>li>ul{
     /*display: none;*/
@@ -695,10 +710,18 @@ a h3.title-articles-list{
   float: left;
   margin: 25px 20px 5px 0;
 }
-.view-liste-articles .field-name-lien-impression a{
+.field-name-lien-impression a{
   display: block;
   padding-left: 30px;
   background: url(../images/icons/print.png) no-repeat 0 50%;
+}
+body.node-type-news .field-name-lien-impression a{
+  float: left;
+  margin-right: 20px;
+  text-indent: -6000px;
+}
+body.node-type-news .group-left .field-name-body{
+  margin-top: 30px;
 }
 .views-field .views-label{
     font-weight: bold;
@@ -798,8 +821,14 @@ div.views-row div.field-item h2{
   margin-bottom: 15px;
 }
 .view-liste-articles div.views-row div.field-item h2{
-  background-color: #FFBE00;
-  padding-left: 10px;
+    background-color: #f45a40;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2em;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
 }
 
 h3.h3_taxo{
@@ -816,7 +845,107 @@ h3.h3_taxo{
   float: right;
   margin-top: 40px;
 }
+/* user login *****************************************************************/
+#user-login-form .form-type-textfield{
+  float: left;
+  margin: 0 20px;
+}
 
+/* Home guide comptable *******************************************************/
+#block-bean-guide-comptable, #block-bean-2035plus{
+  float: right;
+  background: url("../images/illustrations/compta.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  margin: 20px 0 0 0;
+  overflow: hidden;
+  padding: 60px 0 0 0;
+  width: 30%;
+}
+#block-bean-2035plus{
+  float: right;
+  background-image: none;
+  margin: 20px 0 0 0;
+  padding: 0;
+  width: 30%;
+}
+.h3_home_guide2035 a{
+  text-decoration: none;
+  color: #f45a40;
+  display: block;
+  font-weight: normal;
+  font-family: inherit;
+  font-size: 1em;
+}
+
+/* Références *****************************************************************/
+.view-references > .attachment-after > .view-references{
+  float: left;
+  width: 45%;
+}
+.view-references > .attachment-after > .view-references.view-display-id-attachment_4,
+.view-references > .attachment-after > .view-references.view-display-id-attachment_2{
+  margin-right: 4%;
+}
+.view-references > .attachment-after > .view-references h3.ref-subtitles{
+  background-color: #f45a40;
+  padding: 10px;
+  color: white;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+.field-name-field-source{
+  float: left;
+  margin-right: 10px;
+}
+#summary-ref .field-name-body{
+  background-color: #eeeeee;
+  padding: 15px;
+  margin: 30px 0 15px 0;
+  width: 50%;
+}
+body.node-type-references .field-name-lien-impression{
+  float: left; 
+}
+body.node-type-references .field-collection-container {
+    border: 0;
+    margin: 0;
+}
+.node-references > .field-collection-container > .field-name-field-pub-source{
+  float: left; 
+  margin-right: 20px;
+  width: 100%;
+}
+.node-references .field-name-field-date-de-publication-tierce{
+  float: left;
+  clear: none;
+}
+.node-references .field-collection-view .field-label {
+  width: auto;
+}
+.node-references .field-name-lien-impression a{
+  margin-left: 15px;
+  text-indent: -6000px;
+}
+.field-collection-container > img{
+  margin-left: 15px;
+  border: 1px solid red;
+}
+.node-references .dnd-drop-wrapper img.scald-file-icon, .node-references img.scald-file-icon {
+    margin-left: 15px;
+}
+.field-name-field-ndlr{
+  margin-top: 40px;
+}
+/* Commentaires ***************************************************************/
+#comments h2.title, h2.comment-form{
+  border-bottom: 2px solid #41D4C1;
+  background-color: #EEEEEE;
+  font-size: 1.2em;
+  margin-top: 40px;
+  padding: 3px 5px;
+}
 
 
 
