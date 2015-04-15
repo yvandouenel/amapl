@@ -60,6 +60,8 @@ h3#zoom-sur{
   padding: 40% 0 0 50%;
   background: transparent url(../images/icons/adherer.png) no-repeat 0 50%;
   text-decoration: none;
+  font-size: 1em;
+  text-align: left;
 }
 #section-content #block-menu-block-7 ul li a{
   height: 110px;
@@ -77,4 +79,11 @@ h3#zoom-sur{
 #section-content #block-menu-block-7 ul li.menu-mlid-881 a{
   background: transparent url(../images/icons/se-documenter.png) no-repeat 50% 100%;
 }
-
+/* Le saviez-vous *************************************************************/
+#widget_pager_top_le_saviez_vous_ss-block{
+  display: block;
+  position: absolute;
+  top: 35px;
+  right: 40px;
+  float: none;
+}

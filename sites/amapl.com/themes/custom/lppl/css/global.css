@@ -178,22 +178,27 @@ h1, h2, h3, h4, h5, h6{
 #section-content #block-menu-block-7 ul li a{
   display: block;
   height: 60px;
-  padding: 40px 0 0 50%;
-  background: transparent url(../images/icons/adherer.png) no-repeat 0 50%;
+  padding: 3px 0 0 2px;
+  background: transparent url(../images/icons/adherer.png) no-repeat 0 100%;
   text-decoration: none;
   display: inline-block;
   vertical-align: middle;
+  width: 90px;
+  height: 110px;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  text-align: center;
 }
-
 #section-content #block-menu-block-7 ul li.menu-mlid-879 a{
-  background: transparent url(../images/icons/telecharger.png) no-repeat 0 50%;
+  background: transparent url(../images/icons/telecharger.png) no-repeat 0 100%;
 }
 #section-content #block-menu-block-7 ul li.menu-mlid-880 a{
-  background: transparent url(../images/icons/teledeclarer.png) no-repeat 0 50%;
+  background: transparent url(../images/icons/teledeclarer.png) no-repeat 0 100%;
 }
 #section-content #block-menu-block-7 ul li.menu-mlid-881 a{
-  background: transparent url(../images/icons/se-documenter.png) no-repeat 0 50%;
+  background: transparent url(../images/icons/se-documenter.png) no-repeat 0 100%;
 }
+
 
 
 /* Menus haut et bas****************************/
@@ -539,9 +544,8 @@ body.node-type-aga-membre .field-name-field-aga-mail{
 }
 #widget_pager_top_le_saviez_vous_ss-block{
   display: block;
-  position: absolute;
-  top: 35px;
-  right: 40px;
+  float: right;
+  margin-top: -45px;
 }
 #widget_pager_top_le_saviez_vous_ss-block .views-slideshow-pager-field-item{
   float: left;
@@ -647,6 +651,10 @@ body.front h2.block-title{
 body.front .block-missions-et-services- h2.block-title{
   background: url("../images/bg/separator-blue-dark.png") no-repeat 0 100%;
   color: #5ec0d6;
+}
+body.front .block-missions-et-services- h2.block-title a{
+  color: #5ec0d6;
+  text-decoration: none;
 }
 body.front .block-events-block-evenements-home h2.block-title{
   background: url("../images/bg/separator-yellow.png ") no-repeat 0 100%;
