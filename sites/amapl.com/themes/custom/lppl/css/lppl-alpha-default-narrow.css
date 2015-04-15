@@ -1,3 +1,8 @@
+#block-block-1:after{
+  content: '';
+  display: none;
+  clear: none;
+}
 #zone-user{
     display: block;
   }

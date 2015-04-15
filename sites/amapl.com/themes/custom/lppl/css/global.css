@@ -9,7 +9,7 @@
   .view-id-aga_adherentes :target {
     position: absolute;
     visibility: hidden;
-    border : 1px solid red;
+    
   }
   .view-id-aga_adherentes:hover :target {
     width: 90%;
@@ -240,6 +240,11 @@ h1, h2, h3, h4, h5, h6{
 #region-branding #block-block-1{
   float: left;
 }
+#block-block-1:after{
+  content: '';
+  display: block;
+  clear: both;
+}
 /* Menu principal *****************************/
 #block-system-main-menu{
   float: right;
@@ -274,17 +279,17 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* Menu principal smartphone ******************/
+#block-menu-block-6{
+  position: relative;
+  clear: both;
+}
 body.front #block-menu-block-6 h2.block-title,
 #block-menu-block-6 h2.block-title{
-  margin: 0;
-  padding: 0;
-  float: right;
-  padding-right: 60%;
+  position: absolute;
+  left: 55px;
+  top: 5px;
 }
-#block-menu-block-6 > .block-inner > div.clearfix{
-  float: left;
-  width: 40px;
-}
+
 #block-menu-block-6 > .block-inner > div.clearfix:after{
   margin-bottom: 10px;
 }
