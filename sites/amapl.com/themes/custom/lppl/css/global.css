@@ -1,10 +1,6 @@
 /* media queries **************************************************************/
 @media screen and (max-width:740px){
   
-  #zone-branding #region-branding #block-block-1 {
-    float: right;
-    margin-top: -50px;
-  }
   /* vue des aga adhérentes******************/
     .view-aga-adherentes .view-content{
        width: 80%;
@@ -275,6 +271,22 @@ h1, h2, h3, h4, h5, h6{
 
 #block-system-main-menu ul>li>ul{
     display: none;
+}
+
+/* Menu principal smartphone ******************/
+body.front #block-menu-block-6 h2.block-title,
+#block-menu-block-6 h2.block-title{
+  margin: 0;
+  padding: 0;
+  float: right;
+  padding-right: 60%;
+}
+#block-menu-block-6 > .block-inner > div.clearfix{
+  float: left;
+  width: 40px;
+}
+#block-menu-block-6 > .block-inner > div.clearfix:after{
+  margin-bottom: 10px;
 }
 /* fil d'ariane *******************************/
 #breadcrumb{
