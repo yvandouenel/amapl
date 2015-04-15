@@ -680,6 +680,12 @@ body.front .block-events-block-evenements-home h2.block-title{
   background: url("../images/bg/separator-yellow.png ") no-repeat 0 100%;
   color: #44484b;
 }
+body.front .block-events-block-evenements-home h2.block-title a{
+  color: #44484B;
+  text-decoration: none;
+  display: block;
+}
+
 #block-views-news-block-1 h2.block-title{
   text-transform: uppercase;
   padding: 0;
