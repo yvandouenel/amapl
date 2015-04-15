@@ -606,6 +606,9 @@ body.node-type-aga-membre .field-name-field-aga-mail{
   box-shadow: 1px 5px 5px 0px #656565;
   filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=168, Strength=5);
 }
+#block-views-le-saviez-vous-ss-block .field-content > p{
+  font-size: 0.6em;
+}
 /* Actualités et Agenda page d'accueil ****************************************/
 
 #member-home {

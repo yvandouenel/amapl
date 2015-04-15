@@ -87,3 +87,6 @@ h3#zoom-sur{
   right: 40px;
   float: none;
 }
+#block-views-le-saviez-vous-ss-block .field-content > p{
+  font-size: 1em;
+}
