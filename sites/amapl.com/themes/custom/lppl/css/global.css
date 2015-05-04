@@ -1050,7 +1050,8 @@ body.context-adresses-utiles h2.block-title{
 }
 /* RSS ************************************************************************/
 body.page-aggregator .node-readmore,
-body.page-aggregator .feed-item-categories{
+body.page-aggregator .feed-item-categories,
+body.page-aggregator .breadcrumb{
   display: none;
 }
 
