@@ -1048,6 +1048,11 @@ body.context-adresses-utiles .container-12 .grid-3{
 body.context-adresses-utiles h2.block-title{
   display: none;
 }
+/* RSS ************************************************************************/
+body.page-aggregator .node-readmore,
+body.page-aggregator .feed-item-categories{
+  display: none;
+}
 
 
 
