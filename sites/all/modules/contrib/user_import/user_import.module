@@ -570,7 +570,10 @@ function _user_import_settings_save($settings) {
   else {
     $auto_import_directory = '';
   }
-
+  $file = new ArrayObject();
+  $file->filename = isset($settings['filename']) ? $settings['filename'] : '';
+  $file->oldfilename = isset($settings['oldfilename']) ? $settings['oldfilename'] : '';
+  $file->filepath    = isset($settings['filepath']) ? $settings['filepath'] : '';
   $file->filename = isset($settings['filename']) ? $settings['filename'] : '';
   $file->oldfilename = isset($settings['oldfilename']) ? $settings['oldfilename'] : '';
   $file->filepath    = isset($settings['filepath']) ? $settings['filepath'] : '';
