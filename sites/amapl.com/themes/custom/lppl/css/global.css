@@ -960,6 +960,11 @@ div.field-name-field-event-cost-public>div.field-label:before{
   width: 140px;
   text-align: right;
 }
+body.not-front.page-node-180 #superfish-1>li.sf-item-2>a{
+  background: transparent url(../images/bg/bg_menus_01.png) no-repeat 0px 0;
+  width: 100px;
+  padding: 20px 5px 0px 25px;
+}
 #superfish-1>li>a:hover{
   color: #F7981D;
 }
@@ -976,13 +981,14 @@ body.front #superfish-1 >li.last>a{
   padding: 20px 0 0px 0;
   /*border-left: 1px solid #f7981d;*/
 }
-body.front #superfish-1 >li.sf-item-2>a{
+body.front #superfish-1 >li.sf-item-2>a,
+body.not-front #superfish-1 >li.sf-item-2>a{
   padding: 20px 25px 0px 5px;
   text-align: center;
   width: 160px;
   background: white url(../images/bg/bg_menus_01.png) no-repeat 100% 0;
 }
-#superfish-1 >li.active-trail.sf-item-2>a{
+body.not-front #superfish-1 >li.active-trail.sf-item-2>a{
   background: white url(../images/bg/bg_menus_01.png) no-repeat -560px 0;
   padding: 20px 25px 0px 5px;
   text-align: center;
