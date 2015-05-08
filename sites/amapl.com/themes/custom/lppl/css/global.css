@@ -1058,8 +1058,13 @@ body.page-aggregator .feed-url,
 body.page-aggregator .feed-updated{
   display: none;
 }
-
-
+body.page-aggregator .feed-item-title a{   
+    font-size: 1.2em;
+}
+body.page-aggregator .feed-item{
+  border-bottom: 1px solid #00486E;
+  margin-botom: 15px;
+}
 
 
 
