@@ -816,7 +816,8 @@ body.page-s-informer-actualites .views-row{
 h3.title-event-list a,
 h3.title-news-list a,
 a h3.title-articles-list,
-a h3.title-event-list{
+a h3.title-event-list,
+body.page-aggregator .feed-item-title a{
     text-decoration: none;
     color: #F7981D;
     font-weight: normal;
@@ -1051,9 +1052,13 @@ body.context-adresses-utiles h2.block-title{
 /* RSS ************************************************************************/
 body.page-aggregator .node-readmore,
 body.page-aggregator .feed-item-categories,
-body.page-aggregator .breadcrumb{
+body.page-aggregator .breadcrumb,
+body.page-aggregator .feed-item-date,
+body.page-aggregator .feed-url,
+body.page-aggregator .feed-updated{
   display: none;
 }
+
 
 
 
