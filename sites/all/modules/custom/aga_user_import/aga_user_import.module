@@ -1,0 +1,72 @@
+<?php
+/**
+ * @file
+ * AGA user import.
+ */
+
+define('AGA_USER_IMPORT_ROLE_SRC1', 'src1');
+define('AGA_USER_IMPORT_ROLE_SRC2', 'src2');
+
+/**
+ * Implements hook_cron().
+ */
+function aga_user_import_cron() {
+  // Get AGA user roles rids.
+  $rids= _aga_user_roles_rids();
+
+  // Get users of these roles that are disabled.
+  $query = db_select('users_roles', 'ur');
+  $query->join('users', 'u', 'ur.uid = u.uid');
+  $query->fields('u', array('uid'))
+    ->condition('ur.rid', $rids)
+    ->condition('u.status', 0);
+  $uids = $query->execute()->fetchCol();
+
+  // Delete those users.
+  user_delete_multiple($uids);
+}
+
+// -----------------------------------------------------------------------------
+// Helpers.
+
+/**
+ * Get AGA user roles rids.
+ *
+ * @return array
+ */
+function _aga_user_roles_rids() {
+  $rids= array();
+  foreach (array(1, 2) as $i) {
+    $name = constant('AGA_USER_IMPORT_ROLE_SRC' . $i);
+    $rids[] = _aga_user_role_rid(_aga_user_role_machine_name($name));
+  }
+
+  return $rids;
+}
+
+/**
+ * Helper to convert role name in a machine name.
+ *
+ * Copied from role_export to maintain compatibility.
+ *
+ * @param $name
+ * @return mixed
+ */
+function _aga_user_role_machine_name($name) {
+  return str_replace(' ', '_', strtolower($name));
+}
+
+/**
+ * Helper to convert role machine_name in a unique rid.
+ *
+ * Copied from role_export to maintain compatibility.
+ *
+ * @param $machine_name
+ * @return int
+ */
+function _aga_user_role_rid($machine_name) {
+  $hash = md5($machine_name);
+  $shorter = substr($hash, -7);
+  $number = hexdec($shorter);
+  return (int) $number;
+}

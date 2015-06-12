@@ -1,0 +1,7 @@
+name = AGA User Import
+description = Provde Migrations to import users from external databases.
+core = 7.x
+package = AGA
+version = 7.x-1.0
+dependencies[] = migrate_ui
+files[] = includes/AgaUserMigration.inc

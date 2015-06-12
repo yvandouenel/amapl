@@ -1,0 +1,77 @@
+<?php
+/**
+ * @file
+ * AGA user import installation.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function aga_user_import_install() {
+  // Create the user roles needed for the imports.
+  foreach (array(1, 2) as $i) {
+    // Create role.
+    $name = constant('AGA_USER_IMPORT_ROLE_SRC' . $i);
+    $role = (object) array(
+      'name' => $name,
+      'machine_name' => _aga_user_role_machine_name($name),
+    );
+    user_role_save($role);
+
+    // Update role id to use a predictable id.
+    db_update('role')
+      ->fields(array(
+        'rid' => _aga_user_role_rid($role->machine_name),
+      ))
+      ->condition('rid', $role->rid)
+      ->execute();
+  }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function aga_user_import_uninstall() {
+  // Load .module file to access the constants and helpers.
+  module_load_include('module', 'aga_user_import');
+
+  // Get AGA user roles rids.
+  $rids= _aga_user_roles_rids();
+
+  // Remove all attached users.
+  $query = new EntityFieldQuery();
+  $uids = db_select('users_roles', 'ur')
+    ->fields('ur', array('uid'))
+    ->condition('rid', $rids)
+    ->execute()
+    ->fetchCol();
+  user_delete_multiple($uids);
+
+  // Remove roles.
+  foreach ($rids as $rid) {
+    user_role_delete($rid);
+  }
+}
+
+/**
+ * Implements hook_enable().
+ */
+function aga_user_import_enable() {
+  foreach (array('src1', 'src2') as $value) {
+    Migration::registerMigration(
+      'AgaUserMigration',
+      'AgaUserMigration' . ucfirst($value),
+      array(
+        'source_file' => conf_path() . '/data/' . $value . '.csv',
+        'role_rid' => _aga_user_role_rid(_aga_user_role_machine_name(constant('AGA_USER_IMPORT_ROLE_' . strtoupper($value)))),
+        'group_name' => 'aga',
+      ));
+  }
+}
+
+/**
+ * Implements hook_disable().
+ */
+function aga_user_import_disable() {
+  MigrateGroup::deregister('aga');
+}
