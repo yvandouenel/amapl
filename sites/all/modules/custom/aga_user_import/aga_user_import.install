@@ -39,7 +39,6 @@ function aga_user_import_uninstall() {
   $rids= _aga_user_roles_rids();
 
   // Remove all attached users.
-  $query = new EntityFieldQuery();
   $uids = db_select('users_roles', 'ur')
     ->fields('ur', array('uid'))
     ->condition('rid', $rids)

@@ -11,6 +11,7 @@ class AgaUserMigration extends Migration {
 
   /** @var string Source file path */
   protected $filepath;
+
   /** @var int Users role id */
   protected $role_rid;
 
@@ -133,8 +134,6 @@ class AgaUserMigration extends Migration {
 
   /**
    * At the end of the process, delete the source file for security reasons.
-   *
-   * TODO uncomment
    */
   protected function postImport() {
     parent::postImport();
