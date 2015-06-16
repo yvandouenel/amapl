@@ -38,9 +38,10 @@ class AgaUserMigration extends Migration {
     );
 
     $options = array(
-      'header_rows' => TRUE,
-      'delimiter'   => ';',
-      'enclosure'   => '"',
+      'header_rows'   => TRUE,
+      'delimiter'     => ';',
+      'enclosure'     => '"',
+      'track_changes' => TRUE,
     );
     $this->source = new MigrateSourceCSV($arguments['source_file'], $this->csvcolumns(), $options, $this->fields());
 
