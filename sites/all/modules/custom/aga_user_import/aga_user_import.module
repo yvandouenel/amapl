@@ -4,9 +4,6 @@
  * AGA user import.
  */
 
-define('AGA_USER_IMPORT_ROLE_SRC1', 'src1');
-define('AGA_USER_IMPORT_ROLE_SRC2', 'src2');
-
 /**
  * Implements hook_cron().
  */
@@ -29,18 +26,34 @@ function aga_user_import_cron() {
 // -----------------------------------------------------------------------------
 // Helpers.
 
+function _aga_import_variants() {
+  return array(
+    'adh' => array(
+      'label'        => 'Import ADH',
+      'machine_name' => 'import_adh',
+      'rid'          => _aga_user_role_rid('import_adh'),
+      'filename'     => 'ADH.csv',
+    ),
+    'cor' => array(
+      'label'        => 'Import COR',
+      'machine_name' => 'import_cor',
+      'rid'          => _aga_user_role_rid('import_cor'),
+      'filename'     => 'COR.csv',
+    ),
+  );
+}
+
 /**
  * Get AGA user roles rids.
  *
  * @return array
  */
 function _aga_user_roles_rids() {
+  $roles = _aga_import_variants();
   $rids= array();
-  foreach (array(1, 2) as $i) {
-    $name = constant('AGA_USER_IMPORT_ROLE_SRC' . $i);
-    $rids[] = _aga_user_role_rid(_aga_user_role_machine_name($name));
+  foreach ($roles as $role) {
+    $rids[] = $role['rid'];
   }
-
   return $rids;
 }
 

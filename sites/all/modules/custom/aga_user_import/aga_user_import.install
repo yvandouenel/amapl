@@ -9,19 +9,19 @@
  */
 function aga_user_import_install() {
   // Create the user roles needed for the imports.
-  foreach (array(1, 2) as $i) {
+  $roles = _aga_import_variants();
+  foreach ($roles as $key => $values) {
     // Create role.
-    $name = constant('AGA_USER_IMPORT_ROLE_SRC' . $i);
     $role = (object) array(
-      'name' => $name,
-      'machine_name' => _aga_user_role_machine_name($name),
+      'name' => $values['label'],
+      'machine_name' => $values['machine_name'],
     );
     user_role_save($role);
 
     // Update role id to use a predictable id.
     db_update('role')
       ->fields(array(
-        'rid' => _aga_user_role_rid($role->machine_name),
+        'rid' => $values['rid'],
       ))
       ->condition('rid', $role->rid)
       ->execute();
@@ -56,13 +56,14 @@ function aga_user_import_uninstall() {
  * Implements hook_enable().
  */
 function aga_user_import_enable() {
-  foreach (array('src1', 'src2') as $value) {
+  $roles = _aga_import_variants();
+  foreach ($roles as $key => $values) {
     Migration::registerMigration(
       'AgaUserMigration',
-      'AgaUserMigration' . ucfirst($value),
+      'AgaUserMigration' . ucfirst($key),
       array(
-        'source_file' => conf_path() . '/data/' . $value . '.csv',
-        'role_rid' => _aga_user_role_rid(_aga_user_role_machine_name(constant('AGA_USER_IMPORT_ROLE_' . strtoupper($value)))),
+        'source_file' => conf_path() . '/data/' . $values['filename'],
+        'role_rid' => $values['rid'],
         'group_name' => 'aga',
       ));
   }
