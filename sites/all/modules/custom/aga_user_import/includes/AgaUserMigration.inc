@@ -70,21 +70,17 @@ class AgaUserMigration extends Migration {
   protected function csvcolumns() {
     $columns[0] = array('login', 'User login');
     $columns[1] = array('password', 'User password');
-    $columns[2] = array('active', 'User status');
+    $columns[2] = array('identity', 'User realname');
     return $columns;
   }
 
   /**
-   * Only import lines for actives users.
+   * Prepare missing data.
    *
    * @param $row
    * @return bool
    */
   public function prepareRow($row) {
-    if ($row->active != 'Actif') {
-      return FALSE;
-    }
-
     // Create fake email address.
     $row->mail = $row->login . '@' . $row->login . '.noreply.com';
 
