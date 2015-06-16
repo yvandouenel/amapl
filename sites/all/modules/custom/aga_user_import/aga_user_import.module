@@ -23,6 +23,21 @@ function aga_user_import_cron() {
   user_delete_multiple($uids);
 }
 
+/**
+ * Implements hook_help().
+ */
+function aga_user_import_help($path, $arg) {
+  switch ($path) {
+    case 'admin/content/migrate':
+      return '<p>Pour accéder aux deux imports ADH et COR, cliquez sur le lien "' . l('AGA Imports', 'admin/content/migrate/groups/aga') . '" dans la colonne "Groupe".</p>';
+
+    case 'admin/content/migrate/groups/%':
+      if ($arg[4] == 'aga') {
+        return '<p>Les fichiers source doivent être déposés dans le répertoire <b>' . conf_path() . '/data</b> et s\'appeler <b>ADH.csv</b> ou <b>COR.csv</b> selon l\'import à effectuer.<br />Ces fichiers seront détruits à la fin du processus afin de garantir la sécurité des données.</p>';
+      }
+  }
+}
+
 // -----------------------------------------------------------------------------
 // Helpers.
 
