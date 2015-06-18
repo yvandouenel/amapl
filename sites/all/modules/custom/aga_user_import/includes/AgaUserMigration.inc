@@ -21,7 +21,7 @@ class AgaUserMigration extends Migration {
   public function __construct($arguments = array()) {
     parent::__construct($arguments);
 
-    $this->filepath = $arguments['source_file'];
+    $this->filepath = DRUPAL_ROOT . '/' . $arguments['source_file'];
     $this->role_rid = $arguments['role_rid'];
 
     $this->description = t('Import users from AGA external database.');
