@@ -89,6 +89,9 @@ class AgaUserMigration extends Migration {
       DRUPAL_AUTHENTICATED_RID => DRUPAL_AUTHENTICATED_RID,
       $this->role_rid => $this->role_rid,
     );
+
+    // Ensure that login and password are not empty.
+    return !empty($row->login) && !empty($row->password);
   }
 
   /**
