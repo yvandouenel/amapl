@@ -58,8 +58,8 @@ class AgaUserMigration extends Migration {
       ->description('See prepareRow().');
 
     // Default values.
-    $this->addFieldMapping('created')->description(REQUEST_TIME);
-    $this->addFieldMapping('login')->description(REQUEST_TIME);
+    $this->addFieldMapping('created')->defaultValue(REQUEST_TIME);
+    $this->addFieldMapping('login')->defaultValue(REQUEST_TIME);
   }
 
   /**
