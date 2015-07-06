@@ -722,6 +722,7 @@ body.front .view-id-events p{
   font-weight: bold;
   color: #013f4c;
 }
+.node-event .group-right .date-display-start:before { content: ' '; display: block;  }
 /* Evénements sur la page des événements ************************/
 #block-views-calendrier-block-1{
   border: 1px solid #CCCCCC;
