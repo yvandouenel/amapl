@@ -15,13 +15,16 @@ class AgaUserMigration extends Migration {
   /** @var int Users role id */
   protected $role_rid;
 
+  /** @var string[] Logins processed during the migration. */
+  protected $logins;
+
   /**
    * {@inheritdoc}
    */
   public function __construct($arguments = array()) {
     parent::__construct($arguments);
 
-    $this->filepath = $arguments['source_file'];
+    $this->filepath = DRUPAL_ROOT . '/' . $arguments['source_file'];
     $this->role_rid = $arguments['role_rid'];
 
     $this->description = t('Import users from AGA external database.');
@@ -58,8 +61,8 @@ class AgaUserMigration extends Migration {
       ->description('See prepareRow().');
 
     // Default values.
-    $this->addFieldMapping('created')->description(REQUEST_TIME);
-    $this->addFieldMapping('login')->description(REQUEST_TIME);
+    $this->addFieldMapping('created')->defaultValue(REQUEST_TIME);
+    $this->addFieldMapping('login')->defaultValue(REQUEST_TIME);
   }
 
   /**
@@ -81,6 +84,10 @@ class AgaUserMigration extends Migration {
    * @return bool
    */
   public function prepareRow($row) {
+    parent::prepareRow($row);
+
+    $this->logins[] = $row->login;
+
     // Create fake email address.
     $row->mail = $row->login . '@' . $row->login . '.noreply.com';
 
@@ -132,11 +139,28 @@ class AgaUserMigration extends Migration {
   }
 
   /**
-   * At the end of the process, delete the source file for security reasons.
+   * At the end of the process, reactivate users and delete the source file for
+   * security reasons.
    */
   protected function postImport() {
     parent::postImport();
 
+    // Re-activate all the imported users.
+    $step = 100;
+    for ($i = 0, $n = ceil(count($this->logins)/$step) ; $i < $n ; $i++) {
+      $logins = array_slice($this->logins, $i * $step, $step);
+
+      if (!empty($logins)) {
+        db_update('users')
+          ->fields(array(
+            'status' => 1,
+          ))
+          ->condition('name', $logins)
+          ->execute();
+      }
+    }
+
+    // Delete the source file for security reasons.
     unlink($this->filepath);
   }
 }
