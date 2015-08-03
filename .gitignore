@@ -9,3 +9,4 @@ sites/bdpl.fr/data/*
 # Ignore Netbeans files
 nbproject/*
 nbproject/*/*
+.idea/*
