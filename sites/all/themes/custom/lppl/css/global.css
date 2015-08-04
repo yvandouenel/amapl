@@ -115,6 +115,17 @@ h1, h2, h3, h4, h5, h6{
     overflow: hidden;
     position: absolute !important;
 }
+#block-menu-block-2{
+    width: 250px;
+    float: left;
+}
+#block-bean-social-icons{
+    float: left;
+    margin: 5px 0 0 20%;
+}
+#block-bean-social-icons img{
+    margin-left: 5px;
+}
 /* Menus haut et bas****************************/
 #block-menu-block-1{
   float:right;
