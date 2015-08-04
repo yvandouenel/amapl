@@ -153,6 +153,16 @@ h1, h2, h3, h4, h5, h6{
     overflow: hidden;
     position: absolute !important;
 }
+#block-menu-block-2{
+    float: left;
+}
+#block-bean-social-icons{
+    float: left;
+    margin: 0 0 0 10px;
+}
+#block-bean-social-icons img{
+    margin-left: 5px;
+}
 /* Menu actions ********************************/
 #section-content #block-menu-block-7{
   background-color: #f2f1ef;
