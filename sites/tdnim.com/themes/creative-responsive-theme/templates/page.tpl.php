@@ -72,8 +72,10 @@
       <div class="social-icons">
        <ul>
         <li><a href="/tdnim-rss"><img src="<?php print base_path() . drupal_get_path('theme', 'creative_responsive_theme') . '/images/rss.png'; ?>" alt="RSS Feed"/></a></li>
+        <!--
         <li><a href="https://www.facebook.com/pages/TDNIM/488892634488774" target="_blank" rel="me"><img src="<?php print base_path() . drupal_get_path('theme', 'creative_responsive_theme') . '/images/facebook.png'; ?>" alt="Facebook"/></a></li>
         <li><a href="http://twitter.com/TDNIM" target="_blank" rel="me"><img src="<?php print base_path() . drupal_get_path('theme', 'creative_responsive_theme') . '/images/twitter.png'; ?>" alt="Twitter"/></a></li>
+        -->
         <li><a href="http://fr.viadeo.com/fr/company/tdnim" target="_blank" rel="me"><img src="<?php print base_path() . drupal_get_path('theme', 'creative_responsive_theme') . '/images/icon_viadeo.gif'; ?>" alt="Viadeo"/></a></li>
        </ul>
       </div>
