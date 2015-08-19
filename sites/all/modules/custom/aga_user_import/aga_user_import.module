@@ -50,7 +50,7 @@ function aga_user_import_help($path, $arg) {
 
     case 'admin/content/migrate/groups/%':
       if ($arg[4] == 'aga') {
-        return '<p>Les fichiers source doivent être déposés dans le répertoire <b>' . conf_path() . '/data</b> et s\'appeler <b>ADH.csv</b> ou <b>COR.csv</b> selon l\'import à effectuer.<br />Ces fichiers seront détruits à la fin du processus afin de garantir la sécurité des données.</p>';
+        return '<p>Les fichiers source doivent être déposés dans le répertoire <b>' . conf_path() . '/data</b> et s\'appeler <b>ADH.csv</b> ou <b>COR.csv</b> selon l\'import à effectuer.</p>';
       }
   }
 }

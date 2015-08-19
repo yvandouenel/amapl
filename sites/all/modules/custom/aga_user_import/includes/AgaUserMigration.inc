@@ -141,13 +141,4 @@ class AgaUserMigration extends Migration {
     }
   }
 
-  /**
-   * At the end of the process, delete the source file for security reasons.
-   */
-  protected function postImport() {
-    parent::postImport();
-
-    // Delete the source file for security reasons.
-    unlink($this->filepath);
-  }
 }
