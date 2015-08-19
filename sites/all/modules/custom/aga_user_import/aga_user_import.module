@@ -5,6 +5,23 @@
  */
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function aga_user_import_form_migrate_ui_migrate_group_alter(&$form, &$form_state, $form_id) {
+  $roles = _aga_import_variants();
+  $key = key($roles);
+  if (!empty($form['dashboard']['migrations']['#options']['AgaUserMigration' . ucfirst($key)])) {
+    $form['operations']['options']['update_fake'] = $form['operations']['options']['update'];
+    $form['operations']['options']['update_fake']['#default_value'] = TRUE;
+    $form['operations']['options']['update_fake']['#disabled'] = TRUE;
+    $form['operations']['options']['update_fake']['#weight'] = -1;
+
+    $form['operations']['options']['update']['#type'] = 'value';
+    $form['operations']['options']['update']['#value'] = TRUE;
+  }
+}
+
+/**
  * Implements hook_cron().
  */
 function aga_user_import_cron() {

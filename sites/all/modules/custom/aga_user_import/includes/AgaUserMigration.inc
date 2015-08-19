@@ -15,9 +15,6 @@ class AgaUserMigration extends Migration {
   /** @var int Users role id */
   protected $role_rid;
 
-  /** @var string[] Logins processed during the migration. */
-  protected $logins;
-
   /**
    * {@inheritdoc}
    */
@@ -45,7 +42,6 @@ class AgaUserMigration extends Migration {
       'header_rows'   => TRUE,
       'delimiter'     => ';',
       'enclosure'     => '"',
-      'track_changes' => TRUE,
     );
     $this->source = new MigrateSourceCSV($arguments['source_file'], $this->csvcolumns(), $options, $this->fields());
 
@@ -85,8 +81,6 @@ class AgaUserMigration extends Migration {
    */
   public function prepareRow($row) {
     parent::prepareRow($row);
-
-    $this->logins[] = $row->login;
 
     // Create fake email address.
     $row->mail = $row->login . '@' . $row->login . '.noreply.com';
@@ -139,26 +133,10 @@ class AgaUserMigration extends Migration {
   }
 
   /**
-   * At the end of the process, reactivate users and delete the source file for
-   * security reasons.
+   * At the end of the process, delete the source file for security reasons.
    */
   protected function postImport() {
     parent::postImport();
-
-    // Re-activate all the imported users.
-    $step = 100;
-    for ($i = 0, $n = ceil(count($this->logins)/$step) ; $i < $n ; $i++) {
-      $logins = array_slice($this->logins, $i * $step, $step);
-
-      if (!empty($logins)) {
-        db_update('users')
-          ->fields(array(
-            'status' => 1,
-          ))
-          ->condition('name', $logins)
-          ->execute();
-      }
-    }
 
     // Delete the source file for security reasons.
     unlink($this->filepath);
