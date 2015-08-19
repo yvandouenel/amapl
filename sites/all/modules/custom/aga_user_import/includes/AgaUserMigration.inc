@@ -95,6 +95,12 @@ class AgaUserMigration extends Migration {
     $row->status = TRUE;
 
     // Ensure that login and password are not empty.
+    if (empty($row->login)) {
+      $this->queueMessage('Cannot import this line because login is empty');
+    }
+    if (empty($row->password)) {
+      $this->queueMessage('Cannot import this line because password is empty');
+    }
     return !empty($row->login) && !empty($row->password);
   }
 
