@@ -51,8 +51,8 @@ class AgaUserMigration extends Migration {
       ->description('See prepareRow().');
     $this->addFieldMapping('name', 'login');
     $this->addFieldMapping('pass', 'password');
-    $this->addFieldMapping('status')
-      ->defaultValue(1);
+    $this->addFieldMapping('status', 'status')
+      ->description('See prepareRow().');
     $this->addFieldMapping('roles', 'roles')
       ->description('See prepareRow().');
 
@@ -90,6 +90,9 @@ class AgaUserMigration extends Migration {
       DRUPAL_AUTHENTICATED_RID => DRUPAL_AUTHENTICATED_RID,
       $this->role_rid => $this->role_rid,
     );
+
+    // Force status.
+    $row->status = TRUE;
 
     // Ensure that login and password are not empty.
     return !empty($row->login) && !empty($row->password);
