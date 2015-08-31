@@ -815,7 +815,13 @@ body.context-adresses-utiles .container-12 .grid-3{
 body.context-adresses-utiles h2.block-title{
   display: none;
 }
-
+/* Actu page d'accueil *********************************************************/
+body.front .block-news-home .views-field-field-news-image img{
+    margin-bottom: 20px;
+}
+body.context-s-installer-en-profession-liberale .block-news-home .views-field-field-news-image img{
+    max-width: 85%;
+}
 
 
 
