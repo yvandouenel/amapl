@@ -651,6 +651,9 @@ a h3.title-event-list{
 div.view-events .views-field-field-event-image{
     float: right;
 }
+.region-sidebar-second div.view-events .views-field-field-event-image{
+    float: none;
+}
 body.not-front div.view-id-events div.views-row,
 .page-s-informer-actualites div.views-row,
  .view-liste-articles div.views-row{
@@ -819,9 +822,11 @@ body.context-adresses-utiles h2.block-title{
 body.front .block-news-home .views-field-field-news-image img{
     margin-bottom: 20px;
 }
-.region-sidebar-second-inner .block-news-home .views-field-field-news-image img{
+.region-sidebar-second-inner .block-news-home .views-field-field-news-image img,
+.region-sidebar-second-inner .block-events-home .views-field-field-event-image img{
     max-width: 85%;
 }
+
 
 
 
