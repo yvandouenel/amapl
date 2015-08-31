@@ -15,9 +15,6 @@ class AgaUserMigration extends Migration {
   /** @var int Users role id */
   protected $role_rid;
 
-  /** @var string[] Logins processed during the migration. */
-  protected $logins;
-
   /**
    * {@inheritdoc}
    */
@@ -45,7 +42,6 @@ class AgaUserMigration extends Migration {
       'header_rows'   => TRUE,
       'delimiter'     => ';',
       'enclosure'     => '"',
-      'track_changes' => TRUE,
     );
     $this->source = new MigrateSourceCSV($arguments['source_file'], $this->csvcolumns(), $options, $this->fields());
 
@@ -55,8 +51,8 @@ class AgaUserMigration extends Migration {
       ->description('See prepareRow().');
     $this->addFieldMapping('name', 'login');
     $this->addFieldMapping('pass', 'password');
-    $this->addFieldMapping('status')
-      ->defaultValue(1);
+    $this->addFieldMapping('status', 'status')
+      ->description('See prepareRow().');
     $this->addFieldMapping('roles', 'roles')
       ->description('See prepareRow().');
 
@@ -86,8 +82,6 @@ class AgaUserMigration extends Migration {
   public function prepareRow($row) {
     parent::prepareRow($row);
 
-    $this->logins[] = $row->login;
-
     // Create fake email address.
     $row->mail = $row->login . '@' . $row->login . '.noreply.com';
 
@@ -97,7 +91,16 @@ class AgaUserMigration extends Migration {
       $this->role_rid => $this->role_rid,
     );
 
+    // Force status.
+    $row->status = TRUE;
+
     // Ensure that login and password are not empty.
+    if (empty($row->login)) {
+      $this->queueMessage('Cannot import this line because login is empty');
+    }
+    if (empty($row->password)) {
+      $this->queueMessage('Cannot import this line because password is empty');
+    }
     return !empty($row->login) && !empty($row->password);
   }
 
@@ -138,29 +141,4 @@ class AgaUserMigration extends Migration {
     }
   }
 
-  /**
-   * At the end of the process, reactivate users and delete the source file for
-   * security reasons.
-   */
-  protected function postImport() {
-    parent::postImport();
-
-    // Re-activate all the imported users.
-    $step = 100;
-    for ($i = 0, $n = ceil(count($this->logins)/$step) ; $i < $n ; $i++) {
-      $logins = array_slice($this->logins, $i * $step, $step);
-
-      if (!empty($logins)) {
-        db_update('users')
-          ->fields(array(
-            'status' => 1,
-          ))
-          ->condition('name', $logins)
-          ->execute();
-      }
-    }
-
-    // Delete the source file for security reasons.
-    unlink($this->filepath);
-  }
 }
