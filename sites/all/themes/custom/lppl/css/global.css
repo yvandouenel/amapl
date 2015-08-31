@@ -819,7 +819,7 @@ body.context-adresses-utiles h2.block-title{
 body.front .block-news-home .views-field-field-news-image img{
     margin-bottom: 20px;
 }
-body.context-s-installer-en-profession-liberale .block-news-home .views-field-field-news-image img{
+.region-sidebar-second-inner .block-news-home .views-field-field-news-image img{
     max-width: 85%;
 }
 
