@@ -18,6 +18,22 @@ function aga_user_import_form_migrate_ui_migrate_group_alter(&$form, &$form_stat
 
     $form['operations']['options']['update']['#type'] = 'value';
     $form['operations']['options']['update']['#value'] = TRUE;
+
+    array_unshift($form['operations']['submit']['#submit'], '_aga_user_import_kill_flag');
+  }
+}
+
+function _aga_user_import_kill_flag($form, &$form_state) {
+  if ($form_state['values']['operation'] != 'import_immediate') {
+    return;
+  }
+
+  $migrations = _migrate_ui_selected_migrations($form_state['values']);
+  foreach ($migrations as $machine_name) {
+    $migration = Migration::getInstance($machine_name);
+    if ($migration->getStatus() != MigrationBase::STATUS_IMPORTING) {
+      variable_del('aga_user_import_first_run_' . get_class($migration));
+    }
   }
 }
 
