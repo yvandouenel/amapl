@@ -512,7 +512,7 @@ body.node-type-aga-membre .field-name-field-aga-mail{
   text-transform: uppercase;
   width: 135px;
   border-bottom: 2px solid #44484B;
-  padding: 15px 0 13px 0;
+  padding: 15px 30px 13px 0;
 }
 
 #block-views-news-block-1 h3 a, 
@@ -650,6 +650,9 @@ a h3.title-event-list{
 }
 div.view-events .views-field-field-event-image{
     float: right;
+}
+.region-sidebar-second div.view-events .views-field-field-event-image{
+    float: none;
 }
 body.not-front div.view-id-events div.views-row,
 .page-s-informer-actualites div.views-row,
@@ -814,6 +817,14 @@ body.context-adresses-utiles .container-12 .grid-3{
 }
 body.context-adresses-utiles h2.block-title{
   display: none;
+}
+/* Actu page d'accueil *********************************************************/
+body.front .block-news-home .views-field-field-news-image img{
+    margin-bottom: 20px;
+}
+.region-sidebar-second-inner .block-news-home .views-field-field-news-image img,
+.region-sidebar-second-inner .block-events-home .views-field-field-event-image img{
+    max-width: 85%;
 }
 
 
