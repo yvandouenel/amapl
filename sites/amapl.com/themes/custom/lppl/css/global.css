@@ -906,7 +906,7 @@ div.group-right .group-practical-event div.image a{
     font-weight: normal;
 }
 div.group-right .group-practical-event .subscribe-event a{
-    display: block;
+    display: table;
     padding: 12px 20px;
     background-color: #f56e57;
     color: white;
@@ -914,7 +914,6 @@ div.group-right .group-practical-event .subscribe-event a{
     text-align: center;
     border-radius: 6px;
     text-decoration: none;
-    width: 50%;
     margin: 10px auto;
     text-transform: uppercase;
     box-shadow: 3px 3px 3px black; 
