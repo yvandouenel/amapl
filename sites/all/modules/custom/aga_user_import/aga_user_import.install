@@ -74,4 +74,9 @@ function aga_user_import_enable() {
  */
 function aga_user_import_disable() {
   MigrateGroup::deregister('aga');
+
+  $roles = _aga_import_variants();
+  foreach ($roles as $key => $values) {
+    variable_del('aga_user_import_first_run_AgaUserMigration' . ucfirst($key));
+  }
 }
