@@ -89,6 +89,9 @@ function feature_news_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -97,6 +100,9 @@ function feature_news_strongarm() {
         ),
         'path' => array(
           'weight' => '1',
+        ),
+        'metatags' => array(
+          'weight' => '17',
         ),
       ),
       'display' => array(),
@@ -131,7 +137,9 @@ function feature_news_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_news';
-  $strongarm->value = array();
+  $strongarm->value = array(
+    0 => 'status',
+  );
   $export['node_options_news'] = $strongarm;
 
   $strongarm = new stdClass();

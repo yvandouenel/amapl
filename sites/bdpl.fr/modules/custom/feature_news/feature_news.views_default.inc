@@ -108,7 +108,7 @@ function feature_news_views_default_views() {
   /* Display: Page actualités */
   $handler = $view->new_display('page', 'Page actualités', 'page');
   $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Les actualités du Portail des Professions Libérales';
+  $handler->display->display_options['title'] = 'Actualités';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Champ: Contenu : Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -164,7 +164,7 @@ function feature_news_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  $handler->display->display_options['path'] = 's-informer/actualites';
+  $handler->display->display_options['path'] = 'actualites';
 
   /* Display: Block actualités */
   $handler = $view->new_display('block', 'Block actualités', 'block_1');
@@ -183,6 +183,49 @@ function feature_news_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Champ: Contenu : Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Champ: Contenu : URL de destination */
+  $handler->display->display_options['fields']['field_news_url_target']['id'] = 'field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['table'] = 'field_data_field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['field'] = 'field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['label'] = '';
+  $handler->display->display_options['fields']['field_news_url_target']['element_label_colon'] = FALSE;
+  /* Champ: Contenu : Lien vers nouvelle fenêtre */
+  $handler->display->display_options['fields']['field_news_new_window']['id'] = 'field_news_new_window';
+  $handler->display->display_options['fields']['field_news_new_window']['table'] = 'field_data_field_news_new_window';
+  $handler->display->display_options['fields']['field_news_new_window']['field'] = 'field_news_new_window';
+  $handler->display->display_options['fields']['field_news_new_window']['label'] = '';
+  $handler->display->display_options['fields']['field_news_new_window']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_news_new_window']['element_label_colon'] = FALSE;
+  /* Champ: Contenu : Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '150',
+  );
+  /* Champ: Contenu : Image */
+  $handler->display->display_options['fields']['field_news_image']['id'] = 'field_news_image';
+  $handler->display->display_options['fields']['field_news_image']['table'] = 'field_data_field_news_image';
+  $handler->display->display_options['fields']['field_news_image']['field'] = 'field_news_image';
+  $handler->display->display_options['fields']['field_news_image']['label'] = '';
+  $handler->display->display_options['fields']['field_news_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_news_image']['type'] = 'list';
+  $handler->display->display_options['fields']['field_news_image']['settings'] = array(
+    'link' => '0',
+  );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Critère de tri: Draggableviews : Poids */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
@@ -391,6 +434,94 @@ function feature_news_views_default_views() {
   $handler->display->display_options['arguments']['tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['tid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['block_description'] = 'block actualités taguées';
+
+  /* Display: Flux */
+  $handler = $view->new_display('feed', 'Flux', 'feed_1');
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'rss';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'title',
+      'rendered' => 0,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['row_plugin'] = 'node_rss';
+  $handler->display->display_options['row_options']['item_length'] = 'teaser';
+  $handler->display->display_options['row_options']['links'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Champ: Contenu : Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Champ: Contenu : Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '150',
+  );
+  /* Champ: Contenu : Auteur (field_article_author:delta) */
+  $handler->display->display_options['fields']['delta']['id'] = 'delta';
+  $handler->display->display_options['fields']['delta']['table'] = 'field_data_field_article_author';
+  $handler->display->display_options['fields']['delta']['field'] = 'delta';
+  $handler->display->display_options['fields']['delta']['label'] = '';
+  $handler->display->display_options['fields']['delta']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['delta']['element_label_colon'] = FALSE;
+  /* Champ: Contenu : Date de mise en ligne */
+  $handler->display->display_options['fields']['field_news_date_inline']['id'] = 'field_news_date_inline';
+  $handler->display->display_options['fields']['field_news_date_inline']['table'] = 'field_data_field_news_date_inline';
+  $handler->display->display_options['fields']['field_news_date_inline']['field'] = 'field_news_date_inline';
+  $handler->display->display_options['fields']['field_news_date_inline']['label'] = '';
+  $handler->display->display_options['fields']['field_news_date_inline']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_news_date_inline']['settings'] = array(
+    'format_type' => 'rfc',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Champ: Contenu : Chemin */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+  );
+  /* Critère de filtrage: Contenu : Flux rss ? (field_flux_rss) */
+  $handler->display->display_options['filters']['field_flux_rss_value']['id'] = 'field_flux_rss_value';
+  $handler->display->display_options['filters']['field_flux_rss_value']['table'] = 'field_data_field_flux_rss';
+  $handler->display->display_options['filters']['field_flux_rss_value']['field'] = 'field_flux_rss_value';
+  $handler->display->display_options['filters']['field_flux_rss_value']['value'] = array(
+    1 => '1',
+  );
+  $handler->display->display_options['path'] = 'actualites-rss.xml';
   $translatables['news'] = array(
     t('Master'),
     t('News'),
@@ -408,7 +539,7 @@ function feature_news_views_default_views() {
     t('suivant ›'),
     t('dernier »'),
     t('Page actualités'),
-    t('Les actualités du Portail des Professions Libérales'),
+    t('Actualités'),
     t('Block actualités'),
     t('Voir toutes les actualités'),
     t('block actualités'),
@@ -416,6 +547,9 @@ function feature_news_views_default_views() {
     t('Block actualités taguées'),
     t('Tout'),
     t('block actualités taguées'),
+    t('Flux'),
+    t('.'),
+    t(','),
   );
   $export['news'] = $view;
 
