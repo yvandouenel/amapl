@@ -719,12 +719,23 @@ div.group-right .group-practical-event .subscribe-event a,
     text-transform: uppercase;
     box-shadow: 3px 3px 3px black; 
 }
+.group-registration-button .field-group-format-wrapper{
+    position: absolute;
+    width: 53%;
+    left: 0px;
+    top: 40px;
+    background-color: #FFF;
+    border: 1px solid #F56E57;
+    border-radius: 8px;
+    color: #000;
+    padding: 5px 10px;
+}
 div.group-right .group-practical-event .subscribe-event a#edit-cancel{
     width: 35%;
     background-color: #CCC;
 }
 div.group-right .group-practical-event form{
-    margin-top: -35px;
+    /*margin-top: -35px;*/
 }
 div.group-right .group-practical-event form label{
     display: block;
