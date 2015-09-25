@@ -734,9 +734,7 @@ div.group-right .group-practical-event .subscribe-event a#edit-cancel{
     width: 35%;
     background-color: #CCC;
 }
-div.group-right .group-practical-event form{
-    /*margin-top: -35px;*/
-}
+
 div.group-right .group-practical-event form label{
     display: block;
 }
