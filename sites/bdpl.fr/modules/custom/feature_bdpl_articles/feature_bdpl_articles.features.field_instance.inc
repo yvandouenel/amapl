@@ -22,7 +22,7 @@ function feature_bdpl_articles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -32,23 +32,26 @@ function feature_bdpl_articles_field_default_field_instances() {
         'weight' => 1,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'body',
     'label' => 'Body',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
-      'context' => '',
-      'display_summary' => TRUE,
-      'dnd_enabled' => 0,
-      'mee_enabled' => 0,
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'display_summary' => 1,
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
-        'show_token_tree' => FALSE,
+        'show_token_tree' => 0,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
@@ -100,16 +103,9 @@ function feature_bdpl_articles_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'inline',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'tres_court_francais',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
-        'weight' => 5,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -198,12 +194,9 @@ function feature_bdpl_articles_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => 1,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -246,7 +239,7 @@ function feature_bdpl_articles_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -283,10 +276,10 @@ function feature_bdpl_articles_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -329,7 +322,7 @@ function feature_bdpl_articles_field_default_field_instances() {
           'image_style' => 'large',
         ),
         'type' => 'image',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -365,6 +358,49 @@ function feature_bdpl_articles_field_default_field_instances() {
       ),
       'type' => 'image_image',
       'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-article-field_notes_perso'
+  $field_instances['node-article-field_notes_perso'] = array(
+    'bundle' => 'article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 22,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_notes_perso',
+    'label' => 'Notes perso',
+    'required' => FALSE,
+    'settings' => array(
+      'context' => '',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+        'show_token_tree' => FALSE,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 45,
     ),
   );
 
@@ -419,6 +455,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
   t('Image');
   t('Mots clés descriptifs de l\'article pour une éventuelle liaison avec des pages classiques ou d\'atterrissage. Si vous employze le terme "Tout", l\'article sera présent autour des pages classiques qui ont une vocation généraliste. Ne placer donc le mot clé "Tout" que dans le cas où cet article est un incontournable.
 Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré au moins 1 lettre.');
+  t('Notes perso');
   t('Tags');
   t('Upload an image to go with this article.');
   t('Visible sur l\'accueil');

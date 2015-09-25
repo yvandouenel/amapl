@@ -810,6 +810,74 @@ function feature_bdpl_articles_views_default_views() {
     1 => '1',
   );
   $handler->display->display_options['block_description'] = 'block 2035 accueil';
+
+  /* Display: Flux */
+  $handler = $view->new_display('feed', 'Flux', 'feed_1');
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'none';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'rss';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'title',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['row_plugin'] = 'rss_fields';
+  $handler->display->display_options['row_options']['title_field'] = 'title';
+  $handler->display->display_options['row_options']['link_field'] = 'path';
+  $handler->display->display_options['row_options']['description_field'] = 'body';
+  $handler->display->display_options['row_options']['creator_field'] = 'field_news_autor';
+  $handler->display->display_options['row_options']['date_field'] = 'field_article_date';
+  $handler->display->display_options['row_options']['guid_field_options'] = array(
+    'guid_field' => 'title',
+    'guid_field_is_permalink' => 0,
+  );
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Champ: Contenu : Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Champ: Contenu : Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '200',
+  );
+  /* Champ: Contenu : Date de l'article */
+  $handler->display->display_options['fields']['field_article_date']['id'] = 'field_article_date';
+  $handler->display->display_options['fields']['field_article_date']['table'] = 'field_data_field_article_date';
+  $handler->display->display_options['fields']['field_article_date']['field'] = 'field_article_date';
+  $handler->display->display_options['fields']['field_article_date']['label'] = '';
+  $handler->display->display_options['fields']['field_article_date']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_article_date']['settings'] = array(
+    'format_type' => 'long',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+  );
+  /* Champ: Contenu : Auteur */
+  $handler->display->display_options['fields']['field_news_autor']['id'] = 'field_news_autor';
+  $handler->display->display_options['fields']['field_news_autor']['table'] = 'field_data_field_news_autor';
+  $handler->display->display_options['fields']['field_news_autor']['field'] = 'field_news_autor';
+  $handler->display->display_options['fields']['field_news_autor']['label'] = '';
+  $handler->display->display_options['fields']['field_news_autor']['element_label_colon'] = FALSE;
+  /* Champ: Contenu : Chemin */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  $handler->display->display_options['path'] = 'actu-vigipl-rss';
   $translatables['liste_articles'] = array(
     t('Master'),
     t('Liste articles'),
@@ -850,6 +918,7 @@ function feature_bdpl_articles_views_default_views() {
     t('Block 2035'),
     t('Liste 2035 accueil'),
     t('block 2035 accueil'),
+    t('Flux'),
   );
   $export['liste_articles'] = $view;
 
