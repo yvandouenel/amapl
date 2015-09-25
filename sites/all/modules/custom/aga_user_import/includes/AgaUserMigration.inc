@@ -127,7 +127,7 @@ class AgaUserMigration extends Migration {
       return;
     }
     variable_set('aga_user_import_first_run_' . get_class(), FALSE);
-
+drupal_set_message('Test');
     // Get all users having this role.
     $query = db_select('users_roles', 'ur');
     $query->join('users', 'u', 'ur.uid = u.uid');
