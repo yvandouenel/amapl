@@ -37,7 +37,8 @@ function feature_event_ds_layout_settings_info() {
         12 => 'field_cost_members',
         13 => 'field_event_cost_public',
         14 => 'field_scald_file',
-        15 => 'field_event_registration',
+        15 => 'group_registration_button',
+        16 => 'field_event_registration',
       ),
     ),
     'fields' => array(
@@ -56,6 +57,7 @@ function feature_event_ds_layout_settings_info() {
       'field_cost_members' => 'right',
       'field_event_cost_public' => 'right',
       'field_scald_file' => 'right',
+      'group_registration_button' => 'right',
       'field_event_registration' => 'right',
     ),
     'classes' => array(),
