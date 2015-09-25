@@ -181,10 +181,9 @@ function feature_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 40,
+        'type' => 'hidden',
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -224,7 +223,7 @@ function feature_event_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 11,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -262,10 +261,9 @@ function feature_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 39,
+        'type' => 'hidden',
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -359,10 +357,9 @@ function feature_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 5,
+        'type' => 'hidden',
+        'weight' => 20,
       ),
       'full' => array(
         'label' => 'above',
@@ -467,7 +464,7 @@ function feature_event_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'entityreference_label',
-        'weight' => 9,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
@@ -514,10 +511,9 @@ function feature_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'email',
         'settings' => array(),
-        'type' => 'email_default',
-        'weight' => 41,
+        'type' => 'hidden',
+        'weight' => 26,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -558,9 +554,8 @@ function feature_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 22,
       ),
       'full' => array(
@@ -608,7 +603,7 @@ function feature_event_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 10,
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'above',
@@ -706,16 +701,9 @@ function feature_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
       ),
       'full' => array(
         'label' => 'above',
@@ -930,9 +918,8 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 23,
       ),
       'full' => array(
@@ -976,11 +963,8 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'markup_text_formatter',
-        'settings' => array(
-          'markup' => 'h3',
-        ),
-        'type' => 'markup_text',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 21,
       ),
       'full' => array(
@@ -1086,7 +1070,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'title',
-        'weight' => 6,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'above',
@@ -1128,8 +1112,8 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
     ),
   );
 
-  // Exported field_instance: 'registration-event_subscribe-field_registrant_comment'
-  $field_instances['registration-event_subscribe-field_registrant_comment'] = array(
+  // Exported field_instance: 'registration-event_subscribe-field_cabinet_ou_societe'
+  $field_instances['registration-event_subscribe-field_cabinet_ou_societe'] = array(
     'bundle' => 'event_subscribe',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1140,9 +1124,130 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
+        'weight' => 4,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'registration',
+    'field_name' => 'field_cabinet_ou_societe',
+    'label' => 'Cabinet ou société',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'registration-event_subscribe-field_ga_name'
+  $field_instances['registration-event_subscribe-field_ga_name'] = array(
+    'bundle' => 'event_subscribe',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'registration',
+    'field_name' => 'field_ga_name',
+    'label' => 'Nom',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'registration-event_subscribe-field_ga_prenom'
+  $field_instances['registration-event_subscribe-field_ga_prenom'] = array(
+    'bundle' => 'event_subscribe',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'registration',
+    'field_name' => 'field_ga_prenom',
+    'label' => 'Prénom',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'registration-event_subscribe-field_registrant_comment'
+  $field_instances['registration-event_subscribe-field_registrant_comment'] = array(
+    'bundle' => 'event_subscribe',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Si plusieurs dates sont possibles, merci de préciser ici celle que vous avez choisie.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
         'weight' => 1,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'registration',
     'field_name' => 'field_registrant_comment',
     'label' => 'Commentaires',
@@ -1160,10 +1265,10 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
       'module' => 'text',
       'settings' => array(
         'rows' => 5,
-        'show_token_tree' => FALSE,
+        'show_token_tree' => 0,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 6,
     ),
   );
 
@@ -1182,10 +1287,11 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'registration',
     'field_name' => 'field_registrant_tel',
     'label' => 'Tél.',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'context' => 'debug',
       'context_default' => 'sdl_editor_representation',
@@ -1198,11 +1304,11 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'show_token_tree' => FALSE,
+        'show_token_tree' => 0,
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 1,
+      'weight' => 4,
     ),
   );
 
@@ -1213,6 +1319,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
   t('Affiché en page d\'accueil');
   t('Articles associés');
   t('Body');
+  t('Cabinet ou société');
   t('Catégorie');
   t('Commentaires');
   t('Coût adhérents');
@@ -1231,6 +1338,9 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
   t('Mots clés');
   t('Mots clés descriptifs de l\'événement pour une éventuelle liaison avec des pages classiques ou d\'atterrissage. Si le terme "Tout" est présent, merci de le laisser.
 Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré au moins 1 lettre.');
+  t('Nom');
+  t('Prénom');
+  t('Si plusieurs dates sont possibles, merci de préciser ici celle que vous avez choisie.');
   t('Sujet de la formation');
   t('Tél.');
   t('Url de destination');
