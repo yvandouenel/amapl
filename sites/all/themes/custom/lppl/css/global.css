@@ -699,12 +699,18 @@ div.group-right .group-practical-event div.image a{
     color: #44484B;
     font-weight: normal;
 }
-div.group-right .group-practical-event .subscribe-event a{
+div.group-right .group-practical-event .group-registration-button h3{
+    background-image: none;
+}
+div.group-right .group-practical-event .subscribe-event a,
+.group-registration-button h3 a,
+.group-registration-button .form-actions input{
     display: block;
     padding: 12px 20px;
     background-color: #f56e57;
+    background-image: none;
     color: white;
-    font-size: 1.6em;
+    font-size: 1em;
     text-align: center;
     border-radius: 6px;
     text-decoration: none;
@@ -712,6 +718,19 @@ div.group-right .group-practical-event .subscribe-event a{
     margin: 10px auto;
     text-transform: uppercase;
     box-shadow: 3px 3px 3px black; 
+}
+div.group-right .group-practical-event .subscribe-event a#edit-cancel{
+    width: 35%;
+    background-color: #CCC;
+}
+div.group-right .group-practical-event form{
+    margin-top: -35px;
+}
+div.group-right .group-practical-event form label{
+    display: block;
+}
+div.group-right .group-practical-event .form-type-textfield input{
+    width: 100%;
 }
 div.group-right .group-practical-event a:hover{
     text-decoration: underline;
