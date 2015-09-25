@@ -21,7 +21,7 @@ function feature_event_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'En pratique',
-    'weight' => '8',
+    'weight' => '4',
     'children' => array(
       0 => 'field_scald_file',
       1 => 'field_event_place',
