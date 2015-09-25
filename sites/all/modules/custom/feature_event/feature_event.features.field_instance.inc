@@ -79,7 +79,7 @@ function feature_event_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 35,
+        'weight' => 34,
       ),
       'full' => array(
         'label' => 'above',
@@ -304,7 +304,7 @@ function feature_event_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 36,
+        'weight' => 35,
       ),
       'full' => array(
         'label' => 'above',
@@ -653,7 +653,7 @@ function feature_event_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 34,
+        'weight' => 33,
       ),
       'full' => array(
         'label' => 'above',
@@ -759,10 +759,8 @@ function feature_event_field_default_field_instances() {
       'default' => array(
         'label' => 'hidden',
         'module' => 'registration',
-        'settings' => array(
-          'label' => ' S\'inscrire',
-        ),
-        'type' => 'registration_link',
+        'settings' => array(),
+        'type' => 'registration_form',
         'weight' => 38,
       ),
       'full' => array(
@@ -1016,7 +1014,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'sdl_editor_representation',
-        'weight' => 37,
+        'weight' => 36,
       ),
       'full' => array(
         'label' => 'above',
