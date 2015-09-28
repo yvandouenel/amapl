@@ -21,8 +21,7 @@ function feature_news_views_pre_render(&$view) {
               
 //Test if an url target is specified 
               if (sizeof($value->field_field_news_url_target) > 0) {
-                  
-                  $begin_http = preg_match("#^http|https(.*)$#i", $value->field_field_news_url_target[0]['rendered']['#markup']);                
+                  $begin_http = preg_match("#^http|https|\/(.*)$#i", $value->field_field_news_url_target[0]['rendered']['#markup']);
                   $custom_url = $begin_http ? $value->field_field_news_url_target[0]['rendered']['#markup'] : 'http://'.$value->field_field_news_url_target[0]['rendered']['#markup'];                   
                   $target = (empty($value->field_field_news_new_window) || !$value->field_field_news_new_window[0]['raw']['value'])? '' : ' target="_blank" ';
                   if (sizeof($value->field_field_news_image) > 0) {
