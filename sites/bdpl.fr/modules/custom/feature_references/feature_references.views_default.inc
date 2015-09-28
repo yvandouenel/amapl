@@ -179,6 +179,58 @@ function feature_references_views_default_views() {
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['content'] = '<h3 class="ref-subtitles">Sélection de jurisprudence</h3>';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Champ: Contenu : Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<h3>[title]</h3>';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Champ: Contenu : Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '300',
+  );
+  /* Champ: Contenu : Chemin */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  /* Champ: Contenu : Afficher la cible du lien dans une nouvelle fenêtre ? */
+  $handler->display->display_options['fields']['field_window_target']['id'] = 'field_window_target';
+  $handler->display->display_options['fields']['field_window_target']['table'] = 'field_data_field_window_target';
+  $handler->display->display_options['fields']['field_window_target']['field'] = 'field_window_target';
+  $handler->display->display_options['fields']['field_window_target']['label'] = '';
+  $handler->display->display_options['fields']['field_window_target']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_window_target']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_window_target']['alter']['text'] = '_blank';
+  $handler->display->display_options['fields']['field_window_target']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_window_target']['empty'] = '_self';
+  $handler->display->display_options['fields']['field_window_target']['empty_zero'] = TRUE;
+  /* Champ: Contenu : URL de destination */
+  $handler->display->display_options['fields']['field_news_url_target']['id'] = 'field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['table'] = 'field_data_field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['field'] = 'field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['label'] = '';
+  $handler->display->display_options['fields']['field_news_url_target']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_news_url_target']['alter']['text'] = '<a href="[field_news_url_target]" target="[field_window_target]">[title]</a>
+[body]';
+  $handler->display->display_options['fields']['field_news_url_target']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_news_url_target']['empty'] = '<a href="[path]" target="[field_window_target]">[title]</a>
+[body]';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Critère de filtrage: Contenu : Publié */
@@ -222,6 +274,59 @@ function feature_references_views_default_views() {
   $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['header']['area_text_custom']['content'] = '<h3 class="ref-subtitles">Sélection de textes</h3>';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Champ: Contenu : Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<h3>[title]</h3>';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  /* Champ: Contenu : Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '300',
+  );
+  /* Champ: Contenu : Afficher la cible du lien dans une nouvelle fenêtre ? */
+  $handler->display->display_options['fields']['field_window_target']['id'] = 'field_window_target';
+  $handler->display->display_options['fields']['field_window_target']['table'] = 'field_data_field_window_target';
+  $handler->display->display_options['fields']['field_window_target']['field'] = 'field_window_target';
+  $handler->display->display_options['fields']['field_window_target']['label'] = '';
+  $handler->display->display_options['fields']['field_window_target']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_window_target']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_window_target']['alter']['text'] = '_blank';
+  $handler->display->display_options['fields']['field_window_target']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_window_target']['empty'] = '_self';
+  $handler->display->display_options['fields']['field_window_target']['empty_zero'] = TRUE;
+  /* Champ: Contenu : Chemin */
+  $handler->display->display_options['fields']['path']['id'] = 'path';
+  $handler->display->display_options['fields']['path']['table'] = 'node';
+  $handler->display->display_options['fields']['path']['field'] = 'path';
+  $handler->display->display_options['fields']['path']['label'] = '';
+  $handler->display->display_options['fields']['path']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
+  /* Champ: Contenu : URL de destination */
+  $handler->display->display_options['fields']['field_news_url_target']['id'] = 'field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['table'] = 'field_data_field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['field'] = 'field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['label'] = '';
+  $handler->display->display_options['fields']['field_news_url_target']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_news_url_target']['alter']['text'] = '<a href="[field_news_url_target]" target="[field_window_target]">[title]</a>
+[body]';
+  $handler->display->display_options['fields']['field_news_url_target']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_news_url_target']['empty'] = '<a href="[path]" target="[field_window_target]">[title]</a>
+[body]';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Critère de filtrage: Contenu : Publié */
@@ -361,6 +466,12 @@ function feature_references_views_default_views() {
     t('Bloc'),
     t('block références'),
     t('Sélection de jurisprudence'),
+    t('_blank'),
+    t('_self'),
+    t('<a href="[field_news_url_target]" target="[field_window_target]">[title]</a>
+[body]'),
+    t('<a href="[path]" target="[field_window_target]">[title]</a>
+[body]'),
     t('Sélection de textes'),
     t('<h3 class="ref-subtitles">Sélection de textes</h3>'),
     t('Téléchargements'),

@@ -273,6 +273,52 @@ function feature_references_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-references-field_news_url_target'
+  $field_instances['node-references-field_news_url_target'] = array(
+    'bundle' => 'references',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 28,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_news_url_target',
+    'label' => 'URL de destination',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 18,
+    ),
+  );
+
   // Exported field_instance: 'node-references-field_notes_perso'
   $field_instances['node-references-field_notes_perso'] = array(
     'bundle' => 'references',
@@ -747,9 +793,54 @@ function feature_references_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-references-field_window_target'
+  $field_instances['node-references-field_window_target'] = array(
+    'bundle' => 'references',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 29,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_window_target',
+    'label' => 'Afficher la cible du lien dans une nouvelle fenêtre ?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 19,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Affichage en page d\'accueil');
+  t('Afficher la cible du lien dans une nouvelle fenêtre ?');
   t('Auteur');
   t('Catégorie');
   t('Complément');
@@ -765,6 +856,7 @@ function feature_references_field_default_field_instances() {
   t('Pièces jointes');
   t('Résumé et contenu');
   t('Source');
+  t('URL de destination');
 
   return $field_instances;
 }
