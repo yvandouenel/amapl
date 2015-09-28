@@ -79,5 +79,5 @@ features_exclude[dependencies][list] = list
 features_exclude[dependencies][options] = options
 features_exclude[dependencies][strongarm] = strongarm
 features_exclude[dependencies][taxonomy] = taxonomy
-mtime = 1443174552
+mtime = 1443432710
 project path = sites/bdpl.fr/modules/custom
