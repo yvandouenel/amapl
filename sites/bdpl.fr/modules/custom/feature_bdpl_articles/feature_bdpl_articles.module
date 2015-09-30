@@ -5,3 +5,17 @@
  */
 
 include_once 'feature_bdpl_articles.features.inc';
+
+/**
+ * Implements hook_node_view().
+ */
+function feature_bdpl_articles_node_view($node, $view_mode, $langcode) {
+  if(node_is_page($node) && $node->type == "article") {
+    $wrapper = entity_metadata_wrapper('node', $node);
+    $tid = $wrapper->field_categorie[0]->raw();
+    if (!empty($tid)) {
+      $path = "taxonomy/term/" . $tid;
+      drupal_goto($path);
+    }
+  }
+}
