@@ -172,7 +172,16 @@ function feature_references_views_default_views() {
   $handler = $view->new_display('attachment', 'Sélection de jurisprudence', 'attachment_4');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Sélection de jurisprudence';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Voir la suite des jurisprudences';
   $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Entête: Global : Texte non filtré */
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
@@ -268,7 +277,16 @@ function feature_references_views_default_views() {
   $handler = $view->new_display('attachment', 'Sélection de textes', 'attachment_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Sélection de jurisprudence';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Voir la suite des textes';
   $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Entête: Global : Texte non filtré */
   $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
@@ -467,6 +485,7 @@ function feature_references_views_default_views() {
     t('Bloc'),
     t('block références'),
     t('Sélection de jurisprudence'),
+    t('Voir la suite des jurisprudences'),
     t('_blank'),
     t('_self'),
     t('<a href="[field_news_url_target]" target="[field_window_target]">[title]</a>
@@ -474,6 +493,7 @@ function feature_references_views_default_views() {
     t('<a href="[path]" target="[field_window_target]">[title]</a>
 [body]'),
     t('Sélection de textes'),
+    t('Voir la suite des textes'),
     t('<h3 class="ref-subtitles">Sélection de textes</h3>'),
     t('Téléchargements'),
     t('<h3 class="ref-subtitles">Téléchargements</h3>'),
