@@ -623,6 +623,9 @@ a.list-link-aga {
 #views_slideshow_cycle_main_le_saviez_vous_ss-block a:hover{
   text-decoration: underline;
 }
+.view-id-liste_articles .views-row .node-article{
+    padding-top: 20px;
+}
 /* Trouver votre interlocuteur aga liste ************************/
 body.page-aga-adherentes #views-exposed-form-aga-adherentes-block-1{
   display : none;

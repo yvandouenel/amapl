@@ -14,8 +14,11 @@ function feature_bdpl_articles_node_view($node, $view_mode, $langcode) {
     $wrapper = entity_metadata_wrapper('node', $node);
     $tid = $wrapper->field_categorie[0]->raw();
     if (!empty($tid)) {
-      $path = "taxonomy/term/" . $tid;
-      drupal_goto($path);
+      $path = "taxonomy/term/" . $tid ;
+      drupal_goto( $path,
+        array(
+          'fragment' => "node-article-".$node->nid,
+          'alias' => TRUE ) );
     }
   }
 }
