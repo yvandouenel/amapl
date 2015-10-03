@@ -80,3 +80,4 @@ features[variable][] = node_options_galerie_adherents
 features[variable][] = node_preview_galerie_adherents
 features[variable][] = node_submitted_galerie_adherents
 features[views_view][] = liste_artistes
+mtime = 1423732477
