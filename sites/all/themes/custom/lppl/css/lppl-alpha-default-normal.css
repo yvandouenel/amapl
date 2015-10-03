@@ -30,8 +30,8 @@
 
 /* Bloc Le savez-vous *********************************************************/
 #block-views-le-saviez-vous-ss-block{
-  float:left;
-  width: 31.25%;
+    /*float:left;
+    width: 31.25%;*/
   background: url(../images/illustrations/savez-vous.png) no-repeat 0 0;
   padding: 60px 0 0 0;
   margin: 20px 0 0 0;
@@ -42,7 +42,8 @@
 #views_slideshow_cycle_teaser_section_le_saviez_vous_ss-block{
   height: 140px ! important;
 }
-#views_slideshow_controls_text_previous_le_saviez_vous_ss-block{
+#views_slideshow_controls_text_previous_le_saviez_vous_ss-block,
+#views_slideshow_controls_text_previous_liste_artistes-block_artistes{
   position: absolute;
   left: 0;
   top:  60%;
@@ -52,7 +53,8 @@
   height: 40px;
   background: url(../images/icons/arrow_ss_know_it_left.png) no-repeat 0 50%;
 }
-#views_slideshow_controls_text_next_le_saviez_vous_ss-block{
+#views_slideshow_controls_text_next_le_saviez_vous_ss-block,
+#views_slideshow_controls_text_next_liste_artistes-block_artistes{
   position: absolute;
   right: 5px;
   top:  60%;
@@ -61,6 +63,12 @@
   width: 20px;
   height: 40px;
   background: url(../images/icons/arrow_ss_know_it_right.png) no-repeat 0 50%;
+}
+#views_slideshow_cycle_teaser_section_liste_artistes-block_artistes{
+    margin-left: 80px;
+}
+#views_slideshow_controls_text_pause_liste_artistes-block_artistes{
+    display: none;
 }
 
 #block-views-le-saviez-vous-ss-block .views-field-body-1{
@@ -81,6 +89,9 @@
 #views_slideshow_cycle_teaser_section_le_saviez_vous_ss-block{
   height: 220px !important;
 }
+/* block artistes *************************************************************/
+
+
 /* Liste des adhérents ********************************************************/
 body.page-s-entourer-aga-trouver-son-association #block-system-main{
   float: right;
@@ -137,8 +148,8 @@ body.page-s-entourer-aga-trouver-son-association #block-system-main{
 }
 /* Actualités page d'accueil **************************************************/
 #block-views-news-block-1{
-  float:left;
-  width: 31.25%;
+    /*float:left;
+    width: 31.25%;*/
   background: white url(../images/illustrations/actu.png) no-repeat 0 0;
   padding: 60px 0 0 0;
   margin: 20px 0 0 1.0416667%;
@@ -159,8 +170,8 @@ body.page-s-entourer-aga-trouver-son-association #block-system-main{
 
 /* Agenda - evenement page d'accueil ******************************************/
 #block-views-events-block-evenements-home{
-  float:left;
-  width: 31.25%;
+  /*float:left;
+  width: 31.25%;*/
   background: url(../images/illustrations/agenda.png) no-repeat 0 0;
   padding: 60px 0 0 0;
   margin: 20px 0 0 1.0416667%;
