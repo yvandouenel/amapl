@@ -508,11 +508,26 @@ body.node-type-aga-membre .field-name-field-aga-mail{
 
 #block-views-news-block-1 h2.block-title, 
 #block-views-events-block-evenements-home h2.block-title,
-#block-views-le-saviez-vous-ss-block h2.block-title{
+#block-views-le-saviez-vous-ss-block h2.block-title,
+#block-views-liste-artistes-block-artistes h2.block-title{
   text-transform: uppercase;
   width: 135px;
   border-bottom: 2px solid #44484B;
   padding: 15px 30px 13px 0;
+}
+#block-views-liste-artistes-block-artistes h2.block-title {
+    position: relative;
+    width: 100%;
+    border-bottom: 0px;
+}
+
+#block-views-liste-artistes-block-artistes h2.block-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 50%;
+    border-bottom: 2px solid #44484B;
 }
 
 #block-views-news-block-1 h3 a, 
