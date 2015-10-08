@@ -855,7 +855,7 @@ body.page-aggregator .feed-item-title a{
     font-weight: bold;
 }
 .view-events.view-display-id-page .views-field .field-content{
-    display: inline-block;
+    /*display: inline-block;*/
 }
 div.view-events .views-field-field-event-image{
     float: right;
