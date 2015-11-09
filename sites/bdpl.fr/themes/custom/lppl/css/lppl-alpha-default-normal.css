@@ -150,8 +150,9 @@ body.page-s-entourer-aga-trouver-son-association #block-system-main{
 #block-views-news-block-1{
   float:left;
   width: 31.25%;
-  background: white url(../images/illustrations/actu.png) no-repeat 0 0;
-  padding: 60px 0 0 0;
+  /*background: white url(../images/illustrations/actu.png) no-repeat 0 0;*/
+  background-color: white;
+  padding: 0 0 0 0;
   margin: 20px 4% 0 0;
 }
 

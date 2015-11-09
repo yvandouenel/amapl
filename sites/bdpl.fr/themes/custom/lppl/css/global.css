@@ -862,11 +862,10 @@ h3.h3_taxo{
 
 /* Home guide comptable *******************************************************/
 #block-bean-guide-comptable, #block-bean-2035plus{
-  float: right;
-  background: url("../images/illustrations/compta.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+  float: left;
   margin: 20px 0 0 0;
   overflow: hidden;
-  padding: 60px 0 0 0;
+  padding: 0 0 0 0;
   width: 30%;
 }
 #block-bean-2035plus{
@@ -973,6 +972,110 @@ body.node-type-references .field-collection-container {
 #block-system-user-menu ul li.first{
   display: none;
 }
+/* Fontello ***********************************************************************************************************/
+@font-face {
+  font-family: 'fontello';
+  src: url('../fontello/font/fontello.eot?88707576');
+  src: url('../fontello/font/fontello.eot?88707576#iefix') format('embedded-opentype'),
+  url('../fontello/font/fontello.woff?88707576') format('woff'),
+  url('../fontello/font/fontello.ttf?88707576') format('truetype'),
+  url('../fontello/font/fontello.svg?88707576#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.icon:before,
+#block-bean-guide-comptable > .block-inner > h2:before,
+#block-bean-2035plus > .block-inner > h2:before,
+#block-views-news-block-1 > .block-inner > h2:before,
+.title-news-list > a:before,
+.h3_home_guide2035 > a:before{
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1em;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 10px;
+  text-align: center;
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  color: #CCCCCC;
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-facebook:before{
+  content: "\e801";
+  font-size: 1.4em;
+}
+.icon-doc-text-inv:before{
+  content: "\e804";
+  font-size: 1.4em;
+}
+#block-bean-guide-comptable >.block-inner > h2{
+  margin: 0;
+  padding-top: 0;
+}
+#block-bean-2035plus>.block-inner > h2,
+#block-views-news-block-1 > .block-inner > h2{
+  margin: 0;
+  padding-top: 0;
+}
+#block-views-news-block-1 > .block-inner > h2:before,
+#block-bean-guide-comptable >.block-inner > h2:before,
+#block-bean-2035plus >.block-inner > h2:before{
+  color: #FFFFFF;
+  font-size: x-large;
+  display: block;
+  width: 48px;
+  height: 35px;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  padding-top: 13px;
+  background-color: #F45A40;
+  margin-bottom: 20px;
+}
+.icon-calc:before,
+#block-bean-guide-comptable >.block-inner > h2:before{
+  content: "\e83f";
+
+}
+#block-bean-2035plus >.block-inner > h2:before{
+  content: "\e804";
+}
+#block-views-news-block-1 > .block-inner > h2:before{
+  content: "\e82c";
+}
+/* résultats sur la page d'accueil ************************************************************************************/
+.title-news-list > a:before,
+.h3_home_guide2035 > a:before{
+  content: "\e834";
+  color: #2E2E2E;
+  margin-bottom: 50px;
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+.title-news-list > a,
+.h3_home_guide2035 > a{
+  display: block;
+  position: relative;
+  padding-left: 15px;
+}
+.h3_home_guide2035 > a{
+ margin: 12px 0;
+}
+
 
 
 
