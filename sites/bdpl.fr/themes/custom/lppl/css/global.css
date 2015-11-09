@@ -1052,6 +1052,7 @@ body.node-type-references .field-collection-container {
 }
 #block-bean-2035plus >.block-inner > h2:before{
   content: "\e804";
+  background-color: #881A85;
 }
 #block-views-news-block-1 > .block-inner > h2:before{
   content: "\e82c";
@@ -1075,6 +1076,7 @@ body.node-type-references .field-collection-container {
 .h3_home_guide2035 > a{
  margin: 12px 0;
 }
+
 
 
 
