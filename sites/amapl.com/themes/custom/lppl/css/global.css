@@ -1108,7 +1108,45 @@ body.page-aggregator .feed-item{
   border-bottom: 1px solid #00486E;
   margin-botom: 15px;
 }
-
+/* Mailchimp form *****************************************************************************************************/
+.mailchimp-form {
+  background-color: #EBEBEB;
+  border-radius: 8px;
+  padding: 10px;
+}
+.mailchimp-form label{
+  width: 90%;
+  margin: 0 5%;
+}
+.mailchimp-form input{
+  color: #5D5D5D ;
+  display: block;
+  margin: 0 5%;
+  padding: 10px;
+  background: #FFF none repeat scroll 0% 0%;
+  width: 90% !important;
+  border: 2px solid #D0D0D0 !important;
+  border-radius: 3px;
+  line-height: 150%;
+  font: 14px/20px "Helvetica",Arial,sans-serif;
+  box-sizing: border-box;
+  height: 40px;
+}
+.mailchimp-form .mergeTable{
+  line-height: 150%;
+  font-family: Helvetica;
+  font-size: 14px;
+  color: #333;
+}
+.mailchimp-form div.mergeRow{
+  margin-top: 15px;
+}
+.mailchimp-form input[type="submit"]{
+  width : 150px !important;
+  border: 2px solid #F7981D !important;
+  margin-top: 10px;
+  margin: 0 5% !important;
+}
 
 
 
