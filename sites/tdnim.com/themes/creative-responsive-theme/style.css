@@ -1662,3 +1662,15 @@ body.page-actualites div.region-content .views-field-body .field-content h3{
   background-image: none;
   
 }
+/* Glossaire **********************************************************************************************************/
+.view-id-glossaire .attachment-before a.active {
+  background-color: #00B1EC;
+  color: white;
+  border-radius: 6px;
+  padding: 3px 6px;
+  text-decoration: none;
+}
+.view-id-glossaire .attachment-before a {
+  text-decoration: underline;
+  font-size: 1.4em;
+}
