@@ -1674,3 +1674,6 @@ body.page-actualites div.region-content .views-field-body .field-content h3{
   text-decoration: underline;
   font-size: 1.4em;
 }
+.view-id-glossaire .view-content .views-field-title a{
+  font-size: 1.4em;
+}
