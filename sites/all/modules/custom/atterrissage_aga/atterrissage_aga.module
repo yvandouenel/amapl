@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Code for the Atterrissage AGA feature.
+ */
+
+include_once 'atterrissage_aga.features.inc';
+
+/**
+* Implements hook_node_view().
+ */
+function atterrissage_aga_node_view($node, $view_mode, $langcode) {
+
+  if(node_is_page($node) && $node->type == "atterrissage_aga") {
+    drupal_goto('<front>');
+  }
+}
