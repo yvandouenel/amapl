@@ -153,17 +153,11 @@ function feature_news_views_default_views() {
     'trim_length' => '150',
   );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Critère de tri: Draggableviews : Poids */
-  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
-  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'news:page_1';
-  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 0;
-  /* Critère de tri: Contenu : Date de publication */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Critère de tri: Contenu : Date de mise en ligne (field_news_date_inline) */
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['id'] = 'field_news_date_inline_value';
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['table'] = 'field_data_field_news_date_inline';
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['field'] = 'field_news_date_inline_value';
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['order'] = 'DESC';
   $handler->display->display_options['path'] = 'actualites';
 
   /* Display: Block actualités */
@@ -181,7 +175,7 @@ function feature_news_views_default_views() {
   $handler->display->display_options['link_display'] = 'page';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Champ: Contenu : Titre */
@@ -227,17 +221,11 @@ function feature_news_views_default_views() {
     'link' => '0',
   );
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Critère de tri: Draggableviews : Poids */
-  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
-  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'news:page_1';
-  $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 0;
-  /* Critère de tri: Contenu : Date de publication */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Critère de tri: Contenu : Date de mise en ligne (field_news_date_inline) */
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['id'] = 'field_news_date_inline_value';
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['table'] = 'field_data_field_news_date_inline';
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['field'] = 'field_news_date_inline_value';
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['order'] = 'DESC';
   $handler->display->display_options['block_description'] = 'block actualités';
 
   /* Display: Classement des actualités */
