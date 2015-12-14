@@ -98,10 +98,57 @@ function atterrissage_aga_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-atterrissage_aga-field_content_after_login'
+  $field_instances['node-atterrissage_aga-field_content_after_login'] = array(
+    'bundle' => 'atterrissage_aga',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_content_after_login',
+    'label' => 'Contenu sous identification',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+        'show_token_tree' => 0,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 41,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
   t('Contenu');
+  t('Contenu sous identification');
 
   return $field_instances;
 }
