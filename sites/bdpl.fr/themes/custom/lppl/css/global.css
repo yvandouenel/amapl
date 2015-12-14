@@ -850,6 +850,9 @@ h3.h3_taxo{
 }
 
 /* superfish ******************************************************************/
+.not-logged-in #block-superfish-1{
+  display: none;
+}
 #block-superfish-1{
   float: right;
   margin-top: 40px;
