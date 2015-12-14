@@ -135,6 +135,7 @@ h3#zoom-sur{
   background: transparent url(../images/icons/arrow-white-small.png) no-repeat 100% 50%;
   border-bottom: 0;
   text-decoration: underline;
+  color: white;
 }
 #block-views-news-block-1 > .block-inner{
   padding: 0 0 0 60px;
