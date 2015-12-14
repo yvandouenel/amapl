@@ -190,6 +190,25 @@ h1, h2, h3, h4, h5, h6{
   margin-top:0.3em;
   padding-left: 5px;
 }
+.block-menu-menu-menu-bas ul.menu{
+  list-style: none;
+  display: table;
+  margin: 0 auto;
+}
+.block-menu-menu-menu-bas ul.menu li{
+  list-style: none;
+  float: left;
+}
+.block-menu-menu-menu-bas ul.menu li a{
+  color: white;
+  text-decoration: none;
+  display: block;
+  border-left: 1px solid white;
+  padding: 0 10px;
+}
+.block-menu-menu-menu-bas ul.menu li.first a{
+  border-left: 0;
+}
 /* moteur de recherche search engine **********/
 #search-block-form #edit-submit{
   border: 0;
@@ -1078,6 +1097,12 @@ body.node-type-references .field-collection-container {
 }
 .h3_home_guide2035 > a{
  margin: 12px 0;
+}
+/* table **************************************************************************************************************/
+body.front tr:hover td,
+body.front tr.even:hover td.active,
+body.front tr.odd:hover td.active {
+  background: transparent;
 }
 
 
