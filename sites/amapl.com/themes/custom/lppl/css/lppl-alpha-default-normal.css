@@ -226,4 +226,7 @@ h3#zoom-sur{
 #section-content #block-menu-block-7 ul li.menu-mlid-881 a{
   background: transparent url(../images/icons/membre.png) no-repeat 0 50%;
 }
-
+/* Page atterrissage AGA *****************************************************/
+.node-type-atterrissage-aga div.breadcrumb{
+  display: none;
+}
