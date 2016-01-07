@@ -1104,6 +1104,11 @@ body.front tr.even:hover td.active,
 body.front tr.odd:hover td.active {
   background: transparent;
 }
+/* Page atterrissage AGA *****************************************************/
+.node-type-atterrissage-aga div.breadcrumb{
+  display: none;
+}
+
 
 
 
