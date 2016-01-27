@@ -8,7 +8,7 @@ jQuery(function($){
   if(login && mdp){
     $('#edit-name').val(login);
     $('#edit-pass').val(mdp);
-    $('#user-login-form').submit();
+    //$('#user-login-form').submit();
   }
 
 
