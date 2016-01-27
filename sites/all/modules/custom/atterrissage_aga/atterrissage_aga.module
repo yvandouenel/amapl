@@ -27,3 +27,16 @@ function atterrissage_aga_node_view($node, $view_mode, $langcode) {
 
   }
 }
+function atterrissage_aga_init() {
+  $variables = json_encode($_POST);
+  drupal_add_js('
+  jQuery(function($){
+    var para = ' . $variables . ';
+    if(para.login && para.mdp){
+      $("#edit-name").val(para.login);
+      $("#edit-pass").val(para.mdp);
+      $("#user-login-form").submit();
+    }
+  });
+  ','inline');
+}
