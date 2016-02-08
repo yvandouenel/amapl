@@ -6,12 +6,14 @@ dependencies[] = field
 dependencies[] = scald
 dependencies[] = dnd
 
+files[] = atom_reference.test
 ; Migrate handler
 files[] = atom_reference.migrate.inc
 
-; Information added by Drupal.org packaging script on 2014-06-12
-version = "7.x-1.2"
+
+; Information added by Drupal.org packaging script on 2015-10-19
+version = "7.x-1.6"
 core = "7.x"
 project = "scald"
-datestamp = "1402587231"
+datestamp = "1445262856"
 

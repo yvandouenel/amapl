@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Entity implementation for the paragraphs entity.
+ */
 
 /**
  * Class for paragraphs_item entities.
@@ -41,6 +45,13 @@ class ParagraphsItemEntity extends Entity {
   protected $hostEntityType;
 
   /**
+   * The host entity bundle.
+   *
+   * @var string
+   */
+  protected $hostEntityBundle;
+
+  /**
    * The language under which the paragraphs item is stored.
    *
    * @var string
@@ -62,7 +73,7 @@ class ParagraphsItemEntity extends Entity {
   public $revision_id;
 
   /**
-   * The name of the field-collection field this item is associated with.
+   * The name of the paragraphs field this item is associated with.
    *
    * @var string
    */
@@ -78,10 +89,17 @@ class ParagraphsItemEntity extends Entity {
   /**
    * Whether the paragraphs item is archived, i.e. not in use.
    *
-   * @see FieldCollectionItemEntity::isInUse()
+   * @see ParagraphsItemEntity::isInUse()
    * @var bool
    */
   public $archived = FALSE;
+
+  /**
+   * The name of the paragraphs field this item is associated with.
+   *
+   * @var string
+   */
+  private $fetchedHostEntityDetails = NULL;
 
   /**
    * Constructs the entity object.
@@ -93,8 +111,13 @@ class ParagraphsItemEntity extends Entity {
       // Ok, we have the field name property, we can proceed and check the field's type
       $field_info = $this->fieldInfo();
 
+      // Check if we have field info, if not, our field is deleted.
+      if (!$field_info) {
+        return FALSE;
+      }
+
       // We only allow paragraphs type field for this entity.
-      if (!$field_info || $field_info['type'] != 'paragraphs') {
+      if ($field_info['type'] != 'paragraphs') {
         throw new Exception("Invalid field name given: {$this->field_name} is not a paragraphs field.");
       }
     }
@@ -113,9 +136,7 @@ class ParagraphsItemEntity extends Entity {
    * paragraphs item.
    */
   public function instanceInfo() {
-    if ($this->fetchHostDetails()) {
-      return field_info_instance($this->hostEntityType(), $this->field_name, $this->hostEntityBundle());
-    }
+    return field_info_instance($this->hostEntityType(), $this->field_name, $this->hostEntityBundle());
   }
 
   /**
@@ -177,49 +198,55 @@ class ParagraphsItemEntity extends Entity {
    *   When you try to set the host when the item has already been created.
    */
   public function setHostEntity($entity_type, $entity, $langcode = LANGUAGE_NONE, $create_link = TRUE) {
-    if (!empty($this->is_new)) {
-      $this->hostEntityType = $entity_type;
-      $this->hostEntity = $entity;
-      $this->langcode = $langcode;
+    $this->hostEntityType = $entity_type;
+    $this->hostEntity = $entity;
+    $this->langcode = $langcode;
 
-      list($this->hostEntityId, $this->hostEntityRevisionId) = entity_extract_ids($this->hostEntityType, $this->hostEntity);
-      // If the host entity is not saved yet, set the id to FALSE. So
-      // fetchHostDetails() does not try to load the host entity details.
-      if (!isset($this->hostEntityId)) {
-        $this->hostEntityId = FALSE;
-      }
-      // We are create a new paragraphs for a non-default entity, thus
-      // set archived to TRUE.
-      if (!entity_revision_is_default($entity_type, $entity)) {
-        $this->hostEntityId = FALSE;
-        $this->archived = TRUE;
-      }
-      if ($create_link) {
-        $entity->{$this->field_name}[$this->langcode][] = array('entity' => $this);
-      }
+    list($this->hostEntityId, $this->hostEntityRevisionId, $this->hostEntityBundle) = entity_extract_ids($this->hostEntityType, $this->hostEntity);
+    // If the host entity is not saved yet, set the id to FALSE. So
+    // fetchHostDetails() does not try to load the host entity details.
+    if (!isset($this->hostEntityId)) {
+      $this->hostEntityId = FALSE;
     }
-    else {
-      throw new Exception('The host entity may be set only during creation of a paragraphs item.');
+    // We are create a new paragraphs for a non-default entity, thus
+    // set archived to TRUE.
+    if (!entity_revision_is_default($entity_type, $entity)) {
+      $this->hostEntityId = FALSE;
+      $this->archived = TRUE;
     }
+    if ($create_link) {
+      $entity->{$this->field_name}[$this->langcode][] = array('entity' => $this);
+    }
+
+    $this->fetchedHostEntityDetails = TRUE;
   }
 
+  /**
+   * Function to force change the host entity of this paragraph item.
+   *
+   * @param $entity
+   *   The entity to force the host to.
+   */
   public function forceHostEntity($entity) {
     $this->hostEntity = $entity;
+  }
+
+  /**
+   * Function to force change the host entity type of this paragraph item.
+   *
+   * @param $entity_type
+   *   The entity type to force the host to.
+   */
+  public function forceHostEntityType($entity_type) {
+    $this->hostEntityType = $entity_type;
   }
 
   /**
    * Returns the host entity, which embeds this paragraph item.
    */
   public function hostEntity() {
-    if ($this->fetchHostDetails()) {
-      if (!isset($this->hostEntity) && $this->isInUse()) {
-        $this->hostEntity = entity_load_single($this->hostEntityType, $this->hostEntityId);
-      }
-      elseif (!isset($this->hostEntity) && $this->hostEntityRevisionId) {
-        $this->hostEntity = entity_revision_load($this->hostEntityType, $this->hostEntityRevisionId);
-      }
-      return $this->hostEntity;
-    }
+    $this->fetchHostDetails();
+    return $this->hostEntity;
   }
 
   /**
@@ -227,21 +254,21 @@ class ParagraphsItemEntity extends Entity {
    * paragraph item.
    */
   public function hostEntityType() {
-    if ($this->fetchHostDetails()) {
-      return $this->hostEntityType;
-    }
+    return $this->hostEntityType;
   }
 
   /**
    * Returns the id of the host entity, which embeds this paragraph item.
    */
   public function hostEntityId() {
-    if ($this->fetchHostDetails()) {
-      if (!$this->hostEntityId && $this->hostEntityRevisionId) {
-        $this->hostEntityId = entity_id($this->hostEntityType, $this->hostEntity());
-      }
-      return $this->hostEntityId;
-    }
+    return $this->hostEntityId;
+  }
+
+  /**
+   * Returns the revisions id of the host entity, which embeds this paragraph item.
+   */
+  public function hostEntityRevisionId() {
+    return $this->hostEntityRevisionId;
   }
 
   /**
@@ -249,14 +276,17 @@ class ParagraphsItemEntity extends Entity {
    * item.
    */
   public function hostEntityBundle() {
-    if ($entity = $this->hostEntity()) {
-      list($id, $rev_id, $bundle) = entity_extract_ids($this->hostEntityType, $entity);
-      return $bundle;
-    }
+    return $this->hostEntityBundle;
   }
 
+  /**
+   * Fetches details of the host and saves it in the entity.
+   *
+   * @return bool
+   *   Whether the fetching was successful.
+   */
   protected function fetchHostDetails() {
-    if (!isset($this->hostEntityId)) {
+    if ($this->fetchedHostEntityDetails === NULL) {
       if ($this->item_id) {
         // For saved paragraphs, query the field data to determine the
         // right host entity.
@@ -268,22 +298,40 @@ class ParagraphsItemEntity extends Entity {
         $result = $query->execute();
         list($this->hostEntityType, $data) = each($result);
 
-        if ($this->isInUse()) {
-          $this->hostEntityId = $data ? key($data) : FALSE;
-          $this->hostEntityRevisionId = FALSE;
+        if ($data) {
+          $data_values = array_shift($data);
+          $host_entity_info = entity_get_info($this->hostEntityType);
+          $host_entity_keys = $host_entity_info['entity keys'];
+
+          $this->hostEntityId = (isset($data_values->{$host_entity_keys['id']}) ? $data_values->{$host_entity_keys['id']} : NULL);
+          $this->hostEntityRevisionId = (isset($data_values->{$host_entity_keys['revision']}) ? $data_values->{$host_entity_keys['revision']} : NULL);
+          $this->hostEntityBundle = (isset($data_values->{$host_entity_keys['bundle']}) ? $data_values->{$host_entity_keys['bundle']} : NULL);
+
+          if ($this->isInUse()) {
+            $this->hostEntity = entity_load_single($this->hostEntityType, $this->hostEntityId);
+          }
+          elseif ($this->hostEntityRevisionId) {
+            $this->hostEntity = entity_revision_load($this->hostEntityType, $this->hostEntityRevisionId);
+          }
+
+          $this->fetchedHostEntityDetails = TRUE;
         }
-        // If we are querying for revisions, we get the revision ID.
         else {
           $this->hostEntityId = FALSE;
-          $this->hostEntityRevisionId = $data ? key($data) : FALSE;
+          $this->hostEntityRevisionId = FALSE;
+          $this->hostEntityBundle = FALSE;
+          $this->fetchedHostEntityDetails = FALSE;
         }
       }
       else {
         // No host entity available yet.
         $this->hostEntityId = FALSE;
+        $this->hostEntityRevisionId = FALSE;
+        $this->hostEntityBundle = FALSE;
+        $this->fetchedHostEntityDetails = FALSE;
       }
     }
-    return !empty($this->hostEntityId) || !empty($this->hostEntity) || !empty($this->hostEntityRevisionId);
+    return $this->fetchedHostEntityDetails;
   }
 
   /**
@@ -311,7 +359,7 @@ class ParagraphsItemEntity extends Entity {
    * Determines the language code under which the item is stored.
    */
   public function langcode() {
-    if ($this->delta() != NULL) {
+    if ($this->delta() !== NULL) {
       return $this->langcode;
     }
   }
@@ -350,14 +398,10 @@ class ParagraphsItemEntity extends Entity {
    *   revision updates might be skipped. Use with care.
    */
   public function save($skip_host_save = FALSE) {
-    // Make sure we have a host entity during creation.
-    if (!empty($this->is_new) && !(isset($this->hostEntityId) || isset($this->hostEntity) || isset($this->hostEntityRevisionId))) {
-      throw new Exception("Unable to create a paragraphs item without a given host entity.");
-    }
 
     // Only save directly if we are told to skip saving the host entity. Else,
     // we always save via the host as saving the host might trigger saving
-    // paragraphs items anyway (e.g. if a new revision is created).
+    // paragraphs items anyway (for example, if a new revision is created).
     if ($skip_host_save) {
       return entity_get_controller($this->entityType)->save($this);
     }
@@ -387,14 +431,6 @@ class ParagraphsItemEntity extends Entity {
   }
 
   /**
-   * Deletes the paragraphs item and the reference in the host entity.
-   */
-  public function delete() {
-    parent::delete();
-    $this->deleteHostEntityReference();
-  }
-
-  /**
    * Deletes the host entity's reference of the paragraphs item.
    */
   protected function deleteHostEntityReference() {
@@ -413,23 +449,19 @@ class ParagraphsItemEntity extends Entity {
    * delete the collection item from archived revisions too. Instead, we delete
    * the current default revision and archive the paragraph.
    *
-   * If no revisions are left or the host is not revisionable, the whole item
-   * is deleted.
    */
   public function deleteRevision($skip_host_update = FALSE) {
     if (!$this->revision_id) {
       return;
     }
-    $info = entity_get_info($this->hostEntityType());
-    if (empty($info['entity keys']['revision']) || !$this->hostEntity()) {
-      return $this->delete();
-    }
+
     if (!$skip_host_update) {
       // Just remove the item from the host, which cares about deleting the
       // item (depending on whether the update creates a new revision).
       $this->deleteHostEntityReference();
     }
-    elseif (!$this->isDefaultRevision()) {
+
+    if (!$this->isDefaultRevision()) {
       entity_revision_delete('paragraphs_item', $this->revision_id);
     }
     // If deleting the default revision, take care!
@@ -459,7 +491,7 @@ class ParagraphsItemEntity extends Entity {
   /**
    * Export the paragraphs item.
    *
-   * Since paragraphs entities are not directly exportable (i.e., do not
+   * Since paragraphs entities are not directly exportable (that is, do not
    * have 'exportable' set to TRUE in hook_entity_info()) and since Features
    * calls this method when exporting the paragraphs as a field attached
    * to another entity, we return the export in the format expected by
@@ -486,13 +518,13 @@ class ParagraphsItemEntity extends Entity {
     $field_instances = field_info_instances($this->entityType, $this->bundle);
     foreach ($field_instances as $field_name => $field) {
       $info = field_info_field($field_name);
-      if ($info['type'] == 'image' && $image_field = &$this->{$field_name}) {
+      if (is_array($info) && $info['type'] == 'image' && $image_field = &$this->{$field_name}) {
         // Add the URI to the field on the entity for display.
         if (isset($image_field[$langcode])) {
           foreach ($image_field[$langcode] as &$field_to_be_updated) {
-            if (!isset($field_to_be_updated['uri'])) {
+            if (!isset($field_to_be_updated['uri']) && isset($field_to_be_updated['fid'])) {
               $image = file_load($field_to_be_updated['fid']);
-              if($image) {
+              if ($image) {
                 $field_to_be_updated['uri'] = $image->uri;
               }
             }
@@ -508,12 +540,16 @@ class ParagraphsItemEntity extends Entity {
    */
   public function __sleep() {
     $vars = get_object_vars($this);
+
     unset($vars['entityInfo'], $vars['idKey'], $vars['nameKey'], $vars['statusKey']);
     unset($vars['fieldInfo']);
-    // Also do not serialize the host entity, but only if it has already an id.
-    if ($this->hostEntity && ($this->hostEntityId || $this->hostEntityRevisionId)) {
-      unset($vars['hostEntity']);
-    }
+
+    // Also do not serialize the host entity.
+    // We add our hostEntity in code.
+    unset($vars['hostEntity']);
+
+    // We unset our host entity, we have to let our object know.
+    unset($vars['fetchedHostEntityDetails']);
 
     // Also key the returned array with the variable names so the method may
     // be easily overridden and customized.
