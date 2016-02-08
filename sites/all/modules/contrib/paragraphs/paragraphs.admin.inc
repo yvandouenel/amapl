@@ -4,39 +4,71 @@
  * Admin functions for the paragraphs module.
  */
 
+/**
+ * Page callback to show the bundle overview page.
+ *
+ * @return null|string
+ *   Rendered table of bundles.
+ *
+ * @throws Exception
+ */
 function paragraphs_admin_bundle_overview() {
+  $page = array();
   $bundles = paragraphs_bundle_load();
+  $field_ui = module_exists('field_ui');
 
-  $header = array(t('Bundle name'), array('data' => t('Operations'), 'colspan' => '4'));
+  $header = array(
+    t('Bundle name'),
+    array('data' => t('Operations'), 'colspan' => $field_ui ? '4' : '2')
+  );
   $rows = array();
   foreach ($bundles as $bundle) {
-    $rows[] = array(
+
+    $type_url_str = strtr($bundle->bundle, array('_' => '-'));
+
+    $row = array(
       array(
         'data' => $bundle->name . ' (' . $bundle->bundle . ')',
-      ),
-      array(
-        'data' => l(t('manage fields'), 'admin/structure/paragraphs/' . strtr($bundle->bundle, array('_' => '-')) . '/fields')
-      ),
-      array(
-        'data' => l(t('manage display'), 'admin/structure/paragraphs/' . strtr($bundle->bundle, array('_' => '-')) . '/display')
-      ),
-      array(
-        'data' => l(t('edit bundle'), 'admin/structure/paragraphs/' . strtr($bundle->bundle, array('_' => '-')) . '/edit')
-      ),
-      array(
-        'data' => l(t('delete bundle'), 'admin/structure/paragraphs/' . strtr($bundle->bundle, array('_' => '-')) . '/delete')
-      ),
+      )
     );
+
+    if ($field_ui) {
+
+      // Manage fields.
+      $row[] = array(
+        'data' => l(t('manage fields'), 'admin/structure/paragraphs/' . $type_url_str . '/fields')
+      );
+
+      // Display fields.
+      $row[] = array(
+        'data' => l(t('manage display'), 'admin/structure/paragraphs/' . $type_url_str . '/display')
+      );
+    }
+
+    // Manage bundle.
+    $row[] = array(
+      'data' => l(t('edit bundle'), 'admin/structure/paragraphs/' . $type_url_str . '/edit')
+    );
+    // Delete bundle.
+    $row[] = array(
+      'data' => l(t('delete bundle'), 'admin/structure/paragraphs/' . $type_url_str . '/delete')
+    );
+
+    $rows[$bundle->bundle] = $row;
   }
-  if (empty($rows)) {
-    $output = t('No paragraph bundles have been defined yet.');
-  }
-  else {
-    // Sort rows by field name.
-    ksort($rows);
-    $output = theme('table', array('header' => $header, 'rows' => $rows));
-  }
-  return $output;
+
+  // Sort rows by bundle.
+  ksort($rows);
+
+  // Render paragraphs bundle table.
+  $page['paragraphs_bundle_table'] = array(
+    '#theme' => 'table',
+    '#header' => $header,
+    '#rows' => $rows,
+    '#empty' => t('No paragraph bundles have been defined yet.'),
+  );
+
+  return $page;
 }
 
 /**
@@ -50,8 +82,9 @@ function paragraphs_admin_bundle_form($form, &$form_state, $bundle = NULL) {
     $bundle->name = '';
     $bundle->bundle = '';
     $bundle->locked = 0;
-  } else {
-    if(!$bundle) {
+  }
+  else {
+    if (!$bundle) {
       drupal_set_message(t('Could not load bundle'), 'error');
       drupal_goto('admin/structure/paragraphs');
     }
@@ -68,7 +101,7 @@ function paragraphs_admin_bundle_form($form, &$form_state, $bundle = NULL) {
     '#size' => 30,
   );
 
-  if(!$bundle->locked) {
+  if (!$bundle->locked) {
 
     $form['bundle'] = array(
       '#type' => 'machine_name',
@@ -126,9 +159,10 @@ function paragraphs_admin_bundle_form_submit($form, &$form_state) {
 
   $bundle = new stdClass();
 
-  if(!$form_state['values']['locked']) {
+  if (!$form_state['values']['locked']) {
     $bundle->bundle = trim($form_state['values']['bundle']);
-  } else {
+  }
+  else {
     $bundle->bundle = $form['#paragraphs_bundle']->bundle;
   }
 
@@ -171,7 +205,7 @@ function paragraphs_admin_bundle_form_submit($form, &$form_state) {
  * @ingroup forms
  */
 function paragraphs_admin_bundle_delete_form($form, &$form_state, $bundle) {
-  if(!$bundle) {
+  if (!$bundle) {
     drupal_set_message(t('Could not load bundle'), 'error');
     drupal_goto('admin/structure/paragraphs');
   }
@@ -180,10 +214,9 @@ function paragraphs_admin_bundle_delete_form($form, &$form_state, $bundle) {
   $form['name'] = array('#type' => 'value', '#value' => $bundle->name);
 
   $message = t('Are you sure you want to delete the paragraph bundle %bundle?', array('%bundle' => $bundle->name));
-  $caption = '';
-  $caption .= '<p>' . t('This action cannot be undone. Content using the bundle will be broken.') . '</p>';
+  $caption = '<p>' . t('This action cannot be undone. Content using the bundle will be broken.') . '</p>';
 
-  return confirm_form($form, $message, 'admin/structure/paragraphs', $caption, t('Delete'));
+  return confirm_form($form, filter_xss_admin($message), 'admin/structure/paragraphs', filter_xss_admin($caption), t('Delete'));
 }
 
 /**
@@ -198,7 +231,16 @@ function paragraphs_admin_bundle_delete_form_submit($form, &$form_state) {
   drupal_set_message(t('The paragraph bundle %name has been deleted.', $t_args));
   watchdog('node', 'Deleted paragraph bundle %name.', $t_args, WATCHDOG_NOTICE);
 
-
   $form_state['redirect'] = 'admin/structure/paragraphs';
   return;
+}
+
+/**
+ * Helper to get the title of a bundle.
+ *
+ * @param $bundle
+ *   The bundle.
+ */
+function paragraphs_bundle_title_callback($bundle) {
+  return t('Edit Paragraph Bundle !name', array('!name' => $bundle->name));
 }

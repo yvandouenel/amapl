@@ -62,6 +62,9 @@ function paragraphs_field_formatter_settings_summary($field, $instance, $view_mo
     if (!empty($entity_type['view modes'][$settings['view_mode']]['label'])) {
       $output[] =  t('View mode: @mode', array('@mode' => $entity_type['view modes'][$settings['view_mode']]['label']));
     }
+    else {
+      $output[] = ' ';
+    }
   }
 
   return implode('<br>', $output);
@@ -77,15 +80,26 @@ function paragraphs_field_formatter_view($entity_type, $entity, $field, $instanc
   switch ($display['type']) {
     case 'paragraphs_view':
 
-      $view_mode = !empty($display['settings']['view_mode']) ? $display['settings']['view_mode'] : 'full';
+      // Prevent displaying useless markup if we don't have any values.
+      if (empty($items)) {
+        return $element;
+      }
+      // Get view mode from entity.
+      $display_view_mode = empty($display['settings']['view_mode']) ? 'full' : $display['settings']['view_mode'];
+      // Get view mode from field instance (if configured).
+      $view_mode = empty($instance['display'][$display_view_mode]['settings']['view_mode']) ? $display_view_mode : $instance['display'][$display_view_mode]['settings']['view_mode'];
       $element['#theme_wrappers'] = array('paragraphs_items');
       $element['#attributes']['class'][] = drupal_clean_css_identifier('paragraphs-items');
       $element['#attributes']['class'][] = drupal_clean_css_identifier('paragraphs-items-view-mode-' . $view_mode);
       $element['#attributes']['class'][] = drupal_clean_css_identifier('paragraphs-items-field-' . $instance['field_name']);
+      $element['#view_mode'] = $view_mode;
 
       foreach ($items as $delta => $item) {
         if ($paragraph = paragraphs_field_get_entity($item)) {
-          $element[$delta]['entity'] = $paragraph->view($view_mode);
+          $paragraph->setHostEntity($entity_type, $entity, $langcode);
+          if (entity_access('view', 'paragraphs_item', $paragraph)) {
+            $element[$delta]['entity'] = $paragraph->view($view_mode);
+          }
         }
       }
       break;

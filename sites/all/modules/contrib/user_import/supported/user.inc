@@ -57,10 +57,9 @@ function user_user_import_data($settings, $update_setting, $column_settings, $mo
 
   if ($field_id == 'email') {
     $value = trim($data[$column_id]);
-    dpm("avant : ".$value);
+
     if (!empty($settings['options']['email_domain'])) {
       $value .= $settings['options']['email_domain'];
-      dpm("apres : ".$value);
     }
 
     _user_import_validate_email($value, $update_setting);
@@ -84,7 +83,7 @@ function user_user_import_data($settings, $update_setting, $column_settings, $mo
         $parsed['year']
       );
 
-      if (!empty($timestamp) && is_numerric($timestamp)) {
+      if (!empty($timestamp) && is_numeric($timestamp)) {
         $value = $timestamp;
       }
     }

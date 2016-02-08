@@ -37,6 +37,37 @@ class ScaldAtomController extends DrupalDefaultEntityController {
   }
 
   /**
+   * Returns the default description for a file or image field for an atom type.
+   */
+  public static function getFieldDescription($type, $field_name = 'scald_thumbnail') {
+    $description = '';
+    $field = field_info_field($field_name);
+    $instance = field_info_instance('scald_atom', $field_name, $type);
+    if ($field && $instance) {
+      $description = $instance['description'];
+    }
+    return $description;
+  }
+
+  /**
+   * Returns the default upload validators for a file or image field for an atom type.
+   */
+  public static function getFieldUploadValidators($type, $field_name = 'scald_thumbnail') {
+    $upload_validators = array();
+    $field = field_info_field($field_name);
+    $instance = field_info_instance('scald_atom', $field_name, $type);
+    if ($field && $instance) {
+      // Add upload file validation.
+      $upload_validators = file_field_widget_upload_validators($field, $instance);
+      if ($type === 'image' && (!empty($instance['settings']['max_resolution']) || !empty($instance['settings']['min_resolution']))) {
+        // Add upload image validation.
+        $upload_validators['file_validate_image_resolution'] = array($instance['settings']['max_resolution'], $instance['settings']['min_resolution']);
+      }
+    }
+    return $upload_validators;
+  }
+
+  /**
    * Add a Scald unified type.
    *
    * This function create a new type if it does not already exist. It can be
@@ -116,6 +147,7 @@ class ScaldAtomController extends DrupalDefaultEntityController {
 
     // Flush our caches.
     scald_contexts(TRUE);
+    scald_types(TRUE);
 
     return TRUE;
   }
@@ -138,6 +170,7 @@ class ScaldAtomController extends DrupalDefaultEntityController {
       db_delete('scald_types')
         ->condition('type', $type)
         ->execute();
+      scald_types(TRUE);
       return TRUE;
     }
 
@@ -179,12 +212,23 @@ class ScaldAtomController extends DrupalDefaultEntityController {
     if (!isset($atom->data)) {
       $atom->data = array();
     }
+    if (!isset($atom->created)) {
+      $atom->created = REQUEST_TIME;
+    }
+    if (!isset($atom->changed)) {
+      $atom->changed = REQUEST_TIME;
+    }
 
     $op = empty($atom->sid) ? 'insert' : 'update';
 
     if ($op == 'update') {
       $hook = 'scald_update_atom';
       $atom->original = entity_load_unchanged('scald_atom', $atom->sid);
+
+      // Nobody updated the changed date, so we do it.
+      if($atom->original->changed === $atom->changed) {
+        $atom->changed = REQUEST_TIME;
+      }
     }
     else {
       $hook = 'scald_register_atom';

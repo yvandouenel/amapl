@@ -24,10 +24,11 @@ function scald_atom_add() {
       continue;
     }
     $content[] = array(
-      'title' => $type->title,
+      'title' => scald_type_property_translate($type),
       'href'  => 'atom/add/' . $name,
       'localized_options' => array(),
       'description' => '',
+      'page_arguments' => serialize(array($name)),
     );
   }
   return theme('node_add_list', array('content' => $content));
@@ -57,15 +58,21 @@ function scald_atom_add_page($js, $type, $step = NULL, $atom_id = NULL) {
 
   // Start by getting the list of all the modules that said they can provide
   // this atom type.
-  $providers = scald_atom_providers();
+  $providers = scald_atom_providers_opt();
   $sources = $providers[$type->type];
   $source = key($sources);
+  $provider = current($sources);
 
   // If there's more than one, provide a choice between them. Otherwise, skip
   // a step and select the only provider upfront.
   if (empty($step)) {
     if (count($sources) < 2) {
-      $step = 'add';
+      if (!empty($provider['starting_step'])) {
+        $step = $provider['starting_step'];
+      }
+      else {
+        $step = 'add';
+      }
     }
     else {
       $step = 'source';
@@ -88,6 +95,7 @@ function scald_atom_add_page($js, $type, $step = NULL, $atom_id = NULL) {
     $form_state['scald'] = array(
       'type' => $type,
       'source' => isset($source) ? $source : NULL,
+      'provider' => $provider,
     );
   }
 
@@ -185,7 +193,14 @@ function scald_atom_add_form_source($form, &$form_state) {
  * Handles the source step form submission.
  */
 function scald_atom_add_form_source_submit(&$form, &$form_state) {
-  $form_state['scald']['source'] = $form_state['values']['source'];
+  $source = $form_state['scald']['source'] = $form_state['values']['source'];
+  $type = $form_state['scald']['type']->type;
+  $providers = scald_atom_providers_opt();
+  $provider = $providers[$type][$source];
+  $form_state['scald']['provider'] = $provider;
+  if (isset($form_state['scald']['provider']['starting_step']) && $form_state['scald']['provider']['starting_step'] == 'options') {
+    $form_state['clicked_button']['#next'] = 'options';
+  }
 }
 
 /**
@@ -216,7 +231,7 @@ function scald_atom_add_form_add_submit(&$form, &$form_state) {
   $count = 1;
   $atom_count_implemented = FALSE;
   // Allow the source provider to define how many atoms to create
-  // and handle differences between upload modules
+  // and handle differences between upload modules.
   $function = $scald['source'] . '_scald_add_atom_count';
   if (function_exists($function)) {
     $count = $function($form, $form_state);
@@ -237,7 +252,7 @@ function scald_atom_add_form_add_submit(&$form, &$form_state) {
       $function($atoms[0], $form, $form_state);
     }
   }
-  // And put it in the form_state
+  // And put it in the form_state.
   $form_state['scald']['atoms'] = $atoms;
 }
 
@@ -245,6 +260,9 @@ function scald_atom_add_form_add_submit(&$form, &$form_state) {
  * Options form.
  */
 function scald_atom_add_form_options($form, &$form_state) {
+  if (empty($form_state['scald']['atoms'])) {
+    scald_atom_add_form_add_submit($form, $form_state);
+  }
   $atoms = $form_state['scald']['atoms'];
 
   $actions = scald_actions();
@@ -272,13 +290,14 @@ function scald_atom_add_form_options($form, &$form_state) {
       '#required' => TRUE,
       '#default_value' => $atom->title,
       '#parents' => array('atom' . $delta, 'title'),
+      '#maxlength' => 255,
       '#weight' => -10,
     );
     $form['language'] = array(
       '#type' => 'value',
       '#value' => $atom->language,
     );
-    field_attach_form('scald_atom', $atom, $form['atom' . $delta], $form_state);
+    field_attach_form('scald_atom', $atom, $form['atom' . $delta], $form_state, entity_language('scald_atom', $atom));
     $instances = field_info_instances('scald_atom', $atom->type);
     foreach ($instances as $instance) {
       $field_name = $instance['field_name'];
@@ -330,24 +349,34 @@ function scald_atom_add_form_options_submit(&$form, &$form_state) {
 
     // Let entity add its properties to the atom.
     entity_form_submit_build_entity('scald_atom', $atom, $form['atom' . $delta], $form_state);
-    $atom->title = $form_state['values']['atom' . $delta]['title'];
     $atom->actions = $form_state['values']['atom' . $delta]['actions'];
+
+    // Our form structure is different from standard Entity form because we
+    // support multiple entities in a single form, so we have to process special
+    // stuffs here.
+    // Except when comes the Title module, which is a field and it takes care of
+    // the sync in title_field_attach_submit() so we don't have to do anything.
+    if (!(module_exists('title') && title_field_replacement_enabled('scald_atom', $atom->type, 'title'))) {
+      $atom->title = $form_state['values']['atom' . $delta]['title'];
+    }
+
     // Then save it...
     scald_atom_save($atom);
   }
 
   // Add a message confirming the creation.
+  $type = scald_type_property_translate(scald_type_load($atoms[0]->type));
   if (count($atoms) == 1) {
     drupal_set_message(t('Atom %title, of type %type has been @op.', array(
       '%title' => $atoms[0]->title,
-      '%type' => $atoms[0]->type,
+      '%type' => $type,
       '@op' => $op,
     )));
   }
   else {
     drupal_set_message(t('%count atoms of type %type have been @op.', array(
       '%count' => count($atoms),
-      '%type' => $atoms[0]->type,
+      '%type' => $type,
       '@op' => $op,
     )));
   }
@@ -399,7 +428,7 @@ function scald_atom_edit_page($js, $atom) {
 }
 
 /**
- * Handles the delete of an existing atom.
+ * Handles the deletion of an existing atom.
  */
 function scald_atom_delete_confirm($form, &$form_state, $atom) {
   // Always provide entity id in the same form key as in the entity edit form.
@@ -414,6 +443,25 @@ function scald_atom_delete_confirm($form, &$form_state, $atom) {
 }
 
 /**
+ * Handles the deletion of an existing atom in ctools modal.
+ */
+function scald_atom_delete_confirm_ajax($js, $atom) {
+  $form = drupal_get_form('scald_atom_delete_confirm', $atom);
+  if ($js) {
+    ctools_include('modal');
+    ctools_include('ajax');
+    $form_state = array();
+    $form['actions']['cancel']['#attributes']['class'][] = 'ctools-close-modal';
+    $commands = ctools_modal_form_render($form_state, $form);
+    print ajax_render($commands);
+    exit;
+  }
+  else {
+    return $form;
+  }
+}
+
+/**
  * Execute atom deletion.
  */
 function scald_atom_delete_confirm_submit($form, &$form_state) {
@@ -421,11 +469,22 @@ function scald_atom_delete_confirm_submit($form, &$form_state) {
     $atom = scald_atom_load($form_state['values']['sid']);
     scald_atom_delete($atom->sid);
     watchdog('scald_atom', '@type: deleted %title.', array('@type' => $atom->type, '%title' => $atom->title));
-    $types = scald_type_get_names();
-    drupal_set_message(t('@type %title has been deleted.', array('@type' => $types[$atom->type], '%title' => $atom->title)));
+    $types = scald_types();
+    $type = scald_type_property_translate($types[$atom->type]);
+    drupal_set_message(t('@type %title has been deleted.', array('@type' => $type, '%title' => $atom->title)));
   }
-
-  $form_state['redirect'] = 'admin/content/atoms';
+  if (!empty($form_state['input']['js'])) {
+    ctools_include('modal');
+    ctools_include('ajax');
+    $commands = array();
+    $commands[] = array('command' => 'dnd_refresh');
+    $commands[] = ctools_modal_command_dismiss();
+    print ajax_render($commands);
+    exit();
+  }
+  else {
+    $form_state['redirect'] = 'admin/content/atoms';
+  }
 }
 /**
  * Fetch atoms and return in JSON format.
@@ -440,7 +499,7 @@ function scald_atom_fetch_atoms($sids) {
   $atoms = scald_atom_load_multiple(explode(',', $sids));
 
   // Context can be passed via the querystring.
-  $context = isset($_GET['context']) && array_key_exists($_GET['context'], scald_contexts()) ? $_GET['context'] : '';
+  $context = isset($_GET['context']) && array_key_exists($_GET['context'], scald_contexts_public()) ? $_GET['context'] : '';
 
   foreach ($atoms as $sid => $atom) {
     $output[$sid] = array(
@@ -449,10 +508,10 @@ function scald_atom_fetch_atoms($sids) {
       'meta' => array(
         'title' => $atom->title,
         'type' => $atom->type,
+        'data' => !empty($atom->data) ? $atom->data : array(),
       ),
       'actions' => array_keys(scald_atom_actions_available($atom)),
     );
   }
   drupal_json_output($output);
 }
-
