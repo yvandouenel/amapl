@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the featurecoocontext feature.
  */
+
+include_once 'featurecoocontext.features.inc';
