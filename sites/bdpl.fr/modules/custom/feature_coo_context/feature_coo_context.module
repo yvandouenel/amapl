@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Feature_coo_context feature.
- */
-
-include_once 'feature_coo_context.features.inc';
