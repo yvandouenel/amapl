@@ -1,0 +1,7 @@
+name = featurecoocontext
+core = 7.x
+package = BDPL
+version = 7.x-1.0
+project = featurecoocontext
+features[features_api][] = api:2
+project path = sites/bdpl.fr/modules/custom/
