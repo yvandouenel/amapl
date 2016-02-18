@@ -13,7 +13,7 @@ function atterrissage_aga_user_default_roles() {
   // Exported role: AGCS.
   $roles['AGCS'] = array(
     'name' => 'AGCS',
-    'weight' => 9,
+    'weight' => 7,
   );
 
   return $roles;
