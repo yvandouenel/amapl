@@ -1,3 +1,58 @@
 .form-search{
   clear: both;
 }
+.search-info{
+  display: none;
+}
+#block-system-user-menu{
+  ul.menu{
+    display: table;
+    float: right;
+    li.first{
+      display: none;
+    }
+  }
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+h2{
+  color: @brand-grey;
+}
+/* Head ***************************************************************************************************************/
+body.toolbar-drawer {
+  padding-top: 10px!important;
+}
+.navbar.container, .navbar.container-fluid {
+  margin-top: 0;
+}
+/* Logos AGA **********************************************************************************************************/
+#page-header .block-bean{
+  display: table;
+  @media (max-width: @screen-md) {
+    float: left;
+    margin-top: -90px;
+    margin-left: -50px;
+  }
+}
+/* connexion and search ***********************************************************************************************/
+#block-system-user-menu, #block-search-form{
+  float: right;
+  max-width: 200px;
+  &:after{
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+/* Impression *********************************************************************************************************/
+.field-name-lien-impression a {
+  display: block;
+  margin-top: 0.5em;
+  font-size: 1.5em;
+  &:before{
+    content: "\e81e";
+    .glyphicon();
+    font-size: 1.5em;
+  }
+}
