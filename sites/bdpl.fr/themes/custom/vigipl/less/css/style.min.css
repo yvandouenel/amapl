@@ -1614,7 +1614,7 @@ fieldset.features-export-component .panel-heading a.panel-title{font-size:12px;f
 fieldset.features-export-component .panel-body{padding:0 10px}
 div.features-export-list{margin:-11px 0 10px;padding:0 10px}
 div.features-export-list .form-type-checkbox,fieldset.features-export-component .component-select .form-type-checkbox{line-height:1em;margin:5px 5px 5px 0!important;min-height:0;padding:3px 3px 3px 25px!important}
-.navbar.container,.navbar.container-fluid,div.features-export-list .form-type-checkbox input[type=checkbox],fieldset.features-export-component .component-select .form-type-checkbox input[type=checkbox]{margin-top:0}
+div.features-export-list .form-type-checkbox input[type=checkbox],fieldset.features-export-component .component-select .form-type-checkbox input[type=checkbox]{margin-top:0}
 body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open .navbar-fixed-top{top:79px}
 body.navbar-is-fixed-top.navbar-administration .navbar-fixed-top{top:39px}
 .navbar-administration #navbar-administration.navbar-oriented .navbar-bar{z-index:1032}
@@ -1635,10 +1635,12 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed{margin-left:24rem}
 #block-views-news-block-1>.block-inner>h2:before{content:"\e82c"}
 .search-info{display:none}
 #block-system-user-menu ul.menu{display:table;float:right}
-#block-system-user-menu ul.menu li.first{display:none}
+#block-system-user-menu ul.menu li.first,body.role-administrator #toolbar,body.role-webmaster #toolbar{display:none}
 h1,h2,h3,h4,h5,h6{font-family:'Source Sans Pro',Arial,sans-serif}
 h2{color:#2e2e2e}
 body.toolbar-drawer{padding-top:10px!important}
+body.role-administrator .navbar.container,body.role-webmaster .navbar.container{margin-top:-10px}
+.navbar.container,.navbar.container-fluid{margin-top:0}
 #page-header .block-bean{display:table}
 @media (max-width:992px){#page-header .block-bean{float:left;margin-top:-90px;margin-left:-50px}
 }

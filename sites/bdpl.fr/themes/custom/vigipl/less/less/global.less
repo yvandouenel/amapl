@@ -26,8 +26,21 @@ h2{
 body.toolbar-drawer {
   padding-top: 10px!important;
 }
+body.role-webmaster{
+  .navbar.container{
+    margin-top: 15px;
+  }
+}
+body.role-administrator, body.role-webmaster{
+  #toolbar{
+    display: none;
+  }
+  .navbar.container{
+    margin-top: -10px;
+  }
+}
 .navbar.container, .navbar.container-fluid {
-  margin-top: 0;
+  margin-top: 0px;
 }
 /* Logos AGA **********************************************************************************************************/
 #page-header .block-bean{
