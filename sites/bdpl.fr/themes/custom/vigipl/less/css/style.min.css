@@ -1689,3 +1689,6 @@ body.role-administrator .navbar.container,body.role-webmaster .navbar.container{
 @media (min-width:992px){#block-views-liste-articles-block-3{width:34%;margin:20px 0 0}
 }
 #block-views-liste-articles-block-3>h2:before{content:"\e804";width:1em;margin-right:10px}
+.view-references>.attachment-after .view-references.view-display-id-attachment_2,.view-references>.attachment-after>.view-display-id-attachment_4{margin-right:4%}
+@media (min-width:992px){.view-references>.attachment-after .view-references{float:left;width:45%}
+}
