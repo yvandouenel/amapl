@@ -16,13 +16,8 @@ function atterrissage_aga_node_view($node, $view_mode, $langcode) {
     if(isset($node->field_content_after_login)){
       /*dpm($node->field_content_after_login);*/
       if(user_is_logged_in()){
-        dpm('connecté');
         drupal_goto('<front>');
-      }else{
-        dpm('non connecté');
       }
-
-      //drupal_goto('<front>');
     }
 
   }
