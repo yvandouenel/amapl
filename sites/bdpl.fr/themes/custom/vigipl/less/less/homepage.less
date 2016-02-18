@@ -1,6 +1,8 @@
 #block-views-news-block-1, #block-bean-guide-comptable, #block-views-liste-articles-block-3{
-  float: left;
-  width: 31%;
+  @media (min-width: @screen-md) {
+    float: left;
+    width: 31%;
+  }
   /* background: white url(../images/illustrations/actu.png) no-repeat 0 0; */
   background-color: white;
   padding: 0 0 0 0;
@@ -41,8 +43,10 @@
   }
 }
 #block-views-liste-articles-block-3 {
-  width: 34%;
-  margin: 20px 0 0 0;
+  @media (min-width: @screen-md) {
+    width: 34%;
+    margin: 20px 0 0 0;
+  }
   > h2:before {
     content: "\e804";
     .glyphicon();
