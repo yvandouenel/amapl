@@ -46,6 +46,32 @@ function feature_bdpl_articles_ds_field_settings_info() {
   );
   $export['node|article|default'] = $ds_fieldsetting;
 
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|article|full';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'article';
+  $ds_fieldsetting->view_mode = 'full';
+  $ds_fieldsetting->settings = array(
+    'anchor_node' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'title' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h3',
+        'class' => 'h3-article-vigipl',
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['node|article|full'] = $ds_fieldsetting;
+
   return $export;
 }
 
