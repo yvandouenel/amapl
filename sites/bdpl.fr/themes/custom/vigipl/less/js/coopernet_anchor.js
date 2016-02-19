@@ -19,16 +19,21 @@ jQuery(function($){
   // Gestion du positionnement de la flèche "retour haut de page"
 
   if ($( ".link-anchor-top-vigipl" ).length) {
-    console.log('ici');
-    var position = $('.view-liste-articles .view-content .views-row-first').offset();
-    var width_main_col = $('.col-sm-9').width() + 20 + position.left;
 
-    if(navigator.userAgent.search("mobile")>0 ){
-      console.log('mobile');
-      $( ".link-anchor-top-vigipl" ).css({position: 'fixed', right: '0', top: '10%'});
+    if($('.h3-article-vigipl').length < 2){
+      $( ".link-anchor-top-vigipl" ).hide();
+    }else {
+      var position = $('.view-liste-articles .view-content .views-row-first').offset();
+      var width_main_col = $('.col-sm-9').width() + 20 + position.left;
+
+      if(navigator.userAgent.search("mobile")>0 ){
+        console.log('mobile');
+        $( ".link-anchor-top-vigipl" ).css({position: 'fixed', right: '0', top: '10%'});
+      }
+
+      $( ".link-anchor-top-vigipl" ).css({position: 'fixed', left: width_main_col+'px', top: position.top+120+'px'});
     }
 
-    $( ".link-anchor-top-vigipl" ).css({position: 'fixed', left: width_main_col+'px', top: position.top+120+'px'});
   }
 
 });
