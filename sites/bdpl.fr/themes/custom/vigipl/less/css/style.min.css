@@ -1659,6 +1659,9 @@ body.role-administrator .navbar.container,body.role-webmaster .navbar.container{
 }
 .not-logged-in nav ul.menu a{display:none}
 #block-menu-block-1{float:right}
+#block-menu-block-1 ul li.first{background-color:#5cb85c}
+#block-menu-block-1 ul li.first a{color:#fff}
+#block-menu-block-1 ul li.first a:hover{color:#000}
 .menu-name-menu-menu-haut{float:right;margin-right:-30px}
 .menu-name-menu-menu-haut ul.menu>li{float:left}
 .menu-name-menu-menu-haut ul.menu>li a{padding:15px}

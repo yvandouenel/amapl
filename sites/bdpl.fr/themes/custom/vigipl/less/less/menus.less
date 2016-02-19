@@ -39,6 +39,19 @@
 /* second menu haut ***************************************************************************************************/
 #block-menu-block-1{
   float: right;
+  ul{
+    li{
+      &.first{
+        background-color: @brand-success;
+        a{
+          color: white;
+          &:hover{
+            color: #000;
+          }
+        }
+      }
+    }
+  }
 }
 .menu-name-menu-menu-haut{
   float: right;
