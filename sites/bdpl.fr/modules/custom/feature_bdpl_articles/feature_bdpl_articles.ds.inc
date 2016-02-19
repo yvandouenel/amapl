@@ -116,6 +116,7 @@ function feature_bdpl_articles_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['node|article|default'] = $ds_layout;
 

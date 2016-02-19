@@ -493,10 +493,6 @@ function feature_bdpl_articles_views_default_views() {
   $handler->display->display_options['row_options']['default_fieldset']['view_mode'] = 'full';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['header'] = FALSE;
-  /* Entête: Global : Texte non filtré */
-  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
-  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
-  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Champ: Contenu : Nid */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
@@ -878,6 +874,66 @@ function feature_bdpl_articles_views_default_views() {
   $handler->display->display_options['fields']['path']['label'] = '';
   $handler->display->display_options['fields']['path']['element_label_colon'] = FALSE;
   $handler->display->display_options['path'] = 'actu-vigipl-rss';
+
+  /* Display: menu articles attaché à la vue page taxo */
+  $handler = $view->new_display('attachment', 'menu articles attaché à la vue page taxo', 'attachment_anchors');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Pied de page: Global : Zone de texte */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<a class="link-anchor-top-vigipl" href="#"><span class="sr-only">Haut de page</span></a>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Champ: Contenu : Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Champ: Contenu : Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<a href="#node-[nid]" class="link-anchor-articles-vigipl">[title]</a>';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Critère de tri: Poids : Poids */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'weight_weights';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Filtre contextuel: Contenu : Catégorie (field_categorie) */
+  $handler->display->display_options['arguments']['field_categorie_tid']['id'] = 'field_categorie_tid';
+  $handler->display->display_options['arguments']['field_categorie_tid']['table'] = 'field_data_field_categorie';
+  $handler->display->display_options['arguments']['field_categorie_tid']['field'] = 'field_categorie_tid';
+  $handler->display->display_options['arguments']['field_categorie_tid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_categorie_tid']['exception']['title'] = 'Tout';
+  $handler->display->display_options['arguments']['field_categorie_tid']['default_argument_type'] = 'taxonomy_tid';
+  $handler->display->display_options['arguments']['field_categorie_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_categorie_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_categorie_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['displays'] = array(
+    'page_5' => 'page_5',
+    'default' => 0,
+    'block' => 0,
+    'block_1' => 0,
+    'page_1' => 0,
+    'page_2' => 0,
+    'page_3' => 0,
+    'page_4' => 0,
+    'page_6' => 0,
+    'block_2' => 0,
+    'block_3' => 0,
+  );
   $translatables['liste_articles'] = array(
     t('Master'),
     t('Liste articles'),
@@ -919,6 +975,9 @@ function feature_bdpl_articles_views_default_views() {
     t('Liste 2035 accueil'),
     t('block 2035 accueil'),
     t('Flux'),
+    t('menu articles attaché à la vue page taxo'),
+    t('<a class="link-anchor-top-vigipl" href="#"><span class="sr-only">Haut de page</span></a>'),
+    t('<a href="#node-[nid]" class="link-anchor-articles-vigipl">[title]</a>'),
   );
   $export['liste_articles'] = $view;
 
