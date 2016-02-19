@@ -32,6 +32,7 @@ stylesheets[all][] = smartmenus/addons/bootstrap/jquery.smartmenus.bootstrap.css
 ;;;;;;;;;;;;;;;;;;;;;
 
 scripts[] = 'js/open-close-submenus.js'
+scripts[] = 'js/coopernet_anchor.js'
 
 scripts[] = 'bootstrap/js/affix.js'
 scripts[] = 'bootstrap/js/alert.js'
