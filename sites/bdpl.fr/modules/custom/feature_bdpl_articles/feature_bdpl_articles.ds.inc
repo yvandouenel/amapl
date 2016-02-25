@@ -46,6 +46,32 @@ function feature_bdpl_articles_ds_field_settings_info() {
   );
   $export['node|article|default'] = $ds_fieldsetting;
 
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|article|full';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'article';
+  $ds_fieldsetting->view_mode = 'full';
+  $ds_fieldsetting->settings = array(
+    'anchor_node' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'title' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h3',
+        'class' => 'h3-article-vigipl',
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['node|article|full'] = $ds_fieldsetting;
+
   return $export;
 }
 
@@ -54,6 +80,24 @@ function feature_bdpl_articles_ds_field_settings_info() {
  */
 function feature_bdpl_articles_ds_custom_fields_info() {
   $export = array();
+
+  $ds_field = new stdClass();
+  $ds_field->api_version = 1;
+  $ds_field->field = 'anchor_node';
+  $ds_field->label = 'anchor node';
+  $ds_field->field_type = 5;
+  $ds_field->entities = array(
+    'node' => 'node',
+  );
+  $ds_field->ui_limit = '';
+  $ds_field->properties = array(
+    'code' => array(
+      'value' => '<a name="node-[node:nid]" id="node-[node:nid]" class="anchor-node-list"></a>',
+      'format' => 'ds_code',
+    ),
+    'use_token' => 1,
+  );
+  $export['anchor_node'] = $ds_field;
 
   $ds_field = new stdClass();
   $ds_field->api_version = 1;
@@ -116,8 +160,44 @@ function feature_bdpl_articles_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['node|article|default'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|article|full';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'article';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'anchor_node',
+        1 => 'title',
+        2 => 'field_image',
+        3 => 'body',
+      ),
+    ),
+    'fields' => array(
+      'anchor_node' => 'ds_content',
+      'title' => 'ds_content',
+      'field_image' => 'ds_content',
+      'body' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+  );
+  $export['node|article|full'] = $ds_layout;
 
   return $export;
 }

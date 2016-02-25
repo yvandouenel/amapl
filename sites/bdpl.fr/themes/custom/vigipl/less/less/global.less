@@ -1,0 +1,86 @@
+.form-search{
+  clear: both;
+}
+.search-info{
+  display: none;
+}
+#block-system-user-menu{
+  ul.menu{
+    display: table;
+    float: right;
+    li.first{
+      display: none;
+    }
+  }
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+h1.page-header{
+  clear: both;
+}
+h2{
+  color: @brand-grey;
+}
+h3.h3-article-vigipl{
+  background-color: @brand-danger;
+  padding: 10px;
+  color: white;
+  text-transform: uppercase;
+}
+/* Head ***************************************************************************************************************/
+body.toolbar-drawer {
+  padding-top: 10px!important;
+}
+body.role-webmaster{
+  .navbar.container{
+    margin-top: 15px;
+  }
+}
+body.role-administrator, body.role-webmaster{
+  #toolbar{
+    display: none;
+  }
+  .navbar.container{
+    margin-top: -10px;
+  }
+}
+.navbar.container, .navbar.container-fluid {
+  margin-top: 0px;
+}
+/* Logos AGA **********************************************************************************************************/
+#page-header .block-bean{
+  display: table;
+  @media (max-width: @screen-md) {
+    float: left;
+    margin-top: -90px;
+    margin-left: -50px;
+  }
+}
+/* connexion and search ***********************************************************************************************/
+#block-system-user-menu, #block-search-form{
+  float: right;
+  max-width: 200px;
+  &:after{
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+/* Anchor ancre vers les titres des articles **************************************************************************/
+.anchor-node-list{
+  position: relative;
+  top: -50px;
+}
+
+/* Impression *********************************************************************************************************/
+.field-name-lien-impression a {
+  display: block;
+  margin-top: 0.5em;
+  font-size: 1.5em;
+  &:before{
+    content: "\e81e";
+    .glyphicon();
+    font-size: 1.5em;
+  }
+}

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the featurecoocontext feature.
+ */
+
+include_once 'featurecoocontext.features.inc';

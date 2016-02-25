@@ -16,13 +16,8 @@ function atterrissage_aga_node_view($node, $view_mode, $langcode) {
     if(isset($node->field_content_after_login)){
       /*dpm($node->field_content_after_login);*/
       if(user_is_logged_in()){
-        dpm('connecté');
         drupal_goto('<front>');
-      }else{
-        dpm('non connecté');
       }
-
-      //drupal_goto('<front>');
     }
 
   }
@@ -39,4 +34,49 @@ function atterrissage_aga_init() {
     }
   });
   ','inline');
+}
+
+/**
+ * Implements hook_user_logout().
+ */
+function atterrissage_aga_user_logout($account) {
+  drupal_set_message(t('Thanks for visiting, come again!'));
+  global $user;
+  $goto = '<front>';
+
+  foreach ($user->roles as $role){
+    switch ($role) {
+      case 'AGAKAM':
+        $goto = ('/agakam/');
+        break;
+      case 'Import ADH':
+        $goto = ('/amapl/');
+        break;
+      case 'Import COR':
+        $goto = ('/amapl/');
+        break;
+      case 'AGA08':
+        $goto = ('/aga08/');
+        break;
+      case 'AGAPROFIL':
+        $goto = ('/agaprofil/');
+        break;
+      case 'AGCS':
+        $goto = ('/agcs/');
+        break;
+      case 'AMAPL':
+        $goto = ('/amapl/');
+        break;
+      case 'ANGIIL':
+        $goto = ('/angiil/');
+        break;
+      case 'DEMO':
+        $goto = ('/demo/');
+        break;
+    }
+    if ($goto != '<front>') break;
+  }
+
+  session_destroy();
+  drupal_goto($goto);
 }

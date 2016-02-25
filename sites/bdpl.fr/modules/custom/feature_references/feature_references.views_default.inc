@@ -25,7 +25,10 @@ function feature_references_views_default_views() {
   $handler->display->display_options['title'] = 'Références';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'plus';
-  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    2 => '2',
+  );
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -132,6 +135,19 @@ function feature_references_views_default_views() {
   $handler = $view->new_display('block', 'Bloc', 'block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Références';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Voir plus de références';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'page';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Critère de tri: Contenu : Date de décision (field_pub_date_decision) */
   $handler->display->display_options['sorts']['field_pub_date_decision_value']['id'] = 'field_pub_date_decision_value';
@@ -178,9 +194,11 @@ function feature_references_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Voir la suite des jurisprudences';
+  $handler->display->display_options['use_more_text'] = 'Voir toutes les jurisprudences sélectionnées';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'page_1';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '2';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Entête: Global : Texte non filtré */
@@ -196,7 +214,7 @@ function feature_references_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '<h3>[title]</h3>';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<h4>[title]</h4>';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -284,6 +302,8 @@ function feature_references_views_default_views() {
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'Voir la suite des textes';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'page_2';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -301,7 +321,7 @@ function feature_references_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '<h3>[title]</h3>';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<h4>[title]</h4>';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -463,6 +483,96 @@ function feature_references_views_default_views() {
     'block_1' => 0,
   );
   $handler->display->display_options['attachment_position'] = 'after';
+
+  /* Display: Page jurisprudence */
+  $handler = $view->new_display('page', 'Page jurisprudence', 'page_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Sélection de jurisprudences';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« premier';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'references' => 'references',
+  );
+  /* Critère de filtrage: Contenu : Catégorie (field_ref_cat) */
+  $handler->display->display_options['filters']['field_ref_cat_tid']['id'] = 'field_ref_cat_tid';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['table'] = 'field_data_field_ref_cat';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['field'] = 'field_ref_cat_tid';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['value'] = array(
+    42 => '42',
+  );
+  $handler->display->display_options['filters']['field_ref_cat_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['vocabulary'] = 'categories_ref';
+  $handler->display->display_options['path'] = 'references/jurisprudence';
+
+  /* Display: Sélection de textes */
+  $handler = $view->new_display('page', 'Sélection de textes', 'page_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Sélection de textes';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« premier';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'references' => 'references',
+  );
+  /* Critère de filtrage: Contenu : Catégorie (field_ref_cat) */
+  $handler->display->display_options['filters']['field_ref_cat_tid']['id'] = 'field_ref_cat_tid';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['table'] = 'field_data_field_ref_cat';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['field'] = 'field_ref_cat_tid';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['value'] = array(
+    43 => '43',
+  );
+  $handler->display->display_options['filters']['field_ref_cat_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_ref_cat_tid']['vocabulary'] = 'categories_ref';
+  $handler->display->display_options['path'] = 'references/textes';
   $translatables['references'] = array(
     t('Master'),
     t('Références'),
@@ -483,9 +593,11 @@ function feature_references_views_default_views() {
     t('Page'),
     t('<h3 class="ref-subtitles">Sélection de jurisprudence</h3>'),
     t('Bloc'),
+    t('Voir plus de références'),
     t('block références'),
     t('Sélection de jurisprudence'),
-    t('Voir la suite des jurisprudences'),
+    t('Voir toutes les jurisprudences sélectionnées'),
+    t('<h4>[title]</h4>'),
     t('_blank'),
     t('_self'),
     t('<a href="[field_news_url_target]" target="[field_window_target]">[title]</a>
@@ -499,6 +611,8 @@ function feature_references_views_default_views() {
     t('<h3 class="ref-subtitles">Téléchargements</h3>'),
     t('Tribune Libre'),
     t('<h3 class="ref-subtitles">Tribune Libre</h3>'),
+    t('Page jurisprudence'),
+    t('Sélection de jurisprudences'),
   );
   $export['references'] = $view;
 

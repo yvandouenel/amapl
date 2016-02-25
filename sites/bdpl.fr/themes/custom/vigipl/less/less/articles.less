@@ -1,0 +1,28 @@
+.view-display-id-attachment_anchors .views-row-first.views-row-last{
+  display: none;
+}
+.link-anchor-articles-vigipl{
+  display: block;
+  &:before{
+    .glyphicon();
+    content: "\e834";
+    color: @brand-danger;
+  }
+  &:hover:before{
+    text-decoration: none;
+  }
+}
+.link-anchor-top-vigipl{
+  &:before{
+    .glyphicon();
+    content: "\e836";
+    color: @brand-info;
+    font-size: 3em;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  &:hover:before{
+    text-decoration: none;
+    color: @brand-danger;
+  }
+}
