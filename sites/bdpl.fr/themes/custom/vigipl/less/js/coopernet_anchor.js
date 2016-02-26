@@ -10,8 +10,11 @@ jQuery(function($){
     if (target.length == 0) target = $('a[name="' + this.hash.substr(1) + '"]');
     if (target.length == 0) target = $('html');
 
+    if (!$(this).hasClass("contextual-links-trigger")){
+      $('html, body').animate({ scrollTop: target.offset().top }, 500);
+    }
 
-    $('html, body').animate({ scrollTop: target.offset().top }, 500);
+
     return false;
 
   });
