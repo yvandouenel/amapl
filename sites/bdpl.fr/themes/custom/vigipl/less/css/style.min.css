@@ -1686,10 +1686,12 @@ body.role-administrator .navbar.container,body.role-webmaster .navbar.container{
 .region-sidebar-first .caret{float:right;margin-top:5px}
 .breadcrumb li.active{display:none}
 .vigipl-under-footer{background:linear-gradient(90deg,#2e2e2e 50%,transparent 50%)}
-.vigipl-under-footer .footer{position:relative;border:0;background-color:#2e2e2e;padding-bottom:10px;margin-bottom:5px;min-height:85px}
+.vigipl-under-footer .footer{position:relative;border:0;background-color:#2e2e2e;padding-bottom:10px;padding-top:0;margin-bottom:5px;min-height:85px}
 .vigipl-under-footer .footer #block-menu-menu-menu-bas{display:table;margin:0 auto}
 .vigipl-under-footer .footer #block-menu-menu-menu-bas ul li{float:left}
-.vigipl-under-footer .footer #block-block-2{position:absolute;top:0;right:0}
+.vigipl-under-footer .footer #block-menu-menu-menu-bas ul li a{color:#fff}
+.vigipl-under-footer .footer #block-menu-menu-menu-bas ul li a:hover{color:#333}
+.vigipl-under-footer .footer #block-block-2{position:absolute;top:-5px;right:-15px}
 body.front h1,body.front h2,body.front h3,body.front h4{font-size:2em}
 body.front h3{font-size:1.3em}
 body.front #block-bean-2035plus>h2:before,body.front #block-bean-guide-comptable h3:before,body.front #block-bean-guide-comptable>h2:before,body.front #block-views-liste-articles-block-3 h3:before,body.front #block-views-news-block-1 h3:before,body.front #block-views-news-block-1>h2:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;text-decoration:inherit;text-align:center;font-variant:normal;text-transform:none;line-height:1em;color:#777;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
