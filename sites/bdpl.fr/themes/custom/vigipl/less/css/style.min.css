@@ -126,7 +126,6 @@ pre code,table{background-color:transparent}
 dl,ol,ul{margin-top:0}
 blockquote ol:last-child,blockquote p:last-child,blockquote ul:last-child,ol ol,ol ul,ul ol,ul ul{margin-bottom:0}
 address,dl{margin-bottom:20px}
-ol,ul{margin-bottom:10px}
 .list-inline{margin-left:-5px}
 .list-inline>li{display:inline-block;padding-left:5px;padding-right:5px}
 dd{margin-left:0}
@@ -1612,6 +1611,7 @@ fieldset.features-export-component .panel-heading a.panel-title{font-size:12px;f
 fieldset.features-export-component .panel-body{padding:0 10px}
 div.features-export-list{margin:-11px 0 10px;padding:0 10px}
 div.features-export-list .form-type-checkbox,fieldset.features-export-component .component-select .form-type-checkbox{line-height:1em;margin:5px 5px 5px 0!important;min-height:0;padding:3px 3px 3px 25px!important}
+#main-content ul,h3,h4{margin-bottom:20px}
 div.features-export-list .form-type-checkbox input[type=checkbox],fieldset.features-export-component .component-select .form-type-checkbox input[type=checkbox]{margin-top:0}
 body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open .navbar-fixed-top{top:79px}
 body.navbar-is-fixed-top.navbar-administration .navbar-fixed-top{top:39px}
@@ -1637,14 +1637,15 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed{margin-left:24rem}
 h1,h2,h3,h4,h5,h6{font-family:'Source Sans Pro',Arial,sans-serif}
 h2{color:#2e2e2e}
 h3.h3-article-vigipl{background-color:#f45a40;padding:10px;color:#fff;border-bottom:1px solid #000}
+h4{margin-top:20px;border-bottom:1px solid #777}
 h5{font-weight:700;margin-top:1.5em}
-#main-content ul{margin-bottom:20px}
 .field-name-body h3{border-bottom:2px solid #44484B;padding:15px 0 13px;margin-bottom:5px;font-weight:400;font-size:1.6em}
 .en-valeur,.orange{padding:16px;font-family:arial}
 .en-valeur{background-color:#f3f2f2;margin-bottom:2em}
 .orange{background-color:#FFBE00;color:#000;margin:5px 0 2em}
 a.orange{background-color:transparent;padding:0;font-family:inherit;color:#FF4E00;margin:0}
 p{line-height:1.5em;text-align:justify;padding-right:15px;margin:5px 0 20px}
+ol,ul{margin-bottom:20px}
 #summary-ref .field-name-body{background-color:#eee;padding:15px;margin:30px 0 15px;width:50%}
 body.toolbar-drawer{padding-top:10px!important}
 body.role-administrator .navbar.container,body.role-webmaster .navbar.container{margin-top:-10px}
