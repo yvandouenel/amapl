@@ -1647,6 +1647,8 @@ a.orange{background-color:transparent;padding:0;font-family:inherit;color:#FF4E0
 p{line-height:1.5em;text-align:justify;padding-right:15px;margin:5px 0 20px}
 ol,ul{margin-bottom:20px}
 #summary-ref .field-name-body{background-color:#eee;padding:15px;margin:30px 0 15px;width:50%}
+table{border:1px solid #CCC;width:100%}
+div.content table td{border-bottom:1px solid grey;border-right:1px solid grey}
 body.toolbar-drawer{padding-top:10px!important}
 body.role-administrator .navbar.container,body.role-webmaster .navbar.container{margin-top:-10px}
 .navbar.container,.navbar.container-fluid{margin-top:0}
