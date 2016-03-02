@@ -900,7 +900,7 @@ function feature_bdpl_articles_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '<a href="#node-[nid]" class="link-anchor-articles-vigipl">[title]</a>';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<a href="#node-article-[nid]" class="link-anchor-articles-vigipl">[title]</a>';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
@@ -977,7 +977,7 @@ function feature_bdpl_articles_views_default_views() {
     t('Flux'),
     t('menu articles attaché à la vue page taxo'),
     t('<a class="link-anchor-top-vigipl" href="#"><span class="sr-only">Haut de page</span></a>'),
-    t('<a href="#node-[nid]" class="link-anchor-articles-vigipl">[title]</a>'),
+    t('<a href="#node-article-[nid]" class="link-anchor-articles-vigipl">[title]</a>'),
   );
   $export['liste_articles'] = $view;
 

@@ -92,7 +92,7 @@ function feature_bdpl_articles_ds_custom_fields_info() {
   $ds_field->ui_limit = '';
   $ds_field->properties = array(
     'code' => array(
-      'value' => '<a name="node-[node:nid]" id="node-[node:nid]" class="anchor-node-list"></a>',
+      'value' => '<a name="node-article-[node:nid]" id="node-article-[node:nid]" class="anchor-node-list"></a>',
       'format' => 'ds_code',
     ),
     'use_token' => 1,
