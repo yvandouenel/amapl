@@ -1264,7 +1264,7 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:focus,a.list-gro
 .well-lg{padding:24px;border-radius:6px}
 .well-sm{padding:9px;border-radius:3px}
 .close{float:right;font-size:21px;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}
-.popover,.tooltip{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-style:normal;font-weight:400;letter-spacing:normal;line-break:auto;line-height:1.42857143;text-shadow:none;text-transform:none;white-space:normal;word-break:normal;word-spacing:normal;word-wrap:normal;text-decoration:none}
+.popover,.tooltip{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-style:normal;font-weight:400;letter-spacing:normal;line-break:auto;line-height:1.42857143;text-shadow:none;text-transform:none;word-break:normal;word-spacing:normal;word-wrap:normal;text-decoration:none;white-space:normal}
 .close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer;opacity:.5;filter:alpha(opacity=50)}
 button.close{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance:none}
 .modal-content,.popover{background-clip:padding-box}
@@ -1465,7 +1465,6 @@ body #admin-menu .dropdown li{line-height:normal}
 .modal{z-index:1620}
 .modal-dialog{z-index:1630}
 .ctools-modal-dialog .modal-body{width:100%!important;overflow:auto}
-.book-toc>.dropdown-menu,.region-help .block,div.image-widget-data{overflow:hidden}
 .modal-backdrop{z-index:1610}
 .footer{margin-top:45px;padding-top:35px;padding-bottom:36px;border-top:1px solid #E5E5E5}
 .element-invisible{margin:0;padding:0;width:1px}
@@ -1477,6 +1476,7 @@ ul.secondary{float:right}
 .block:first-child h2.block-title,.page-header{margin-top:0}
 p:last-child{margin-bottom:0}
 .region-help>.glyphicon{font-size:18px;float:left;margin:-.05em .5em 0 0}
+.region-help .block{overflow:hidden}
 form#search-block-form{margin:0}
 .navbar #block-search-form{float:none;margin:5px 0 5px 5px}
 @media screen and (min-width:992px){.navbar #block-search-form{float:right}
@@ -1496,7 +1496,7 @@ fieldset .panel-heading a.panel-title{color:inherit;display:block;margin:-10px -
 fieldset .panel-heading a.panel-title:hover{text-decoration:none}
 .form-group:last-child,.panel:last-child{margin-bottom:0}
 .form-horizontal .form-group{margin-left:0;margin-right:0}
-div.image-widget-data{float:none}
+div.image-widget-data{float:none;overflow:hidden}
 table.sticky-header{z-index:1}
 .resizable-textarea textarea{border-radius:4px 4px 0 0}
 .ajax-progress-bar,.filter-wrapper{border-radius:0 0 4px 4px}
@@ -1598,6 +1598,7 @@ body.navbar-is-fixed-top.navbar-administration.navbar-vertical.navbar-tray-open 
 div.image-style-new,div.image-style-new div{display:block}
 div.image-style-new div.input-group{display:table}
 .table-striped>tbody>tr:nth-child(odd)>td.module,.table>tbody>tr>td.module,td.module{background:#ddd;font-weight:700}
+.book-toc>.dropdown-menu{overflow:hidden}
 .book-toc>.dropdown-menu>.dropdown-header{white-space:nowrap}
 .book-toc>.dropdown-menu .dropdown-menu{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;border:0;display:block;font-size:12px;margin:0;padding:0;position:static;width:100%}
 .book-toc>.dropdown-menu .dropdown-menu>li{padding-left:20px}
@@ -1660,7 +1661,8 @@ body.role-administrator .navbar.container,body.role-webmaster .navbar.container{
 #block-search-form,#block-system-user-menu{float:right;max-width:200px}
 #block-search-form:after,#block-system-user-menu:after{display:block;content:'';clear:both}
 .anchor-node-list{position:relative;top:-50px}
-.field-name-lien-impression a{display:block;margin-top:.5em;font-size:1.5em}
+.field-name-lien-impression{float:left}
+.field-name-lien-impression a{display:block;margin-top:0;font-size:1.5em;color:#fff;width:40px;overflow:hidden}
 .field-name-lien-impression a:before{content:"\e81e";position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;color:#777;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:1.5em}
 .vigipl-under-header{background-color:#2e2e2e}
 .vigipl-under-header .navbar-default .navbar-nav>.open>a,.vigipl-under-header .navbar-default .navbar-nav>.open>a:hover{background-color:#f45a40}
@@ -1713,7 +1715,7 @@ body.front #block-bean-2035plus h3 a:before,body.front #block-bean-guide-comptab
 body.front #block-bean-2035plus>h2:before{content:"\e804";width:1em;margin-right:10px}
 .view-display-id-attachment_anchors .views-row-first.views-row-last{display:none}
 .link-anchor-articles-vigipl{display:block}
-.link-anchor-articles-vigipl:before,.link-anchor-top-vigipl:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.link-anchor-articles-vigipl:before,.link-anchor-top-vigipl:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;width:1em;margin-right:10px;text-align:center;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-transform:none}
 .link-anchor-articles-vigipl:before{font-size:1em;text-decoration:inherit;content:"\e834";color:#f45a40}
 .link-anchor-articles-vigipl:hover:before{text-decoration:none}
 .link-anchor-top-vigipl:before{content:"\e836";color:#5bc0de;font-size:3em;cursor:pointer;text-decoration:none}
@@ -1721,3 +1723,5 @@ body.front #block-bean-2035plus>h2:before{content:"\e804";width:1em;margin-right
 .view-references>.attachment-after .view-references.view-display-id-attachment_2,.view-references>.attachment-after>.view-display-id-attachment_4{margin-right:4%}
 @media (min-width:992px){.view-references>.attachment-after .view-references{float:left;width:45%}
 }
+.node-type-news h1.page-header{font-size:2em;text-transform:none}
+.node-type-news .field-name-field-news-date-inline{padding-top:15px;margin-bottom:30px}

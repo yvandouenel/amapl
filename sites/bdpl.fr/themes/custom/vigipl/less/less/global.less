@@ -163,13 +163,19 @@ body.role-administrator, body.role-webmaster{
 }
 
 /* Impression *********************************************************************************************************/
-.field-name-lien-impression a {
-  display: block;
-  margin-top: 0.5em;
-  font-size: 1.5em;
-  &:before{
-    content: "\e81e";
-    .glyphicon();
+.field-name-lien-impression {
+  float: left;
+  a {
+    display: block;
+    margin-top: 0;
     font-size: 1.5em;
+    color: white;
+    width: 40px;
+    overflow: hidden;
+    &:before {
+      content: "\e81e";
+      .glyphicon();
+      font-size: 1.5em;
+    }
   }
 }
