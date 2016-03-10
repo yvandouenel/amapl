@@ -1264,7 +1264,7 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:focus,a.list-gro
 .well-lg{padding:24px;border-radius:6px}
 .well-sm{padding:9px;border-radius:3px}
 .close{float:right;font-size:21px;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}
-.popover,.tooltip{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-style:normal;font-weight:400;letter-spacing:normal;line-break:auto;line-height:1.42857143;text-shadow:none;text-transform:none;white-space:normal;word-break:normal;word-spacing:normal;word-wrap:normal;text-decoration:none}
+.popover,.tooltip{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-style:normal;font-weight:400;letter-spacing:normal;line-break:auto;line-height:1.42857143;text-shadow:none;text-transform:none;word-break:normal;word-spacing:normal;word-wrap:normal;text-decoration:none;white-space:normal}
 .close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer;opacity:.5;filter:alpha(opacity=50)}
 button.close{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance:none}
 .modal-content,.popover{background-clip:padding-box}
@@ -1685,6 +1685,7 @@ body.role-administrator .navbar.container,body.role-webmaster .navbar.container{
 }
 .menu-name-menu-menu-haut ul.menu>li{float:left}
 .menu-name-menu-menu-haut ul.menu>li a{padding:15px}
+#block-system-user-menu{position:absolute;z-index:9999}
 .region-sidebar-first .menu-block-3>ul>li.active-trail,.region-sidebar-first .menu-block-3>ul>li.vigipl-li-open{padding:5px 0;margin:2px 0 0;list-style:none;font-size:14px;text-align:left;background-color:#fff;border:1px solid #ccc;border:1px solid rgba(0,0,0,.15);border-radius:4px;-webkit-box-shadow:0 6px 12px rgba(0,0,0,.175);-moz-box-shadow:0 6px 12px rgba(0,0,0,.175);box-shadow:0 6px 12px rgba(0,0,0,.175);background-clip:padding-box}
 .region-sidebar-first .menu-block-3>ul>li>ul.dropdown-menu{position:static;display:block;width:100%;z-index:-1}
 .region-sidebar-first .menu-block-3>ul>li>ul.dropdown-menu>li>a:before{content:"> "}
