@@ -217,13 +217,13 @@ function featurecoocontext_context_default_contexts() {
           'module' => 'bean',
           'delta' => 'guide-comptable',
           'region' => 'content',
-          'weight' => '10',
+          'weight' => '5',
         ),
-        'views-liste_articles-block_3' => array(
-          'module' => 'views',
-          'delta' => 'liste_articles-block_3',
+        'bean-2035plus' => array(
+          'module' => 'bean',
+          'delta' => '2035plus',
           'region' => 'content',
-          'weight' => '20',
+          'weight' => '10',
         ),
       ),
     ),

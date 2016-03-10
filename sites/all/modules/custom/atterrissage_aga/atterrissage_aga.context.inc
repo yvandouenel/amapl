@@ -109,6 +109,38 @@ function atterrissage_aga_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'agcs';
+  $context->description = '';
+  $context->tag = 'Toutes les pages';
+  $context->conditions = array(
+    'user' => array(
+      'values' => array(
+        'AGCS' => 'AGCS',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'bean-logo-agcs' => array(
+          'module' => 'bean',
+          'delta' => 'logo-agcs',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Toutes les pages');
+  $export['agcs'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'amapl';
   $context->description = '';
   $context->tag = 'Toutes les pages';
@@ -126,9 +158,9 @@ function atterrissage_aga_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'bean-logo-agakam' => array(
+        'bean-logo-amapl' => array(
           'module' => 'bean',
-          'delta' => 'logo-agakam',
+          'delta' => 'logo-amapl',
           'region' => 'header',
           'weight' => '-10',
         ),

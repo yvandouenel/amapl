@@ -98,7 +98,7 @@ function feature_block_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_2_level';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['menu_block_2_level'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -129,6 +129,8 @@ function feature_block_strongarm() {
   $strongarm->value = array(
     0 => 1,
     1 => 2,
+    2 => 3,
+    3 => 4,
   );
   $export['menu_block_ids'] = $strongarm;
 

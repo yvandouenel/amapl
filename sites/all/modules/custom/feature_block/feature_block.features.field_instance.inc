@@ -42,6 +42,7 @@ function feature_block_field_default_field_instances() {
       'module' => 'text',
       'settings' => array(
         'rows' => 5,
+        'show_token_tree' => FALSE,
       ),
       'type' => 'text_textarea',
       'weight' => 11,
@@ -127,6 +128,7 @@ function feature_block_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
+        'show_token_tree' => FALSE,
         'size' => 60,
       ),
       'type' => 'text_textfield',

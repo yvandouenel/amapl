@@ -39,10 +39,14 @@
 /* second menu haut ***************************************************************************************************/
 #block-menu-block-1{
   float: right;
+  @media (max-width: @screen-md){
+    float: left;
+  }
   ul{
     li{
       &.first{
         background-color: @brand-success;
+
         a{
           color: white;
           &:hover{
@@ -55,6 +59,9 @@
 }
 .menu-name-menu-menu-haut{
   float: right;
+  @media (max-width: @screen-md){
+    float: left;
+  }
   margin-right: -30px;
   ul.menu{
     > li{
@@ -141,5 +148,14 @@
   clear: both;
   li.active{
     display: none;
+  }
+}
+/* Bouton de menu sur smartphones *************************************************************************************/
+.navbar-default{
+  .navbar-header{
+    background-color: black;
+  }
+  .navbar-toggle {
+    float: left;
   }
 }

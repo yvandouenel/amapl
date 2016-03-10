@@ -1,54 +1,63 @@
-#block-views-news-block-1, #block-bean-guide-comptable, #block-views-liste-articles-block-3{
-  @media (min-width: @screen-md) {
-    float: left;
-    width: 31%;
-  }
-  /* background: white url(../images/illustrations/actu.png) no-repeat 0 0; */
-  background-color: white;
-  padding: 0 0 0 0;
-  margin: 20px 2% 0 0;
-  h3:before {
-    content: "\e834";
-    .glyphicon();
-  }
-}
-
-#block-views-news-block-1 {
-  > h2:before {
-    content: "\e82c";
-    .glyphicon();
-  }
-}
-#block-bean-guide-comptable{
-  .clearfix:before{
-    display: none;
-  }
-  > h2:before {
-    content: "\e83f";
-    .glyphicon();
+body.front{
+  h1,h2,h3,h4{
+    font-size: 2em;
   }
   h3{
-    &:before{
+    font-size: 1.3em;
+  }
+  #block-views-news-block-1, #block-bean-guide-comptable, #block-views-liste-articles-block-3{
+    @media (min-width: @screen-md) {
+      float: left;
+      width: 31%;
+    }
+    /* background: white url(../images/illustrations/actu.png) no-repeat 0 0; */
+    background-color: white;
+    padding: 0 0 0 0;
+    margin: 20px 2% 0 0;
+    h3:before {
+      content: "\e834";
+      .glyphicon();
+    }
+  }
+
+  #block-views-news-block-1 {
+    > h2:before {
+      content: "\e82c";
+      .glyphicon();
+    }
+  }
+  #block-bean-guide-comptable, #block-bean-2035plus{
+    .clearfix:before{
       display: none;
     }
-    a{
-      display: block;
-      margin-top: 20px;
-      margin-bottom: 10px;
+    > h2:before {
+      content: "\e83f";
+      .glyphicon();
+    }
+    h3{
       &:before{
-        content: "\e834";
-        .glyphicon();
+        display: none;
+      }
+      a{
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        &:before{
+          content: "\e834";
+          .glyphicon();
+        }
       }
     }
   }
-}
-#block-views-liste-articles-block-3 {
-  @media (min-width: @screen-md) {
-    width: 34%;
-    margin: 20px 0 0 0;
-  }
-  > h2:before {
-    content: "\e804";
-    .glyphicon();
+  #block-bean-2035plus {
+    @media (min-width: @screen-md) {
+      width: 30%;
+      margin: 20px 0 0 0;
+      float: left;
+    }
+    > h2:before {
+      content: "\e804";
+      .glyphicon();
+    }
   }
 }
