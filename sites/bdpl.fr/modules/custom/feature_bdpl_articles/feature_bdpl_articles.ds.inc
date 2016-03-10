@@ -58,6 +58,11 @@ function feature_bdpl_articles_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
     ),
+    'lien_impression' => array(
+      'weight' => '4',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
     'title' => array(
       'weight' => '1',
       'label' => 'hidden',
@@ -178,6 +183,7 @@ function feature_bdpl_articles_ds_layout_settings_info() {
         1 => 'title',
         2 => 'field_image',
         3 => 'body',
+        4 => 'lien_impression',
       ),
     ),
     'fields' => array(
@@ -185,6 +191,7 @@ function feature_bdpl_articles_ds_layout_settings_info() {
       'title' => 'ds_content',
       'field_image' => 'ds_content',
       'body' => 'ds_content',
+      'lien_impression' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
