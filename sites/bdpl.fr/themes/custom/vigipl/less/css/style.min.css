@@ -1728,6 +1728,7 @@ body.front #block-bean-2035plus>h2:before{content:"\e804";width:1em;margin-right
 .link-anchor-articles-vigipl:hover:before{text-decoration:none}
 .link-anchor-top-vigipl:before{content:"\e836";color:#5bc0de;font-size:3em;cursor:pointer;text-decoration:none}
 .link-anchor-top-vigipl:hover:before{text-decoration:none;color:#f45a40}
+.view-liste-articles .views-row-first.views-row-last .h3-article-vigipl{display:none}
 .view-references>.attachment-after .view-references.view-display-id-attachment_2,.view-references>.attachment-after>.view-display-id-attachment_4{margin-right:4%}
 @media (min-width:992px){.view-references>.attachment-after .view-references{float:left;width:45%}
 }
