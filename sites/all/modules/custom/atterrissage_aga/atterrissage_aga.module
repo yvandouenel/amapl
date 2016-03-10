@@ -47,28 +47,28 @@ function atterrissage_aga_user_logout($account) {
   foreach ($user->roles as $role){
     switch ($role) {
       case 'AGAKAM':
-        $goto = ('/agakam/');
+        $goto = ('http://www.agakam.com');
         break;
       case 'Import ADH':
-        $goto = ('/amapl/');
+        $goto = ('http://www.amapl.com');
         break;
       case 'Import COR':
-        $goto = ('/amapl/');
+        $goto = ('http://www.amapl.com');
         break;
       case 'AGA08':
-        $goto = ('/aga08/');
+        $goto = ('http://www.aga08.fr');
         break;
       case 'AGAPROFIL':
-        $goto = ('/agaprofil/');
+        $goto = ('http://www.agaprofil.fr');
         break;
       case 'AGCS':
-        $goto = ('/agcs/');
+        $goto = ('http://www.agcs-aga.com');
         break;
       case 'AMAPL':
-        $goto = ('/amapl/');
+        $goto = ('http://www.amapl.com');
         break;
       case 'ANGIIL':
-        $goto = ('/angiil/');
+        $goto = ('http://www.angiil.com');
         break;
       case 'DEMO':
         $goto = ('/demo/');
