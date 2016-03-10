@@ -1685,7 +1685,7 @@ body.role-administrator .navbar.container,body.role-webmaster .navbar.container{
 }
 .menu-name-menu-menu-haut ul.menu>li{float:left}
 .menu-name-menu-menu-haut ul.menu>li a{padding:15px}
-#block-system-user-menu{position:absolute;z-index:9999}
+#block-system-user-menu{position:absolute;z-index:9999;border:0}
 .region-sidebar-first .menu-block-3>ul>li.active-trail,.region-sidebar-first .menu-block-3>ul>li.vigipl-li-open{padding:5px 0;margin:2px 0 0;list-style:none;font-size:14px;text-align:left;background-color:#fff;border:1px solid #ccc;border:1px solid rgba(0,0,0,.15);border-radius:4px;-webkit-box-shadow:0 6px 12px rgba(0,0,0,.175);-moz-box-shadow:0 6px 12px rgba(0,0,0,.175);box-shadow:0 6px 12px rgba(0,0,0,.175);background-clip:padding-box}
 .region-sidebar-first .menu-block-3>ul>li>ul.dropdown-menu{position:static;display:block;width:100%;z-index:-1}
 .region-sidebar-first .menu-block-3>ul>li>ul.dropdown-menu>li>a:before{content:"> "}
