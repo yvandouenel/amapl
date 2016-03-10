@@ -140,10 +140,25 @@ body.role-administrator, body.role-webmaster{
 /* Logos AGA **********************************************************************************************************/
 #page-header .block-bean{
   display: table;
-  @media (max-width: @screen-md) {
-    float: left;
-    margin-top: -90px;
-    margin-left: -50px;
+  > .entity-bean{
+    @media (max-width: @screen-md) {
+      display: none;
+      float: left;
+      margin-top: -90px;
+      margin-left: -50px;
+    }
+  }
+  h2.block-title{
+    display: none;
+    @media (max-width: @screen-md) {
+      display: block;
+      position: fixed;
+      color: @gray-light;
+      top: -5px;
+      left: 70px;
+      z-index: 9999;
+      font-size: 1.3em;
+    }
   }
 }
 /* connexion and search ***********************************************************************************************/

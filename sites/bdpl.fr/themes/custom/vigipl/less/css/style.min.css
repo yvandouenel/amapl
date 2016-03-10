@@ -1264,7 +1264,7 @@ a.list-group-item-danger.active,a.list-group-item-danger.active:focus,a.list-gro
 .well-lg{padding:24px;border-radius:6px}
 .well-sm{padding:9px;border-radius:3px}
 .close{float:right;font-size:21px;line-height:1;color:#000;text-shadow:0 1px 0 #fff;opacity:.2;filter:alpha(opacity=20)}
-.popover,.tooltip{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-style:normal;font-weight:400;letter-spacing:normal;line-break:auto;line-height:1.42857143;text-shadow:none;text-transform:none;word-break:normal;word-spacing:normal;word-wrap:normal;text-decoration:none;white-space:normal}
+.popover,.tooltip{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-style:normal;font-weight:400;letter-spacing:normal;line-break:auto;line-height:1.42857143;text-shadow:none;text-transform:none;white-space:normal;word-break:normal;word-spacing:normal;word-wrap:normal;text-decoration:none}
 .close:focus,.close:hover{color:#000;text-decoration:none;cursor:pointer;opacity:.5;filter:alpha(opacity=50)}
 button.close{padding:0;cursor:pointer;background:0 0;border:0;-webkit-appearance:none}
 .modal-content,.popover{background-clip:padding-box}
@@ -1656,7 +1656,9 @@ body.toolbar-drawer{padding-top:10px!important}
 body.role-administrator .navbar.container,body.role-webmaster .navbar.container{margin-top:-10px}
 .navbar.container,.navbar.container-fluid{margin-top:0}
 #page-header .block-bean{display:table}
-@media (max-width:992px){#page-header .block-bean{float:left;margin-top:-90px;margin-left:-50px}
+#page-header .block-bean h2.block-title{display:none}
+@media (max-width:992px){#page-header .block-bean>.entity-bean{display:none;float:left;margin-top:-90px;margin-left:-50px}
+#page-header .block-bean h2.block-title{display:block;position:fixed;color:#777;top:-5px;left:70px;z-index:9999;font-size:1.3em}
 }
 #block-search-form,#block-system-user-menu{float:right;max-width:200px}
 #block-search-form:after,#block-system-user-menu:after{display:block;content:'';clear:both}
@@ -1673,10 +1675,14 @@ body.role-administrator .navbar.container,body.role-webmaster .navbar.container{
 }
 .not-logged-in nav ul.menu a{display:none}
 #block-menu-block-1{float:right}
+@media (max-width:992px){#block-menu-block-1{float:left}
+}
 #block-menu-block-1 ul li.first{background-color:#41d4c1}
 #block-menu-block-1 ul li.first a{color:#fff}
 #block-menu-block-1 ul li.first a:hover{color:#000}
 .menu-name-menu-menu-haut{float:right;margin-right:-30px}
+@media (max-width:992px){.menu-name-menu-menu-haut{float:left}
+}
 .menu-name-menu-menu-haut ul.menu>li{float:left}
 .menu-name-menu-menu-haut ul.menu>li a{padding:15px}
 .region-sidebar-first .menu-block-3>ul>li.active-trail,.region-sidebar-first .menu-block-3>ul>li.vigipl-li-open{padding:5px 0;margin:2px 0 0;list-style:none;font-size:14px;text-align:left;background-color:#fff;border:1px solid #ccc;border:1px solid rgba(0,0,0,.15);border-radius:4px;-webkit-box-shadow:0 6px 12px rgba(0,0,0,.175);-moz-box-shadow:0 6px 12px rgba(0,0,0,.175);box-shadow:0 6px 12px rgba(0,0,0,.175);background-clip:padding-box}
@@ -1688,11 +1694,12 @@ body.role-administrator .navbar.container,body.role-webmaster .navbar.container{
 .region-sidebar-first ul.dropdown-menu{position:static;display:block;width:100%;z-index:-1}
 .region-sidebar-first ul.dropdown-menu a{z-index:1;position:relative;white-space:normal}
 .region-sidebar-first .caret{float:right;margin-top:5px}
+.navbar-default .navbar-toggle,.vigipl-under-footer .footer #block-menu-menu-menu-bas ul li{float:left}
 .breadcrumb li.active{display:none}
+.navbar-default .navbar-header{background-color:#000}
 .vigipl-under-footer{background:linear-gradient(90deg,#2e2e2e 50%,transparent 50%)}
 .vigipl-under-footer .footer{position:relative;border:0;background-color:#2e2e2e;padding-bottom:10px;padding-top:0;margin-bottom:5px;min-height:85px}
 .vigipl-under-footer .footer #block-menu-menu-menu-bas{display:table;margin:0 auto}
-.vigipl-under-footer .footer #block-menu-menu-menu-bas ul li{float:left}
 .vigipl-under-footer .footer #block-menu-menu-menu-bas ul li a{color:#fff}
 .vigipl-under-footer .footer #block-menu-menu-menu-bas ul li a:hover{color:#333}
 .vigipl-under-footer .footer #block-block-2{position:absolute;top:-5px;right:-15px}
