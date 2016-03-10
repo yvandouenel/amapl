@@ -126,9 +126,9 @@ function atterrissage_aga_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'bean-logo-agakam' => array(
+        'bean-logo-amapl' => array(
           'module' => 'bean',
-          'delta' => 'logo-agakam',
+          'delta' => 'logo-amapl',
           'region' => 'header',
           'weight' => '-10',
         ),
