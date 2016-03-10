@@ -79,9 +79,12 @@
   }
 }
 #block-system-user-menu {
-  position: absolute;
-  z-index: 9999;
-  border: 0;
+  @media (max-width: @screen-md){
+    position: absolute;
+    z-index: 9999;
+    border: 0;
+  }
+
 }
 /* Menus de gauche sur grands écrans **********************************************************************************/
 .region-sidebar-first{
