@@ -21,6 +21,7 @@ h1{
 }
 h1.page-header{
   clear: both;
+  margin-bottom: 0;
 }
 h2{
   color: @brand-grey;
@@ -47,6 +48,7 @@ h4{
   margin-top: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid @gray-light;
+  font-weight: bold;
 }
 h5{
   font-weight: bold;
@@ -153,7 +155,7 @@ body.role-administrator, body.role-webmaster{
     @media (max-width: @screen-md) {
       display: block;
       position: fixed;
-      color: @gray-light;
+      color: @gray-lighter;
       top: -5px;
       left: 70px;
       z-index: 9999;
@@ -175,6 +177,13 @@ body.role-administrator, body.role-webmaster{
 .anchor-node-list{
   position: relative;
   top: -50px;
+}
+.decale{
+  padding: 3px;
+  border-image: none;
+  margin-left: 40px;
+  background-color: rgb(247, 247, 247);
+  margin-bottom:25px
 }
 
 /* Impression *********************************************************************************************************/

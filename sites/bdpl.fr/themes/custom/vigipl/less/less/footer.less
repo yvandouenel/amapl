@@ -12,9 +12,15 @@
     #block-menu-menu-menu-bas{
       display: table;
       margin: 0 auto;
+      @media (max-width: @screen-md){
+        margin: 0;
+      }
       ul{
         li{
           float: left;
+          @media (max-width: @screen-md){
+            float: none;
+          }
           a{
             color: white;
             &:hover{
