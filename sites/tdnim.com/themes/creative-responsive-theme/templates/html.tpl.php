@@ -5,6 +5,7 @@
 <?php print $styles; ?>
 <?php print $scripts; ?>
 <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <meta name="google-site-verification" content="SlPZFAUoIqS-jj7tRG6AmcEUgV6Ca6XGSC2FwUCN1vc" />
 </head>
 <body class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <?php print $page_top; ?>
