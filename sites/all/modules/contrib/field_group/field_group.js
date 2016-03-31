@@ -157,7 +157,7 @@ Drupal.FieldGroup.Effects.processDiv = {
       // for CSS positioning.
 
       var $toggler = $('span.field-group-format-toggler:first', $wrapper);
-      var $link = $('<a class="field-group-format-title" href="#"></a>');
+      var $link = $('<a class="field-group-format-title" onclick="ga(\'send\', \'event\', \'inscription evenement LPPL\', \'click\')" href="#"></a>');
       $link.prepend($toggler.contents());
 
       // Add required field markers if needed
