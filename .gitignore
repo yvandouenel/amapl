@@ -1,7 +1,8 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
 .idea/*
-.idea/workspace.xml
+.idea/workspace.xml 
+sites/all/modules/contrib/xray/
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
