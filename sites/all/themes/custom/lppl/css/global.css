@@ -869,11 +869,16 @@ body.front .block-news-home .views-field-field-news-image img{
 .region-sidebar-second-inner .block-events-home .views-field-field-event-image img{
     max-width: 85%;
 }
+/* formulaire webform ***********************************************************/
+.webform-component--votre-message{
+  width: 400pxgit st;
+}
 
 /* Mises en valeur ***************************************************************************************************/
 .en-valeur{
   font-size: 1.5em;
 }
+
 
 
 
