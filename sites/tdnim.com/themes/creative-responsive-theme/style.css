@@ -1677,3 +1677,11 @@ body.page-actualites div.region-content .views-field-body .field-content h3{
 .view-id-glossaire .view-content .views-field-title a{
   font-size: 1.4em;
 }
+/**********************************************************************************************************************/
+.tel{
+  background: url(images/phonevert.png) no-repeat 0 50%;
+  display: block;
+  padding-left: 40px;
+  color: #09AC32;
+  font-size: 1.4em;
+}
