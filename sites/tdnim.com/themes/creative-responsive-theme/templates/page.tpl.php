@@ -189,7 +189,7 @@
    <?php endif; ?>
       
     <div id="copyright">
-     <p class="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <?php print $site_name; ?> </p> <p class="credits"> <?php print t('Créé par'); ?>  <a href="http://www.coopernet.fr">Coopernet</a></p>
+     <p class="copyright"><span style="color: #FFF;">Tél : 04 66 29 09 44 </span>- <?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <?php print $site_name; ?> </p> <p class="credits"> <?php print t('Créé par'); ?>  <a href="http://www.coopernet.fr">Coopernet</a></p>
     <div class="clear"></div>
     </div>
   </div>
