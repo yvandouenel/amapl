@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function feature_event_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -21,7 +21,7 @@ function feature_event_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'En pratique',
-    'weight' => '8',
+    'weight' => '4',
     'children' => array(
       0 => 'field_scald_file',
       1 => 'field_event_place',
@@ -41,7 +41,7 @@ function feature_event_field_group_info() {
       ),
     ),
   );
-  $export['group_practical_event|node|event|default'] = $field_group;
+  $field_groups['group_practical_event|node|event|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -73,7 +73,12 @@ function feature_event_field_group_info() {
       'formatter' => 'collapsed',
     ),
   );
-  $export['group_registration_button|node|event|default'] = $field_group;
+  $field_groups['group_registration_button|node|event|default'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('En pratique');
+  t('S\'inscrire');
+
+  return $field_groups;
 }

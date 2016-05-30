@@ -54,6 +54,7 @@ function feature_event_default_registration_state() {
     "description" : "Registration was cancelled",
     "default_state" : "0",
     "active" : "0",
+    "held" : "0",
     "show_on_form" : "0",
     "weight" : "1",
     "rdf_mapping" : []
@@ -64,6 +65,7 @@ function feature_event_default_registration_state() {
     "description" : "Registration has been completed.",
     "default_state" : "1",
     "active" : "1",
+    "held" : "0",
     "show_on_form" : "0",
     "weight" : "1",
     "rdf_mapping" : []
@@ -74,6 +76,7 @@ function feature_event_default_registration_state() {
     "description" : "Registration is pending.",
     "default_state" : "0",
     "active" : "0",
+    "held" : "0",
     "show_on_form" : "0",
     "weight" : "1",
     "rdf_mapping" : []
@@ -90,8 +93,9 @@ function feature_event_default_registration_type() {
     "name" : "event_subscribe",
     "label" : "Inscription \\u00e9v\\u00e9nement",
     "locked" : "0",
-    "weight" : "0",
+    "default_state" : null,
     "data" : null,
+    "weight" : "0",
     "rdf_mapping" : []
   }');
   return $items;

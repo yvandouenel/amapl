@@ -134,6 +134,7 @@ function feature_event_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 32,
@@ -767,6 +768,7 @@ function feature_event_field_default_field_instances() {
         'label' => 'above',
         'module' => 'registration',
         'settings' => array(
+          'i18n_string_key' => NULL,
           'label' => ' S\'inscrire',
         ),
         'type' => 'registration_link',
@@ -1146,7 +1148,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -1186,7 +1188,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -1209,6 +1211,46 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
     'entity_type' => 'registration',
     'field_name' => 'field_ga_prenom',
     'label' => 'Prénom',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'debug',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'registration-event_subscribe-field_profession_registran'
+  $field_instances['registration-event_subscribe-field_profession_registran'] = array(
+    'bundle' => 'event_subscribe',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'registration',
+    'field_name' => 'field_profession_registran',
+    'label' => 'Profession',
     'required' => 1,
     'settings' => array(
       'context' => 'debug',
@@ -1266,7 +1308,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'show_token_tree' => 0,
       ),
       'type' => 'text_textarea',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -1306,7 +1348,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -1337,6 +1379,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
   t('Mots clés descriptifs de l\'événement pour une éventuelle liaison avec des pages classiques ou d\'atterrissage. Si le terme "Tout" est présent, merci de le laisser.
 Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré au moins 1 lettre.');
   t('Nom');
+  t('Profession');
   t('Prénom');
   t('Si plusieurs dates sont possibles, merci de préciser ici celle que vous avez choisie.');
   t('Sujet de la formation');
