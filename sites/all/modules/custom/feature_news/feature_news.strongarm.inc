@@ -98,6 +98,12 @@ function feature_news_strongarm() {
         'path' => array(
           'weight' => '1',
         ),
+        'metatags' => array(
+          'weight' => '17',
+        ),
+        'redirect' => array(
+          'weight' => '16',
+        ),
       ),
       'display' => array(),
     ),

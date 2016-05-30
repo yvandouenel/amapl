@@ -99,7 +99,7 @@ function feature_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -181,7 +181,7 @@ function feature_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -313,7 +313,7 @@ function feature_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -483,6 +483,50 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
     ),
   );
 
+  // Exported field_instance: 'node-news-field_news_track_click'
+  $field_instances['node-news-field_news_track_click'] = array(
+    'bundle' => 'news',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 25,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_news_track_click',
+    'label' => 'Tracker le click',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 12,
+    ),
+  );
+
   // Exported field_instance: 'node-news-field_news_url_target'
   $field_instances['node-news-field_news_url_target'] = array(
     'bundle' => 'news',
@@ -636,6 +680,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
   t('Mots clés');
   t('Mots clés descriptifs de l\'actualité pour une éventuelle liaison avec des pages classiques ou d\'atterrissage. Si le terme "Tout" est présent, merci de le laisser.
 Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré au moins 1 lettre.');
+  t('Tracker le click');
   t('URL de destination');
   t('Vidéo');
 

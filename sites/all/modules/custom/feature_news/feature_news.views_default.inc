@@ -232,6 +232,13 @@ function feature_news_views_default_views() {
     'link' => '0',
   );
   $handler->display->display_options['fields']['field_news_image']['group_column'] = 'sid';
+  /* Champ: Contenu : Tracker le click */
+  $handler->display->display_options['fields']['field_news_track_click']['id'] = 'field_news_track_click';
+  $handler->display->display_options['fields']['field_news_track_click']['table'] = 'field_data_field_news_track_click';
+  $handler->display->display_options['fields']['field_news_track_click']['field'] = 'field_news_track_click';
+  $handler->display->display_options['fields']['field_news_track_click']['label'] = '';
+  $handler->display->display_options['fields']['field_news_track_click']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_news_track_click']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Critère de tri: Draggableviews : Poids */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
