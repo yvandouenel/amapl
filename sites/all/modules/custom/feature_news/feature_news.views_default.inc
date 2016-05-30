@@ -106,6 +106,18 @@ function feature_news_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'news' => 'news',
   );
+  /* Critère de filtrage: Contenu : Dates de parution -  start date (field_news_publication_date) */
+  $handler->display->display_options['filters']['field_news_publication_date_value']['id'] = 'field_news_publication_date_value';
+  $handler->display->display_options['filters']['field_news_publication_date_value']['table'] = 'field_data_field_news_publication_date';
+  $handler->display->display_options['filters']['field_news_publication_date_value']['field'] = 'field_news_publication_date_value';
+  $handler->display->display_options['filters']['field_news_publication_date_value']['operator'] = '<=';
+  $handler->display->display_options['filters']['field_news_publication_date_value']['default_date'] = 'now';
+  /* Critère de filtrage: Contenu : Dates de parution - end date (field_news_publication_date:value2) */
+  $handler->display->display_options['filters']['field_news_publication_date_value2']['id'] = 'field_news_publication_date_value2';
+  $handler->display->display_options['filters']['field_news_publication_date_value2']['table'] = 'field_data_field_news_publication_date';
+  $handler->display->display_options['filters']['field_news_publication_date_value2']['field'] = 'field_news_publication_date_value2';
+  $handler->display->display_options['filters']['field_news_publication_date_value2']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_news_publication_date_value2']['default_date'] = 'now';
 
   /* Display: Page actualités */
   $handler = $view->new_display('page', 'Page actualités', 'page');
@@ -156,6 +168,13 @@ function feature_news_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '150',
   );
+  /* Champ: Contenu : Tracker le click */
+  $handler->display->display_options['fields']['field_news_track_click']['id'] = 'field_news_track_click';
+  $handler->display->display_options['fields']['field_news_track_click']['table'] = 'field_data_field_news_track_click';
+  $handler->display->display_options['fields']['field_news_track_click']['field'] = 'field_news_track_click';
+  $handler->display->display_options['fields']['field_news_track_click']['label'] = '';
+  $handler->display->display_options['fields']['field_news_track_click']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_news_track_click']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Critère de tri: Draggableviews : Poids */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';

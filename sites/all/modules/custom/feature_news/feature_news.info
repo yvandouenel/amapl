@@ -74,5 +74,5 @@ features[variable][] = node_options_news
 features[variable][] = node_preview_news
 features[variable][] = node_submitted_news
 features[views_view][] = news
-mtime = 1464598632
+mtime = 1464601722
 project path = sites/all/modules/custom
