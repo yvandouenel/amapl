@@ -1,5 +1,6 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
+.htaccess
 .idea/*
 .idea/workspace.xml 
 sites/all/modules/contrib/xray/
