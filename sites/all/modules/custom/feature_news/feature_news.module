@@ -19,8 +19,8 @@ function feature_news_views_pre_render(&$view) {
            ($view->name == 'news' && $view->current_display == 'block_2')) {
             foreach ($view->result as &$value) {
               $track = '';
-              if (sizeof($value->field_field_news_track_click) > 0 && $value->field_field_news_track_click[0]['raw']['value']){
-                $track = " onclick=\"ga('send', 'click', '" . $value->node_title . "', 'click')\" ";
+              if (isset($value->field_field_news_track_click) && sizeof($value->field_field_news_track_click) > 0 && $value->field_field_news_track_click[0]['raw']['value']){
+                $track = " onclick=\"ga('send', 'click', '" . addslashes($value->node_title) . "', 'click')\" ";
               }
   //Test if an url target is specified
               if (sizeof($value->field_field_news_url_target) > 0) {
