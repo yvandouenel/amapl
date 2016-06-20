@@ -194,11 +194,11 @@ function feature_references_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Voir toutes les jurisprudences sélectionnées';
+  $handler->display->display_options['use_more_text'] = 'Afficher les autres jurisprudences sélectionnées';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'page_1';
   $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '2';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['header'] = FALSE;
   /* Entête: Global : Texte non filtré */
@@ -301,7 +301,7 @@ function feature_references_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Voir la suite des textes';
+  $handler->display->display_options['use_more_text'] = 'Afficher les autres textes sélectionnés';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'page_2';
   $handler->display->display_options['pager']['type'] = 'some';
@@ -596,7 +596,7 @@ function feature_references_views_default_views() {
     t('Voir plus de références'),
     t('block références'),
     t('Sélection de jurisprudence'),
-    t('Voir toutes les jurisprudences sélectionnées'),
+    t('Afficher les autres jurisprudences sélectionnées'),
     t('<h4>[title]</h4>'),
     t('_blank'),
     t('_self'),
@@ -605,7 +605,7 @@ function feature_references_views_default_views() {
     t('<a href="[path]" target="[field_window_target]">[title]</a>
 [body]'),
     t('Sélection de textes'),
-    t('Voir la suite des textes'),
+    t('Afficher les autres textes sélectionnés'),
     t('<h3 class="ref-subtitles">Sélection de textes</h3>'),
     t('Téléchargements'),
     t('<h3 class="ref-subtitles">Téléchargements</h3>'),
