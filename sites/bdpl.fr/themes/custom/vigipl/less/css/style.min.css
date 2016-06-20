@@ -1622,6 +1622,7 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed{margin-left:24rem}
 #navbar-administration.navbar-oriented .navbar-tray-vertical{width:24rem}
 .glyphicon,[class*=" icon-"]:before,[class^=icon-]:before{font-family:fontello;font-weight:400;font-size:1em;display:inline-block;width:1em;margin-right:10px;text-align:center;text-transform:none;line-height:1em;color:#777;font-style:normal;speak:none;text-decoration:inherit;font-variant:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 @font-face{font-family:fontello;src:url(../fontello/font/fontello.eot?88707576);src:url(../fontello/font/fontello.eot?88707576#iefix) format('embedded-opentype'),url(../fontello/font/fontello.woff?88707576) format('woff'),url(../fontello/font/fontello.ttf?88707576) format('truetype'),url(../fontello/font/fontello.svg?88707576#fontello) format('svg');font-weight:400;font-style:normal}
+#block-system-main ul li,#main-content ul li,p{text-align:justify}
 [class*=" icon-"]:before,[class^=icon-]:before{position:relative;top:1px}
 h4,h5{font-weight:700}
 .field-name-body h3,h1,h3.h3-article-vigipl{text-transform:uppercase}
@@ -1647,7 +1648,7 @@ h5{margin-top:2em}
 .en-valeur{background-color:#f3f2f2;margin-bottom:2em}
 .orange{background-color:#FFBE00;color:#000;margin:5px 0 2em}
 a.orange{background-color:transparent;padding:0;font-family:inherit;color:#FF4E00;margin:0}
-p{line-height:1.5em;text-align:justify;padding-right:15px;margin:5px 0 20px}
+p{line-height:1.5em;padding-right:15px;margin:5px 0 20px}
 ol,ul{margin-bottom:20px}
 #summary-ref .field-name-body{background-color:#eee;padding:15px;margin:30px 0 15px;width:50%}
 table{border:1px solid #CCC;width:100%;border-collapse:collapse;border-spacing:0;margin-bottom:2em}
