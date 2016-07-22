@@ -1661,6 +1661,7 @@ table tbody{border-top:1px solid #ccc}
 table td,table th{padding:4px 8px;vertical-align:middle}
 table td{border-bottom:1px solid grey;border-right:1px solid grey}
 table th,table thead th{background:#f7f7f7;border-bottom:1px solid #ccc;color:#333}
+.break-line{height:16px}
 body.toolbar-drawer{padding-top:10px!important}
 body.role-administrator .navbar.container,body.role-webmaster .navbar.container{margin-top:-10px}
 .navbar.container,.navbar.container-fluid{margin-top:0}
