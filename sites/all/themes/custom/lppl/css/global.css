@@ -878,7 +878,11 @@ body.front .block-news-home .views-field-field-news-image img{
 .en-valeur{
   font-size: 1.5em;
 }
-
+/* Articles ***********************************************************************************************************/
+.field-name-field-article-encart{
+    background-color: #EEE;
+    padding: 10px;
+}
 
 
 
