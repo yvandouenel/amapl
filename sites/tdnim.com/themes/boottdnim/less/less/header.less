@@ -1,0 +1,81 @@
+body.logged-in{
+  .navbar-default{
+    margin-top: 0px;
+  }
+}
+.navbar-default{
+  background-color: white;
+  #baseline{
+    float: left;
+    margin:0;
+    @media (min-width: @screen-md) {
+      margin-top: 42px;
+    }
+    padding: 0 !important;
+    font-size: 1.5em;
+    a{
+      font-family: gothambold;
+      color: @vert;
+      margin: 10px 0 0 0;
+      padding: 0;
+    }
+  }
+  #slogan{
+    font-family: gothamlight;
+    font-weight: 300;
+    display: block;
+  }
+  .navbar-collapse{
+    > nav {
+      clear: both;
+    }
+    #first-menu {
+      float: left;
+      a{
+        font-family: gothambold;
+      }
+      ul.navbar-nav{
+        padding-bottom: 11px;
+        background: url(../images/under-menu.png) no-repeat 0 100%;
+        padding-right: 7px;
+        > li {
+          > a{
+            border-radius: 6px 6px 0 0;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            color: #000;
+            background-color: transparent;
+
+          }
+          &.active-trail, &.active {
+            > a {
+              border: 1px solid #e7e7e7;
+              border-bottom: 0;
+            }
+          }
+        }
+
+      }
+
+    }
+    #second-menu {
+      float: right;
+      margin-top: 12px;
+      ul.menu{
+        background-color: @gris-fonce;
+        display: table;
+        > li{
+          display: table-cell;
+          a{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: @presque-noir;
+          }
+        }
+      }
+      a{
+        font-family: gothamlight;
+      }
+    }
+  }
+}
