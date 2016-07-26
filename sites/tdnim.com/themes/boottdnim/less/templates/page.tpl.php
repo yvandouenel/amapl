@@ -116,6 +116,17 @@
     <?php endif; ?>
   </div>
 </header>
+<?php if ($is_front): ?>
+  <div class="home-headband">
+    <div class="table-home-headband">
+      <div class="home-headband-left"></div>
+      <div class="container container-home-headband"><h2 id="title-home-headband">Télétransmission sécurisée de <br />
+        vos déclarations fiscales et sociales</h2></div>
+      <div class="home-headband-right"></div>
+    </div>
+  </div>
+<?php endif; ?>
+
 
 <div class="main-container <?php print $container_class; ?>">
 
