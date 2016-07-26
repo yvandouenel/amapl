@@ -1,50 +1,135 @@
-.home-headband{
-  margin-top: 64px;
-  .table-home-headband{
-    display: table;
-    width:100%;
-    @media (min-width: @screen-md) {
-      height: 427px;
-    }
-
-    .home-headband-left{
-      display: table-cell;
-      padding: 0;
-      margin: 0;
-      @media (min-width: @screen-md){
-        background: #466586 url(../images/bandeau_home_img_left.jpg) no-repeat 100% 0;
-      }
-    }
-    .container-home-headband{
-      margin:0;
-      display: table-cell;
-      color: black;
-      #title-home-headband{
-        font-family: gothambook;
-        padding: 20px;
-      }
+#home-content{
+  background-color: @gris-fonce;
+  .home-headband{
+    margin-top: 64px;
+    .table-home-headband{
+      display: table;
+      width:100%;
       @media (min-width: @screen-md) {
-        background: @gris-clair url(../images/bandeau_home_img_right.jpg) no-repeat 0 0;
-        #title-home-headband{
-          margin-top: 150px;
-          margin-left: 20px;
-          font-family: gothambook;
-          padding: 0;
-          color: #FFF;
+        height: 427px;
+        overflow: hidden;
+      }
+
+      .home-headband-left{
+        display: table-cell;
+        padding: 0;
+        margin: 0;
+        @media (min-width: @screen-md){
+          background: #466586 url(../images/bandeau_home_img_left.jpg) no-repeat 100% 0;
         }
       }
-      @media (max-width: @screen-md) {
-        background-color: @gris-fonce;
-        border: 15px solid white;
+      .container-home-headband{
+        margin:0;
+        display: table-cell;
+        color: black;
+        #title-home-headband{
+          font-family: gothambook;
+          padding: 20px;
+        }
+        @media (min-width: @screen-md) {
+          background: @gris-clair url(../images/bandeau_home_img_right.jpg) no-repeat 0 0;
+          #title-home-headband{
+            margin-top: 150px;
+            margin-left: 20px;
+            font-family: gothambook;
+            padding: 0;
+            color: #FFF;
+          }
+          .block-views{
+            background-color: @gris-clair;
+            @media (max-width: @screen-lg){
+              padding: 10px 20px;
+            }
+            width:320px;
+            margin-left:auto;
+            margin-right: 0;
+            h2{
+              color: @mauve;
+              font-family: gothambook;
+              text-transform: uppercase;
+              margin-top: 30px;
+            }
+
+            .views-row{
+              border-bottom: 1px solid @mauve;
+              margin-bottom: 10px;
+              padding-bottom: 10px;
+              &.views-row-last{
+                border-bottom: 0;
+                margin-bottom: 20px;
+                padding-bottom: 0;
+              }
+              h3 > a{
+                font-family: gothambook;
+                color: #000;
+                font-size: 0.6em;
+                &:before{
+                  .glyphicon();
+                  content: "\e834";
+                  color: @mauve;
+                  font-weight:400;
+                  margin-right: 5px;
+                }
+              }
+              .field-content{
+                font-family: gothamlight;
+                color: @presque-noir;
+              }
+              .views-field-body{
+                max-height: 60px;
+                overflow: hidden;
+              }
+            }
+            .more-link{
+              border: 1px solid @presque-noir;
+              -webkit-border-radius: 4px;
+              -moz-border-radius: 4px;
+              border-radius: 4px;
+              background-color: white;
+              a{
+                display: block;
+                font-family: gothambold;
+                text-align: center;
+                color: @presque-noir;
+                padding: 10px;
+                text-transform: uppercase;
+                font-size: 0.8em;
+              }
+            }
+          }
+        }
+        @media (max-width: @screen-md) {
+          background-color: @gris-fonce;
+          border: 15px solid white;
+          .col-md-8{
+            border-bottom: 15px solid white;
+          }
+          .block-views{
+            padding: 15px;
+          }
+
+        }
+        padding: 0;
+        margin: 0;
       }
-      padding: 0;
-      margin: 0;
+      .home-headband-right{
+        display: table-cell;
+        background-color: @gris-clair;
+        padding: 0;
+        margin: 0;
+      }
     }
-    .home-headband-right{
-      display: table-cell;
-      background-color: @gris-clair;
-      padding: 0;
-      margin: 0;
+  }
+  .block-bean{
+    background-color: white;
+    padding: 15px;
+    margin: 20px 0;
+    -webkit-border-radius:6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    h2{
+      font-family: gothamlight;
+      font-size: 1.6em;
     }
   }
 }

@@ -6,16 +6,29 @@ body.logged-in{
 button.navbar-toggle{
   position: absolute;
   margin-left: 20px;
+  top: 50px;
+  right: 10px;
+  z-index: 3;
+  background-color: white;
 }
 
 .navbar-default{
   background-color: white;
   border: 0;
+  a.logo{
+    img{
+      max-width: 80%;
+    }
+  }
   #baseline{
     float: left;
     margin:0;
-    @media (min-width: @screen-md) {
+    @media (min-width: @screen-lg) {
       margin-top: 42px;
+    }
+    @media (max-width: @screen-md) {
+      margin-left: 20px;
+      font-size: 1em;
     }
     padding: 0 !important;
     font-size: 1.5em;
@@ -30,6 +43,9 @@ button.navbar-toggle{
     font-family: gothamlight;
     font-weight: 300;
     display: block;
+    @media (max-width: @screen-md) {
+      margin-left: 20px;
+    }
   }
   .navbar-collapse{
     > nav {
@@ -42,8 +58,11 @@ button.navbar-toggle{
       }
       ul.navbar-nav{
         padding-bottom: 11px;
-        background: url(../images/under-menu.png) no-repeat 0 100%;
-        padding-right: 7px;
+        @media (min-width: @screen-md) {
+          background: url(../images/under-menu.png) no-repeat 0 100%;
+          padding-right: 7px;
+        }
+
         > li {
           > a{
             border-radius: 6px 6px 0 0;
@@ -51,12 +70,13 @@ button.navbar-toggle{
             padding-top: 5px;
             color: #000;
             background-color: transparent;
-
           }
           &.active-trail, &.active {
+            @media (min-width: @screen-md) {
             > a {
               border: 1px solid #e7e7e7;
               border-bottom: 0;
+             }
             }
           }
         }
@@ -69,13 +89,36 @@ button.navbar-toggle{
       margin-top: 12px;
       ul.menu{
         background-color: @gris-fonce;
-        display: table;
+        @media (min-width: @screen-sm) {
+          display: table;
+        }
+
         > li{
-          display: table-cell;
+          @media (min-width: @screen-sm) {
+            display: table-cell;
+          }
           a{
+            @media (min-width: @screen-sm) {
+              padding: 5px 21px;
+            }
             padding-top: 5px;
             padding-bottom: 5px;
             color: @presque-noir;
+          }
+          &.last{
+            a{
+              color: #000;
+              padding-left: 20px;
+            }
+            position: relative;
+              :before{
+              .glyphicon();
+                content: "\e81C";
+                position: absolute;
+                left: 5px;
+                top: 7px;
+                color: #000;
+            }
           }
         }
       }
