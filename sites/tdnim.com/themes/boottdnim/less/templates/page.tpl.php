@@ -117,12 +117,44 @@
   </div>
 </header>
 <?php if ($is_front): ?>
-  <div class="home-headband">
-    <div class="table-home-headband">
-      <div class="home-headband-left"></div>
-      <div class="container container-home-headband"><h2 id="title-home-headband">Télétransmission sécurisée de <br />
-        vos déclarations fiscales et sociales</h2></div>
-      <div class="home-headband-right"></div>
+  <div id="home-content">
+    <div class="home-headband">
+      <div class="table-home-headband">
+        <div class="home-headband-left"></div>
+        <div class="container container-home-headband">
+          <div class="row">
+            <div class="col-md-8">
+              <h2 id="title-home-headband">Télétransmission sécurisée de <br/>
+                vos déclarations fiscales et sociales</h2>
+            </div>
+            <div class="col-md-4">
+              <?php if (!empty($page['home_headband'])): ?>
+                <?php print render($page['home_headband']); ?>
+              <?php endif; ?>
+            </div>
+          </div>
+        </div>
+        <div class="home-headband-right"></div>
+      </div>
+    </div>
+    <div id="home-3-cols" class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <?php if (!empty($page['home_col_1'])): ?>
+            <?php print render($page['home_col_1']); ?>
+          <?php endif; ?>
+        </div>
+        <div class="col-md-4">
+          <?php if (!empty($page['home_col_2'])): ?>
+            <?php print render($page['home_col_2']); ?>
+          <?php endif; ?>
+        </div>
+        <div class="col-md-4">
+          <?php if (!empty($page['home_col_3'])): ?>
+            <?php print render($page['home_col_3']); ?>
+          <?php endif; ?>
+        </div>
+      </div>
     </div>
   </div>
 <?php endif; ?>
@@ -131,9 +163,6 @@
 <div class="main-container <?php print $container_class; ?>">
 
   <header role="banner" id="page-header">
-    <?php if (!empty($site_slogan)): ?>
-      <p class="lead"><?php print $site_slogan; ?></p>
-    <?php endif; ?>
 
     <?php print render($page['header']); ?>
   </header> <!-- /#page-header -->
