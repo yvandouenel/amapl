@@ -1007,7 +1007,6 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 .navbar-right{float:right!important;margin-right:-15px}
 .navbar-right~.navbar-right{margin-right:0}
 }
-.navbar-default{border-color:#e7e7e7}
 .navbar-default .navbar-brand{color:#777}
 .navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:hover{color:#5e5e5e;background-color:transparent}
 .navbar-default .navbar-nav>li>a,.navbar-default .navbar-text{color:#777}
@@ -1627,9 +1626,11 @@ body.navbar-is-fixed-top.navbar-administration{padding-top:103px!important}
 body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open{padding-top:143px!important}
 body.navbar-tray-open.navbar-vertical.navbar-fixed{margin-left:24rem}
 #navbar-administration.navbar-oriented .navbar-tray-vertical{width:24rem}
-.navbar-default{background-color:#fff}
+button.navbar-toggle{position:absolute;margin-left:20px}
+.navbar-default{background-color:#fff;border:0}
 .navbar-default #baseline{float:left;margin:0;padding:0!important;font-size:1.5em}
 @media (min-width:992px){.navbar-default #baseline{margin-top:42px}
+.home-headband .table-home-headband{height:427px}
 }
 .navbar-default #baseline a{font-family:gothambold;color:#add302;margin:10px 0 0;padding:0}
 .navbar-default #slogan{font-family:gothamlight;font-weight:300;display:block}
@@ -1643,6 +1644,18 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed{margin-left:24rem}
 .navbar-default .navbar-collapse #second-menu ul.menu>li{display:table-cell}
 .navbar-default .navbar-collapse #second-menu ul.menu>li a{padding-top:5px;padding-bottom:5px;color:#252525}
 .navbar-default .navbar-collapse #second-menu a{font-family:gothamlight}
+.home-headband{margin-top:64px}
+.home-headband .table-home-headband{display:table;width:100%}
+.home-headband .table-home-headband .home-headband-left{display:table-cell;padding:0;margin:0}
+.home-headband .table-home-headband .container-home-headband{display:table-cell;color:#000;padding:0;margin:0}
+.home-headband .table-home-headband .container-home-headband #title-home-headband{font-family:gothambook;padding:20px}
+@media (min-width:992px){.home-headband .table-home-headband .home-headband-left{background:url(../images/bandeau_home_img_left.jpg) 100% 0 no-repeat #466586}
+.home-headband .table-home-headband .container-home-headband{background:url(../images/bandeau_home_img_right.jpg) no-repeat #fafafa}
+.home-headband .table-home-headband .container-home-headband #title-home-headband{margin-top:150px;margin-left:20px;font-family:gothambook;padding:0;color:#FFF}
+}
+@media (max-width:992px){.home-headband .table-home-headband .container-home-headband{background-color:#f1f1f1;border:15px solid #fff}
+}
+.home-headband .table-home-headband .home-headband-right{display:table-cell;background-color:#fafafa;padding:0;margin:0}
 @font-face{font-family:gothambold;src:url(../fonts/gothambold1.eot);src:url(../fonts/gothambold1.eot?#iefix) format('embedded-opentype'),url(../fonts/gothambold1.woff) format('woff'),url(../fonts/gothambold1.ttf) format('truetype')}
 @font-face{font-family:gothamlight;src:url(../fonts/GothamLight.eot);src:url(../fonts/GothamLight.eot?#iefix) format('embedded-opentype'),url(../fonts/GothamLight.woff) format('woff'),url(../fonts/GothamLight.ttf) format('truetype')}
 @font-face{font-family:gothambook;src:url(../fonts/GothamBook.eot);src:url(../fonts/GothamBook.eot?#iefix) format('embedded-opentype'),url(../fonts/GothamBook.woff) format('woff'),url(../fonts/GothamBook.ttf) format('truetype')}

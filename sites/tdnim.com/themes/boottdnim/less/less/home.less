@@ -1,0 +1,50 @@
+.home-headband{
+  margin-top: 64px;
+  .table-home-headband{
+    display: table;
+    width:100%;
+    @media (min-width: @screen-md) {
+      height: 427px;
+    }
+
+    .home-headband-left{
+      display: table-cell;
+      padding: 0;
+      margin: 0;
+      @media (min-width: @screen-md){
+        background: #466586 url(../images/bandeau_home_img_left.jpg) no-repeat 100% 0;
+      }
+    }
+    .container-home-headband{
+      margin:0;
+      display: table-cell;
+      color: black;
+      #title-home-headband{
+        font-family: gothambook;
+        padding: 20px;
+      }
+      @media (min-width: @screen-md) {
+        background: @gris-clair url(../images/bandeau_home_img_right.jpg) no-repeat 0 0;
+        #title-home-headband{
+          margin-top: 150px;
+          margin-left: 20px;
+          font-family: gothambook;
+          padding: 0;
+          color: #FFF;
+        }
+      }
+      @media (max-width: @screen-md) {
+        background-color: @gris-fonce;
+        border: 15px solid white;
+      }
+      padding: 0;
+      margin: 0;
+    }
+    .home-headband-right{
+      display: table-cell;
+      background-color: @gris-clair;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
