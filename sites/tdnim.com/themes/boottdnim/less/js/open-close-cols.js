@@ -62,4 +62,18 @@ jQuery(function($) {
 
         });
     }
+    /* Page tarifs ****************************************************************************************************/
+    if($('.tarif').length) {
+        // Cache toutes les descriptions de tarif
+        $(".detail-tarif").hide();
+        // Donne la class closed-tarif à tous les titres
+        $(".tarif-open-close").addClass('closed-tarif');
+
+        $(".tarif-open-close").click(function(){
+            var context = $(this).parent(".tarif");
+            $(".detail-tarif", context).slideToggle();
+            $(".tarif-open-close", context).toggleClass('closed-tarif opened-tarif');
+        })
+
+    }
 });
