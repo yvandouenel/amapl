@@ -4,9 +4,12 @@ img{
 p{
   font-family: gothamlight;
 }
+.bold{
+  font-weight: bold;
+}
 
 /* titres *************************************************************************************************************/
-h3{
+h3,h4{
   font-family: gothamlight;
 }
 .sous-titre{
@@ -32,6 +35,23 @@ h3{
   .sous-titre();
   &:after{
     background-color: @vert-clair;
+  }
+}
+.sous-titre-bleu-fonce{
+  &:after{
+    background-color: @bleu-fonce;
+  }
+}
+.sous-titre-noir{
+  &:after{
+    background-color: #000;
+  }
+}
+.fleche-vert-clair{
+  &:before{
+    .glyphicon();
+    content: "\e839";
+    color: @vert-clair;
   }
 }
 /* Fil d'Ariane *******************************************************************************************************/

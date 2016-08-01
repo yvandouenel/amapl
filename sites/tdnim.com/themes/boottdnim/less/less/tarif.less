@@ -1,0 +1,42 @@
+.tarif-open-close{
+  color: @vert-clair;
+  &:before{
+    .glyphicon();
+    content: "\e83D";
+    color: @vert-clair;
+  }
+  &:hover{
+    cursor: pointer;
+  }
+  &.opened-tarif{
+    &:before{
+      content: "\e867";
+    }
+  }
+}
+.tarif{
+  table{
+    td, th{
+      border: 1px solid @gris-fonce;
+      @media (max-width: @screen-sm) {
+        padding: 3px;
+      }
+      padding: 15px;
+      &.wo-left{
+        border-left:0;
+      }
+      &.wo-right{
+        border-right:0;
+      }
+      &.wo-top{
+        border-top:0;
+      }
+      &.wo-bottom{
+        border-bottom:0;
+      }
+      h4{
+        .fleche-vert-clair();
+      }
+    }
+  }
+}
