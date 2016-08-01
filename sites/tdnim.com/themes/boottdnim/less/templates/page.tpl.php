@@ -73,7 +73,7 @@
  * @ingroup templates
  */
 ?>
-<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
+<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>" xmlns="http://www.w3.org/1999/html">
   <div class="<?php print $container_class; ?>">
     <div class="navbar-header">
       <?php if ($logo): ?>
@@ -159,57 +159,95 @@
   </div>
 <?php endif; ?>
 
-
-<div class="main-container <?php print $container_class; ?>">
-
-  <header role="banner" id="page-header">
-
-    <?php print render($page['header']); ?>
-  </header> <!-- /#page-header -->
-
-  <div class="row">
-
-    <?php if (!empty($page['sidebar_first'])): ?>
-      <aside class="col-sm-3" role="complementary">
-        <?php print render($page['sidebar_first']); ?>
-      </aside>  <!-- /#sidebar-first -->
+<div class="under_main_container">
+  <div class="main-container <?php print $container_class; ?>">
+    <?php if (!$is_front): ?>
+      <div class="zone-rigth-fixed">
+        <div class="inscription-fixed element-fixed"><a href="https://tele.tdnim.com/inscription/"><span>S'inscrire</span></a></div>
+        <div class="question-fixed element-fixed"><a href="/contact"><span>Une question ?</span></a></div>
+        <div class="appel-fixed element-fixed">
+          <div class="fixed-call"><span id="call-us">Nous appeler</span>
+            <span class="tel">04 66 29 09 44</span>
+            <span class="small">du lundi au vendredi de 9h à 17h</span>
+          </div>
+        </div>
+      </div>
     <?php endif; ?>
+    <header role="banner" id="page-header">
 
-    <section<?php print $content_column_class; ?>>
-      <?php if (!empty($page['highlighted'])): ?>
-        <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-      <?php endif; ?>
-      <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
-      <a id="main-content"></a>
-      <?php print render($title_prefix); ?>
-      <?php if (!empty($title)): ?>
-        <h1 class="page-header"><?php print $title; ?></h1>
-      <?php endif; ?>
-      <?php print render($title_suffix); ?>
-      <?php print $messages; ?>
-      <?php if (!empty($tabs)): ?>
-        <?php print render($tabs); ?>
-      <?php endif; ?>
-      <?php if (!empty($page['help'])): ?>
-        <?php print render($page['help']); ?>
-      <?php endif; ?>
-      <?php if (!empty($action_links)): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
-      <?php print render($page['content']); ?>
-    </section>
+      <?php print render($page['header']); ?>
+    </header> <!-- /#page-header -->
 
-    <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-3" role="complementary">
-        <?php print render($page['sidebar_second']); ?>
-      </aside>  <!-- /#sidebar-second -->
-    <?php endif; ?>
+    <div class="row">
 
+      <?php if (!empty($page['sidebar_first'])): ?>
+        <aside class="col-sm-3" role="complementary">
+          <?php print render($page['sidebar_first']); ?>
+        </aside>  <!-- /#sidebar-first -->
+      <?php endif; ?>
+
+      <section<?php print $content_column_class; ?>>
+        <?php if (!empty($page['highlighted'])): ?>
+          <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
+        <?php endif; ?>
+        <?php if (!empty($breadcrumb)): print $breadcrumb; endif; ?>
+        <a id="main-content"></a>
+        <?php print render($title_prefix); ?>
+        <?php if (!empty($title)): ?>
+          <h1 class="page-header"><?php print $title; ?></h1>
+        <?php endif; ?>
+        <?php print render($title_suffix); ?>
+        <?php print $messages; ?>
+        <?php if (!empty($tabs)): ?>
+          <?php print render($tabs); ?>
+        <?php endif; ?>
+        <?php if (!empty($page['help'])): ?>
+          <?php print render($page['help']); ?>
+        <?php endif; ?>
+        <?php if (!empty($action_links)): ?>
+          <ul class="action-links"><?php print render($action_links); ?></ul>
+        <?php endif; ?>
+        <?php print render($page['content']); ?>
+      </section>
+
+      <?php if (!empty($page['sidebar_second'])): ?>
+        <aside class="col-sm-3" role="complementary">
+          <?php print render($page['sidebar_second']); ?>
+        </aside>  <!-- /#sidebar-second -->
+      <?php endif; ?>
+
+    </div>
   </div>
 </div>
-
-<?php if (!empty($page['footer'])): ?>
+<div class="under-footer">
   <footer class="footer <?php print $container_class; ?>">
-    <?php print render($page['footer']); ?>
+    <div class="row">
+      <div class="col-md-8">
+        <?php if (!empty($page['footer_col_1'])): ?>
+          <?php print render($page['footer_col_1']); ?>
+        <?php endif; ?>
+
+      </div>
+      <div class="col-md-4 col-logo-bas">
+        <div class="logo-bas">
+          <img src="/sites/tdnim.com/themes/boottdnim/less/images/logo_tdnim_bas.png" alt="logo tdnim" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-8 col-menu-2-bas">
+        <?php print render($page['footer_col_2']); ?>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 coordonnees-bas">
+        <div>
+          Tél : 04 66 29 09 44 - Copyright © 2016, Portail déclaratif sécurisé des télédéclarations fiscales et sociales
+        </div>
+      </div>
+      <div class="col-md-4 mentions-legales">
+        <a href="mentions-legales" id="link-mentions-legales">Mentions légales</a>
+      </div>
+    </div>
   </footer>
-<?php endif; ?>
+</div>

@@ -19,7 +19,8 @@ regions[home_col_3]     = 'Home col 3'
 regions[content]        = 'Content'
 regions[sidebar_first]  = 'Primary'
 regions[sidebar_second] = 'Secondary'
-regions[footer]         = 'Footer'
+regions[footer_col_1]   = 'Footer col 1'
+regions[footer_col_2]   = 'Footer col 2'
 regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
 
@@ -47,6 +48,8 @@ scripts[] = 'bootstrap/js/popover.js'
 scripts[] = 'bootstrap/js/scrollspy.js'
 scripts[] = 'bootstrap/js/tab.js'
 scripts[] = 'bootstrap/js/transition.js'
+
+scripts[] = 'js/open-close-cols.js'
 
 ; Disable BootstrapCDN so the compiled LESS source files can be used.
 settings[bootstrap_cdn] = ''
