@@ -791,6 +791,18 @@
       "src": "elusive"
     },
     {
+      "uid": "eeadb020bb75d089b25d8424aabe19e0",
+      "css": "minus-circled",
+      "code": 59495,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "3eb93689881ad0804f87052a53edc2b6",
+      "css": "minus-circled-1",
+      "code": 59496,
+      "src": "entypo"
+    },
+    {
       "uid": "71eb5394e96ba64106e09db1dc530ada",
       "css": "c-crealead",
       "code": 59461,
