@@ -1,3 +1,245 @@
 img{
   max-width: 100%;
 }
+p{
+  font-family: gothamlight;
+}
+
+/* titres *************************************************************************************************************/
+h3{
+  font-family: gothamlight;
+}
+.sous-titre{
+  font-family: gothamlight;
+  margin-top: 0;
+  &:after{
+    content: '';
+    display: block;
+    width: 50%;
+    height: 5px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    margin-top: 4px;
+  }
+}
+.sous-titre-vert-fonce{
+  &:after{
+    background-color: @vert-fonce;
+  }
+}
+.sous-titre-vert-clair{
+  .sous-titre();
+  &:after{
+    background-color: @vert-clair;
+  }
+}
+/* Fil d'Ariane *******************************************************************************************************/
+.breadcrumb{
+  position: absolute;
+  top: 60px;
+  display: none;
+}
+.bouton-lien{
+  color: white;
+  background-color: @bleu-fonce;
+  display: block;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: gothambook;
+  padding: 3px;
+  &:hover{
+    background-color: black;
+    text-decoration: none;
+  }
+}
+.black, .noir{
+  color: #000;
+}
+.lien-fleche-violette{
+  position: relative;
+  display: block;
+  padding-left: 30px;
+  color: @gris-texte;
+  font-size: 1.5em;
+  &:before{
+    .glyphicon();
+    content: "\e834";
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    color: @violet;
+  }
+}
+.tel{
+  color: @violet;
+  font-family: gothambold;
+  font-size: 1.6em;
+}
+/* Corps du site ******************************************************************************************************/
+body{
+  background-color: #F1F1F1;
+}
+body.logged-in{
+  .under_main_container{
+    margin-top: 44px;
+  }
+}
+body.front{
+  .under_main_container{
+    display: none;
+  }
+}
+.under_main_container{
+  background: @gris-fonce url(../images/bandeau_top_left_node.jpg) no-repeat 0 0;
+  margin-top: 70px;
+  > .main-container{
+    padding-top: 18px;
+    background: @gris-fonce url(../images/bandeau_top_node.jpg) no-repeat 0 0;
+  }
+}
+body.page-node{
+  .field-name-body .field-item{
+    padding: 20px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 6px;
+    h2{
+      .sous-titre();
+    }
+  }
+}
+.texte-fleche-verte{
+  &:before{
+    .glyphicon();
+    content: "\e839";
+    color: @vert-clair;
+  }
+}
+/* Menu droite fixed **************************************************************************************************/
+.main-container{
+  .zone-rigth-fixed{
+    @media (min-width: @screen-lg) {
+      margin-left: 1140px;
+      width: 160px;
+    }
+    @media (min-width: @screen-md) and (max-width: @screen-lg) {
+      margin-left: 940px;
+    }
+    @media (max-width: @screen-md) {
+      bottom:0px;
+      margin: 0 -15px;
+      width:100%;
+      background-color: white;
+      display: table;
+      .element-fixed {
+        display: table-cell;
+        width: 15% !important;
+        a, div.fixed-call {
+          padding: 0;
+          &:before{
+            font-size: 0.8em !important;
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+            width:20px !important;
+            height: 20px !important;
+            margin-top: 8px !important;
+            border-radius: 0;
+          }
+        }
+        &.question-fixed{
+          width: 24% !important;
+        }
+        &.appel-fixed{
+          width: 28% !important;
+          div.fixed-call{
+            #call-us{
+              display: none;
+            }
+            &:before{
+              display: none;
+            }
+            .tel{
+              font-size: 1em;
+              padding-left: 3px;
+            }
+            .small{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    position: fixed;
+    margin-top: 0px;
+    z-index: 5;
+    .element-fixed{
+      a, div.fixed-call{
+        color: @gris-texte;
+        height: 50px;
+        display: block;
+        padding: 5px;
+        border-bottom: 1px solid #CfCfCf;
+        &:before{
+          .glyphicon();
+          content: "\e865";
+          color: @violet;
+          background-color: white;
+          padding: 7px 5px 5px 5px;
+          border-radius: 20px;
+          width: 40px;
+          height: 40px;
+          display: block;
+          font-size: 1.6em;
+          float: left;
+        }
+        span{
+          display: block;
+          padding-top: 10px;
+        }
+        &:hover{
+          text-decoration: none;
+          background-color: white;
+          &:before{
+            background-color: black;
+          }
+        }
+      }
+    }
+    .question-fixed{
+      a{
+        margin-top: 10px;
+        &:before{
+          content: "\e866";
+        }
+      }
+    }
+    .appel-fixed{
+      div.fixed-call{
+        margin-top: 10px;
+        height:auto;
+        border-bottom: 0;
+        &:before{
+          content: "\e828";
+        }
+        .tel{
+          font-size: 1.2em;
+          display: block;
+          padding: 0 0 0 10px;
+          margin: 0;
+          clear: both;
+        }
+        .small{
+          font-size: 0.7em;
+          color: @gris-texte;
+          display: block;
+          padding: 0 0 0 10px;
+        }
+      }
+    }
+  }
+}

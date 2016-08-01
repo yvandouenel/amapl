@@ -7,6 +7,10 @@ button.navbar-toggle{
   position: absolute;
   margin-left: 20px;
   top: 50px;
+  @media (max-width: @screen-xs){
+    top: 20px;
+    right: 0;
+  }
   right: 10px;
   z-index: 3;
   background-color: white;
@@ -70,6 +74,9 @@ button.navbar-toggle{
             padding-top: 5px;
             color: #000;
             background-color: transparent;
+            &:hover{
+              background-color: @gris-fonce;
+            }
           }
           &.active-trail, &.active {
             @media (min-width: @screen-md) {

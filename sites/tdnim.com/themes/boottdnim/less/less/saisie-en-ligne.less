@@ -1,0 +1,90 @@
+.all-small-col{
+  .small-col{
+    float: left;
+    @media (max-width: @screen-sm) {
+      &.small-col-selected {
+        float: none;
+        clear: both;
+      }
+    }
+    h3{
+      margin-right: 20px;
+      border: 2px solid @bleu-clair;
+      color: @bleu-clair;
+      border-radius: 0 0 8px 0;
+      padding: 10px;
+      &:hover{
+        cursor: pointer;
+      }
+      &.h3-not-selected{
+        border: 2px solid @gris-fonce;
+        color: @gris-texte;
+        &:after{
+          color: @gris-fonce;
+        }
+        &.h3-initial{
+          border: 2px solid @bleu-fonce;
+          color: @bleu-fonce;
+          &:after{
+            color: @bleu-fonce;
+          }
+        }
+      }
+      &.h3-selected{
+        &:after{
+          color: @bleu-clair;
+        }
+      }
+      &:after{
+        .glyphicon();
+        content: "\e864";
+        display: block;
+        font-size: 2em;
+        color: @bleu-fonce;
+      }
+    }
+    h4{
+      &:before{
+        .glyphicon();
+        content: "\e839";
+        color: @vert-clair;
+      }
+
+    }
+
+  }
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .results-below{
+    clear: both;
+    position: relative;
+    .close-button {
+      position: absolute;
+      right: 3px;
+      z-index: 1;
+      border : 1px solid @vert-clair;
+      border-radius: 15px;
+      &:hover{
+        cursor: pointer;
+      }
+      &:before{
+        .glyphicon();
+        content: "\e832";
+        color: @vert-clair;
+        margin: 3px 5px 5px 5px;
+      }
+    }
+    h4{
+      &:before{
+        .glyphicon();
+        content: "\e839";
+        color: @vert-clair;
+      }
+
+    }
+  }
+}
+

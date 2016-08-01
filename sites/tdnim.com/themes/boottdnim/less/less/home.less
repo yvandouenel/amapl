@@ -40,9 +40,9 @@
             @media (max-width: @screen-lg){
               padding: 10px 20px;
             }
-            width:320px;
+            width:305px;
             margin-left:auto;
-            margin-right: 0;
+            margin-right: 15px;
             h2{
               color: @mauve;
               font-family: gothambook;
@@ -120,6 +120,7 @@
       }
     }
   }
+
   .block-bean{
     background-color: white;
     padding: 15px;
@@ -130,6 +131,132 @@
     h2{
       font-family: gothamlight;
       font-size: 1.6em;
+      margin-top: 0;
+      &:after{
+        content: '';
+        display: block;
+        width: 50%;
+        height: 5px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        margin-top: 4px;
+      }
+    }
+    ul{
+      li{
+        span{
+          color: @presque-noir;
+        }
+      }
+    }
+    h3{
+      color: black;
+    }
+    &.block-home-service{
+      h2:after{
+        background-color: @vert-clair;
+      }
+      ul{
+        color: @vert-clair;
+      }
+    }
+    &.block-home-abonnement{
+      h2:after{
+        background-color: @bleu-fonce;
+      }
+      p a{
+        .bouton-lien();
+      }
+      .prix-abonnement{
+        background: url(../images/calc_euros.gif) no-repeat 0 0;
+        padding-left: 160px;
+        margin-bottom: 20px;
+        min-height: 104px;
+        p{
+          font-size: 0.8em;
+          color: @gris-texte;
+        }
+      }
+    }
+    &.block-home-saisie{
+      h2:after{
+        background-color: @bleu-clair;
+      }
+      p a{
+        .bouton-lien();
+        background-color: @bleu-clair;
+      }
+      .saisie-en-ligne{
+        background: url(../images/saisie-ligne.jpg) no-repeat 0 0;
+        padding-left: 160px;
+        margin-bottom: 20px;
+        min-height: 104px;
+        p{
+          font-size: 0.8em;
+          color: @gris-texte;
+        }
+      }
+    }
+    &.block-home-edi{
+      h2:after{
+        background-color: @orange;
+      }
+      p a{
+        .bouton-lien();
+        background-color: @orange;
+      }
+      .edi{
+        background: url(../images/edi.gif) no-repeat 0 0;
+        padding-left: 160px;
+        margin-bottom: 20px;
+        min-height: 104px;
+        p{
+          font-size: 0.8em;
+          color: @gris-texte;
+        }
+      }
+    }
+    &.block-home-inscription{
+      h2:after{
+        background-color: @violet;
+      }
+      a, .titre-violet{
+        .lien-fleche-violette();
+      }
+
+      .inscription{
+        background: url(../images/crayon.gif) no-repeat 0 0;
+        padding-left: 80px;
+        margin: 25px 0 20px 0;
+        min-height: 60px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid @gris-fonce;
+        p{
+          font-size: 0.8em;
+          color: @gris-texte;
+        }
+      }
+      .question{
+        background: url(../images/chat.gif) no-repeat 0 0;
+        padding-left: 80px;
+        margin: 18px;
+        min-height: 60px;
+        p{
+          font-size: 0.8em;
+          color: @gris-texte;
+        }
+      }
+      .appel{
+        background: url(../images/conseillere.jpg) no-repeat 0 0;
+        padding-left: 80px;
+        margin: 18px;
+        min-height: 60px;
+        p{
+          font-size: 0.8em;
+          color: @gris-texte;
+        }
+      }
     }
   }
 }
