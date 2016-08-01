@@ -767,6 +767,30 @@
       "src": "websymbols"
     },
     {
+      "uid": "a2a74f5e7b7d9ba054897d8c795a326a",
+      "css": "list-bullet",
+      "code": 61642,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "cy7vw87w1slwyalc4vd8cdhrb50asud3",
+      "css": "th-list",
+      "code": 59492,
+      "src": "modernpics"
+    },
+    {
+      "uid": "1e77a2yvsq3owssduo2lcgsiven57iv5",
+      "css": "pencil",
+      "code": 59493,
+      "src": "typicons"
+    },
+    {
+      "uid": "afdb6de29702e88d79539d600c42d4a8",
+      "css": "comment-alt",
+      "code": 59494,
+      "src": "elusive"
+    },
+    {
       "uid": "71eb5394e96ba64106e09db1dc530ada",
       "css": "c-crealead",
       "code": 59461,
