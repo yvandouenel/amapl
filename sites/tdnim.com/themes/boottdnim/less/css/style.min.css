@@ -1386,7 +1386,7 @@ button.close{padding:0;background:0 0;border:0;-webkit-appearance:none}
 .hidden,.visible-lg,.visible-lg-block,.visible-lg-inline,.visible-lg-inline-block,.visible-md,.visible-md-block,.visible-md-inline,.visible-md-inline-block,.visible-sm,.visible-sm-block,.visible-sm-inline,.visible-sm-inline-block,.visible-xs,.visible-xs-block,.visible-xs-inline,.visible-xs-inline-block{display:none!important}
 .invisible{visibility:hidden}
 .text-hide{font:0/0 a;color:transparent;background-color:transparent;border:0}
-.sous-titre,.sous-titre-vert-clair,h3,h4,p{font-family:gothamlight}
+.sous-titre,.sous-titre-vert-clair,h2,h3,h4,p{font-family:gothamlight}
 .affix{position:fixed}
 @-ms-viewport{width:device-width}
 @media (max-width:767px){.visible-xs{display:block!important}
@@ -1620,7 +1620,7 @@ fieldset.features-export-component .panel-heading a.panel-title{font-size:12px;f
 fieldset.features-export-component .panel-body{padding:0 10px}
 div.features-export-list{margin:-11px 0 10px;padding:0 10px}
 div.features-export-list .form-type-checkbox,fieldset.features-export-component .component-select .form-type-checkbox{line-height:1em;margin:5px 5px 5px 0!important;min-height:0;padding:3px 3px 3px 25px!important}
-.sous-titre,div.features-export-list .form-type-checkbox input[type=checkbox],fieldset.features-export-component .component-select .form-type-checkbox input[type=checkbox]{margin-top:0}
+div.features-export-list .form-type-checkbox input[type=checkbox],fieldset.features-export-component .component-select .form-type-checkbox input[type=checkbox]{margin-top:0}
 body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open .navbar-fixed-top{top:79px}
 body.navbar-is-fixed-top.navbar-administration .navbar-fixed-top{top:39px}
 .navbar-administration #navbar-administration.navbar-oriented .navbar-bar{z-index:1032}
@@ -1633,6 +1633,8 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed{margin-left:24rem}
 img{max-width:100%}
 .bold{font-weight:700}
 .fleche-vert-clair:before,.lien-fleche-violette:before{font-style:normal;font-weight:400;speak:none;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+h2.page-header{margin-top:20px}
+.sous-titre{margin-top:0}
 .sous-titre:after{-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;margin-top:4px}
 .sous-titre-vert-fonce:after{background-color:#01802e}
 .sous-titre-vert-clair{margin-top:0}
@@ -1834,6 +1836,8 @@ button.navbar-toggle{position:absolute;margin-left:20px;top:50px;right:10px;z-in
 .under-footer .footer .region-footer-col-2 ul.menu>li>a:hover{color:#000}
 .under-footer .footer .coordonnees-bas{background-color:#1a2225}
 .under-footer .footer .coordonnees-bas>div{color:#FFF;padding-bottom:0;padding-top:20px}
+@media (max-width:992px){.under-footer .footer .coordonnees-bas>div{padding:15px}
+}
 .under-footer .footer .col-md-4.col-logo-bas{background-color:#556366}
 .under-footer .footer .col-md-4.col-logo-bas>div{padding:20px}
 .under-footer .footer .col-md-4.col-menu-2-bas{background-color:#275467;padding:20px}
@@ -1852,7 +1856,7 @@ button.navbar-toggle{position:absolute;margin-left:20px;top:50px;right:10px;z-in
 .tarif table td.wo-top,.tarif table th.wo-top{border-top:0}
 .tarif table td.wo-bottom,.tarif table th.wo-bottom{border-bottom:0}
 .tarif table td h4:before,.tarif table th h4:before{content:"\e839";color:#add302}
-.page-actualites h2.page-header{font-family:gothamlight;margin-top:0}
+.page-actualites h2.page-header{font-family:gothamlight;margin-top:20px}
 .page-actualites h2.page-header:after{content:'';display:block;width:50%;height:5px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;margin-top:4px;background-color:#01589d}
 .page-actualites .views-row{margin-bottom:20px;border-bottom:1px solid #019eed;background-color:#fff;padding:20px;border-radius:6px 6px 0 0}
 .page-actualites h3.title-news-list:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e83d";color:#275467}
