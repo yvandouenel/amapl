@@ -163,6 +163,12 @@ h1, h2, h3, h4, h5, h6{
 #block-bean-social-icons img{
     margin-left: 5px;
 }
+.atom-align-left{
+    margin-right: 15px
+}
+.atom-align-right{
+    margin-left: 15px
+}
 /* Menu actions ********************************/
 #section-content #block-menu-block-7{
   background-color: #f2f1ef;
@@ -1146,6 +1152,15 @@ body.page-aggregator .feed-item{
   border: 2px solid #F7981D !important;
   margin-top: 10px;
   margin: 0 5% !important;
+}
+/* page newsletter ****************************************************************************************************/
+.context-newsletter-amapl #region-sidebar-second h2.block-title{
+    text-transform: uppercase;
+    border-bottom: 2px solid #44484B;
+    padding: 15px 0 13px 0;
+    margin-bottom: 5px;
+    font-weight: normal;
+    font-size: 1.4em;
 }
 
 

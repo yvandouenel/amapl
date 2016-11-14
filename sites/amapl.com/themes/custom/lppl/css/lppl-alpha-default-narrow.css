@@ -95,3 +95,19 @@ h3#zoom-sur{
 #block-views-le-saviez-vous-ss-block .field-content > p{
   font-size: 1em;
 }
+/* Menus haut */
+.menu-name-menu-menu-haut ul li a.active-trail{
+  background-color: #FA971B;
+  color: #000;
+}
+/* page newsletter ****************************************************************************************************/
+
+.context-newsletter-amapl #region-content{
+  width: 460px;
+}
+.context-newsletter-amapl #region-sidebar-second{
+  width: 460px;
+}
+.context-newsletter-amapl #region-sidebar-second h2.block-title{
+  margin-top: 8px;
+}
