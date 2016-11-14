@@ -1612,6 +1612,7 @@ div.image-style-new div.input-group{display:table}
 .table-striped>tbody>tr:nth-child(odd)>td.module,.table>tbody>tr>td.module,td.module{background:#ddd;font-weight:700}
 .book-toc>.dropdown-menu>.dropdown-header{white-space:nowrap}
 .book-toc>.dropdown-menu .dropdown-menu{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;border:0;display:block;font-size:12px;margin:0;padding:0;position:static;width:100%}
+.sous-titre-vert-clair:after,.sous-titre:after{content:'';display:block;-moz-border-radius:2px;height:5px}
 .book-toc>.dropdown-menu .dropdown-menu>li{padding-left:20px}
 .book-toc>.dropdown-menu .dropdown-menu>li>a{margin-left:-40px;padding-left:60px}
 #features-filter .form-item.form-type-checkbox{padding-left:20px}
@@ -1631,15 +1632,14 @@ body.navbar-is-fixed-top.navbar-administration{padding-top:103px!important}
 body.navbar-is-fixed-top.navbar-administration.navbar-horizontal.navbar-tray-open{padding-top:143px!important}
 body.navbar-tray-open.navbar-vertical.navbar-fixed{margin-left:24rem}
 #navbar-administration.navbar-oriented .navbar-tray-vertical{width:24rem}
-.sous-titre-vert-clair:after,.sous-titre:after{content:'';display:block;width:50%;height:5px}
 img{max-width:100%}
 .bold{font-weight:700}
 h2.page-header{margin-top:20px}
 .sous-titre{margin-top:0}
-.sous-titre:after{-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;margin-top:4px}
+.sous-titre:after{width:50%;-webkit-border-radius:2px;border-radius:2px;margin-top:4px}
 .sous-titre-vert-fonce:after{background-color:#01802e}
 .sous-titre-vert-clair{margin-top:0}
-.sous-titre-vert-clair:after{-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;margin-top:4px;background-color:#add302}
+.sous-titre-vert-clair:after{width:50%;-webkit-border-radius:2px;border-radius:2px;margin-top:4px;background-color:#add302}
 .fleche-vert-clair:before,.lien-fleche-violette:before{font-style:normal;font-weight:400;speak:none;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e804"}
 .sous-titre-bleu-fonce:after{background-color:#01589d}
 .sous-titre-noir:after{background-color:#000}
@@ -1697,7 +1697,7 @@ body.page-node .field-name-body .field-item h2:after{content:'';display:block;wi
 .icon-youtube:before{content:"\e802"}
 .icon-gplus:before{content:"\e803"}
 .icon-doc:before{content:"\e804"}
-.icon-question:before,.tarif-open-close:before{content:"\e805"}
+.icon-question:before,.tarif-open-close.opened-tarif:before,.tarif-open-close:before{content:"\e805"}
 .icon-people:before{content:"\e806"}
 .icon-calendar:before{content:"\e807"}
 .icon-radio:before{content:"\e808"}
@@ -1846,7 +1846,7 @@ button.navbar-toggle{position:absolute;margin-left:20px;top:50px;right:10px;z-in
 .under-footer .footer .col-md-4.mentions-legales a{display:block;padding:20px 20px 31px;color:#FFF}
 .tarif table td h4:before,.tarif table th h4:before,.tarif-open-close:before{font-family:fontello;display:inline-block;width:1em;position:relative;top:1px;font-style:normal;font-weight:400;font-size:1em;speak:none;text-decoration:inherit;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .tarif-open-close,.tarif-open-close:before{color:#add302}
-.tarif-open-close.opened-tarif:before{content:"\e867"}
+.tarif-open-close.opened-tarif:before{color:#8d4688}
 .tarif table td,.tarif table th{border:1px solid #f1f1f1;padding:15px}
 @media (max-width:768px){.all-small-col .small-col.small-col-selected{float:none;clear:both}
 .tarif table td,.tarif table th{padding:3px}
