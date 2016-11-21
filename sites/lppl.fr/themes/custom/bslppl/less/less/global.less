@@ -1,14 +1,10 @@
-body{
-
-}
-.custom-top-menu{
-  background-color: @noir-lppl;
-}
+/* Element qui prend toute la largeur *********************************************************************************/
 .full-width-bg{
   background-color: #00CCFF;
 }
-
+/* Menus du haut + formulaire de recherche ****************************************************************************/
 .custom-top-menu {
+  background-color: @noir-lppl;
   .block-menu-block{
     display: table;
     float: left;
@@ -48,6 +44,7 @@ body{
           position: relative;
           top: -3px;
           left: -10px;
+          content: "\e819";
         }
         &:hover:before{
           color: @orange-lppl;
@@ -57,4 +54,82 @@ body{
 
   }
 }
-
+/* HEADBAND ***********************************************************************************************************/
+.custom-headband{
+  background-color: #72736D;
+  #h1-logo{
+    margin: 40px 0;
+  }
+}
+/* Menu principal *****************************************************************************************************/
+.custom-headband{
+  ul.menu{
+    > li{
+      > a{
+        color: white;
+        background-color: @bleu-vert-lppl;
+        display: block;
+        position: relative;
+        @media (min-width: @screen-lg-min){
+          width: 343px;
+          height: 138px;
+          padding: 28px 0 0 22px;
+          margin-right: 40px;
+          margin-bottom: 30px;
+          font-size: 2em;
+          line-height: 1.2em;
+          border-radius: 8px 8px 0 8px;
+        }
+        &:after{
+          .glyphicon();
+          content: "\e838";
+          color: @orange-lppl;
+          position: absolute;
+          top: 75%;
+          right: -5px;
+        }
+        &:hover{
+          color: @orange-lppl;
+        }
+        &:hover:after{
+          color: white;
+        }
+      }
+      &.last{
+        a{
+          @media (min-width: @screen-lg-min){
+            margin-right: 0;
+          }
+        }
+      }
+      > .dropdown-menu{
+        @media (min-width: @screen-lg-min){
+          padding-bottom: 20px;
+          margin-top: -30px !important;
+          background-color: @bleu-vert-lppl;
+          width: 343px !important;
+          border-radius: 8px;
+          li{
+            a{
+              display: block;
+              padding: 10px 5px 10px 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* Footer  ************************************************************************************************************/
+#custom-footer {
+  background-color: @noir-lppl;
+  > .footer.container{
+    border-top: 0;
+    position: relative;
+    #link-constellians{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
