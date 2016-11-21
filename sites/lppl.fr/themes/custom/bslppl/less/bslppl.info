@@ -46,6 +46,9 @@ scripts[] = 'bootstrap/js/transition.js'
 
 scripts[] = 'js/full_width_bg.js'
 
+scripts[] = 'smartmenus/jquery.smartmenus.js'
+scripts[] = 'smartmenus/addons/bootstrap/jquery.smartmenus.bootstrap.js'
+
 
 ; Disable the CDN provider so compiled source files can be used.
 settings[bootstrap_cdn] = ''
