@@ -45,6 +45,7 @@ scripts[] = 'bootstrap/js/tab.js'
 scripts[] = 'bootstrap/js/transition.js'
 
 scripts[] = 'js/full_width_bg.js'
+scripts[] = 'js/jquery.matchHeight-min.js'
 
 scripts[] = 'smartmenus/jquery.smartmenus.js'
 scripts[] = 'smartmenus/addons/bootstrap/jquery.smartmenus.bootstrap.js'
