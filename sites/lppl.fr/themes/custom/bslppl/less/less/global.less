@@ -7,7 +7,8 @@
   background-color: @noir-lppl;
   .block-menu-block{
     display: table;
-    float: left;
+    float: right;
+    margin-right: 50px;
     ul.menu{
       > li{
         float: left;
@@ -15,7 +16,7 @@
           color: white;
           display: block;
           padding: 5px 20px;
-          &:hover{
+          &:hover,&.active-trail{
             background-color: @orange-lppl;
           }
         }
@@ -26,6 +27,7 @@
     float: right;
     height:30px;
     overflow: hidden;
+    width: 200px;
     input.form-control{
       padding: 0 20px;
       margin: 3px 5px 0 0;
@@ -56,7 +58,7 @@
 }
 /* HEADBAND ***********************************************************************************************************/
 .custom-headband{
-  background-color: #72736D;
+  background: #72736D url(../images/bg-headband.jpg) no-repeat 50% 0;
   #h1-logo{
     margin: 40px 0;
   }
@@ -67,7 +69,7 @@
     > li{
       > a{
         color: white;
-        background-color: @bleu-vert-lppl;
+        background: @bleu-vert-lppl url(../images/bg-menu.png) no-repeat 100% 100%;
         display: block;
         position: relative;
         @media (min-width: @screen-lg-min){
@@ -79,20 +81,27 @@
           font-size: 2em;
           line-height: 1.2em;
           border-radius: 8px 8px 0 8px;
+          box-shadow: 5px 5px 5px 0px #656565;
+          &:hover{
+            border-radius: 8px 8px 0 0;
+            background-image: none;
+          }
         }
         &:after{
           .glyphicon();
           content: "\e838";
           color: @orange-lppl;
           position: absolute;
-          top: 75%;
-          right: -5px;
+          top: 80%;
+          right: -10px;
+          font-size:0.8em;
         }
         &:hover{
           color: @orange-lppl;
         }
         &:hover:after{
           color: white;
+          content: '';
         }
       }
       &.last{
@@ -108,7 +117,9 @@
           margin-top: -30px !important;
           background-color: @bleu-vert-lppl;
           width: 343px !important;
-          border-radius: 8px;
+          border-radius: 0 0 8px 8px;
+          box-shadow: 5px 5px 5px 0px #656565;
+          border: 0;
           li{
             a{
               display: block;
@@ -126,6 +137,23 @@
   > .footer.container{
     border-top: 0;
     position: relative;
+    #block-menu-menu-menu-bas{
+      ul{
+        display: table;
+        margin: 0 auto;
+        > li{
+          float: left;
+          a{
+            color: white;
+            display: block;
+            &:hover, &.active-trail{
+              color: @orange-lppl;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+    }
     #link-constellians{
       position: absolute;
       top: 0;
