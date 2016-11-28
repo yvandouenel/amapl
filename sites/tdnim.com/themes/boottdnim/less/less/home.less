@@ -198,6 +198,34 @@
         }
       }
     }
+    &.block-releves-comptes{
+      h2:after{
+        background-color: @vert-fonce;
+      }
+      p a{
+        .bouton-lien();
+        background-color: @vert-fonce;
+      }
+      .releves-comptes{
+        padding-left: 160px;
+        margin-bottom: 20px;
+        min-height: 104px;
+        position: relative;
+        p{
+          font-size: 0.8em;
+          color: @gris-texte;
+        }
+        &:before{
+          .glyphicon();
+          content: "\f0ca";
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-size: 8em;
+          color: @vert-fonce;
+        }
+      }
+    }
     &.block-home-edi{
       h2:after{
         background-color: @orange;
