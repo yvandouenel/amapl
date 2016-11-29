@@ -28,53 +28,24 @@ if(typeof(CKEDITOR) !== 'undefined') {
             */
 
             { name : 'h2-home'		, element : 'h2', attributes : { 'class' : 'h2-home' }},
-            { name : 'custom-quote'	, element : 'p', attributes : { 'class' : 'custom-quote' }}
-
-
+            { name : 'custom-quote'	, element : 'p', attributes : { 'class' : 'custom-quote' }},
+            { name : 'separator-grey', element : 'div', attributes : { 'class' : 'separator-grey' }},
+            { name : 'separator-grey-bold', element : 'div', attributes : { 'class' : 'separator-grey-bold' }},
+            { name : 'separator-blue', element : 'div', attributes : { 'class' : 'separator-blue' }},
+            { name : 'separator-blue-bold', element : 'div', attributes : { 'class' : 'separator-blue-bold' }},
+            { name : 'separator-transparent', element : 'div', attributes : { 'class' : 'separator-transparent' }},
             /* Inline Styles */
 
             // These are core styles available as toolbar buttons. You may opt enabling
             // some of them in the "Styles" drop-down list, removing them from the toolbar.
-            /*
-            { name : 'Strong'			, element : 'strong', overrides : 'b' },
-            { name : 'Emphasis'			, element : 'em'	, overrides : 'i' },
-            { name : 'Underline'		, element : 'u' },
-            { name : 'Strikethrough'	, element : 'strike' },
-            { name : 'Subscript'		, element : 'sub' },
-            { name : 'Superscript'		, element : 'sup' },
 
-
-            { name : 'Marker: Yellow'	, element : 'span', styles : { 'background-color' : 'Yellow' } },
-
-            { name : 'Big'				, element : 'big' },
-
-            { name : 'Cited Work'		, element : 'cite' },
-            { name : 'Inline Quotation'	, element : 'q' },
-             */
+             { name : 'know-more'	, element : 'a', attributes : { 'class' : 'know-more' }},
+             { name : 'link-plus'	, element : 'a', attributes : { 'class' : 'link-plus' }}
 
             /* Object Styles */
-        /*
 
-            {
-                    name : 'Image on Left',
-                    element : 'img',
-                    attributes :
-                    {
-                            'style' : 'padding: 5px; margin-right: 5px',
-                            'border' : '2',
-                            'align' : 'left'
-                    }
-            },
 
-            {
-                    name : 'Image on Right',
-                    element : 'img',
-                    attributes :
-                    {
-                            'style' : 'padding: 5px; margin-left: 5px',
-                            'border' : '2',
-                            'align' : 'right'
-                    }
-            }*/
+
+            
     ]);
 }

@@ -1,9 +1,15 @@
 /* Element qui prend toute la largeur *********************************************************************************/
 .full-width-bg{
-  background-color: #00CCFF;
+  background-color: @fond-gris-lppl;
+  .atom-align-right:after, .know-more:after{
+      display: block;
+      content: '';
+      clear: both;
+  }
 }
 /* Menus du haut + formulaire de recherche ****************************************************************************/
 .custom-top-menu {
+
   background-color: @noir-lppl;
   .block-menu-block{
     display: table;
@@ -65,14 +71,34 @@
 }
 /* Menu principal *****************************************************************************************************/
 .custom-headband{
+  button.navbar-toggle{
+    background-color: @fond-gris-lppl;
+    &:before{
+      .glyphicon();
+      content: "\f0ca";
+      position: absolute;
+      font-size: 2em;
+      top: 2px;
+      left: 5px;
+    }
+  }
   ul.menu{
     > li{
+      font-family: 'Montserrat', sans-serif;
       > a{
         color: white;
-        background: @bleu-vert-lppl url(../images/bg-menu.png) no-repeat 100% 100%;
         display: block;
         position: relative;
+        width: 100%;
+        height: auto;
+        br{
+          display: none;
+        }
         @media (min-width: @screen-lg-min){
+          br{
+            display: inline;
+          }
+          background: @bleu-vert-lppl url(../images/bg-menu.png) no-repeat 100% 100%;
           width: 343px;
           height: 138px;
           padding: 28px 0 0 22px;

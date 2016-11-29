@@ -164,6 +164,24 @@
     <?php endif; ?>
 
   </div>
+  <div class="row home-three-columns">
+    <?php if (!empty($page['footer_col_1'])): ?>
+      <div class="col-sm-4">
+        <?php print render($page['footer_col_1']); ?>
+      </div>
+    <?php endif; ?>
+    <?php if (!empty($page['footer_col_2'])): ?>
+      <div class="col-sm-4">
+        <?php print render($page['footer_col_2']); ?>
+      </div>  <!-- /#sidebar-second -->
+    <?php endif; ?>
+    <?php if (!empty($page['footer_col_3'])): ?>
+      <div class="col-sm-4">
+        <?php print render($page['footer_col_3']); ?>
+      </div>  <!-- /#sidebar-second -->
+    <?php endif; ?>
+
+  </div>
 </div>
 
 <?php if (!empty($page['footer'])): ?>

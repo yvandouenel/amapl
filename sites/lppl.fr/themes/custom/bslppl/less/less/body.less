@@ -12,6 +12,7 @@
 }
 .h2-home{
   text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
 }
 .custom-quote{
   font-size: 1.4em;
@@ -21,5 +22,99 @@
     content: "\e830";
     color: @bleu-vert-lppl;
     font-size: 1.6em;
+  }
+  margin-bottom: 30px;
+}
+a.know-more{
+  background: url(../images/bg-know-more.gif) repeat-x 0 0;
+  height: 45px;
+  border-radius: 8px;
+  display: table;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 18px 10px 10px;
+  margin: 0 auto;
+  position: relative;
+  text-decoration: none;
+  min-width: 250px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4em;
+  &:before{
+    .glyphicon();
+    content: "\e804";
+    font-size: 1.2em;
+    color: white;
+    position: relative;
+    top: 5px;
+  }
+  &:hover{
+    background: @noir-lppl;
+  }
+  &:after{
+    content: "";
+    width: 291px;
+    height: 11px;
+    display: block;
+    background: url(../images/bg-know-more_bottom.png) no-repeat 0 0;
+    position: absolute;
+    top: 47px;
+    left: 10px;
+  }
+}
+a.link-plus{
+  display: block;
+  padding-left: 40px;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4em;
+  color: @noir-lppl;
+  &:before{
+    .glyphicon();
+    content: "\e838";
+    color: white;
+    background-color: @orange-lppl;
+    border-radius: 16px;
+    font-size: 1.4em;
+    position: absolute;
+    left: 0;
+  }
+  &:hover{
+    text-decoration: none;
+    color: @bleu-vert-lppl;
+    &:before{
+      text-decoration: none;
+      background-color: @bleu-vert-lppl;
+    }
+  }
+}
+/* separator **********************************************************************************************************/
+.separator-grey-bold, .separator-blue, .separator-blue-bold, .separator-transparent{
+  margin: 10px 0;
+}
+.separator-grey-bold{
+  border-top: 3px solid #eeeeee;
+}
+.separator-blue{
+  border-top: 1px solid @bleu-vert-lppl;
+}
+.separator-blue-bold{
+  border-top: 3px solid @bleu-vert-lppl;
+}
+.separator-transparent{
+  border-top: 3px solid transparent;
+}
+#overlay{
+  .separator-transparent{
+    border-top: 3px solid grey;
+  }
+}
+/* home 3 columns *****************************************************************************************************/
+.home-three-columns{
+  padding-top: 40px;
+  h2.block-title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
   }
 }
