@@ -40,7 +40,10 @@ if(typeof(CKEDITOR) !== 'undefined') {
             // some of them in the "Styles" drop-down list, removing them from the toolbar.
 
              { name : 'know-more'	, element : 'a', attributes : { 'class' : 'know-more' }},
-             { name : 'link-plus'	, element : 'a', attributes : { 'class' : 'link-plus' }}
+             { name : 'link-plus'	, element : 'a', attributes : { 'class' : 'link-plus' }},
+             { name : 'custom-date'	, element : 'span', attributes : { 'class' : 'custom-date' }},
+             { name : 'custom-location'	, element : 'span', attributes : { 'class' : 'custom-location' }},
+             { name : 'red-lppl'	, element : 'span', attributes : { 'class' : 'red-lppl' }}
 
             /* Object Styles */
 
