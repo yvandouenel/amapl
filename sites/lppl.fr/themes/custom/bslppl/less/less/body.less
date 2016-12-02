@@ -87,6 +87,41 @@ a.link-plus{
     }
   }
 }
+
+.custom-date{
+  font-weight: bold;
+  font-size:1.1em;
+  &:before{
+    .glyphicon();
+    content: "\e83a";
+    color: @orange-lppl;
+    margin-right: 4px;
+  }
+}
+.custom-location{
+  font-weight: bold;
+  font-size:1.1em;
+  &:before{
+    .glyphicon();
+    content: "\e809";
+    color: @orange-lppl;
+    margin-right: 4px;
+  }
+}
+.red-lppl{
+  color: @orange-lppl;
+}
+.title-news-list, .title-event-list{
+  &:before{
+    .glyphicon();
+    content: "\e804";
+    color: @orange-lppl;
+    margin-right: 4px;
+  }
+  a{
+    color: #000;
+  }
+}
 /* separator **********************************************************************************************************/
 .separator-grey-bold, .separator-blue, .separator-blue-bold, .separator-transparent{
   margin: 10px 0;
@@ -116,5 +151,6 @@ a.link-plus{
     font-size: 1.8em;
     text-transform: uppercase;
     margin-bottom: 30px;
+    text-align: center;
   }
 }

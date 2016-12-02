@@ -1,0 +1,30 @@
+/* Slide show artists *************************************************************************************************/
+#block-views-liste-artistes-block-artistes{
+  border-bottom: 3px solid @bleu-vert-lppl;
+  .views-field-title{
+    display: none;
+  }
+  .views-slideshow-controls-bottom{
+    #views_slideshow_controls_text_liste_artistes-block_artistes{
+      display: none;
+    }
+    #views_slideshow_slide_counter_liste_artistes-block_artistes{
+      display: table;
+      width: 80px;
+      height: 26px;
+      margin: 30px auto;
+      text-align: center;
+      color: white;
+      background: url(../images/under_artist_slider_control.png) no-repeat 50% 50%;
+    }
+  }
+  .views-field-field-scald-image{
+    position: relative;
+    a:before{
+      position: absolute;
+      right: 0%;
+      bottom: -5px;
+      content: url(../images/plus_artists.png);
+    }
+  }
+}
