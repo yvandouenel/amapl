@@ -7,6 +7,13 @@ a{
     color: @dark-blue-link-wiki;
   }
 }
+p a{
+  text-decoration: underline;
+  color: @noir-lppl;
+  &:before{
+    text-decoration: none;
+  }
+}
 /* Element qui prend toute la largeur *********************************************************************************/
 .full-width-bg{
   background-color: @fond-gris-lppl;
@@ -166,33 +173,4 @@ a{
     }
   }
 }
-/* Footer  ************************************************************************************************************/
-#custom-footer {
-  background-color: @noir-lppl;
-  > .footer.container{
-    border-top: 0;
-    position: relative;
-    #block-menu-menu-menu-bas{
-      ul{
-        display: table;
-        margin: 0 auto;
-        > li{
-          float: left;
-          a{
-            color: white;
-            display: block;
-            &:hover, &.active-trail{
-              color: @orange-lppl;
-              background-color: #fff;
-            }
-          }
-        }
-      }
-    }
-    #link-constellians{
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-  }
-}
+
