@@ -70,6 +70,9 @@ function atterrissage_aga_user_logout($account) {
       case 'ANGIIL':
         $goto = ('http://www.angiil.com');
         break;
+      case 'AGADOM':
+        $goto = ('http://www.agadom.org');
+        break;
       case 'AGMPS BEARN':
         $goto = ('http://www.vigipl.com/agmps');
         break;
