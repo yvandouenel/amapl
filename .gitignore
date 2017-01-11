@@ -8,3 +8,4 @@ sites/all/modules/contrib/xray/
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
+/private/*
