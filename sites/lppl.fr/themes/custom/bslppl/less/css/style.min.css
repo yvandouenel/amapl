@@ -1651,14 +1651,14 @@ p a:before{text-decoration:none}
 .custom-headband{background:url(../images/bg-headband.jpg) 50% 0 no-repeat #72736d}
 .custom-headband #h1-logo{margin:40px 0}
 .link-main-menu{color:#fff;display:block;position:relative;width:100%;height:auto}
-.link-main-menu:after,.link-main-menu:hover,body.front .custom-headband ul.menu>li>a:hover{color:#f45a40}
 .link-main-menu br{display:none}
 @media (min-width:1200px){.link-main-menu{background:url(../images/bg-menu.png) 100% 100% no-repeat #24cdb8;width:343px;height:138px;padding:28px 0 0 22px;margin-right:40px;margin-bottom:30px;font-size:2em;line-height:1.2em;border-radius:8px 8px 0;box-shadow:5px 5px 5px 0 #656565}
 .link-main-menu br{display:inline}
 .link-main-menu:hover{border-radius:8px 8px 0 0;background-image:none}
 }
 .link-main-menu:after,body.front .custom-headband button.navbar-toggle:before{font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;position:absolute}
-.link-main-menu:after{content:"\e838";top:80%;right:-10px;font-size:.8em}
+.link-main-menu:after{content:"\e838";color:#f45a40;top:80%;right:-10px;font-size:.8em}
+.link-main-menu:hover{color:#f45a40}
 .link-main-menu:hover:after{color:#fff;content:''}
 body.front .custom-headband button.navbar-toggle{background-color:#ecebe7}
 body.front .custom-headband button.navbar-toggle:before{color:#777;content:"\f0ca";font-size:2em;top:2px;left:5px}
@@ -1671,6 +1671,7 @@ body.front .custom-headband ul.menu>li>a:hover{border-radius:8px 8px 0 0;backgro
 }
 body.front .custom-headband ul.menu>li>a:after,body.not-front .custom-headband button.navbar-toggle:before{font-family:fontello;line-height:1em;position:absolute;font-style:normal;font-weight:400;speak:none;text-decoration:inherit;text-align:center;font-variant:normal;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 body.front .custom-headband ul.menu>li>a:after{display:inline-block;width:1em;margin-right:10px;content:"\e838";color:#f45a40;top:80%;right:-10px;font-size:.8em}
+body.front .custom-headband ul.menu>li>a:hover{color:#f45a40}
 body.front .custom-headband ul.menu>li>a:hover:after{color:#fff;content:''}
 @media (min-width:1200px){body.front .custom-headband ul.menu>li.last a{margin-right:0}
 body.front .custom-headband ul.menu>li>.dropdown-menu{padding-bottom:20px;margin-top:-30px!important;background-color:#24cdb8;width:343px!important;border-radius:0 0 8px 8px;box-shadow:5px 5px 5px 0 #656565;border:0}
@@ -1696,6 +1697,7 @@ body.not-front .custom-headband ul.menu>li.last a{margin-right:0}
 body.not-front .custom-headband ul.menu>li>.dropdown-menu{padding-bottom:20px;margin-top:-30px!important;background-color:#24cdb8;width:240px!important;border-radius:0 0 8px 8px;box-shadow:5px 5px 5px 0 #656565;border:0}
 body.not-front .custom-headband ul.menu>li>.dropdown-menu li a{display:block;padding:10px 5px 10px 20px}
 }
+.paragraphs-item-encarts-50>div,.paragraphs-item-v2017-2-col-1tiers-2tiers>div,.paragraphs-item-v2017-2-col-2tiers-1tiers>div,.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-1-3>div,.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-2-3>div{padding:20px}
 @font-face{font-family:fontello;src:url(../fontello/font/fontello.eot?90885294);src:url(../fontello/font/fontello.eot?90885294#iefix) format('embedded-opentype'),url(../fontello/font/fontello.woff?90885294) format('woff'),url(../fontello/font/fontello.ttf?90885294) format('truetype'),url(../fontello/font/fontello.svg?90885294#fontello) format('svg');font-weight:400;font-style:normal}
 [class*=" icon-"]:hover{text-decoration:none}
 .glyphicon,.glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{text-decoration:inherit;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;color:#777;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:inline-block}
@@ -1718,11 +1720,21 @@ body.not-front .custom-headband ul.menu>li>.dropdown-menu li a{display:block;pad
 .icon-right-open-h3-a>h3>span>a:before,.icon-right-open:before{content:"\e804"}
 .plus-open-h3-a>h3>span>a:after{content:"\e83e";margin-left:10px}
 .paragraphs-item-encarts-50{border-bottom:3px solid #d5d5d5}
+.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-2-3{border-bottom:3px solid #d5d5d5}
+.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-1-3{border-bottom:3px solid #d5d5d5}
+.paragraphs-item-v2017-2-col-2tiers-1tiers{border-bottom:3px solid #d5d5d5}
+.paragraphs-item-v2017-2-col-1tiers-2tiers{border-bottom:3px solid #d5d5d5}
 @media (min-width:768px){.paragraphs-item-encarts-50{float:left;width:47.916666666666666666666666666667%}
 .paragraphs-item-encarts-50.even-50{margin-right:2.083333333%}
+.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-2-3{float:left;width:64.583333333333333333333333333333%;margin-right:2.083333333%}
+.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-1-3{float:left;width:31.25%}
+.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-1-3.even-un-tiers-deux-tiers{margin-right:2.083333333%}
+.paragraphs-item-v2017-2-col-2tiers-1tiers{float:left;width:64.583333333333333333333333333333%}
+.paragraphs-item-v2017-2-col-2tiers-1tiers.even-un-tiers-deux-tiers{margin-right:2.083333333%}
+.paragraphs-item-v2017-2-col-1tiers-2tiers{float:left;width:31.25%}
+.paragraphs-item-v2017-2-col-1tiers-2tiers.even-un-tiers-deux-tiers{margin-right:2.083333333%}
 }
 .custom-quote:before,.know-more:before,.more-link:before{font-style:normal;speak:none;width:1em;text-align:center;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;position:relative;font-weight:400}
-.paragraphs-item-encarts-50>div{padding:20px}
 .h2-home{font-family:Montserrat,sans-serif}
 .custom-quote{font-size:1.4em;color:#2f2f2f;margin-bottom:30px}
 .custom-quote:before{top:1px;font-family:fontello;display:inline-block;text-decoration:inherit;margin-right:10px;text-transform:none;content:"\e830";color:#24cdb8;font-size:1.6em}
