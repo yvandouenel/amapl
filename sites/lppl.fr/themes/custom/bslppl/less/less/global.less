@@ -80,11 +80,12 @@ p a{
 }
 /* HEADBAND ***********************************************************************************************************/
 .custom-headband{
-  background: #72736D url(../images/bg-headband.jpg) no-repeat 50% 0;
+  background: #2D2D2D url(../images/bg-headband.jpg) no-repeat 50% 0;
   #h1-logo{
     margin: 40px 0;
   }
 }
+
 /* Menu principal *****************************************************************************************************/
 .dropdown-menu>li>a{
   white-space: normal;
@@ -110,7 +111,7 @@ p a{
     margin-bottom: 30px;
     font-size: 2em;
     line-height: 1.2em;
-    border-radius: 8px 8px 0 8px;
+    border-radius: 8px 8px 0 0;
     box-shadow: 5px 5px 5px 0px #656565;
     &:hover{
       border-radius: 8px 8px 0 0;
@@ -183,7 +184,7 @@ body.front{
 }
 body.not-front{
   .custom-headband{
-    background: #72736D url(../images/bg-headband.jpg) no-repeat 50% 0;
+    background: #2D2D2D url(../images/bg-headband.jpg) no-repeat 50% 0;
     button.navbar-toggle{
       background-color: @fond-gris-lppl;
       &:before{
@@ -220,6 +221,7 @@ body.not-front{
             }
           }
         }
+
         > .dropdown-menu{
           @media (min-width: @screen-lg-min){
             padding-bottom: 20px;

@@ -24,6 +24,9 @@
       padding: 20px;
     }
     border-bottom: 3px solid #d5d5d5;
+    h3{
+      text-transform: uppercase;
+    }
   }
   .field-name-field-colonne-1-3{
     @media (min-width: @screen-sm){
@@ -33,7 +36,9 @@
         margin-right : 2.083333333%; /* 20/960 */
       }
     }
-
+    h3{
+      text-transform: uppercase;
+    }
     > div{
       padding: 20px;
     }
@@ -54,6 +59,50 @@
   }
   border-bottom: 3px solid #d5d5d5;
 }
+/* 3 colonnes de 1/3 chacune *******************************/
+.paragraphs-item-v2017-3col-4-4-4{
+  .field-type-text-long{
+    @media (min-width: @screen-sm){
+      float: left;
+      width: 31.25%;/* 300/960 */
+      &.field-name-field-colonne-1-tiers, &.field-name-field-colonne-2-tiers {
+        margin-right : 2.083333333%; /* 20/960 */
+      }
+    }
+    > div{
+      padding: 20px;
+    }
+    border-bottom: 3px solid #d5d5d5;
+  }
+  div.field-item > h3{
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+/* 2 colonnes 1/2 chacune **********************************/
+
+.paragraphs-item-v2017-2col-6-6{
+  .field-type-text-long{
+    @media (min-width: @screen-sm){
+      float: left;
+      width : 47.916666666666666666666666666667%;/* 460/960 */
+      &.field-name-field-colonne-1-moitie {
+        margin-right : 2.083333333%; /* 20/960 */
+      }
+    }
+    .custom-quote{
+      margin-top: 20px;
+    }
+    > div{
+      padding: 20px;
+    }
+    border-bottom: 3px solid #d5d5d5;
+  }
+  div.field-item > h3{
+    text-transform: uppercase;
+  }
+}
+
 .paragraphs-item-v2017-2-col-1tiers-2tiers{
   @media (min-width: @screen-sm){
     float: left;
@@ -137,6 +186,33 @@ a.link-plus{
   &:before{
     .glyphicon();
     content: "\e838";
+    color: white;
+    background-color: @orange-lppl;
+    border-radius: 16px;
+    font-size: 1.4em;
+    position: absolute;
+    left: 0;
+  }
+  &:hover{
+    text-decoration: none;
+    color: @bleu-vert-lppl;
+    &:before{
+      text-decoration: none;
+      background-color: @bleu-vert-lppl;
+    }
+  }
+}
+a.link-arrow{
+  display: block;
+  padding-left: 40px;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4em;
+  color: @noir-lppl;
+  text-decoration: none !important;
+  &:before{
+    .glyphicon();
+    content: "\f101";
     color: white;
     background-color: @orange-lppl;
     border-radius: 16px;
@@ -277,11 +353,5 @@ a.link-plus{
     >li>a {
       white-space: normal;
     }
-  }
-}
-/* Cas particuliers des titres des pages de rubriques principales *****************************************************/
-.page-node-333{
-  h2.page-header{
-    display: none;
   }
 }
