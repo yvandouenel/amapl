@@ -109,6 +109,11 @@ jQuery(function ($) {
   $('.paragraphs-item-encarts-50').matchHeight();
   $('.paragraphs-item-v2017-2-col-2tiers-1tiers, .paragraphs-item-v2017-2-col-1tiers-2tiers').matchHeight();
   $('.paragraphs-item-v2017-2col-8-4 > div').matchHeight();
+  $('.paragraphs-item-v2017-3col-4-4-4 .field-type-text-long').matchHeight();
+  $('.paragraphs-item-v2017-3col-4-4-4 .field-type-text-long div.field-item > h3').matchHeight();
+  $('.paragraphs-item-v2017-3col-4-4-4 .field-type-text-long div.type-image').matchHeight();
+  $('.paragraphs-item-v2017-2col-6-6 .field-type-text-long').matchHeight();
+
   $('.paragraphs-item-encarts-50').each(function (index) {
     var class_p = (index % 2) ? 'odd-50' : 'even-50';
     $(this).addClass(class_p);
