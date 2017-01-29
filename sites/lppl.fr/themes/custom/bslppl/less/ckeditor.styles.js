@@ -41,6 +41,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
 
              { name : 'know-more'	, element : 'a', attributes : { 'class' : 'know-more' }},
              { name : 'link-plus'	, element : 'a', attributes : { 'class' : 'link-plus' }},
+             { name : 'link-arrow'	, element : 'a', attributes : { 'class' : 'link-arrow' }},
              { name : 'custom-date'	, element : 'span', attributes : { 'class' : 'custom-date' }},
              { name : 'custom-location'	, element : 'span', attributes : { 'class' : 'custom-location' }},
              { name : 'red-lppl'	, element : 'span', attributes : { 'class' : 'red-lppl' }}
