@@ -111,3 +111,7 @@ h3#zoom-sur{
 .context-newsletter-amapl #region-sidebar-second h2.block-title{
   margin-top: 8px;
 }
+/* Inscription à un événement ********************************/
+#subscription-form {
+  width: 50%;
+}

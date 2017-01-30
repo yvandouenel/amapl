@@ -1372,6 +1372,18 @@ body.page-aggregator .feed-item {
 .context-newsletter-amapl #region-sidebar-second p {
   font-size: 1.08em;
 }
+/* inscription à un événement */
+#subscription-form{
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 3px solid lightgrey;
+  border-radius: 8px;
+  background-color: white;
+}
+#subscription-form input{
+  max-width : 100%;
+}
 
 
 
