@@ -129,6 +129,9 @@ function feature_event_strongarm() {
         'metatags' => array(
           'weight' => '22',
         ),
+        'redirect' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(),
     ),

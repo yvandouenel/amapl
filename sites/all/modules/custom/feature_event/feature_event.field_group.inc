@@ -54,7 +54,7 @@ function feature_event_field_group_info() {
   $field_group->parent_name = 'group_practical_event';
   $field_group->data = array(
     'label' => 'S\'inscrire',
-    'weight' => '37',
+    'weight' => '38',
     'children' => array(
       0 => 'field_event_registration',
     ),
@@ -62,7 +62,7 @@ function feature_event_field_group_info() {
     'format_settings' => array(
       'label' => 'S\'inscrire',
       'instance_settings' => array(
-        'id' => '',
+        'id' => 'open-subscription',
         'classes' => 'group-registration-button field-group-div',
         'description' => '',
         'show_label' => '1',
@@ -70,7 +70,7 @@ function feature_event_field_group_info() {
         'effect' => 'none',
         'speed' => 'fast',
       ),
-      'formatter' => 'collapsed',
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_registration_button|node|event|default'] = $field_group;

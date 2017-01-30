@@ -135,6 +135,7 @@ function feature_event_user_default_permissions() {
     'name' => 'view event_subscribe registration',
     'roles' => array(
       'administrator' => 'administrator',
+      'contributeur' => 'contributeur',
     ),
     'module' => 'registration',
   );

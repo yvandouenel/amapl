@@ -173,6 +173,52 @@ function feature_event_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-event-field_dates_lieu_formateur_'
+  $field_instances['node-event-field_dates_lieu_formateur_'] = array(
+    'bundle' => 'event',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 38,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_dates_lieu_formateur_',
+    'label' => 'Dates [lieu - formateur]',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 31,
+    ),
+  );
+
   // Exported field_instance: 'node-event-field_envent_training_topic'
   $field_instances['node-event-field_envent_training_topic'] = array(
     'bundle' => 'event',
@@ -762,7 +808,7 @@ function feature_event_field_default_field_instances() {
         'module' => 'registration',
         'settings' => array(),
         'type' => 'registration_form',
-        'weight' => 38,
+        'weight' => 37,
       ),
       'full' => array(
         'label' => 'above',
@@ -1152,8 +1198,55 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
     ),
   );
 
-  // Exported field_instance: 'registration-event_subscribe-field_ga_name'
-  $field_instances['registration-event_subscribe-field_ga_name'] = array(
+  // Exported field_instance: 'registration-event_subscribe-field_conditions_inscription'
+  $field_instances['registration-event_subscribe-field_conditions_inscription'] = array(
+    'bundle' => 'event_subscribe',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '<p><strong>Documents contractuels</strong><br>
+L’AMAPL vous adressera un courrier de confirmation dés réception de ce bulletin d’inscription. Un support de documentation et un questionnaire d’évaluation seront remis au cours de la formation. Après le déroulement de la formation, une attestation de présence ainsi qu’une facture valant convention de formation vous seront adressées.</p>
+<p><strong>Annulation</strong><br>
+Toute demande d’annulation d’une inscription à l’initiative du stagiaire (sauf application du délai légal de 10 jours de rétractation) ou de son entreprise doit être notifiée par écrit à l’AMAPL et lui parvenir au moins 15 jours avant la date de la formation.<br>
+A défaut, l’AMAPL pourra facturer dans les conditions légales à l’entreprise ou au stagiaire la totalité ou une partie du prix de la formation.
+Hors le cas d’événement non imputable à l’AMAPL, toute annulation de la formation par l’AMAPL en raison d’un nombre insuffisant de participant doit être envoyée dans le délai de 8 jours avant la date de formation.
+En cas d’empêchement d’un intervenant, l’AMAPL se réserve le droit de le remplacer par un intervenant de qualité équivalente.</p>
+
+<p><strong>Tarif et paiement</strong><br>
+Les tarifs sont mentionnés dans le présent document. 
+Le paiement a lieu lors de l’inscription ou au plus tard à l’issue de la formation.</p>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'registration',
+    'field_name' => 'field_conditions_inscription',
+    'label' => 'Conditions d\'inscription',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'registration-event_subscribe-field_date_et_lieu'
+  $field_instances['registration-event_subscribe-field_date_et_lieu'] = array(
     'bundle' => 'event_subscribe',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1164,6 +1257,45 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
+        'weight' => 7,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'registration',
+    'field_name' => 'field_date_et_lieu',
+    'label' => 'Date et lieu',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'registration-event_subscribe-field_ga_name'
+  $field_instances['registration-event_subscribe-field_ga_name'] = array(
+    'bundle' => 'event_subscribe',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 2,
       ),
     ),
@@ -1201,9 +1333,8 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 3,
       ),
     ),
@@ -1232,8 +1363,8 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
     ),
   );
 
-  // Exported field_instance: 'registration-event_subscribe-field_profession_registran'
-  $field_instances['registration-event_subscribe-field_profession_registran'] = array(
+  // Exported field_instance: 'registration-event_subscribe-field_profession_registrant'
+  $field_instances['registration-event_subscribe-field_profession_registrant'] = array(
     'bundle' => 'event_subscribe',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1244,12 +1375,12 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 4,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'registration',
-    'field_name' => 'field_profession_registran',
+    'field_name' => 'field_profession_registrant',
     'label' => 'Profession',
     'required' => 1,
     'settings' => array(
@@ -1348,12 +1479,23 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('<p><strong>Documents contractuels</strong><br>
+L’AMAPL vous adressera un courrier de confirmation dés réception de ce bulletin d’inscription. Un support de documentation et un questionnaire d’évaluation seront remis au cours de la formation. Après le déroulement de la formation, une attestation de présence ainsi qu’une facture valant convention de formation vous seront adressées.</p>
+<p><strong>Annulation</strong><br>
+Toute demande d’annulation d’une inscription à l’initiative du stagiaire (sauf application du délai légal de 10 jours de rétractation) ou de son entreprise doit être notifiée par écrit à l’AMAPL et lui parvenir au moins 15 jours avant la date de la formation.<br>
+A défaut, l’AMAPL pourra facturer dans les conditions légales à l’entreprise ou au stagiaire la totalité ou une partie du prix de la formation.
+Hors le cas d’événement non imputable à l’AMAPL, toute annulation de la formation par l’AMAPL en raison d’un nombre insuffisant de participant doit être envoyée dans le délai de 8 jours avant la date de formation.
+En cas d’empêchement d’un intervenant, l’AMAPL se réserve le droit de le remplacer par un intervenant de qualité équivalente.</p>
+
+<p><strong>Tarif et paiement</strong><br>
+Les tarifs sont mentionnés dans le présent document. 
+Le paiement a lieu lors de l’inscription ou au plus tard à l’issue de la formation.</p>');
   t('A ne renseigner que dans le cas où l\'événement est une formation');
   t('Actualités liées');
   t('Affiché en page d\'accueil');
@@ -1362,8 +1504,11 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
   t('Cabinet ou société');
   t('Catégorie');
   t('Commentaires');
+  t('Conditions d\'inscription');
   t('Coût adhérents');
   t('Coût grand public');
+  t('Date et lieu');
+  t('Dates [lieu - formateur]');
   t('Dates de l\'événement');
   t('Dates de parution');
   t('Donner ici l\'url qui contient l\'information complète. ');
