@@ -52,3 +52,12 @@ function feature_event_views_pre_render(&$view) {
     $build['field_dates'][0]['#markup'] = str_replace($find, $replace, $build['field_dates'][0]['#markup']);
   }
 }*/
+/**
+ * Implements hook_node_view().
+ */
+function feature_event_node_view($node, $view_mode, $langcode) {
+  if ($node->type == 'event' && $view_mode == 'full') {
+    drupal_add_js(drupal_get_path('module','feature_event') . '/js/lightbox/jquery.lightbox_me.js');
+    drupal_add_js(drupal_get_path('module','feature_event') . '/js/show-registration.js');
+  }
+}
