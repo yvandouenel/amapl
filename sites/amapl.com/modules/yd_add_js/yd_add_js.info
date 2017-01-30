@@ -1,0 +1,7 @@
+name = yd_add_js
+core = 7.x
+package = AMAPL
+version = 7.x-1.0
+project = yd_add_js
+features[features_api][] = api:2
+project path = sites/amapl.com/modules
