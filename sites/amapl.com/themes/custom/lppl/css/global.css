@@ -1384,6 +1384,9 @@ body.page-aggregator .feed-item {
 #subscription-form input{
   max-width : 100%;
 }
+#subscription-form label{
+  width: 160px;
+}
 
 
 
