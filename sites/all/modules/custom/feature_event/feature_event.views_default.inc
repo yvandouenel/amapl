@@ -418,6 +418,14 @@ function feature_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_new_window']['label'] = '';
   $handler->display->display_options['fields']['field_event_new_window']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_event_new_window']['element_label_colon'] = FALSE;
+  /* Champ: Contenu : Dates [lieu - formateur] */
+  $handler->display->display_options['fields']['field_dates_lieu_formateur_']['id'] = 'field_dates_lieu_formateur_';
+  $handler->display->display_options['fields']['field_dates_lieu_formateur_']['table'] = 'field_data_field_dates_lieu_formateur_';
+  $handler->display->display_options['fields']['field_dates_lieu_formateur_']['field'] = 'field_dates_lieu_formateur_';
+  $handler->display->display_options['fields']['field_dates_lieu_formateur_']['label'] = '';
+  $handler->display->display_options['fields']['field_dates_lieu_formateur_']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_dates_lieu_formateur_']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_dates_lieu_formateur_']['multi_type'] = 'ul';
   /* Champ: Contenu : Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
