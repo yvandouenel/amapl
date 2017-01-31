@@ -1082,7 +1082,7 @@ div.group-right .group-practical-event .group-registration-button h3 {
 
 div.group-right .group-practical-event .subscribe-event a,
 .group-registration-button h3 a,
-.group-registration-button .form-actions input {
+.group-registration-button .form-actions input{
   display: block;
   padding: 12px 20px;
   background-color: #f56e57;
@@ -1387,7 +1387,28 @@ body.page-aggregator .feed-item {
 #subscription-form label{
   width: 160px;
 }
-
+#open-subscription > h3{
+  display: block;
+  padding: 12px 20px;
+  background-color: #f56e57;
+  background-image: none;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none;
+  width: 50%;
+  margin: 10px auto;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 3px black;
+}
+#open-subscription > h3:hover,
+#open-close-condition-description{
+  cursor: pointer;
+}
+.addtoany_list:after{
+  content:"Vous y allez ? Faites le savoir !";
+}
 
 
 

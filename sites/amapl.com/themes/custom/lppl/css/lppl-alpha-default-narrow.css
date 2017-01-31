@@ -51,6 +51,12 @@
   float: left;
   width: 65%;
 }
+.node-type-event .ds-2col-fluid > .group-left {
+  width: 56%;
+}
+.node-type-event .ds-2col-fluid > .group-right {
+  width: 40%;
+}
 /* actualités actus ****************************/
 h3#zoom-sur{
   display: none;
@@ -115,3 +121,4 @@ h3#zoom-sur{
 #subscription-form {
   width: 50%;
 }
+
