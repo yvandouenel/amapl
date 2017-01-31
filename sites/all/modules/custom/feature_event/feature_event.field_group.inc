@@ -24,12 +24,11 @@ function feature_event_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_scald_file',
-      1 => 'field_event_place',
-      2 => 'field_event_cost_public',
-      3 => 'field_cost_members',
-      4 => 'field_dates',
-      5 => 'en_pratique',
-      6 => 'group_registration_button',
+      1 => 'field_event_cost_public',
+      2 => 'field_cost_members',
+      3 => 'field_dates_lieu_formateur_',
+      4 => 'en_pratique',
+      5 => 'group_registration_button',
     ),
     'format_type' => 'html5',
     'format_settings' => array(
@@ -54,7 +53,7 @@ function feature_event_field_group_info() {
   $field_group->parent_name = 'group_practical_event';
   $field_group->data = array(
     'label' => 'S\'inscrire',
-    'weight' => '38',
+    'weight' => '36',
     'children' => array(
       0 => 'field_event_registration',
     ),

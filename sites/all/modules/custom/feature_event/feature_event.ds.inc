@@ -23,21 +23,19 @@ function feature_event_ds_field_settings_info() {
       'format' => 'default',
     ),
     'addtoany' => array(
-      'weight' => '0',
+      'weight' => '5',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb' => 'Partager sur les réseaux sociaux',
+        ),
+      ),
     ),
     'field_scald_file' => array(
       'formatter_settings' => array(
         'ft' => array(
           'lb' => 'Fichiers attachés ',
-        ),
-      ),
-    ),
-    'field_event_place' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'lb' => 'Lieu ',
         ),
       ),
     ),
@@ -123,10 +121,10 @@ function feature_event_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_dates' => array(
+    'field_dates_lieu_formateur_' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_expert',
+          'lb' => 'Dates',
         ),
       ),
     ),
@@ -153,46 +151,42 @@ function feature_event_ds_layout_settings_info() {
     'regions' => array(
       'left' => array(
         0 => 'field_event_speaker',
-        2 => 'body',
-        3 => 'field_event_image',
-        4 => 'field_scald_video',
-        16 => 'field_dates_lieu_formateur_',
+        1 => 'body',
+        2 => 'field_event_image',
+        3 => 'field_scald_video',
       ),
       'right' => array(
-        1 => 'addtoany',
-        5 => 'group_practical_event',
+        4 => 'group_practical_event',
+        5 => 'addtoany',
         6 => 'field_event_linked',
         7 => 'field_event_news_linked',
         8 => 'field_event_article_linked',
         9 => 'en_pratique',
-        10 => 'field_dates',
-        11 => 'field_event_place',
-        12 => 'field_cost_members',
-        13 => 'field_event_cost_public',
-        14 => 'field_scald_file',
+        10 => 'field_cost_members',
+        11 => 'field_event_cost_public',
+        12 => 'field_dates_lieu_formateur_',
+        13 => 'field_scald_file',
+        14 => 'group_registration_button',
         15 => 'field_event_registration',
-        17 => 'group_registration_button',
       ),
     ),
     'fields' => array(
       'field_event_speaker' => 'left',
-      'addtoany' => 'right',
       'body' => 'left',
       'field_event_image' => 'left',
       'field_scald_video' => 'left',
       'group_practical_event' => 'right',
+      'addtoany' => 'right',
       'field_event_linked' => 'right',
       'field_event_news_linked' => 'right',
       'field_event_article_linked' => 'right',
       'en_pratique' => 'right',
-      'field_dates' => 'right',
-      'field_event_place' => 'right',
       'field_cost_members' => 'right',
       'field_event_cost_public' => 'right',
+      'field_dates_lieu_formateur_' => 'right',
       'field_scald_file' => 'right',
-      'field_event_registration' => 'right',
-      'field_dates_lieu_formateur_' => 'left',
       'group_registration_button' => 'right',
+      'field_event_registration' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(

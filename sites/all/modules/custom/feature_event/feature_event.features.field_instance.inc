@@ -79,7 +79,7 @@ function feature_event_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 34,
+        'weight' => 32,
       ),
       'full' => array(
         'label' => 'above',
@@ -127,17 +127,9 @@ function feature_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long_francais',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-          'show_remaining_days' => FALSE,
-        ),
-        'type' => 'date_default',
-        'weight' => 32,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -185,7 +177,7 @@ function feature_event_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 38,
+        'weight' => 34,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -270,7 +262,7 @@ function feature_event_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -351,7 +343,7 @@ function feature_event_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 35,
+        'weight' => 33,
       ),
       'full' => array(
         'label' => 'above',
@@ -511,7 +503,7 @@ function feature_event_field_default_field_instances() {
           'link' => 0,
         ),
         'type' => 'entityreference_label',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'above',
@@ -650,7 +642,7 @@ function feature_event_field_default_field_instances() {
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'full' => array(
         'label' => 'above',
@@ -697,10 +689,9 @@ function feature_event_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'inline',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 33,
+        'type' => 'hidden',
+        'weight' => 28,
       ),
       'full' => array(
         'label' => 'above',
@@ -1062,7 +1053,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'module' => 'domainedo_media',
         'settings' => array(),
         'type' => 'sdl_editor_representation',
-        'weight' => 36,
+        'weight' => 35,
       ),
       'full' => array(
         'label' => 'above',
