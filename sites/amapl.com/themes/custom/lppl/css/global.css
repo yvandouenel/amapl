@@ -868,6 +868,7 @@ body.front .view-id-events p {
   color: #013f4c;
 }
 
+
 .node-event .group-right .date-display-start:before {
   content: ' ';
   display: block;
