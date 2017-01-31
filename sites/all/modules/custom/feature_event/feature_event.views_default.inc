@@ -188,6 +188,14 @@ function feature_event_views_default_views() {
   $handler->display->display_options['fields']['field_event_image']['settings'] = array(
     'link' => '0',
   );
+  /* Champ: Contenu : Dates [lieu - formateur] */
+  $handler->display->display_options['fields']['field_dates_lieu_formateur_']['id'] = 'field_dates_lieu_formateur_';
+  $handler->display->display_options['fields']['field_dates_lieu_formateur_']['table'] = 'field_data_field_dates_lieu_formateur_';
+  $handler->display->display_options['fields']['field_dates_lieu_formateur_']['field'] = 'field_dates_lieu_formateur_';
+  $handler->display->display_options['fields']['field_dates_lieu_formateur_']['label'] = 'Dates : ';
+  $handler->display->display_options['fields']['field_dates_lieu_formateur_']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_dates_lieu_formateur_']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_dates_lieu_formateur_']['multi_type'] = 'ul';
   /* Champ: Contenu : Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
@@ -833,6 +841,7 @@ function feature_event_views_default_views() {
     t('Chercher'),
     t('<h2 class="title-page-list-events">Résultats</h2>'),
     t('Il n\'y a pas de résultats correspondant à votre recherche. Merci de modifier les critères ci-dessus.'),
+    t('Dates : '),
     t('Lieu : '),
     t('Type d\'événement :'),
     t('Classement'),
