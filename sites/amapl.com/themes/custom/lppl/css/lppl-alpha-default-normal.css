@@ -106,6 +106,7 @@ h3#zoom-sur{
 #block-views-news-block-1 .view-content{
   height: 150px;
   overflow: hidden;
+  padding-bottom: 10px;
 }
 #zoom-sur{
   position: absolute;
