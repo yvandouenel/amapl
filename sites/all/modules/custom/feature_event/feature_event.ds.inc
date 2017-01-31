@@ -5,6 +5,138 @@
  */
 
 /**
+ * Implements hook_ds_field_settings_info().
+ */
+function feature_event_ds_field_settings_info() {
+  $export = array();
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|event|default';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'event';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'en_pratique' => array(
+      'weight' => '31',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'addtoany' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'field_scald_file' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb' => 'Fichiers attachés ',
+        ),
+      ),
+    ),
+    'field_event_place' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb' => 'Lieu ',
+        ),
+      ),
+    ),
+    'field_event_speaker' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb' => 'Intervenant(s) ',
+        ),
+      ),
+    ),
+    'field_event_cost_public' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb' => 'Coût grand public ',
+        ),
+      ),
+    ),
+    'field_cost_members' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb' => 'Coût adhérents ',
+        ),
+      ),
+    ),
+    'field_event_registration' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'subscribe-event',
+          'ow-def-cl' => FALSE,
+          'ow-at' => 'id="subscription-form" ',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_event_news_linked' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Actualités liées',
+          'lb-el' => 'h3',
+          'lb-cl' => 'h3-entity-linked',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'div-link-dark-grey',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_event_linked' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Evénements liés',
+          'lb-el' => 'h3',
+          'lb-cl' => 'h3-entity-linked',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'div-link-light-grey',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_event_article_linked' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Articles associés',
+          'lb-el' => 'h3',
+          'lb-cl' => 'h3-entity-linked',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'div-link-light-grey',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_dates' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+  );
+  $export['node|event|default'] = $ds_fieldsetting;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_layout_settings_info().
  */
 function feature_event_ds_layout_settings_info() {
