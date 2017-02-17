@@ -243,4 +243,62 @@ body.not-front{
     }
   }
 }
+/* Menu gauche ********************************************************************************************************/
+#block-menu-block-3{
+  background-color: @gris-menu;
+  ul.menu{
+    a{
+      font-family: 'Montserrat', sans-serif;
+    }
+    > li{
+      > ul >li.last{
+        border-bottom: 1px solid grey;
+        margin-bottom : 10px;
+      }
+      border-bottom: 1px solid grey;
+      margin-bottom : 15px;
+      &.expanded{
+        border: 0;
+      }
+      > a{
+        color: @orange-lppl;
+        font-size: 1.2em;
+        padding: 10px 5px;
+      }
+      > ul > li > a{
+        color: @bleu-vert-fonce-lppl;
+        font-size: 1.1em;
+        font-weight: bold;
+        padding: 10px 5px 10px 20px;
+        position: relative;
+        &:before{
+          .glyphicon();
+          content: "\e83f";
+          position: absolute;
+          left: 0px;
+          top: 12px;
+          color: @bleu-vert-lppl;
+        }
+      }
 
+    }
+    > li.active-trail{
+      background-color: @fond-gris-lppl;
+    }
+    .dropdown-menu>.active>a{
+      background-color: @fond-gris-lppl;
+    }
+  }
+}
+/* Titres *************************************************************************************************************/
+h2.page-header{
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  border-bottom: 3px solid @bleu-vert-fonce-lppl;
+}
+/* Articles liés ******************************************************************************************************/
+#block-views-liste-articles-block-1{
+  h2.block-title{
+    font-family: 'Montserrat', sans-serif;
+  }
+}
