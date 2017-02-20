@@ -20,6 +20,20 @@ p a{
 .atom-align-right{
   margin: 0 0 0 20px;
 }
+ul.list-arrow{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  > li{
+    list-style: none;
+    margin-left: 20px;
+    a{
+      display: block;
+      .link-right-column();
+      padding-top: 15px;
+    }
+  }
+}
 /* Element qui prend toute la largeur *********************************************************************************/
 .full-width-bg{
   background-color: @fond-gris-lppl;
