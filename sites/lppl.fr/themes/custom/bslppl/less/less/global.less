@@ -243,6 +243,23 @@ body.not-front{
     }
   }
 }
+/* Menus secondaires **************************************************************************************************/
+.block-menu-block{
+  h2{
+    display: none;
+  }
+  .dropdown-menu{
+    display: block;
+    position: relative;
+    border: 0;
+    border-radius:0;
+    box-shadow: none;
+    background-color: transparent;
+    >li>a {
+      white-space: normal;
+    }
+  }
+}
 /* Menu gauche ********************************************************************************************************/
 #block-menu-block-3{
   background-color: @gris-menu;
@@ -295,10 +312,45 @@ h2.page-header{
   font-family: 'Montserrat', sans-serif;
   color: #000;
   border-bottom: 3px solid @bleu-vert-fonce-lppl;
+  text-transform: uppercase;
+  font-size: 1.8em;
+}
+/* Contenus liés sur la colonne de droite *****************************************************************************/
+.title-right-column{
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 80px;
+  background: url(../images/books.png) no-repeat 0 100%;
+  text-transform: uppercase;
+  font-size: 1.8em;
 }
 /* Articles liés ******************************************************************************************************/
 #block-views-liste-articles-block-1{
   h2.block-title{
-    font-family: 'Montserrat', sans-serif;
+    .title-right-column();
+    background: url(../images/books.png) no-repeat 0 100%;
+  }
+}
+/* Actualités liées ***************************************************************************************************/
+.group-right {
+  h3.h3-entity-linked{
+    .title-right-column();
+    background: url(../images/books.png) no-repeat 0 100%;
+  }
+  > div > a{
+    color: @orange-lppl;
+    font-size: 1.6em;
+  }
+}
+.region-sidebar-second{
+  font-family: 'Montserrat', sans-serif;
+  .field-content{
+    > a{
+      color: @orange-lppl;
+    }
+  }
+  .views-field.views-field-body{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid @gris-lppl;
   }
 }

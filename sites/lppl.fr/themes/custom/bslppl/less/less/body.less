@@ -1,3 +1,10 @@
+.breadcrumb{
+  li{
+    a{
+      color: @bleu-vert-fonce-lppl;
+    }
+  }
+}
 .paragraphs-item-encarts-50{
   @media (min-width: @screen-sm){
     float: left;
@@ -253,7 +260,16 @@ a.link-arrow{
 .red-lppl{
   color: @orange-lppl;
 }
-.title-news-list, .title-event-list{
+.views-field-title {
+  > span > a{
+    color: #000;
+  }
+}
+.title-news-list,
+.title-event-list,
+.title-articles-list,
+.group-left .field-name-body h3{
+  font-family: 'Montserrat', sans-serif;
   &:before{
     .glyphicon();
     content: "\e804";
@@ -262,6 +278,39 @@ a.link-arrow{
   }
   a{
     color: #000;
+  }
+}
+.group-left .field-name-body h4{
+  font-family: 'Montserrat', sans-serif;
+  &:before{
+    .glyphicon();
+    content: "\e84f";
+    color: @bleu-vert-fonce-lppl;
+    margin-right: 4px;
+    font-size: 1.6em;
+
+  }
+}
+.views-row{
+  .title-articles-list{
+    border-top: 1px solid @gris-lppl;
+    padding-top: 20px;
+    margin-top: 20px;
+    color: #000 !important;
+  }
+}
+.views-row-first{
+  .title-articles-list{
+    border-top: 0;
+  }
+}
+/* Glossaire **********************************************************************************************************/
+.view-glossaire-d-articles{
+  span.views-summary{
+    a{
+      color: @bleu-vert-fonce-lppl;
+      font-size: 2em;
+    }
   }
 }
 /* Bouton rechercher - search button **********************************************************************************/
@@ -315,6 +364,16 @@ a.link-arrow{
     border-top: 3px solid grey;
   }
 }
+/* Important **********************************************************************************************************/
+.important{
+  font-size: 1.4em;
+  &:before{
+    .glyphicon();
+    content: "\e859";
+    color: @bleu-vert-lppl;
+
+  }
+}
 /* home 3 columns *****************************************************************************************************/
 .home-three-columns{
   padding-top: 40px;
@@ -338,20 +397,29 @@ a.link-arrow{
   max-heigth: 500px;
   overflow: hidden;
 }
-/* Menus secondaires **************************************************************************************************/
-.block-menu-block{
-  h2{
-    display: none;
+/* Liste des aga ******************************************************************************************************/
+#views-exposed-form-aga-adherentes-block-1{
+  #edit-submit-aga-adherentes{
+    .search-button();
+    margin: 0;
+    top: 20px;
   }
-  .dropdown-menu{
-    display: block;
-    position: relative;
-    border: 0;
-    border-radius:0;
-    box-shadow: none;
-    background-color: transparent;
-    >li>a {
-      white-space: normal;
+  #edit-field-region-tid{
+    margin-bottom: 20px;
+  }
+}
+
+.view-aga-adherentes{
+  .h3_list_aga{
+    border-top: 1px solid @gris-lppl;
+    clear: left;
+    margin-top: 15px;
+    padding-top: 15px;
+    > a{
+      color: @bleu-vert-lppl;
+      font-weight:bold;
+      font-family: 'Montserrat', sans-serif;
+      display: block;
     }
   }
 }
