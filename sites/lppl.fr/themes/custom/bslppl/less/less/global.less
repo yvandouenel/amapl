@@ -316,18 +316,40 @@ h2.page-header{
   font-size: 1.8em;
 }
 /* Contenus liés sur la colonne de droite *****************************************************************************/
-.title-right-column{
+.title-right-column(){
   font-family: 'Montserrat', sans-serif;
   padding-bottom: 80px;
   background: url(../images/books.png) no-repeat 0 100%;
   text-transform: uppercase;
   font-size: 1.8em;
 }
+.link-right-column(){
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4em;
+  color: @orange-lppl;
+  &:before {
+    .glyphicon();
+    color: @orange-lppl;
+    content: '\e83f';
+  }
+}
+
+
 /* Articles liés ******************************************************************************************************/
-#block-views-liste-articles-block-1{
+#block-views-liste-articles-block-1,
+.col-sm-4 {
   h2.block-title{
     .title-right-column();
     background: url(../images/books.png) no-repeat 0 100%;
+  }
+  .div-link-light-grey{
+    .h3-entity-linked{
+      .title-right-column();
+      font-size: 1.6em;
+    }
+    a{
+      .link-right-column();
+    }
   }
 }
 /* Actualités liées ***************************************************************************************************/
