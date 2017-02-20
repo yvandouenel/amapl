@@ -29,6 +29,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
 
             { name : 'h2-home'		, element : 'h2', attributes : { 'class' : 'h2-home' }},
             { name : 'custom-quote'	, element : 'p', attributes : { 'class' : 'custom-quote' }},
+            { name : 'important'	, element : 'p', attributes : { 'class' : 'important' }},
             { name : 'separator-grey', element : 'div', attributes : { 'class' : 'separator-grey' }},
             { name : 'separator-grey-bold', element : 'div', attributes : { 'class' : 'separator-grey-bold' }},
             { name : 'separator-blue', element : 'div', attributes : { 'class' : 'separator-blue' }},
