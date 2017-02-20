@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Feature page complexe feature.
+ */
+
+include_once 'feature_page_complexe.features.inc';
