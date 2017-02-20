@@ -1635,6 +1635,8 @@ a{color:#27277b}
 a:hover{color:#0645ad}
 p a{text-decoration:underline;color:#2f2f2f}
 p a:before{text-decoration:none}
+.atom-align-left{margin:0 20px 0 0}
+.atom-align-right{margin:0 0 0 20px}
 .full-width-bg{background-color:#ecebe7}
 .full-width-bg .atom-align-right:after,.full-width-bg .know-more:after{display:block;content:'';clear:both}
 .custom-top-menu{background-color:#2f2f2f}
