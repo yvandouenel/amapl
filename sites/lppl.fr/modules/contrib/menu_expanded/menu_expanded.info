@@ -1,0 +1,12 @@
+name = Menu Expanded
+description = <a href="">Menu Expanded</a> restores the expanded checkboxes on the menu link list pages, enabling you to quickly set a menu item to expanded without entering the edit link for each menu item. 
+package = Administration
+core = 7.x
+
+files[] = menu_expanded.module
+; Information added by drupal.org packaging script on 2013-10-01
+version = "7.x-1.x-dev"
+core = "7.x"
+project = "menu_expanded"
+datestamp = "1380586825"
+
