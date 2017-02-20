@@ -1,0 +1,8 @@
+name = feature_ckeditor
+core = 7.x
+package = LPPL
+version = 7.x-1.0
+project = feature_ckeditor
+dependencies[] = ckeditor
+features[features_api][] = api:2
+project path = sites/lppl.fr/modules/custom/
