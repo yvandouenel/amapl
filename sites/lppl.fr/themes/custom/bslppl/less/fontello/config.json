@@ -647,6 +647,12 @@
       "css": "up-open-big",
       "code": 59474,
       "src": "entypo"
+    },
+    {
+      "uid": "abf264d54e3f10187167ebc0e833d12e",
+      "css": "up-outline",
+      "code": 59475,
+      "src": "typicons"
     }
   ]
 }
