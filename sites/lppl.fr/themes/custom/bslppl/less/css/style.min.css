@@ -1553,7 +1553,6 @@ ul.pagination li>a.progress-disabled{float:left}
 .ajax-progress-bar{border:1px solid #ccc;margin:-1px 0 0;padding:6px 12px;width:100%}
 .ajax-progress-bar .progress{height:8px;margin:0}
 .ajax-progress-bar .message,.ajax-progress-bar .percentage{color:#777;font-size:12px;line-height:1em;margin:5px 0 0;padding:0}
-#views-exposed-form-aga-adherentes-block-1 #edit-field-region-tid,.tabbable{margin-bottom:20px}
 .glyphicon-spin{display:inline-block;-moz-animation:spin 1s infinite linear;-o-animation:spin 1s infinite linear;-webkit-animation:spin 1s infinite linear;animation:spin 1s infinite linear}
 a .glyphicon-spin{display:inline-block;text-decoration:none}
 @-moz-keyframes spin{0%{-moz-transform:rotate(0)}
@@ -1571,6 +1570,7 @@ a .glyphicon-spin{display:inline-block;text-decoration:none}
 @keyframes spin{0%{transform:rotate(0)}
 100%{transform:rotate(359deg)}
 }
+.tabbable{margin-bottom:20px}
 .tabs-below>.nav-tabs,.tabs-left>.nav-tabs,.tabs-right>.nav-tabs{border-bottom:0}
 .tabs-below>.nav-tabs .summary,.tabs-left>.nav-tabs .summary,.tabs-right>.nav-tabs .summary{color:#777;font-size:12px}
 .tab-pane>.panel-heading{display:none}
@@ -1729,25 +1729,26 @@ aside.col-sm-3 .well{padding:15px 10px}
 #block-menu-block-3 ul.menu>li.expanded>a{margin-right:30px}
 #block-menu-block-3 ul.menu>li.expanded>a span.caret{display:none}
 h2.page-header{font-family:Montserrat,sans-serif;color:#000;border-bottom:3px solid #21c1ad;text-transform:uppercase;font-size:1.8em}
+.date-heading h3 a{color:#000}
+li.date-prev{right:77px!important}
 #block-views-liste-articles-block-1 h2.block-title,.node-article .col-sm-4 h2.block-title,.node-type-event .col-sm-4 h2.block-title,.node-type-news .col-sm-4 h2.block-title{font-family:Montserrat,sans-serif;padding-bottom:80px;text-transform:uppercase;font-size:1.8em;background:url(../images/books.png) 0 100% no-repeat}
 #block-views-liste-articles-block-1 .div-link-light-grey .h3-entity-linked,.node-article .col-sm-4 .div-link-light-grey .h3-entity-linked,.node-type-event .col-sm-4 .div-link-light-grey .h3-entity-linked,.node-type-news .col-sm-4 .div-link-light-grey .h3-entity-linked{font-family:Montserrat,sans-serif;padding-bottom:80px;background:url(../images/books.png) 0 100% no-repeat;text-transform:uppercase;font-size:1.8em;font-size:1.6em}
 #block-views-liste-articles-block-1 .div-link-light-grey a,.node-article .col-sm-4 .div-link-light-grey a,.node-type-event .col-sm-4 .div-link-light-grey a,.node-type-news .col-sm-4 .div-link-light-grey a{font-family:Montserrat,sans-serif;font-size:1.4em;color:#f45a40}
 #block-views-liste-articles-block-1 .div-link-light-grey a:before,.node-article .col-sm-4 .div-link-light-grey a:before,.node-type-event .col-sm-4 .div-link-light-grey a:before,.node-type-news .col-sm-4 .div-link-light-grey a:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;font-size:1em;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;color:#f45a40;content:'\e83f'}
 .group-right h3.h3-entity-linked,.region-sidebar-second{font-family:Montserrat,sans-serif}
+.glyphicon-h3-a>h3>span>a:hover:before,[class*=" icon-"]:hover{text-decoration:none}
 .group-right h3.h3-entity-linked{padding-bottom:80px;text-transform:uppercase;font-size:1.8em;background:url(../images/books.png) 0 100% no-repeat}
-.paragraphs-item-encarts-50>div,.paragraphs-item-v2017-2-col-1tiers-2tiers>div,.paragraphs-item-v2017-2-col-2tiers-1tiers>div,.paragraphs-item-v2017-2col-6-6 .field-type-text-long>div,.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-1-3>div,.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-2-3>div,.paragraphs-item-v2017-3col-4-4-4 .field-type-text-long>div{padding:20px}
 .group-right>div>a{color:#f45a40;font-size:1.6em}
 .region-sidebar-second .field-content>a{color:#f45a40}
 .region-sidebar-second .views-field.views-field-body{padding-bottom:20px;margin-bottom:20px;border-bottom:2px solid #c2bdbf}
 .paragraphs-item-encarts-50,.paragraphs-item-v2017-2-col-1tiers-2tiers,.paragraphs-item-v2017-2-col-2tiers-1tiers,.paragraphs-item-v2017-2col-6-6 .field-type-text-long,.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-1-3,.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-2-3,.paragraphs-item-v2017-3col-4-4-4 .field-type-text-long{border-bottom:3px solid #d5d5d5}
 @font-face{font-family:fontello;src:url(../fontello/font/fontello.eot?90885294);src:url(../fontello/font/fontello.eot?90885294#iefix) format('embedded-opentype'),url(../fontello/font/fontello.woff?90885294) format('woff'),url(../fontello/font/fontello.ttf?90885294) format('truetype'),url(../fontello/font/fontello.svg?90885294#fontello) format('svg');font-weight:400;font-style:normal}
-[class*=" icon-"]:hover{text-decoration:none}
 .glyphicon,.glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;text-align:center;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:fontello;font-size:1em;width:1em;margin-right:10px;text-transform:none;color:#777}
 .glyphicon-h3-a-after>h3>span>a:after,.glyphicon-h3-a>h3>span>a:before,[class*=" icon-"]:before,[class^=icon-]:before{position:relative;top:1px}
-.glyphicon-h3-a>h3>span>a:hover:before{text-decoration:none}
 .custom-quote:before,[class*=" iconafter-"]:after{top:1px;font-style:normal;speak:none;display:inline-block;text-decoration:inherit;text-align:center;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-weight:400;position:relative}
 [class*=" iconafter-"]:after{font-family:fontello;font-size:1em;width:1em;margin-right:10px;text-transform:none;color:#777}
-.h2-home,.paragraphs-item-v2017-2col-6-6 div.field-item>h3,.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-1-3 h3,.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-2-3 h3{text-transform:uppercase}
+.h2-home,.know-more,.more-link{font-family:Montserrat,sans-serif}
+.h2-home,.know-more,.more-link,.paragraphs-item-v2017-2col-6-6 div.field-item>h3,.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-1-3 h3,.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-2-3 h3{text-transform:uppercase}
 .icon-facebook:before{content:"\e801"}
 .icon-twitter:before{content:"\e800"}
 .icon-linkedin:before{content:"\e85d"}
@@ -1761,10 +1762,16 @@ h2.page-header{font-family:Montserrat,sans-serif;color:#000;border-bottom:3px so
 .icon-mail:before{content:"\e809"}
 .icon-person:before{content:"\e80A"}
 .icon-close:before{content:"\e832"}
-.icon-right-open-h3-a>h3>span>a:before,.icon-right-open:before{content:"\e804"}
+.icon-right-open-h3-a>h3>span>a:before,.icon-right-open:before,.know-more:before,.more-link:before{content:"\e804"}
 .plus-open-h3-a>h3>span>a:after{content:"\e83e";margin-left:10px}
 .breadcrumb li a{color:#21c1ad}
+.paragraphs-item-encarts-50>div{padding:20px}
+.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-2-3>div{padding:20px}
+.paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-1-3>div{padding:20px}
+.paragraphs-item-v2017-2-col-2tiers-1tiers>div{padding:20px}
+.paragraphs-item-v2017-3col-4-4-4 .field-type-text-long>div{padding:20px}
 .paragraphs-item-v2017-3col-4-4-4 div.field-item>h3{text-align:center;text-transform:uppercase}
+.paragraphs-item-v2017-2col-6-6 .field-type-text-long>div{padding:20px}
 @media (min-width:768px){.paragraphs-item-encarts-50{float:left;width:47.916666666666666666666666666667%}
 .paragraphs-item-encarts-50.even-50{margin-right:2.083333333%}
 .paragraphs-item-v2017-2col-8-4 .field-name-field-colonne-2-3{float:left;width:64.583333333333333333333333333333%;margin-right:2.083333333%}
@@ -1779,23 +1786,23 @@ h2.page-header{font-family:Montserrat,sans-serif;color:#000;border-bottom:3px so
 .paragraphs-item-v2017-2-col-1tiers-2tiers{float:left;width:31.25%}
 .paragraphs-item-v2017-2-col-1tiers-2tiers.even-un-tiers-deux-tiers{margin-right:2.083333333%}
 }
-.h2-home{font-family:Montserrat,sans-serif}
+.paragraphs-item-v2017-2-col-1tiers-2tiers>div{padding:20px}
 .custom-quote{font-size:1.4em;color:#2f2f2f;margin-bottom:30px}
 .custom-quote:before{font-family:fontello;width:1em;margin-right:10px;text-transform:none;content:"\e830";color:#24cdb8;font-size:1.6em}
-.know-more,.more-link{background:url(../images/bg-know-more.gif) repeat-x;height:45px;border-radius:8px;display:table;color:#fff!important;text-transform:uppercase;padding:10px 18px 10px 10px;margin:0 auto;position:relative;text-decoration:none;min-width:250px;font-family:Montserrat,sans-serif;font-size:1.4em}
+.know-more,.more-link{background:url(../images/bg-know-more.gif) repeat-x;height:45px;border-radius:8px;display:table;color:#fff!important;padding:10px 18px 10px 10px;margin:0 auto;position:relative;text-decoration:none;min-width:250px;font-size:1.4em}
 .know-more:before,.more-link:before,a.link-plus:before{font-style:normal;speak:none;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-.know-more:before,.more-link:before{font-family:fontello;font-weight:400;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;content:"\e804";font-size:1.2em;color:#fff;position:relative;top:5px}
+.know-more:before,.more-link:before{font-family:fontello;font-weight:400;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;font-size:1.2em;color:#fff;position:relative;top:5px}
 .know-more:hover:before,.more-link:hover:before{text-decoration:none}
-a.link-arrow,a.link-plus{padding-left:40px;text-decoration:none!important}
+a.link-arrow,a.link-plus{padding-left:40px;font-family:Montserrat,sans-serif;text-decoration:none!important}
 .know-more:hover,.more-link:hover{background:#2f2f2f}
 .know-more:after,.more-link:after{content:"";width:291px;height:11px;display:block;background:url(../images/bg-know-more_bottom.png) no-repeat;position:absolute;top:47px;left:10px}
 a.link-arrow:before,a.link-plus:before{font-weight:400;margin-right:10px;border-radius:16px;font-size:1.4em;left:0}
 .know-more a,.more-link a{color:#fff}
-a.link-plus{display:block;position:relative;font-family:Montserrat,sans-serif;font-size:1.4em;color:#2f2f2f}
+a.link-plus{display:block;position:relative;font-size:1.4em;color:#2f2f2f}
 a.link-plus:before{top:1px;font-family:fontello;display:inline-block;text-decoration:inherit;width:1em;content:"\e838";color:#fff;background-color:#f45a40;position:absolute}
 a.link-plus:hover{text-decoration:none;color:#24cdb8}
 a.link-plus:hover:before{text-decoration:none;background-color:#24cdb8}
-a.link-arrow{display:block;position:relative;font-family:Montserrat,sans-serif;font-size:1.4em;color:#2f2f2f}
+a.link-arrow{display:block;position:relative;font-size:1.4em;color:#2f2f2f}
 .custom-date:before,a.link-arrow:before{top:1px;font-style:normal;speak:none;display:inline-block;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .custom-date:before,.custom-location:before,a.link-arrow:before{font-family:fontello}
 a.link-arrow:before{text-decoration:inherit;content:"\f101";color:#fff;background-color:#f45a40;position:absolute}
@@ -1804,7 +1811,7 @@ a.link-arrow:hover:before{text-decoration:none;background-color:#24cdb8}
 .custom-date{font-weight:700;font-size:1.1em}
 .custom-date:before{position:relative;font-weight:400;font-size:1em;text-decoration:inherit;content:"\e83a";color:#f45a40;margin-right:4px}
 .custom-location{font-weight:700;font-size:1.1em}
-.custom-location:before,.group-left .field-name-body h3:before,.title-articles-list:before,.title-event-list:before,.title-news-list:before{font-size:1em;top:1px;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-right:4px;position:relative}
+.custom-location:before,.group-left .field-name-body h3:before,.title-articles-list:before,.title-event-list:before,.title-news-list:before{font-size:1em;position:relative;top:1px;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;margin-right:4px;text-transform:none}
 .custom-location:before{content:"\e809";color:#f45a40}
 .red-lppl{color:#f45a40}
 .views-field-title>span>a{color:#000}
@@ -1814,26 +1821,28 @@ a.link-arrow:hover:before{text-decoration:none;background-color:#24cdb8}
 .group-left .field-name-body h4{font-family:Montserrat,sans-serif}
 .group-left .field-name-body h4:before{position:relative;top:1px;font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\e84f";color:#21c1ad;margin-right:4px;font-size:1.6em}
 .views-row .title-articles-list{border-top:1px solid #c2bdbf;padding-top:20px;margin-top:20px;color:#000!important}
+#views-exposed-form-aga-adherentes-block-1 #edit-submit-aga-adherentes,.search-button{background:url(../images/bg-know-more.gif) repeat-x;border-radius:8px;padding:10px 18px 10px 10px;position:relative;min-width:220px}
 .views-row-first .title-articles-list{border-top:0}
 .view-glossaire-d-articles span.views-summary a{color:#21c1ad;font-size:2em}
 .important,.search-button{font-size:1.4em}
-.search-button{background:url(../images/bg-know-more.gif) repeat-x;height:45px;border-radius:8px;border:0;display:table;color:#fff;text-transform:uppercase;padding:10px 18px 10px 10px;margin:0 auto;position:relative;text-decoration:none;min-width:220px;font-family:Montserrat,sans-serif}
+.search-button{height:45px;border:0;display:table;color:#fff;text-transform:uppercase;margin:0 auto;text-decoration:none;font-family:Montserrat,sans-serif}
 #views-exposed-form-aga-adherentes-block-1 #edit-submit-aga-adherentes:hover,.search-button:hover{background:#2f2f2f}
 .search-button:after{content:"";width:291px;height:11px;display:block;background:url(../images/bg-know-more_bottom.png) no-repeat;position:absolute;top:45px;left:-4px}
 .separator-blue,.separator-blue-bold,.separator-grey-bold,.separator-transparent{margin:10px 0}
-#block-block-3 h2.block-title:before,.important:before{top:1px;font-weight:400;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;position:relative;font-style:normal;speak:none;text-align:center;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+#block-block-3 h2.block-title:before,.important:before{top:1px;font-weight:400;display:inline-block;text-decoration:inherit;width:1em;margin-right:10px;font-style:normal;speak:none;text-align:center;font-variant:normal;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .separator-grey-bold{border-top:3px solid #d5d5d5}
 .separator-blue{border-top:1px solid #24cdb8}
 .separator-blue-bold{border-top:3px solid #24cdb8}
 .separator-transparent{border-top:3px solid transparent}
 #overlay .separator-transparent{border-top:3px solid grey}
-.important:before{font-family:fontello;font-size:1em;text-transform:none;content:"\e859";color:#24cdb8}
+.important:before{position:relative;font-family:fontello;font-size:1em;text-transform:none;content:"\e859";color:#24cdb8}
 .home-three-columns{padding-top:40px}
 .home-three-columns h2.block-title{font-family:Montserrat,sans-serif;font-size:1.8em;text-transform:uppercase;margin-bottom:30px;text-align:center}
 #block-block-3{max-heigth:500px;overflow:hidden}
-#block-block-3 h2.block-title:before{font-family:fontello;text-transform:none;content:"\f304";color:#1e90ff;font-size:1.5em}
-#views-exposed-form-aga-adherentes-block-1 #edit-submit-aga-adherentes{background:url(../images/bg-know-more.gif) repeat-x;height:45px;border-radius:8px;border:0;display:table;color:#fff;text-transform:uppercase;padding:10px 18px 10px 10px;position:relative;text-decoration:none;min-width:220px;font-family:Montserrat,sans-serif;font-size:1.4em;margin:0;top:20px}
+#block-block-3 h2.block-title:before{position:relative;font-family:fontello;text-transform:none;content:"\f304";color:#1e90ff;font-size:1.5em}
+#views-exposed-form-aga-adherentes-block-1 #edit-submit-aga-adherentes{height:45px;border:0;display:table;color:#fff;text-transform:uppercase;text-decoration:none;font-family:Montserrat,sans-serif;font-size:1.4em;margin:0;top:20px}
 #views-exposed-form-aga-adherentes-block-1 #edit-submit-aga-adherentes:after{content:"";width:291px;height:11px;display:block;background:url(../images/bg-know-more_bottom.png) no-repeat;position:absolute;top:45px;left:-4px}
+#views-exposed-form-aga-adherentes-block-1 #edit-field-region-tid{margin-bottom:20px}
 .view-aga-adherentes .h3_list_aga{border-top:1px solid #c2bdbf;clear:left;margin-top:15px;padding-top:15px}
 .view-aga-adherentes .h3_list_aga>a{color:#24cdb8;font-weight:700;font-family:Montserrat,sans-serif;display:block}
 #block-views-liste-artistes-block-artistes{border-bottom:3px solid #24cdb8}
@@ -1842,6 +1851,7 @@ a.link-arrow:hover:before{text-decoration:none;background-color:#24cdb8}
 #block-views-liste-artistes-block-artistes .views-field-field-scald-image{position:relative}
 #block-views-liste-artistes-block-artistes .views-field-field-scald-image a:before{position:absolute;right:0;bottom:-5px;content:url(../images/plus_artists.png);opacity:.7}
 #block-views-liste-artistes-block-artistes .views-field-field-scald-image a:hover:before{opacity:1}
+#block-views-liste-artistes-block-artistes .view-all-artists{position:absolute;top:350px;left:115px}
 .block-news-home .views-row,.view-display-id-block_evenements_home .views-row{border-bottom:1px solid #d5d5d5}
 .block-news-home .more-link,.view-display-id-block_evenements_home .more-link{margin-top:30px}
 .col-sm-4 .field-group-format-toggler>a{font-family:Montserrat,sans-serif;font-size:1.4em;color:#f45a40}
