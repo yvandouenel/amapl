@@ -293,7 +293,17 @@ body.not-front{
   }
 }
 /* Menu gauche ********************************************************************************************************/
+aside.col-sm-3{
+  .well {
+    padding: 15px 10px;
+  }
+}
 #block-menu-block-3{
+
+  .dropdown-menu{
+    float: none;
+  }
+
   background-color: @gris-menu;
   ul.menu{
     a{
@@ -301,38 +311,81 @@ body.not-front{
     }
     > li{
       > ul >li.last{
-        border-bottom: 1px solid grey;
         margin-bottom : 10px;
       }
       border-bottom: 1px solid grey;
-      margin-bottom : 15px;
-      &.expanded{
-        border: 0;
-      }
+
       > a{
         color: @orange-lppl;
         font-size: 1.2em;
         padding: 10px 5px;
       }
-      > ul > li > a{
-        color: @bleu-vert-fonce-lppl;
-        font-size: 1.1em;
-        font-weight: bold;
-        padding: 10px 5px 10px 20px;
-        position: relative;
-        &:before{
-          .glyphicon();
-          content: "\e83f";
-          position: absolute;
-          left: 0px;
-          top: 12px;
-          color: @bleu-vert-lppl;
+
+      > ul > li {
+        &.first{
+          margin-top: -10px;
+        }
+        > a{
+          color: @bleu-vert-fonce-lppl;
+          font-size: 1.1em;
+          font-weight: bold;
+          padding: 10px 5px 10px 25px;
+          position: relative;
+          &:before{
+            .glyphicon();
+            content: "\e83f";
+            position: absolute;
+            left: 6px;
+            top: 12px;
+            color: @bleu-vert-lppl;
+          }
         }
       }
 
     }
-    > li.active-trail{
-      background-color: @fond-gris-lppl;
+    > li{
+      border-bottom: 1px solid grey;
+      &.active-trail{
+        background-color: @fond-gris-lppl;
+        .active > a{
+          color: cadetblue;
+        }
+      }
+      &.expanded {
+        position: relative;
+        .custom-dropdown-icon {
+          width: 30px;
+          height: 45px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          &:before{
+            margin-top: 5px;
+            .glyphicon();
+            font-size: 2em;
+          }
+          &:hover:before{
+            cursor: pointer;
+          }
+        }
+        .custom-dropdown-icon-close {
+          &:before{
+            content:"\e842";
+          }
+        }
+        .custom-dropdown-icon-open {
+          &:before{
+            content:"\e853";
+          }
+        }
+        > a{
+          margin-right: 30px;
+          span.caret{
+            display: none;
+          }
+        }
+      }
+
     }
     .dropdown-menu>.active>a{
       background-color: @fond-gris-lppl;
