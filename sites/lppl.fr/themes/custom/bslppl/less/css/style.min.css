@@ -1841,7 +1841,7 @@ a.link-arrow:hover:before{text-decoration:none;background-color:#24cdb8}
 #views-exposed-form-aga-adherentes-block-1 #edit-field-region-tid{margin-bottom:20px}
 .view-aga-adherentes .h3_list_aga{border-top:1px solid #c2bdbf;clear:left;margin-top:15px;padding-top:15px}
 .view-aga-adherentes .h3_list_aga>a{color:#24cdb8;font-weight:700;font-family:Montserrat,sans-serif;display:block}
-#block-views-liste-artistes-block-artistes{border-bottom:3px solid #24cdb8}
+#block-views-liste-artistes-block-artistes{border-bottom:3px solid #24cdb8;position:relative}
 #block-views-liste-artistes-block-artistes .views-field-title,#block-views-liste-artistes-block-artistes .views-slideshow-controls-bottom #views_slideshow_controls_text_liste_artistes-block_artistes{display:none}
 #block-views-liste-artistes-block-artistes .views-slideshow-controls-bottom #views_slideshow_slide_counter_liste_artistes-block_artistes{display:table;width:80px;height:26px;margin:30px auto;text-align:center;color:#fff;background:url(../images/under_artist_slider_control.png) 50% 50% no-repeat}
 #block-views-liste-artistes-block-artistes .views-field-field-scald-image{position:relative}
