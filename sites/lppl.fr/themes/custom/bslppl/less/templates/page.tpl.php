@@ -193,7 +193,7 @@
       <a href="/constellians" id="link-constellians"><img src="/sites/lppl.fr/themes/custom/bslppl/less/images/constellians-bas.png" alt="Constellians - Groupement d'Intérêt Economique d'Associations de Gestions Agréées" /></a>
       <?php print render($page['footer']); ?>
       <address>
-        <p>Tél. : <a href="tel:+33466299610" class="phone">04 66 29 9610</a> - Copyright © 2016, GIE Constellians - 242 rue Claude Nicolas Ledoux, 30 900 Nîmes</p>
+        <p>Tél. : <a href="tel:+33466299610" class="phone">04 66 29 96 10</a> - Copyright © 2016, GIE Constellians - 242 rue Claude Nicolas Ledoux, 30 900 Nîmes</p>
       </address>
     </footer>
   </div>
