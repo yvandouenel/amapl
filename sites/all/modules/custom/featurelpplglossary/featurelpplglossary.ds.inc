@@ -68,14 +68,14 @@ function featurelpplglossary_ds_field_settings_info() {
     'field_article_date' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'lb' => 'Date de parution',
+          'lb' => 'Date de parution ',
         ),
       ),
     ),
     'field_date_revision' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'lb' => 'Date de révision :',
+          'lb' => 'Date de révision ',
           'lb-col' => TRUE,
         ),
       ),

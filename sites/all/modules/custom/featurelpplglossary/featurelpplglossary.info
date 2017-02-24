@@ -68,5 +68,5 @@ features_exclude[variable][field_bundle_settings_node__article] = field_bundle_s
 features_exclude[taxonomy][auteurs_articles] = auteurs_articles
 features_exclude[taxonomy][cat_articles] = cat_articles
 features_exclude[taxonomy][tags] = tags
-mtime = 1485279324
+mtime = 1487941605
 project path = sites/all/modules/custom

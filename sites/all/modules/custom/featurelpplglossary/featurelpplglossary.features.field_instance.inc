@@ -64,7 +64,7 @@ function featurelpplglossary_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'date',
         'settings' => array(
           'format_type' => 'tres_court_francais',
