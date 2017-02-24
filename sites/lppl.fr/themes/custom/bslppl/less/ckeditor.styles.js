@@ -32,7 +32,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'important'	, element : 'p', attributes : { 'class' : 'important' }},
             { name : 'list-arrow', element : 'ul', attributes : { 'class' : 'list-arrow' }},
             { name : 'list-arrow-link', element : 'ul', attributes : { 'class' : 'list-arrow-link' }},
-            { name : 'separator-grey', element : 'div', attributes : { 'class' : 'separator-grey' }},
             { name : 'separator-grey-bold', element : 'div', attributes : { 'class' : 'separator-grey-bold' }},
             { name : 'separator-blue', element : 'div', attributes : { 'class' : 'separator-blue' }},
             { name : 'separator-blue-bold', element : 'div', attributes : { 'class' : 'separator-blue-bold' }},

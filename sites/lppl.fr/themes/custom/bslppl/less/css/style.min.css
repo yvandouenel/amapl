@@ -1711,6 +1711,8 @@ body.not-front .custom-headband ul.menu>li>.dropdown-menu li a{display:block;pad
 aside.col-sm-3 .well{padding:15px 10px}
 #block-menu-block-3{background-color:#f6f6f6}
 #block-menu-block-3 ul.menu .dropdown-menu>.active>a,#block-menu-block-3 ul.menu>li.active-trail{background-color:#ecebe7}
+@media (max-width:480px){#block-menu-block-3,.region-sidebar-first{display:none}
+}
 #block-menu-block-3 .dropdown-menu{float:none}
 #block-menu-block-3 ul.menu a{font-family:Montserrat,sans-serif}
 #block-menu-block-3 ul.menu>li>ul>li.last{margin-bottom:10px}
