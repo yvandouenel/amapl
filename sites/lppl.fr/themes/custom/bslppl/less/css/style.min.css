@@ -1704,9 +1704,11 @@ body.not-front .custom-headband ul.menu>li>a:hover:after{color:#fff;content:''}
 body.not-front .custom-headband ul.menu>li>a span.caret{display:none}
 body.not-front .custom-headband ul.menu>li.last a{margin-right:0}
 body.not-front .custom-headband ul.menu>li>.dropdown-menu{padding-bottom:20px;margin-top:-30px!important;background-color:#24cdb8;width:240px!important;border-radius:0 0 8px 8px;box-shadow:5px 5px 5px 0 #656565;border:0}
-body.not-front .custom-headband ul.menu>li>.dropdown-menu li a{display:block;padding:10px 5px 10px 20px}
+body.not-front .custom-headband ul.menu>li>.dropdown-menu li a{display:block;padding:10px 15px 10px 20px}
 }
 #block-menu-block-3 ul.menu>li.expanded>a span.caret,.block-menu-block h2{display:none}
+body.not-front .custom-headband ul.menu>li>.dropdown-menu>li{position:relative}
+body.not-front .custom-headband ul.menu>li>.dropdown-menu a span.caret{position:absolute;top:20px;right:3px}
 .block-menu-block .dropdown-menu{display:block;position:relative;border:0;border-radius:0;box-shadow:none;background-color:transparent}
 aside.col-sm-3 .well{padding:15px 10px}
 #block-menu-block-3{background-color:#f6f6f6}

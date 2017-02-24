@@ -245,6 +245,7 @@ body.not-front{
               display: none;
             }
           }
+
         }
         &.last{
           a{
@@ -266,9 +267,19 @@ body.not-front{
             li{
               a{
                 display: block;
-                padding: 10px 5px 10px 20px;
+                padding: 10px 15px 10px 20px;
               }
             }
+          }
+          > li{
+            position: relative;
+          }
+            a {
+              span.caret{
+                position: absolute;
+                top: 20px;
+                right: 3px;
+              }
           }
         }
       }
