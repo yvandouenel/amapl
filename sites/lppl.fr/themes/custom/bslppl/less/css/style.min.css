@@ -1853,6 +1853,7 @@ a.link-arrow:hover:before{text-decoration:none;background-color:#24cdb8}
 #block-views-liste-artistes-block-artistes .views-field-field-scald-image{position:relative}
 #block-views-liste-artistes-block-artistes .views-field-field-scald-image a:before{position:absolute;right:0;bottom:-5px;content:url(../images/plus_artists.png);opacity:.7}
 #block-views-liste-artistes-block-artistes .views-field-field-scald-image a:hover:before{opacity:1}
+#block-views-liste-artistes-block-artistes .views-field-field-scald-image img{width:360px!important;height:203px!important}
 #block-views-liste-artistes-block-artistes .view-all-artists{position:absolute;top:380px;left:115px}
 .view-id-liste_artistes .views-field-title{min-height:40px;margin-top:20px}
 .view-id-liste_artistes .field-name-field-scald-legende{display:none}
