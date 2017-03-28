@@ -3,10 +3,8 @@ jQuery(function ($) {
     $(window).on('resize', ppaFullWidth);
 
     function ppaFullWidth() {
-        console.log("ppaFullWidth");
         var $elements = $('.full-width-bg');//[data-ppa-full-width="true"]
         $.each( $elements, function( key, item ) {
-          console.log("dans la boucle");
             var $el = $(this);
             var $container = $el.closest('.container');
             var margin_left_right = ($(window).width() - $container.width()) / 2;
