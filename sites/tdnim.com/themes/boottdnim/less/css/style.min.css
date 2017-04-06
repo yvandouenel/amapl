@@ -1851,18 +1851,18 @@ button.navbar-toggle{position:absolute;margin-left:20px;top:50px;right:10px;z-in
 .under-footer .footer .col-md-4.col-menu-2-bas{background-color:#275467;padding:20px}
 .under-footer .footer .col-md-4.mentions-legales{background-color:#0E4156}
 .under-footer .footer .col-md-4.mentions-legales a{display:block;padding:20px 20px 31px;color:#FFF}
-.tarif table td h4:before,.tarif table th h4:before,.tarif-open-close:before{font-family:fontello;display:inline-block;width:1em;position:relative;top:1px;font-style:normal;font-weight:400;font-size:1em;speak:none;text-decoration:inherit;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.tarif table td h4:before,.tarif table th h4:before,.tarif-open-close:before,.tarif-simple table td h4:before,.tarif-simple table th h4:before{font-family:fontello;display:inline-block;width:1em;position:relative;top:1px;font-style:normal;font-weight:400;font-size:1em;speak:none;text-decoration:inherit;margin-right:10px;text-align:center;font-variant:normal;text-transform:none;line-height:1em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .tarif-open-close,.tarif-open-close:before{color:#add302}
 .tarif-open-close.opened-tarif:before{color:#8d4688}
-.tarif table td,.tarif table th{border:1px solid #f1f1f1;padding:15px}
+.tarif table td,.tarif table th,.tarif-simple table td,.tarif-simple table th{border:1px solid #f1f1f1;padding:15px}
 @media (max-width:768px){.all-small-col .small-col.small-col-selected{float:none;clear:both}
-.tarif table td,.tarif table th{padding:3px}
+.tarif table td,.tarif table th,.tarif-simple table td,.tarif-simple table th{padding:3px}
 }
-.tarif table td.wo-left,.tarif table th.wo-left{border-left:0}
-.tarif table td.wo-right,.tarif table th.wo-right{border-right:0}
-.tarif table td.wo-top,.tarif table th.wo-top{border-top:0}
-.tarif table td.wo-bottom,.tarif table th.wo-bottom{border-bottom:0}
-.tarif table td h4:before,.tarif table th h4:before{content:"\e804";color:#add302}
+.tarif table td.wo-left,.tarif table th.wo-left,.tarif-simple table td.wo-left,.tarif-simple table th.wo-left{border-left:0}
+.tarif table td.wo-right,.tarif table th.wo-right,.tarif-simple table td.wo-right,.tarif-simple table th.wo-right{border-right:0}
+.tarif table td.wo-top,.tarif table th.wo-top,.tarif-simple table td.wo-top,.tarif-simple table th.wo-top{border-top:0}
+.tarif table td.wo-bottom,.tarif table th.wo-bottom,.tarif-simple table td.wo-bottom,.tarif-simple table th.wo-bottom{border-bottom:0}
+.tarif table td h4:before,.tarif table th h4:before,.tarif-simple table td h4:before,.tarif-simple table th h4:before{content:"\e804";color:#add302}
 .page-actualites h2.page-header{font-family:gothamlight;margin-top:20px}
 .page-actualites h2.page-header:after{content:'';display:block;width:50%;height:5px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;margin-top:4px;background-color:#01589d}
 .page-actualites .views-row{margin-bottom:20px;border-bottom:1px solid #019eed;background-color:#fff;padding:20px;border-radius:6px 6px 0 0}
