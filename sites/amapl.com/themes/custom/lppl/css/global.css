@@ -1410,7 +1410,8 @@ body.page-aggregator .feed-item {
 .addtoany_list:after{
   content:"Vous y allez ? Faites le savoir !";
 }
-
-
+.context-newsletter-amapl .dnd-atom-wrapper.atom-align-left{
+  margin-bottom: 25px;
+}
 
 
