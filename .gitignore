@@ -1,6 +1,7 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
 sites/bdpl.fr/data/*
+sites/.*
 .htaccess
 .idea/*
 .idea/workspace.xml 
