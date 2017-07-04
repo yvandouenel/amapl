@@ -50,6 +50,7 @@ scripts[] = 'bootstrap/js/transition.js'
 scripts[] = 'js/full_width_bg.js'
 scripts[] = 'js/jquery.matchHeight-min.js'
 scripts[] = 'js/left-menu.js'
+scripts[] = 'js/img-animation.js'
 
 scripts[] = 'smartmenus/jquery.smartmenus.js'
 scripts[] = 'smartmenus/addons/bootstrap/jquery.smartmenus.bootstrap.js'
