@@ -549,6 +549,9 @@ div.menu-block-3 > ul > li > ul > li > a:before {
   margin: 0;
   padding: 0;
 }
+#zone-footer-wrapper{
+  background-color: #239ABC;
+}
 
 /* galerie ************************************/
 .galleria-container {

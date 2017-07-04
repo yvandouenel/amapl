@@ -121,4 +121,8 @@ h3#zoom-sur{
 #subscription-form {
   width: 50%;
 }
+/* footer *************************************************************************************************************/
+#zone-footer-wrapper{
+  background-color: transparent;
+}
 
