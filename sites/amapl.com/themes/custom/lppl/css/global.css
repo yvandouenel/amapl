@@ -1413,5 +1413,25 @@ body.page-aggregator .feed-item {
 .context-newsletter-amapl .dnd-atom-wrapper.atom-align-left{
   margin-bottom: 25px;
 }
-
-
+/* Listing des styles de ckeditor *************************************************************************************/
+.grey-p{
+  background-color: lightgrey;
+  padding: 20px;
+  font-size: 1.4em;
+}
+.blue-p{
+  background-color: #239ABC;
+  padding: 20px;
+  font-size: 1.4em;
+}
+.blue-p a{
+  color: white;
+}
+.orange-p{
+  background-color: #F7981D;
+  padding: 20px;
+  font-size: 1.4em;
+}
+.orange-p a{
+  color: white;
+}
