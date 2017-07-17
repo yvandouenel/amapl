@@ -1733,6 +1733,7 @@ aside.col-sm-3 .well{padding:15px 10px}
 h2.page-header{font-family:Montserrat,sans-serif;color:#000;border-bottom:3px solid #21c1ad;text-transform:uppercase;font-size:1.8em}
 .date-heading h3 a{color:#000}
 .page-calendar-node-field-dates-month li.date-prev{right:77px!important}
+.page-calendar-node-field-dates .view .date-nav-wrapper .date-prev{position:absolute;left:0;right:auto}
 #block-views-liste-articles-block-1 h2.block-title,.node-article .col-sm-4 h2.block-title,.node-type-event .col-sm-4 h2.block-title,.node-type-news .col-sm-4 h2.block-title{font-family:Montserrat,sans-serif;padding-bottom:80px;text-transform:uppercase;font-size:1.8em;background:url(../images/books.png) 0 100% no-repeat}
 #block-views-liste-articles-block-1 .div-link-light-grey .h3-entity-linked,.node-article .col-sm-4 .div-link-light-grey .h3-entity-linked,.node-type-event .col-sm-4 .div-link-light-grey .h3-entity-linked,.node-type-news .col-sm-4 .div-link-light-grey .h3-entity-linked{font-family:Montserrat,sans-serif;padding-bottom:80px;background:url(../images/books.png) 0 100% no-repeat;text-transform:uppercase;font-size:1.8em;font-size:1.6em}
 #block-views-liste-articles-block-1 .div-link-light-grey a,.node-article .col-sm-4 .div-link-light-grey a,.node-type-event .col-sm-4 .div-link-light-grey a,.node-type-news .col-sm-4 .div-link-light-grey a{color:#f45a40;font-family:Montserrat,sans-serif;font-size:14px;font-weight:400}
