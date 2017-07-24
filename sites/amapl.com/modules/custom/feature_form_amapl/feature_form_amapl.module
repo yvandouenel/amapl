@@ -1,0 +1,34 @@
+<?php
+/**
+ * @file
+ * Code for the Feature form amapl feature.
+ */
+
+include_once 'feature_form_amapl.features.inc';
+/**
+ * Implements hook_entityform_confirm_page_alter().
+ */
+function feature_form_amapl_entityform_confirm_page_alter(&$render_array, $entityform_type, $entityform_id) {
+  drupal_goto("entityform/" . $entityform_id);
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function feature_form_amapl_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'inscription_amapl_entityform_edit_form') {
+    $form['#validate'][] = 'feature_form_amapl_form_validate';
+  }
+}
+
+function feature_form_amapl_form_validate($form, &$form_state) {
+  dpm($form_state);
+  /*if (!isset($form_state['values']['field_forme_juridique']['und'][0]['value'])) {
+    form_set_error('field_forme_juridique', t("Vous devez entrer une forme juridique"));
+    //form_set_error('field_fj_autre', t('... ou renseigner le champ autre.'));
+  }*/
+  if (!isset($form_state['values']['field_fj_autre']['und'][0]['value']) || $form_state['values']['field_fj_autre']['und'][0]['value'] == '') {
+    form_set_error('field_forme_juridique', t("Vous devez entrer une forme juridique"));
+    form_set_error('field_fj_autre', t('... ou renseigner le champ "Autre".'));
+  }
+}
