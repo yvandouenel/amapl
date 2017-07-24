@@ -125,4 +125,66 @@ h3#zoom-sur{
 #zone-footer-wrapper{
   background-color: transparent;
 }
+/* Formulaire adhésion ************************************************************************************************/
+.entitytype-inscription_amapl-form #edit-field-choix-antenne-und > div{
+  float: left;
+  width: 24%;
+  margin-right: 1%;
+}
+.entitytype-inscription_amapl-form #edit-field-choix-antenne-und > div:last-child{
+  margin-right: 0;
+}
+.entitytype-inscription_amapl-form #edit-field-choix-antenne-und > div:last-child:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.entitytype-inscription_amapl-form #edit-field-choix-antenne-und > div input{
+  float: left;
+}
+.entitytype-inscription_amapl-form #edit-field-choix-antenne-und > div label{
+  position: relative;
+  top: -3px;
+  left: 3px;
+}
+.entitytype-inscription_amapl-form #edit-field-choix-antenne-und > div p{
+  margin-top: 5px;
+}
+.entitytype-inscription_amapl-form fieldset{
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.entitytype-inscription_amapl-form label{
+  width: 200px;
+  text-align: right;
+}
+.entitytype-inscription_amapl-form label:after{
+  content: " : ";
+  display: online;
+}
+.entitytype-inscription_amapl-form div.form-item-field-provenance-und-0-value label:after{
+  content: "";
+}
+.entitytype-inscription_amapl-form div.form-item-field-choix-antenne-und label{
+  width: auto;
+  text-align: left;
+}
+.entitytype-inscription_amapl-form div.form-item-field-choix-antenne-und label:after{
+  content: "";
+}
+.entitytype-inscription_amapl-form fieldset .form-item-field-forme-juridique-und > label:first-child{
+  display: none;
+}
+.entitytype-inscription_amapl-form fieldset .form-item-field-forme-juridique-und .form-type-radio{
+  float: left;
+  margin-right: 15px;
+}
+.entitytype-inscription_amapl-form fieldset .form-item-field-fj-autre-und-0-value{
+  clear: both;
+}
+.entitytype-inscription_amapl-form fieldset .fieldset-legend{
+  padding: 0 20px;
+}
 
