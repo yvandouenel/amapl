@@ -28,13 +28,21 @@ function feature_form_amapl_form_alter(&$form, &$form_state, $form_id) {
 }
 
 function feature_form_amapl_form_validate($form, &$form_state) {
-  dpm($form_state);
+  //dpm($form_state);
   /*if (!isset($form_state['values']['field_forme_juridique']['und'][0]['value'])) {
     form_set_error('field_forme_juridique', t("Vous devez entrer une forme juridique"));
     //form_set_error('field_fj_autre', t('... ou renseigner le champ autre.'));
   }*/
-  if (!isset($form_state['values']['field_fj_autre']['und'][0]['value']) || $form_state['values']['field_fj_autre']['und'][0]['value'] == '') {
+  //dpm($form_state['values']['field_forme_juridique']);
+  // forme juridique
+  if ($form_state['values']['field_fj_autre']['und'][0]['value'] == '' && $form_state['values']['field_forme_juridique']['und'][0]['value'] == 'AUTRE' ) {
     form_set_error('field_forme_juridique', t("Vous devez entrer une forme juridique"));
     form_set_error('field_fj_autre', t('... ou renseigner le champ "Autre".'));
   }
+  // Dénomination
+  if ($form_state['values']['field_nom_prenom']['und'][0]['value']  == '' && $form_state['values']['field_ou_denomination_sociale']['und'][0]['value'] == '') {
+    form_set_error('field_nom_prenom', t("Vous devez entrer un nom et un prénom"));
+    form_set_error('field_ou_denomination_sociale', t('... ou renseigner le champ "Dénomination sociale".'));
+  }
+  // Prix
 }
