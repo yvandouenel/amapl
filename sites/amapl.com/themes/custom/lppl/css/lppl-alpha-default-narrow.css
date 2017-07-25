@@ -164,6 +164,13 @@ h3#zoom-sur{
   content: " : ";
   display: online;
 }
+.entitytype-inscription_amapl-form .form-type-radio label:after{
+  content: "";
+}
+.entitytype-inscription_amapl-form .group-forme-juridique label{
+  width: auto;
+  text-align: left;
+}
 .entitytype-inscription_amapl-form div.form-item-field-provenance-und-0-value label:after{
   content: "";
 }
@@ -182,6 +189,9 @@ h3#zoom-sur{
   margin-right: 15px;
 }
 .entitytype-inscription_amapl-form fieldset .form-item-field-fj-autre-und-0-value{
+  clear: both;
+}
+.entitytype-inscription_amapl-form fieldset #edit-field-nombre-associes{
   clear: both;
 }
 .entitytype-inscription_amapl-form fieldset .fieldset-legend{
