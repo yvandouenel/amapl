@@ -160,9 +160,15 @@ h3#zoom-sur{
   width: 200px;
   text-align: right;
 }
-.entitytype-inscription_amapl-form label:after{
+.entitytype-inscription_amapl-form .form-type-radios label{
+  text-align: left;
+}
+.entitytype-inscription_amapl-form .form-item-field-siret-und-0-value label{
+  width: 185px;
+}
+.entitytype-inscription_amapl-form input.form-text:before{
   content: " : ";
-  display: online;
+  border: 1px solid red;
 }
 .entitytype-inscription_amapl-form .form-type-radio label:after{
   content: "";
@@ -174,6 +180,9 @@ h3#zoom-sur{
 .entitytype-inscription_amapl-form div.form-item-field-provenance-und-0-value label:after{
   content: "";
 }
+.entitytype-inscription_amapl-form fieldset .form-item-field-forme-juridique-und{
+  position: relative;
+}
 .entitytype-inscription_amapl-form div.form-item-field-choix-antenne-und label{
   width: auto;
   text-align: left;
@@ -182,7 +191,17 @@ h3#zoom-sur{
   content: "";
 }
 .entitytype-inscription_amapl-form fieldset .form-item-field-forme-juridique-und > label:first-child{
-  display: none;
+  text-indent: -6000px;
+  position: absolute;
+  top: -69px;
+  left: 115px;
+}
+.entitytype-inscription_amapl-form fieldset .form-item-field-forme-juridique-und > label:first-child:after{
+  content: '';
+}
+.entitytype-inscription_amapl-form fieldset .form-item-field-forme-juridique-und > label:first-child span{
+  display: block;
+  text-indent: 0;
 }
 .entitytype-inscription_amapl-form fieldset .form-item-field-forme-juridique-und .form-type-radio{
   float: left;
@@ -196,5 +215,35 @@ h3#zoom-sur{
 }
 .entitytype-inscription_amapl-form fieldset .fieldset-legend{
   padding: 0 20px;
+}
+.entitytype-inscription_amapl-form #field-nom-prenom-add-more-wrapper{
+  position: relative;
+}
+.entitytype-inscription_amapl-form #field-nom-prenom-add-more-wrapper .description{
+  position: absolute;
+  top: -15px;
+  left: 30px;
+}
+/* Renseignements relatifs à l'activité *******************************************************************************/
+.entitytype-inscription_amapl-form .group-activite > div > div > div.form-item{
+  padding-left: 85px;
+}
+.entitytype-inscription_amapl-form fieldset.date-combo{
+  border: 0;
+  position: relative;
+}
+.entitytype-inscription_amapl-form fieldset.date-combo .fieldset-legend{
+  padding-left: 65px;
+}
+.entitytype-inscription_amapl-form fieldset.date-combo .fieldset-wrapper{
+  position: absolute;
+  top: 20px;
+  left: 75px;
+}
+.entitytype-inscription_amapl-form fieldset.date-combo .form-item-field-date-debut-und-0-value-date label{
+  display: none;
+}
+.entitytype-inscription_amapl-form .container-inline-date{
+  height: 50px;
 }
 
