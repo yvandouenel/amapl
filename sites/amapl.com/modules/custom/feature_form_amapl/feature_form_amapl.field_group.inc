@@ -127,6 +127,7 @@ function feature_form_amapl_field_group_info() {
     'weight' => '5',
     'children' => array(
       0 => 'field_prix',
+      1 => 'field_paiement',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(

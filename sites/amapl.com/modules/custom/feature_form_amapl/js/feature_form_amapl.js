@@ -7,6 +7,20 @@
       societe_unipersonnelle = false;
       professional = true;
 
+      //user identification
+      var guid = function() {
+        var nav = window.navigator;
+        var screen = window.screen;
+        var guid = nav.mimeTypes.length;
+        guid += nav.userAgent.replace(/\D+/g, '');
+        guid += nav.plugins.length;
+        guid += screen.height || '';
+        guid += screen.width || '';
+        guid += screen.pixelDepth || '';
+
+        return guid;
+      };
+
       var this_year = new Date().getFullYear();
 
       // gestion initiale des champs
@@ -119,6 +133,9 @@
         } else {
           $(".group-tenue .field-type-text").show();
         }
+        if ($("#edit-field-paiement-und-line-item-container-0-description").val() == '') {
+          $("#edit-field-paiement-und-line-item-container-0-description").val(guid);
+        }
 
       }
 
@@ -138,24 +155,26 @@
 
         // calcul du prix en fonction de la date de création de l'entreprise
         if (begin_activity_year && begin_activity_year == this_year) {
-          price = "97€TTC";
+          price = "80.83";
         }
 
         // calcul du prix en fonction du statut : micro-bnc ou autoentrepreneur
         else if (autoentrepreneur) {
-          price = "97€TTC";
+          price = "80.83";
         }
 
         else if (societe_unipersonnelle) {
-          price = "195€TTC";
+          price = "162.5";
         }
         else if (societe) {
-          price = "312€TTC";
+          price = "260";
         }
         else {
-          price = "195€TTC";
+          price = "162.5";
         }
-        $("#edit-field-prix-und-0-value").val(price);
+        $("#edit-field-prix-und-0-value").val(Math.round(price * 1.2));
+        $("#edit-field-paiement-und-line-item-container-0-amount").val(price);
+
       }
     }
   };

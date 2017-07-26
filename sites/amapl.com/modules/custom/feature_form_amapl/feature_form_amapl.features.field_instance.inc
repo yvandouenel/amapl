@@ -829,6 +829,38 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'entityform-inscription_amapl-field_paiement'
+  $field_instances['entityform-inscription_amapl-field_paiement'] = array(
+    'bundle' => 'inscription_amapl',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'paymentform',
+        'settings' => array(),
+        'type' => 'paymentform',
+        'weight' => 28,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_paiement',
+    'label' => 'Paiement',
+    'required' => 0,
+    'settings' => array(
+      'currency_code' => 'EUR',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paymentform',
+      'settings' => array(),
+      'type' => 'paymentform_line_item',
+      'weight' => 25,
+    ),
+  );
+
   // Exported field_instance: 'entityform-inscription_amapl-field_phone'
   $field_instances['entityform-inscription_amapl-field_phone'] = array(
     'bundle' => 'inscription_amapl',
@@ -911,7 +943,7 @@ function feature_form_amapl_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 26,
     ),
   );
 
@@ -1136,6 +1168,7 @@ function feature_form_amapl_field_default_field_instances() {
   t('Nombre associés');
   t('Numéro de siret');
   t('Ou dénomination sociale');
+  t('Paiement');
   t('Prix');
   t('Profession');
   t('Revenus de source étrangère ?');

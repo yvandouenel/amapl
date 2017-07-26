@@ -19,6 +19,13 @@ function feature_form_amapl_form_alter(&$form, &$form_state, $form_id) {
 
 
   if ($form_id == 'inscription_amapl_entityform_edit_form') {
+    //dpm($form);
+
+    // Valeurs par défaut pour les champs de paiement
+    $form['field_paiement']['und']['line_item']['#default_value'][0]->tax_rate =  0.2;
+    $form['field_paiement']['und']['line_item']['#default_value'][0]->quantity =  1;
+    $form['field_paiement']['und']['line_item']['#default_value'][0]->description =  session_id();
+
     // appel du js
     drupal_add_js(drupal_get_path('module','feature_form_amapl') . '/js/feature_form_amapl.js');
 
@@ -26,6 +33,7 @@ function feature_form_amapl_form_alter(&$form, &$form_state, $form_id) {
     $form['#validate'][] = 'feature_form_amapl_form_validate';
   }
 }
+
 /*
  * Vérification des données entrées par l'utilisateur
  */
@@ -34,7 +42,7 @@ function feature_form_amapl_form_validate($form, &$form_state) {
   $current_year =  date("Y");
   $begin_activity_year = substr($form_state['values']['field_date_debut']['und'][0]['value'],0,4);
 
-  //dpm($form_state);
+  dpm($form_state);
 
   // forme juridique
   if ($form_state['values']['field_fj_autre']['und'][0]['value'] == '' && $form_state['values']['field_forme_juridique']['und'][0]['value'] == 'AUTRE' ) {
@@ -49,11 +57,11 @@ function feature_form_amapl_form_validate($form, &$form_state) {
   // Prix **********************************************************************
   // Entreprise créée dans l'année
   if ($current_year == $begin_activity_year) {
-    $price = '97€TTC';
+    $price = '80.83';
   }
   // Micro entrepreneur autoentrepreneur
   elseif ($form_state['values']['field_micro_autoentrepreneur']['und'][0]['value']) {
-    $price = '97€TTC';
+    $price = '80.83';
   }
   // Entreprise unipersonnelle
   elseif (
@@ -61,7 +69,7 @@ function feature_form_amapl_form_validate($form, &$form_state) {
     $form_state['values']['field_forme_juridique']['und'][0]['value'] == "EURL" ||
     $form_state['values']['field_forme_juridique']['und'][0]['value'] == "SELARL"
   ) {
-    $price = "195€TTC";
+    $price = "162.5";
   }
   // Entreprise avec des associés
   elseif (
@@ -69,12 +77,14 @@ function feature_form_amapl_form_validate($form, &$form_state) {
     $form_state['values']['field_forme_juridique']['und'][0]['value'] == "SEP" ||
     $form_state['values']['field_forme_juridique']['und'][0]['value'] == "SDF"
   ) {
-    $price = '312€TTC';
+    $price = '260';
   }
   else {
-    $price = '195€TTC';
+    $price = '162.5';
   }
 
-  $form_state['values']['field_prix']['und'][0]['value'] = $price;
-  dpm("Prix : " . $price);
+  $form_state['values']['field_prix']['und'][0]['value'] = $price ;
+  $form_state['values']['field_paiement']['und'][0]['amount'] = $price;
+
+
 }
