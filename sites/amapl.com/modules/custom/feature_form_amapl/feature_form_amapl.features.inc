@@ -45,7 +45,10 @@ function feature_form_amapl_default_entityform_type() {
       "roles" : { "1" : "1", "2" : "2", "5" : "5", "4" : "4", "3" : "3" },
       "resubmit_action" : "old",
       "redirect_path" : "",
-      "instruction_pre" : { "value" : "", "format" : "full_html" },
+      "instruction_pre" : {
+        "value" : "\\u003Cp\\u003EApr\\u00e8s avoir valid\\u00e9 ce formualire, vous pourrez :\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cul\\u003E\\r\\n\\t\\u003Cli\\u003Ele modifier si n\\u00e9cessaire,\\u003C\\/li\\u003E\\r\\n\\t\\u003Cli\\u003EEffectuer le paiement en ligne ou par ch\\u00e8que\\u003C\\/li\\u003E\\r\\n\\u003C\\/ul\\u003E\\r\\n",
+        "format" : "full_html"
+      },
       "anonymous_links" : 1,
       "session_save" : 1
     },

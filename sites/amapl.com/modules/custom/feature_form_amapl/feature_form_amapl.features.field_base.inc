@@ -423,6 +423,7 @@ function feature_form_amapl_field_default_field_bases() {
         'SDF' => 'Société de fait',
         'SELARL' => 'SELARL associé unique',
         'EURL' => 'EURL',
+        'AUTRE' => 'Autre',
       ),
       'allowed_values_function' => '',
     ),
@@ -447,8 +448,8 @@ function feature_form_amapl_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        0 => '',
-        1 => '',
+        0 => 0,
+        1 => 1,
       ),
       'allowed_values_function' => '',
     ),
@@ -592,6 +593,35 @@ function feature_form_amapl_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_phone',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_prix'
+  $field_bases['field_prix'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prix',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(

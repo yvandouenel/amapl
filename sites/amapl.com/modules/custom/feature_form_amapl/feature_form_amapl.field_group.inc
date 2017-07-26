@@ -68,7 +68,7 @@ function feature_form_amapl_field_group_info() {
     'format_settings' => array(
       'label' => 'Forme juridique',
       'instance_settings' => array(
-        'required_fields' => 0,
+        'required_fields' => 1,
         'id' => '',
         'classes' => 'group-forme-juridique field-group-fieldset',
         'description' => '',
@@ -103,7 +103,7 @@ function feature_form_amapl_field_group_info() {
     'format_settings' => array(
       'label' => 'Identification',
       'instance_settings' => array(
-        'required_fields' => 0,
+        'required_fields' => 1,
         'id' => '',
         'classes' => 'group-identification field-group-fieldset',
         'description' => '',
@@ -112,6 +112,35 @@ function feature_form_amapl_field_group_info() {
     ),
   );
   $field_groups['group_identification|entityform|inscription_amapl|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_prix|entityform|inscription_amapl|form';
+  $field_group->group_name = 'group_prix';
+  $field_group->entity_type = 'entityform';
+  $field_group->bundle = 'inscription_amapl';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Cotisation',
+    'weight' => '5',
+    'children' => array(
+      0 => 'field_prix',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Cotisation',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-prix field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_prix|entityform|inscription_amapl|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -136,19 +165,21 @@ function feature_form_amapl_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Tenue des documents comptables',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-tenue field-group-fieldset',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-tenue field-group-fieldset',
+        'description' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $field_groups['group_tenue|entityform|inscription_amapl|form'] = $field_group;
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Cotisation');
   t('Forme juridique');
   t('Identification');
   t('Renseignements relatifs à l\'activité');

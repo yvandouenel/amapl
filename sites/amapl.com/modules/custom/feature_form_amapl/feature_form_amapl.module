@@ -26,14 +26,16 @@ function feature_form_amapl_form_alter(&$form, &$form_state, $form_id) {
     $form['#validate'][] = 'feature_form_amapl_form_validate';
   }
 }
-
+/*
+ * Vérification des données entrées par l'utilisateur
+ */
 function feature_form_amapl_form_validate($form, &$form_state) {
+  $price = '';
+  $current_year =  date("Y");
+  $begin_activity_year = substr($form_state['values']['field_date_debut']['und'][0]['value'],0,4);
+
   //dpm($form_state);
-  /*if (!isset($form_state['values']['field_forme_juridique']['und'][0]['value'])) {
-    form_set_error('field_forme_juridique', t("Vous devez entrer une forme juridique"));
-    //form_set_error('field_fj_autre', t('... ou renseigner le champ autre.'));
-  }*/
-  //dpm($form_state['values']['field_forme_juridique']);
+
   // forme juridique
   if ($form_state['values']['field_fj_autre']['und'][0]['value'] == '' && $form_state['values']['field_forme_juridique']['und'][0]['value'] == 'AUTRE' ) {
     form_set_error('field_forme_juridique', t("Vous devez entrer une forme juridique"));
@@ -44,5 +46,35 @@ function feature_form_amapl_form_validate($form, &$form_state) {
     form_set_error('field_nom_prenom', t("Vous devez entrer un nom et un prénom"));
     form_set_error('field_ou_denomination_sociale', t('... ou renseigner le champ "Dénomination sociale".'));
   }
-  // Prix
+  // Prix **********************************************************************
+  // Entreprise créée dans l'année
+  if ($current_year == $begin_activity_year) {
+    $price = '97€TTC';
+  }
+  // Micro entrepreneur autoentrepreneur
+  elseif ($form_state['values']['field_micro_autoentrepreneur']['und'][0]['value']) {
+    $price = '97€TTC';
+  }
+  // Entreprise unipersonnelle
+  elseif (
+    $form_state['values']['field_forme_juridique']['und'][0]['value'] == "EI" ||
+    $form_state['values']['field_forme_juridique']['und'][0]['value'] == "EURL" ||
+    $form_state['values']['field_forme_juridique']['und'][0]['value'] == "SELARL"
+  ) {
+    $price = "195€TTC";
+  }
+  // Entreprise avec des associés
+  elseif (
+    $form_state['values']['field_forme_juridique']['und'][0]['value'] == "SCP" ||
+    $form_state['values']['field_forme_juridique']['und'][0]['value'] == "SEP" ||
+    $form_state['values']['field_forme_juridique']['und'][0]['value'] == "SDF"
+  ) {
+    $price = '312€TTC';
+  }
+  else {
+    $price = '195€TTC';
+  }
+
+  $form_state['values']['field_prix']['und'][0]['value'] = $price;
+  dpm("Prix : " . $price);
 }

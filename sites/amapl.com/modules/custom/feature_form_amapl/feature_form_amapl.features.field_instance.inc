@@ -22,7 +22,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 7,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -62,7 +62,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 6,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -102,7 +102,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 22,
+        'weight' => 20,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -134,7 +134,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 25,
+        'weight' => 23,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -174,7 +174,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 28,
+        'weight' => 26,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -214,7 +214,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 27,
+        'weight' => 25,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -254,7 +254,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 23,
+        'weight' => 21,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -294,7 +294,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 26,
+        'weight' => 24,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -334,13 +334,13 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 21,
+        'weight' => 19,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'entityform',
     'field_name' => 'field_autre_aga',
-    'label' => 'Le cas échéant, nom et adresse de la précédente association agréée',
+    'label' => 'Nom et adresse de la précédente association agréée',
     'required' => 0,
     'settings' => array(
       'context' => 'title',
@@ -374,7 +374,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 20,
+        'weight' => 18,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -414,7 +414,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -452,7 +452,7 @@ function feature_form_amapl_field_default_field_instances() {
           'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
-        'weight' => 18,
+        'weight' => 16,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -480,7 +480,7 @@ function feature_form_amapl_field_default_field_instances() {
         'year_range' => '1970:+0',
       ),
       'type' => 'date_popup',
-      'weight' => 14,
+      'weight' => 10,
     ),
   );
 
@@ -496,14 +496,14 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
-        'weight' => 11,
+        'weight' => 9,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'entityform',
     'field_name' => 'field_email',
     'label' => 'Email',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -530,13 +530,13 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 2,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'entityform',
     'field_name' => 'field_fj_autre',
-    'label' => 'Autre',
+    'label' => 'Autre forme juridique',
     'required' => 0,
     'settings' => array(
       'context' => 'title',
@@ -570,14 +570,14 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 4,
+        'weight' => 1,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'entityform',
     'field_name' => 'field_forme_juridique',
     'label' => 'Forme juridique',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -593,7 +593,11 @@ function feature_form_amapl_field_default_field_instances() {
   // Exported field_instance: 'entityform-inscription_amapl-field_micro_autoentrepreneur'
   $field_instances['entityform-inscription_amapl-field_micro_autoentrepreneur'] = array(
     'bundle' => 'inscription_amapl',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -602,7 +606,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 17,
+        'weight' => 15,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -620,7 +624,7 @@ function feature_form_amapl_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -636,7 +640,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 13,
+        'weight' => 11,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -669,13 +673,16 @@ function feature_form_amapl_field_default_field_instances() {
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'L\'un des deux champs suivants est recquis.<span class="form-required" title="Ce champ est requis.">*</span>',
     'display' => array(
       'default' => array(
         'label' => 'inline',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
+        'module' => 'markup_text_formatter',
+        'settings' => array(
+          'markup' => 'h3',
+        ),
+        'type' => 'markup_text',
+        'weight' => 4,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -720,7 +727,7 @@ function feature_form_amapl_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_integer',
-        'weight' => 6,
+        'weight' => 3,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -760,7 +767,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 14,
+        'weight' => 12,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -778,7 +785,7 @@ function feature_form_amapl_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -794,7 +801,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 5,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -834,7 +841,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 10,
+        'weight' => 8,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -862,6 +869,52 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'entityform-inscription_amapl-field_prix'
+  $field_instances['entityform-inscription_amapl-field_prix'] = array(
+    'bundle' => 'inscription_amapl',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '<p id="p-price-form-AMAPL">Votre cotisation unique : <span id="price-form-AMAPL"></span></p>
+<ul>
+<li>Cotisation unique * : <strong>195 € TTC</strong> (162,50 € HT + TVA AU TAUX DE 20 % : 32,50 €)<br>
+* COTISATION DE <strong>97 €</strong> POUR MICRO-BNC, AUTO-ENTREPRENEURS ET ADHERENTS AYANT DEBUTE LEUR ACTIVITE PROFESSIONNELLE EN 2017.</li>
+<li>UNIQUEMENT SOCIETES ** : <strong>312 € TTC</strong> (162,50 € HT + COUT COMPLEMENTAIRE POUR ETUDE DE LA DECLARATION N ° 2035 : 97,50 € HT +TVA AU TAUX DE 20 % : 52 €)<br>
+** EXCEPTEES EURL ET SELARL A ASSOCIE UNIQUE , QUI SONT SEULEMENT SOUMISES A LA COTISATION UNIQUE DE <strong>195 € TTC</strong></li>
+</ul>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 27,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_prix',
+    'label' => 'Prix',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 7,
+    ),
+  );
+
   // Exported field_instance: 'entityform-inscription_amapl-field_profession'
   $field_instances['entityform-inscription_amapl-field_profession'] = array(
     'bundle' => 'inscription_amapl',
@@ -874,7 +927,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 24,
+        'weight' => 22,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -914,7 +967,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 10,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -954,14 +1007,14 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 15,
+        'weight' => 13,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'entityform',
     'field_name' => 'field_siret',
     'label' => 'Numéro de siret',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
@@ -978,7 +1031,7 @@ function feature_form_amapl_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -998,7 +1051,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 16,
+        'weight' => 14,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1016,7 +1069,7 @@ function feature_form_amapl_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -1032,7 +1085,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 19,
+        'weight' => 17,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1054,11 +1107,19 @@ function feature_form_amapl_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('<p id="p-price-form-AMAPL">Votre cotisation unique : <span id="price-form-AMAPL"></span></p>
+<ul>
+<li>Cotisation unique * : <strong>195 € TTC</strong> (162,50 € HT + TVA AU TAUX DE 20 % : 32,50 €)<br>
+* COTISATION DE <strong>97 €</strong> POUR MICRO-BNC, AUTO-ENTREPRENEURS ET ADHERENTS AYANT DEBUTE LEUR ACTIVITE PROFESSIONNELLE EN 2017.</li>
+<li>UNIQUEMENT SOCIETES ** : <strong>312 € TTC</strong> (162,50 € HT + COUT COMPLEMENTAIRE POUR ETUDE DE LA DECLARATION N ° 2035 : 97,50 € HT +TVA AU TAUX DE 20 % : 52 €)<br>
+** EXCEPTEES EURL ET SELARL A ASSOCIE UNIQUE , QUI SONT SEULEMENT SOUMISES A LA COTISATION UNIQUE DE <strong>195 € TTC</strong></li>
+</ul>');
   t('Adresse');
   t('Adresse correspondance');
   t('Adresse professionnelle');
   t('Assistance d’un professionnel');
   t('Autre');
+  t('Autre forme juridique');
   t('Choix de l\'antenne');
   t('Cochez cette case si Micro-BNC ou Auto-entrepreneur');
   t('Cochez cette case si l\'activité n\'est pas professionnelle');
@@ -1067,13 +1128,15 @@ function feature_form_amapl_field_default_field_instances() {
   t('Email');
   t('Fax');
   t('Forme juridique');
-  t('Le cas échéant, nom et adresse de la précédente association agréée');
+  t('L\'un des deux champs suivants est recquis.<span class="form-required" title="Ce champ est requis.">*</span>');
   t('Nature de l\'activité');
+  t('Nom et adresse de la précédente association agréée');
   t('Nom et prénom');
   t('Nom et prénom ou société');
   t('Nombre associés');
   t('Numéro de siret');
   t('Ou dénomination sociale');
+  t('Prix');
   t('Profession');
   t('Revenus de source étrangère ?');
   t('Type d\'adhésion');
