@@ -246,4 +246,16 @@ h3#zoom-sur{
 .entitytype-inscription_amapl-form .container-inline-date{
   height: 50px;
 }
-
+/* Tenue des docs comptables ******************************************************************************************/
+.entitytype-inscription_amapl-form #edit-field-assistance{
+  position: relative;
+}
+.entitytype-inscription_amapl-form #edit-field-assistance #edit-field-assistance-und{
+  position: absolute;
+  top: -4px;
+  left: 200px;
+}
+.entitytype-inscription_amapl-form #edit-field-assistance #edit-field-assistance-und .form-type-radio{
+  float: left;
+  margin-right: 20px;
+}
