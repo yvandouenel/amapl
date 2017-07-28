@@ -1,5 +1,4 @@
 (function ($) {
-
   Drupal.behaviors.form_amapl = {
     attach: function (context, settings) {
       var price, begin_activity_year, autoentrepreneur, societe_unipersonnelle, societe, professional;
@@ -155,12 +154,12 @@
 
         // calcul du prix en fonction de la date de création de l'entreprise
         if (begin_activity_year && begin_activity_year == this_year) {
-          price = "80.83";
+          price = "80.833333333";
         }
 
         // calcul du prix en fonction du statut : micro-bnc ou autoentrepreneur
         else if (autoentrepreneur) {
-          price = "80.83";
+          price = "80.833333333";
         }
 
         else if (societe_unipersonnelle) {

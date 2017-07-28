@@ -9,6 +9,26 @@ include_once 'feature_form_amapl.features.inc';
  * Implements hook_entityform_confirm_page_alter().
  */
 function feature_form_amapl_entityform_confirm_page_alter(&$render_array, $entityform_type, $entityform_id) {
+
+  // Récupération d'un table d'entité avec une seule valeur : attention, on voit que le deuxième argument est un tableau
+  $entity_array = entity_load('entityform', array($entityform_id));
+
+  // Récupération de l'entité
+  $entity = $entity_array[$entityform_id];
+
+  $denomination = (isset($entity->field_nom_prenom['und'][0]['value']) ? $entity->field_nom_prenom['und'][0]['value'] : $entity->field_ou_denomination_sociale['und'][0]['value']);
+
+  // Modification du champ description de paiement de l'entité
+  $entity->field_paiement['und'][0]['description'] =
+    '<a href="/entityform/' . $entityform_id . '">Adhesion AMAPL n°' . $entityform_id . '</a>' .
+    ' pour ' . $denomination . ' - ' . $entity->field_email['und'][0]['email'];
+
+  // Modification du champ nom du paiement de l'entité
+  $entity->field_paiement['und'][0]['name'] = $entityform_id;
+
+  // Enregistrement de l'entité
+  $entity->save();
+
   drupal_goto("entityform/" . $entityform_id);
 }
 
@@ -22,12 +42,12 @@ function feature_form_amapl_form_alter(&$form, &$form_state, $form_id) {
     //dpm($form);
 
     // Valeurs par défaut pour les champs de paiement
-    $form['field_paiement']['und']['line_item']['#default_value'][0]->tax_rate =  0.2;
-    $form['field_paiement']['und']['line_item']['#default_value'][0]->quantity =  1;
-    $form['field_paiement']['und']['line_item']['#default_value'][0]->description =  session_id();
+    $form['field_paiement']['und']['line_item']['#default_value'][0]->tax_rate = 0.2;
+    $form['field_paiement']['und']['line_item']['#default_value'][0]->quantity = 1;
+    $form['field_paiement']['und']['line_item']['#default_value'][0]->description = session_id();
 
     // appel du js
-    drupal_add_js(drupal_get_path('module','feature_form_amapl') . '/js/feature_form_amapl.js');
+    drupal_add_js(drupal_get_path('module', 'feature_form_amapl') . '/js/feature_form_amapl.js');
 
     // appel de la fonction chargée de vérifier les données entrées par l'utilisateur
     $form['#validate'][] = 'feature_form_amapl_form_validate';
@@ -38,30 +58,30 @@ function feature_form_amapl_form_alter(&$form, &$form_state, $form_id) {
  * Vérification des données entrées par l'utilisateur
  */
 function feature_form_amapl_form_validate($form, &$form_state) {
-  $price = '';
-  $current_year =  date("Y");
-  $begin_activity_year = substr($form_state['values']['field_date_debut']['und'][0]['value'],0,4);
+  $price = 0;
+  $current_year = date("Y");
+  $begin_activity_year = substr($form_state['values']['field_date_debut']['und'][0]['value'], 0, 4);
 
-  dpm($form_state);
+  //dpm($form_state);
 
   // forme juridique
-  if ($form_state['values']['field_fj_autre']['und'][0]['value'] == '' && $form_state['values']['field_forme_juridique']['und'][0]['value'] == 'AUTRE' ) {
+  if ($form_state['values']['field_fj_autre']['und'][0]['value'] == '' && $form_state['values']['field_forme_juridique']['und'][0]['value'] == 'AUTRE') {
     form_set_error('field_forme_juridique', t("Vous devez entrer une forme juridique"));
     form_set_error('field_fj_autre', t('... ou renseigner le champ "Autre".'));
   }
   // Dénomination
-  if ($form_state['values']['field_nom_prenom']['und'][0]['value']  == '' && $form_state['values']['field_ou_denomination_sociale']['und'][0]['value'] == '') {
+  if ($form_state['values']['field_nom_prenom']['und'][0]['value'] == '' && $form_state['values']['field_ou_denomination_sociale']['und'][0]['value'] == '') {
     form_set_error('field_nom_prenom', t("Vous devez entrer un nom et un prénom"));
     form_set_error('field_ou_denomination_sociale', t('... ou renseigner le champ "Dénomination sociale".'));
   }
   // Prix **********************************************************************
   // Entreprise créée dans l'année
   if ($current_year == $begin_activity_year) {
-    $price = '80.83';
+    $price = '80.833333333';
   }
   // Micro entrepreneur autoentrepreneur
   elseif ($form_state['values']['field_micro_autoentrepreneur']['und'][0]['value']) {
-    $price = '80.83';
+    $price = '80.833333333';
   }
   // Entreprise unipersonnelle
   elseif (
@@ -83,8 +103,87 @@ function feature_form_amapl_form_validate($form, &$form_state) {
     $price = '162.5';
   }
 
-  $form_state['values']['field_prix']['und'][0]['value'] = $price ;
+  $form_state['values']['field_prix']['und'][0]['value'] = $price;
   $form_state['values']['field_paiement']['und'][0]['amount'] = $price;
+
+}
+
+/**
+ * Implements hook_entity_view().
+ */
+function feature_form_amapl_entity_view($entity, $type, $view_mode, $langcode) {
+  dpm("Entité vue : ");
+  dpm($entity);
+  dpm($type);
+  if ($type == "entityform"){
+    //dpm($entity);
+    drupal_add_js(drupal_get_path('module', 'feature_form_amapl') . '/js/feature_view_form_amapl.js');
+  }
+
+}
+
+/**
+ * Implements hook_payment_status_change().
+ */
+function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatusItem $previous_status_item) {
+
+  //dpm($payment->getStatus()->created);
+
+  // récupérer du nom du paiement qui correspond au numero de l'entityform
+  $payment_for_entityform_number = array_keys($payment->line_items);
+
+
+  // charger les entityforms qui correspondent à ces numéros
+  foreach ($payment_for_entityform_number as $value) {
+    $is_int = is_int($value) ? true : false;
+    if ($is_int) {
+
+      // Récupération de tous paiements correspondants à cet entityform pour écrire l'historique
+      $entity_payment_array = entity_load('payment');
+      $historique = "";
+      $statuts = "";
+      foreach ($entity_payment_array as $paiement) {
+        $numbers = array_keys($paiement->line_items);
+        foreach ($numbers as $number) {
+          if ($number == $value){
+            // Si je traite le paiement qui vient de changer de statut, je récupère ce dernier
+            if ($paiement->pid == $payment->pid) $paiement = $payment;
+
+            $statut = ($paiement->getStatus()->status != 'payment_status_success') ? 'Non finalisé' : "Finalisé";
+            $historique =
+              $historique .
+              '<li class="historique-paiement> Paiement ' .
+              $paiement->pid .
+              ' : ' .
+              $paiement->line_items[$number]->description .
+              ' - Statut : ' .
+              $statut .
+              ' - Date : ' .
+              date('d/m/Y - G:i',$paiement->getStatus()->created);
+              '</li';
+          }
+        }
+      }
+
+      // Récupération d'un tableau d'entités qui correspondent à ce paiement (normalement une seule)
+      $entity_array = entity_load('entityform', array($value));
+      foreach ($entity_array as $entity) {
+        // Modification du champ historique de paiement de l'entité
+        if (isset($historique) && $historique != '') {
+          $entity->field_historique_paiement['und'][0]['value'] =
+            '<h3 id="title-payment-history">Historique de paiement</h3>' .
+            '<ul>' .
+            $historique .
+            '</ul>';
+          $entity->save();
+        }
+
+      }
+
+    }
+  }
 
 
 }
+
+
