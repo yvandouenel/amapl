@@ -112,11 +112,9 @@ function feature_form_amapl_form_validate($form, &$form_state) {
  * Implements hook_entity_view().
  */
 function feature_form_amapl_entity_view($entity, $type, $view_mode, $langcode) {
-  dpm("Entité vue : ");
-  dpm($entity);
-  dpm($type);
+  //dpm($entity);
+  //dpm($type);
   if ($type == "entityform"){
-    //dpm($entity);
     drupal_add_js(drupal_get_path('module', 'feature_form_amapl') . '/js/feature_view_form_amapl.js');
   }
 
