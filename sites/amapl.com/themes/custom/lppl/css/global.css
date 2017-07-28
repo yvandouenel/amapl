@@ -44,13 +44,7 @@ body.front #breadcrumb {
   display: none;
 }
 
-#admin-menu .dropdown a, #admin-menu .dropdown li > span {
-  border-right: 1px solid #323232;
-  display: block;
-  padding: 8px 8px;
-  font-size: 1.6em;
-  line-height: 1.5em;
-}
+
 
 ul li.leaf {
   list-style: none;
