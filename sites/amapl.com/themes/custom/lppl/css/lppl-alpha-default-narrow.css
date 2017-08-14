@@ -147,15 +147,7 @@ h3#zoom-sur{
   top: -3px;
   left: 3px;
 }
-.entitytype-inscription_amapl-form #edit-field-choix-antenne-und > div p{
-  margin-top: 5px;
-}
-.entitytype-inscription_amapl-form fieldset{
-  border: 1px solid black;
-  border-radius: 6px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
+
 .entitytype-inscription_amapl-form label{
   width: 220px;
   text-align: right;
@@ -170,9 +162,7 @@ h3#zoom-sur{
   content: " : ";
   border: 1px solid red;
 }
-.entitytype-inscription_amapl-form .form-type-radio label:after{
-  content: "";
-}
+
 .entitytype-inscription_amapl-form .group-forme-juridique label{
   width: auto;
   text-align: left;
@@ -190,12 +180,7 @@ h3#zoom-sur{
 .entitytype-inscription_amapl-form div.form-item-field-choix-antenne-und label:after{
   content: "";
 }
-.entitytype-inscription_amapl-form fieldset .form-item-field-forme-juridique-und > label:first-child{
-  text-indent: -6000px;
-  position: absolute;
-  top: -69px;
-  left: 115px;
-}
+
 .entitytype-inscription_amapl-form fieldset .form-item-field-forme-juridique-und > label:first-child:after{
   content: '';
 }
@@ -240,9 +225,7 @@ h3#zoom-sur{
   top: 0px;
   left: 75px;
 }
-.entitytype-inscription_amapl-form fieldset.date-combo .form-item-field-date-debut-und-0-value-date label{
-  display: none;
-}
+
 .entitytype-inscription_amapl-form .container-inline-date{
   height: 50px;
 }
@@ -259,49 +242,12 @@ h3#zoom-sur{
   float: left;
   margin-right: 20px;
 }
-.entitytype-inscription_amapl-form #edit-field-paiement{
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  top: -1000em;
-  overflow: hidden;
-}
-.entitytype-inscription_amapl-form .field-name-field-historique-paiement{
-  display: none;
-}
-.entitytype-inscription_amapl-form #edit-submit{
-  background-color: red ;
-  background-image: none;
-  color: white;
 
-}
+
 
 /* Visualisation de l'entityform **************************************************************************************/
-.page-entityform #edit-payment-method-pmid-title{
-  display: none;
-}
-.page-entityform #payment-form-standalone #edit-save{
-  background-color: red;
-  background-image: none;
-  color: white;
-  float: left;
-  padding: 8px;
-  font-family: arial;
-  font-weight: normal;
-}
+
 .page-entityform #view-payment{
   margin: 20px 0;
 }
-.page-entityform #modify-subscribe-form{
-  display: table;
-  background-color: #239ABC;
-  color: white;
-  padding: 6px 8px;
-  border-radius: 6px;
-  text-decoration: none;
-  margin-bottom: 10px;
-}
-.page-entityform h3{
-  font-size: 1.4em;
-  margin: 15px 0;
-}
+
