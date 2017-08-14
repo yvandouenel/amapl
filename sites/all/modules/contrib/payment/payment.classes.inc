@@ -1124,7 +1124,7 @@ class PaymentLineItem extends PaymentCommon {
    * @return float
    */
   function unitAmount($tax) {
-    return $this->amount * ($tax ? $this->tax_rate + 1 : 1);
+    return round($this->amount * ($tax ? $this->tax_rate + 1 : 1));
   }
 
   /**
@@ -1136,7 +1136,7 @@ class PaymentLineItem extends PaymentCommon {
    * @return float
    */
   function totalAmount($tax) {
-    return $this->amount * $this->quantity * ($tax ? $this->tax_rate + 1 : 1);
+    return round($this->amount * $this->quantity * ($tax ? $this->tax_rate + 1 : 1));
   }
 }
 /**
