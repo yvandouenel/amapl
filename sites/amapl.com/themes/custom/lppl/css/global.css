@@ -1474,6 +1474,15 @@ body.page-aggregator .feed-item {
   color: white;
   font-weight: normal;
 }
+/* Conditions générales de vente ***********/
+.entitytype-inscription_amapl-form .form-item-field-cgv-und{
+  position: relative;
+}
+.entitytype-inscription_amapl-form .form-item-field-cgv-und div.description{
+  position: absolute;
+  left: 120px;
+  top: 2px;
+}
 /* Visualisation de l'entityform **************************************************************************************/
 .page-entityform #edit-payment-method-pmid-title{
   display: none;
