@@ -407,7 +407,7 @@ function feature_form_amapl_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '<a href="/adherer/cgv" target="_blank">Conditions Générales de Vente</a>',
+    'description' => '<a href="/adherer/cgv" target="_blank">Voir les Conditions Générales de Vente</a>',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -420,7 +420,7 @@ function feature_form_amapl_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'entityform',
     'field_name' => 'field_cgv',
-    'label' => 'CGV',
+    'label' => 'J\'accepte les CGV',
     'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1211,7 +1211,7 @@ function feature_form_amapl_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('<a href="/adherer/cgv" target="_blank">Conditions Générales de Vente</a>');
+  t('<a href="/adherer/cgv" target="_blank">Voir les Conditions Générales de Vente</a>');
   t('<p id="p-price-form-AMAPL">Votre cotisation unique : <span id="price-form-AMAPL"></span></p>
 <ul>
 <li>Cotisation unique * : <strong>195 € TTC</strong> (162,50 € HT + TVA AU TAUX DE 20 % : 32,50 €)<br>
@@ -1225,7 +1225,6 @@ function feature_form_amapl_field_default_field_instances() {
   t('Assistance d’un professionnel');
   t('Autre');
   t('Autre forme juridique');
-  t('CGV');
   t('Choix de l\'antenne');
   t('Cochez cette case si Micro-BNC ou Auto-entrepreneur');
   t('Cochez cette case si l\'activité n\'est pas professionnelle');
@@ -1235,6 +1234,7 @@ function feature_form_amapl_field_default_field_instances() {
   t('Fax');
   t('Forme juridique');
   t('Historique de paiement');
+  t('J\'accepte les CGV');
   t('L\'un des deux champs suivants est recquis.<span class="form-required" title="Ce champ est requis.">*</span>');
   t('Nature de l\'activité');
   t('Nom et adresse de la précédente association agréée');
