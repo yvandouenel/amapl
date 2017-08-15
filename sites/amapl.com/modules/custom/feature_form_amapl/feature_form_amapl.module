@@ -39,6 +39,7 @@ function feature_form_amapl_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'inscription_amapl_entityform_edit_form') {
     // Si le champ de paiement n'est pas encore initialisé, il faut initialiser
     // $form['field_paiement']['und']['line_item']['#default_value'][0]
+    $session_id = str_replace('-', '', strtolower(session_id()));
     if (empty($form['field_paiement']['und']['line_item']['#default_value'])) {
       $form['field_paiement']['und']['line_item']['#default_value'][0] = new stdClass();
     }
@@ -47,8 +48,8 @@ function feature_form_amapl_form_alter(&$form, &$form_state, $form_id) {
     $form['field_paiement']['und']['line_item']['#default_value'][0]->quantity = 1;
     $form['field_paiement']['und']['line_item']['#default_value'][0]->amount = 0;
     $form['field_paiement']['und']['line_item']['#default_value'][0]->name = 0;
-    $form['field_paiement']['und']['line_item']['#default_value'][0]->description = session_id();
-    $form['field_paiement']['und']['line_item']['#default_value'][0]->name = strtolower(session_id());
+    $form['field_paiement']['und']['line_item']['#default_value'][0]->description = $session_id;
+    $form['field_paiement']['und']['line_item']['#default_value'][0]->name = $session_id;
 
 
     // appel du js
