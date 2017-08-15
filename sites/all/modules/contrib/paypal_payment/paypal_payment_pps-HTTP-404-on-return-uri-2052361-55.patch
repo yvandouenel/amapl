@@ -1,0 +1,66 @@
+diff --git a/paypal_payment_ipn/paypal_payment_ipn.module b/paypal_payment_ipn/paypal_payment_ipn.module
+index e2f6a0c..ce22742 100755
+--- a/paypal_payment_ipn/paypal_payment_ipn.module
++++ b/paypal_payment_ipn/paypal_payment_ipn.module
+@@ -35,6 +35,7 @@ function paypal_payment_ipn_post() {
+   }
+   if (PayPalPaymentIPNController::acknowledge($ipn_variables) && PayPalPaymentIPNController::validate($ipn_variables)) {
+     $ipn = new PayPalPaymentIPN($ipn_variables);
++    $ipn->pid = PayPalPaymentIPNController::PID($ipn_variables['invoice']);
+     PayPalPaymentIPNController::save($ipn);
+     PayPalPaymentIPNController::process($ipn_variables);
+   }
+diff --git a/paypal_payment_pps/paypal_payment_pps.module b/paypal_payment_pps/paypal_payment_pps.module
+index 2053510..1ba2f31 100755
+--- a/paypal_payment_pps/paypal_payment_pps.module
++++ b/paypal_payment_pps/paypal_payment_pps.module
+@@ -248,11 +248,19 @@ function paypal_payment_pps_form_redirect_access(Payment $payment, $account = NU
+  * Return callback.
+  */
+ function paypal_payment_pps_return() {
+-  $ipn_variables = $_POST;
+-  $ipn = new PayPalPaymentIPN($ipn_variables);
+-  PayPalPaymentIPNController::save($ipn);
+-  PayPalPaymentIPNController::process($ipn_variables);
+-  $payment = entity_load_single('payment', PayPalPaymentIPNController::PID($ipn_variables['invoice']));
++  if (isset($_POST['txn_id'])) {
++    // Make sure this request was not processed before through IPN.
++    $ipn = PayPalPaymentIPNController::load($_POST['txn_id']);
++    if (!$ipn) {
++      $payment = entity_load_single('payment', PayPalPaymentIPNController::PID($_POST['invoice']));
++      $ipn = new PayPalPaymentIPN($_POST);
++      $ipn->pid = $payment->pid;
++      PayPalPaymentIPNController::save($ipn);
++      PayPalPaymentIPNController::process($_POST);
++    }
++  }
++  // (Re)load the payment object to make sure that the object is up-to-date.
++  $payment = entity_load_single('payment', PayPalPaymentIPNController::PID($_POST['invoice']));
+   $payment->finish();
+ }
+ 
+@@ -262,7 +270,23 @@ function paypal_payment_pps_return() {
+  * @return bool
+  */
+ function paypal_payment_pps_return_access() {
+-  return PayPalPaymentIPNController::validate($_POST);
++  // Try to load the Payment object from the returned information.
++  if (isset($_POST['invoice'])) {
++    $pid = PayPalPaymentIPNController::PID($_POST['invoice']);
++    if ($pid) {
++      $payment = entity_load_single('payment', $pid);
++      if ($payment) {
++        // Allow payment method controllers to completely take over validation.
++        if ($payment->method->controller instanceof PayPalPaymentIPNPaymentMethodControllerInterface) {
++          return $payment->method->controller->PayPalValidateIPNVariables($payment, $_POST);
++        }
++        else {
++          return TRUE;
++        }
++      }
++    }
++  }
++  return FALSE;
+ }
+ 
+ /**
