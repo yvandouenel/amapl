@@ -1,6 +1,7 @@
 (function ($) {
-  Drupal.behaviors.form_amapl = {
+  Drupal.behaviors.feature_form_amapl = {
     attach: function (context, settings) {
+
       var price, begin_activity_year, autoentrepreneur, societe_unipersonnelle, societe, professional;
       societe = false;
       societe_unipersonnelle = false;
@@ -79,8 +80,6 @@
       }
 
       function manageFields() {
-        /*console.log("Societe : " + societe);
-        console.log("societe_unipersonnelle : " + societe_unipersonnelle);*/
 
         if (!$("#edit-field-forme-juridique-und-autre").attr('checked')) {
           $("#field-fj-autre-add-more-wrapper").hide();
@@ -89,12 +88,10 @@
           $("#field-nombre-associes-add-more-wrapper").hide();
         }
         if (societe || societe_unipersonnelle) {
-          console.log("Je dois effacer le champ non pro");
           professionnal = true;
           $("#edit-field-non-pro").hide().find("input").attr('checked', false);
           $("#field-fj-autre-add-more-wrapper").hide();
           $("#edit-field-siret").show();
-          console.log($("#edit-field-siret").val());
           if ($("#edit-field-siret-und-0-value").val() == "Pas de siret") $("#edit-field-siret-und-0-value").val('');
         } else {
           $("#field-fj-autre-add-more-wrapper").show();
