@@ -151,15 +151,16 @@ function changeHistoricalPayment(Payment $payment) {
             $statut = ($paiement->getStatus()->status != 'payment_status_success') ? 'Non finalisé' : "Finalisé";
             $historique =
               $historique .
-              '<li class="historique-paiement> Paiement ' .
-              $paiement->pid .
-              ' : ' .
-              $paiement->line_items[$number]->description .
-              ' - Statut : ' .
+              '<li>' .
+              date('d/m/Y - G:i',$paiement->getStatus()->created) .
+              ' - Statut : <strong>' .
               $statut .
-              ' - Date : ' .
-              date('d/m/Y - G:i',$paiement->getStatus()->created).
-              '</li';
+              '</strong>' .
+              ' - n° de paiement : ' .
+              $paiement->pid .
+              ' - ' .
+              $paiement->line_items[$number]->description.
+              '</li>' ;
           }
         }
       }
@@ -169,8 +170,11 @@ function changeHistoricalPayment(Payment $payment) {
       foreach ($entity_array as $entity) {
         // Modification du champ historique de paiement de l'entité
         if (isset($historique) && $historique != '') {
+          //$wrapper = entity_metadata_wrapper('entityform', $entity); // use wrappers!
+
+          $entity->field_historique_paiement['und'][0]['format'] = "full_html";
           $entity->field_historique_paiement['und'][0]['value'] =
-            '<h3 id="title-payment-history">Historique de paiement</h3>' .
+            '<h3>Historique de paiement </h3>' .
             '<ul>' .
             $historique .
             '</ul>';
