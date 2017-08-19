@@ -207,7 +207,11 @@ function feature_form_amapl_node_view($node, $view_mode, $langcode) {
   $alias = drupal_get_path_alias('node/' . $node->nid);
   if ($alias == 'paypal_payment_pps/return'){
     if(isset($_SESSION['paypal_payment_pps_pid'])){
-      drupal_goto('payment/' . $_SESSION['paypal_payment_pps_pid'] . '/view');
+      $paymentpath = 'payment/' . $_SESSION['paypal_payment_pps_pid'] . '/view';
+      /*drupal_goto('payment/' . $_SESSION['paypal_payment_pps_pid'] . '/view');*/
+      // appel du js
+      drupal_add_js(array('feature_form_amapl' => array('paymentpath' => $paymentpath)), array('type' => 'setting'));
+      drupal_add_js(drupal_get_path('module', 'feature_form_amapl') . '/js/gotopayment.js');
     }
   }
 }
