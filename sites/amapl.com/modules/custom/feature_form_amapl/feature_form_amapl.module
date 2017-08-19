@@ -200,4 +200,16 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
   changeHistoricalPayment($payment);
 }
 
+/**
+ * Implements hook_node_view().
+ */
+function feature_form_amapl_node_view($node, $view_mode, $langcode) {
+  $alias = drupal_get_path_alias('node/' . $node->nid);
+  if ($alias == 'paypal_payment_pps/return'){
+    if(isset($_SESSION['paypal_payment_pps_pid'])){
+      drupal_goto('payment/' . $_SESSION['paypal_payment_pps_pid'] . '/view');
+    }
+  }
+}
+
 
