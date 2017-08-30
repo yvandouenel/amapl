@@ -23,7 +23,7 @@ function feature_form_amapl_default_entityform_type() {
   $items = array();
   $items['inscription_amapl'] = entity_import('entityform_type', '{
     "type" : "inscription_amapl",
-    "label" : "Inscription amapl",
+    "label" : "Demande d\\u0027adh\\u00e9sion en ligne",
     "data" : {
       "draftable" : 0,
       "draft_redirect_path" : "",
@@ -34,7 +34,7 @@ function feature_form_amapl_default_entityform_type() {
       "your_submissions" : "",
       "disallow_resubmit_msg" : "",
       "delete_confirm_msg" : "",
-      "page_title_view" : "",
+      "page_title_view" : "R\\u00e9sum\\u00e9 de votre demande d\\u0027adh\\u00e9sion en ligne",
       "preview_page" : 0,
       "submission_page_title" : "",
       "submission_text" : { "value" : "", "format" : "full_html" },
@@ -46,7 +46,7 @@ function feature_form_amapl_default_entityform_type() {
       "resubmit_action" : "old",
       "redirect_path" : "",
       "instruction_pre" : {
-        "value" : "\\u003Cp\\u003EApr\\u00e8s avoir valid\\u00e9 ce formualire, vous pourrez :\\u003C\\/p\\u003E\\r\\n\\r\\n\\u003Cul\\u003E\\r\\n\\t\\u003Cli\\u003Ele modifier si n\\u00e9cessaire,\\u003C\\/li\\u003E\\r\\n\\t\\u003Cli\\u003EEffectuer le paiement en ligne ou par ch\\u00e8que\\u003C\\/li\\u003E\\r\\n\\u003C\\/ul\\u003E\\r\\n",
+        "value" : "\\u003Cp\\u003E\\u003Cspan style=\\u0022font-size: 11pt; font-family: Calibri, sans-serif;\\u0022\\u003E\\u0026nbsp;Vous renseignez et validez ce formulaire, puis payez par CB sur le compte Paypal de l\\u2019AMAPL. \\u003Cstrong\\u003EVotre adh\\u00e9sion \\u00e0 l\\u2019AMAPL ne sera prise en compte qu\\u2019apr\\u00e8s ce paiement\\u003C\\/strong\\u003E, sous r\\u00e9serve du respect des d\\u00e9lais r\\u00e9glementaires d\\u2019adh\\u00e9sion en vigueur. Un remboursement du r\\u00e8glement CB pourra avoir lieu en cas de rejet de l\\u2019adh\\u00e9sion pour ce motif.\\u003C\\/span\\u003E\\u003C\\/p\\u003E\\r\\n",
         "format" : "full_html"
       },
       "anonymous_links" : 1,

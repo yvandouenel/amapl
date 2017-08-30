@@ -21,7 +21,7 @@ function feature_form_amapl_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Renseignements relatifs à l\'activité',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'field_nature_activite',
       1 => 'field_non_pro',
@@ -32,6 +32,7 @@ function feature_form_amapl_field_group_info() {
       6 => 'field_type_adhesion',
       7 => 'field_autre_type_adhesion',
       8 => 'field_autre_aga',
+      9 => 'field_code_ape',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -50,6 +51,35 @@ function feature_form_amapl_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_annee_adhesion|entityform|inscription_amapl|form';
+  $field_group->group_name = 'group_annee_adhesion';
+  $field_group->entity_type = 'entityform';
+  $field_group->bundle = 'inscription_amapl';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Année d\'adhésion',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_pour_les_revenus',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Année d\'adhésion',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-annee-adhesion field-group-div',
+        'description' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_annee_adhesion|entityform|inscription_amapl|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_forme_juridique|entityform|inscription_amapl|form';
   $field_group->group_name = 'group_forme_juridique';
   $field_group->entity_type = 'entityform';
@@ -58,7 +88,7 @@ function feature_form_amapl_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Forme juridique',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_forme_juridique',
       1 => 'field_fj_autre',
@@ -89,7 +119,7 @@ function feature_form_amapl_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Identification',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
       0 => 'field_nom_prenom',
       1 => 'field_ou_denomination_sociale',
@@ -97,7 +127,6 @@ function feature_form_amapl_field_group_info() {
       3 => 'field_adresse_correspondance',
       4 => 'field_phone',
       5 => 'field_email',
-      6 => 'field_provenance',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -124,7 +153,7 @@ function feature_form_amapl_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Cotisation',
-    'weight' => '5',
+    'weight' => '6',
     'children' => array(
       0 => 'field_prix',
       1 => 'field_paiement',
@@ -154,7 +183,7 @@ function feature_form_amapl_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tenue des documents comptables',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_assistance',
       1 => 'field_assistance_nom',
@@ -180,6 +209,7 @@ function feature_form_amapl_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Année d\'adhésion');
   t('Cotisation');
   t('Forme juridique');
   t('Identification');

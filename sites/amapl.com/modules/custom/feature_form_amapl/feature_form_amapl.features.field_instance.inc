@@ -15,14 +15,14 @@ function feature_form_amapl_field_default_field_instances() {
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'A renseigner dans le cas où vous souhaitez que l\'AMAPL utilise une autre adresse que la professionnelle pour correspondre.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 8,
+        'weight' => 7,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -62,14 +62,14 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 7,
+        'weight' => 6,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'entityform',
     'field_name' => 'field_adresse_professionnelle',
     'label' => 'Adresse professionnelle',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
@@ -102,7 +102,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 21,
+        'weight' => 20,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -173,7 +173,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 23,
+        'weight' => 22,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -197,7 +197,7 @@ function feature_form_amapl_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 24,
+      'weight' => 25,
     ),
   );
 
@@ -330,7 +330,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 20,
+        'weight' => 19,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -354,7 +354,7 @@ function feature_form_amapl_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
@@ -370,7 +370,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 19,
+        'weight' => 18,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -394,7 +394,7 @@ function feature_form_amapl_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 16,
+      'weight' => 17,
     ),
   );
 
@@ -407,20 +407,19 @@ function feature_form_amapl_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '<a href="/adherer/cgv" target="_blank">Voir les Conditions Générales de Vente</a>',
+    'description' => '<a href="/adherer/cgv" target="_blank">Voir les conditions d’adhésion</a>',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 30,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'entityform',
     'field_name' => 'field_cgv',
-    'label' => 'J\'accepte les CGV',
+    'label' => ' J’ai pris connaissance et accepte les conditions d’adhésion',
     'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -432,7 +431,7 @@ function feature_form_amapl_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 28,
+      'weight' => 8,
     ),
   );
 
@@ -448,13 +447,13 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 22,
+        'weight' => 21,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'entityform',
     'field_name' => 'field_choix_antenne',
-    'label' => 'Choix de l\'antenne',
+    'label' => 'Choix de l\'agence',
     'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -465,6 +464,45 @@ function feature_form_amapl_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-inscription_amapl-field_code_ape'
+  $field_instances['entityform-inscription_amapl-field_code_ape'] = array(
+    'bundle' => 'inscription_amapl',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 32,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_code_ape',
+    'label' => 'Code APE',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 13,
     ),
   );
 
@@ -486,7 +524,7 @@ function feature_form_amapl_field_default_field_instances() {
           'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
-        'weight' => 17,
+        'weight' => 16,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -530,7 +568,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'email',
         'settings' => array(),
         'type' => 'email_default',
-        'weight' => 10,
+        'weight' => 9,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -548,7 +586,7 @@ function feature_form_amapl_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'email_textfield',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -564,7 +602,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -604,7 +642,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -660,7 +698,7 @@ function feature_form_amapl_field_default_field_instances() {
         'show_token_tree' => 0,
       ),
       'type' => 'text_textarea',
-      'weight' => 27,
+      'weight' => 11,
     ),
   );
 
@@ -680,13 +718,13 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 15,
+        'weight' => 14,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'entityform',
     'field_name' => 'field_micro_autoentrepreneur',
-    'label' => 'Cochez cette case si Micro-BNC ou Auto-entrepreneur',
+    'label' => 'Adhésion Micro-BNC ou Auto-entrepreneur',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -698,7 +736,7 @@ function feature_form_amapl_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -714,7 +752,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 16,
+        'weight' => 15,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -747,16 +785,14 @@ function feature_form_amapl_field_default_field_instances() {
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'L\'un des deux champs suivants est recquis.<span class="form-required" title="Ce champ est requis.">*</span>',
+    'description' => 'L\'un des deux champs suivants est requis.<span class="form-required" title="Ce champ est requis.">*</span>',
     'display' => array(
       'default' => array(
         'label' => 'inline',
-        'module' => 'markup_text_formatter',
-        'settings' => array(
-          'markup' => 'h3',
-        ),
-        'type' => 'markup_text',
-        'weight' => 5,
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -801,7 +837,7 @@ function feature_form_amapl_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_integer',
-        'weight' => 4,
+        'weight' => 3,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -841,13 +877,13 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 13,
+        'weight' => 12,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'entityform',
     'field_name' => 'field_non_pro',
-    'label' => 'Cochez cette case si l\'activité n\'est pas professionnelle',
+    'label' => 'Activité non professionnelle',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -875,7 +911,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 5,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -914,7 +950,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'paymentform',
         'settings' => array(),
         'type' => 'paymentform',
-        'weight' => 1,
+        'weight' => 23,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -935,6 +971,44 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'entityform-inscription_amapl-field_payment_online'
+  $field_instances['entityform-inscription_amapl-field_payment_online'] = array(
+    'bundle' => 'inscription_amapl',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 33,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_payment_online',
+    'label' => ' Je règle la cotisation en ligne par carte bancaire, condition de mon adhésion en ligne',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance: 'entityform-inscription_amapl-field_phone'
   $field_instances['entityform-inscription_amapl-field_phone'] = array(
     'bundle' => 'inscription_amapl',
@@ -947,7 +1021,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 8,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -971,7 +1045,38 @@ function feature_form_amapl_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-inscription_amapl-field_pour_les_revenus'
+  $field_instances['entityform-inscription_amapl-field_pour_les_revenus'] = array(
+    'bundle' => 'inscription_amapl',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_pour_les_revenus',
+    'label' => 'Pour les revenus',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 2,
     ),
   );
 
@@ -980,13 +1085,7 @@ function feature_form_amapl_field_default_field_instances() {
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '<p id="p-price-form-AMAPL">Votre cotisation unique : <span id="price-form-AMAPL"></span></p>
-<ul>
-<li>Cotisation unique * : <strong>195 € TTC</strong> (162,50 € HT + TVA AU TAUX DE 20 % : 32,50 €)<br>
-* COTISATION DE <strong>97 €</strong> POUR MICRO-BNC, AUTO-ENTREPRENEURS ET ADHERENTS AYANT DEBUTE LEUR ACTIVITE PROFESSIONNELLE EN 2017.</li>
-<li>UNIQUEMENT SOCIETES ** : <strong>312 € TTC</strong> (162,50 € HT + COUT COMPLEMENTAIRE POUR ETUDE DE LA DECLARATION N ° 2035 : 97,50 € HT +TVA AU TAUX DE 20 % : 52 €)<br>
-** EXCEPTEES EURL ET SELARL A ASSOCIE UNIQUE , QUI SONT SEULEMENT SOUMISES A LA COTISATION UNIQUE DE <strong>195 € TTC</strong></li>
-</ul>',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1071,7 +1170,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 10,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1084,7 +1183,7 @@ function feature_form_amapl_field_default_field_instances() {
       'context_default' => 'sdl_editor_representation',
       'dnd_enabled' => 0,
       'mee_enabled' => 0,
-      'text_processing' => 1,
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1095,7 +1194,7 @@ function feature_form_amapl_field_default_field_instances() {
         'show_token_tree' => 0,
       ),
       'type' => 'text_textarea',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -1104,14 +1203,14 @@ function feature_form_amapl_field_default_field_instances() {
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Si vous n\'avez pas encore de numéro de siret, entrez "En cours d\'attribution".',
     'display' => array(
       'default' => array(
         'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 11,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1155,7 +1254,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 14,
+        'weight' => 13,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1173,7 +1272,7 @@ function feature_form_amapl_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -1189,7 +1288,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 18,
+        'weight' => 17,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1205,37 +1304,33 @@ function feature_form_amapl_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('<a href="/adherer/cgv" target="_blank">Voir les Conditions Générales de Vente</a>');
-  t('<p id="p-price-form-AMAPL">Votre cotisation unique : <span id="price-form-AMAPL"></span></p>
-<ul>
-<li>Cotisation unique * : <strong>195 € TTC</strong> (162,50 € HT + TVA AU TAUX DE 20 % : 32,50 €)<br>
-* COTISATION DE <strong>97 €</strong> POUR MICRO-BNC, AUTO-ENTREPRENEURS ET ADHERENTS AYANT DEBUTE LEUR ACTIVITE PROFESSIONNELLE EN 2017.</li>
-<li>UNIQUEMENT SOCIETES ** : <strong>312 € TTC</strong> (162,50 € HT + COUT COMPLEMENTAIRE POUR ETUDE DE LA DECLARATION N ° 2035 : 97,50 € HT +TVA AU TAUX DE 20 % : 52 €)<br>
-** EXCEPTEES EURL ET SELARL A ASSOCIE UNIQUE , QUI SONT SEULEMENT SOUMISES A LA COTISATION UNIQUE DE <strong>195 € TTC</strong></li>
-</ul>');
+  t(' Je règle la cotisation en ligne par carte bancaire, condition de mon adhésion en ligne');
+  t(' J’ai pris connaissance et accepte les conditions d’adhésion');
+  t('<a href="/adherer/cgv" target="_blank">Voir les conditions d’adhésion</a>');
+  t('A renseigner dans le cas où vous souhaitez que l\'AMAPL utilise une autre adresse que la professionnelle pour correspondre.');
+  t('Activité non professionnelle');
+  t('Adhésion Micro-BNC ou Auto-entrepreneur');
   t('Adresse');
   t('Adresse correspondance');
   t('Adresse professionnelle');
   t('Assistance d’un professionnel');
   t('Autre');
   t('Autre forme juridique');
-  t('Choix de l\'antenne');
-  t('Cochez cette case si Micro-BNC ou Auto-entrepreneur');
-  t('Cochez cette case si l\'activité n\'est pas professionnelle');
+  t('Choix de l\'agence');
+  t('Code APE');
   t('Comment nous avez-vous connu ?');
   t('Date de début d’activité (ou de reprise d’activité après cessation)');
   t('Email');
   t('Fax');
   t('Forme juridique');
   t('Historique de paiement');
-  t('J\'accepte les CGV');
-  t('L\'un des deux champs suivants est recquis.<span class="form-required" title="Ce champ est requis.">*</span>');
+  t('L\'un des deux champs suivants est requis.<span class="form-required" title="Ce champ est requis.">*</span>');
   t('Nature de l\'activité');
   t('Nom et adresse de la précédente association agréée');
   t('Nom et prénom');
@@ -1244,9 +1339,11 @@ function feature_form_amapl_field_default_field_instances() {
   t('Numéro de siret');
   t('Ou dénomination sociale');
   t('Paiement');
+  t('Pour les revenus');
   t('Prix TTC');
   t('Profession');
   t('Revenus de source étrangère ?');
+  t('Si vous n\'avez pas encore de numéro de siret, entrez "En cours d\'attribution".');
   t('Type d\'adhésion');
   t('Téléphone');
 

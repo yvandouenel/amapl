@@ -351,6 +351,35 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'list_text',
   );
 
+  // Exported field_base: 'field_code_ape'
+  $field_bases['field_code_ape'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_code_ape',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_date_debut'
   $field_bases['field_date_debut'] = array(
     'active' => 1,
@@ -501,8 +530,8 @@ function feature_form_amapl_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        0 => 0,
-        1 => 1,
+        0 => 'Non',
+        1 => 'Oui',
       ),
       'allowed_values_function' => '',
     ),
@@ -601,8 +630,8 @@ function feature_form_amapl_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        0 => '',
-        1 => '',
+        0 => 'Non',
+        1 => 'Oui',
       ),
       'allowed_values_function' => '',
     ),
@@ -655,6 +684,32 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'paymentform',
   );
 
+  // Exported field_base: 'field_payment_online'
+  $field_bases['field_payment_online'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_payment_online',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => 'Non',
+        1 => 'Oui',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
   // Exported field_base: 'field_phone'
   $field_bases['field_phone'] = array(
     'active' => 1,
@@ -682,6 +737,32 @@ function feature_form_amapl_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
+  );
+
+  // Exported field_base: 'field_pour_les_revenus'
+  $field_bases['field_pour_les_revenus'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_pour_les_revenus',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        2017 => 2017,
+        2018 => 2018,
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_prix'
@@ -815,8 +896,8 @@ function feature_form_amapl_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        0 => '',
-        1 => '',
+        0 => 'Non',
+        1 => 'Oui',
       ),
       'allowed_values_function' => '',
     ),

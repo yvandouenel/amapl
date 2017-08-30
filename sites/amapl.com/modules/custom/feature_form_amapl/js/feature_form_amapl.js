@@ -2,10 +2,11 @@
   Drupal.behaviors.feature_form_amapl = {
     attach: function (context, settings) {
 
-      var price, begin_activity_year, autoentrepreneur, societe_unipersonnelle, societe, professional;
+      var price, begin_activity_year, autoentrepreneur, societe_unipersonnelle, societe, other_form, first_adhesion;
       societe = false;
       societe_unipersonnelle = false;
-      professional = true;
+      other_form = false;
+      first_adhesion = false;
 
       //user identification
       var guid = function() {
@@ -28,6 +29,26 @@
       manageFields();
 
       $("#edit-field-prix-und-0-value").prop("readonly", true);
+      //$(".form-item .description").hide(0);
+
+      /* Gestion des infobulles ***************************************************************************************/
+      $(".form-item .description").each(function() {
+        var field_description = $(this);
+
+        if((!$(this).parent(".form-item").hasClass("form-item-field-nom-prenom-und-0-value")) &&
+          (!$(this).parent(".form-item").hasClass('form-item-field-date-debut-und-0-value-date')) &&
+          (!$(this).parent(".form-item").hasClass('form-item-field-cgv-und'))) {
+
+          $(this).hide(0);
+          var infobulle = $( '<img class="view-info" src="/sites/amapl.com/themes/custom/lppl/images/icons/infobulle.gif" />');
+          infobulle.insertAfter( $(this).siblings('input'));
+          infobulle.click(function( event ) {
+            field_description.slideToggle();
+          });
+
+        }
+
+      });
 
       /* Gestion des événements ***************************************************************************************/
       // Changement de date de création de l'entreprise
@@ -43,6 +64,14 @@
       $("#edit-field-forme-juridique-und input").change(function () {
         formeJuridique();
         manageFields();
+        calculatePrice();
+      });
+      // Changement de nb d'associeés
+      $("#edit-field-nombre-associes-und-0-value").change(function () {
+        calculatePrice();
+      });
+      // Changement de type d'adhesion
+      $(".form-item-field-type-adhesion-und input").change(function () {
         calculatePrice();
       });
 
@@ -77,6 +106,9 @@
         $("#edit-field-forme-juridique-und-sdf").is(":checked"))
           ? true : false;
 
+        other_form = ( $("#edit-field-forme-juridique-und-autre").is(":checked") )
+          ? true : false;
+
       }
 
       function manageFields() {
@@ -91,16 +123,10 @@
           professionnal = true;
           $("#edit-field-non-pro").hide().find("input").attr('checked', false);
           $("#field-fj-autre-add-more-wrapper").hide();
-          $("#edit-field-siret").show();
-          if ($("#edit-field-siret-und-0-value").val() == "Pas de siret") $("#edit-field-siret-und-0-value").val('');
         } else {
           $("#field-fj-autre-add-more-wrapper").show();
           $("#edit-field-non-pro").show();
-          if($("#edit-field-non-pro-und").is(":checked")){
-            $("#edit-field-siret").hide().find("input").val("Pas de siret");
-          }else{
-            $("#edit-field-siret").show().find("input").val("");
-          }
+
         }
         if (societe_unipersonnelle) {
           $("#field-nombre-associes-add-more-wrapper").hide();
@@ -140,7 +166,10 @@
        Calcul global du prix de la cotisation
        */
       function calculatePrice() {
+        console.log("entrée dans le calcul de prix");
+        console.log(other_form);
         autoentrepreneur = $("#edit-field-micro-autoentrepreneur-und").is(":checked") ? true : false;
+        first_adhesion = $("#edit-field-type-adhesion-und-premiere").is(":checked") ? true : false;
 
         // Année de début d'activité
         if (jQuery.type($("#edit-field-date-debut-und-0-value-datepicker-popup-0").val()) === "string" &&
@@ -149,20 +178,16 @@
         } else begin_activity_year = undefined;
 
 
-        // calcul du prix en fonction de la date de création de l'entreprise
-        if (begin_activity_year && begin_activity_year == this_year) {
+        // Micro BNC ou première adhésion avec une création d'activité en 2017
+        if (autoentrepreneur || (begin_activity_year == this_year && first_adhesion)) {
           price = "80.833333333";
         }
 
-        // calcul du prix en fonction du statut : micro-bnc ou autoentrepreneur
-        else if (autoentrepreneur) {
-          price = "80.833333333";
-        }
 
         else if (societe_unipersonnelle) {
           price = "162.5";
         }
-        else if (societe) {
+        else if (societe || (other_form && $("#edit-field-nombre-associes-und-0-value").val() > 2)) {
           price = "260";
         }
         else {
