@@ -155,9 +155,7 @@ h3#zoom-sur{
 .entitytype-inscription_amapl-form .form-type-radios label{
   text-align: left;
 }
-.entitytype-inscription_amapl-form .form-item-field-siret-und-0-value label{
-  width: 185px;
-}
+
 .entitytype-inscription_amapl-form input.form-text:before{
   content: " : ";
   border: 1px solid red;
@@ -211,7 +209,7 @@ h3#zoom-sur{
 }
 /* Renseignements relatifs à l'activité *******************************************************************************/
 .entitytype-inscription_amapl-form .group-activite > div > div > div.form-item{
-  padding-left: 85px;
+  padding-left: 224px;
 }
 .entitytype-inscription_amapl-form fieldset.date-combo{
   border: 0;
@@ -221,14 +219,12 @@ h3#zoom-sur{
   padding-left: 65px;
 }
 .entitytype-inscription_amapl-form fieldset.date-combo .fieldset-wrapper{
-  position: absolute;
+  /*position: absolute;
   top: 0px;
-  left: 75px;
+  left: 75px;*/
 }
 
-.entitytype-inscription_amapl-form .container-inline-date{
-  height: 50px;
-}
+
 /* Tenue des docs comptables ******************************************************************************************/
 .entitytype-inscription_amapl-form #edit-field-assistance{
   position: relative;

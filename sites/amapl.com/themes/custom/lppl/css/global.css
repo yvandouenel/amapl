@@ -1449,8 +1449,11 @@ body.page-aggregator .feed-item {
 .entitytype-inscription_amapl-form fieldset .form-item-field-forme-juridique-und > label:first-child{
   text-indent: -6000px;
   position: absolute;
-  top: -69px;
-  left: 115px;
+  top: -78px;
+  left: 210px;
+}
+.entitytype-inscription_amapl-form #edit-field-provenance-und-0-value{
+  height: 20px;
 }
 /* Renseignements relatifs à l'activité *******************************************************************************/
 .entitytype-inscription_amapl-form fieldset.date-combo .form-item-field-date-debut-und-0-value-date label{
@@ -1480,9 +1483,36 @@ body.page-aggregator .feed-item {
 }
 .entitytype-inscription_amapl-form .form-item-field-cgv-und div.description{
   position: absolute;
-  left: 120px;
+  left: 160px;
   top: 2px;
 }
+.entitytype-inscription_amapl-form fieldset.date-combo .fieldset-legend{
+  font-size: 1em;
+}
+.entitytype-inscription_amapl-form .fieldset-legend{
+  font-size: 2em;
+}
+.entitytype-inscription_amapl-form .container-inline-date{
+  height: 20px;
+  margin-left: 196px;
+  margin-top: -20px;
+}
+.entitytype-inscription_amapl-form fieldset.date-combo .fieldset-legend{
+  font-weight: bold;
+}
+.entitytype-inscription_amapl-form .submitted{
+  display: none;
+}
+.entitytype-inscription_amapl-form .view-info{
+  margin-left: 10px;
+}
+.entitytype-inscription_amapl-form .description{
+  margin-left: 224px;
+}
+.entitytype-inscription_amapl-form .view-info:hover{
+  cursor: pointer;
+}
+
 /* Visualisation de l'entityform **************************************************************************************/
 .page-entityform #edit-payment-method-pmid-title{
   display: none;
@@ -1508,4 +1538,29 @@ body.page-aggregator .feed-item {
 .page-entityform h3{
   font-size: 1.4em;
   margin: 15px 0;
+}
+.page-entityform .tableheader-processed{
+  width: 48%;
+  border-right: 1px solid #ccc;
+  float: left;
+  margin-right: 20px;
+}
+.page-entityform .tableheader-processed tr:nth-child(2),
+.page-entityform .tableheader-processed tr th:nth-child(2),
+.page-entityform .tableheader-processed tr td:nth-child(2),
+.page-entityform .tableheader-processed tr th:nth-child(3),
+.page-entityform .tableheader-processed tr td:nth-child(3),
+.page-entityform .tableheader-processed tr th:nth-child(5),
+.page-entityform .tableheader-processed tr td:nth-child(5){
+  display: none;
+}
+.page-entityform .field-label {
+  font-weight: normal;
+
+}
+.page-entityform .field-item {
+  font-weight: bold;
+}
+.page-entityform .amapl-adress {
+  margin-top: 0;
 }
