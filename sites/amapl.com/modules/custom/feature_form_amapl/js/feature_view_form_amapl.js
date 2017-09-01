@@ -7,11 +7,11 @@
 
       }).prependTo( ".group-footer" );
 
-      $( "<h3></h3>", {
+      /*$( "<h3></h3>", {
         "id": "h3-subscribed-datas",
         text: 'Résumé des principales informations que vous nous avez communiquées :',
 
-      }).appendTo( ".group-header" );
+      }).appendTo( ".group-header" );*/
 
       $( "<a></a>", {
         "id": "modify-subscribe-form",

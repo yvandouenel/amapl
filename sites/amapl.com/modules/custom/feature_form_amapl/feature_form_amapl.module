@@ -65,11 +65,12 @@ function feature_form_amapl_form_alter(&$form, &$form_state, $form_id) {
  * Vérification des données entrées par l'utilisateur
  */
 function feature_form_amapl_form_validate($form, &$form_state) {
+  drupal_add_js(drupal_get_path('module', 'feature_form_amapl') . '/js/feature_form_amapl.js');
   $price = 0;
   $current_year = date("Y");
   $begin_activity_year = substr($form_state['values']['field_date_debut']['und'][0]['value'], 0, 4);
 
-  dpm($form_state['values']);
+  //dpm($form_state['values']);
 
   // forme juridique
   if ($form_state['values']['field_fj_autre']['und'][0]['value'] == '' && $form_state['values']['field_forme_juridique']['und'][0]['value'] == 'AUTRE') {
@@ -134,6 +135,33 @@ function feature_form_amapl_entity_view($entity, $type, $view_mode, $langcode) {
     drupal_add_js(drupal_get_path('module', 'feature_form_amapl') . '/js/feature_view_form_amapl.js');
   }
 
+
+}
+
+/**
+ * Implements hook_entity_load().
+ */
+function feature_form_amapl_entity_load($entities, $type) {
+  if ($type == "payment"){
+    global $user;
+
+    // Check if the user has the 'webmaster or administrator' role.
+    if (in_array('webmaster', $user->roles) || in_array('administrator', $user->roles)) {
+
+      if (isset($_SESSION['paypal_payment_pps_pid'])) {
+        reset($entities);
+        $first_key = key($entities);
+        if ($first_key != $_SESSION['paypal_payment_pps_pid']){
+          drupal_goto('payment/session-over');
+        }
+      }
+      else {
+        // Pas de paiement dans la session
+        dpm($entities);
+        drupal_goto('payment/session-over');
+      }
+    }
+  }
 }
 
 /**

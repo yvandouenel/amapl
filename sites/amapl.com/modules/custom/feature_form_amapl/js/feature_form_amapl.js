@@ -1,7 +1,6 @@
 (function ($) {
   Drupal.behaviors.feature_form_amapl = {
     attach: function (context, settings) {
-
       var price, begin_activity_year, autoentrepreneur, societe_unipersonnelle, societe, other_form, first_adhesion;
       societe = false;
       societe_unipersonnelle = false;
@@ -30,6 +29,8 @@
 
       $("#edit-field-prix-und-0-value").prop("readonly", true);
       //$(".form-item .description").hide(0);
+      // changement de texte pour le choix de l'année
+      $('select#edit-field-pour-les-revenus-und option:contains("Choisir")').text('-- choisissez une année --');
 
       /* Gestion des infobulles ***************************************************************************************/
       $(".form-item .description").each(function() {
@@ -113,8 +114,15 @@
 
       function manageFields() {
 
-        if (!$("#edit-field-forme-juridique-und-autre").attr('checked')) {
+        if (!$("#edit-field-forme-juridique-und-autre").is(":checked")) {
           $("#field-fj-autre-add-more-wrapper").hide();
+          $("#field-nombre-associes-add-more-wrapper").hide();
+          $("#edit-field-fj-autre-und-0-value").val("");
+          $("#edit-field-nombre-associes-und-0-value").val("");
+        }
+        else {
+          $("#field-fj-autre-add-more-wrapper").show();
+          $("#field-nombre-associes-add-more-wrapper").show();
         }
         if (societe) {
           $("#field-nombre-associes-add-more-wrapper").hide();
@@ -123,10 +131,6 @@
           professionnal = true;
           $("#edit-field-non-pro").hide().find("input").attr('checked', false);
           $("#field-fj-autre-add-more-wrapper").hide();
-        } else {
-          $("#field-fj-autre-add-more-wrapper").show();
-          $("#edit-field-non-pro").show();
-
         }
         if (societe_unipersonnelle) {
           $("#field-nombre-associes-add-more-wrapper").hide();
@@ -134,10 +138,8 @@
         }
         else if (societe) {
           $("#edit-field-micro-autoentrepreneur").hide().find("input").attr('checked', false);
-          $("#field-nombre-associes-add-more-wrapper").show();
         }
         else {
-          $("#field-nombre-associes-add-more-wrapper").show();
           $("#edit-field-micro-autoentrepreneur").show()
         }
         if (!$("#edit-field-type-adhesion-und-autre").is(":checked")) {
@@ -166,8 +168,7 @@
        Calcul global du prix de la cotisation
        */
       function calculatePrice() {
-        console.log("entrée dans le calcul de prix");
-        console.log(other_form);
+
         autoentrepreneur = $("#edit-field-micro-autoentrepreneur-und").is(":checked") ? true : false;
         first_adhesion = $("#edit-field-type-adhesion-und-premiere").is(":checked") ? true : false;
 
