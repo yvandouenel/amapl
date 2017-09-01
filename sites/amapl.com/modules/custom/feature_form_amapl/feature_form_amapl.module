@@ -29,7 +29,7 @@ function feature_form_amapl_entityform_confirm_page_alter(&$render_array, $entit
 
   // Enregistrement de l'entité
   $entity->save();
-
+  $_SESSION["entity_form_id"] = $entityform_id;
   drupal_goto("entityform/" . $entityform_id);
 }
 
@@ -129,10 +129,22 @@ function feature_form_amapl_form_validate($form, &$form_state) {
  * Implements hook_entity_view().
  */
 function feature_form_amapl_entity_view($entity, $type, $view_mode, $langcode) {
-  //dpm($entity);
-  //dpm($type);
-  if ($type == "entityform"){
+
+  if ($type == "entityform") {
+    global $user;
     drupal_add_js(drupal_get_path('module', 'feature_form_amapl') . '/js/feature_view_form_amapl.js');
+    // test if anonymous user has the good entityform id. If not: redirection to session-over
+    if (!in_array('webmaster', $user->roles) && !in_array('administrator', $user->roles)) {
+      if (isset($_SESSION['entity_form_id'])) {
+        if ($_SESSION['entity_form_id'] != $entity->entityform_id) {
+          drupal_goto('payment/session-over');
+        }
+      }
+      else {
+        // Pas de paiement dans la session
+        drupal_goto('payment/session-over');
+      }
+    }
   }
 
 
@@ -157,7 +169,6 @@ function feature_form_amapl_entity_load($entities, $type) {
       }
       else {
         // Pas de paiement dans la session
-        dpm($entities);
         drupal_goto('payment/session-over');
       }
     }
