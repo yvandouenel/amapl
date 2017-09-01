@@ -146,7 +146,28 @@ function feature_form_amapl_entity_view($entity, $type, $view_mode, $langcode) {
       }
     }
   }
+  if ($type == "payment"){
+    global $user;
+    $path = current_path(); // payment/32/view
+    $pattern = '/payment\/[0-9]*\/view/';
+    if (!preg_match($pattern, $path)) {
+      // Check if the user has the 'webmaster or administrator' role.
+      if (!in_array('webmaster', $user->roles) && !in_array('administrator', $user->roles)) {
 
+        if (isset($_SESSION['paypal_payment_pps_pid'])) {
+          reset($entities);
+          $first_key = key($entities);
+          if ($first_key != $_SESSION['paypal_payment_pps_pid']){
+            drupal_goto('payment/session-over');
+          }
+        }
+        else {
+          // Pas de paiement dans la session
+          drupal_goto('payment/session-over');
+        }
+      }
+    }
+  }
 
 }
 
@@ -154,25 +175,7 @@ function feature_form_amapl_entity_view($entity, $type, $view_mode, $langcode) {
  * Implements hook_entity_load().
  */
 function feature_form_amapl_entity_load($entities, $type) {
-  if ($type == "payment"){
-    global $user;
 
-    // Check if the user has the 'webmaster or administrator' role.
-    if (!in_array('webmaster', $user->roles) && !in_array('administrator', $user->roles)) {
-
-      if (isset($_SESSION['paypal_payment_pps_pid'])) {
-        reset($entities);
-        $first_key = key($entities);
-        if ($first_key != $_SESSION['paypal_payment_pps_pid']){
-          drupal_goto('payment/session-over');
-        }
-      }
-      else {
-        // Pas de paiement dans la session
-        drupal_goto('payment/session-over');
-      }
-    }
-  }
 }
 
 /**
