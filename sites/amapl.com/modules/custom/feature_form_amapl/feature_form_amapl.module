@@ -146,7 +146,7 @@ function feature_form_amapl_entity_load($entities, $type) {
     global $user;
 
     // Check if the user has the 'webmaster or administrator' role.
-    if (in_array('webmaster', $user->roles) || in_array('administrator', $user->roles)) {
+    if (!in_array('webmaster', $user->roles) && !in_array('administrator', $user->roles)) {
 
       if (isset($_SESSION['paypal_payment_pps_pid'])) {
         reset($entities);
