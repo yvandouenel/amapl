@@ -1,11 +1,12 @@
 (function ($) {
   Drupal.behaviors.feature_form_amapl = {
     attach: function (context, settings) {
-      var price, begin_activity_year, autoentrepreneur, societe_unipersonnelle, societe, other_form, first_adhesion;
+      var price, begin_activity_year, autoentrepreneur, societe_unipersonnelle, societe, other_form, first_adhesion, no_juridic_form;
       societe = false;
       societe_unipersonnelle = false;
       other_form = false;
       first_adhesion = false;
+      no_juridic_form = true;
 
       //user identification
       var guid = function() {
@@ -25,6 +26,7 @@
 
       // gestion initiale des champs
       formeJuridique();
+      calculatePrice();
       manageFields();
 
       $("#edit-field-prix-und-0-value").prop("readonly", true);
@@ -110,9 +112,21 @@
         other_form = ( $("#edit-field-forme-juridique-und-autre").is(":checked") )
           ? true : false;
 
+        no_juridic_form = (societe_unipersonnelle || societe || other_form) ? false : true;
+        console.log("no_juridic_form : " + no_juridic_form);
+
       }
 
       function manageFields() {
+        console.log("Prix dans manageField : " + price);
+        $("#edit-field-prix-und-0-value").hide(0);
+        if (price !== null && price !== undefined) {
+          console.log("Prix défini...");
+          $(".form-item-field-prix-und-0-value label").html(Math.round(price * 1.2) + " €TTC");
+        }
+        else {
+          $(".form-item-field-prix-und-0-value label").text("Le montant de la cotisation sera calculé en fonction vos données.");
+        }
 
         if (!$("#edit-field-forme-juridique-und-autre").is(":checked")) {
           $("#field-fj-autre-add-more-wrapper").hide();
@@ -191,11 +205,19 @@
         else if (societe || (other_form && $("#edit-field-nombre-associes-und-0-value").val() > 2)) {
           price = "260";
         }
+        else if (no_juridic_form) {
+          price = null;
+        }
         else {
           price = "162.5";
         }
-        $("#edit-field-prix-und-0-value").val(Math.round(price * 1.2));
-        $("#edit-field-paiement-und-line-item-container-0-amount").val(price);
+        if (price !== null && price !== undefined) {
+          console.log("Prix dans le if : " + price);
+          $("#edit-field-prix-und-0-value").val(Math.round(price * 1.2)).hide();
+          $(".form-item-field-prix-und-0-value label").html(Math.round(price * 1.2) + " €TTC");
+          $("#edit-field-paiement-und-line-item-container-0-amount").val(price);
+        }
+        console.log("Prix dans calculatePrice : " + price);
 
       }
     }

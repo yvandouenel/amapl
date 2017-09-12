@@ -33,6 +33,7 @@ function feature_form_amapl_user_default_permissions() {
     'name' => 'delete own entityform',
     'roles' => array(
       'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
     ),
     'module' => 'entityform',
   );

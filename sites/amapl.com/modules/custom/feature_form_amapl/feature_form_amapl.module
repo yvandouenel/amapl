@@ -88,11 +88,7 @@ function feature_form_amapl_form_validate($form, &$form_state) {
     ($current_year == $begin_activity_year &&  $form_state['values']['field_type_adhesion']['und'][0]['value'] == "Premiere")) {
     $price = '80.833333333';
   }
-  // Entreprise créée dans l'année
-  elseif ($current_year == $begin_activity_year) {
-    $price = "162.5";
-  }
-
+  
   // Micro entrepreneur autoentrepreneur
   elseif ($form_state['values']['field_micro_autoentrepreneur']['und'][0]['value']) {
     $price = '80.833333333';

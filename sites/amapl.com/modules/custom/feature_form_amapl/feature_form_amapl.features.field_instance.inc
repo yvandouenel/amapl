@@ -93,7 +93,11 @@ function feature_form_amapl_field_default_field_instances() {
   // Exported field_instance: 'entityform-inscription_amapl-field_assistance'
   $field_instances['entityform-inscription_amapl-field_assistance'] = array(
     'bundle' => 'inscription_amapl',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'non',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
