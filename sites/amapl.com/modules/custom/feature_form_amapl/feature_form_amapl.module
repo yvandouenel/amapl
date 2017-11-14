@@ -69,8 +69,9 @@ function feature_form_amapl_form_validate($form, &$form_state) {
   $price = 0;
   $current_year = date("Y");
   $begin_activity_year = substr($form_state['values']['field_date_debut']['und'][0]['value'], 0, 4);
+  $year_income = $form_state['values']['field_pour_les_revenus']['und'][0]['value'];
 
-  //dpm($form_state['values']);
+  dpm($year_income);
 
   // forme juridique
   if ($form_state['values']['field_fj_autre']['und'][0]['value'] == '' && $form_state['values']['field_forme_juridique']['und'][0]['value'] == 'AUTRE') {
@@ -84,14 +85,19 @@ function feature_form_amapl_form_validate($form, &$form_state) {
   }
   // Prix **********************************************************************
   // Micro BNC ou première adhésion avec une création d'activité en 2017
-  if ($form_state['values']['field_micro_autoentrepreneur']['und'][0]['value'] ||
-    ($current_year == $begin_activity_year &&  $form_state['values']['field_type_adhesion']['und'][0]['value'] == "Premiere")) {
-    $price = '80.833333333';
+  if (
+      $form_state['values']['field_micro_autoentrepreneur']['und'][0]['value'] ||
+      (($year_income == 2017 && $begin_activity_year == 2017 &&  $form_state['values']['field_type_adhesion']['und'][0]['value'] == "Premiere")
+      || ($year_income == 2018 && $begin_activity_year == 2018 &&  $form_state['values']['field_type_adhesion']['und'][0]['value'] == "Premiere"))
+    ) {
+    if ($year_income == 2017) $price = '80.833333333';
+    else if ($year_income == 2018) $price = '82.5';
   }
-  
+
   // Micro entrepreneur autoentrepreneur
   elseif ($form_state['values']['field_micro_autoentrepreneur']['und'][0]['value']) {
-    $price = '80.833333333';
+    if ($year_income == 2017) $price = '80.833333333';
+    else if ($year_income == 2018) $price = '82.5';
   }
   // Entreprise unipersonnelle
   elseif (
@@ -99,7 +105,8 @@ function feature_form_amapl_form_validate($form, &$form_state) {
     $form_state['values']['field_forme_juridique']['und'][0]['value'] == "EURL" ||
     $form_state['values']['field_forme_juridique']['und'][0]['value'] == "SELARL"
   ) {
-    $price = "162.5";
+    if ($year_income == 2017) $price = '162.5';
+    else if ($year_income == 2018) $price = '165';
   }
   // Entreprise avec des associés (plus de 2 si "autre"
   elseif (
@@ -110,10 +117,12 @@ function feature_form_amapl_form_validate($form, &$form_state) {
     $form_state['values']['field_nombre_associes']['und'][0]['value'] > 2)
 
   ) {
-    $price = '260';
+    if ($year_income == 2017) $price = '260';
+    else if ($year_income == 2018) $price = '265';
   }
   else {
-    $price = '162.5';
+    if ($year_income == 2017) $price = '162.5';
+    else if ($year_income == 2018) $price = '165';
   }
 
   $form_state['values']['field_prix']['und'][0]['value'] = round($price * 1.2);

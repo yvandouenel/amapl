@@ -1,7 +1,15 @@
 (function ($) {
   Drupal.behaviors.feature_form_amapl = {
     attach: function (context, settings) {
-      var price, begin_activity_year, autoentrepreneur, societe_unipersonnelle, societe, other_form, first_adhesion, no_juridic_form;
+      var price,
+        begin_activity_year,
+        year_income,
+        autoentrepreneur,
+        societe_unipersonnelle,
+        societe,
+        other_form,
+        first_adhesion,
+        no_juridic_form;
       societe = false;
       societe_unipersonnelle = false;
       other_form = false;
@@ -54,6 +62,11 @@
       });
 
       /* Gestion des événements ***************************************************************************************/
+      // Changement d'année de déclaration des revenus
+      $("#edit-field-pour-les-revenus-und").change(function () {
+        calculatePrice();
+      });
+
       // Changement de date de création de l'entreprise
       $("#edit-field-date-debut-und-0-value-datepicker-popup-0").change(function () {
         calculatePrice();
@@ -113,15 +126,15 @@
           ? true : false;
 
         no_juridic_form = (societe_unipersonnelle || societe || other_form) ? false : true;
-        console.log("no_juridic_form : " + no_juridic_form);
+        //console.log("no_juridic_form : " + no_juridic_form);
 
       }
 
       function manageFields() {
-        console.log("Prix dans manageField : " + price);
+        //console.log("Prix dans manageField : " + price);
         $("#edit-field-prix-und-0-value").hide(0);
         if (price !== null && price !== undefined) {
-          console.log("Prix défini...");
+          //console.log("Prix défini...");
           $(".form-item-field-prix-und-0-value label").html(Math.round(price * 1.2) + " €TTC");
         }
         else {
@@ -192,32 +205,45 @@
           begin_activity_year = $("#edit-field-date-debut-und-0-value-datepicker-popup-0").val().substr($("#edit-field-date-debut-und-0-value-datepicker-popup-0").val().length - 4);
         } else begin_activity_year = undefined;
 
+        // Année des revenus
+        if ($("#edit-field-pour-les-revenus-und").val() == "2017") {
+          year_income = 2017;
+        }
+        else if ($("#edit-field-pour-les-revenus-und").val() == "2018") {
+          year_income = 2018;
+        }
+        else year_income = undefined;
+        console.log("year_income : " + year_income);
 
         // Micro BNC ou première adhésion avec une création d'activité en 2017
-        if (autoentrepreneur || (begin_activity_year == this_year && first_adhesion)) {
-          price = "80.833333333";
+        if (autoentrepreneur || (year_income == 2017 && begin_activity_year == 2017 && first_adhesion)
+        || (year_income == 2018 && begin_activity_year == 2018 && first_adhesion)) {
+          if (year_income == 2017) price = "80.833333333";
+          else if (year_income == 2018) price = "82.5";
         }
-
 
         else if (societe_unipersonnelle) {
-          price = "162.5";
-        }
-        else if (societe || (other_form && $("#edit-field-nombre-associes-und-0-value").val() > 2)) {
-          price = "260";
+          if (year_income == 2017) price = "162.5";
+          else if (year_income == 2018) price = "165";
+            }
+        else if (societe || (other_form && $("#edit-field-nombre-associes-und-0-value").val() > 1)) {
+          if (year_income == 2017) price = "260";
+          else if (year_income == 2018) price = "265";
         }
         else if (no_juridic_form) {
           price = null;
         }
         else {
-          price = "162.5";
+          if (year_income == 2017) price = "162.5";
+          else if (year_income == 2018) price = "165";
         }
         if (price !== null && price !== undefined) {
-          console.log("Prix dans le if : " + price);
+          //console.log("Prix dans le if : " + price);
           $("#edit-field-prix-und-0-value").val(Math.round(price * 1.2)).hide();
           $(".form-item-field-prix-und-0-value label").html(Math.round(price * 1.2) + " €TTC");
           $("#edit-field-paiement-und-line-item-container-0-amount").val(price);
         }
-        console.log("Prix dans calculatePrice : " + price);
+        //console.log("Prix dans calculatePrice : " + price);
 
       }
     }
