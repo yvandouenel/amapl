@@ -292,7 +292,7 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
   //dpm($payment);
 
   if ($payment->getStatus()->status == "payment_status_success") {
-  // Sends email to contact@amapl.com
+    // Sends email to contact@amapl.com
     $description_payment = current($payment->getLineItems())->description;
       $mail_to = "y.douenel@coopernet.fr";
       $full_name = "contact AMAPL";
@@ -301,7 +301,10 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
       $to = $mail_to;
       $from = variable_get('site_mail');
       $mail_subject = 'Inscription AMAPL payée en ligne';
-      $mail_body = $description_payment;//Trouver ici comment intégrer le détail du paiement
+      $mail_body =
+        "<p>Une nouvelle inscription a été payée en ligne sur le site de l'AMAPL</p>" .
+        $description_payment;/
+    
       $params = array('subject' => $mail_subject, 'body' => $mail_body);
       $type = 'status';
       if (drupal_mail('feature_form_amapl', 'form_amapl_paid', $to, language_default(), $params, $from)) {
