@@ -86,18 +86,30 @@ function feature_form_amapl_form_validate($form, &$form_state) {
   // Prix **********************************************************************
   // Micro BNC ou première adhésion avec une création d'activité en 2017
   if (
-      $form_state['values']['field_micro_autoentrepreneur']['und'][0]['value'] ||
-      (($year_income == 2017 && $begin_activity_year == 2017 &&  $form_state['values']['field_type_adhesion']['und'][0]['value'] == "Premiere")
-      || ($year_income == 2018 && $begin_activity_year == 2018 &&  $form_state['values']['field_type_adhesion']['und'][0]['value'] == "Premiere"))
-    ) {
-    if ($year_income == 2017) $price = '80.833333333';
-    else if ($year_income == 2018) $price = '82.5';
+    $form_state['values']['field_micro_autoentrepreneur']['und'][0]['value'] ||
+    (($year_income == 2017 && $begin_activity_year == 2017 && $form_state['values']['field_type_adhesion']['und'][0]['value'] == "Premiere")
+      || ($year_income == 2018 && $begin_activity_year == 2018 && $form_state['values']['field_type_adhesion']['und'][0]['value'] == "Premiere"))
+  ) {
+    if ($year_income == 2017) {
+      $price = '80.833333333';
+    }
+    else {
+      if ($year_income == 2018) {
+        $price = '82.5';
+      }
+    }
   }
 
   // Micro entrepreneur autoentrepreneur
   elseif ($form_state['values']['field_micro_autoentrepreneur']['und'][0]['value']) {
-    if ($year_income == 2017) $price = '80.833333333';
-    else if ($year_income == 2018) $price = '82.5';
+    if ($year_income == 2017) {
+      $price = '80.833333333';
+    }
+    else {
+      if ($year_income == 2018) {
+        $price = '82.5';
+      }
+    }
   }
   // Entreprise unipersonnelle
   elseif (
@@ -105,8 +117,14 @@ function feature_form_amapl_form_validate($form, &$form_state) {
     $form_state['values']['field_forme_juridique']['und'][0]['value'] == "EURL" ||
     $form_state['values']['field_forme_juridique']['und'][0]['value'] == "SELARL"
   ) {
-    if ($year_income == 2017) $price = '162.5';
-    else if ($year_income == 2018) $price = '165';
+    if ($year_income == 2017) {
+      $price = '162.5';
+    }
+    else {
+      if ($year_income == 2018) {
+        $price = '165';
+      }
+    }
   }
   // Entreprise avec des associés (plus de 2 si "autre"
   elseif (
@@ -114,15 +132,27 @@ function feature_form_amapl_form_validate($form, &$form_state) {
     $form_state['values']['field_forme_juridique']['und'][0]['value'] == "SEP" ||
     $form_state['values']['field_forme_juridique']['und'][0]['value'] == "SDF" ||
     ($form_state['values']['field_forme_juridique']['und'][0]['value'] == "AUTRE" &&
-    $form_state['values']['field_nombre_associes']['und'][0]['value'] > 2)
+      $form_state['values']['field_nombre_associes']['und'][0]['value'] > 2)
 
   ) {
-    if ($year_income == 2017) $price = '260';
-    else if ($year_income == 2018) $price = '265';
+    if ($year_income == 2017) {
+      $price = '260';
+    }
+    else {
+      if ($year_income == 2018) {
+        $price = '265';
+      }
+    }
   }
   else {
-    if ($year_income == 2017) $price = '162.5';
-    else if ($year_income == 2018) $price = '165';
+    if ($year_income == 2017) {
+      $price = '162.5';
+    }
+    else {
+      if ($year_income == 2018) {
+        $price = '165';
+      }
+    }
   }
 
   $form_state['values']['field_prix']['und'][0]['value'] = round($price * 1.2);
@@ -151,7 +181,7 @@ function feature_form_amapl_entity_view($entity, $type, $view_mode, $langcode) {
       }
     }
   }
-  if ($type == "payment"){
+  if ($type == "payment") {
 
     global $user;
     $path = current_path(); // payment/32/view
@@ -163,7 +193,7 @@ function feature_form_amapl_entity_view($entity, $type, $view_mode, $langcode) {
       if (!in_array('webmaster', $user->roles) && !in_array('administrator', $user->roles)) {
         if (isset($_SESSION['paypal_payment_pps_pid'])) {
 
-          if ($entity->pid != $_SESSION['paypal_payment_pps_pid']){
+          if ($entity->pid != $_SESSION['paypal_payment_pps_pid']) {
             drupal_goto('payment/session-over');
           }
         }
@@ -193,7 +223,7 @@ function changeHistoricalPayment(Payment $payment) {
 
   // charger les entityforms qui correspondent à ces numéros
   foreach ($payment_for_entityform_number as $value) {
-    $is_int = is_int($value) ? true : false;
+    $is_int = is_int($value) ? TRUE : FALSE;
     if ($is_int) {
 
       // Récupération de tous paiements correspondants à cet entityform pour écrire l'historique
@@ -203,23 +233,25 @@ function changeHistoricalPayment(Payment $payment) {
       foreach ($entity_payment_array as $paiement) {
         $numbers = array_keys($paiement->line_items);
         foreach ($numbers as $number) {
-          if ($number == $value){
+          if ($number == $value) {
             // Si je traite le paiement qui vient de changer de statut, je récupère ce dernier
-            if ($paiement->pid == $payment->pid) $paiement = $payment;
+            if ($paiement->pid == $payment->pid) {
+              $paiement = $payment;
+            }
 
             $statut = ($paiement->getStatus()->status != 'payment_status_success') ? 'Non finalisé' : "Finalisé";
             $historique =
               $historique .
               '<li>' .
-              date('d/m/Y - G:i',$paiement->getStatus()->created) .
+              date('d/m/Y - G:i', $paiement->getStatus()->created) .
               ' - Statut : <strong>' .
               $statut .
               '</strong>' .
               ' - n° de paiement : ' .
               $paiement->pid .
               ' - ' .
-              $paiement->line_items[$number]->description.
-              '</li>' ;
+              $paiement->line_items[$number]->description .
+              '</li>';
           }
         }
       }
@@ -245,6 +277,7 @@ function changeHistoricalPayment(Payment $payment) {
     }
   }
 }
+
 /**
  * Implements hook_paypal_payment_pps_data().
  */
@@ -256,16 +289,57 @@ function feature_form_amapl_paypal_payment_pps_data(Payment $payment, array &$da
  * Implements hook_payment_status_change().
  */
 function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatusItem $previous_status_item) {
+  //dpm($payment);
+
+  if ($payment->getStatus()->status == "payment_status_success") {
+  // Sends email to contact@amapl.com
+    $description_payment = current($payment->getLineItems())->description;
+      $mail_to = "y.douenel@coopernet.fr";
+      $full_name = "contact AMAPL";
+
+      // Build email message
+      $to = $mail_to;
+      $from = variable_get('site_mail');
+      $mail_subject = 'Inscription AMAPL payée en ligne';
+      $mail_body = $description_payment;//Trouver ici comment intégrer le détail du paiement
+      $params = array('subject' => $mail_subject, 'body' => $mail_body);
+      $type = 'status';
+      if (drupal_mail('feature_form_amapl', 'form_amapl_paid', $to, language_default(), $params, $from)) {
+        $message = t('Validation request email message sent successfully to %fullname (%to)', array(
+          '%fullname' => $full_name,
+          '%to' => $to
+        ));
+      }
+      else {
+        $message = t('Email message could not be sent to %fullname (%to)', array(
+          '%fullname' => $full_name,
+          '%to' => $to
+        ));
+        $type = 'warning';
+      }
+      drupal_set_message($message, $type);
+  }
   changeHistoricalPayment($payment);
 }
 
+/**
+ * Implements hook_mail().
+ */
+function feature_form_amapl_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'form_amapl_paid':
+      $message['subject'] = $params['subject'];
+      $message['body'][] = $params['body'];
+      break;
+  }
+}
 /**
  * Implements hook_node_view().
  */
 function feature_form_amapl_node_view($node, $view_mode, $langcode) {
   $alias = drupal_get_path_alias('node/' . $node->nid);
-  if ($alias == 'paypal_payment_pps/return'){
-    if(isset($_SESSION['paypal_payment_pps_pid'])){
+  if ($alias == 'paypal_payment_pps/return') {
+    if (isset($_SESSION['paypal_payment_pps_pid'])) {
       $paymentpath = '/payment/' . $_SESSION['paypal_payment_pps_pid'] . '/view';
       /*drupal_goto('payment/' . $_SESSION['paypal_payment_pps_pid'] . '/view');*/
       // appel du js
