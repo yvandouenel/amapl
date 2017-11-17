@@ -303,8 +303,8 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
       $mail_subject = 'Inscription AMAPL payée en ligne';
       $mail_body =
         "<p>Une nouvelle inscription a été payée en ligne sur le site de l'AMAPL</p>" .
-        $description_payment;/
-    
+        $description_payment;
+
       $params = array('subject' => $mail_subject, 'body' => $mail_body);
       $type = 'status';
       if (drupal_mail('feature_form_amapl', 'form_amapl_paid', $to, language_default(), $params, $from)) {
