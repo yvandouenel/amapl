@@ -1564,3 +1564,26 @@ body.page-aggregator .feed-item {
 .page-entityform .amapl-adress {
   margin-top: 0;
 }
+/* Visualisation d'un paiement ****************************************************************************************/
+.page-payment-view .tableheader-processed:nth-child(2) tr:nth-child(2){
+  border: 1px solid red;
+  display: none;
+}
+.page-payment-view div.entity-payment > h2:before{
+  content: "Votre demande d’adhésion et le paiement des sommes indiquées ci-dessous ont bien été enregistrés et envoyés à l’AMAPL. Une confirmation d’adhésion vous sera adressée prochainement par l’association, après vérification du respect des délais d’adhésion en vigueur. Un remboursement du règlement pourra avoir lieu en cas de rejet de l’adhésion pour ce motif.";
+  display: block;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  font-weight: 400;
+}
+.page-payment-view div.entity-payment > h2 a{
+  display: none;
+} 
+.page-payment-view .tableheader-processed:nth-child(2) tr th:nth-child(2),
+.page-payment-view .tableheader-processed:nth-child(2) tr th:nth-child(3),
+.page-payment-view .tableheader-processed:nth-child(2) tr th:nth-child(5),
+.page-payment-view .tableheader-processed:nth-child(2) tr td:nth-child(2),
+.page-payment-view .tableheader-processed:nth-child(2) tr td:nth-child(3),
+.page-payment-view .tableheader-processed:nth-child(2) tr td:nth-child(5){
+  display: none;
+}
