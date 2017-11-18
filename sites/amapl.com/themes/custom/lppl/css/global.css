@@ -1579,11 +1579,11 @@ body.page-aggregator .feed-item {
 .page-payment-view div.entity-payment > h2 a{
   display: none;
 } 
-.page-payment-view .tableheader-processed:nth-child(2) tr th:nth-child(2),
-.page-payment-view .tableheader-processed:nth-child(2) tr th:nth-child(3),
-.page-payment-view .tableheader-processed:nth-child(2) tr th:nth-child(5),
-.page-payment-view .tableheader-processed:nth-child(2) tr td:nth-child(2),
-.page-payment-view .tableheader-processed:nth-child(2) tr td:nth-child(3),
-.page-payment-view .tableheader-processed:nth-child(2) tr td:nth-child(5){
+.page-payment-view .sticky-enabled:nth-child(2) tr th:nth-child(2),
+.page-payment-view .sticky-enabled:nth-child(2) tr th:nth-child(3),
+.page-payment-view .sticky-enabled:nth-child(2) tr th:nth-child(5),
+.page-payment-view .sticky-enabled:nth-child(2) tr td:nth-child(2),
+.page-payment-view .sticky-enabled:nth-child(2) tr td:nth-child(3),
+.page-payment-view .sticky-enabled:nth-child(2) tr td:nth-child(5){
   display: none;
 }
