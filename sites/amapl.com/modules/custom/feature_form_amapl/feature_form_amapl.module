@@ -279,7 +279,7 @@ function changeHistoricalPayment(Payment $payment) {
             '</ul>';
           $entity->save();
         }
-
+        return $entity;
       }
 
     }
@@ -298,10 +298,17 @@ function feature_form_amapl_paypal_payment_pps_data(Payment $payment, array &$da
  */
 function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatusItem $previous_status_item) {
   //dpm($payment);
-
+  // Changement historique et récupération de l'entityform concernée *********
+  $entity = changeHistoricalPayment($payment);
+  
   if ($payment->getStatus()->status == "payment_status_success") {
-    // Sends email to contact@amapl.com
-    $description_payment = current($payment->getLineItems())->description;
+    // Changement historique et récupération de l'entityform concernée *********
+    
+    if ($entity) {
+      $info_form_subscribe = get_Form_infos($entity);
+      
+      // Sends email to contact@amapl.com ****************************************
+      $description_payment = current($payment->getLineItems())->description;
       $mail_to = "silvain.durand@amapl.com,y.douenel@coopernet.fr";
       $full_name = "contact AMAPL";
 
@@ -313,7 +320,7 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
       $mail_body =
         "<p>Une nouvelle inscription a été payée en ligne sur le site de l'AMAPL</p>" .
         $description_payment .
-      "<p>Date de paiement : " . $payment_date . "</p>";
+        $info_form_subscribe;
 
       $params = array('subject' => $mail_subject, 'body' => $mail_body);
       $type = 'status';
@@ -331,10 +338,132 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
         $type = 'warning';
       }
       drupal_set_message($message, $type);
+    }
   }
-  changeHistoricalPayment($payment);
 }
 
+function get_Form_infos($entity) {
+  $msg = '<table border="1" cellpadding="5">';
+
+  // Antenne
+  $msg .= '<tr><th>Antenne : </th><td>' . $entity->field_choix_antenne['und'][0]['value'] . '</td></tr>';
+
+  // Année adhésion
+  if (!empty($entity->field_pour_les_revenus)) {
+    $msg .= '<tr><th>Adhésion pour les revenus : </th><td>' . $entity->field_pour_les_revenus['und'][0]['value'] . '</td></tr>';
+  }
+
+  // Forme juridique
+  $msg .= '<tr><td colspan="2"><h3>Forme juridque</h3></td></tr>';
+  $msg .= '<tr><th>Forme juridique : </th><td>' . $entity->field_forme_juridique['und'][0]['value'] . '</td></tr>';
+  if (!empty($entity->field_fj_autre)) {
+    $msg .= '<tr><th>Autre forme juridique : </th><td>' . $entity->field_fj_autre['und'][0]['value'] . '</td></tr>';
+  }
+
+  if (!empty($entity->field_nombre_associes)) {
+    $msg .= '<tr><th>Nombre d\'associés : </th><td>' . $entity->field_nombre_associes['und'][0]['value'] . '</td></tr>';
+  }
+
+  // Identification
+  if (!empty($entity->field_nom_prenom)) {
+    $msg .= '<tr><th>Nom et prénom : </th><td>' . $entity->field_nom_prenom['und'][0]['value'] . '</td></tr>';
+  }
+  if (!empty($entity->field_email)) {
+    $msg .= '<tr><th>Email : </th><td>' . $entity->field_email['und'][0]['email'] . '</td></tr>';
+  }
+  if (!empty($entity->field_phone)) {
+    $msg .= '<tr><th>Téléphone : </th><td>' . $entity->field_phone['und'][0]['value'] . '</td></tr>';
+  }
+  if (!empty($entity->field_ou_denomination_sociale)) {
+    $msg .= '<tr><th>Dénomination sociale : </th><td>' . $entity->field_ou_denomination_sociale['und'][0]['value'] . '</td></tr>';
+  }
+
+  if (!empty($entity->field_adresse_professionnelle)) {
+    $msg .= '<tr><th>Adresse professionnelle: </th><td>' . $entity->field_adresse_professionnelle['und'][0]['value'] . '</td></tr>';
+  }
+  if (!empty($entity->field_adresse_correspondance)) {
+    $msg .= '<tr><th>Adresse correspondance : </th><td>' . $entity->field_adresse_correspondance['und'][0]['value'] . '</td></tr>';
+  }
+
+  //Renseignements relatifs à l'activité
+  $msg .= '<tr><td colspan="2"><h3>Renseignements relatifs à l\'activité</h3></td></tr>';
+  if (!empty($entity->field_nature_activite)) {
+    $msg .= '<tr><th>Nature de l\'activité : </th><td>' . $entity->field_nature_activite['und'][0]['value'] . '</td></tr>';
+  }
+  if (!empty($entity->field_date_debut)) {
+    $msg .= '<tr><th>Date de début de l\'activité : </th><td>' . $entity->field_date_debut['und'][0]['value'] . '</td></tr>';
+  }
+  if (!empty($entity->field_siret)) {
+    $msg .= '<tr><th>Numéro de Siret : </th><td>' . $entity->field_siret['und'][0]['value'] . '</td></tr>';
+  }
+  if (!empty($entity->field_code_ape)) {
+    $msg .= '<tr><th>Code APE : </th><td>' . $entity->field_code_ape['und'][0]['value'] . '</td></tr>';
+  }
+
+  if (!empty($entity->field_non_pro) && $entity->field_non_pro['und'][0]['value']) {
+    $msg .= '<tr><th>Activité non professionnelle : </th><td>Oui</td></tr>';
+  }
+  if (!empty($entity->field_source_etrangere) && $entity->field_source_etrangere['und'][0]['value']) {
+    $msg .= '<tr><th>Revenus de sources étrangères : </th><td>Oui</td></tr>';
+  }
+  if (!empty($entity->field_micro_autoentrepreneur) && $entity->field_micro_autoentrepreneur['und'][0]['value']) {
+    $msg .= '<tr><th>Adhésion Micro-BNC ou Auto-entrepreneur  : </th><td>Oui</td></tr>';
+  }
+  if (!empty($entity->field_type_adhesion)) {
+    $msg .= '<tr><th>Type d\'adhésion : </th><td>' . $entity->field_type_adhesion['und'][0]['value'] . '</td></tr>';
+  }
+  if (!empty($entity->field_autre_type_adhesion)) {
+    $msg .= '<tr><th>Autre type d\'adhésion:  </th><td>' . $entity->field_autre_type_adhesion['und'][0]['value'] . '</td></tr>';
+  }
+  if (!empty($entity->field_autre_aga)) {
+    $msg .= '<tr><th>Nom et adresse de la précédente AGA : </th><td>' . $entity->field_autre_aga['und'][0]['value'] . '</td></tr>';
+  }
+
+
+  // Tenue des documents comptables
+  $msg .= '<tr><td colspan="2"><h3>Tenue des documents comptables</h3></td></tr>';
+  if (!empty($entity->field_assistance)) {
+    $msg .= '<tr><th>Assistance d\’un professionnel : </th><td>' . $entity->field_assistance['und'][0]['value'] . '</td></tr>';
+  }
+  if (!empty($entity->field_assistance_nom)) {
+    $msg .= '<tr><th>Nom et prénom ou société  : </th><td>' . $entity->field_assistance_nom['und'][0]['value'] . '</td></tr>';
+  }
+  if (!empty($entity->field_profession)) {
+    $msg .= '<tr><th>Profession : </th><td>' . $entity->field_profession['und'][0]['value'] . '</td></tr>';
+  }
+  if (!empty($entity->field_assistance_adresse)) {
+    $msg .= '<tr><th>Adresse : </th><td>' . $entity->field_assistance_adresse['und'][0]['value'] . '</td></tr>';
+  }
+  if (!empty($entity->field_assistance_phone)) {
+    $msg .= '<tr><th>Téléphone : </th><td>' . $entity->field_assistance_phone['und'][0]['value'] . '</td></tr>';
+  }
+  if (!empty($entity->field_assistance_fax)) {
+    $msg .= '<tr><th>Fax : </th><td>' . $entity->field_assistance_fax['und'][0]['value'] . '</td></tr>';
+  }
+  if (!empty($entity->field_assistance_email)) {
+    $msg .= '<tr><th>Email : </th><td>' . $entity->field_assistance_email['und'][0]['value'] . '</td></tr>';
+  }
+
+
+  // Coût de l'adhésion
+  $msg .= '<tr><td colspan="2"><h3>Coût de l\'adhésion</h3></td></tr>';
+  if (!empty($entity->field_prix)) {
+    $msg .= '<tr><th>Coût de l\'adhésion : </th><td>' . $entity->field_prix['und'][0]['value'] . '</td></tr>';
+  }
+  // Provenance
+  $msg .= '<tr><td colspan="2"><h3>Provenance</h3></td></tr>';
+  if (!empty($entity->field_provenance)) {
+    $msg .= '<tr><th>Provenance : </th><td>' . $entity->field_provenance['und'][0]['value'] . '</td></tr>';
+  }
+  // Historique du paiement
+  $msg .= '<tr><td colspan="2"><h3>Historique du paiement</h3></td></tr>';
+  if (!empty($entity->field_historique_paiement)) {
+    $msg .= '<tr><th>Historique du paiement : </th><td>' . $entity->field_historique_paiement['und'][0]['value'] . '</td></tr>';
+  }
+
+  $msg .= '</table>';
+  return $msg;
+}
 /**
  * Implements hook_mail().
  */
@@ -346,6 +475,7 @@ function feature_form_amapl_mail($key, &$message, $params) {
       break;
   }
 }
+
 /**
  * Implements hook_node_view().
  */
