@@ -1471,6 +1471,11 @@ body.page-aggregator .feed-item {
 .entitytype-inscription_amapl-form .field-name-field-historique-paiement{
   display: none;
 }
+.field-name-field-historique-paiement{
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
 .entitytype-inscription_amapl-form #edit-submit{
   background-color: red ;
   background-image: none;
