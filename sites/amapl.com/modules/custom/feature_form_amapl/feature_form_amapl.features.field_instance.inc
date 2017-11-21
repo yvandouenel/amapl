@@ -106,7 +106,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 20,
+        'weight' => 19,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -137,7 +137,7 @@ function feature_form_amapl_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 27,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -177,7 +177,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 22,
+        'weight' => 21,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -216,7 +216,7 @@ function feature_form_amapl_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 29,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -255,7 +255,7 @@ function feature_form_amapl_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 25,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -294,7 +294,7 @@ function feature_form_amapl_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 28,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -334,7 +334,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 19,
+        'weight' => 18,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -362,6 +362,46 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'entityform-inscription_amapl-field_autre_provenance'
+  $field_instances['entityform-inscription_amapl-field_autre_provenance'] = array(
+    'bundle' => 'inscription_amapl',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 23,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_autre_provenance',
+    'label' => 'Je connais l\'AMAPL grâce à',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+        'show_token_tree' => 0,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'entityform-inscription_amapl-field_autre_type_adhesion'
   $field_instances['entityform-inscription_amapl-field_autre_type_adhesion'] = array(
     'bundle' => 'inscription_amapl',
@@ -374,7 +414,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 18,
+        'weight' => 17,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -417,7 +457,7 @@ function feature_form_amapl_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 31,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -435,7 +475,7 @@ function feature_form_amapl_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -451,7 +491,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 21,
+        'weight' => 20,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -482,7 +522,7 @@ function feature_form_amapl_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 33,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -528,7 +568,7 @@ function feature_form_amapl_field_default_field_instances() {
           'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
-        'weight' => 16,
+        'weight' => 15,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -702,7 +742,7 @@ function feature_form_amapl_field_default_field_instances() {
         'show_token_tree' => 0,
       ),
       'type' => 'text_textarea',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -722,7 +762,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 14,
+        'weight' => 13,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -756,7 +796,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 15,
+        'weight' => 14,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -881,7 +921,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 12,
+        'weight' => 11,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -954,7 +994,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'paymentform',
         'settings' => array(),
         'type' => 'paymentform',
-        'weight' => 23,
+        'weight' => 24,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -988,10 +1028,9 @@ function feature_form_amapl_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 33,
+        'type' => 'hidden',
+        'weight' => 34,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1009,7 +1048,7 @@ function feature_form_amapl_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -1064,7 +1103,7 @@ function feature_form_amapl_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 32,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1095,7 +1134,7 @@ function feature_form_amapl_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 30,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1134,7 +1173,7 @@ function feature_form_amapl_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 26,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1171,33 +1210,25 @@ function feature_form_amapl_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 10,
+        'type' => 'list_default',
+        'weight' => 22,
       ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'entityform',
     'field_name' => 'field_provenance',
-    'label' => 'Comment nous avez-vous connu ?',
+    'label' => 'Comment nous avez-vous connu ? ',
     'required' => 0,
     'settings' => array(
-      'context' => 'title',
-      'context_default' => 'sdl_editor_representation',
-      'dnd_enabled' => 0,
-      'mee_enabled' => 0,
-      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-        'show_token_tree' => 0,
-      ),
-      'type' => 'text_textarea',
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
       'weight' => 7,
     ),
   );
@@ -1214,7 +1245,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 11,
+        'weight' => 10,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1258,7 +1289,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 13,
+        'weight' => 12,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1292,7 +1323,7 @@ function feature_form_amapl_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 17,
+        'weight' => 16,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -1328,12 +1359,13 @@ function feature_form_amapl_field_default_field_instances() {
   t('Autre forme juridique');
   t('Choix de l\'agence');
   t('Code APE');
-  t('Comment nous avez-vous connu ?');
+  t('Comment nous avez-vous connu ? ');
   t('Date de début d’activité (ou de reprise d’activité après cessation)');
   t('Email');
   t('Fax');
   t('Forme juridique');
   t('Historique de paiement');
+  t('Je connais l\'AMAPL grâce à');
   t('L\'un des deux champs suivants est requis.<span class="form-required" title="Ce champ est requis.">*</span>');
   t('Nature de l\'activité');
   t('Nom et adresse de la précédente association agréée');

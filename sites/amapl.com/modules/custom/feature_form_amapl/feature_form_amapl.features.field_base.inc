@@ -268,6 +268,33 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_autre_provenance'
+  $field_bases['field_autre_provenance'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_autre_provenance',
+    'foreign keys' => array(
+      'format' => array(
+        'columns' => array(
+          'format' => 'format',
+        ),
+        'table' => 'filter_format',
+      ),
+    ),
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_autre_type_adhesion'
   $field_bases['field_autre_type_adhesion'] = array(
     'active' => 1,
@@ -830,24 +857,35 @@ function feature_form_amapl_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_provenance',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
+    'foreign keys' => array(),
     'indexes' => array(
-      'format' => array(
-        0 => 'format',
+      'value' => array(
+        0 => 'value',
       ),
     ),
     'locked' => 0,
-    'module' => 'text',
-    'settings' => array(),
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Par les pages jaunes' => 'Par les pages jaunes',
+        'Par mon conseil (expert comptable, avocat fiscaliste)' => 'Par mon conseil (expert comptable, avocat fiscaliste)',
+        'Par le site internet de l\'AMAPL' => 'Par le site internet de l\'AMAPL',
+        'Par un confrère' => 'Par un confrère',
+        'Par mon école' => 'Par mon école',
+        'Par mon centre de formation' => 'Par mon centre de formation',
+        'Par mon ordre professionnel' => 'Par mon ordre professionnel',
+        'Par les réseaux sociaux' => 'Par les réseaux sociaux',
+        'Par un salon, une conférence,' => 'Par un salon, une conférence,',
+        'Par l\'université' => 'Par l\'université',
+        'Par le club de la presse' => 'Par le club de la presse',
+        'Par la presse / journeaux / magazine' => 'Par la presse / journeaux / magazine',
+        'Par publicité audio' => 'Par publicité audio',
+        'Autres (saisissez un texte personnalisé)' => 'Autres (saisissez un texte personnalisé)',
+      ),
+      'allowed_values_function' => '',
+    ),
     'translatable' => 0,
-    'type' => 'text_long',
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_siret'

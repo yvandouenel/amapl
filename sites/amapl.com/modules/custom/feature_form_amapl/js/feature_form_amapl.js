@@ -38,6 +38,7 @@
       manageFields();
 
       $("#edit-field-prix-und-0-value").prop("readonly", true);
+
       //$(".form-item .description").hide(0);
       // changement de texte pour le choix de l'année
       $('select#edit-field-pour-les-revenus-und option:contains("Choisir")').text('-- choisissez une année --');
@@ -103,6 +104,15 @@
       // Assistance d'un pro ?
       $("#edit-field-assistance input").change(function () {
         manageFields();
+      });
+      $("#edit-field-provenance-und").change(function () {
+
+        if($("#edit-field-provenance-und").val() == "Autres (saisissez un texte personnalisé)"){
+          $("#field-autre-provenance-add-more-wrapper").show();
+        } else {
+          $("#edit-field-autre-provenance-und-0-value").val("");
+          $("#field-autre-provenance-add-more-wrapper").hide();
+        }
       });
 
 
@@ -186,6 +196,11 @@
         }
         if ($("#edit-field-paiement-und-line-item-container-0-description").val() == '') {
           $("#edit-field-paiement-und-line-item-container-0-description").val(guid);
+        }
+        if ($("#edit-field-provenance-und").val() == "Autres (saisissez un texte personnalisé)") {
+          $("#field-autre-provenance-add-more-wrapper").show();
+        } else {
+          $("#field-autre-provenance-add-more-wrapper").hide();
         }
 
       }
