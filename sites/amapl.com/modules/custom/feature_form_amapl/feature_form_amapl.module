@@ -309,9 +309,11 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
       $to = $mail_to;
       $from = variable_get('site_mail');
       $mail_subject = 'Inscription AMAPL payée en ligne';
+      $payment_date = date('d-m-y G:i:s');
       $mail_body =
         "<p>Une nouvelle inscription a été payée en ligne sur le site de l'AMAPL</p>" .
-        $description_payment;
+        $description_payment .
+      "<p>Date de paiement : " . $payment_date . "</p>";
 
       $params = array('subject' => $mail_subject, 'body' => $mail_body);
       $type = 'status';
