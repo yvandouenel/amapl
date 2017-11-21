@@ -302,7 +302,6 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
   $entity = changeHistoricalPayment($payment);
   
   if ($payment->getStatus()->status == "payment_status_success") {
-    // Changement historique et récupération de l'entityform concernée *********
     
     if ($entity) {
       $info_form_subscribe = get_Form_infos($entity);
@@ -343,6 +342,11 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
 }
 
 function get_Form_infos($entity) {
+  $msg = '';
+  // Historique du paiement
+  if (!empty($entity->field_historique_paiement)) {
+    $msg .= '<p>' . $entity->field_historique_paiement['und'][0]['value'] . '</p>';
+  }
   $msg = '<table border="1" cellpadding="5">';
 
   // Antenne
@@ -354,7 +358,7 @@ function get_Form_infos($entity) {
   }
 
   // Forme juridique
-  $msg .= '<tr><td colspan="2"><h3>Forme juridque</h3></td></tr>';
+  $msg .= '<tr><td colspan="2"><h3>Forme juridique</h3></td></tr>';
   $msg .= '<tr><th>Forme juridique : </th><td>' . $entity->field_forme_juridique['und'][0]['value'] . '</td></tr>';
   if (!empty($entity->field_fj_autre)) {
     $msg .= '<tr><th>Autre forme juridique : </th><td>' . $entity->field_fj_autre['und'][0]['value'] . '</td></tr>';
@@ -454,11 +458,6 @@ function get_Form_infos($entity) {
   $msg .= '<tr><td colspan="2"><h3>Provenance</h3></td></tr>';
   if (!empty($entity->field_provenance)) {
     $msg .= '<tr><th>Provenance : </th><td>' . $entity->field_provenance['und'][0]['value'] . '</td></tr>';
-  }
-  // Historique du paiement
-  $msg .= '<tr><td colspan="2"><h3>Historique du paiement</h3></td></tr>';
-  if (!empty($entity->field_historique_paiement)) {
-    $msg .= '<tr><th>Historique du paiement : </th><td>' . $entity->field_historique_paiement['und'][0]['value'] . '</td></tr>';
   }
 
   $msg .= '</table>';
