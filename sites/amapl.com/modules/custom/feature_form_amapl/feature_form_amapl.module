@@ -304,11 +304,14 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
   if ($payment->getStatus()->status == "payment_status_success") {
     
     if ($entity) {
-      $info_form_subscribe = get_Form_infos($entity);
+      $info_form_subscribe = get_form_infos($entity);
       
       // Sends email to contact@amapl.com ****************************************
       $description_payment = current($payment->getLineItems())->description;
       $mail_to = "silvain.durand@amapl.com,y.douenel@coopernet.fr";
+      if (!empty($entity->field_email) && $entity->field_email['und'][0]['email']) {
+        $mail_to  .= "," . $entity->field_email['und'][0]['email'];
+      }
       $full_name = "contact AMAPL";
 
       // Build email message
@@ -317,7 +320,7 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
       $mail_subject = 'Inscription AMAPL payée en ligne';
       $payment_date = date('d-m-y G:i:s');
       $mail_body =
-        "<p>Une nouvelle inscription a été payée en ligne sur le site de l'AMAPL</p>" .
+        "<p>Inscription payée en ligne sur le site de l'AMAPL</p>" .
         $description_payment .
         $info_form_subscribe;
 
@@ -341,7 +344,7 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
   }
 }
 
-function get_Form_infos($entity) {
+function get_form_infos($entity) {
   $msg = '';
   // Historique du paiement
   if (!empty($entity->field_historique_paiement)) {
@@ -354,11 +357,11 @@ function get_Form_infos($entity) {
 
   // Année adhésion
   if (!empty($entity->field_pour_les_revenus)) {
-    $msg .= '<tr><th>Adhésion pour les revenus : </th><td>' . $entity->field_pour_les_revenus['und'][0]['value'] . '</td></tr>';
+    $msg .= '<tr><th>Demande d\’adhésion pour les revenus :  : </th><td>' . $entity->field_pour_les_revenus['und'][0]['value'] . '</td></tr>';
   }
 
   // Forme juridique
-  $msg .= '<tr><td colspan="2"><h3>Forme juridique</h3></td></tr>';
+  $msg .= '<tr><td colspan="2"><h3>Identification</h3></td></tr>';
   $msg .= '<tr><th>Forme juridique : </th><td>' . $entity->field_forme_juridique['und'][0]['value'] . '</td></tr>';
   if (!empty($entity->field_fj_autre)) {
     $msg .= '<tr><th>Autre forme juridique : </th><td>' . $entity->field_fj_autre['und'][0]['value'] . '</td></tr>';
@@ -463,7 +466,17 @@ function get_Form_infos($entity) {
     $msg .= '<tr><th>Autre provenance : </th><td>' . $entity->field_autre_provenance['und'][0]['value'] . '</td></tr>';
   }
 
+  // Acceptation
+  $msg .= '<tr><td colspan="2"><h3>Acceptation</h3></td></tr>';
+  if (!empty($entity->field_cgv) && $entity->field_cgv['und'][0]['value']) {
+    $msg .= '<tr><th>J’ai pris connaissance et accepte les conditions d’adhésion : </th><td>Oui</td></tr>';
+  }
+  if (!empty($entity->field_payment_online) && $entity->field_payment_online['und'][0]['value']) {
+    $msg .= '<tr><th>Je règle la cotisation en ligne par carte bancaire, condition de mon adhésion en ligne : </th><td>Oui</td></tr>';
+  }
+
   $msg .= '</table>';
+
   return $msg;
 }
 /**
