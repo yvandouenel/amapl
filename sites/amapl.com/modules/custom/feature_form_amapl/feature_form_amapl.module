@@ -327,7 +327,7 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
         $description_payment .
         $payment_history .
         $info_form_subscribe;
-      
+
       // envoie aux administrateurs
       $params = array('subject' => $mail_subject, 'body' => $mail_body);
       $type = 'status';
@@ -350,6 +350,7 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
       // envoie au nouvel adhérent
       if (!empty($entity->field_email) && $entity->field_email['und'][0]['email']) {
         $mail_to  = $entity->field_email['und'][0]['email'];
+        $to = $mail_to;
         $mail_body =
           "<p>Madame, Monsieur,<br>Votre demande d’adhésion et le paiement des sommes indiquées ci-après ont bien été enregistrés et envoyés à l’AMAPL. <br>Une confirmation d’adhésion vous sera adressée prochainement par l’association, après vérification du respect des délais d’adhésion en vigueur.<br>Un remboursement du règlement pourra avoir lieu en cas de rejet de l’adhésion pour ce motif.<br>Sincères salutations.<br>L’équipe AMAPL</p>" .
           $info_form_subscribe;
