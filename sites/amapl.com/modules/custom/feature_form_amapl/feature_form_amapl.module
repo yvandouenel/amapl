@@ -357,7 +357,7 @@ function get_form_infos($entity) {
 
   // Année adhésion
   if (!empty($entity->field_pour_les_revenus)) {
-    $msg .= '<tr><th>Demande d\’adhésion pour les revenus :  : </th><td>' . $entity->field_pour_les_revenus['und'][0]['value'] . '</td></tr>';
+    $msg .= '<tr><th>Demande d\'adhésion pour les revenus :  : </th><td>' . $entity->field_pour_les_revenus['und'][0]['value'] . '</td></tr>';
   }
 
   // Forme juridique
@@ -430,7 +430,7 @@ function get_form_infos($entity) {
   // Tenue des documents comptables
   $msg .= '<tr><td colspan="2"><h3>Tenue des documents comptables</h3></td></tr>';
   if (!empty($entity->field_assistance)) {
-    $msg .= '<tr><th>Assistance d\’un professionnel : </th><td>' . $entity->field_assistance['und'][0]['value'] . '</td></tr>';
+    $msg .= '<tr><th>Assistance d\'un professionnel : </th><td>' . $entity->field_assistance['und'][0]['value'] . '</td></tr>';
   }
   if (!empty($entity->field_assistance_nom)) {
     $msg .= '<tr><th>Nom et prénom ou société  : </th><td>' . $entity->field_assistance_nom['und'][0]['value'] . '</td></tr>';
@@ -455,7 +455,7 @@ function get_form_infos($entity) {
   // Coût de l'adhésion
   $msg .= '<tr><td colspan="2"><h3>Coût de l\'adhésion</h3></td></tr>';
   if (!empty($entity->field_prix)) {
-    $msg .= '<tr><th>Coût de l\'adhésion : </th><td>' . $entity->field_prix['und'][0]['value'] . '</td></tr>';
+    $msg .= '<tr><th>Coût de l\'adhésion : </th><td>' . $entity->field_prix['und'][0]['value'] . '€</td></tr>';
   }
   // Provenance
   $msg .= '<tr><td colspan="2"><h3>Provenance</h3></td></tr>';
