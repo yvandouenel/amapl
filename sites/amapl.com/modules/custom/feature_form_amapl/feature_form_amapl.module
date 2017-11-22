@@ -309,9 +309,7 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
       // Sends email to contact@amapl.com ****************************************
       $description_payment = current($payment->getLineItems())->description;
       $mail_to = "silvain.durand@amapl.com,y.douenel@coopernet.fr";
-      if (!empty($entity->field_email) && $entity->field_email['und'][0]['email']) {
-        $mail_to  .= "," . $entity->field_email['und'][0]['email'];
-      }
+
       $full_name = "contact AMAPL";
 
       // Build email message
@@ -319,11 +317,18 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
       $from = variable_get('site_mail');
       $mail_subject = 'Inscription AMAPL payée en ligne';
       $payment_date = date('d-m-y G:i:s');
+      // Historique du paiement
+      $payment_history = '';
+      if (!empty($entity->field_historique_paiement)) {
+        $payment_history = '<p>' . $entity->field_historique_paiement['und'][0]['value'] . '</p>';
+      }
       $mail_body =
         "<p>Inscription payée en ligne sur le site de l'AMAPL</p>" .
         $description_payment .
+        $payment_history .
         $info_form_subscribe;
-
+      
+      // envoie aux administrateurs
       $params = array('subject' => $mail_subject, 'body' => $mail_body);
       $type = 'status';
       if (drupal_mail('feature_form_amapl', 'form_amapl_paid', $to, language_default(), $params, $from)) {
@@ -339,17 +344,38 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
         ));
         $type = 'warning';
       }
+      // envoie aux administrateurs
       drupal_set_message($message, $type);
+
+      // envoie au nouvel adhérent
+      if (!empty($entity->field_email) && $entity->field_email['und'][0]['email']) {
+        $mail_to  = $entity->field_email['und'][0]['email'];
+        $mail_body =
+          "<p>Madame, Monsieur,<br>Votre demande d’adhésion et le paiement des sommes indiquées ci-après ont bien été enregistrés et envoyés à l’AMAPL. <br>Une confirmation d’adhésion vous sera adressée prochainement par l’association, après vérification du respect des délais d’adhésion en vigueur.<br>Un remboursement du règlement pourra avoir lieu en cas de rejet de l’adhésion pour ce motif.<br>Sincères salutations.<br>L’équipe AMAPL</p>" .
+          $info_form_subscribe;
+        $params = array('subject' => $mail_subject, 'body' => $mail_body);
+
+        if (drupal_mail('feature_form_amapl', 'form_amapl_paid', $to, language_default(), $params, $from)) {
+          $message = t('Validation request email message sent successfully to %fullname (%to)', array(
+            '%fullname' => $full_name,
+            '%to' => $to
+          ));
+        }
+        else {
+          $message = t('Email message could not be sent to %fullname (%to)', array(
+            '%fullname' => $full_name,
+            '%to' => $to
+          ));
+          $type = 'warning';
+        }
+        // envoie au nouvel adhérent
+        drupal_set_message($message, $type);
+      }
     }
   }
 }
 
 function get_form_infos($entity) {
-  $msg = '';
-  // Historique du paiement
-  if (!empty($entity->field_historique_paiement)) {
-    $msg .= '<p>' . $entity->field_historique_paiement['und'][0]['value'] . '</p>';
-  }
   $msg = '<table border="1" cellpadding="5">';
 
   // Antenne
