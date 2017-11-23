@@ -380,11 +380,11 @@ function get_form_infos($entity) {
   $msg = '<table border="1" cellpadding="5">';
 
   // Antenne
-  $msg .= '<tr><th>Antenne : </th><td>' . $entity->field_choix_antenne['und'][0]['value'] . '</td></tr>';
+  $msg .= '<tr><th>Agence : </th><td>' . $entity->field_choix_antenne['und'][0]['value'] . '</td></tr>';
 
   // Année adhésion
   if (!empty($entity->field_pour_les_revenus)) {
-    $msg .= '<tr><th>Demande d\'adhésion pour les revenus :  : </th><td>' . $entity->field_pour_les_revenus['und'][0]['value'] . '</td></tr>';
+    $msg .= '<tr><th>Demande d\'adhésion pour les revenus :</th><td>' . $entity->field_pour_les_revenus['und'][0]['value'] . '</td></tr>';
   }
 
   // Forme juridique
@@ -425,7 +425,7 @@ function get_form_infos($entity) {
     $msg .= '<tr><th>Nature de l\'activité : </th><td>' . $entity->field_nature_activite['und'][0]['value'] . '</td></tr>';
   }
   if (!empty($entity->field_date_debut)) {
-    $msg .= '<tr><th>Date de début de l\'activité : </th><td>' . $entity->field_date_debut['und'][0]['value'] . '</td></tr>';
+    $msg .= '<tr><th>Date de début de l\'activité : </th><td>' . date("d/m/Y", strtotime($entity->field_date_debut['und'][0]['value'])) . '</td></tr>';
   }
   if (!empty($entity->field_siret)) {
     $msg .= '<tr><th>Numéro de Siret : </th><td>' . $entity->field_siret['und'][0]['value'] . '</td></tr>';
@@ -503,6 +503,7 @@ function get_form_infos($entity) {
   }
 
   $msg .= '</table>';
+  $msg .= "<p>Association de gestion agréée déclarée n° 201300. Loi du 1er juillet 1901. Siret n° 314 686 924 00031. - Agrément fiscal n° 349 AA 4 - 1978. - www.amapl.com</p>";
 
   return $msg;
 }

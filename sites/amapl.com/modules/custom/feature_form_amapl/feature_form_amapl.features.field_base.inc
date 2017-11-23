@@ -367,10 +367,10 @@ function feature_form_amapl_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'nimes' => '<strong>Nîmes</strong><p class="amapl-adress">242, rue Claude Nicolas Ledoux.<br>BP 48051 - 30032 NÎMES cedex 9</p>',
-        'paris' => '<strong>Paris</strong><p class="amapl-adress">11, avenue de Villiers, <br>75017 PARIS</p>',
-        'foix' => '<strong>Foix</strong><p class="amapl-adress">IFCAP Bat D. Q St Antoine, <br>09000 ST-PAUL DE JARRAT</p>',
-        'montauban' => '<strong>Montauban</strong><p class="amapl-adress">2, rue de la fraternité, <br>82000 MONTAUBAN</p>',
+        'Nîmes' => '<strong>Nîmes</strong><p class="amapl-adress">242, rue Claude Nicolas Ledoux.<br>BP 48051 - 30032 NÎMES cedex 9</p>',
+        'Paris' => '<strong>Paris</strong><p class="amapl-adress">11, avenue de Villiers, <br>75017 PARIS</p>',
+        'Foix' => '<strong>Foix</strong><p class="amapl-adress">IFCAP Bat D. Q St Antoine, <br>09000 ST-PAUL DE JARRAT</p>',
+        'Montauban' => '<strong>Montauban</strong><p class="amapl-adress">2, rue de la fraternité, <br>82000 MONTAUBAN</p>',
       ),
       'allowed_values_function' => '',
     ),
@@ -960,10 +960,10 @@ function feature_form_amapl_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'Premiere' => 'Première adhésion à une association agréée',
-        'Reprise' => 'Adhésion suite à reprise d’activité après cessation',
-        'Transfert' => 'Adhésion suite à transfert d’association agréée',
-        'Autre' => 'Autre',
+        'Première adhésion à une association agréée' => 'Première adhésion à une association agréée',
+        'Adhésion suite à reprise d’activité après cessation' => 'Adhésion suite à reprise d’activité après cessation',
+        'Adhésion suite à transfert d’association agréée' => 'Adhésion suite à transfert d’association agréée',
+        'Autres' => 'Autres',
       ),
       'allowed_values_function' => '',
     ),
