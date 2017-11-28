@@ -90,12 +90,12 @@ function feature_form_amapl_form_validate($form, &$form_state) {
     ((
         $form_state['values']['field_forme_juridique']['und'][0]['value'] == "EI" &&
         $year_income == 2017 && $begin_activity_year == 2017 &&
-        $form_state['values']['field_type_adhesion']['und'][0]['value'] == "Premiere")
+        $form_state['values']['field_type_adhesion']['und'][0]['value'] == "Première adhésion à une association agréée")
       ||
       (
         $form_state['values']['field_forme_juridique']['und'][0]['value'] == "EI" &&
         $year_income == 2018 && $begin_activity_year == 2018 &&
-        $form_state['values']['field_type_adhesion']['und'][0]['value'] == "Premiere")
+        $form_state['values']['field_type_adhesion']['und'][0]['value'] == "Première adhésion à une association agréée")
     )
   ) {
     if ($year_income == 2017) {
@@ -314,7 +314,7 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
 
       // Build email message
       $to = $mail_to;
-      $from = variable_get('site_mail');
+      $from = "adhesions@amapl.com";
       $mail_subject = 'Inscription AMAPL payée en ligne';
       $payment_date = date('d-m-y G:i:s');
       // Historique du paiement

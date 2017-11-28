@@ -212,7 +212,7 @@
       function calculatePrice() {
 
         autoentrepreneur = $("#edit-field-micro-autoentrepreneur-und").is(":checked") ? true : false;
-        first_adhesion = $("#edit-field-type-adhesion-und-premiere").is(":checked") ? true : false;
+        first_adhesion = $("#edit-field-type-adhesion-und-premire-adhsion-une-association-agre").is(":checked") ? true : false;
 
         // Année de début d'activité
         if (jQuery.type($("#edit-field-date-debut-und-0-value-datepicker-popup-0").val()) === "string" &&
@@ -228,12 +228,11 @@
           year_income = 2018;
         }
         else year_income = undefined;
-        console.log("year_income : " + year_income);
 
         // Micro BNC ou première adhésion avec une création d'activité en 2017
         if (autoentrepreneur ||
-          ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2017 && begin_activity_year == 2017 && first_adhesion)
-        || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2018 && begin_activity_year == 2018 && first_adhesion)) {
+          (($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2017 && begin_activity_year == 2017 && first_adhesion)
+        || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2018 && begin_activity_year == 2018 && first_adhesion))) {
           if (year_income == 2017) price = "80.833333333";
           else if (year_income == 2018) price = "82.5";
         }
