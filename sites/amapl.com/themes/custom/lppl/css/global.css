@@ -1521,6 +1521,9 @@ body.page-aggregator .feed-item {
 .entitytype-inscription_amapl-form .view-info:hover{
   cursor: pointer;
 }
+.entitytype-inscription_amapl-form #edit-redirect{
+  display: none;
+}
 
 /* Visualisation de l'entityform **************************************************************************************/
 .page-entityform #edit-payment-method-pmid-title{
