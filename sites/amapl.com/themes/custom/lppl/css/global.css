@@ -273,6 +273,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.5em 1.5em;
   text-decoration: none;
 }
+.menu-name-menu-menu-haut ul li.last a{
+  padding-left: 35px;
+  background: #F7981D url(../images/icons/paypal.png) no-repeat 5px 50%;
+}
 
 #block-search-form {
   float: right;
