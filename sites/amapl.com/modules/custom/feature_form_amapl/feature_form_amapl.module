@@ -308,7 +308,7 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
       
       // Sends email to contact@amapl.com ****************************************
       $description_payment = current($payment->getLineItems())->description;
-      $mail_to = "silvain.durand@amapl.com,y.douenel@coopernet.fr";
+      $mail_to = "adhesions@amapl.com,y.douenel@coopernet.fr";
 
       $full_name = "contact AMAPL";
 
