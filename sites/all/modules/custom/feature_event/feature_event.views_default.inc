@@ -220,10 +220,6 @@ function feature_event_views_default_views() {
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'events:page_1';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 0;
-  /* Critère de tri: Contenu : Dates de l&#039;événement -  start date (field_dates) */
-  $handler->display->display_options['sorts']['field_dates_value']['id'] = 'field_dates_value';
-  $handler->display->display_options['sorts']['field_dates_value']['table'] = 'field_data_field_dates';
-  $handler->display->display_options['sorts']['field_dates_value']['field'] = 'field_dates_value';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Critère de filtrage: Contenu : Publié */
@@ -254,25 +250,24 @@ function feature_event_views_default_views() {
   $handler->display->display_options['filters']['field_event_publication_date_value2']['operator'] = '>=';
   $handler->display->display_options['filters']['field_event_publication_date_value2']['granularity'] = 'hour';
   $handler->display->display_options['filters']['field_event_publication_date_value2']['default_date'] = 'now';
-  /* Critère de filtrage: Contenu : Catégorie (field_event_cat) */
-  $handler->display->display_options['filters']['field_event_cat_tid']['id'] = 'field_event_cat_tid';
-  $handler->display->display_options['filters']['field_event_cat_tid']['table'] = 'field_data_field_event_cat';
-  $handler->display->display_options['filters']['field_event_cat_tid']['field'] = 'field_event_cat_tid';
-  $handler->display->display_options['filters']['field_event_cat_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_event_cat_tid']['expose']['operator_id'] = 'field_event_cat_tid_op';
-  $handler->display->display_options['filters']['field_event_cat_tid']['expose']['label'] = 'Type d\'événement :';
-  $handler->display->display_options['filters']['field_event_cat_tid']['expose']['operator'] = 'field_event_cat_tid_op';
-  $handler->display->display_options['filters']['field_event_cat_tid']['expose']['identifier'] = 'field_event_cat_tid';
-  $handler->display->display_options['filters']['field_event_cat_tid']['expose']['remember'] = TRUE;
-  $handler->display->display_options['filters']['field_event_cat_tid']['expose']['remember_roles'] = array(
+  /* Critère de filtrage: Contenu : Sujet de la formation (field_envent_training_topic) */
+  $handler->display->display_options['filters']['field_envent_training_topic_tid']['id'] = 'field_envent_training_topic_tid';
+  $handler->display->display_options['filters']['field_envent_training_topic_tid']['table'] = 'field_data_field_envent_training_topic';
+  $handler->display->display_options['filters']['field_envent_training_topic_tid']['field'] = 'field_envent_training_topic_tid';
+  $handler->display->display_options['filters']['field_envent_training_topic_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_envent_training_topic_tid']['expose']['operator_id'] = 'field_envent_training_topic_tid_op';
+  $handler->display->display_options['filters']['field_envent_training_topic_tid']['expose']['label'] = 'Thématique de la formation ';
+  $handler->display->display_options['filters']['field_envent_training_topic_tid']['expose']['operator'] = 'field_envent_training_topic_tid_op';
+  $handler->display->display_options['filters']['field_envent_training_topic_tid']['expose']['identifier'] = 'field_envent_training_topic_tid';
+  $handler->display->display_options['filters']['field_envent_training_topic_tid']['expose']['remember_roles'] = array(
     2 => '2',
-    1 => '1',
-    5 => '5',
-    4 => '4',
-    3 => '3',
+    1 => 0,
+    5 => 0,
+    4 => 0,
+    3 => 0,
   );
-  $handler->display->display_options['filters']['field_event_cat_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_event_cat_tid']['vocabulary'] = 'categorie_evenement';
+  $handler->display->display_options['filters']['field_envent_training_topic_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_envent_training_topic_tid']['vocabulary'] = 'categories_de_formation';
   $handler->display->display_options['path'] = 's-informer/agenda';
   $handler->display->display_options['menu']['title'] = 'Agenda';
   $handler->display->display_options['menu']['weight'] = '0';
@@ -394,7 +389,7 @@ function feature_event_views_default_views() {
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['defaults']['use_more_text'] = FALSE;
-  $handler->display->display_options['use_more_text'] = 'Voir tous les événements';
+  $handler->display->display_options['use_more_text'] = 'Voir toutes les formations';
   $handler->display->display_options['defaults']['link_display'] = FALSE;
   $handler->display->display_options['link_display'] = 'page';
   $handler->display->display_options['defaults']['access'] = FALSE;
@@ -843,12 +838,13 @@ function feature_event_views_default_views() {
     t('Il n\'y a pas de résultats correspondant à votre recherche. Merci de modifier les critères ci-dessus.'),
     t('Dates : '),
     t('Lieu : '),
-    t('Type d\'événement :'),
+    t('Thématique de la formation '),
     t('Classement'),
     t('Dates de l\'événement'),
     t('Bloc événements'),
-    t('Voir tous les événements'),
+    t('Voir toutes les formations'),
     t('Bloc événements tagués'),
+    t('Voir tous les événements'),
     t('Tout'),
     t('Page formations'),
     t('Les formations du Portail des Professions Libérales'),
