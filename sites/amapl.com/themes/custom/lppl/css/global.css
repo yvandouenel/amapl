@@ -1149,6 +1149,22 @@ div.field-name-field-cost-members > div.field-label:before,
 div.field-name-field-event-cost-public > div.field-label:before {
   content: "  > ";
 }
+.page-s-informer-agenda .views-exposed-form{
+  margin-top: 15px;
+  
+}
+.page-s-informer-agenda .title-page-list-events{
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid black;
+}
+.page-s-informer-agenda .form-item-field-envent-training-topic-tid div.description{
+  display: none;
+}
+.page-s-informer-agenda .views-widget-filter-field_envent_training_topic_tid label{
+  font-size: 1.1em;
+  margin-right: 10px;
+}
 
 /* Superfish ******************************************************************/
 #block-superfish-1 {
