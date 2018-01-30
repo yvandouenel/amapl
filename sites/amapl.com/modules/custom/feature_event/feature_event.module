@@ -1,0 +1,63 @@
+<?php
+/**
+ * @file
+ * Code for the Feature Event feature.
+ */
+
+include_once 'feature_event.features.inc';
+/**
+ * Title and image are link to the node or to the field_news_url_target field
+ * Working directly on the "title" field was not possible because of the automatic
+ * format which is not html (tag are not interpreted). So I decided to work on the 
+ * "event_url_target" field
+ */
+function feature_event_views_pre_render(&$view) {
+	//dpm($view->name);
+  //dpm($view->current_display);
+        if (($view->name == 'events' && $view->current_display == 'page') || 
+            ($view->name == 'events' && $view->current_display == 'block_evenements_home') ||
+            ($view->name == 'events' && $view->current_display == 'block_1') || 
+            ($view->name == 'events' && $view->current_display == 'block_2') ||
+            ($view->name == 'events' && $view->current_display == 'page_2') ||
+            ($view->name == 'events' && $view->current_display == 'page_3')) {
+            foreach ($view->result as &$value) {
+              
+//Test if an url target is specified 
+              if (sizeof($value->field_field_event_url_target) > 0) {
+                  
+                  $begin_http = preg_match("#^http|https(.*)$#i", $value->field_field_event_url_target[0]['rendered']['#markup']);                
+                  $custom_url = $begin_http ? $value->field_field_event_url_target[0]['rendered']['#markup'] : 'http://'.$value->field_field_event_url_target[0]['rendered']['#markup'];                   
+                  $target = (empty($value->field_field_event_new_window) || !$value->field_field_event_new_window[0]['raw']['value'])? '' : ' target="_blank" ';
+                  if (sizeof($value->field_field_event_image) > 0) {
+                    $value->field_field_event_image[0]['rendered']['#markup'] = '<a '.$target.' href="'.$custom_url.'">'.$value->field_field_event_image[0]['rendered']['#markup'].'</a>';
+                  }
+                  $value->field_field_event_url_target[0]['rendered']['#markup'] = '<h3 class="title-event-list"><a '.$target.' href="'.$custom_url.'">'.$value->node_title.'</a></h3>';
+                }else {
+                  $href = ' href="/'.drupal_get_path_alias("node/".$value->nid).'" ';
+                  $value->field_field_event_url_target[0]['rendered']['#markup'] = '<h3 class="title-event-list"><a'.$href.'>'.$value->node_title.'</a></h3>';
+                  if (sizeof($value->field_field_event_image) > 0) {
+                    $value->field_field_event_image[0]['rendered']['#markup'] = '<a '.$href.'>'.$value->field_field_event_image[0]['rendered']['#markup'].'</a>';
+                  }
+                }
+            }
+		
+	}
+}
+/*function feature_event_node_view_alter(&$build) {
+	// If event bundle
+  //dpm($build['#bundle']);
+  if ($build['#bundle'] == "event") {
+    $find = '<span class="date-display-start"';
+    $replace = '<br /><span class="date-display-start"';
+    $build['field_dates'][0]['#markup'] = str_replace($find, $replace, $build['field_dates'][0]['#markup']);
+  }
+}*/
+/**
+ * Implements hook_node_view().
+ */
+function feature_event_node_view($node, $view_mode, $langcode) {
+  if ($node->type == 'event' && $view_mode == 'full') {
+    drupal_add_js(drupal_get_path('module','feature_event') . '/js/lightbox/jquery.lightbox_me.js');
+    drupal_add_js(drupal_get_path('module','feature_event') . '/js/show-registration.js');
+  }
+}
