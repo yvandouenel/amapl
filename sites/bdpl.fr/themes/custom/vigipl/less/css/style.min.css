@@ -1754,7 +1754,10 @@ body.front #block-bean-2035plus>h2:before{content:"\e804";width:1em;margin-right
 .node-type-news .field-name-field-news-date-inline{padding-top:15px;margin-bottom:30px}
 .node-type-news .col-sm-4{padding-top:86px}
 .div-link-light-grey{background-color:#f3f2f2;padding:3px 10px;margin-bottom:15px}
+.div-link-light-grey h3.news-link-news,h3.title-news-list{margin-bottom:0}
 .div-link-light-grey a{display:block;padding:3px 0 3px 15px;background:url(../images/icons/arrow_orange_small.png) 0 8px no-repeat}
+.div-link-light-grey h3.news-link-news a{font-size:.6em}
+.div-link-light-grey .contextual-links-wrapper a{background-image:none}
+.div-link-light-grey .field-name-field-news-date-inline{padding:0;font-size:.9em}
 .h3-entity-linked{font-size:20px;margin-bottom:0;margin-top:5px}
-h3.title-news-list{margin-bottom:0}
 .page-taxonomy .taxonomy-term-description{margin-bottom:15px}
