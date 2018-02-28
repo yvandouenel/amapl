@@ -297,15 +297,25 @@ function feature_form_amapl_paypal_payment_pps_data(Payment $payment, array &$da
  * Implements hook_payment_status_change().
  */
 function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatusItem $previous_status_item) {
-  //dpm($payment);
+  // dpm($payment->getStatus()->status);
   // Changement historique et récupération de l'entityform concernée *********
   $entity = changeHistoricalPayment($payment);
-  //dpm($entity);
+  if ($payment->getStatus()->status == "payment_status_new") {
+    global $user;
+    // supression en base de données de l'enregistrement session_api_session si c'est un anonyme
+    if ($user->uid == 0) {
+      $sid = session_api_get_sid(TRUE);
+      db_delete('session_api')
+        ->condition('sid', $sid)
+        ->execute();
+    }
+  }
+
   if ($payment->getStatus()->status == "payment_status_success") {
-    
+
     if ($entity) {
       $info_form_subscribe = get_form_infos($entity);
-      
+
       // Sends email to contact@amapl.com ****************************************
       $description_payment = current($payment->getLineItems())->description;
       $mail_to = "adhesions@amapl.com,y.douenel@coopernet.fr";
@@ -349,7 +359,7 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
 
       // envoie au nouvel adhérent
       if (!empty($entity->field_email) && $entity->field_email['und'][0]['email']) {
-        $mail_to  = $entity->field_email['und'][0]['email'];
+        $mail_to = $entity->field_email['und'][0]['email'];
         $to = $mail_to;
         $mail_body =
           "<p>Madame, Monsieur,<br>Votre demande d’adhésion et le paiement des sommes indiquées ci-après ont bien été enregistrés et envoyés à l’AMAPL. <br>Une confirmation d’adhésion vous sera adressée prochainement par l’association, après vérification du respect des délais d’adhésion en vigueur.<br>Un remboursement du règlement pourra avoir lieu en cas de rejet de l’adhésion pour ce motif.<br>Sincères salutations.<br>L’équipe AMAPL</p>" .
@@ -507,6 +517,7 @@ function get_form_infos($entity) {
 
   return $msg;
 }
+
 /**
  * Implements hook_mail().
  */
