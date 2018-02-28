@@ -115,8 +115,9 @@ function feature_news_ds_layout_settings_info() {
         5 => 'field_scald_file',
       ),
       'right' => array(
-        6 => 'field_news_ref',
-        7 => 'field_news_linked',
+        6 => 'flippy_pager',
+        7 => 'field_news_ref',
+        8 => 'field_news_linked',
       ),
     ),
     'fields' => array(
@@ -126,6 +127,7 @@ function feature_news_ds_layout_settings_info() {
       'field_news_image' => 'left',
       'field_scald_video' => 'left',
       'field_scald_file' => 'left',
+      'flippy_pager' => 'right',
       'field_news_ref' => 'right',
       'field_news_linked' => 'right',
     ),

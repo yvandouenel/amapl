@@ -108,7 +108,14 @@ function feature_news_strongarm() {
           'weight' => '17',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'flippy_pager' => array(
+          'default' => array(
+            'weight' => '6',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__news'] = $strongarm;
