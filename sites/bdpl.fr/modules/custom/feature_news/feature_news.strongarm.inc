@@ -92,6 +92,9 @@ function feature_news_strongarm() {
       'print' => array(
         'custom_settings' => FALSE,
       ),
+      'title_and_date' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
