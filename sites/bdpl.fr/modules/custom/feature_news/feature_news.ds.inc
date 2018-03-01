@@ -36,7 +36,7 @@ function feature_news_ds_field_settings_info() {
           'ow-el' => 'div',
           'ow-cl' => 'div-link-light-grey',
           'ow-def-cl' => FALSE,
-          'ow-at' => '',
+          'ow-at' => 'id="linked-news-frame"',
           'ow-def-at' => FALSE,
         ),
       ),

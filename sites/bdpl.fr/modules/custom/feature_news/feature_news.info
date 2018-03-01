@@ -87,5 +87,5 @@ features[variable][] = node_options_news
 features[variable][] = node_preview_news
 features[variable][] = node_submitted_news
 features[views_view][] = news
-mtime = 1519828077
+mtime = 1519832516
 project path = sites/bdpl.fr/modules/custom/

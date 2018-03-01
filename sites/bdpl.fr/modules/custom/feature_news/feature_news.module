@@ -40,3 +40,18 @@ function feature_news_views_pre_render(&$view) {
 	}
 }
 
+/**
+ * Implements hook_init().
+ */
+function feature_news_init() {
+  drupal_add_js(drupal_get_path('module', 'feature_news').'/js/sort_news.js');
+}
+/**
+ * Implements hook_node_view().
+ */
+function feature_news_node_view($node, $view_mode, $langcode) {
+  if ((!empty($node) && $node->type == 'news')) {
+    drupal_add_js(drupal_get_path('module', 'feature_news') . '/js/sort_news.js');
+  }
+
+}
