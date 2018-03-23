@@ -11,3 +11,5 @@ sites/*/files
 sites/sites.php
 sites/*/private
 /private/*
+sites/*/files
+/private/*
