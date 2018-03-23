@@ -22,5 +22,15 @@ INSTALLATION
 
 Scald file depends on the following module:
 
-- Scald version 1.1 or higher
+- Scald version 1.2 or higher
 
+OPTIONAL COMPONENTS
+-------------------
+In order to have a preview of the PDF files in the thumbnail,
+you may install one of the following:
+ * mudraw CLI command (mupdf-tools or mupdf package)
+ * pdfdraw CLI command
+ * convert CLI command (imagemagick package)
+ * Imagick PHP extension
+
+For the CLI commands, PHP must be able to exec().

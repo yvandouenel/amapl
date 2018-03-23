@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Scald Files Installation
+ * Scald Files Installation.
  */
 
 /**
@@ -24,8 +24,11 @@ function scald_file_uninstall() {
   ScaldAtomController::removeType('file');
 }
 
+/**
+ * Create a file field.
+ */
 function _scald_file_create_file_field() {
-  // Create file field
+  // Create file field.
   if (!field_info_field('scald_file')) {
     $field = array(
       'field_name' => 'scald_file',
@@ -70,20 +73,20 @@ function scald_file_update_7001(&$sandbox) {
   _scald_file_create_file_field();
 
   $stop_at = time() + 5;
- // Get all the file atom sids
+  // Get all the file atom sids.
   $sids = db_query("SELECT s.sid FROM {scald_atoms} s WHERE s.provider='scald_file' AND s.type='file' AND s.base_id IS NOT NULL AND s.sid > :sid ORDER BY s.sid", array(':sid' => $sandbox['current_sid']));
-  // Loop them through
-  while($sid = $sids->fetchColumn()) {
+  // Loop them through.
+  while ($sid = $sids->fetchColumn()) {
     $atom = scald_atom_load($sid);
-    // Make sure we have a base entity
-    if(isset($atom->base_id)) {
+    // Make sure we have a base entity.
+    if (isset($atom->base_id)) {
       $file = file_load($atom->base_id);
-      // Make sure we have something in uri
-      if(!empty($file->uri)) {
-        // add the display field
+      // Make sure we have something in uri.
+      if (!empty($file->uri)) {
+        // Add the display field.
         $file->display = TRUE;
-        // Use it for the scald_file field
-        $atom->scald_file[LANGUAGE_NONE][0] = (array)$file;
+        // Use it for the scald_file field.
+        $atom->scald_file[LANGUAGE_NONE][0] = (array) $file;
         scald_atom_save($atom);
         $sandbox['affected_rows']++;
       }
@@ -92,7 +95,7 @@ function scald_file_update_7001(&$sandbox) {
     $sandbox['current_sid'] = $sid;
 
     if (time() > $stop_at) {
-       break;
+      break;
     }
   }
 
@@ -101,4 +104,4 @@ function scald_file_update_7001(&$sandbox) {
   if ($sandbox['#finished'] >= 1) {
     return t('Updated %affected_rows atoms.', array('%affected_rows' => $sandbox['affected_rows']));
   }
- }
+}

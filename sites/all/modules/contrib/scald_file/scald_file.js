@@ -1,5 +1,10 @@
+/**
+ * @file
+ * File: scald_file.js.
+ */
+
 (function ($) {
-  Drupal.behaviors.scaldFile= {
+  Drupal.behaviors.scaldFile = {
     attach: function (context, settings) {
       $('body').once('scald-file', function() {
         if (typeof CKEDITOR !== 'undefined') {
