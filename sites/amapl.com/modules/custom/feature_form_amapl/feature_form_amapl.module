@@ -99,7 +99,7 @@ function feature_form_amapl_form_validate($form, &$form_state) {
     )
   ) {
     if ($year_income == 2017) {
-      $price = '80.833333333';
+      $price = '82.5';//'80.833333333'
     }
     else {
       if ($year_income == 2018) {
@@ -111,7 +111,7 @@ function feature_form_amapl_form_validate($form, &$form_state) {
   // Micro entrepreneur autoentrepreneur
   elseif ($form_state['values']['field_micro_autoentrepreneur']['und'][0]['value']) {
     if ($year_income == 2017) {
-      $price = '80.833333333';
+      $price = '82.5';//'80.833333333'
     }
     else {
       if ($year_income == 2018) {
@@ -126,7 +126,7 @@ function feature_form_amapl_form_validate($form, &$form_state) {
     $form_state['values']['field_forme_juridique']['und'][0]['value'] == "SELARL"
   ) {
     if ($year_income == 2017) {
-      $price = '162.5';
+      $price = '165';//162.5
     }
     else {
       if ($year_income == 2018) {
@@ -144,7 +144,7 @@ function feature_form_amapl_form_validate($form, &$form_state) {
 
   ) {
     if ($year_income == 2017) {
-      $price = '260';
+      $price = '265';//260
     }
     else {
       if ($year_income == 2018) {
@@ -154,7 +154,7 @@ function feature_form_amapl_form_validate($form, &$form_state) {
   }
   else {
     if ($year_income == 2017) {
-      $price = '162.5';
+      $price = '165';//162.5
     }
     else {
       if ($year_income == 2018) {

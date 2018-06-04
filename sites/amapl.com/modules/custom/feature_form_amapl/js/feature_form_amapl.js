@@ -41,8 +41,10 @@
 
       //$(".form-item .description").hide(0);
       // changement de texte pour le choix de l'année
-      $('select#edit-field-pour-les-revenus-und option:contains("Choisir")').text('-- choisissez une année --');
-
+      $('select#edit-field-pour-les-revenus-und option:contains("Choisir")').text('-- Choisissez une année --');
+      // Effacer l'année 2017
+      $('select#edit-field-pour-les-revenus-und option:contains("2017")').hide();
+      
       /* Gestion des infobulles ***************************************************************************************/
       $(".form-item .description").each(function() {
         var field_description = $(this);
@@ -233,23 +235,23 @@
         if (autoentrepreneur ||
           (($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2017 && begin_activity_year == 2017 && first_adhesion)
         || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2018 && begin_activity_year == 2018 && first_adhesion))) {
-          if (year_income == 2017) price = "80.833333333";
+          if (year_income == 2017) price = "82.5";//80.833333333
           else if (year_income == 2018) price = "82.5";
         }
 
         else if (societe_unipersonnelle) {
-          if (year_income == 2017) price = "162.5";
+          if (year_income == 2017) price = "165";//162.5
           else if (year_income == 2018) price = "165";
             }
         else if (societe || (other_form && $("#edit-field-nombre-associes-und-0-value").val() > 1)) {
-          if (year_income == 2017) price = "260";
+          if (year_income == 2017) price = "265";//260
           else if (year_income == 2018) price = "265";
         }
         else if (no_juridic_form) {
           price = null;
         }
         else {
-          if (year_income == 2017) price = "162.5";
+          if (year_income == 2017) price = "165";//162.5
           else if (year_income == 2018) price = "165";
         }
         if (price !== null && price !== undefined) {
