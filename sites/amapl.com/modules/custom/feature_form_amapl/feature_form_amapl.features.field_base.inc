@@ -10,21 +10,13 @@
 function feature_form_amapl_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_adresse_correspondance'
+  // Exported field_base: 'field_adresse_correspondance'.
   $field_bases['field_adresse_correspondance'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_adresse_correspondance',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -39,21 +31,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_adresse_professionnelle'
+  // Exported field_base: 'field_adresse_professionnelle'.
   $field_bases['field_adresse_professionnelle'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_adresse_professionnelle',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -68,14 +52,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_assistance'
+  // Exported field_base: 'field_assistance'.
   $field_bases['field_assistance'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_assistance',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -94,21 +77,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_assistance_adresse'
+  // Exported field_base: 'field_assistance_adresse'.
   $field_bases['field_assistance_adresse'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_assistance_adresse',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -123,21 +98,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_assistance_email'
+  // Exported field_base: 'field_assistance_email'.
   $field_bases['field_assistance_email'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_assistance_email',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -152,21 +119,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_assistance_fax'
+  // Exported field_base: 'field_assistance_fax'.
   $field_bases['field_assistance_fax'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_assistance_fax',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -181,21 +140,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_assistance_nom'
+  // Exported field_base: 'field_assistance_nom'.
   $field_bases['field_assistance_nom'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_assistance_nom',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -210,21 +161,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_assistance_phone'
+  // Exported field_base: 'field_assistance_phone'.
   $field_bases['field_assistance_phone'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_assistance_phone',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -239,21 +182,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_autre_aga'
+  // Exported field_base: 'field_autre_aga'.
   $field_bases['field_autre_aga'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_autre_aga',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -268,21 +203,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_autre_provenance'
+  // Exported field_base: 'field_autre_provenance'.
   $field_bases['field_autre_provenance'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_autre_provenance',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -295,21 +222,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_autre_type_adhesion'
+  // Exported field_base: 'field_autre_type_adhesion'.
   $field_bases['field_autre_type_adhesion'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_autre_type_adhesion',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -324,14 +243,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_cgv'
+  // Exported field_base: 'field_cgv'.
   $field_bases['field_cgv'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_cgv',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -350,14 +268,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_choix_antenne'
+  // Exported field_base: 'field_choix_antenne'.
   $field_bases['field_choix_antenne'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_choix_antenne',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -369,7 +286,6 @@ function feature_form_amapl_field_default_field_bases() {
       'allowed_values' => array(
         'Nîmes' => '<strong>Nîmes</strong><p class="amapl-adress">242, rue Claude Nicolas Ledoux.<br>BP 48051 - 30032 NÎMES cedex 9</p>',
         'Paris' => '<strong>Paris</strong><p class="amapl-adress">11, avenue de Villiers, <br>75017 PARIS</p>',
-        'Foix' => '<strong>Foix</strong><p class="amapl-adress">IFCAP Bat D. Q St Antoine, <br>09000 ST-PAUL DE JARRAT</p>',
         'Montauban' => '<strong>Montauban</strong><p class="amapl-adress">2, rue de la fraternité, <br>82000 MONTAUBAN</p>',
       ),
       'allowed_values_function' => '',
@@ -378,21 +294,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_code_ape'
+  // Exported field_base: 'field_code_ape'.
   $field_bases['field_code_ape'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_code_ape',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -407,14 +315,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_date_debut'
+  // Exported field_base: 'field_date_debut'.
   $field_bases['field_date_debut'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_date_debut',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'date',
@@ -437,14 +344,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_email'
+  // Exported field_base: 'field_email'.
   $field_bases['field_email'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_email',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'email',
@@ -453,21 +359,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'email',
   );
 
-  // Exported field_base: 'field_fj_autre'
+  // Exported field_base: 'field_fj_autre'.
   $field_bases['field_fj_autre'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_fj_autre',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -482,14 +380,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_forme_juridique'
+  // Exported field_base: 'field_forme_juridique'.
   $field_bases['field_forme_juridique'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_forme_juridique',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -513,21 +410,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_historique_paiement'
+  // Exported field_base: 'field_historique_paiement'.
   $field_bases['field_historique_paiement'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_historique_paiement',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -540,14 +429,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_micro_autoentrepreneur'
+  // Exported field_base: 'field_micro_autoentrepreneur'.
   $field_bases['field_micro_autoentrepreneur'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_micro_autoentrepreneur',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -566,21 +454,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_nature_activite'
+  // Exported field_base: 'field_nature_activite'.
   $field_bases['field_nature_activite'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_nature_activite',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -595,21 +475,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_nom_prenom'
+  // Exported field_base: 'field_nom_prenom'.
   $field_bases['field_nom_prenom'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_nom_prenom',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -624,14 +496,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_nombre_associes'
+  // Exported field_base: 'field_nombre_associes'.
   $field_bases['field_nombre_associes'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_nombre_associes',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'number',
@@ -640,14 +511,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_non_pro'
+  // Exported field_base: 'field_non_pro'.
   $field_bases['field_non_pro'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_non_pro',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -666,21 +536,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_ou_denomination_sociale'
+  // Exported field_base: 'field_ou_denomination_sociale'.
   $field_bases['field_ou_denomination_sociale'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_ou_denomination_sociale',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -695,14 +557,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_paiement'
+  // Exported field_base: 'field_paiement'.
   $field_bases['field_paiement'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_paiement',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'paymentform',
@@ -711,14 +572,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'paymentform',
   );
 
-  // Exported field_base: 'field_payment_online'
+  // Exported field_base: 'field_payment_online'.
   $field_bases['field_payment_online'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_payment_online',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -737,21 +597,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_phone'
+  // Exported field_base: 'field_phone'.
   $field_bases['field_phone'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_phone',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -766,14 +618,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_pour_les_revenus'
+  // Exported field_base: 'field_pour_les_revenus'.
   $field_bases['field_pour_les_revenus'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_pour_les_revenus',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -792,21 +643,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_prix'
+  // Exported field_base: 'field_prix'.
   $field_bases['field_prix'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_prix',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -821,21 +664,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_profession'
+  // Exported field_base: 'field_profession'.
   $field_bases['field_profession'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_profession',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -850,14 +685,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_provenance'
+  // Exported field_base: 'field_provenance'.
   $field_bases['field_provenance'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_provenance',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -888,21 +722,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_siret'
+  // Exported field_base: 'field_siret'.
   $field_bases['field_siret'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_siret',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -917,14 +743,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_source_etrangere'
+  // Exported field_base: 'field_source_etrangere'.
   $field_bases['field_source_etrangere'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_source_etrangere',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -943,14 +768,13 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_type_adhesion'
+  // Exported field_base: 'field_type_adhesion'.
   $field_bases['field_type_adhesion'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_type_adhesion',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',

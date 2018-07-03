@@ -53,7 +53,6 @@ function feature_form_amapl_default_entityform_type() {
       "session_save" : 1
     },
     "weight" : "0",
-    "metatags" : [],
     "rdf_mapping" : [],
     "paths" : { "submit" : {
         "source" : "eform\\/submit\\/inscription-amapl",

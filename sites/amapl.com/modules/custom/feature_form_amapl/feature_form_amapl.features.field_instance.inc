@@ -10,7 +10,8 @@
 function feature_form_amapl_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_adresse_correspondance'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_adresse_correspondance'.
   $field_instances['entityform-inscription_amapl-field_adresse_correspondance'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -50,7 +51,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_adresse_professionnelle'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_adresse_professionnelle'.
   $field_instances['entityform-inscription_amapl-field_adresse_professionnelle'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -90,7 +92,7 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_assistance'
+  // Exported field_instance: 'entityform-inscription_amapl-field_assistance'.
   $field_instances['entityform-inscription_amapl-field_assistance'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => array(
@@ -126,7 +128,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_assistance_adresse'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_assistance_adresse'.
   $field_instances['entityform-inscription_amapl-field_assistance_adresse'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -165,7 +168,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_assistance_email'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_assistance_email'.
   $field_instances['entityform-inscription_amapl-field_assistance_email'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -204,7 +208,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_assistance_fax'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_assistance_fax'.
   $field_instances['entityform-inscription_amapl-field_assistance_fax'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -243,7 +248,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_assistance_nom'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_assistance_nom'.
   $field_instances['entityform-inscription_amapl-field_assistance_nom'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -282,7 +288,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_assistance_phone'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_assistance_phone'.
   $field_instances['entityform-inscription_amapl-field_assistance_phone'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -321,7 +328,7 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_autre_aga'
+  // Exported field_instance: 'entityform-inscription_amapl-field_autre_aga'.
   $field_instances['entityform-inscription_amapl-field_autre_aga'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -361,7 +368,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_autre_provenance'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_autre_provenance'.
   $field_instances['entityform-inscription_amapl-field_autre_provenance'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -400,7 +408,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_autre_type_adhesion'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_autre_type_adhesion'.
   $field_instances['entityform-inscription_amapl-field_autre_type_adhesion'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -440,7 +449,7 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_cgv'
+  // Exported field_instance: 'entityform-inscription_amapl-field_cgv'.
   $field_instances['entityform-inscription_amapl-field_cgv'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => array(
@@ -477,7 +486,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_choix_antenne'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_choix_antenne'.
   $field_instances['entityform-inscription_amapl-field_choix_antenne'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -509,7 +519,7 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_code_ape'
+  // Exported field_instance: 'entityform-inscription_amapl-field_code_ape'.
   $field_instances['entityform-inscription_amapl-field_code_ape'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -548,7 +558,7 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_date_debut'
+  // Exported field_instance: 'entityform-inscription_amapl-field_date_debut'.
   $field_instances['entityform-inscription_amapl-field_date_debut'] = array(
     'bundle' => 'inscription_amapl',
     'deleted' => 0,
@@ -598,7 +608,7 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_email'
+  // Exported field_instance: 'entityform-inscription_amapl-field_email'.
   $field_instances['entityform-inscription_amapl-field_email'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -632,7 +642,7 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_fj_autre'
+  // Exported field_instance: 'entityform-inscription_amapl-field_fj_autre'.
   $field_instances['entityform-inscription_amapl-field_fj_autre'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -672,7 +682,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_forme_juridique'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_forme_juridique'.
   $field_instances['entityform-inscription_amapl-field_forme_juridique'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -704,7 +715,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_historique_paiement'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_historique_paiement'.
   $field_instances['entityform-inscription_amapl-field_historique_paiement'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -744,7 +756,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_micro_autoentrepreneur'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_micro_autoentrepreneur'.
   $field_instances['entityform-inscription_amapl-field_micro_autoentrepreneur'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => array(
@@ -782,7 +795,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_nature_activite'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_nature_activite'.
   $field_instances['entityform-inscription_amapl-field_nature_activite'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -822,7 +836,7 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_nom_prenom'
+  // Exported field_instance: 'entityform-inscription_amapl-field_nom_prenom'.
   $field_instances['entityform-inscription_amapl-field_nom_prenom'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -862,7 +876,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_nombre_associes'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_nombre_associes'.
   $field_instances['entityform-inscription_amapl-field_nombre_associes'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -903,7 +918,7 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_non_pro'
+  // Exported field_instance: 'entityform-inscription_amapl-field_non_pro'.
   $field_instances['entityform-inscription_amapl-field_non_pro'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => array(
@@ -941,7 +956,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_ou_denomination_sociale'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_ou_denomination_sociale'.
   $field_instances['entityform-inscription_amapl-field_ou_denomination_sociale'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -981,7 +997,7 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_paiement'
+  // Exported field_instance: 'entityform-inscription_amapl-field_paiement'.
   $field_instances['entityform-inscription_amapl-field_paiement'] = array(
     'bundle' => 'inscription_amapl',
     'deleted' => 0,
@@ -1013,7 +1029,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_payment_online'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_payment_online'.
   $field_instances['entityform-inscription_amapl-field_payment_online'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => array(
@@ -1050,7 +1067,7 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_phone'
+  // Exported field_instance: 'entityform-inscription_amapl-field_phone'.
   $field_instances['entityform-inscription_amapl-field_phone'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -1090,7 +1107,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_pour_les_revenus'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_pour_les_revenus'.
   $field_instances['entityform-inscription_amapl-field_pour_les_revenus'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -1122,7 +1140,7 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_prix'
+  // Exported field_instance: 'entityform-inscription_amapl-field_prix'.
   $field_instances['entityform-inscription_amapl-field_prix'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -1161,7 +1179,7 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_profession'
+  // Exported field_instance: 'entityform-inscription_amapl-field_profession'.
   $field_instances['entityform-inscription_amapl-field_profession'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -1200,7 +1218,7 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_provenance'
+  // Exported field_instance: 'entityform-inscription_amapl-field_provenance'.
   $field_instances['entityform-inscription_amapl-field_provenance'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -1231,7 +1249,7 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_siret'
+  // Exported field_instance: 'entityform-inscription_amapl-field_siret'.
   $field_instances['entityform-inscription_amapl-field_siret'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
@@ -1271,7 +1289,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_source_etrangere'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_source_etrangere'.
   $field_instances['entityform-inscription_amapl-field_source_etrangere'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => array(
@@ -1309,7 +1328,8 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl-field_type_adhesion'
+  // Exported field_instance:
+  // 'entityform-inscription_amapl-field_type_adhesion'.
   $field_instances['entityform-inscription_amapl-field_type_adhesion'] = array(
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,

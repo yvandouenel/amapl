@@ -114,5 +114,4 @@ features[user_permission][] = edit any entityform
 features[user_permission][] = edit own entityform
 features[user_permission][] = view any entityform
 features[user_permission][] = view own entityform
-mtime = 1511296213
 project path = sites/amapl.com/modules/custom/
