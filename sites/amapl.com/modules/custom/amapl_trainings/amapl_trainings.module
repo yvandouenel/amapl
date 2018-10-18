@@ -244,15 +244,14 @@ function amapl_trainings_entity_view_alter(&$build, $type) {
       $trainings_view->set_display('sessions_count');
       $trainings_view->pre_execute();
       $sessions_number = trim(strip_tags($trainings_view->render('sessions_count')));
-
+      dpm($sessions_number);
       if ($sessions_number > 0) {
         // ATTENTION : fait planter la visualisation d'une formation. Il faut comprendre comment fonctionne le mécanisme
         // de visualisation des sessions dans le node formation
 
         // Initial version of sessions list (discarded, then re-used).
         $trainings_view = views_get_view('trainings');
-        dpm($trainings_view);
-        /*
+
         $trainings_view->set_display('next_sessions');
         $trainings_view->pre_execute();
         $sessions_list .= $trainings_view->render('next_sessions');
@@ -270,7 +269,7 @@ function amapl_trainings_entity_view_alter(&$build, $type) {
         if ($sessions_number > 3 ) {
           $sessions_list_link = l('Voir toutes les sessions', '/formations/toutes-les-sessions/' . $build['#node']->nid);
           $sessions_list .= '<div class="session-list-link">' . $sessions_list_link . '</div>';
-        }*/
+        }
       }
       global $user;
       if ($user->uid == $build['#node']->uid) {
