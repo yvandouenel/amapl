@@ -244,10 +244,8 @@ function amapl_trainings_entity_view_alter(&$build, $type) {
       $trainings_view->set_display('sessions_count');
       $trainings_view->pre_execute();
       $sessions_number = trim(strip_tags($trainings_view->render('sessions_count')));
-      dpm($sessions_number);
       if ($sessions_number > 0) {
-        // ATTENTION : fait planter la visualisation d'une formation. Il faut comprendre comment fonctionne le mécanisme
-        // de visualisation des sessions dans le node formation
+
 
         // Initial version of sessions list (discarded, then re-used).
         $trainings_view = views_get_view('trainings');
@@ -256,8 +254,8 @@ function amapl_trainings_entity_view_alter(&$build, $type) {
         $trainings_view->pre_execute();
         $sessions_list .= $trainings_view->render('next_sessions');
 
-        //      // New version of sessions list, but eventually discarded (see function amapl_trainings_get_next_sessions() below).
-        //      $sessions_list = amapl_trainings_get_next_sessions($build['#node']);
+        //  New version of sessions list, but eventually discarded (see function amapl_trainings_get_next_sessions() below).
+        //  $sessions_list = amapl_trainings_get_next_sessions($build['#node']);
 
         // At the moment we know that at least one training session exists,
         // we can remove the mention "Nous contacter"
