@@ -12,3 +12,40 @@
 function amapl_trainings_update_7001() {
   module_enable(array('calendar'));
 }
+/**
+ * Activates colorbox contrib module.
+ */
+function amapl_trainings_update_7002() {
+  module_enable(array('colorbox'));
+}
+/**
+ * Activates date_multiselect contrib module.
+ */
+function amapl_trainings_update_7003() {
+  module_enable(array('date_multiselect'));
+}
+/**
+ * Activates term_reference_tree contrib module.
+ */
+function amapl_trainings_update_7004() {
+  module_enable(array('term_reference_tree'));
+}
+/**
+ * Activates features_date_formats contrib module.
+ */
+function amapl_trainings_update_7005() {
+  module_enable(array('features_date_formats'));
+}
+
+/**
+ * Activates colorbox_node contrib module.
+ */
+function amapl_trainings_update_7006() {
+  module_enable(array('colorbox_node'));
+}
+/**
+ * Activates colorbox_field_formatter contrib module.
+ */
+function amapl_trainings_update_7007() {
+  module_enable(array('colorbox_field_formatter'));
+}
