@@ -493,6 +493,7 @@ function amapl_trainings_form_training_session_node_form_alter(&$form, &$form_st
   );
   // If session is being created
   if (!isset($form['nid']['#value'])) {
+    dpm("Pas encore de relation avec une formation");
     // We must provide a temporary title to pass validation successfully.
     // Then an eventual title is created in the custom submit function.
     // See function amapl_trainings_training_session_submit_handler() below.
@@ -501,8 +502,18 @@ function amapl_trainings_form_training_session_node_form_alter(&$form, &$form_st
     // If session is being created from a training page, we must catch the training nid from url
     // and select the corresponding training in field_related_training field.
     if (!isset($form['nid']['#value']) && NULL != arg(3)) {
-      $form['field_related_training']['und']['#default_value'] = array(arg(3));
-      $form['field_funded_session']['und']['#default_value'] = arg(4);
+      /*$form['field_related_training']['und']['#default_value'] = array(arg(3));
+      $form['field_funded_session']['und']['#default_value'] = arg(4);*/
+      $current_related_training = arg(3);
+      $node_training = node_load($current_related_training);
+
+      $options = array();
+      if (!empty($node_training)) {
+        $options[$node_training->nid] = $node_training->title;
+      }
+
+      $form['field_related_training']['und']['#options'] = $options;
+      $form['field_related_training']['und']['#default_value'] = array($current_related_training);
     }
   }
 
@@ -512,23 +523,18 @@ function amapl_trainings_form_training_session_node_form_alter(&$form, &$form_st
   // So we must force its value to zero.
   elseif (isset($form['nid']['#value'])) {
     // 1) trainings list
-    $session_author_trainings = views_get_view_result('trainings','user_trainings', $form['uid']['#value']);
+    // Je récupère ici simplement la formation concernée grâce à son id
+    $current_related_training = $form_state['node']->field_related_training['und'][0]['target_id'];
+    $node_training = node_load($current_related_training);
 
     $options = array();
-    if (!empty($session_author_trainings)) {
-      foreach ($session_author_trainings as $training) {
-        $options[$training->nid] = $training->node_title;
-      }
+    if (!empty($node_training)) {
+      $options[$node_training->nid] = $node_training->title;
     }
 
-    $current_related_training = $form_state['node']->field_related_training['und'][0]['target_id'];
     $form['field_related_training']['und']['#options'] = $options;
     $form['field_related_training']['und']['#default_value'] = array($current_related_training);
 
-    // 2) field_funded_session
-    if (empty($form_state['node']->field_funded_session)) {
-      $form['field_funded_session']['und']['#default_value'] = 0;
-    }
   }
 
   $form['#submit'][] = 'amapl_trainings_training_session_submit_handler';

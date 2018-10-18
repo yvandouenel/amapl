@@ -2104,85 +2104,6 @@ function amapl_trainings_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-training-field_training_theme'.
-  $field_instances['node-training-field_training_theme'] = array(
-    'bundle' => 'training',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Les "thématiques concernées" permettent de mettre en valeur sur le site web de amapl des actualités qui concernent les dîtes thématiques. Merci de cocher une thématique que si votre actualité y est clairement liée.',
-    'display' => array(
-      'certifications_labels_block' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'full' => array(
-        'label' => 'inline',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 26,
-      ),
-      'landing_page_block' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'list' => array(
-        'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 39,
-      ),
-      'sector_brand_block' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'sessions' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 30,
-      ),
-      'teaser' => array(
-        'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'taxonomy_term_reference_plain',
-        'weight' => 40,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_training_theme',
-    'label' => 'Thématique(s) concernée(s)',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 5,
-    ),
-  );
-
   // Exported field_instance: 'node-training-field_training_type'.
   $field_instances['node-training-field_training_type'] = array(
     'bundle' => 'training',
@@ -2897,7 +2818,6 @@ function amapl_trainings_field_default_field_instances() {
   t('Formateur(s)');
   t('Formation');
   t('Introduction');
-  t('Les "thématiques concernées" permettent de mettre en valeur sur le site web de amapl des actualités qui concernent les dîtes thématiques. Merci de cocher une thématique que si votre actualité y est clairement liée.');
   t('Lieu');
   t('Méthode');
   t('Méthodes d\'évaluation');
@@ -2912,7 +2832,6 @@ function amapl_trainings_field_default_field_instances() {
   t('Sessions programmées');
   t('Statut de publication précédent');
   t('Tarif');
-  t('Thématique(s) concernée(s)');
   t('Type');
   t('Validation');
   t('Vous pouvez préciser si cette formation peut être prise en charge par les OPCA, ou autre mode de financement.');
