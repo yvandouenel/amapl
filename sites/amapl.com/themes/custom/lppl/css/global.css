@@ -1615,3 +1615,13 @@ body.page-aggregator .feed-item {
 .page-payment-view .sticky-enabled:nth-child(2) tr td:nth-child(5){
   display: none;
 }
+/* Training registration **********************************************************************************************/
+.page-registration .field:nth-child(0n+2) .field-label {
+  display: none;
+}
+.page-registration .field:nth-child(0n+3) .field-label {
+  float: left;
+}
+#colorbox .node-title {
+  display: none;
+}
