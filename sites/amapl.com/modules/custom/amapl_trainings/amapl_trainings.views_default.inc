@@ -354,13 +354,27 @@ function amapl_trainings_views_default_views() {
   );
   $handler->display->display_options['fields']['field_session_dates_1']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_session_dates_1']['delta_reversed'] = TRUE;
+  /* Champ: Contenu : Lieu */
+  $handler->display->display_options['fields']['field_session_place']['id'] = 'field_session_place';
+  $handler->display->display_options['fields']['field_session_place']['table'] = 'field_data_field_session_place';
+  $handler->display->display_options['fields']['field_session_place']['field'] = 'field_session_place';
+  $handler->display->display_options['fields']['field_session_place']['label'] = '';
+  $handler->display->display_options['fields']['field_session_place']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_session_place']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_session_place']['alter']['text'] = 'à [field_session_place]';
+  $handler->display->display_options['fields']['field_session_place']['alter']['strip_tags'] = TRUE;
+  $handler->display->display_options['fields']['field_session_place']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_session_place']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['field_session_place']['settings'] = array(
+    'trim_length' => '120',
+  );
   /* Champ: Contenu : Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '[field_session_dates]';
+  $handler->display->display_options['fields']['title']['alter']['text'] = 'Voir le détail  de la session commençant le [field_session_dates] [field_session_place]';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['node_in_colorbox'] = TRUE;
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
@@ -431,7 +445,8 @@ function amapl_trainings_views_default_views() {
     t('Nid'),
     t('Nombre de sessions'),
     t('Prochaines sessions d\'une formation'),
-    t('[field_session_dates]'),
+    t('à [field_session_place]'),
+    t('Voir le détail  de la session commençant le [field_session_dates] [field_session_place]'),
     t('Modifier'),
   );
   $export['trainings'] = $view;

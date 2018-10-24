@@ -42,6 +42,70 @@ function amapl_trainings_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_inscription|node|training_session|colorbox';
+  $field_group->group_name = 'group_inscription';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'training_session';
+  $field_group->mode = 'colorbox';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Inscription',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_session_registration',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Inscription',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-inscription field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $field_groups['group_inscription|node|training_session|colorbox'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_inscription|node|training_session|full';
+  $field_group->group_name = 'group_inscription';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'training_session';
+  $field_group->mode = 'full';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Inscription',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_session_registration',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Inscription',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-inscription field-group-div',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'collapsed',
+    ),
+  );
+  $field_groups['group_inscription|node|training_session|full'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_session_details|node|training_session|colorbox';
   $field_group->group_name = 'group_session_details';
   $field_group->entity_type = 'node';
@@ -50,20 +114,18 @@ function amapl_trainings_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Détails de la session',
-    'weight' => '1',
-    'children' => array(
-      0 => 'body',
-      1 => 'field_session_dates',
-      2 => 'field_session_place',
-      3 => 'field_funded_session',
-      4 => 'see_all_sessions_link',
-    ),
-    'format_type' => 'fieldset',
+    'weight' => '20',
+    'children' => array(),
+    'format_type' => 'html-element',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'formatter' => '',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-session-details field-group-fieldset',
+        'element' => 'div',
+        'show_label' => 0,
+        'label_element' => 'div',
+        'classes' => '',
+        'attributes' => '',
+        'required_fields' => 1,
         'id' => '',
       ),
     ),
@@ -161,9 +223,9 @@ function amapl_trainings_field_group_info() {
     'label' => 'Caractéristiques',
     'weight' => '1',
     'children' => array(
-      0 => 'field_training_duration',
+      0 => 'field_scheduled_sessions',
       1 => 'field_training_attendees_number',
-      2 => 'field_scheduled_sessions',
+      2 => 'field_training_duration',
       3 => 'field_training_price',
     ),
     'format_type' => 'div',
@@ -196,9 +258,8 @@ function amapl_trainings_field_group_info() {
     'label' => 'En-tête centre',
     'weight' => '31',
     'children' => array(
-      0 => 'field_training_type',
-      1 => 'field_introduction',
-      2 => 'title',
+      0 => 'field_introduction',
+      1 => 'field_training_type',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -229,9 +290,7 @@ function amapl_trainings_field_group_info() {
   $field_group->data = array(
     'label' => 'En-tête gauche',
     'weight' => '30',
-    'children' => array(
-      0 => 'field_training_related_brands',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'En-tête gauche',
@@ -261,9 +320,7 @@ function amapl_trainings_field_group_info() {
   $field_group->data = array(
     'label' => 'En-tête droit',
     'weight' => '32',
-    'children' => array(
-      0 => 'training_contact',
-    ),
+    'children' => array(),
     'format_type' => 'div',
     'format_settings' => array(
       'label' => 'En-tête droit',
@@ -329,8 +386,6 @@ function amapl_trainings_field_group_info() {
     'weight' => '2',
     'children' => array(
       0 => 'body',
-      1 => 'field_recommended_by',
-      2 => 'recommendation_action',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -362,13 +417,13 @@ function amapl_trainings_field_group_info() {
     'label' => 'Colonne droite',
     'weight' => '3',
     'children' => array(
-      0 => 'field_training_public',
-      1 => 'field_training_requirements',
-      2 => 'field_training_aims',
-      3 => 'field_training_method',
-      4 => 'field_training_teachers',
-      5 => 'field_training_validation',
-      6 => 'field_assessment_methods',
+      0 => 'field_assessment_methods',
+      1 => 'field_training_aims',
+      2 => 'field_training_method',
+      3 => 'field_training_public',
+      4 => 'field_training_requirements',
+      5 => 'field_training_teachers',
+      6 => 'field_training_validation',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -468,6 +523,7 @@ function amapl_trainings_field_group_info() {
   t('En-tête centre');
   t('En-tête droit');
   t('En-tête gauche');
+  t('Inscription');
   t('Sub group wrapper teaser');
   t('Sub wrapper teaser');
   t('group wrapper teaser');

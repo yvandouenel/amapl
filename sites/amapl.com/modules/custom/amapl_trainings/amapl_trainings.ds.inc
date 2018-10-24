@@ -49,15 +49,16 @@ function amapl_trainings_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'training_session';
   $ds_fieldsetting->view_mode = 'colorbox';
   $ds_fieldsetting->settings = array(
-    'interested_switch' => array(
-      'weight' => '2',
+    'title' => array(
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
-    ),
-    'see_all_sessions_link' => array(
-      'weight' => '1',
-      'label' => 'hidden',
-      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h2',
+        'class' => '',
+        'ft' => array(),
+      ),
     ),
   );
   $export['node|training_session|colorbox'] = $ds_fieldsetting;
@@ -691,35 +692,33 @@ function amapl_trainings_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'training_session';
   $ds_layout->view_mode = 'colorbox';
-  $ds_layout->layout = 'bootstrap_12';
+  $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
     'regions' => array(
-      'central' => array(
-        0 => 'field_related_training',
-        1 => 'field_funded_session',
-        2 => 'see_all_sessions_link',
-        3 => 'group_session_details',
-        4 => 'interested_switch',
-        5 => 'field_session_dates',
-        6 => 'field_session_place',
-        7 => 'field_interested_users',
-        8 => 'body',
+      'ds_content' => array(
+        0 => 'title',
+        1 => 'field_session_place',
+        2 => 'field_session_trainer',
+        3 => 'field_session_registration',
+        4 => 'field_related_training',
+        5 => 'group_inscription',
+        6 => 'field_session_dates',
+        7 => 'body',
       ),
     ),
     'fields' => array(
-      'field_related_training' => 'central',
-      'field_funded_session' => 'central',
-      'see_all_sessions_link' => 'central',
-      'group_session_details' => 'central',
-      'interested_switch' => 'central',
-      'field_session_dates' => 'central',
-      'field_session_place' => 'central',
-      'field_interested_users' => 'central',
-      'body' => 'central',
+      'title' => 'ds_content',
+      'field_session_place' => 'ds_content',
+      'field_session_trainer' => 'ds_content',
+      'field_session_registration' => 'ds_content',
+      'field_related_training' => 'ds_content',
+      'group_inscription' => 'ds_content',
+      'field_session_dates' => 'ds_content',
+      'body' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'central' => 'div',
+      'ds_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
@@ -736,27 +735,29 @@ function amapl_trainings_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'training_session';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'bootstrap_12';
+  $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
     'regions' => array(
-      'central' => array(
-        0 => 'field_related_training',
-        1 => 'field_session_dates',
-        2 => 'field_session_place',
-        3 => 'body',
-        4 => 'field_interested_users',
+      'ds_content' => array(
+        0 => 'comments',
+        1 => 'field_related_training',
+        2 => 'field_session_dates',
+        3 => 'field_session_place',
+        4 => 'group_inscription',
+        5 => 'field_session_registration',
       ),
     ),
     'fields' => array(
-      'field_related_training' => 'central',
-      'field_session_dates' => 'central',
-      'field_session_place' => 'central',
-      'body' => 'central',
-      'field_interested_users' => 'central',
+      'comments' => 'ds_content',
+      'field_related_training' => 'ds_content',
+      'field_session_dates' => 'ds_content',
+      'field_session_place' => 'ds_content',
+      'group_inscription' => 'ds_content',
+      'field_session_registration' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'central' => 'div',
+      'ds_content' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
@@ -764,8 +765,6 @@ function amapl_trainings_ds_layout_settings_info() {
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
     'layout_disable_css' => FALSE,
-    'hide_page_title' => '1',
-    'page_option_title' => '',
   );
   $export['node|training_session|full'] = $ds_layout;
 

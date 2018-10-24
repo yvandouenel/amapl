@@ -10,175 +10,6 @@
 function amapl_trainings_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance:
-  // 'field_collection_item-field_interested_users-field_user_contact'.
-  $field_instances['field_collection_item-field_interested_users-field_user_contact'] = array(
-    'bundle' => 'field_interested_users',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'text_default',
-        'weight' => 1,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'text_default',
-        'weight' => 1,
-      ),
-      'sessions' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'text_default',
-        'weight' => 1,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_user_contact',
-    'label' => 'Contact',
-    'required' => 0,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'ds_code' => 'ds_code',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'ds_code' => array(
-              'weight' => 12,
-            ),
-            'filtered_html' => array(
-              'weight' => -9,
-            ),
-            'full_html' => array(
-              'weight' => -10,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
-      'context' => 'title',
-      'context_default' => 'sdl_editor_representation',
-      'dnd_enabled' => 0,
-      'linkit' => array(
-        'button_text' => 'Rechercher',
-        'enable' => 0,
-        'profile' => '',
-      ),
-      'mee_enabled' => 0,
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'label_help_description' => '',
-        'show_token_tree' => FALSE,
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'field_collection_item-field_interested_users-field_user_name'.
-  $field_instances['field_collection_item-field_interested_users-field_user_name'] = array(
-    'bundle' => 'field_interested_users',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'bypass_access' => FALSE,
-          'colorbox_node_classes' => '',
-          'colorbox_node_height' => 600,
-          'colorbox_node_link' => FALSE,
-          'colorbox_node_width' => 600,
-          'field_formatter_class' => '',
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 0,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'bypass_access' => FALSE,
-          'colorbox_node_classes' => '',
-          'colorbox_node_height' => 600,
-          'colorbox_node_link' => FALSE,
-          'colorbox_node_width' => 600,
-          'field_formatter_class' => '',
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 0,
-      ),
-      'sessions' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'bypass_access' => FALSE,
-          'colorbox_node_classes' => '',
-          'colorbox_node_height' => 600,
-          'colorbox_node_link' => FALSE,
-          'colorbox_node_width' => 600,
-          'field_formatter_class' => '',
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'field_collection_item',
-    'field_name' => 'field_user_name',
-    'label' => 'Nom',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'label_help_description' => '',
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete_tags',
-      'weight' => 1,
-    ),
-  );
-
   // Exported field_instance: 'node-training-body'.
   $field_instances['node-training-body'] = array(
     'bundle' => 'training',
@@ -201,9 +32,7 @@ function amapl_trainings_field_default_field_instances() {
       'full' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 8,
       ),
@@ -318,9 +147,7 @@ function amapl_trainings_field_default_field_instances() {
       'full' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 10,
       ),
@@ -431,11 +258,9 @@ function amapl_trainings_field_default_field_instances() {
         'weight' => 10,
       ),
       'full' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => 'pull-left',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 4,
       ),
@@ -458,11 +283,9 @@ function amapl_trainings_field_default_field_instances() {
         'weight' => 10,
       ),
       'sessions' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 1,
       ),
@@ -637,9 +460,7 @@ function amapl_trainings_field_default_field_instances() {
       'full' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 5,
       ),
@@ -825,9 +646,7 @@ function amapl_trainings_field_default_field_instances() {
       'full' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 6,
       ),
@@ -947,9 +766,7 @@ function amapl_trainings_field_default_field_instances() {
       'full' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 2,
       ),
@@ -1227,9 +1044,7 @@ function amapl_trainings_field_default_field_instances() {
       'full' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 1,
       ),
@@ -1258,9 +1073,7 @@ function amapl_trainings_field_default_field_instances() {
       'sessions' => array(
         'label' => 'inline',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 2,
       ),
@@ -1428,9 +1241,7 @@ function amapl_trainings_field_default_field_instances() {
       'full' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 7,
       ),
@@ -1543,9 +1354,7 @@ function amapl_trainings_field_default_field_instances() {
       'full' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 3,
       ),
@@ -1665,9 +1474,7 @@ function amapl_trainings_field_default_field_instances() {
       'full' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 4,
       ),
@@ -1780,9 +1587,7 @@ function amapl_trainings_field_default_field_instances() {
       'full' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 5,
       ),
@@ -2007,9 +1812,7 @@ function amapl_trainings_field_default_field_instances() {
       'full' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 8,
       ),
@@ -2126,9 +1929,7 @@ function amapl_trainings_field_default_field_instances() {
       'full' => array(
         'label' => 'hidden',
         'module' => 'taxonomy',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 2,
       ),
@@ -2208,9 +2009,7 @@ function amapl_trainings_field_default_field_instances() {
       'full' => array(
         'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
         'weight' => 9,
       ),
@@ -2311,11 +2110,9 @@ function amapl_trainings_field_default_field_instances() {
       'colorbox' => array(
         'label' => 'hidden',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -2328,12 +2125,9 @@ function amapl_trainings_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'text_default',
-        'weight' => 3,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -2396,7 +2190,7 @@ function amapl_trainings_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -2413,12 +2207,9 @@ function amapl_trainings_field_default_field_instances() {
     'display' => array(
       'colorbox' => array(
         'label' => 'hidden',
-        'module' => 'list',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'list_default',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
       ),
       'default' => array(
         'label' => 'above',
@@ -2433,7 +2224,7 @@ function amapl_trainings_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2461,85 +2252,6 @@ function amapl_trainings_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-training_session-field_interested_users'.
-  $field_instances['node-training_session-field_interested_users'] = array(
-    'bundle' => 'training_session',
-    'default_value' => array(),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'colorbox' => array(
-        'label' => 'above',
-        'module' => 'field_collection',
-        'settings' => array(
-          'add' => '',
-          'delete' => 'Supprimer',
-          'description' => TRUE,
-          'display_id' => 'interested_users',
-          'edit' => 'Modifier',
-          'field_formatter_class' => '',
-          'name' => 'fcv_session_users',
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_view',
-        'weight' => 3,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'field_collection',
-        'settings' => array(
-          'add' => '',
-          'delete' => 'Supprimer',
-          'description' => 1,
-          'edit' => 'Modifier',
-          'field_formatter_class' => '',
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_view',
-        'weight' => 4,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'field_collection',
-        'settings' => array(
-          'add' => 'Ajouter',
-          'delete' => 'Supprimer',
-          'description' => TRUE,
-          'display_id' => 'interested_users',
-          'edit' => 'Modifier',
-          'field_formatter_class' => '',
-          'name' => 'fcv_session_users',
-          'view_mode' => 'full',
-        ),
-        'type' => 'field_collection_view',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_interested_users',
-    'label' => 'Personnes intéressées',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'field_collection',
-      'settings' => array(
-        'label_help_description' => '',
-      ),
-      'type' => 'field_collection_embed',
-      'weight' => 9,
-    ),
-  );
-
   // Exported field_instance: 'node-training_session-field_related_training'.
   $field_instances['node-training_session-field_related_training'] = array(
     'bundle' => 'training_session',
@@ -2551,13 +2263,12 @@ function amapl_trainings_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'field_formatter_class' => '',
           'links' => 1,
           'use_content_language' => TRUE,
           'view_mode' => 'sessions',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 0,
+        'weight' => 3,
       ),
       'default' => array(
         'label' => 'inline',
@@ -2583,11 +2294,10 @@ function amapl_trainings_field_default_field_instances() {
           'colorbox_node_height' => 600,
           'colorbox_node_link' => FALSE,
           'colorbox_node_width' => 600,
-          'field_formatter_class' => '',
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2623,7 +2333,6 @@ function amapl_trainings_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'date',
         'settings' => array(
-          'field_formatter_class' => '',
           'format_type' => 'news_long',
           'fromto' => 'both',
           'multiple_from' => '',
@@ -2632,7 +2341,7 @@ function amapl_trainings_field_default_field_instances() {
           'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
-        'weight' => 2,
+        'weight' => 5,
       ),
       'default' => array(
         'label' => 'inline',
@@ -2653,7 +2362,6 @@ function amapl_trainings_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'date',
         'settings' => array(
-          'field_formatter_class' => '',
           'format_type' => 'news_long',
           'fromto' => 'both',
           'multiple_from' => '',
@@ -2662,7 +2370,7 @@ function amapl_trainings_field_default_field_instances() {
           'show_remaining_days' => 0,
         ),
         'type' => 'date_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -2711,40 +2419,33 @@ function amapl_trainings_field_default_field_instances() {
     'bundle' => 'training_session',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Attention, seul le résumé de champ sera repris dans le descriptif de la formation concernée',
     'display' => array(
       'colorbox' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
+        'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 8,
       ),
       'full' => array(
-        'label' => 'inline',
-        'module' => 'text',
-        'settings' => array(
-          'field_formatter_class' => '',
-        ),
-        'type' => 'text_default',
-        'weight' => 2,
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -2753,40 +2454,10 @@ function amapl_trainings_field_default_field_instances() {
     'label' => 'Lieu',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'ds_code' => 'ds_code',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'plain_text' => 'plain_text',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'ds_code' => array(
-              'weight' => 12,
-            ),
-            'filtered_html' => array(
-              'weight' => -9,
-            ),
-            'full_html' => array(
-              'weight' => -10,
-            ),
-            'plain_text' => array(
-              'weight' => 10,
-            ),
-          ),
-        ),
-      ),
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
+      'display_summary' => 1,
       'dnd_enabled' => 0,
-      'linkit' => array(
-        'button_text' => 'Rechercher',
-        'enable' => 0,
-        'profile' => '',
-      ),
       'mee_enabled' => 0,
       'text_processing' => 1,
       'user_register_form' => FALSE,
@@ -2795,36 +2466,178 @@ function amapl_trainings_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 5,
-        'show_token_tree' => FALSE,
+        'rows' => 20,
+        'show_token_tree' => 0,
+        'summary_rows' => 5,
       ),
-      'type' => 'text_textarea',
+      'type' => 'text_textarea_with_summary',
       'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-training_session-field_session_registration'.
+  $field_instances['node-training_session-field_session_registration'] = array(
+    'bundle' => 'training_session',
+    'default_value' => array(
+      0 => array(
+        'registration_type' => 'inscription_amapl',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'colorbox' => array(
+        'label' => 'hidden',
+        'module' => 'registration',
+        'settings' => array(),
+        'type' => 'registration_form',
+        'weight' => 2,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => NULL,
+        'settings' => array(),
+        'type' => 'registration_default',
+        'weight' => 6,
+      ),
+      'full' => array(
+        'label' => 'hidden',
+        'module' => 'registration',
+        'settings' => array(),
+        'type' => 'registration_form',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_session_registration',
+    'label' => 'Inscription',
+    'required' => 0,
+    'settings' => array(
+      'default_registration_settings' => array(
+        'capacity' => 0,
+        'reminder' => array(
+          'reminder_settings' => array(
+            'reminder_date' => NULL,
+            'reminder_template' => '',
+          ),
+          'send_reminder' => 0,
+        ),
+        'scheduling' => array(
+          'close' => NULL,
+          'open' => NULL,
+        ),
+        'settings' => array(
+          'confirmation' => 'Pré-inscription enregistrée',
+          'confirmation_redirect' => '',
+          'from_address' => 'formation@amapl.com',
+          'maximum_spaces' => 1,
+          'multiple_registrations' => 0,
+        ),
+        'status' => 1,
+      ),
+      'hide_register_tab' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'registration',
+      'settings' => array(),
+      'type' => 'registration_select',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-training_session-field_session_trainer'.
+  $field_instances['node-training_session-field_session_trainer'] = array(
+    'bundle' => 'training_session',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Attention, seul le résumé de champ sera repris dans le descriptif de la formation concernée',
+    'display' => array(
+      'colorbox' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 9,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_session_trainer',
+    'label' => 'Formateur',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'display_summary' => 1,
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'show_token_tree' => 0,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 5,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Affichage dans le catalogue ?');
+  t('Attention, seul le résumé de champ sera repris dans le descriptif de la formation concernée');
   t('Champ de recherche');
   t('Cible(s)');
   t('Commentaire');
-  t('Contact');
   t('Contenu');
   t('Dates');
   t('Dispositif de financement');
   t('Domaine');
   t('Durée');
+  t('Formateur');
   t('Formateur(s)');
   t('Formation');
+  t('Inscription');
   t('Introduction');
   t('Lieu');
   t('Méthode');
   t('Méthodes d\'évaluation');
-  t('Nom');
   t('Nombre de participants');
   t('Objectifs pédagogiques');
-  t('Personnes intéressées');
   t('Pré-requis');
   t('Précisez le nombre de participants min et max si nécessaire.');
   t('Public visé');

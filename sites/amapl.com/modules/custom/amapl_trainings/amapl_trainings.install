@@ -49,3 +49,9 @@ function amapl_trainings_update_7006() {
 function amapl_trainings_update_7007() {
   module_enable(array('colorbox_field_formatter'));
 }
+/**
+ * Activates hook_post_action contrib module.
+ */
+function amapl_trainings_update_7008() {
+  module_enable(array('hook_post_action'));
+}
