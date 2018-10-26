@@ -21,7 +21,7 @@ function amapl_trainings_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Champs AMAPL',
-    'weight' => '28',
+    'weight' => '25',
     'children' => array(
       0 => 'field_previous_status',
       1 => 'field_training_search',
@@ -50,7 +50,7 @@ function amapl_trainings_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Inscription',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'field_session_registration',
     ),

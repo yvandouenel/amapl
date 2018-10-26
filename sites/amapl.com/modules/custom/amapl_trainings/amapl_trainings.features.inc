@@ -89,6 +89,14 @@ function amapl_trainings_image_default_styles() {
  */
 function amapl_trainings_node_info() {
   $items = array(
+    'traineur' => array(
+      'name' => t('Formateur'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'training' => array(
       'name' => t('Formation'),
       'base' => 'node_content',
@@ -107,5 +115,22 @@ function amapl_trainings_node_info() {
     ),
   );
   drupal_alter('node_info', $items);
+  return $items;
+}
+
+/**
+ * Implements hook_default_registration_type().
+ */
+function amapl_trainings_default_registration_type() {
+  $items = array();
+  $items['inscription_amapl'] = entity_import('registration_type', '{
+    "name" : "inscription_amapl",
+    "label" : "Inscription AMAPL",
+    "locked" : "0",
+    "default_state" : null,
+    "data" : null,
+    "weight" : "0",
+    "rdf_mapping" : []
+  }');
   return $items;
 }

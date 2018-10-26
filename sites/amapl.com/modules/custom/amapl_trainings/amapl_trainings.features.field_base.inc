@@ -10,6 +10,84 @@
 function amapl_trainings_field_default_field_bases() {
   $field_bases = array();
 
+  // Exported field_base: 'field_amapl_form_first_name'.
+  $field_bases['field_amapl_form_first_name'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_amapl_form_first_name',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_amapl_form_last_name'.
+  $field_bases['field_amapl_form_last_name'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_amapl_form_last_name',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_amapl_form_member'.
+  $field_bases['field_amapl_form_member'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_amapl_form_member',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_amapl_form_tel'.
+  $field_bases['field_amapl_form_tel'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_amapl_form_tel',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'number_integer',
+  );
+
   // Exported field_base: 'field_assessment_methods'.
   $field_bases['field_assessment_methods'] = array(
     'active' => 1,
@@ -219,20 +297,36 @@ function amapl_trainings_field_default_field_bases() {
   // Exported field_base: 'field_session_trainer'.
   $field_bases['field_session_trainer'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_session_trainer',
     'indexes' => array(
-      'format' => array(
-        0 => 'format',
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'text',
-    'settings' => array(),
+    'module' => 'entityreference',
+    'settings' => array(
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'traineur' => 'traineur',
+        ),
+      ),
+      'target_type' => 'node',
+    ),
     'translatable' => 0,
-    'type' => 'text_with_summary',
+    'type' => 'entityreference',
   );
 
   // Exported field_base: 'field_target_groups'.
@@ -260,6 +354,40 @@ function amapl_trainings_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_trainer_cv'.
+  $field_bases['field_trainer_cv'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_trainer_cv',
+    'indexes' => array(
+      'sid' => array(
+        0 => 'sid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'atom_reference',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'atom_reference',
+  );
+
+  // Exported field_base: 'field_trainer_email'.
+  $field_bases['field_trainer_email'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_trainer_email',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'email',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'email',
   );
 
   // Exported field_base: 'field_training_aims'.
@@ -331,6 +459,25 @@ function amapl_trainings_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
+  // Exported field_base: 'field_training_certif_or_label'.
+  $field_bases['field_training_certif_or_label'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_training_certif_or_label',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_training_domain'.
   $field_bases['field_training_domain'] = array(
     'active' => 1,
@@ -378,6 +525,25 @@ function amapl_trainings_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
+  );
+
+  // Exported field_base: 'field_training_eval_form'.
+  $field_bases['field_training_eval_form'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_training_eval_form',
+    'indexes' => array(
+      'sid' => array(
+        0 => 'sid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'atom_reference',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'atom_reference',
   );
 
   // Exported field_base: 'field_training_funding'.
@@ -449,6 +615,25 @@ function amapl_trainings_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_training_procedure'.
+  $field_bases['field_training_procedure'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_training_procedure',
+    'indexes' => array(
+      'sid' => array(
+        0 => 'sid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'atom_reference',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'atom_reference',
+  );
+
   // Exported field_base: 'field_training_public'.
   $field_bases['field_training_public'] = array(
     'active' => 1,
@@ -466,6 +651,25 @@ function amapl_trainings_field_default_field_bases() {
     'settings' => array(
       'profile2_private' => FALSE,
     ),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_training_registration_cond'.
+  $field_bases['field_training_registration_cond'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_training_registration_cond',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
   );
@@ -512,25 +716,58 @@ function amapl_trainings_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_training_teachers'.
-  $field_bases['field_training_teachers'] = array(
+  // Exported field_base: 'field_training_signature_doc'.
+  $field_bases['field_training_signature_doc'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_training_teachers',
+    'field_name' => 'field_training_signature_doc',
     'indexes' => array(
-      'format' => array(
-        0 => 'format',
+      'sid' => array(
+        0 => 'sid',
       ),
     ),
     'locked' => 0,
-    'module' => 'text',
+    'module' => 'atom_reference',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'atom_reference',
+  );
+
+  // Exported field_base: 'field_training_teachers'.
+  $field_bases['field_training_teachers'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_training_teachers',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
     'settings' => array(
-      'profile2_private' => FALSE,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'traineur' => 'traineur',
+        ),
+      ),
+      'target_type' => 'node',
     ),
     'translatable' => 0,
-    'type' => 'text_long',
+    'type' => 'entityreference',
   );
 
   // Exported field_base: 'field_training_type'.

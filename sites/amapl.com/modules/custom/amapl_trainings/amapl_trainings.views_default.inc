@@ -76,7 +76,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'training' => 'training',
   );
-  /* Critère de filtrage: Contenu : Domaine (field_training_domain) */
+  /* Critère de filtrage: Contenu : Thématique (field_training_domain) */
   $handler->display->display_options['filters']['field_training_domain_tid']['id'] = 'field_training_domain_tid';
   $handler->display->display_options['filters']['field_training_domain_tid']['table'] = 'field_data_field_training_domain';
   $handler->display->display_options['filters']['field_training_domain_tid']['field'] = 'field_training_domain_tid';
@@ -114,7 +114,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'training' => 'training',
   );
-  /* Critère de filtrage: Contenu : Domaine (field_training_domain) */
+  /* Critère de filtrage: Contenu : Thématique (field_training_domain) */
   $handler->display->display_options['filters']['field_training_domain_tid']['id'] = 'field_training_domain_tid';
   $handler->display->display_options['filters']['field_training_domain_tid']['table'] = 'field_data_field_training_domain';
   $handler->display->display_options['filters']['field_training_domain_tid']['field'] = 'field_training_domain_tid';
@@ -374,7 +374,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = 'Voir le détail  de la session commençant le [field_session_dates] [field_session_place]';
+  $handler->display->display_options['fields']['title']['alter']['text'] = 'Session débutant le [field_session_dates] [field_session_place]';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['node_in_colorbox'] = TRUE;
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
@@ -446,7 +446,7 @@ function amapl_trainings_views_default_views() {
     t('Nombre de sessions'),
     t('Prochaines sessions d\'une formation'),
     t('à [field_session_place]'),
-    t('Voir le détail  de la session commençant le [field_session_dates] [field_session_place]'),
+    t('Session débutant le [field_session_dates] [field_session_place]'),
     t('Modifier'),
   );
   $export['trainings'] = $view;
