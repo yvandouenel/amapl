@@ -1615,7 +1615,59 @@ body.page-aggregator .feed-item {
 .page-payment-view .sticky-enabled:nth-child(2) tr td:nth-child(5){
   display: none;
 }
-/* Training registration **********************************************************************************************/
+/* Training ***********************************************************************************************************/
+#node-training-full-wrapper .field{
+  margin: 15px 0 5px 0;
+}
+.node-type-training .views-field-title .colorbox-node {
+  display: table;
+  padding: 5px 8px;
+  color: white;
+  background-color: red;
+  text-decoration: none;
+  border-radius: 6px;
+  margin: 5px 0;
+  float: left;
+  min-width: 65%;
+  text-align: center;
+}
+.node-type-training .new-session-link a{
+  display: table;
+  padding: 5px 8px;
+  color: white;
+  background-color: darkolivegreen;
+  text-decoration: none;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  float: left;
+  min-width: 65%;
+  text-align: center;
+}
+.node-type-training .field-name-field-scheduled-sessions:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.node-type-training .session-modification:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+/* training in color box - formation dans la popup ********************************************************************/
+#colorbox .node-training-session .field-name-field-session-place .field-item {
+  padding-left: 45px;
+}
+#colorbox .node-training-session .field-name-field-session-place{
+  margin-bottom: 20px;
+}
+#colorbox .node-training-session .field-name-field-session-place .field-item p,
+#colorbox .node-training-session .field-name-field-session-dates .field-item p {
+  margin: 0;
+}
+#colorbox .node-training-session .field-name-field-session-dates .field-item .date-display-single {
+  display: block;
+}
+  /* Training registration **********************************************************************************************/
 .page-registration .field:nth-child(0n+2) .field-label {
   display: none;
 }
@@ -1624,4 +1676,61 @@ body.page-aggregator .feed-item {
 }
 #colorbox .node-title {
   display: none;
+}
+.not-logged-in .session-modification {
+  display: none;
+}
+.session-modification {
+  margin-left: 5px;
+}
+/* Fermé */
+.group-inscription.collapsed.collapsible{
+  border: 0;
+}
+.group-inscription.collapsed.collapsible a{
+  background-color: #FF0000;
+  color: #FFF;
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+}
+.group-inscription.collapsed.collapsible a:after{
+  content: " >";
+  color: #FFF;
+}
+/* Ouvert */
+.group-inscription.collapsible{
+  border: 1px solid darkgreen;
+  padding: 10px;
+  border-radius: 8px;
+}
+.group-inscription.collapsible label{
+  width: 160px  ;
+}
+
+.group-inscription.collapsible h3 a{
+  background-color: darkgreen;
+  color: #FFF;
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+}
+.group-inscription.collapsible h3 a:after{
+  content: " x";
+  color: white;
+}
+.group-inscription.collapsible .form-actions.form-wrapper a {
+  display: none;
+}
+.group-inscription.collapsible select,
+.group-inscription.collapsible input {
+  width: 160px  ;
+}
+/* commentaires *******************************************************************************************************/
+.comment_forbidden {
+  display: none !important;
 }

@@ -51,6 +51,14 @@
   float: left;
   width: 65%;
 }
+.node-type-training .ds-2col-fluid > .group-left {
+  float: left;
+  width: 50%;
+}
+.node-type-training .ds-2col-fluid > .group-right {
+  width: 45%;
+  padding-left: 5%;
+}
 .node-type-event .ds-2col-fluid > .group-left {
   width: 56%;
 }
