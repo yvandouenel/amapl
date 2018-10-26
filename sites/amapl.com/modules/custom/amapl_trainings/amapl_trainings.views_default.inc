@@ -11,6 +11,212 @@ function amapl_trainings_views_default_views() {
   $export = array();
 
   $view = new view();
+  $view->name = 'registrations_trainings';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'Inscriptions formations';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Inscriptions formations';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'plus';
+  $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« premier';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'field_session_dates' => 'field_session_dates',
+    'title' => 'title',
+    'field_amapl_form_member' => 'field_amapl_form_member',
+    'anon_mail' => 'anon_mail',
+    'field_amapl_form_last_name' => 'field_amapl_form_last_name',
+    'field_amapl_form_first_name' => 'field_amapl_form_first_name',
+  );
+  $handler->display->display_options['style_options']['default'] = 'title';
+  $handler->display->display_options['style_options']['info'] = array(
+    'field_session_dates' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_amapl_form_member' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'anon_mail' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_amapl_form_last_name' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_amapl_form_first_name' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  /* Relation: Registration : Nœud to Registration */
+  $handler->display->display_options['relationships']['registration_rel']['id'] = 'registration_rel';
+  $handler->display->display_options['relationships']['registration_rel']['table'] = 'node';
+  $handler->display->display_options['relationships']['registration_rel']['field'] = 'registration_rel';
+  $handler->display->display_options['relationships']['registration_rel']['required'] = TRUE;
+  /* Champ: Contenu : Dates */
+  $handler->display->display_options['fields']['field_session_dates']['id'] = 'field_session_dates';
+  $handler->display->display_options['fields']['field_session_dates']['table'] = 'field_data_field_session_dates';
+  $handler->display->display_options['fields']['field_session_dates']['field'] = 'field_session_dates';
+  $handler->display->display_options['fields']['field_session_dates']['label'] = 'Date de début de session';
+  $handler->display->display_options['fields']['field_session_dates']['settings'] = array(
+    'format_type' => 'tres_court_francais',
+    'fromto' => 'both',
+    'multiple_number' => '1',
+    'multiple_from' => '0',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_session_dates']['group_column'] = 'entity_id';
+  $handler->display->display_options['fields']['field_session_dates']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_session_dates']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_session_dates']['delta_offset'] = '0';
+  /* Champ: Contenu : Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Titre de la session';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
+  $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
+  $handler->display->display_options['fields']['title']['node_in_colorbox_rel'] = '';
+  /* Champ: Registration : Num. adhérent AMAPL */
+  $handler->display->display_options['fields']['field_amapl_form_member']['id'] = 'field_amapl_form_member';
+  $handler->display->display_options['fields']['field_amapl_form_member']['table'] = 'field_data_field_amapl_form_member';
+  $handler->display->display_options['fields']['field_amapl_form_member']['field'] = 'field_amapl_form_member';
+  $handler->display->display_options['fields']['field_amapl_form_member']['relationship'] = 'registration_rel';
+  /* Champ: Registration : Anonymous e-mail */
+  $handler->display->display_options['fields']['anon_mail']['id'] = 'anon_mail';
+  $handler->display->display_options['fields']['anon_mail']['table'] = 'registration';
+  $handler->display->display_options['fields']['anon_mail']['field'] = 'anon_mail';
+  $handler->display->display_options['fields']['anon_mail']['relationship'] = 'registration_rel';
+  /* Champ: Registration : Nom */
+  $handler->display->display_options['fields']['field_amapl_form_last_name']['id'] = 'field_amapl_form_last_name';
+  $handler->display->display_options['fields']['field_amapl_form_last_name']['table'] = 'field_data_field_amapl_form_last_name';
+  $handler->display->display_options['fields']['field_amapl_form_last_name']['field'] = 'field_amapl_form_last_name';
+  $handler->display->display_options['fields']['field_amapl_form_last_name']['relationship'] = 'registration_rel';
+  /* Champ: Registration : Prénom */
+  $handler->display->display_options['fields']['field_amapl_form_first_name']['id'] = 'field_amapl_form_first_name';
+  $handler->display->display_options['fields']['field_amapl_form_first_name']['table'] = 'field_data_field_amapl_form_first_name';
+  $handler->display->display_options['fields']['field_amapl_form_first_name']['field'] = 'field_amapl_form_first_name';
+  $handler->display->display_options['fields']['field_amapl_form_first_name']['relationship'] = 'registration_rel';
+  /* Critère de tri: Contenu : Dates (field_session_dates) */
+  $handler->display->display_options['sorts']['field_session_dates_value']['id'] = 'field_session_dates_value';
+  $handler->display->display_options['sorts']['field_session_dates_value']['table'] = 'field_data_field_session_dates';
+  $handler->display->display_options['sorts']['field_session_dates_value']['field'] = 'field_session_dates_value';
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'training_session' => 'training_session',
+  );
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'registration_training_list');
+  $handler->display->display_options['path'] = 'inscriptions-formations';
+
+  /* Display: Data export */
+  $handler = $view->new_display('views_data_export', 'Data export', 'registration_training_list_export');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_csv';
+  $handler->display->display_options['style_options']['provide_file'] = 0;
+  $handler->display->display_options['style_options']['parent_sort'] = 0;
+  $handler->display->display_options['style_options']['quote'] = 0;
+  $handler->display->display_options['style_options']['trim'] = 0;
+  $handler->display->display_options['style_options']['replace_newlines'] = 0;
+  $handler->display->display_options['style_options']['newline_token'] = '1';
+  $handler->display->display_options['style_options']['header'] = 1;
+  $handler->display->display_options['style_options']['keep_html'] = 0;
+  $handler->display->display_options['path'] = 'inscriptions-formations-amapl.csv';
+  $handler->display->display_options['displays'] = array(
+    'registration_training_list' => 'registration_training_list',
+    'default' => 0,
+  );
+  $translatables['registrations_trainings'] = array(
+    t('Master'),
+    t('Inscriptions formations'),
+    t('plus'),
+    t('Appliquer'),
+    t('Réinitialiser'),
+    t('Trier par'),
+    t('Asc'),
+    t('Desc'),
+    t('Éléments par page'),
+    t('- Tout -'),
+    t('Décalage'),
+    t('« premier'),
+    t('‹ précédent'),
+    t('suivant ›'),
+    t('dernier »'),
+    t('node being the Registration'),
+    t('Date de début de session'),
+    t('Titre de la session'),
+    t('Num. adhérent AMAPL'),
+    t('Anonymous e-mail'),
+    t('Nom'),
+    t('Prénom'),
+    t('Page'),
+    t('Data export'),
+  );
+  $export['registrations_trainings'] = $view;
+
+  $view = new view();
   $view->name = 'trainings';
   $view->description = '';
   $view->tag = 'default';
