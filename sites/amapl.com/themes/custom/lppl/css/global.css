@@ -1731,6 +1731,7 @@ body.page-aggregator .feed-item {
   width: 160px  ;
 }
 /* commentaires *******************************************************************************************************/
-.comment_forbidden {
+.comment_forbidden,
+.comment-add {
   display: none !important;
 }
