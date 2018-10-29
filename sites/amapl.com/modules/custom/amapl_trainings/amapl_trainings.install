@@ -55,3 +55,15 @@ function amapl_trainings_update_7007() {
 function amapl_trainings_update_7008() {
   module_enable(array('hook_post_action'));
 }
+/**
+ * Activates erri (error entity ref) contrib module.
+ */
+function amapl_trainings_update_7009() {
+  module_enable(array('erri'));
+}
+/**
+ * Activates better_exposed_filters contrib module.
+ */
+function amapl_trainings_update_7010() {
+  module_enable(array('better_exposed_filters'));
+}

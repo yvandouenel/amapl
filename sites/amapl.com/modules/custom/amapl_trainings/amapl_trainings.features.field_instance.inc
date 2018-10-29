@@ -2142,6 +2142,67 @@ function amapl_trainings_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-training-field_training_session_linked'.
+  $field_instances['node-training-field_training_session_linked'] = array(
+    'bundle' => 'training',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'colorbox_node_classes' => '',
+          'colorbox_node_height' => 600,
+          'colorbox_node_link' => FALSE,
+          'colorbox_node_width' => 600,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 33,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'sessions' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_training_session_linked',
+    'label' => 'Sessions liées',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 29,
+    ),
+  );
+
   // Exported field_instance: 'node-training-field_training_signature_doc'.
   $field_instances['node-training-field_training_signature_doc'] = array(
     'bundle' => 'training',
@@ -2813,7 +2874,7 @@ function amapl_trainings_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_session_place',
-    'label' => 'Lieu',
+    'label' => 'Détail de l\'adresse',
     'required' => 0,
     'settings' => array(
       'context' => 'title',
@@ -2914,6 +2975,56 @@ function amapl_trainings_field_default_field_instances() {
       'settings' => array(),
       'type' => 'registration_select',
       'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-training_session-field_session_short_place'.
+  $field_instances['node-training_session-field_session_short_place'] = array(
+    'bundle' => 'training_session',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'colorbox' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 10,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_session_short_place',
+    'label' => 'Lieu court',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 5,
     ),
   );
 
@@ -3161,6 +3272,7 @@ function amapl_trainings_field_default_field_instances() {
   t('Dates');
   t('Description');
   t('Dispositif de financement');
+  t('Détail de l\'adresse');
   t('Email');
   t('Feuille d\'émargement');
   t('Formateurs');
@@ -3168,7 +3280,7 @@ function amapl_trainings_field_default_field_instances() {
   t('Horaires et durée');
   t('Inscription');
   t('Introduction');
-  t('Lieu');
+  t('Lieu court');
   t('Méthode');
   t('Méthodes d\'évaluation');
   t('Nom');
@@ -3182,6 +3294,7 @@ function amapl_trainings_field_default_field_instances() {
   t('Questionnaire d\'évaluation');
   t('Règlement intérieur');
   t('Session financée par amapl Structure');
+  t('Sessions liées');
   t('Sessions programmées et inscription');
   t('Statut de publication précédent');
   t('Tarif');

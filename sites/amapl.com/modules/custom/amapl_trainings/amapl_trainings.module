@@ -285,6 +285,8 @@ function amapl_trainings_entity_view_alter(&$build, $type) {
         $sessions_user_links .= '<div class="new-session-link">' . $new_session_link . '</div>';
       }
       $build['field_scheduled_sessions'][0]['#markup'] = $previous_sessions_markup . $sessions_list . $sessions_user_links;
+
+      // Attention ajout ici des sessions aux champ entity ???
     }
   }
   if ($type == 'registration' && $build['#bundle'] == 'inscription_amapl') {
@@ -566,13 +568,21 @@ function amapl_trainings_training_session_submit_handler($form, &$form_state) {
   // Build session title based on selected training and first session date.
   $form_state['values']['title'] = $training_title . ' (session commençant le ' . $first_date . ')';
 }
-
+/**
+ * Implements hook_node_postinsert().
+ */
+function amapl_trainings_node_postinsert($node) {
+  $node_training_id = $node->field_related_training['und'][0]['target_id'];
+  $training_wrapper = entity_metadata_wrapper('node', $node_training_id);
+  $training_wrapper->field_training_session_linked[] = $node;
+  watchdog('amapl_trainings', "node session id : {$node->nid} now related to formation {$node_training_id}" );
+  $training_wrapper->save();
+}
 
 /**
  * Implements hook_node_postsave().
  */
 function amapl_trainings_node_postsave($node, $op) {
-  dpm($node->type);
   if ($node->type == 'training') {
     if (($op == 'delete') || ($op == 'update' && $node->status == 0)) {
       if (!empty($sessions = amapl_trainings_get_training_sessions($node->nid))) {

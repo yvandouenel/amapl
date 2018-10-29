@@ -78,6 +78,29 @@ function amapl_trainings_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'training_place' => array(
+      'name' => 'Lieu de formation',
+      'machine_name' => 'training_place',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'training_type' => array(
       'name' => 'Type de formation',
       'machine_name' => 'training_type',
