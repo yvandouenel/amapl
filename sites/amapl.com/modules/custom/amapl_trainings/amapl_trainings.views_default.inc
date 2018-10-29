@@ -633,11 +633,27 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
     'title' => 'title',
+    'field_session_short_place' => 'field_session_short_place',
+    'field_session_dates' => 'field_session_dates',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
     'title' => array(
-      'sortable' => 0,
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_session_short_place' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_session_dates' => array(
+      'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
@@ -666,7 +682,24 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['fields']['field_session_short_place']['table'] = 'field_data_field_session_short_place';
   $handler->display->display_options['fields']['field_session_short_place']['field'] = 'field_session_short_place';
   $handler->display->display_options['fields']['field_session_short_place']['relationship'] = 'field_training_session_linked_target_id';
+  $handler->display->display_options['fields']['field_session_short_place']['label'] = 'Lieu';
   $handler->display->display_options['fields']['field_session_short_place']['type'] = 'taxonomy_term_reference_plain';
+  /* Champ: Contenu : Dates */
+  $handler->display->display_options['fields']['field_session_dates']['id'] = 'field_session_dates';
+  $handler->display->display_options['fields']['field_session_dates']['table'] = 'field_data_field_session_dates';
+  $handler->display->display_options['fields']['field_session_dates']['field'] = 'field_session_dates';
+  $handler->display->display_options['fields']['field_session_dates']['relationship'] = 'field_training_session_linked_target_id';
+  $handler->display->display_options['fields']['field_session_dates']['label'] = 'Date';
+  $handler->display->display_options['fields']['field_session_dates']['settings'] = array(
+    'format_type' => 'tres_court_francais',
+    'fromto' => 'both',
+    'multiple_number' => '1',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_session_dates']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_session_dates']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Critère de filtrage: Contenu : Publié */
@@ -727,6 +760,26 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['filters']['field_training_catalog_value']['value'] = array(
     1 => '1',
   );
+  /* Critère de filtrage: Contenu : Lieu court (field_session_short_place) */
+  $handler->display->display_options['filters']['field_session_short_place_tid']['id'] = 'field_session_short_place_tid';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['table'] = 'field_data_field_session_short_place';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['field'] = 'field_session_short_place_tid';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['relationship'] = 'field_training_session_linked_target_id';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_session_short_place_tid']['expose']['operator_id'] = 'field_session_short_place_tid_op';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['expose']['label'] = 'Lieu';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['expose']['operator'] = 'field_session_short_place_tid_op';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['expose']['identifier'] = 'field_session_short_place_tid';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    5 => 0,
+    4 => 0,
+    6 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_session_short_place_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['vocabulary'] = 'training_place';
   $handler->display->display_options['path'] = 'formations';
   $translatables['trainings'] = array(
     t('Master'),
@@ -758,7 +811,8 @@ function amapl_trainings_views_default_views() {
     t('Modifier'),
     t('Contenu entity referenced from field_training_session_linked'),
     t('Titre'),
-    t('Lieu court'),
+    t('Lieu'),
+    t('Date'),
   );
   $export['trainings'] = $view;
 
