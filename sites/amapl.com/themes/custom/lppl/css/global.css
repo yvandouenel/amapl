@@ -1511,6 +1511,9 @@ body.page-aggregator .feed-item {
   padding: 5px;
   border-radius: 6px;
 }
+.entitytype-inscription_amapl-form #new-submission:hover{
+  cursor: pointer;
+}
 
 /* Conditions générales de vente ***********/
 .entitytype-inscription_amapl-form .form-item-field-cgv-und{
