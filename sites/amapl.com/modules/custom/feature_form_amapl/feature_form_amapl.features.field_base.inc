@@ -285,6 +285,7 @@ function feature_form_amapl_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         'Nîmes' => '<strong>Nîmes</strong><p class="amapl-adress">242, rue Claude Nicolas Ledoux.<br>BP 48051 - 30032 NÎMES cedex 9</p>',
+        'Lescar' => '<strong>Lescar</strong><p class="amapl-adress">1120, avenue de Vert Galant, <br>64230 LESCAR</p>',
         'Paris' => '<strong>Paris</strong><p class="amapl-adress">11, avenue de Villiers, <br>75017 PARIS</p>',
         'Montauban' => '<strong>Montauban</strong><p class="amapl-adress">2, rue de la fraternité, <br>82000 MONTAUBAN</p>',
       ),
@@ -636,6 +637,7 @@ function feature_form_amapl_field_default_field_bases() {
       'allowed_values' => array(
         2017 => 2017,
         2018 => 2018,
+        2019 => 2019,
       ),
       'allowed_values_function' => '',
     ),

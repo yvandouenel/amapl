@@ -36,6 +36,8 @@
       formeJuridique();
       calculatePrice();
       manageFields();
+      manageYears();
+      newSubmission();
 
       $("#edit-field-prix-und-0-value").prop("readonly", true);
 
@@ -207,6 +209,26 @@
 
       }
 
+      /*
+        Gere l'affichage des années pour les revenus
+      */
+      function manageYears() {
+        //efface 2017
+        $("#edit-field-pour-les-revenus-und option[value=2017]").hide();
+      }
+      function newSubmission() {
+        if (!$("#new-submission").lenght) {
+          $("<div></div>",{
+            "id": "new-submission",
+            "text": "Nouvelle inscription : réinitialiser le formulaire",
+          }).insertAfter(".pre-instructions");
+        }
+        $("#new-submission").click(function(){
+          $('#inscription-amapl-entityform-edit-form').trigger("reset");
+          $('#inscription-amapl-entityform-edit-form').find('input:text, input:password, select, textarea').val('');
+          $('#inscription-amapl-entityform-edit-form').find('input:radio, input:checkbox').prop('checked', false);
+        });
+      }
 
       /*
        Calcul global du prix de la cotisation

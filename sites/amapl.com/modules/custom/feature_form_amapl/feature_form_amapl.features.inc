@@ -23,7 +23,7 @@ function feature_form_amapl_default_entityform_type() {
   $items = array();
   $items['inscription_amapl'] = entity_import('entityform_type', '{
     "type" : "inscription_amapl",
-    "label" : "Demande d\\u0027adh\\u00e9sion en ligne",
+    "label" : "Demande d\\u0027adh\\u00e9sion BNC en ligne",
     "data" : {
       "draftable" : 0,
       "draft_redirect_path" : "",
@@ -42,11 +42,11 @@ function feature_form_amapl_default_entityform_type() {
       "submissions_view" : "default",
       "user_submissions_view" : "default",
       "form_status" : "ENTITYFORM_OPEN",
-      "roles" : { "1" : "1", "2" : "2", "5" : "5", "4" : "4", "3" : "3" },
+      "roles" : { "1" : "1", "2" : "2", "5" : "5", "4" : "4", "3" : "3", "6" : 0 },
       "resubmit_action" : "old",
       "redirect_path" : "",
       "instruction_pre" : {
-        "value" : "\\u003Cp\\u003E\\u003Cspan style=\\u0022font-size: 11pt; font-family: Calibri, sans-serif;\\u0022\\u003E\\u0026nbsp;Vous renseignez et validez ce formulaire, puis payez par CB sur le compte Paypal de l\\u2019AMAPL. \\u003Cstrong\\u003EVotre adh\\u00e9sion \\u00e0 l\\u2019AMAPL ne sera prise en compte qu\\u2019apr\\u00e8s ce paiement\\u003C\\/strong\\u003E, sous r\\u00e9serve du respect des d\\u00e9lais r\\u00e9glementaires d\\u2019adh\\u00e9sion en vigueur. Un remboursement du r\\u00e8glement CB pourra avoir lieu en cas de rejet de l\\u2019adh\\u00e9sion pour ce motif.\\u003C\\/span\\u003E\\u003C\\/p\\u003E\\r\\n",
+        "value" : "\\u003Cp\\u003E\\u003Cspan style=\\u0022font-size: 11pt; font-family: Calibri, sans-serif;\\u0022\\u003EVous renseignez et validez ce formulaire, puis payez par CB sur le compte Paypal de l\\u2019AMAPL. \\u003Cstrong\\u003EVotre adh\\u00e9sion \\u00e0 l\\u2019AMAPL ne sera prise en compte qu\\u2019apr\\u00e8s ce paiement\\u003C\\/strong\\u003E, sous r\\u00e9serve du respect des d\\u00e9lais r\\u00e9glementaires d\\u2019adh\\u00e9sion en vigueur. Un remboursement du r\\u00e8glement CB pourra avoir lieu en cas de rejet de l\\u2019adh\\u00e9sion pour ce motif.\\u0026nbsp;\\u0026nbsp;\\u003Cbr \\/\\u003E\\r\\nDemande d\\u0027adh\\u00e9sion en ligne actuellement possible pour les seules activit\\u00e9s BNC (professions lib\\u00e9rales) relevant de l\\u0027activit\\u00e9 AGA.\\u0026nbsp;Bulletins d\\u0027adh\\u00e9sion et tarifs sp\\u00e9cifiques BIC \\/ BA, rendez-vous sur le\\u0026nbsp;site\\u0026nbsp;\\u003Cstrong\\u003E\\u003Ca href=\\u0022http:\\/\\/www.cga30.fr\\/crbst_14.html\\u0022\\u003Ecga30.fr\\u003C\\/a\\u003E\\u003C\\/strong\\u003E.\\u003C\\/span\\u003E\\u003Cbr \\/\\u003E\\r\\n\\u0026nbsp;\\u003C\\/p\\u003E\\r\\n",
         "format" : "full_html"
       },
       "anonymous_links" : 1,
