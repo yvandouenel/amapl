@@ -1735,3 +1735,7 @@ body.page-aggregator .feed-item {
 .comment-add {
   display: none !important;
 }
+/* Page formations ****************************************************************************************************/
+.page-formations .views-field-title a {
+  display: block;
+}
