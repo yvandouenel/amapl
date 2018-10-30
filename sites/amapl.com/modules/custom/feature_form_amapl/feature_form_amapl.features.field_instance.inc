@@ -601,7 +601,7 @@ function feature_form_amapl_field_default_field_instances() {
         'label_position' => 'above',
         'no_fieldset' => 0,
         'text_parts' => array(),
-        'year_range' => '1970:+0',
+        'year_range' => '1970:+1',
       ),
       'type' => 'date_popup',
       'weight' => 10,
