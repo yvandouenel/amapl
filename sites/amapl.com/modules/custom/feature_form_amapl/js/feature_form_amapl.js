@@ -224,9 +224,13 @@
           }).insertAfter(".pre-instructions");
         }
         $("#new-submission").click(function(){
+          var nomsystem = $('#edit-field-paiement-und-line-item-container-0-name').val();
           $('#inscription-amapl-entityform-edit-form').trigger("reset");
           $('#inscription-amapl-entityform-edit-form').find('input:text, input:password, select, textarea').val('');
           $('#inscription-amapl-entityform-edit-form').find('input:radio, input:checkbox').prop('checked', false);
+          $('#edit-field-paiement-und-line-item-container-0-quantity').val(1);
+          $('#edit-field-paiement-und-line-item-container-0-tax-rate').val(20);
+          $('#edit-field-paiement-und-line-item-container-0-name').val(nomsystem);
           calculatePrice();
         });
       }
