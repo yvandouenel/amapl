@@ -628,7 +628,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['path'] = 'formations/prochaines-sessions';
 
   /* Display: Catalogue des formations */
-  $handler = $view->new_display('page', 'Catalogue des formations', 'page_1');
+  $handler = $view->new_display('page', 'Catalogue des formations', 'page_trainings');
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -700,6 +700,12 @@ function amapl_trainings_views_default_views() {
   );
   $handler->display->display_options['fields']['field_session_dates']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_session_dates']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Critère de tri: Contenu : Dates (field_session_dates) */
+  $handler->display->display_options['sorts']['field_session_dates_value']['id'] = 'field_session_dates_value';
+  $handler->display->display_options['sorts']['field_session_dates_value']['table'] = 'field_data_field_session_dates';
+  $handler->display->display_options['sorts']['field_session_dates_value']['field'] = 'field_session_dates_value';
+  $handler->display->display_options['sorts']['field_session_dates_value']['relationship'] = 'field_training_session_linked_target_id';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Critère de filtrage: Contenu : Publié */
@@ -780,6 +786,30 @@ function amapl_trainings_views_default_views() {
   );
   $handler->display->display_options['filters']['field_session_short_place_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_session_short_place_tid']['vocabulary'] = 'training_place';
+  /* Critère de filtrage: Contenu : Gratuit ? (field_training_free) */
+  $handler->display->display_options['filters']['field_training_free_value']['id'] = 'field_training_free_value';
+  $handler->display->display_options['filters']['field_training_free_value']['table'] = 'field_data_field_training_free';
+  $handler->display->display_options['filters']['field_training_free_value']['field'] = 'field_training_free_value';
+  $handler->display->display_options['filters']['field_training_free_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_training_free_value']['expose']['operator_id'] = 'field_training_free_value_op';
+  $handler->display->display_options['filters']['field_training_free_value']['expose']['label'] = 'Gratuit ?';
+  $handler->display->display_options['filters']['field_training_free_value']['expose']['operator'] = 'field_training_free_value_op';
+  $handler->display->display_options['filters']['field_training_free_value']['expose']['identifier'] = 'field_training_free_value';
+  $handler->display->display_options['filters']['field_training_free_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    5 => 0,
+    4 => 0,
+    6 => 0,
+    3 => 0,
+  );
+  /* Critère de filtrage: Contenu : Dates (field_session_dates) */
+  $handler->display->display_options['filters']['field_session_dates_value']['id'] = 'field_session_dates_value';
+  $handler->display->display_options['filters']['field_session_dates_value']['table'] = 'field_data_field_session_dates';
+  $handler->display->display_options['filters']['field_session_dates_value']['field'] = 'field_session_dates_value';
+  $handler->display->display_options['filters']['field_session_dates_value']['relationship'] = 'field_training_session_linked_target_id';
+  $handler->display->display_options['filters']['field_session_dates_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_session_dates_value']['default_date'] = 'now';
   $handler->display->display_options['path'] = 'formations';
   $translatables['trainings'] = array(
     t('Master'),
@@ -813,6 +843,7 @@ function amapl_trainings_views_default_views() {
     t('Titre'),
     t('Lieu'),
     t('Date'),
+    t('Gratuit ?'),
   );
   $export['trainings'] = $view;
 

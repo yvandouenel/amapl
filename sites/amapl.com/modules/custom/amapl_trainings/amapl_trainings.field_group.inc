@@ -25,6 +25,7 @@ function amapl_trainings_field_group_info() {
     'children' => array(
       0 => 'field_previous_status',
       1 => 'field_training_search',
+      2 => 'field_training_session_linked',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

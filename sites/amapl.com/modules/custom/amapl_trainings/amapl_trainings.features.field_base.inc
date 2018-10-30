@@ -256,6 +256,25 @@ function amapl_trainings_field_default_field_bases() {
     'type' => 'date',
   );
 
+  // Exported field_base: 'field_session_duration'.
+  $field_bases['field_session_duration'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_session_duration',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_session_place'.
   $field_bases['field_session_place'] = array(
     'active' => 1,
@@ -570,6 +589,31 @@ function amapl_trainings_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'atom_reference',
+  );
+
+  // Exported field_base: 'field_training_free'.
+  $field_bases['field_training_free'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_training_free',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => 'non',
+        1 => 'oui',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
   );
 
   // Exported field_base: 'field_training_funding'.

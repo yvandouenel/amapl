@@ -572,11 +572,25 @@ function amapl_trainings_training_session_submit_handler($form, &$form_state) {
  * Implements hook_node_postinsert().
  */
 function amapl_trainings_node_postinsert($node) {
-  $node_training_id = $node->field_related_training['und'][0]['target_id'];
-  $training_wrapper = entity_metadata_wrapper('node', $node_training_id);
-  $training_wrapper->field_training_session_linked[] = $node;
-  watchdog('amapl_trainings', "node session id : {$node->nid} now related to formation {$node_training_id}" );
-  $training_wrapper->save();
+  if ($node->type == 'training_session') {
+    // après la création d'une session , on ajoute cette session au champ entity reference field_training_session_linked
+    $node_training_id = $node->field_related_training['und'][0]['target_id'];
+    $training_wrapper = entity_metadata_wrapper('node', $node_training_id);
+    $training_wrapper->field_training_session_linked[] = $node;
+
+    // Si le champ field_session_duration est vide, on le remplit avec la valeur du champ de la formation concernée
+    $session_wrapper = entity_metadata_wrapper('node', $node->nid);
+    if (isset($training_wrapper->field_training_duration) && !empty($training_wrapper->field_training_duration)
+      && (!isset($session_wrapper->field_session_duration) || empty($session_wrapper->field_session_duration)))  {
+      $session_wrapper->field_session_duration->set($training_wrapper->field_training_duration);
+      watchdog('amapl_trainings', "Field field_session_duration updated to add duration from linked training" );
+      $session_wrapper->save();
+    }
+
+    watchdog('amapl_trainings', "node session id : {$node->nid} now related to formation {$node_training_id}" );
+    $training_wrapper->save();
+  }
+
 }
 
 /**
