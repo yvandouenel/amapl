@@ -3328,7 +3328,46 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'registration-inscription_amapl-field_amapl_form_rules'.
+  $field_instances['registration-inscription_amapl-field_amapl_form_rules'] = array(
+    'bundle' => 'inscription_amapl',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Vous déclarez avoir accepté le <a href="/reglement-formation" target="_blank">règlement concernant les formations dispensées par l\'AMAPL</a>.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'registration',
+    'field_name' => 'field_amapl_form_rules',
+    'label' => 'Règlement intérieur',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 7,
     ),
   );
 
@@ -3370,7 +3409,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 4,
+      'weight' => 2,
     ),
   );
 
@@ -3421,6 +3460,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Type');
   t('Tél.');
   t('Validation');
+  t('Vous déclarez avoir accepté le <a href="/reglement-formation" target="_blank">règlement concernant les formations dispensées par l\'AMAPL</a>.');
   t('Vous pouvez préciser si cette formation peut être prise en charge par les OPCA, ou autre mode de financement.');
 
   return $field_instances;
