@@ -1502,6 +1502,16 @@ body.page-aggregator .feed-item {
   color: white;
   font-weight: normal;
 }
+.entitytype-inscription_amapl-form #new-submission{
+  background-color: red ;
+  background-image: none;
+  color: white;
+  font-weight: normal;
+  display: table;
+  padding: 5px;
+  border-radius: 6px;
+}
+
 /* Conditions générales de vente ***********/
 .entitytype-inscription_amapl-form .form-item-field-cgv-und{
   position: relative;
