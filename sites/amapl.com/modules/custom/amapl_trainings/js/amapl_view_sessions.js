@@ -1,7 +1,10 @@
 (function ($) {
   Drupal.behaviors.trainingFull = {
     attach: function (context, settings) {
-      var free_checked = ($("#edit-field-training-free-value-1").is(':checked')) ? true : false;
+     var free_checked = ($("#edit-field-training-free-value-1").is(':checked')) ? true : false;
+     if($("#edit-field-training-free-value-0").is(':checked')) {
+       $("#edit-field-training-free-value-all").prop("checked", true);
+     }
       $(".form-item-field-training-free-value").each(function (index) {
         if (index == 0 || index == 1) {
           $(this).hide();
