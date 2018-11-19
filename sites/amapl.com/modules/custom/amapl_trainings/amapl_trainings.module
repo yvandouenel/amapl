@@ -414,6 +414,9 @@ function amapl_trainings_views_pre_render(&$view) {
     drupal_add_js(drupal_get_path('module', 'amapl_trainings') . '/js/amapl_view_trainings.js');
     drupal_add_js(drupal_get_path('module', 'amapl_trainings') . '/js/amapl_training_list.js');
   }
+  if ($view->name == 'trainings' && $view->current_display == 'list_sessions') {
+    drupal_add_js(drupal_get_path('module', 'amapl_trainings') . '/js/amapl_view_sessions.js');
+  }
 
   // Training session dates sorting (Sorting setting in Views produce wrong result).
   elseif ($view->name == 'trainings' && $view->current_display == 'training_sessions') {
@@ -491,6 +494,8 @@ function amapl_trainings_form_alter(&$form, &$form_state, $form_id) {
  * Implements hook_form_FORM_ID_alter().
  */
 function amapl_trainings_form_training_session_node_form_alter(&$form, &$form_state, $form_id) {
+  //dpm($form);
+
   $form['intro'] = array(
     '#type' => 'item',
     '#markup' => 'Vous n\'avez pas à saisir le titre de la session.<br/>' .
@@ -564,9 +569,14 @@ function amapl_trainings_training_session_submit_handler($form, &$form_state) {
 
   // Retrieve first session date
   $first_date = format_date(strtotime($form_state['values']['field_session_dates']['und'][0]['value']), 'custom', 'd M Y');
-
+  $first_date_technical_format = format_date(strtotime($form_state['values']['field_session_dates']['und'][0]['value']), 'custom', 'Y-m-d h:i:00');
   // Build session title based on selected training and first session date.
-  $form_state['values']['title'] = $training_title . ' (session commençant le ' . $first_date . ')';
+  $form_state['values']['title'] = $training_title . ' (débutant le ' . $first_date . ')';
+
+  // Ajout automatique de la première date dans le champ "première date"
+  //$form_state['field_session_begin']['und'][0] = "05/11/1971 - 11:00";
+  $form_state['values']['field_session_begin']['und'][0]['value']['date'] = $first_date_technical_format;
+
 }
 /**
  * Implements hook_node_postinsert().

@@ -214,6 +214,34 @@ function amapl_trainings_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_technical_field|node|training_session|form';
+  $field_group->group_name = 'group_technical_field';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'training_session';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Champs techniques',
+    'weight' => '16',
+    'children' => array(
+      0 => 'field_session_begin',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'label' => 'Champs techniques',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
+      ),
+      'formatter' => 'closed',
+    ),
+  );
+  $field_groups['group_technical_field|node|training_session|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_training_data|node|training|full';
   $field_group->group_name = 'group_training_data';
   $field_group->entity_type = 'node';
@@ -517,6 +545,7 @@ function amapl_trainings_field_group_info() {
   // Included for use with string extractors like potx.
   t('Caractéristiques');
   t('Champs AMAPL');
+  t('Champs techniques');
   t('Colonne droite');
   t('Colonne gauche');
   t('Détails de la session');

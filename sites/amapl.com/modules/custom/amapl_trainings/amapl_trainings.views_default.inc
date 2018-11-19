@@ -263,11 +263,10 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Critère de tri: Contenu : Date de publication */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Champ: Contenu : Titre */
+  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['fields']['title_1']['table'] = 'node';
+  $handler->display->display_options['fields']['title_1']['field'] = 'title';
   /* Critère de filtrage: Contenu : Publié */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -629,6 +628,107 @@ function amapl_trainings_views_default_views() {
 
   /* Display: Catalogue des formations */
   $handler = $view->new_display('page', 'Catalogue des formations', 'page_trainings');
+  $handler->display->display_options['defaults']['group_by'] = FALSE;
+  $handler->display->display_options['group_by'] = TRUE;
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
+  $handler->display->display_options['query']['options']['pure_distinct'] = TRUE;
+  $handler->display->display_options['defaults']['exposed_form'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Rechercher';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'input_required' => 0,
+      'text_input_required' => array(
+        'text_input_required' => array(
+          'value' => 'Sélectionnez n\'importe quel filtre et cliquez sur Appliquer pour voir les résultats',
+          'format' => 'full_html',
+        ),
+      ),
+      'allow_secondary' => 0,
+      'secondary_label' => 'Options avancées',
+      'secondary_collapse_override' => '0',
+    ),
+    'field_training_domain_tid' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'autosubmit' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            1 => 'vocabulary',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'field_training_search_value' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'autosubmit' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'field_session_short_place_tid' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'autosubmit' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            1 => 'vocabulary',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'field_training_free_value' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'autosubmit' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+  );
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -653,8 +753,6 @@ function amapl_trainings_views_default_views() {
       'empty_column' => 0,
     ),
     'field_session_dates' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -674,6 +772,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['group_type'] = 'min';
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_rel'] = '';
@@ -689,6 +788,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['fields']['field_session_dates']['table'] = 'field_data_field_session_dates';
   $handler->display->display_options['fields']['field_session_dates']['field'] = 'field_session_dates';
   $handler->display->display_options['fields']['field_session_dates']['relationship'] = 'field_training_session_linked_target_id';
+  $handler->display->display_options['fields']['field_session_dates']['group_type'] = 'min';
   $handler->display->display_options['fields']['field_session_dates']['label'] = 'Date';
   $handler->display->display_options['fields']['field_session_dates']['settings'] = array(
     'format_type' => 'tres_court_francais',
@@ -698,7 +798,10 @@ function amapl_trainings_views_default_views() {
     'multiple_to' => '',
     'show_remaining_days' => 0,
   );
-  $handler->display->display_options['fields']['field_session_dates']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_session_dates']['group_columns'] = array(
+    'entity_id' => 'entity_id',
+  );
+  $handler->display->display_options['fields']['field_session_dates']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_session_dates']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Critère de tri: Contenu : Dates (field_session_dates) */
@@ -810,6 +913,269 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['filters']['field_session_dates_value']['relationship'] = 'field_training_session_linked_target_id';
   $handler->display->display_options['filters']['field_session_dates_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_session_dates_value']['default_date'] = 'now';
+  $handler->display->display_options['path'] = 'formations-old';
+
+  /* Display: Sessions */
+  $handler = $view->new_display('page', 'Sessions', 'list_sessions');
+  $handler->display->display_options['defaults']['exposed_form'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Rechercher';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'input_required' => 0,
+      'text_input_required' => array(
+        'text_input_required' => array(
+          'value' => 'Sélectionnez n\'importe quel filtre et cliquez sur Appliquer pour voir les résultats',
+          'format' => 'full_html',
+        ),
+      ),
+      'allow_secondary' => 0,
+      'secondary_label' => 'Options avancées',
+      'secondary_collapse_override' => '0',
+    ),
+    'field_training_domain_tid' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'autosubmit' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            1 => 'vocabulary',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'field_session_short_place_tid' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'autosubmit' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            1 => 'vocabulary',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'field_training_free_value' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'autosubmit' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'field_training_search_value' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'autosubmit' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+  );
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relation: Entity Reference : Referenced Entity */
+  $handler->display->display_options['relationships']['field_related_training_target_id']['id'] = 'field_related_training_target_id';
+  $handler->display->display_options['relationships']['field_related_training_target_id']['table'] = 'field_data_field_related_training';
+  $handler->display->display_options['relationships']['field_related_training_target_id']['field'] = 'field_related_training_target_id';
+  $handler->display->display_options['relationships']['field_related_training_target_id']['required'] = TRUE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Champ: Contenu : Titre */
+  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['fields']['title_1']['table'] = 'node';
+  $handler->display->display_options['fields']['title_1']['field'] = 'title';
+  $handler->display->display_options['fields']['title_1']['node_in_colorbox_width'] = '600';
+  $handler->display->display_options['fields']['title_1']['node_in_colorbox_height'] = '600';
+  $handler->display->display_options['fields']['title_1']['node_in_colorbox_rel'] = '';
+  /* Champ: Contenu : Dates */
+  $handler->display->display_options['fields']['field_session_dates']['id'] = 'field_session_dates';
+  $handler->display->display_options['fields']['field_session_dates']['table'] = 'field_data_field_session_dates';
+  $handler->display->display_options['fields']['field_session_dates']['field'] = 'field_session_dates';
+  $handler->display->display_options['fields']['field_session_dates']['label'] = 'Date(s)';
+  $handler->display->display_options['fields']['field_session_dates']['settings'] = array(
+    'format_type' => 'short',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_session_dates']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_session_dates']['separator'] = ' - ';
+  /* Champ: Contenu : Lieu court */
+  $handler->display->display_options['fields']['field_session_short_place']['id'] = 'field_session_short_place';
+  $handler->display->display_options['fields']['field_session_short_place']['table'] = 'field_data_field_session_short_place';
+  $handler->display->display_options['fields']['field_session_short_place']['field'] = 'field_session_short_place';
+  $handler->display->display_options['fields']['field_session_short_place']['label'] = 'Lieu';
+  $handler->display->display_options['fields']['field_session_short_place']['type'] = 'taxonomy_term_reference_plain';
+  /* Champ: Contenu : Thématique */
+  $handler->display->display_options['fields']['field_training_domain']['id'] = 'field_training_domain';
+  $handler->display->display_options['fields']['field_training_domain']['table'] = 'field_data_field_training_domain';
+  $handler->display->display_options['fields']['field_training_domain']['field'] = 'field_training_domain';
+  $handler->display->display_options['fields']['field_training_domain']['relationship'] = 'field_related_training_target_id';
+  $handler->display->display_options['fields']['field_training_domain']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_training_domain']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Critère de tri: Contenu : Début de sessions (field_session_begin) */
+  $handler->display->display_options['sorts']['field_session_begin_value']['id'] = 'field_session_begin_value';
+  $handler->display->display_options['sorts']['field_session_begin_value']['table'] = 'field_data_field_session_begin';
+  $handler->display->display_options['sorts']['field_session_begin_value']['field'] = 'field_session_begin_value';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'training_session' => 'training_session',
+  );
+  /* Critère de filtrage: Contenu : Début de sessions (field_session_begin) */
+  $handler->display->display_options['filters']['field_session_begin_value']['id'] = 'field_session_begin_value';
+  $handler->display->display_options['filters']['field_session_begin_value']['table'] = 'field_data_field_session_begin';
+  $handler->display->display_options['filters']['field_session_begin_value']['field'] = 'field_session_begin_value';
+  $handler->display->display_options['filters']['field_session_begin_value']['operator'] = '>=';
+  $handler->display->display_options['filters']['field_session_begin_value']['default_date'] = 'now-1';
+  /* Critère de filtrage: Contenu : Thématique (field_training_domain) */
+  $handler->display->display_options['filters']['field_training_domain_tid']['id'] = 'field_training_domain_tid';
+  $handler->display->display_options['filters']['field_training_domain_tid']['table'] = 'field_data_field_training_domain';
+  $handler->display->display_options['filters']['field_training_domain_tid']['field'] = 'field_training_domain_tid';
+  $handler->display->display_options['filters']['field_training_domain_tid']['relationship'] = 'field_related_training_target_id';
+  $handler->display->display_options['filters']['field_training_domain_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_training_domain_tid']['expose']['operator_id'] = 'field_training_domain_tid_op';
+  $handler->display->display_options['filters']['field_training_domain_tid']['expose']['label'] = 'Thématique ';
+  $handler->display->display_options['filters']['field_training_domain_tid']['expose']['operator'] = 'field_training_domain_tid_op';
+  $handler->display->display_options['filters']['field_training_domain_tid']['expose']['identifier'] = 'field_training_domain_tid';
+  $handler->display->display_options['filters']['field_training_domain_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    5 => 0,
+    4 => 0,
+    6 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_training_domain_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_training_domain_tid']['vocabulary'] = 'training_domains';
+  /* Critère de filtrage: Contenu : Lieu court (field_session_short_place) */
+  $handler->display->display_options['filters']['field_session_short_place_tid']['id'] = 'field_session_short_place_tid';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['table'] = 'field_data_field_session_short_place';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['field'] = 'field_session_short_place_tid';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['relationship'] = 'field_related_training_target_id';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_session_short_place_tid']['expose']['operator_id'] = 'field_session_short_place_tid_op';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['expose']['label'] = 'Lieu';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['expose']['operator'] = 'field_session_short_place_tid_op';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['expose']['identifier'] = 'field_session_short_place_tid';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    5 => 0,
+    4 => 0,
+    6 => 0,
+    3 => 0,
+  );
+  $handler->display->display_options['filters']['field_session_short_place_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_session_short_place_tid']['vocabulary'] = 'training_place';
+  /* Critère de filtrage: Contenu : Gratuit ? (field_training_free) */
+  $handler->display->display_options['filters']['field_training_free_value']['id'] = 'field_training_free_value';
+  $handler->display->display_options['filters']['field_training_free_value']['table'] = 'field_data_field_training_free';
+  $handler->display->display_options['filters']['field_training_free_value']['field'] = 'field_training_free_value';
+  $handler->display->display_options['filters']['field_training_free_value']['relationship'] = 'field_related_training_target_id';
+  $handler->display->display_options['filters']['field_training_free_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_training_free_value']['expose']['operator_id'] = 'field_training_free_value_op';
+  $handler->display->display_options['filters']['field_training_free_value']['expose']['label'] = 'Gratuit ?';
+  $handler->display->display_options['filters']['field_training_free_value']['expose']['operator'] = 'field_training_free_value_op';
+  $handler->display->display_options['filters']['field_training_free_value']['expose']['identifier'] = 'field_training_free_value';
+  $handler->display->display_options['filters']['field_training_free_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    5 => 0,
+    4 => 0,
+    6 => 0,
+    3 => 0,
+  );
+  /* Critère de filtrage: Contenu : Champ de recherche (field_training_search) */
+  $handler->display->display_options['filters']['field_training_search_value']['id'] = 'field_training_search_value';
+  $handler->display->display_options['filters']['field_training_search_value']['table'] = 'field_data_field_training_search';
+  $handler->display->display_options['filters']['field_training_search_value']['field'] = 'field_training_search_value';
+  $handler->display->display_options['filters']['field_training_search_value']['relationship'] = 'field_related_training_target_id';
+  $handler->display->display_options['filters']['field_training_search_value']['operator'] = 'word';
+  $handler->display->display_options['filters']['field_training_search_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_training_search_value']['expose']['operator_id'] = 'field_training_search_value_op';
+  $handler->display->display_options['filters']['field_training_search_value']['expose']['label'] = 'Mots clés';
+  $handler->display->display_options['filters']['field_training_search_value']['expose']['operator'] = 'field_training_search_value_op';
+  $handler->display->display_options['filters']['field_training_search_value']['expose']['identifier'] = 'field_training_search_value';
+  $handler->display->display_options['filters']['field_training_search_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    5 => 0,
+    4 => 0,
+    6 => 0,
+    3 => 0,
+  );
   $handler->display->display_options['path'] = 'formations';
   $translatables['trainings'] = array(
     t('Master'),
@@ -826,6 +1192,7 @@ function amapl_trainings_views_default_views() {
     t('‹ précédent'),
     t('suivant ›'),
     t('dernier »'),
+    t('Titre'),
     t('Domaine'),
     t('Catalogue des formations'),
     t('Mots clés'),
@@ -839,11 +1206,17 @@ function amapl_trainings_views_default_views() {
     t('à [field_session_place]'),
     t('Session débutant le [field_session_dates] [field_session_place]'),
     t('Modifier'),
+    t('Rechercher'),
+    t('Sélectionnez n\'importe quel filtre et cliquez sur Appliquer pour voir les résultats'),
+    t('Options avancées'),
     t('Contenu entity referenced from field_training_session_linked'),
-    t('Titre'),
     t('Lieu'),
     t('Date'),
     t('Gratuit ?'),
+    t('Sessions'),
+    t('Date(s)'),
+    t('Thématique'),
+    t('Thématique '),
   );
   $export['trainings'] = $view;
 

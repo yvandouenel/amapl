@@ -2803,6 +2803,74 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
     ),
   );
 
+  // Exported field_instance: 'node-training_session-field_session_begin'.
+  $field_instances['node-training_session-field_session_begin'] = array(
+    'bundle' => 'training_session',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'colorbox' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+        ),
+        'type' => 'date_default',
+        'weight' => 12,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_session_begin',
+    'label' => 'Début de sessions',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'd/m/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_text',
+      'weight' => 13,
+    ),
+  );
+
   // Exported field_instance: 'node-training_session-field_session_dates'.
   $field_instances['node-training_session-field_session_dates'] = array(
     'bundle' => 'training_session',
@@ -3426,6 +3494,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Dates');
   t('Description');
   t('Dispositif de financement');
+  t('Début de sessions');
   t('Détail de l\'adresse');
   t('Email');
   t('Feuille d\'émargement');
