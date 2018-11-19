@@ -1743,6 +1743,25 @@ body.page-aggregator .feed-item {
 .group-inscription.collapsible input {
   width: 160px  ;
 }
+/* page liste des sessions de formation *******************************************************************************/
+.view-trainings table {
+  margin-top: 30px;
+}
+.view-trainings table a{
+  display: block;
+}
+.view-trainings table td{
+  padding: 15px;
+}
+.view-trainings table th{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.view-trainings .view-empty{
+  margin-top: 30px;
+  font-size: 1.6em;
+}
 /* commentaires *******************************************************************************************************/
 .comment_forbidden,
 .comment-add {
