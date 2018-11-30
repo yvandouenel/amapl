@@ -207,23 +207,29 @@ function featurecoocontext_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-news-block_1' => array(
-          'module' => 'views',
-          'delta' => 'news-block_1',
-          'region' => 'content',
-          'weight' => '0',
-        ),
         'bean-guide-comptable' => array(
           'module' => 'bean',
           'delta' => 'guide-comptable',
-          'region' => 'content',
-          'weight' => '5',
+          'region' => 'home_row_1_col_1',
+          'weight' => '-10',
         ),
         'bean-2035plus' => array(
           'module' => 'bean',
           'delta' => '2035plus',
-          'region' => 'content',
-          'weight' => '10',
+          'region' => 'home_row_1_col_2',
+          'weight' => '-10',
+        ),
+        'menu_block-5' => array(
+          'module' => 'menu_block',
+          'delta' => '5',
+          'region' => 'home_row_1_col_3',
+          'weight' => '-10',
+        ),
+        'views-news-block_1' => array(
+          'module' => 'views',
+          'delta' => 'news-block_1',
+          'region' => 'home_row_2_col_1',
+          'weight' => '-10',
         ),
       ),
     ),
