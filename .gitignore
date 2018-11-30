@@ -1,15 +1,8 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
-sites/bdpl.fr/data/*
-sites/.*
 .htaccess
-.idea/*
-.idea/workspace.xml 
-sites/all/modules/contrib/xray/
+.idea/
+sites/.sites.php .swp
 # Ignore paths that contain user-generated content.
 sites/*/files
-sites/sites.php
 sites/*/private
-/private/*
-sites/*/files
-/private/*
