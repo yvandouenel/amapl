@@ -18,6 +18,12 @@ regions[sidebar_second] = 'Secondary'
 regions[footer]         = 'Footer'
 regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
+regions[home_row_1_col_1]    = 'home_row_1_col_1'
+regions[home_row_1_col_2]    = 'home_row_1_col_2'
+regions[home_row_1_col_3]    = 'home_row_1_col_3'
+regions[home_row_2_col_1]    = 'home_row_2_col_1'
+regions[home_row_2_col_2]    = 'home_row_2_col_2'
+regions[home_row_2_col_3]    = 'home_row_2_col_3'
 
 
 ;;;;;;;;;;;;;;;;;;;;;
