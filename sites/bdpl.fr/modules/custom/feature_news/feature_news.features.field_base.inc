@@ -10,14 +10,13 @@
 function feature_news_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_flux_rss'
+  // Exported field_base: 'field_flux_rss'.
   $field_bases['field_flux_rss'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_flux_rss',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -36,21 +35,13 @@ function feature_news_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_news_article_linked'
+  // Exported field_base: 'field_news_article_linked'.
   $field_bases['field_news_article_linked'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_news_article_linked',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -79,21 +70,13 @@ function feature_news_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_news_autor'
+  // Exported field_base: 'field_news_autor'.
   $field_bases['field_news_autor'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_news_autor',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -108,21 +91,13 @@ function feature_news_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_news_cat'
+  // Exported field_base: 'field_news_cat'.
   $field_bases['field_news_cat'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_news_cat',
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -143,14 +118,13 @@ function feature_news_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_news_date_inline'
+  // Exported field_base: 'field_news_date_inline'.
   $field_bases['field_news_date_inline'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_news_date_inline',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'date',
@@ -173,14 +147,13 @@ function feature_news_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_news_display_tiers'
+  // Exported field_base: 'field_news_display_tiers'.
   $field_bases['field_news_display_tiers'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_news_display_tiers',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -199,21 +172,13 @@ function feature_news_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_news_event_linked'
+  // Exported field_base: 'field_news_event_linked'.
   $field_bases['field_news_event_linked'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_news_event_linked',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -242,14 +207,13 @@ function feature_news_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_news_home_dump'
+  // Exported field_base: 'field_news_home_dump'.
   $field_bases['field_news_home_dump'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_news_home_dump',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -268,14 +232,13 @@ function feature_news_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_news_image'
+  // Exported field_base: 'field_news_image'.
   $field_bases['field_news_image'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_news_image',
-    'foreign keys' => array(),
     'indexes' => array(
       'sid' => array(
         0 => 'sid',
@@ -288,21 +251,13 @@ function feature_news_field_default_field_bases() {
     'type' => 'atom_reference',
   );
 
-  // Exported field_base: 'field_news_linked'
+  // Exported field_base: 'field_news_linked'.
   $field_bases['field_news_linked'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_news_linked',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -333,14 +288,13 @@ function feature_news_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_news_new_window'
+  // Exported field_base: 'field_news_new_window'.
   $field_bases['field_news_new_window'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_news_new_window',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -359,14 +313,13 @@ function feature_news_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_news_publication_date'
+  // Exported field_base: 'field_news_publication_date'.
   $field_bases['field_news_publication_date'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_news_publication_date',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'date',
@@ -389,21 +342,13 @@ function feature_news_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_news_ref'
+  // Exported field_base: 'field_news_ref'.
   $field_bases['field_news_ref'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_news_ref',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -432,21 +377,13 @@ function feature_news_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_news_tag'
+  // Exported field_base: 'field_news_tag'.
   $field_bases['field_news_tag'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_news_tag',
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -467,21 +404,13 @@ function feature_news_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_news_url_target'
+  // Exported field_base: 'field_news_url_target'.
   $field_bases['field_news_url_target'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_news_url_target',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',

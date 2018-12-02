@@ -513,6 +513,246 @@ function feature_news_views_default_views() {
     1 => '1',
   );
   $handler->display->display_options['path'] = 'actualites-rss.xml';
+
+  /* Display: block actu dossiers */
+  $handler = $view->new_display('block', 'block actu dossiers', 'block_news_dossier');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'block-news-home';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Voir toutes les actualités';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'page';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Entête: Global : Zone de texte */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h2 class="title-home-news" id="title-home-news-dossier">Dossier spécial</h4>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Champ: Contenu : Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Champ: Contenu : Lien vers nouvelle fenêtre */
+  $handler->display->display_options['fields']['field_news_new_window']['id'] = 'field_news_new_window';
+  $handler->display->display_options['fields']['field_news_new_window']['table'] = 'field_data_field_news_new_window';
+  $handler->display->display_options['fields']['field_news_new_window']['field'] = 'field_news_new_window';
+  $handler->display->display_options['fields']['field_news_new_window']['label'] = '';
+  $handler->display->display_options['fields']['field_news_new_window']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_news_new_window']['element_label_colon'] = FALSE;
+  /* Champ: Contenu : URL de destination */
+  $handler->display->display_options['fields']['field_news_url_target']['id'] = 'field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['table'] = 'field_data_field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['field'] = 'field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['label'] = '';
+  $handler->display->display_options['fields']['field_news_url_target']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Critère de tri: Contenu : Date de mise en ligne (field_news_date_inline) */
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['id'] = 'field_news_date_inline_value';
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['table'] = 'field_data_field_news_date_inline';
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['field'] = 'field_news_date_inline_value';
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+  );
+  /* Critère de filtrage: Contenu : theme (field_news_cat) */
+  $handler->display->display_options['filters']['field_news_cat_tid']['id'] = 'field_news_cat_tid';
+  $handler->display->display_options['filters']['field_news_cat_tid']['table'] = 'field_data_field_news_cat';
+  $handler->display->display_options['filters']['field_news_cat_tid']['field'] = 'field_news_cat_tid';
+  $handler->display->display_options['filters']['field_news_cat_tid']['value'] = array(
+    12 => '12',
+  );
+  $handler->display->display_options['filters']['field_news_cat_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_news_cat_tid']['vocabulary'] = 'categories';
+  $handler->display->display_options['block_description'] = 'block actu dossier';
+
+  /* Display: block actu 2035PLUS */
+  $handler = $view->new_display('block', 'block actu 2035PLUS', 'block_news_2035');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'block-news-home';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Voir toutes les actualités';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'page';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Entête: Global : Zone de texte */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h2 class="title-home-news" id="title-home-news-2035">Dernières actualités 2035PLUS</h4>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Champ: Contenu : Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Champ: Contenu : URL de destination */
+  $handler->display->display_options['fields']['field_news_url_target']['id'] = 'field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['table'] = 'field_data_field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['field'] = 'field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['label'] = '';
+  $handler->display->display_options['fields']['field_news_url_target']['element_label_colon'] = FALSE;
+  /* Champ: Contenu : Lien vers nouvelle fenêtre */
+  $handler->display->display_options['fields']['field_news_new_window']['id'] = 'field_news_new_window';
+  $handler->display->display_options['fields']['field_news_new_window']['table'] = 'field_data_field_news_new_window';
+  $handler->display->display_options['fields']['field_news_new_window']['field'] = 'field_news_new_window';
+  $handler->display->display_options['fields']['field_news_new_window']['label'] = '';
+  $handler->display->display_options['fields']['field_news_new_window']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_news_new_window']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Critère de tri: Contenu : Date de mise en ligne (field_news_date_inline) */
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['id'] = 'field_news_date_inline_value';
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['table'] = 'field_data_field_news_date_inline';
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['field'] = 'field_news_date_inline_value';
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+  );
+  /* Critère de filtrage: Contenu : theme (field_news_cat) */
+  $handler->display->display_options['filters']['field_news_cat_tid']['id'] = 'field_news_cat_tid';
+  $handler->display->display_options['filters']['field_news_cat_tid']['table'] = 'field_data_field_news_cat';
+  $handler->display->display_options['filters']['field_news_cat_tid']['field'] = 'field_news_cat_tid';
+  $handler->display->display_options['filters']['field_news_cat_tid']['value'] = array(
+    13 => '13',
+  );
+  $handler->display->display_options['filters']['field_news_cat_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_news_cat_tid']['vocabulary'] = 'categories';
+  $handler->display->display_options['block_description'] = 'block actu 2035';
+
+  /* Display: block actu Fiches TVA */
+  $handler = $view->new_display('block', 'block actu Fiches TVA', 'block_news_tva');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'block-news-home';
+  $handler->display->display_options['defaults']['use_more'] = FALSE;
+  $handler->display->display_options['use_more'] = TRUE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['defaults']['use_more_text'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'Voir toutes les actualités';
+  $handler->display->display_options['defaults']['link_display'] = FALSE;
+  $handler->display->display_options['link_display'] = 'page';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '3';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Entête: Global : Zone de texte */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = '<h2 class="title-home-news" id="title-home-news-tva">Dernières actualités Fiches TVA</h4>';
+  $handler->display->display_options['header']['area']['format'] = 'full_html';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Champ: Contenu : Titre */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Champ: Contenu : URL de destination */
+  $handler->display->display_options['fields']['field_news_url_target']['id'] = 'field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['table'] = 'field_data_field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['field'] = 'field_news_url_target';
+  $handler->display->display_options['fields']['field_news_url_target']['label'] = '';
+  $handler->display->display_options['fields']['field_news_url_target']['element_label_colon'] = FALSE;
+  /* Champ: Contenu : Lien vers nouvelle fenêtre */
+  $handler->display->display_options['fields']['field_news_new_window']['id'] = 'field_news_new_window';
+  $handler->display->display_options['fields']['field_news_new_window']['table'] = 'field_data_field_news_new_window';
+  $handler->display->display_options['fields']['field_news_new_window']['field'] = 'field_news_new_window';
+  $handler->display->display_options['fields']['field_news_new_window']['label'] = '';
+  $handler->display->display_options['fields']['field_news_new_window']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_news_new_window']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Critère de tri: Contenu : Date de mise en ligne (field_news_date_inline) */
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['id'] = 'field_news_date_inline_value';
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['table'] = 'field_data_field_news_date_inline';
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['field'] = 'field_news_date_inline_value';
+  $handler->display->display_options['sorts']['field_news_date_inline_value']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Publié */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'news' => 'news',
+  );
+  /* Critère de filtrage: Contenu : theme (field_news_cat) */
+  $handler->display->display_options['filters']['field_news_cat_tid']['id'] = 'field_news_cat_tid';
+  $handler->display->display_options['filters']['field_news_cat_tid']['table'] = 'field_data_field_news_cat';
+  $handler->display->display_options['filters']['field_news_cat_tid']['field'] = 'field_news_cat_tid';
+  $handler->display->display_options['filters']['field_news_cat_tid']['value'] = array(
+    32 => '32',
+  );
+  $handler->display->display_options['filters']['field_news_cat_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_news_cat_tid']['vocabulary'] = 'categories';
+  $handler->display->display_options['block_description'] = 'block actu TVA';
   $translatables['news'] = array(
     t('Master'),
     t('News'),
@@ -541,6 +781,15 @@ function feature_news_views_default_views() {
     t('Flux'),
     t('.'),
     t(','),
+    t('block actu dossiers'),
+    t('<h2 class="title-home-news" id="title-home-news-dossier">Dossier spécial</h4>'),
+    t('block actu dossier'),
+    t('block actu 2035PLUS'),
+    t('<h2 class="title-home-news" id="title-home-news-2035">Dernières actualités 2035PLUS</h4>'),
+    t('block actu 2035'),
+    t('block actu Fiches TVA'),
+    t('<h2 class="title-home-news" id="title-home-news-tva">Dernières actualités Fiches TVA</h4>'),
+    t('block actu TVA'),
   );
   $export['news'] = $view;
 

@@ -12,11 +12,14 @@ include_once 'feature_news.features.inc';
  * "news_url_target" field
  */
 function feature_news_views_pre_render(&$view) {
-	//dpm($view->name);
-  //dpm($view->current_display);
+//	dpm($view->name);
+//  dpm($view->current_display);
        if (($view->name == 'news' && $view->current_display == 'page') || 
            ($view->name == 'news' && $view->current_display == 'block_1') ||
-           ($view->name == 'news' && $view->current_display == 'block_2')) {
+           ($view->name == 'news' && $view->current_display == 'block_2') ||
+           ($view->name == 'news' && $view->current_display == 'block_news_dossier') ||
+           ($view->name == 'news' && $view->current_display == 'block_news_2035') ||
+           ($view->name == 'news' && $view->current_display == 'block_news_tva')) {
             foreach ($view->result as &$value) {
               
 //Test if an url target is specified 
@@ -31,7 +34,7 @@ function feature_news_views_pre_render(&$view) {
                 }else {
                   $href = ' href="/'.drupal_get_path_alias("node/".$value->nid).'" ';
                   $value->field_field_news_url_target[0]['rendered']['#markup'] = '<h3 class="title-news-list"><a'.$href.'>'.$value->node_title.'</a></h3>';
-                  if (sizeof($value->field_field_news_image) > 0) {
+                  if (isset($value->field_field_news_image) && sizeof($value->field_field_news_image) > 0) {
                     $value->field_field_news_image[0]['rendered']['#markup'] = '<a '.$href.'>'.$value->field_field_news_image[0]['rendered']['#markup'].'</a>';
                   }
                 }
