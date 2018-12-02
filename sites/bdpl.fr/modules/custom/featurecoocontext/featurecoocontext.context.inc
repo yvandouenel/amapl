@@ -225,10 +225,22 @@ function featurecoocontext_context_default_contexts() {
           'region' => 'home_row_1_col_3',
           'weight' => '-10',
         ),
-        'views-news-block_1' => array(
+        'views-news-block_news_dossier' => array(
           'module' => 'views',
-          'delta' => 'news-block_1',
+          'delta' => 'news-block_news_dossier',
           'region' => 'home_row_2_col_1',
+          'weight' => '-10',
+        ),
+        'views-news-block_news_2035' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news_2035',
+          'region' => 'home_row_2_col_2',
+          'weight' => '-10',
+        ),
+        'views-news-block_news_tva' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news_tva',
+          'region' => 'home_row_2_col_3',
           'weight' => '-10',
         ),
       ),
