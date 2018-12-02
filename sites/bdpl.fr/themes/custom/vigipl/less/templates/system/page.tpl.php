@@ -175,24 +175,48 @@
   <div class="container">
     <div class="row">
       <?php if (!empty($page['home_row_1_col_1'])): ?>
-          <div class="col-md-4"><?php print render($page['home_row_1_col_1']); ?></div>
+          <div class="col-md-4">
+              <div class="home-vigipl-same-height home-row-1-col-1">
+                <?php print render($page['home_row_1_col_1']); ?>
+              </div>
+          </div>
       <?php endif; ?>
       <?php if (!empty($page['home_row_1_col_2'])): ?>
-          <div class="col-md-4"><?php print render($page['home_row_1_col_2']); ?></div>
+          <div class="col-md-4">
+              <div class="home-vigipl-same-height home-row-1-col-2">
+                <?php print render($page['home_row_1_col_2']); ?>
+              </div>
+          </div>
       <?php endif; ?>
       <?php if (!empty($page['home_row_1_col_3'])): ?>
-          <div class="col-md-4"><?php print render($page['home_row_1_col_3']); ?></div>
+          <div class="col-md-4">
+              <div class="home-vigipl-same-height home-row-1-col-3">
+                <?php print render($page['home_row_1_col_3']); ?>
+              </div>
+          </div>
       <?php endif; ?>
     </div>
       <div class="row">
         <?php if (!empty($page['home_row_2_col_1'])): ?>
-            <div class="col-md-4"><?php print render($page['home_row_2_col_1']); ?></div>
+            <div class="col-md-4">
+                <div class="home-vigipl-same-height home-row-2-col-1">
+                    <?php print render($page['home_row_2_col_1']); ?>
+                </div>
+            </div>
         <?php endif; ?>
         <?php if (!empty($page['home_row_2_col_2'])): ?>
-            <div class="col-md-4"><?php print render($page['home_row_2_col_2']); ?></div>
+            <div class="col-md-4">
+                <div class="home-vigipl-same-height home-row-2-col-2">
+                    <?php print render($page['home_row_2_col_2']); ?>
+                </div>
+            </div>
         <?php endif; ?>
         <?php if (!empty($page['home_row_2_col_3'])): ?>
-            <div class="col-md-4"><?php print render($page['home_row_2_col_3']); ?></div>
+            <div class="col-md-4">
+                <div class="home-vigipl-same-height home-row-2-col-3">
+                    <?php print render($page['home_row_2_col_3']); ?>
+                </div>
+            </div>
         <?php endif; ?>
       </div>
   </div>
