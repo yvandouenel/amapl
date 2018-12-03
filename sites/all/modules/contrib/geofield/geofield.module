@@ -158,24 +158,38 @@ function geofield_field_validate($entity_type, $entity, $field, $instance, $lang
   $backend = ctools_get_plugins('geofield', 'geofield_backend', $field['settings']['backend']);
 
   foreach ($items as $delta => $item) {
-    // Geometry errors.
-    if (!geofield_geom_is_empty($item)) {
-      $error = geofield_validate_geom($item);
-      if ($error) {
-        $errors[$field['field_name']][$langcode][$delta][] = array(
-          'error' => 'data_faulty',
-          'message' => t('%name: Specified location data is invalid.', array('%name' => $instance['label'])),
-        );
-      }
+    $geom_empty = geofield_geom_is_empty($item);
 
-      if (!empty($backend['validate'])) {
-        $validate_callback = $backend['validate'];
-        $error = $validate_callback($item);
+    // Required field empty.
+    if ($instance['required'] && $geom_empty) {
+      $errors[$field['field_name']][$langcode][$delta][] = array(
+        'error' => 'data_missing', 
+        'message' => t('%name is required and must not be empty.', array('%name' => $instance['label'])),
+      );
+    }
+    else {
+      // Geometry errors.
+      if ($geom_empty) {
+        return FALSE;
+      }
+      else {
+        $error = geofield_validate_geom($item);
         if ($error) {
           $errors[$field['field_name']][$langcode][$delta][] = array(
-            'error' => 'data_faulty',
+            'error' => 'data_faulty', 
             'message' => t('%name: Specified location data is invalid.', array('%name' => $instance['label'])),
           );
+        }
+
+        if (!empty($backend['validate'])) {
+          $validate_callback = $backend['validate'];
+          $error = $validate_callback($item);
+          if ($error) {
+            $errors[$field['field_name']][$langcode][$delta][] = array(
+              'error' => 'data_faulty',
+              'message' => t('%name: Specified location data is invalid.', array('%name' => $instance['label'])),
+            );
+          }
         }
       }
     }
@@ -302,8 +316,13 @@ function geofield_field_load($entity_type, $entities, $field, $instances, $langc
       foreach ($items[$id] as $delta => $item) {
         if (!empty($item['geom'])) {
           $raw_geom = unpack('H*', $item['geom']);
-          $geom = $reader->readHEX($raw_geom[1]);
-          $items[$id][$delta]['geom'] = $writer->write($geom);
+          try {
+            $geom = $reader->readHEX($raw_geom[1]);
+            $items[$id][$delta]['geom'] = $writer->write($geom);
+          }
+          catch (Exception $e) {
+            watchdog(WATCHDOG_ERROR, 'Cannot render poorly formatted WKB value %message', array('%message' => $e->getMessage()));
+          }
         }
       }
     }

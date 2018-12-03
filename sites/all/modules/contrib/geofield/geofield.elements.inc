@@ -269,7 +269,8 @@ function geofield_proximity_element_process($element, &$form_state, $form) {
     '#title' => t('Distance'),
     '#default_value' => !empty($element['#default_value']['distance']) ? $element['#default_value']['distance'] : '',
     '#title_display' => 'invisible',
-    '#element_validate' => array('element_validate_integer_positive'),
+    // Allow decimal numbers as distances
+    '#element_validate' => array('element_validate_number'),
   );
 
   // If #geofield_range is TRUE, create second option for range.
@@ -279,7 +280,7 @@ function geofield_proximity_element_process($element, &$form_state, $form) {
       '#title' => t('Distance End'),
       '#default_value' => !empty($element['#default_value']['distance2']) ? $element['#default_value']['distance2'] : '',
       '#title_display' => 'invisible',
-      '#element_validate' => array('element_validate_integer_positive'),
+      '#element_validate' => array('element_validate_number'),
     );
   }
 
@@ -307,7 +308,7 @@ function geofield_proximity_element_process($element, &$form_state, $form) {
   }
 
   if (isset($element['#element_validate'])) {
-    array_push($element['#element_validate'], 'goefield_proximity_search_validate');
+    array_push($element['#element_validate'], 'geofield_proximity_search_validate');
   }
   else {
     $element['#element_validate'] = array('geofield_proximity_search_validate');
