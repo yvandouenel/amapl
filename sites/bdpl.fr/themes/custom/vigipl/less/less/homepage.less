@@ -1,14 +1,14 @@
-body.front{
-  h1,h2,h3,h4{
+body.front {
+  h1, h2, h3, h4 {
     font-size: 2em;
   }
-  h2.title-home-news{
+  h2.title-home-news {
     font-size: 1.4em;
   }
-  h3{
+  h3 {
     font-size: 1.3em;
   }
-  #block-views-news-block-1, #block-bean-guide-comptable, #block-views-liste-articles-block-3{
+  #block-views-news-block-1, #block-bean-guide-comptable, #block-views-liste-articles-block-3 {
     /* background: white url(../images/illustrations/actu.png) no-repeat 0 0; */
     background-color: white;
     padding: 0 0 0 0;
@@ -25,18 +25,18 @@ body.front{
       .glyphicon();
     }
   }
-  #block-bean-guide-comptable, #block-bean-2035plus{
-    .clearfix:before{
+  #block-bean-guide-comptable, #block-bean-2035plus {
+    .clearfix:before {
       display: none;
     }
     > h2:before {
       content: "\e83f";
       .glyphicon();
     }
-    h3{
+    h3 {
       float: left;
       font-size: 1.2em;
-      &:before{
+      &:before {
         display: none;
       }
       a {
@@ -59,9 +59,13 @@ body.front{
     h2.block-title {
       margin-top: 20px;
       margin-bottom: 30px;
+      &:before {
+        .glyphicon();
+        content: "\e804";
+      }
     }
     ul.menu {
-      li{
+      li {
         display: inline !important;
         &:before, &:before {
           display: none;
@@ -70,18 +74,21 @@ body.front{
           display: inline !important;
           padding: 0;
           margin: 0;
-          font-family: 'Source Sans Pro',Arial,sans-serif;
+          font-family: 'Source Sans Pro', Arial, sans-serif;
           font-size: 1.2em;
           line-height: 1em;
           &:after {
             content: " - ";
             color: black;
           }
-          &:last-of-type {
+        }
+        &:last-of-type {
+          a {
             &:after {
               content: "";
             }
           }
+
         }
       }
     }
@@ -110,7 +117,7 @@ body.front{
   .home-row-2-col-3 {
     border-top: 0 !important;
   }
-  .home-vigipl-same-height{
+  .home-vigipl-same-height {
     padding: 20px;
     border: 1px solid dimgrey;
   }
