@@ -46,7 +46,7 @@ function featurecoocontext_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Sous Menu TVA',
+    'title' => 'Fiches TVA',
     'visibility' => 0,
   );
 
