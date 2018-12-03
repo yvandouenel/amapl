@@ -536,7 +536,7 @@ function feature_news_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h2 class="title-home-news" id="title-home-news-dossier">Dossier spécial</h4>';
+  $handler->display->display_options['header']['area']['content'] = '<h2 class="title-home-news" id="title-home-news-dossier">Dossiers spéciaux</h4>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Champ: Contenu : Titre */
@@ -782,7 +782,7 @@ function feature_news_views_default_views() {
     t('.'),
     t(','),
     t('block actu dossiers'),
-    t('<h2 class="title-home-news" id="title-home-news-dossier">Dossier spécial</h4>'),
+    t('<h2 class="title-home-news" id="title-home-news-dossier">Dossiers spéciaux</h4>'),
     t('block actu dossier'),
     t('block actu 2035PLUS'),
     t('<h2 class="title-home-news" id="title-home-news-2035">Dernières actualités 2035PLUS</h4>'),
