@@ -35,15 +35,22 @@ body.front{
     }
     h3{
       float: left;
+      font-size: 1.2em;
       &:before{
         display: none;
       }
-      a{
+      a {
         display: inline;
         margin-top: 20px;
         margin-bottom: 10px;
         &:after {
-          content: ", ";
+          content: " - ";
+          color: black;
+        }
+        &:last-of-type {
+          &:after {
+            content: "";
+          }
         }
       }
     }
@@ -64,10 +71,16 @@ body.front{
           padding: 0;
           margin: 0;
           font-family: 'Source Sans Pro',Arial,sans-serif;
-          font-size: 1.3em;
+          font-size: 1.2em;
           line-height: 1em;
           &:after {
-            content: ", ";
+            content: " - ";
+            color: black;
+          }
+          &:last-of-type {
+            &:after {
+              content: "";
+            }
           }
         }
       }
