@@ -1877,4 +1877,4 @@ a.link-arrow:hover:before{text-decoration:none;background-color:#24cdb8}
 body.page-s-entourer-aga-trouver-son-association #block-views-aga-adherentes-block-1 .views-exposed-widgets:after,body.page-s-entourer-aga-trouver-son-association #block-views-aga-adherentes-block-1 .views-exposed-widgets:before{clear:none}
 body.page-s-entourer-aga-trouver-son-association #block-system-main{float:right;width:39.58%}
 }
-.page-node-24 h2.page-header,.page-node-33 h2.page-header,.page-node-78 h2.page-header{display:none}
+.page-node-24 h2.page-header,.page-node-33 h2.page-header,.page-node-78 h2.page-header,body.not-logged-in ul.tabs--primary li:nth-child(2){display:none}
