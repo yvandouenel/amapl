@@ -147,7 +147,8 @@ h2#page-title {
 }
 
 a:hover, body h3 a:hover, #block-views-news-block-1 h3 a:hover,
-#block-views-events-block-evenements-home h3 a:hover {
+#block-views-events-block-evenements-home h3 a:hover,
+#block-views-trainings-block-training-home h3 a:hover {
   text-decoration: underline;
 }
 
@@ -772,7 +773,8 @@ body.node-type-aga-membre .field-name-field-aga-mail {
   margin: 20px 0 20px 0;
 }
 
-#block-views-events-block-evenements-home .views-row {
+#block-views-events-block-evenements-home .views-row,
+#block-views-trainings-block-training-home .views-row {
   background: url("../images/icons/icon_calendar.png") no-repeat scroll 0 2px rgba(0, 0, 0, 0);
   padding-left: 20px;
   margin-top: 15px;
@@ -780,12 +782,14 @@ body.node-type-aga-membre .field-name-field-aga-mail {
 
 #block-views-news-block-1 h2.block-title,
 #block-views-events-block-evenements-home h2.block-title,
+#block-views-trainings-block-training-home h2.block-title,
 #block-views-le-saviez-vous-ss-block h2.block-title {
   padding: 0 0 13px 0;
 }
 
 #block-views-news-block-1 h3 a,
 #block-views-events-block-evenements-home h3 a,
+#block-views-trainings-block-training-home h3 a,
 #views_slideshow_cycle_main_le_saviez_vous_ss-block a {
   text-decoration: none;
   color: #f45a40;
@@ -799,6 +803,7 @@ body.node-type-aga-membre .field-name-field-aga-mail {
 }
 
 #block-views-events-block-evenements-home h2.block-title,
+#block-views-trainings-block-training-home h2.block-title,
 #block-views-le-saviez-vous-ss-block h2.block-title,
 body.front h2.block-title {
   text-transform: uppercase;
@@ -841,6 +846,7 @@ body.front .block-events-block-evenements-home h2.block-title a {
 
 #block-views-news-block-1 h3 a,
 #block-views-events-block-evenements-home h3 a,
+#block-views-trainings-block-training-home h3 a,
 #views_slideshow_cycle_main_le_saviez_vous_ss-block a {
   text-decoration: none;
   color: #f45a40;
@@ -863,7 +869,8 @@ body.front .view-id-events p {
 }
 
 #block-views-news-block-1 h3 a,
-#block-views-events-block-evenements-home h3 a {
+#block-views-events-block-evenements-home h3 a,
+#block-views-trainings-block-training-home h3 a {
   font-size: 1.2em;
   font-weight: bold;
   color: #013f4c;

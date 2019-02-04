@@ -159,10 +159,12 @@ h3#zoom-sur{
 #block-views-news-block-1 .views-field-body p{
   margin: 0;
 }
-#block-views-events-block-evenements-home .views-field-field-date{
+#block-views-events-block-evenements-home .views-field-field-date,
+#block-views-trainings-block-training-home .views-field-field-date {
   margin-top: 12px;
 }
-#block-views-events-block-evenements-home h3 a{
+#block-views-events-block-evenements-home h3 a,
+#block-views-trainings-block-training-home h3 a{
   margin: 0;
 }
 /* Missions et services *******************************************************/
@@ -175,16 +177,26 @@ h3#zoom-sur{
   margin: 20px 0 0 1.0416667%;
 }
 /* Agenda - evenement page d'accueil ******************************************/
-#block-views-events-block-evenements-home{
+#block-views-events-block-evenements-home,
+#block-views-trainings-block-training-home {
   float:left;
   width : 47.916666666666666666666666666667%;
   background: url(../images/icons/agenda-yellow.png) no-repeat 0 0;
   padding: 60px 0 0 0;
   margin: 20px 0 0 1.0416667%;
 }
-#block-views-events-block-evenements-home .views-row{
+#block-views-events-block-evenements-home .views-row,
+#block-views-trainings-block-training-home .views-row{
   background: url(../images/icons/icon_calendar.png) no-repeat 0 5px;
   padding-left: 20px;
+}
+#block-views-trainings-block-training-home h2.node-title a{
+  text-decoration: none;
+  font-size: 1.4em;
+  font-weight: thin;
+}
+#block-views-trainings-block-training-home .node-readmore{
+  display: none;
 }
 /* Mise en page sur deux colonnes**********************************************/
 .paragraphs-items-field-2col-first{
