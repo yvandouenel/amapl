@@ -77,6 +77,7 @@ function amapl_trainings_user_default_permissions() {
   $permissions['create training content'] = array(
     'name' => 'create training content',
     'roles' => array(
+      'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -85,7 +86,9 @@ function amapl_trainings_user_default_permissions() {
   // Exported permission: 'create training_session content'.
   $permissions['create training_session content'] = array(
     'name' => 'create training_session content',
-    'roles' => array(),
+    'roles' => array(
+      'contributeur' => 'contributeur',
+    ),
     'module' => 'node',
   );
 
@@ -127,14 +130,18 @@ function amapl_trainings_user_default_permissions() {
   // Exported permission: 'delete own training content'.
   $permissions['delete own training content'] = array(
     'name' => 'delete own training content',
-    'roles' => array(),
+    'roles' => array(
+      'contributeur' => 'contributeur',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'delete own training_session content'.
   $permissions['delete own training_session content'] = array(
     'name' => 'delete own training_session content',
-    'roles' => array(),
+    'roles' => array(
+      'contributeur' => 'contributeur',
+    ),
     'module' => 'node',
   );
 
@@ -175,14 +182,18 @@ function amapl_trainings_user_default_permissions() {
   // Exported permission: 'edit own training content'.
   $permissions['edit own training content'] = array(
     'name' => 'edit own training content',
-    'roles' => array(),
+    'roles' => array(
+      'contributeur' => 'contributeur',
+    ),
     'module' => 'node',
   );
 
   // Exported permission: 'edit own training_session content'.
   $permissions['edit own training_session content'] = array(
     'name' => 'edit own training_session content',
-    'roles' => array(),
+    'roles' => array(
+      'contributeur' => 'contributeur',
+    ),
     'module' => 'node',
   );
 

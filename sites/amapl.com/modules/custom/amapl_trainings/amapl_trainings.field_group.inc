@@ -38,7 +38,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $field_groups['group_amapl_fields|node|training|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -70,7 +70,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'collapsed',
     ),
   );
-  $field_groups['group_inscription|node|training_session|colorbox'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -102,7 +102,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'collapsed',
     ),
   );
-  $field_groups['group_inscription|node|training_session|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -131,7 +131,7 @@ function amapl_trainings_field_group_info() {
       ),
     ),
   );
-  $field_groups['group_session_details|node|training_session|colorbox'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -171,7 +171,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_sub_wrapper_teaser|node|training|list'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -209,7 +209,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_sub_wrapper_teaser|node|training|teaser'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -237,7 +237,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $field_groups['group_technical_field|node|training_session|form'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -272,7 +272,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_training_data|node|training|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -305,7 +305,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_training_header_center|node|training|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -335,7 +335,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_training_header_left|node|training|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -365,7 +365,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_training_header_right|node|training|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -399,7 +399,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_training_header|node|training|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -431,7 +431,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_training_left_col|node|training|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -469,7 +469,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_training_right_col|node|training|full'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -504,7 +504,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_wrapper_teaser|node|training|list'] = $field_group;
+  $field_groups[''] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -539,7 +539,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups['group_wrapper_teaser|node|training|teaser'] = $field_group;
+  $field_groups[''] = $field_group;
 
   // Translatables
   // Included for use with string extractors like potx.
