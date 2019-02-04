@@ -247,7 +247,6 @@ function amapl_trainings_entity_view_alter(&$build, $type) {
       $sessions_number = trim(strip_tags($trainings_view->render('sessions_count')));
       if ($sessions_number > 0) {
 
-
         // Initial version of sessions list (discarded, then re-used).
         $trainings_view = views_get_view('trainings');
 
@@ -263,11 +262,6 @@ function amapl_trainings_entity_view_alter(&$build, $type) {
         // which is the field_scheduled_sessions saved default value (see amapl_trainings_node_presave hook).
         if (strstr($previous_sessions_markup, 'Nous contacter')) {
           $previous_sessions_markup = '';
-        }
-
-        if ($sessions_number > 3) {
-          $sessions_list_link = l('Voir toutes les sessions', '/formations/toutes-les-sessions/' . $build['#node']->nid);
-          $sessions_list .= '<div class="session-list-link">' . $sessions_list_link . '</div>';
         }
       }
       global $user;
@@ -458,9 +452,7 @@ function amapl_trainings_views_pre_render(&$view) {
       $current_date = date('Ymd');
 
       if ($last_session_date >= $current_date) { // Rule 1
-        if (($view->current_display == 'next_sessions' && sizeof($coming_sessions) < 3) || $view->current_display == 'all_sessions') { // Rule 2
           $coming_sessions[$first_session_date] = $item;
-        }
       }
     }
     ksort($coming_sessions); // Rule 3
