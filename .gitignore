@@ -3,6 +3,7 @@ sites/*/settings*.php
 .htaccess
 .idea/
 sites/.sites.php .swp
+sites/sites.php
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
