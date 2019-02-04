@@ -495,6 +495,7 @@ function amapl_trainings_form_alter(&$form, &$form_state, $form_id) {
  */
 function amapl_trainings_form_training_session_node_form_alter(&$form, &$form_state, $form_id) {
   //dpm($form);
+  drupal_add_js(drupal_get_path('module','amapl_trainings') . '/js/amapl_trainings_remove_first_date.js');
 
   $form['intro'] = array(
     '#type' => 'item',
@@ -575,7 +576,12 @@ function amapl_trainings_training_session_submit_handler($form, &$form_state) {
 
   // Ajout automatique de la première date dans le champ "première date"
   //$form_state['field_session_begin']['und'][0] = "05/11/1971 - 11:00";
+  /* 
+     Pour une raison qui m'échappe, il faut que le champ session_begin soit vide afin que le remplacement 
+      depuis la première date s'effectue (cf amapl_trainigs_module ligne 498 amapl_trainings_remove_date.js)
+  */
   $form_state['values']['field_session_begin']['und'][0]['value']['date'] = $first_date_technical_format;
+  
 
 }
 /**
