@@ -684,9 +684,9 @@ function amapl_trainings_ds_layout_settings_info() {
         1 => 'field_session_place',
         2 => 'field_session_dates',
         3 => 'field_session_registration',
-        4 => 'group_inscription',
-        5 => 'field_related_training',
-        6 => 'field_session_trainer',
+        4 => 'field_related_training',
+        5 => 'field_session_trainer',
+        6 => 'body',
       ),
     ),
     'fields' => array(
@@ -694,9 +694,9 @@ function amapl_trainings_ds_layout_settings_info() {
       'field_session_place' => 'ds_content',
       'field_session_dates' => 'ds_content',
       'field_session_registration' => 'ds_content',
-      'group_inscription' => 'ds_content',
       'field_related_training' => 'ds_content',
       'field_session_trainer' => 'ds_content',
+      'body' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
