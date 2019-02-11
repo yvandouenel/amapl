@@ -452,7 +452,7 @@ function amapl_trainings_views_pre_render(&$view) {
       $current_date = date('Ymd');
 
       if ($last_session_date >= $current_date) { // Rule 1
-          $coming_sessions[$first_session_date] = $item;
+          $coming_sessions[$first_session_date . $item->nid] = $item;
       }
     }
     ksort($coming_sessions); // Rule 3
