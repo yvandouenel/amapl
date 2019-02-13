@@ -11,6 +11,47 @@ function feature_form_amapl_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance:
+  // 'entityform-inscription_amapl-field_activity_details'.
+  $field_instances['entityform-inscription_amapl-field_activity_details'] = array(
+    'bundle' => 'inscription_amapl',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 35,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_activity_details',
+    'label' => 'Précisions diverses',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+        'show_token_tree' => 0,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 18,
+    ),
+  );
+
+  // Exported field_instance:
   // 'entityform-inscription_amapl-field_adresse_correspondance'.
   $field_instances['entityform-inscription_amapl-field_adresse_correspondance'] = array(
     'bundle' => 'inscription_amapl',
@@ -364,7 +405,7 @@ function feature_form_amapl_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 18,
+      'weight' => 19,
     ),
   );
 
@@ -1396,6 +1437,7 @@ function feature_form_amapl_field_default_field_instances() {
   t('Pour les revenus');
   t('Prix TTC');
   t('Profession');
+  t('Précisions diverses');
   t('Revenus de source étrangère ?');
   t('Si vous n\'avez pas encore de numéro de siret, entrez "En cours d\'attribution".');
   t('Type d\'adhésion');

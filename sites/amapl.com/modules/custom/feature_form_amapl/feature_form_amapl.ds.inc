@@ -37,6 +37,7 @@ function feature_form_amapl_ds_layout_settings_info() {
         12 => 'field_non_pro',
         13 => 'field_source_etrangere',
         14 => 'field_micro_autoentrepreneur',
+        23 => 'field_activity_details',
       ),
       'right' => array(
         15 => 'field_nature_activite',
@@ -75,6 +76,7 @@ function feature_form_amapl_ds_layout_settings_info() {
       'field_assistance' => 'right',
       'field_choix_antenne' => 'right',
       'field_paiement' => 'footer',
+      'field_activity_details' => 'left',
     ),
     'classes' => array(),
     'wrappers' => array(
