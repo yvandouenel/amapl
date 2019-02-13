@@ -17,7 +17,7 @@
       no_juridic_form = true;
 
       //user identification
-      var guid = function() {
+      var guid = function () {
         var nav = window.navigator;
         var screen = window.screen;
         var guid = nav.mimeTypes.length;
@@ -46,19 +46,37 @@
       $('select#edit-field-pour-les-revenus-und option:contains("Choisir")').text('-- Choisissez une année --');
       // Effacer l'année 2017
       $('select#edit-field-pour-les-revenus-und option:contains("2017")').hide();
-      
+
       /* Gestion des infobulles ***************************************************************************************/
-      $(".form-item .description").each(function() {
+      $(".form-item .description").each(function () {
         var field_description = $(this);
 
-        if((!$(this).parent(".form-item").hasClass("form-item-field-nom-prenom-und-0-value")) &&
+        if ((!$(this).parent(".form-item").hasClass("form-item-field-nom-prenom-und-0-value")) &&
           (!$(this).parent(".form-item").hasClass('form-item-field-date-debut-und-0-value-date')) &&
           (!$(this).parent(".form-item").hasClass('form-item-field-cgv-und'))) {
 
           $(this).hide(0);
-          var infobulle = $( '<img class="view-info" src="/sites/amapl.com/themes/custom/lppl/images/icons/infobulle.gif" />');
-          infobulle.insertAfter( $(this).siblings('input'));
-          infobulle.click(function( event ) {
+          var infobulle = $('<img class="view-info" src="/sites/amapl.com/themes/custom/lppl/images/icons/infobulle.gif" />');
+            /* console.log("objet : ");
+            console.log($(this));
+            console.log("son parent : ");
+            console.log($(this).parent()); */
+            
+            console.log("class du parent : " + $(this).parent().attr('class') + " a comparer avec form-type-textarea ");
+          if ($(this).parent().hasClass("form-type-textarea")) {
+            infobulle.insertBefore($(".form-textarea", $(this).parent()));
+            infobulle.css({
+              "margin-top": "-10px",
+              "display": "block",
+              "float": "right",
+              "margin-right": "-30px"
+             });
+            //console.log("Tjs et encore dans la gestion des infobulles ");
+          } else {
+            infobulle.insertAfter($(this).siblings('input'));
+          }
+
+          infobulle.click(function (event) {
             field_description.slideToggle();
           });
 
@@ -111,7 +129,7 @@
       });
       $("#edit-field-provenance-und").change(function () {
 
-        if($("#edit-field-provenance-und").val() == "Autres (saisissez un texte personnalisé)"){
+        if ($("#edit-field-provenance-und").val() == "Autres (saisissez un texte personnalisé)") {
           $("#field-autre-provenance-add-more-wrapper").show();
         } else {
           $("#edit-field-autre-provenance-und-0-value").val("");
@@ -124,19 +142,19 @@
       function formeJuridique() {
         // Société unipersonnelle ?
         societe_unipersonnelle = (
-        $("#edit-field-forme-juridique-und-ei").is(":checked") ||
-        $("#edit-field-forme-juridique-und-eurl").is(":checked") ||
-        $("#edit-field-forme-juridique-und-selarl").is(":checked"))
+          $("#edit-field-forme-juridique-und-ei").is(":checked") ||
+          $("#edit-field-forme-juridique-und-eurl").is(":checked") ||
+          $("#edit-field-forme-juridique-und-selarl").is(":checked"))
           ? true : false;
 
         // Société ?
         societe = (
-        $("#edit-field-forme-juridique-und-scp").is(":checked") ||
-        $("#edit-field-forme-juridique-und-sep").is(":checked") ||
-        $("#edit-field-forme-juridique-und-sdf").is(":checked"))
+          $("#edit-field-forme-juridique-und-scp").is(":checked") ||
+          $("#edit-field-forme-juridique-und-sep").is(":checked") ||
+          $("#edit-field-forme-juridique-und-sdf").is(":checked"))
           ? true : false;
 
-        other_form = ( $("#edit-field-forme-juridique-und-autre").is(":checked") )
+        other_form = ($("#edit-field-forme-juridique-und-autre").is(":checked"))
           ? true : false;
 
         no_juridic_form = (societe_unipersonnelle || societe || other_form) ? false : true;
@@ -218,12 +236,12 @@
       }
       function newSubmission() {
         if (!$("#new-submission").lenght) {
-          $("<div></div>",{
+          $("<div></div>", {
             "id": "new-submission",
             "text": "Nouvelle inscription : réinitialiser le formulaire",
           }).insertAfter(".pre-instructions");
         }
-        $("#new-submission").click(function(){
+        $("#new-submission").click(function () {
           var nomsystem = $('#edit-field-paiement-und-line-item-container-0-name').val();
           $('#inscription-amapl-entityform-edit-form').trigger("reset");
           $('#inscription-amapl-entityform-edit-form').find('input:text, input:password, select, textarea').val('');
@@ -264,8 +282,8 @@
         // Micro BNC ou première adhésion avec une création d'activité en 2017
         if (autoentrepreneur ||
           (($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2017 && begin_activity_year == 2017 && first_adhesion)
-        || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2018 && begin_activity_year == 2018 && first_adhesion))
-        || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2019 && begin_activity_year == 2019 && first_adhesion)) {
+            || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2018 && begin_activity_year == 2018 && first_adhesion))
+          || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2019 && begin_activity_year == 2019 && first_adhesion)) {
           if (year_income == 2017) price = "82.5";//80.833333333
           else if (year_income == 2018) price = "82.5";
           else if (year_income == 2019) price = "82.5";
@@ -275,7 +293,7 @@
           if (year_income == 2017) price = "165";//162.5
           else if (year_income == 2018) price = "165";
           else if (year_income == 2019) price = "165";
-            }
+        }
         else if (societe || (other_form && $("#edit-field-nombre-associes-und-0-value").val() > 1)) {
           if (year_income == 2017) price = "265";//260
           else if (year_income == 2018) price = "265";
