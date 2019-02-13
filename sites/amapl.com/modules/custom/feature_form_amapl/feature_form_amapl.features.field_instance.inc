@@ -16,7 +16,7 @@ function feature_form_amapl_field_default_field_instances() {
     'bundle' => 'inscription_amapl',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'A renseigner notamment lorsque vous choisissez "Autre" pour apporter toutes précisions utiles.',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -1408,6 +1408,7 @@ function feature_form_amapl_field_default_field_instances() {
   t(' J’ai pris connaissance et accepte les conditions d’adhésion');
   t('<a href="/adherer/cgv" target="_blank">Voir les conditions d’adhésion</a>');
   t('A renseigner dans le cas où vous souhaitez que l\'AMAPL utilise une autre adresse que la professionnelle pour correspondre.');
+  t('A renseigner notamment lorsque vous choisissez "Autre" pour apporter toutes précisions utiles.');
   t('Activité non professionnelle');
   t('Adhésion Micro-BNC ou Auto-entrepreneur');
   t('Adresse');
