@@ -462,8 +462,12 @@ function get_form_infos($entity) {
     $msg .= '<tr><th>Type d\'adhésion : </th><td>' . $entity->field_type_adhesion['und'][0]['value'] . '</td></tr>';
   }
   if (!empty($entity->field_autre_type_adhesion)) {
-    $msg .= '<tr><th>Autre type d\'adhésion:  </th><td>' . $entity->field_autre_type_adhesion['und'][0]['value'] . '</td></tr>';
+    $msg .= '<tr><th>Autre type d\'adhésion :  </th><td>' . $entity->field_autre_type_adhesion['und'][0]['value'] . '</td></tr>';
   }
+  if (!empty($entity->field_activity_details)) {
+    $msg .= '<tr><th>Précisions diverses :  </th><td>' . $entity->field_activity_details['und'][0]['value'] . '</td></tr>';
+  }
+
   if (!empty($entity->field_autre_aga)) {
     $msg .= '<tr><th>Nom et adresse de la précédente AGA : </th><td>' . $entity->field_autre_aga['und'][0]['value'] . '</td></tr>';
   }
