@@ -13,6 +13,70 @@ function featurecoocontext_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'agadom';
+  $context->description = '';
+  $context->tag = 'Toutes les pages';
+  $context->conditions = array(
+    'user' => array(
+      'values' => array(
+        'AGADOM' => 'AGADOM',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'bean-agadom' => array(
+          'module' => 'bean',
+          'delta' => 'agadom',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Toutes les pages');
+  $export['agadom'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'agmps';
+  $context->description = '';
+  $context->tag = 'Toutes les pages';
+  $context->conditions = array(
+    'user' => array(
+      'values' => array(
+        'AGMPS BEARN' => 'AGMPS BEARN',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'bean-logo-agmps' => array(
+          'module' => 'bean',
+          'delta' => 'logo-agmps',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Toutes les pages');
+  $export['agmps'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'connected';
   $context->description = 'Menu haut, formulaire de recherche, menu bas';
   $context->tag = 'Toutes les pages';
@@ -285,6 +349,46 @@ function featurecoocontext_context_default_contexts() {
   // Included for use with string extractors like potx.
   t('Toutes les pages');
   $export['not_connected'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'pages_anonymes';
+  $context->description = '';
+  $context->tag = '';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        '~<front>' => '~<front>',
+        '~amapl' => '~amapl',
+        '~aga08' => '~aga08',
+        '~agakam' => '~agakam',
+        '~agaprofil' => '~agaprofil',
+        '~agcs' => '~agcs',
+        '~agmps' => '~agmps',
+        '~angiil' => '~angiil',
+      ),
+    ),
+    'user' => array(
+      'values' => array(
+        'anonymous user' => 'anonymous user',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'bean-block-front' => array(
+          'module' => 'bean',
+          'delta' => 'block-front',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 1;
+  $export['pages_anonymes'] = $context;
 
   return $export;
 }
