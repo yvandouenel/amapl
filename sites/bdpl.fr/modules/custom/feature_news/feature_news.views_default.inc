@@ -440,7 +440,7 @@ function feature_news_views_default_views() {
     ),
   );
   $handler->display->display_options['row_plugin'] = 'node_rss';
-  $handler->display->display_options['row_options']['item_length'] = 'teaser';
+  $handler->display->display_options['row_options']['item_length'] = 'title_and_date';
   $handler->display->display_options['row_options']['links'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Champ: Contenu : Titre */
