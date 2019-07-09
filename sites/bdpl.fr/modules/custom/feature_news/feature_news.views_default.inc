@@ -539,6 +539,20 @@ function feature_news_views_default_views() {
   $handler->display->display_options['header']['area']['content'] = '<h2 class="title-home-news" id="title-home-news-dossier">Dossiers spéciaux</h4>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Champ: Contenu : Date de mise en ligne */
+  $handler->display->display_options['fields']['field_news_date_inline']['id'] = 'field_news_date_inline';
+  $handler->display->display_options['fields']['field_news_date_inline']['table'] = 'field_data_field_news_date_inline';
+  $handler->display->display_options['fields']['field_news_date_inline']['field'] = 'field_news_date_inline';
+  $handler->display->display_options['fields']['field_news_date_inline']['label'] = '';
+  $handler->display->display_options['fields']['field_news_date_inline']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_news_date_inline']['settings'] = array(
+    'format_type' => 'tres_court_francais',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
   /* Champ: Contenu : Titre */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
