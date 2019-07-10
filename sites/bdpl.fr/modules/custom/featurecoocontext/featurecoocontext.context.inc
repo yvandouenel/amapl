@@ -355,7 +355,7 @@ function featurecoocontext_context_default_contexts() {
   $context->api_version = 3;
   $context->name = 'pages_anonymes';
   $context->description = '';
-  $context->tag = '';
+  $context->tag = 'Pages Anonymes';
   $context->conditions = array(
     'path' => array(
       'values' => array(
@@ -367,6 +367,7 @@ function featurecoocontext_context_default_contexts() {
         '~agcs' => '~agcs',
         '~agmps' => '~agmps',
         '~angiil' => '~angiil',
+        '~agadom' => '~agadom',
       ),
     ),
     'user' => array(
@@ -388,6 +389,10 @@ function featurecoocontext_context_default_contexts() {
     ),
   );
   $context->condition_mode = 1;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Pages Anonymes');
   $export['pages_anonymes'] = $context;
 
   return $export;
