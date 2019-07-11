@@ -1,0 +1,51 @@
+body {
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+/* Fonctions ********************************************/
+.rounded(@radius: 8px) {
+	border-radius: @radius;
+	background-clip: padding-box;
+}
+/* Fin des fonctions ************************************/
+/* Menu Haut ********************************************/
+#block-menu-block-1 {
+  .menu-block-1 {
+    display: flex;
+    justify-content: flex-end;
+    ul.menu {
+      background-color: @black-amapl;
+      .rounded;
+      display: table;
+      li {
+        float: left;
+        a {
+          color: white;
+          display: block;
+          &:after {
+            content: "|";
+            display: inline;
+            margin-left: 10px;
+          }
+          &:hover {
+            color: black;
+          }
+        }
+        &.last {
+          a {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* Fin du menu haut *************************************/
+/* Menu principal ***************************************/
+#main-amapl-navigation {
+  display: flex;
+  justify-content: flex-end;
+}
+/* Fin du menu principal ********************************/
