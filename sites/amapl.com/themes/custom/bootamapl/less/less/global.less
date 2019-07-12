@@ -8,6 +8,14 @@ body {
 	background-clip: padding-box;
 }
 /* Fin des fonctions ************************************/
+/* Logo *************************************************/
+a.logo {
+  img {
+    @media screen and (min-width: @screen-md) {
+      width: 80%;
+    }
+  }
+}
 /* Menu Haut ********************************************/
 #block-menu-block-1 {
   .menu-block-1 {
@@ -15,7 +23,7 @@ body {
     justify-content: flex-end;
     ul.menu {
       background-color: @black-amapl;
-      .rounded;
+      .rounded(4px);
       display: table;
       li {
         float: left;
@@ -47,5 +55,38 @@ body {
 #main-amapl-navigation {
   display: flex;
   justify-content: flex-end;
+  @media screen and (min-width: @screen-md) {
+    margin-top: 50px;
+  }
+  ul.nav {
+    > li {
+      position: relative;
+      &:after {
+        content: "|";
+        margin-left: 25px;
+        position: absolute;
+        top: 15px;
+        right: -px;
+      }
+      > a {
+        color: @black-amapl;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 1.3em;
+        &:hover {
+          background-color: @black-amapl;
+          color: white;
+        }
+      }
+      &.last {
+        &:after {
+          display: none;
+        }
+        a {
+          padding-right: 0;
+        }
+      }
+    }
+  }
 }
 /* Fin du menu principal ********************************/
