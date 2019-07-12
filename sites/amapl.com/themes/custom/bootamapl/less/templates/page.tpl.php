@@ -73,12 +73,12 @@
  * @ingroup templates
  */
 ?>
-<header id="navbar" role="banner" class="navbar">
+<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div class="<?php print $container_class; ?>">
     <div class="row">
       <div class="col-md-6">
         <?php if ($logo): ?>
-          <h1>
+          <h1 id="h1-logo">
             <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>">
               <img src="<?php print $logo; ?>" alt="<?php print t('Logo AMAPL - organisme mixte de gestion agréé - retour accueil'); ?>" />
             </a>
@@ -99,7 +99,7 @@
 
         <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
           <div class="navbar-collapse collapse">
-            <nav role="navigation">
+            <nav role="navigation" id="top-amapl-navigation">
               <?php if (!empty($page['navigation'])): ?>
                 <?php print render($page['navigation']); ?>
               <?php endif; ?>
