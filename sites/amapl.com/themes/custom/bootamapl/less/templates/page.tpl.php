@@ -80,7 +80,7 @@
         <?php if ($logo): ?>
           <h1>
             <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>">
-              <img src="<?php print $logo; ?>" alt="<?php print t('Logo AMAPL - retour accueil'); ?>" />
+              <img src="<?php print $logo; ?>" alt="<?php print t('Logo AMAPL - organisme mixte de gestion agréé - retour accueil'); ?>" />
             </a>
           </h1>
         <?php endif; ?>
