@@ -1,0 +1,98 @@
+.front {
+  #under-main-container {
+    background: url(../images/home_bg_4_raisons.png) no-repeat 50% 0;
+  }
+  #block-views-le-saviez-vous-ss-block {
+    position: relative;
+    @media screen and (min-width: @screen-md) {
+      height: 300px;
+      color: white;
+      #quatre-raisons {
+        font-size: 3.2em;
+        margin: 25px 0;
+      }
+      .views-field-body {
+        font-size: 1.8em;
+        width: 500px;
+        a {
+          color: @blue-green-amapl;
+        }
+      }
+      #views_slideshow_controls_text_le_saviez_vous_ss-block_1 {
+        position: absolute;
+        bottom: 20px;
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        left: 100px;
+        #views_slideshow_controls_text_pause_le_saviez_vous_ss-block_1 {
+          display: none;
+        }
+        #views_slideshow_controls_text_previous_le_saviez_vous_ss-block_1 {
+          a {
+            background: url(../images/prev_btn.png) no-repeat 0 0;
+            width: 48px;
+            height: 48px;
+            text-indent: -2000px;
+            display: block;
+          }
+        }
+        #views_slideshow_controls_text_next_le_saviez_vous_ss-block_1 {
+          a {
+            background: url(../images/next_btn.png) no-repeat 0 0;
+            width: 48px;
+            height: 48px;
+            text-indent: -2000px;
+            display: block;
+          }
+        }
+      }
+      #widget_pager_bottom_le_saviez_vous_ss-block_1 {
+        position: absolute;
+        z-index: 10;
+        bottom: 34px;
+        width: 130px;
+        display: flex;
+        justify-content: space-around;
+        left: 150px;
+        .views_slideshow_pager_field_item {
+          a {
+            display: block;
+            width: 18px;
+            height: 18px;
+            text-indent: -2000px;
+            overflow: hidden;
+            &:before {
+              content: "";
+              width: 18px;
+              height: 18px;
+              display: block;
+              background: url(../images/little_disk.png) no-repeat 0 0;
+              opacity: 0.5;
+            }
+          }
+          &.active {
+            a:before {
+              background: url(../images/little_disk.png) no-repeat 0 0;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    #home-ss-illustrations {
+      position: absolute;
+      top: -20px;
+      right: 0px;
+      width: 650px;
+      height: 355px;
+      overflow: hidden;
+      img {
+        max-width: 650px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      }
+    }
+  }
+}
