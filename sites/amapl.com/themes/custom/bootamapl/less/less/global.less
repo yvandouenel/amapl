@@ -1,92 +1,133 @@
 body {
   background-color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 /* Fonctions ********************************************/
 .rounded(@radius: 8px) {
-	border-radius: @radius;
-	background-clip: padding-box;
+  border-radius: @radius;
+  background-clip: padding-box;
 }
 /* Fin des fonctions ************************************/
 /* Logo *************************************************/
-a.logo {
-  img {
-    @media screen and (min-width: @screen-md) {
-      width: 80%;
+#h1-logo {
+  @media screen and (max-width: @screen-md) {
+    max-width: 80%;
+  }
+  a.logo {
+    img {
+      @media screen and (min-width: @screen-md) {
+        width: 80%;
+      }
+      @media screen and (max-width: @screen-md) {
+        max-width: 60%;
+      }
     }
   }
 }
-/* Menu Haut ********************************************/
-#block-menu-block-1 {
-  .menu-block-1 {
-    display: flex;
-    justify-content: flex-end;
-    ul.menu {
-      background-color: @black-amapl;
-      .rounded(4px);
-      display: table;
-      li {
-        float: left;
-        a {
-          color: white;
-          display: block;
-          &:after {
-            content: "|";
-            display: inline;
-            margin-left: 10px;
-          }
-          &:hover {
-            color: black;
+/* Bandeau **********************************************/
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+/* Zone de menu *****************************************/
+#top-amapl-navigation {
+  @media screen and (max-width: @screen-md) {
+    background-color: @black-amapl;
+  }
+  /* Menu Haut ********************************************/
+  #block-menu-block-1 {
+    .menu-block-1 {
+      @media screen and (min-width: @screen-md) {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+        ul.menu {
+          background-color: @black-amapl;
+          .rounded(4px);
+          display: table;
+          li {
+            float: left;
+            a {
+              color: white;
+              display: block;
+              &:after {
+                content: "|";
+                display: inline;
+                margin-left: 10px;
+              }
+              &:hover {
+                color: black;
+              }
+            }
+            &.last {
+              a {
+                &:after {
+                  display: none;
+                }
+              }
+            }
           }
         }
-        &.last {
-          a {
+      }
+      @media screen and (max-width: @screen-md) {
+        ul.menu > li > a {
+          color: white;
+        }
+      }
+    }
+  }
+  /* Fin du menu haut *************************************/
+
+  /* Menu principal ***************************************/
+  #main-amapl-navigation {
+    @media screen and (min-width: @screen-md) {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 40px;
+      ul.nav {
+        > li {
+          position: relative;
+          &:after {
+            content: "|";
+            margin-left: 25px;
+            position: absolute;
+            top: 15px;
+            right: -1px;
+          }
+          > a {
+            color: @black-amapl;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 1.3em;
+            background-color: transparent;
+            &:hover {
+              background-color: @black-amapl;
+              color: white;
+            }
+          }
+          &.last {
             &:after {
               display: none;
+            }
+            a {
+              padding-right: 0;
             }
           }
         }
       }
     }
-  }
-}
-/* Fin du menu haut *************************************/
-/* Menu principal ***************************************/
-#main-amapl-navigation {
-  display: flex;
-  justify-content: flex-end;
-  @media screen and (min-width: @screen-md) {
-    margin-top: 50px;
-  }
-  ul.nav {
-    > li {
-      position: relative;
-      &:after {
-        content: "|";
-        margin-left: 25px;
-        position: absolute;
-        top: 15px;
-        right: -px;
-      }
-      > a {
-        color: @black-amapl;
-        font-weight: 400;
-        text-transform: uppercase;
-        font-size: 1.3em;
-        &:hover {
-          background-color: @black-amapl;
-          color: white;
-        }
-      }
-      &.last {
-        &:after {
-          display: none;
-        }
-        a {
-          padding-right: 0;
+    @media screen and (max-width: @screen-md) {
+      margin-left: 15px;
+      background-color: @black-amapl;
+      ul {
+        > li {
+          > a {
+            padding: 10px 15px;
+            color: white;
+          }
         }
       }
     }
   }
+  /* Fin du menu principal ********************************/
 }
-/* Fin du menu principal ********************************/

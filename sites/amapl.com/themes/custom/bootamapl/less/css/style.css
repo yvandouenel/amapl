@@ -7518,80 +7518,120 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
 }
 body {
   background-color: white;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 /* Fonctions ********************************************/
 /* Fin des fonctions ************************************/
 /* Logo *************************************************/
+@media screen and (max-width: 992px) {
+  #h1-logo {
+    max-width: 80%;
+  }
+}
 @media screen and (min-width: 992px) {
-  a.logo img {
+  #h1-logo a.logo img {
     width: 80%;
   }
 }
-/* Menu Haut ********************************************/
-#block-menu-block-1 .menu-block-1 {
-  display: flex;
-  justify-content: flex-end;
-}
-#block-menu-block-1 .menu-block-1 ul.menu {
-  background-color: #424242;
-  border-radius: 4px;
-  background-clip: padding-box;
-  display: table;
-}
-#block-menu-block-1 .menu-block-1 ul.menu li {
-  float: left;
-}
-#block-menu-block-1 .menu-block-1 ul.menu li a {
-  color: white;
-  display: block;
-}
-#block-menu-block-1 .menu-block-1 ul.menu li a:after {
-  content: "|";
-  display: inline;
-  margin-left: 10px;
-}
-#block-menu-block-1 .menu-block-1 ul.menu li a:hover {
-  color: black;
-}
-#block-menu-block-1 .menu-block-1 ul.menu li.last a:after {
-  display: none;
-}
-/* Fin du menu haut *************************************/
-/* Menu principal ***************************************/
-#main-amapl-navigation {
-  display: flex;
-  justify-content: flex-end;
-}
-@media screen and (min-width: 992px) {
-  #main-amapl-navigation {
-    margin-top: 50px;
+@media screen and (max-width: 992px) {
+  #h1-logo a.logo img {
+    max-width: 60%;
   }
 }
-#main-amapl-navigation ul.nav > li {
-  position: relative;
+/* Bandeau **********************************************/
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
 }
-#main-amapl-navigation ul.nav > li:after {
-  content: "|";
-  margin-left: 25px;
-  position: absolute;
-  top: 15px;
-  right: -px;
+/* Zone de menu *****************************************/
+#top-amapl-navigation {
+  /* Menu Haut ********************************************/
+  /* Fin du menu haut *************************************/
+  /* Menu principal ***************************************/
+  /* Fin du menu principal ********************************/
 }
-#main-amapl-navigation ul.nav > li > a {
-  color: #424242;
-  font-weight: 400;
-  text-transform: uppercase;
-  font-size: 1.3em;
+@media screen and (max-width: 992px) {
+  #top-amapl-navigation {
+    background-color: #424242;
+  }
 }
-#main-amapl-navigation ul.nav > li > a:hover {
-  background-color: #424242;
-  color: white;
+@media screen and (min-width: 992px) {
+  #top-amapl-navigation #block-menu-block-1 .menu-block-1 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  #top-amapl-navigation #block-menu-block-1 .menu-block-1 ul.menu {
+    background-color: #424242;
+    border-radius: 4px;
+    background-clip: padding-box;
+    display: table;
+  }
+  #top-amapl-navigation #block-menu-block-1 .menu-block-1 ul.menu li {
+    float: left;
+  }
+  #top-amapl-navigation #block-menu-block-1 .menu-block-1 ul.menu li a {
+    color: white;
+    display: block;
+  }
+  #top-amapl-navigation #block-menu-block-1 .menu-block-1 ul.menu li a:after {
+    content: "|";
+    display: inline;
+    margin-left: 10px;
+  }
+  #top-amapl-navigation #block-menu-block-1 .menu-block-1 ul.menu li a:hover {
+    color: black;
+  }
+  #top-amapl-navigation #block-menu-block-1 .menu-block-1 ul.menu li.last a:after {
+    display: none;
+  }
 }
-#main-amapl-navigation ul.nav > li.last:after {
-  display: none;
+@media screen and (max-width: 992px) {
+  #top-amapl-navigation #block-menu-block-1 .menu-block-1 ul.menu > li > a {
+    color: white;
+  }
 }
-#main-amapl-navigation ul.nav > li.last a {
-  padding-right: 0;
+@media screen and (min-width: 992px) {
+  #top-amapl-navigation #main-amapl-navigation {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+  }
+  #top-amapl-navigation #main-amapl-navigation ul.nav > li {
+    position: relative;
+  }
+  #top-amapl-navigation #main-amapl-navigation ul.nav > li:after {
+    content: "|";
+    margin-left: 25px;
+    position: absolute;
+    top: 15px;
+    right: -1px;
+  }
+  #top-amapl-navigation #main-amapl-navigation ul.nav > li > a {
+    color: #424242;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    background-color: transparent;
+  }
+  #top-amapl-navigation #main-amapl-navigation ul.nav > li > a:hover {
+    background-color: #424242;
+    color: white;
+  }
+  #top-amapl-navigation #main-amapl-navigation ul.nav > li.last:after {
+    display: none;
+  }
+  #top-amapl-navigation #main-amapl-navigation ul.nav > li.last a {
+    padding-right: 0;
+  }
 }
-/* Fin du menu principal ********************************/
+@media screen and (max-width: 992px) {
+  #top-amapl-navigation #main-amapl-navigation {
+    margin-left: 15px;
+    background-color: #424242;
+  }
+  #top-amapl-navigation #main-amapl-navigation ul > li > a {
+    padding: 10px 15px;
+    color: white;
+  }
+}
