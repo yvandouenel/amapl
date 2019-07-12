@@ -88,42 +88,32 @@ function le_savez_vous_views_default_views() {
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartype'] = 0;
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartypenobg'] = 0;
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Champ: Contenu : Body */
-  $handler->display->display_options['fields']['body_1']['id'] = 'body_1';
-  $handler->display->display_options['fields']['body_1']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body_1']['field'] = 'body';
-  $handler->display->display_options['fields']['body_1']['label'] = '';
-  $handler->display->display_options['fields']['body_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body_1']['type'] = 'text_summary_or_trimmed';
-  $handler->display->display_options['fields']['body_1']['settings'] = array(
-    'trim_length' => '600',
-  );
-  /* Champ: Contenu : Body */
+  /* Field: Nœud : Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  /* Champ: Contenu : control ss */
+  /* Field: Nœud : control ss */
   $handler->display->display_options['fields']['field_control_ss']['id'] = 'field_control_ss';
   $handler->display->display_options['fields']['field_control_ss']['table'] = 'field_data_field_control_ss';
   $handler->display->display_options['fields']['field_control_ss']['field'] = 'field_control_ss';
   $handler->display->display_options['fields']['field_control_ss']['label'] = '';
   $handler->display->display_options['fields']['field_control_ss']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_control_ss']['element_label_colon'] = FALSE;
-  /* Critère de tri: Contenu : Date de publication */
+  /* Sort criterion: Content : Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Critère de filtrage: Contenu : Publié */
+  /* Filter criterion: Content : Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 1;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Critère de filtrage: Contenu : Type */
+  /* Filter criterion: Content : Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
@@ -133,10 +123,6 @@ function le_savez_vous_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '6';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'slideshow';
   $handler->display->display_options['style_options']['slideshow_type'] = 'views_slideshow_cycle';
@@ -148,38 +134,40 @@ function le_savez_vous_views_default_views() {
     'path' => '',
     'stylesheets' => array(),
   );
-  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['enable'] = 1;
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['hide_on_single_slide'] = 1;
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
     'field_control_ss' => 'field_control_ss',
-    'body_1' => 0,
     'body' => 0,
   );
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_pager']['views_slideshow_pager_fields_hover'] = 1;
-  $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['enable'] = 1;
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
   $handler->display->display_options['style_options']['widgets']['top']['views_slideshow_slide_counter']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['enable'] = 1;
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['weight'] = '1';
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['hide_on_single_slide'] = 1;
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['type'] = 'views_slideshow_pager_fields';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_pager']['views_slideshow_pager_fields_fields'] = array(
-    'body_1' => 0,
+    'field_control_ss' => 'field_control_ss',
     'body' => 0,
-    'field_control_ss' => 0,
   );
+  $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['enable'] = 1;
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['weight'] = '1';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_controls']['type'] = 'views_slideshow_controls_text';
   $handler->display->display_options['style_options']['widgets']['bottom']['views_slideshow_slide_counter']['weight'] = '1';
-  $handler->display->display_options['style_options']['views_slideshow_cycle']['effect'] = 'zoom';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['effect'] = 'turnLeft';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['transition_advanced'] = 1;
   $handler->display->display_options['style_options']['views_slideshow_cycle']['timeout'] = '5000';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['speed'] = '700';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['delay'] = '0';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['pause'] = 0;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['pause_on_click'] = 1;
   $handler->display->display_options['style_options']['views_slideshow_cycle']['action_advanced'] = 1;
-  $handler->display->display_options['style_options']['views_slideshow_cycle']['start_paused'] = 0;
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['start_paused'] = 1;
   $handler->display->display_options['style_options']['views_slideshow_cycle']['remember_slide_days'] = '1';
+  $handler->display->display_options['style_options']['views_slideshow_cycle']['nowrap'] = 1;
   $handler->display->display_options['style_options']['views_slideshow_cycle']['items_per_slide'] = '1';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['wait_for_image_load_timeout'] = '3000';
   $handler->display->display_options['style_options']['views_slideshow_cycle']['cleartype'] = 0;
@@ -188,14 +176,31 @@ function le_savez_vous_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global : Unfiltered text */
+  $handler->display->display_options['header']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['header']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['header']['area_text_custom']['content'] = '<h2 id="quatre-raisons">4 raisons d\'adhérer !</h2>';
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global : Unfiltered text */
+  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<div id="home-ss-illustrations">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character1.png" alt="medecin">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character2.png" alt="infirmière">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character3.png" alt="">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character4.png" alt="">
+</div>';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Critère de tri: Draggableviews : Poids */
+  /* Sort criterion: Draggableviews : Weight */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_view'] = 'le_saviez_vous_ss:page_1';
   $handler->display->display_options['sorts']['weight']['draggableviews_setting_new_items_bottom_list'] = 1;
-  /* Critère de tri: Contenu : Date de publication */
+  /* Sort criterion: Content : Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
@@ -241,13 +246,13 @@ function le_savez_vous_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Champ: Contenu : Titre */
+  /* Field: Content : Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Champ: Contenu : Body */
+  /* Field: Nœud : Body */
   $handler->display->display_options['fields']['body_1']['id'] = 'body_1';
   $handler->display->display_options['fields']['body_1']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body_1']['field'] = 'body';
@@ -257,7 +262,7 @@ function le_savez_vous_views_default_views() {
   $handler->display->display_options['fields']['body_1']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Champ: Draggableviews : Contenu */
+  /* Field: Draggableviews : Content */
   $handler->display->display_options['fields']['draggableviews']['id'] = 'draggableviews';
   $handler->display->display_options['fields']['draggableviews']['table'] = 'node';
   $handler->display->display_options['fields']['draggableviews']['field'] = 'draggableviews';
@@ -267,7 +272,7 @@ function le_savez_vous_views_default_views() {
   $handler->display->display_options['fields']['draggableviews']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['draggableviews']['draggableviews']['ajax'] = 0;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Critère de tri: Draggableviews : Poids */
+  /* Sort criterion: Draggableviews : Weight */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'draggableviews_structure';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
@@ -291,6 +296,13 @@ function le_savez_vous_views_default_views() {
     t('suivant ›'),
     t('dernier »'),
     t('Block'),
+    t('<h2 id="quatre-raisons">4 raisons d\'adhérer !</h2>'),
+    t('<div id="home-ss-illustrations">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character1.png" alt="medecin">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character2.png" alt="infirmière">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character3.png" alt="">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character4.png" alt="">
+</div>'),
     t('Le saviez-vous'),
     t('Page'),
     t('Le saviez-vous - classement'),

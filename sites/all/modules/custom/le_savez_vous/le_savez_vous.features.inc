@@ -26,7 +26,7 @@ function le_savez_vous_views_api($module = NULL, $api = NULL) {
 function le_savez_vous_node_info() {
   $items = array(
     'le_savez_vous' => array(
-      'name' => t('Le savez-vous'),
+      'name' => t('Raisons'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
@@ -34,5 +34,6 @@ function le_savez_vous_node_info() {
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }

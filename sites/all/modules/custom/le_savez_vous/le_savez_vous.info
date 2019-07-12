@@ -1,6 +1,6 @@
 name = Le savez-vous
 core = 7.x
-package = Generic Feature
+package = AMAPL
 version = 7.x-1.0
 project = le_savez_vous
 dependencies[] = node
@@ -33,5 +33,4 @@ features_exclude[dependencies][ctools] = ctools
 features_exclude[dependencies][feature_event] = feature_event
 features_exclude[dependencies][features] = features
 features_exclude[dependencies][strongarm] = strongarm
-mtime = 1423732477
 project path = sites/all/modules/custom

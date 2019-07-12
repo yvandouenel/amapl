@@ -10,7 +10,7 @@
 function le_savez_vous_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-le_savez_vous-body'
+  // Exported field_instance: 'node-le_savez_vous-body'.
   $field_instances['node-le_savez_vous-body'] = array(
     'bundle' => 'le_savez_vous',
     'default_value' => NULL,
@@ -60,7 +60,7 @@ function le_savez_vous_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-le_savez_vous-field_control_ss'
+  // Exported field_instance: 'node-le_savez_vous-field_control_ss'.
   $field_instances['node-le_savez_vous-field_control_ss'] = array(
     'bundle' => 'le_savez_vous',
     'default_value' => array(
