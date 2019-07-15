@@ -1,5 +1,4 @@
 jQuery(function($){
-  console.log("gestion des images du ss d'accueil.");
   const images = [];
 
   // on stocke les images
@@ -18,8 +17,6 @@ jQuery(function($){
     return Math.floor(Math.random() * Math.floor(max));
   }
 
-  console.log("num de la première image : ", first_image_number);
-
   // on affiche l'image sélectionnée
   dumNextImage(first_image_number);
 
@@ -27,6 +24,7 @@ jQuery(function($){
 
   // fonction qui s'appelle de façon récursive pour afficher l'image suivante
   function dumNextImage(img_number) {
+    // calcul de l'index de l'image précédente
     let num_img_prev = (img_number-1) >= 0 ? (img_number-1) % nb_img : nb_img - 1
     // cache l'image précédente
     images[num_img_prev].fadeOut(2000);
@@ -38,7 +36,4 @@ jQuery(function($){
     }, 5000);
 
   }
-
-
-
 });
