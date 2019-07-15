@@ -113,6 +113,7 @@
         <?php endif; ?>
       </div><!-- Fin col -->
     </div><!-- Fin row -->
+
   </div>
 </header>
 <div id="under-main-container">
@@ -121,6 +122,14 @@
     <header role="banner" id="page-header">
       <?php print render($page['header']); ?>
     </header> <!-- /#page-header -->
+    <!-- Slide show -->
+    <?php if (!empty($page['slideshow'])): ?>
+      <div class="row">
+        <div class="col-md-12">
+          <?php print render($page['slideshow']); ?>
+        </div>
+      </div>
+    <?php endif; ?>
 
     <div class="row">
 
