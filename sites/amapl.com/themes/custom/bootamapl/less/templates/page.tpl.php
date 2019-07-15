@@ -130,6 +130,30 @@
         </div>
       </div>
     <?php endif; ?>
+    <?php if (!empty($page['block-left-6'])): ?>
+      <div class="row two-cols-home">
+        <div class="col-md-6 col-home-first">
+          <?php print render($page['block-left-6']); ?>
+        </div>
+        <div class="col-md-6 col-home-second">
+          <?php print render($page['block-right-6']); ?>
+        </div>
+      </div>
+    <?php endif; ?>
+    <?php if (!empty($page['block-training'])): ?>
+      <div class="row three-cols-home">
+        <div class="col-md-4 col-training">
+          <?php print render($page['block-training']); ?>
+        </div>
+        <div class="col-md-4 col-training">
+          <?php print render($page['block-zoom']); ?>
+        </div>
+        <div class="col-md-4 col-training">
+          <?php print render($page['block-news']); ?>
+        </div>
+
+      </div>
+    <?php endif; ?>
 
     <div class="row">
 
