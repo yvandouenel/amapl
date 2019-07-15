@@ -5,7 +5,8 @@
   #block-views-le-saviez-vous-ss-block {
     position: relative;
     @media screen and (min-width: @screen-md) {
-      height: 300px;
+      height: 340px;
+
       color: white;
       #quatre-raisons {
         font-size: 3.2em;
@@ -20,7 +21,7 @@
       }
       #views_slideshow_controls_text_le_saviez_vous_ss-block_1 {
         position: absolute;
-        bottom: 20px;
+        bottom: 50px;
         width: 250px;
         display: flex;
         justify-content: space-between;
@@ -50,7 +51,7 @@
       #widget_pager_bottom_le_saviez_vous_ss-block_1 {
         position: absolute;
         z-index: 10;
-        bottom: 34px;
+        bottom: 64px;
         width: 130px;
         display: flex;
         justify-content: space-around;
@@ -92,6 +93,150 @@
         position: absolute;
         top: 0px;
         right: 0px;
+      }
+    }
+  }
+}
+.two-cols-home {
+  > div {
+    background-color: @light-grey-amapl;
+    &.col-home-first {
+      background: @light-grey-amapl url(../images/home_circl_pro-home.png)
+        no-repeat 50% 0;
+      padding-top: 150px;
+      .block-title {
+        text-transform: uppercase;
+        color: @blue-pl-amapl;
+        font-weight: 700;
+      }
+      text-align: center;
+      a {
+        position: relative;
+        display: block;
+        padding: 0 10px;
+        color: @blue-pl-amapl;
+        font-size: 1.6em;
+        z-index: 0;
+        &:hover {
+          text-decoration: none;
+          &:after {
+            content: "";
+            height: 15px;
+            width: 50%;
+            background-color: @blue-green-amapl;
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            z-index: -1;
+          }
+        }
+      }
+      img {
+        max-width: 80%;
+        margin-top: 20px;
+      }
+    }
+    &.col-home-second {
+      background: @light-grey-amapl url(../images/home_circl_caa-home.png)
+        no-repeat 50% 0;
+      padding-top: 150px;
+      .block-title {
+        text-transform: uppercase;
+        color: @orange-caa-amapl;
+        font-weight: 700;
+      }
+      text-align: center;
+      .field-name-field-texte {
+        a {
+          position: relative;
+          display: block;
+          padding: 0 10px;
+          color: @orange-caa-amapl;
+          font-size: 1.6em;
+          z-index: 0;
+          &:hover {
+            text-decoration: none;
+            &:after {
+              content: "";
+              height: 15px;
+              width: 50%;
+              background-color: @blue-green-amapl;
+              position: absolute;
+              bottom: 0;
+              left: 25%;
+              z-index: -1;
+            }
+          }
+        }
+      }
+
+      img {
+        max-width: 80%;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+.h3-bottom-home {
+  &.pl {
+    a {
+      background: url(../images/picto_formation_bleu.png) no-repeat 0 0;
+      background-size: 60px 60px;
+    }
+  }
+  &.caa {
+    a {
+      background: url(../images/picto_formation_orange.png) no-repeat 0 0;
+      background-size: 60px 60px;
+    }
+  }
+  a {
+    display: block;
+    color: @black-amapl;
+    font-size: 0.75em;
+    padding-left: 80px;
+    min-height: 72px;
+    background: url(../images/picto_formation_mixte.png) no-repeat 0 0;
+    background-size: 60px 60px;
+  }
+}
+#block-views-trainings-block-home-training {
+  margin-top: 30px;
+  background: url(../images/home_formations_img.png) no-repeat 0 0;
+  h2.block-title {
+    display: table;
+    padding: 10px 25px;
+    background-color: white;
+    width: 50%;
+    margin: 300px auto 0 auto;
+    text-transform: uppercase;
+    font-size: 2em;
+    color: black;
+  }
+  .more-link {
+    a {
+      display: block;
+      position: relative;
+      color: @black-amapl;
+      &:hover {
+        text-decoration: none;
+        background-color: @blue-green-amapl;
+      }
+      &:before {
+        display: block;
+        content: ">";
+        right: 5px;
+        top: 0;
+        position: absolute;
+      }
+      &:after {
+        display: block;
+        content: "";
+        width: 100%;
+        height: 5px;
+        margin-top: 5px;
+        background-color: @blue-green-amapl;
+        border-right: 30px solid @black-amapl;
       }
     }
   }
