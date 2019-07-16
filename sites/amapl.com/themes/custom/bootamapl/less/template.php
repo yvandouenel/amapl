@@ -17,4 +17,8 @@ function bootamapl_preprocess_node(&$vars) {
     $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__teaser';
     $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->nid . '__teaser';
   }
+  if($vars['view_mode'] == 'zoom') {
+    $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__zoom';
+    $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->nid . '__zoom';
+  }
 }
