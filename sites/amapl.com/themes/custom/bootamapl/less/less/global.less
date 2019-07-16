@@ -2,6 +2,9 @@ body {
   background-color: white;
   font-family: "Roboto", sans-serif;
 }
+img {
+  max-width: 100%;
+}
 /* Fonctions ********************************************/
 .rounded(@radius: 8px) {
   border-radius: @radius;
@@ -135,4 +138,18 @@ body {
     }
   }
   /* Fin du menu principal ********************************/
+}
+/* footer *************************************************/
+#partners-social-bottom {
+  position: relative;
+  padding: 20px 10px;
+  background-color: @light-grey-amapl;
+  #more-partners {
+    position: absolute;
+    bottom: 80px;
+    a {
+      width: 360px;
+      position: relative;
+    }
+  }
 }
