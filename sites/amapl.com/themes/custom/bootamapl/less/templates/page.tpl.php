@@ -145,10 +145,10 @@
         <div class="col-md-4 col-training">
           <?php print render($page['block-training']); ?>
         </div>
-        <div class="col-md-4 col-training">
+        <div class="col-md-4 col-zoom">
           <?php print render($page['block-zoom']); ?>
         </div>
-        <div class="col-md-4 col-training">
+        <div class="col-md-4 col-news">
           <?php print render($page['block-news']); ?>
         </div>
 
