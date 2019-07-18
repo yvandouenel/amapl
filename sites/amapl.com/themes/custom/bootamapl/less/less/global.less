@@ -5,6 +5,12 @@ body {
 img {
   max-width: 100%;
 }
+.title-smallcap-black {
+  text-transform: uppercase;
+  color: black;
+  font-size: 1.3em;
+  font-weight: 800;
+}
 /* Fonctions ********************************************/
 .rounded(@radius: 8px) {
   border-radius: @radius;
@@ -144,9 +150,55 @@ img {
   position: relative;
   padding: 20px 10px;
   background-color: @light-grey-amapl;
+  @media screen and (min-width: @screen-md) {
+    .col-md-2 {
+      &:before {
+        display: block;
+        content: "";
+        height: 95%;
+        width: 2px;
+        background-color: @dark-grey-amapl;
+        position: absolute;
+        left: 0;
+        top: 20px;
+      }
+      #social-buttons {
+        margin-left: 20px;
+        a {
+          display: block;
+          margin: 20px 0;
+          color: @black-amapl;
+          font-size: 1.2em;
+          img {
+            max-width: 60px;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  .partners {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    margin-top: 35px;
+    a {
+      color: black;
+      font-size: 1.5em;
+      text-transform: uppercase;
+      span,
+      img {
+        display: block;
+        text-align: center;
+        max-width: 90%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
   #more-partners {
     position: absolute;
-    bottom: 80px;
+    bottom: 0;
     a {
       width: 360px;
       position: relative;

@@ -7523,6 +7523,12 @@ body {
 img {
   max-width: 100%;
 }
+.title-smallcap-black {
+  text-transform: uppercase;
+  color: black;
+  font-size: 1.3em;
+  font-weight: 800;
+}
 /* Fonctions ********************************************/
 /* Fin des fonctions ************************************/
 /* Logo *************************************************/
@@ -7649,9 +7655,52 @@ img {
   padding: 20px 10px;
   background-color: #faf7f7;
 }
+@media screen and (min-width: 992px) {
+  #partners-social-bottom .col-md-2:before {
+    display: block;
+    content: "";
+    height: 95%;
+    width: 2px;
+    background-color: #b9b8b8;
+    position: absolute;
+    left: 0;
+    top: 20px;
+  }
+  #partners-social-bottom .col-md-2 #social-buttons {
+    margin-left: 20px;
+  }
+  #partners-social-bottom .col-md-2 #social-buttons a {
+    display: block;
+    margin: 20px 0;
+    color: #424242;
+    font-size: 1.2em;
+  }
+  #partners-social-bottom .col-md-2 #social-buttons a img {
+    max-width: 60px;
+    margin-right: 5px;
+  }
+}
+#partners-social-bottom .partners {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  margin-top: 35px;
+}
+#partners-social-bottom .partners a {
+  color: black;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+#partners-social-bottom .partners a span,
+#partners-social-bottom .partners a img {
+  display: block;
+  text-align: center;
+  max-width: 90%;
+  margin-bottom: 20px;
+}
 #partners-social-bottom #more-partners {
   position: absolute;
-  bottom: 80px;
+  bottom: 0;
 }
 #partners-social-bottom #more-partners a {
   width: 360px;
@@ -7758,11 +7807,6 @@ img {
 @media screen and (min-width: 992px) {
   .front #block-views-le-saviez-vous-ss-block {
     height: 340px;
-    color: white;
-  }
-  .front #block-views-le-saviez-vous-ss-block #quatre-raisons {
-    font-size: 3.2em;
-    margin: 25px 0;
   }
   .front #block-views-le-saviez-vous-ss-block .views-field-body {
     font-size: 1.8em;
@@ -7823,6 +7867,14 @@ img {
   .front #block-views-le-saviez-vous-ss-block #widget_pager_bottom_le_saviez_vous_ss-block_1 .views_slideshow_pager_field_item.active a:before {
     background: url(../images/little_disk.png) no-repeat 0 0;
     opacity: 1;
+  }
+}
+@media screen and (max-width: 992px) {
+  .front #block-views-le-saviez-vous-ss-block .views-field-body {
+    width: 100%;
+  }
+  .front #block-views-le-saviez-vous-ss-block #home-ss-illustrations {
+    display: none;
   }
 }
 .front #block-views-le-saviez-vous-ss-block #home-ss-illustrations {

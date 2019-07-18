@@ -110,12 +110,6 @@
     position: relative;
     @media screen and (min-width: @screen-md) {
       height: 340px;
-
-      color: white;
-      #quatre-raisons {
-        font-size: 3.2em;
-        margin: 25px 0;
-      }
       .views-field-body {
         font-size: 1.8em;
         width: 500px;
@@ -185,6 +179,15 @@
         }
       }
     }
+    @media screen and (max-width: @screen-md) {
+      .views-field-body {
+        width: 100%;
+      }
+      #home-ss-illustrations {
+        display: none;
+      }
+    }
+
     #home-ss-illustrations {
       position: absolute;
       top: -20px;
