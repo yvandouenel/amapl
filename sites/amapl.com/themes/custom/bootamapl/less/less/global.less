@@ -47,6 +47,22 @@ img {
 #top-amapl-navigation {
   @media screen and (max-width: @screen-md) {
     background-color: @black-amapl;
+    ul > li {
+      background-color: @black-amapl;
+      &.active {
+        background-color: white;
+        > a {
+          color: black !important;
+        }
+      }
+    }
+
+    /* Menu principal *****************/
+    #main-amapl-navigation {
+      ul.navbar-nav {
+        margin: 7.5px 0 7.5px -15px !important;
+      }
+    }
   }
   /* Menu Haut ********************************************/
   #block-menu-block-1 {
@@ -139,10 +155,17 @@ img {
             padding: 10px 15px;
             color: white;
           }
+          &:active {
+            > a {
+              padding: 10px 15px;
+              color: black !important;
+            }
+          }
         }
       }
     }
   }
+
   /* Fin du menu principal ********************************/
 }
 /* footer *************************************************/
@@ -179,26 +202,35 @@ img {
   }
   .partners {
     display: flex;
-    justify-content: space-around;
+
     flex-flow: row wrap;
     margin-top: 35px;
-    a {
-      color: black;
-      font-size: 1.5em;
-      text-transform: uppercase;
-      span,
-      img {
-        display: block;
-        text-align: center;
-        max-width: 90%;
-        margin-bottom: 20px;
+    #first-partners,
+    #second-partners {
+      display: flex;
+      justify-content: space-around;
+      flex-flow: row wrap;
+      flex-grow: 1;
+      a {
+        color: black;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        span,
+        img {
+          display: block;
+          text-align: center;
+          max-width: 90%;
+          margin-bottom: 20px;
+        }
       }
     }
   }
 
   #more-partners {
-    position: absolute;
-    bottom: 0;
+    @media screen and (min-width: @screen-md) {
+      position: absolute;
+      bottom: 0;
+    }
     a {
       width: 360px;
       position: relative;

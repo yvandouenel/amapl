@@ -9,15 +9,21 @@
   color: black;
   z-index: 1;
   text-align: center;
+  @media screen and (max-width: @screen-md) {
+    margin: 20px auto 0 auto;
+  }
 }
+
 .img-home-3-cols {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  @media screen and (min-width: @screen-md) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 /* titre bas formation ************************************************/
-.h3-bottom-training{
+.h3-bottom-training {
   &.pl {
     a {
       background: url(../images/picto_formation_bleu.png) no-repeat 0 0;

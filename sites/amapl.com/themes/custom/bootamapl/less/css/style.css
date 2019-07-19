@@ -7567,6 +7567,19 @@ img {
 @media screen and (max-width: 992px) {
   #top-amapl-navigation {
     background-color: #424242;
+    /* Menu principal *****************/
+  }
+  #top-amapl-navigation ul > li {
+    background-color: #424242;
+  }
+  #top-amapl-navigation ul > li.active {
+    background-color: white;
+  }
+  #top-amapl-navigation ul > li.active > a {
+    color: black !important;
+  }
+  #top-amapl-navigation #main-amapl-navigation ul.navbar-nav {
+    margin: 7.5px 0 7.5px -15px !important;
   }
 }
 @media screen and (min-width: 992px) {
@@ -7648,6 +7661,10 @@ img {
     padding: 10px 15px;
     color: white;
   }
+  #top-amapl-navigation #main-amapl-navigation ul > li:active > a {
+    padding: 10px 15px;
+    color: black !important;
+  }
 }
 /* footer *************************************************/
 #partners-social-bottom {
@@ -7682,25 +7699,36 @@ img {
 }
 #partners-social-bottom .partners {
   display: flex;
-  justify-content: space-around;
   flex-flow: row wrap;
   margin-top: 35px;
 }
-#partners-social-bottom .partners a {
+#partners-social-bottom .partners #first-partners,
+#partners-social-bottom .partners #second-partners {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  flex-grow: 1;
+}
+#partners-social-bottom .partners #first-partners a,
+#partners-social-bottom .partners #second-partners a {
   color: black;
   font-size: 1.5em;
   text-transform: uppercase;
 }
-#partners-social-bottom .partners a span,
-#partners-social-bottom .partners a img {
+#partners-social-bottom .partners #first-partners a span,
+#partners-social-bottom .partners #second-partners a span,
+#partners-social-bottom .partners #first-partners a img,
+#partners-social-bottom .partners #second-partners a img {
   display: block;
   text-align: center;
   max-width: 90%;
   margin-bottom: 20px;
 }
-#partners-social-bottom #more-partners {
-  position: absolute;
-  bottom: 0;
+@media screen and (min-width: 992px) {
+  #partners-social-bottom #more-partners {
+    position: absolute;
+    bottom: 0;
+  }
 }
 #partners-social-bottom #more-partners a {
   width: 360px;
@@ -7718,11 +7746,18 @@ img {
   z-index: 1;
   text-align: center;
 }
-.img-home-3-cols {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+@media screen and (max-width: 992px) {
+  .title-home-3-cols {
+    margin: 20px auto 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .img-home-3-cols {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 /* titre bas formation ************************************************/
 .h3-bottom-training.pl a {
@@ -8016,11 +8051,18 @@ img {
   z-index: 1;
   text-align: center;
 }
-.three-cols-home #block-views-trainings-block-home-training #top-training {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+@media screen and (max-width: 992px) {
+  .three-cols-home #block-views-trainings-block-home-training h2.block-title {
+    margin: 20px auto 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .three-cols-home #block-views-trainings-block-home-training #top-training {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 .three-cols-home #block-views-news-block-zoom {
   position: relative;
@@ -8040,11 +8082,18 @@ img {
   text-align: center;
   z-index: 1;
 }
-.three-cols-home #block-views-news-block-zoom .field-name-field-news-image img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+@media screen and (max-width: 992px) {
+  .three-cols-home #block-views-news-block-zoom h2.block-title {
+    margin: 20px auto 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .three-cols-home #block-views-news-block-zoom .field-name-field-news-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 .three-cols-home #block-views-news-block-news {
   position: relative;
@@ -8064,11 +8113,18 @@ img {
   text-align: center;
   z-index: 1;
 }
-.three-cols-home #block-views-news-block-news #top-news {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+@media screen and (max-width: 992px) {
+  .three-cols-home #block-views-news-block-news h2.block-title {
+    margin: 20px auto 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .three-cols-home #block-views-news-block-news #top-news {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 }
 .three-cols-home #block-views-news-block-news .h3-bottom-home.pl a {
   background: url(../images/picto_actu_bleu.png) no-repeat 0 0;
