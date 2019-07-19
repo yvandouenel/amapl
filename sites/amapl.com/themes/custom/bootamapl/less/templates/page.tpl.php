@@ -197,9 +197,17 @@
   </div>
 </div>
 
-
-<?php if (!empty($page['footer'])): ?>
-  <footer class="footer <?php print $container_class; ?>">
-    <?php print render($page['footer']); ?>
-  </footer>
+<?php if (!empty($page['footer-1'])): ?>
+<footer class="footer">
+  <div id="under-parteners-social">
+    <div class="<?php print $container_class; ?>">
+      <?php print render($page['footer-1']); ?>
+    </div>
+  </div>
+  <div id="under-nav-bottom">
+    <div class="<?php print $container_class; ?>">
+      <?php print render($page['footer-2']); ?>
+    </div>
+  </div>
+</footer>
 <?php endif; ?>
