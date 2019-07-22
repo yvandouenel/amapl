@@ -7594,6 +7594,11 @@ img {
   border-color: transparent;
 }
 /* Zone de menu *****************************************/
+@media screen and (max-width: 992px) {
+  .navbar-collapse {
+    padding: 0 !important;
+  }
+}
 #top-amapl-navigation {
   /* Menu Haut ********************************************/
   /* Fin du menu haut *************************************/
@@ -7703,19 +7708,23 @@ img {
   }
 }
 /* footer *************************************************/
-#under-parteners-social {
+.footer {
+  margin-top: 0;
+  border: 0;
+}
+.footer #under-parteners-social {
   background-color: #faf7f7;
 }
-#under-parteners-social .container {
+.footer #under-parteners-social .container {
   border: 0;
   padding-top: 0;
 }
-#under-parteners-social .container #partners-social-bottom {
+.footer #under-parteners-social .container #partners-social-bottom {
   position: relative;
   padding: 20px 10px;
 }
 @media screen and (min-width: 992px) {
-  #under-parteners-social .container #partners-social-bottom .col-md-2:before {
+  .footer #under-parteners-social .container #partners-social-bottom .col-md-2:before {
     display: block;
     content: "";
     height: 95%;
@@ -7725,67 +7734,108 @@ img {
     left: 0;
     top: 20px;
   }
-  #under-parteners-social .container #partners-social-bottom .col-md-2 #social-buttons {
+  .footer #under-parteners-social .container #partners-social-bottom .col-md-2 #social-buttons {
     margin-left: 20px;
   }
-  #under-parteners-social .container #partners-social-bottom .col-md-2 #social-buttons .social-bottom {
+  .footer #under-parteners-social .container #partners-social-bottom .col-md-2 #social-buttons .social-bottom {
     margin-top: 30px;
   }
-  #under-parteners-social .container #partners-social-bottom .col-md-2 #social-buttons .social-bottom a {
+  .footer #under-parteners-social .container #partners-social-bottom .col-md-2 #social-buttons .social-bottom a {
     display: block;
     margin: 0;
     color: #424242;
     font-size: 1.16em;
     font-weight: 700;
   }
-  #under-parteners-social .container #partners-social-bottom .col-md-2 #social-buttons .social-bottom a img {
+  .footer #under-parteners-social .container #partners-social-bottom .col-md-2 #social-buttons .social-bottom a img {
     max-width: 60px;
     margin-right: 5px;
   }
+  .footer #under-parteners-social .container #partners-social-bottom .col-md-2 #social-buttons .social-bottom a:hover {
+    color: #6cf1b4;
+  }
 }
-#under-parteners-social .container #partners-social-bottom .partners {
+.footer #under-parteners-social .container #partners-social-bottom .partners {
   display: flex;
   flex-flow: row wrap;
   margin-top: 5px;
 }
-#under-parteners-social .container #partners-social-bottom .partners #first-partners,
-#under-parteners-social .container #partners-social-bottom .partners #second-partners {
+.footer #under-parteners-social .container #partners-social-bottom .partners #first-partners,
+.footer #under-parteners-social .container #partners-social-bottom .partners #second-partners {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
   flex-grow: 1;
 }
-#under-parteners-social .container #partners-social-bottom .partners #first-partners a,
-#under-parteners-social .container #partners-social-bottom .partners #second-partners a {
+.footer #under-parteners-social .container #partners-social-bottom .partners #first-partners a,
+.footer #under-parteners-social .container #partners-social-bottom .partners #second-partners a {
   color: black;
   font-size: 1.5em;
   text-transform: uppercase;
 }
-#under-parteners-social .container #partners-social-bottom .partners #first-partners a span,
-#under-parteners-social .container #partners-social-bottom .partners #second-partners a span,
-#under-parteners-social .container #partners-social-bottom .partners #first-partners a img,
-#under-parteners-social .container #partners-social-bottom .partners #second-partners a img {
+.footer #under-parteners-social .container #partners-social-bottom .partners #first-partners a span,
+.footer #under-parteners-social .container #partners-social-bottom .partners #second-partners a span,
+.footer #under-parteners-social .container #partners-social-bottom .partners #first-partners a img,
+.footer #under-parteners-social .container #partners-social-bottom .partners #second-partners a img {
   display: block;
   text-align: center;
   max-width: 90%;
   margin-bottom: 20px;
 }
+.footer #under-parteners-social .container #partners-social-bottom .partners #first-partners a:hover,
+.footer #under-parteners-social .container #partners-social-bottom .partners #second-partners a:hover {
+  color: #6cf1b4;
+}
 @media screen and (min-width: 992px) {
-  #under-parteners-social .container #partners-social-bottom #more-partners {
+  .footer #under-parteners-social .container #partners-social-bottom #more-partners {
     position: absolute;
     bottom: 0;
   }
-  #under-parteners-social .container #partners-social-bottom #more-partners a {
+  .footer #under-parteners-social .container #partners-social-bottom #more-partners a {
     width: 400px !important;
     position: relative;
   }
 }
-#under-parteners-social .container #partners-social-bottom #more-partners a {
+.footer #under-parteners-social .container #partners-social-bottom #more-partners a {
   width: 100%;
   position: relative;
 }
-#under-nav-bottom {
+.footer #under-nav-bottom {
   background-color: #424242;
+}
+@media screen and (min-width: 992px) {
+  .footer #under-nav-bottom ul.menu.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .footer #under-nav-bottom ul.menu.nav li a:after {
+    content: "";
+    display: block;
+    height: 40%;
+    width: 4px;
+    background-color: #6cf1b4;
+    position: absolute;
+    right: 0;
+    top: 30%;
+  }
+  .footer #under-nav-bottom ul.menu.nav li a:hover:after {
+    display: none;
+  }
+  .footer #under-nav-bottom ul.menu.nav li.last a:after {
+    display: none;
+  }
+}
+.footer #under-nav-bottom ul.menu.nav li a {
+  display: block;
+  padding: 10px 40px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.3em;
+  position: relative;
+}
+.footer #under-nav-bottom ul.menu.nav li a:hover {
+  color: #424242;
 }
 .title-home-3-cols {
   display: table;
