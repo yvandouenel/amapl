@@ -89,6 +89,15 @@ function feature_news_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'zoom' => array(
+        'custom_settings' => TRUE,
+      ),
+      'colorbox' => array(
+        'custom_settings' => FALSE,
+      ),
+      'sessions' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -99,10 +108,10 @@ function feature_news_strongarm() {
           'weight' => '1',
         ),
         'metatags' => array(
-          'weight' => '17',
+          'weight' => '40',
         ),
         'redirect' => array(
-          'weight' => '16',
+          'weight' => '30',
         ),
       ),
       'display' => array(),

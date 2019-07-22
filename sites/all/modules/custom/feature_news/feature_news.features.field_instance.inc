@@ -10,7 +10,7 @@
 function feature_news_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-news-body'
+  // Exported field_instance: 'node-news-body'.
   $field_instances['node-news-body'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -25,6 +25,12 @@ function feature_news_field_default_field_instances() {
         'weight' => 0,
       ),
       'teaser' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 2,
+      ),
+      'zoom' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
@@ -60,7 +66,56 @@ function feature_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_article_linked'
+  // Exported field_instance: 'node-news-field_flux_rss'.
+  $field_instances['node-news-field_flux_rss'] = array(
+    'bundle' => 'news',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_flux_rss',
+    'label' => 'Flux RSS',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 41,
+    ),
+  );
+
+  // Exported field_instance: 'node-news-field_news_article_linked'.
   $field_instances['node-news-field_news_article_linked'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -71,16 +126,35 @@ function feature_news_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
+          'colorbox_node_classes' => '',
+          'colorbox_node_height' => 600,
+          'colorbox_node_link' => FALSE,
+          'colorbox_node_width' => 600,
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 13,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'colorbox_node_classes' => '',
+          'colorbox_node_height' => 600,
+          'colorbox_node_link' => FALSE,
+          'colorbox_node_width' => 600,
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'node',
@@ -99,11 +173,11 @@ function feature_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 15,
+      'weight' => 14,
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_cat'
+  // Exported field_instance: 'node-news-field_news_cat'.
   $field_instances['node-news-field_news_cat'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -120,7 +194,13 @@ function feature_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 8,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
       ),
     ),
     'entity_type' => 'node',
@@ -142,7 +222,7 @@ function feature_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_event_linked'
+  // Exported field_instance: 'node-news-field_news_event_linked'.
   $field_instances['node-news-field_news_event_linked'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -153,16 +233,35 @@ function feature_news_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
+          'colorbox_node_classes' => '',
+          'colorbox_node_height' => 600,
+          'colorbox_node_link' => FALSE,
+          'colorbox_node_width' => 600,
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 12,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'colorbox_node_classes' => '',
+          'colorbox_node_height' => 600,
+          'colorbox_node_link' => FALSE,
+          'colorbox_node_width' => 600,
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -181,11 +280,11 @@ function feature_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 14,
+      'weight' => 13,
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_home_dump'
+  // Exported field_instance: 'node-news-field_news_home_dump'.
   $field_instances['node-news-field_news_home_dump'] = array(
     'bundle' => 'news',
     'default_value' => array(
@@ -206,7 +305,13 @@ function feature_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 4,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
       ),
     ),
     'entity_type' => 'node',
@@ -227,10 +332,14 @@ function feature_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_image'
+  // Exported field_instance: 'node-news-field_news_image'.
   $field_instances['node-news-field_news_image'] = array(
     'bundle' => 'news',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'sid' => 221,
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -245,14 +354,23 @@ function feature_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 10,
+      ),
+      'zoom' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(),
+        'type' => 'zoom',
+        'weight' => 1,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_news_image',
     'label' => 'Image',
     'required' => 0,
     'settings' => array(
+      'allow_override' => 0,
       'referencable_types' => array(
         'audio' => 0,
         'file' => 0,
@@ -274,7 +392,7 @@ function feature_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_linked'
+  // Exported field_instance: 'node-news-field_news_linked'.
   $field_instances['node-news-field_news_linked'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -285,16 +403,35 @@ function feature_news_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
+          'bypass_access' => FALSE,
+          'colorbox_node_classes' => '',
+          'colorbox_node_height' => 600,
+          'colorbox_node_link' => FALSE,
+          'colorbox_node_width' => 600,
           'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'colorbox_node_classes' => '',
+          'colorbox_node_height' => 600,
+          'colorbox_node_link' => FALSE,
+          'colorbox_node_width' => 600,
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -313,11 +450,11 @@ function feature_news_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 13,
+      'weight' => 12,
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_new_window'
+  // Exported field_instance: 'node-news-field_news_new_window'.
   $field_instances['node-news-field_news_new_window'] = array(
     'bundle' => 'news',
     'default_value' => array(
@@ -338,7 +475,13 @@ function feature_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 9,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
       ),
     ),
     'entity_type' => 'node',
@@ -359,7 +502,7 @@ function feature_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_publication_date'
+  // Exported field_instance: 'node-news-field_news_publication_date'.
   $field_instances['node-news-field_news_publication_date'] = array(
     'bundle' => 'news',
     'deleted' => 0,
@@ -375,7 +518,13 @@ function feature_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 3,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
       ),
     ),
     'entity_type' => 'node',
@@ -405,7 +554,7 @@ function feature_news_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_tag'
+  // Exported field_instance: 'node-news-field_news_tag'.
   $field_instances['node-news-field_news_tag'] = array(
     'bundle' => 'news',
     'default_value' => array(
@@ -461,7 +610,13 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 7,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
       ),
     ),
     'entity_type' => 'node',
@@ -483,51 +638,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
     ),
   );
 
-  // Exported field_instance: 'node-news-field_news_track_click'
-  $field_instances['node-news-field_news_track_click'] = array(
-    'bundle' => 'news',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 25,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_news_track_click',
-    'label' => 'Tracker le click',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 12,
-    ),
-  );
-
-  // Exported field_instance: 'node-news-field_news_url_target'
+  // Exported field_instance: 'node-news-field_news_url_target'.
   $field_instances['node-news-field_news_url_target'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -544,7 +655,13 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 1,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
       ),
     ),
     'entity_type' => 'node',
@@ -571,7 +688,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
     ),
   );
 
-  // Exported field_instance: 'node-news-field_scald_file'
+  // Exported field_instance: 'node-news-field_scald_file'.
   $field_instances['node-news-field_scald_file'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -589,7 +706,14 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'module' => 'domainedo_media',
+        'settings' => array(),
+        'type' => 'sdl_editor_representation',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'node',
@@ -618,7 +742,7 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
     ),
   );
 
-  // Exported field_instance: 'node-news-field_scald_video'
+  // Exported field_instance: 'node-news-field_scald_video'.
   $field_instances['node-news-field_scald_video'] = array(
     'bundle' => 'news',
     'default_value' => NULL,
@@ -636,7 +760,14 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 5,
+      ),
+      'zoom' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(),
+        'type' => 'sdl_editor_representation',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -665,6 +796,50 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
     ),
   );
 
+  // Exported field_instance: 'node-news-field_session_target'.
+  $field_instances['node-news-field_session_target'] = array(
+    'bundle' => 'news',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 0,
+      ),
+      'zoom' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_session_target',
+    'label' => 'cible',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 43,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Actualités liées');
@@ -675,14 +850,15 @@ Insérer les mots clés séparés par des virgules. L\'auto-complétion permet d
   t('Description et résumé');
   t('Evénements liés');
   t('Fichiers attachés');
+  t('Flux RSS');
   t('Image');
   t('Lien vers nouvelle fenêtre');
   t('Mots clés');
   t('Mots clés descriptifs de l\'actualité pour une éventuelle liaison avec des pages classiques ou d\'atterrissage. Si le terme "Tout" est présent, merci de le laisser.
 Insérer les mots clés séparés par des virgules. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré au moins 1 lettre.');
-  t('Tracker le click');
   t('URL de destination');
   t('Vidéo');
+  t('cible');
 
   return $field_instances;
 }
