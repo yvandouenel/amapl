@@ -93,14 +93,14 @@ $target = (isset($node->field_news_new_window['und'][0]['value']) &&
  * @ingroup themeable
  */
 ?>
-<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+<div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix node-teaser-news"<?php print $attributes; ?>>
 
   <?php print $user_picture; ?>
 
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
 
-    <h3 class="<?php print $title_class ?> h3-bottom-home">
+    <h3 class="<?php print $title_class ?> h3-bottom-home h3-news-list">
       <a target="<?php print $target; ?>" href="<?php print $url; ?>"><?php print $title; ?></a>
     </h3>
 
@@ -113,14 +113,23 @@ $target = (isset($node->field_news_new_window['und'][0]['value']) &&
     </div>
   <?php endif; ?>
 
-  <div class="content"<?php print $content_attributes; ?>>
+  <div class="content<?php print $content_attributes;print ' '; print $title_class;?>">
     <?php
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
       print render($content['field_news_image']);
       print render($content['body']);
+
       //dpm($node->field_session_target['und'][0]['value']);
     ?>
   </div>
 </div>
+<?php
+if(isset($url)) {
+  print '<div class="more-link ' . $title_class . '">
+  <a href="' . $url . '" target="' . $target . '">Lire la suite</a>
+  </div>';
+}
+
+?>
