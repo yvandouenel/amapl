@@ -190,8 +190,6 @@ function le_savez_vous_views_default_views() {
   $handler->display->display_options['footer']['area_text_custom']['content'] = '<div id="home-ss-illustrations">
 <img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character1.png" alt="medecin">
 <img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character2.png" alt="infirmière">
-<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character3.png" alt="">
-<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character4.png" alt="">
 </div>';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Critère de tri: Draggableviews : Poids */
@@ -300,8 +298,6 @@ function le_savez_vous_views_default_views() {
     t('<div id="home-ss-illustrations">
 <img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character1.png" alt="medecin">
 <img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character2.png" alt="infirmière">
-<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character3.png" alt="">
-<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character4.png" alt="">
 </div>'),
     t('Le saviez-vous'),
     t('Page'),

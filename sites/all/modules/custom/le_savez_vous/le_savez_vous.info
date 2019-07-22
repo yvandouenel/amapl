@@ -1,8 +1,9 @@
-name = Le savez-vous
+name = 4 raisons d'adhérer
 core = 7.x
 package = AMAPL
 version = 7.x-1.0
 project = le_savez_vous
+dependencies[] = bean
 dependencies[] = context
 dependencies[] = node
 dependencies[] = text

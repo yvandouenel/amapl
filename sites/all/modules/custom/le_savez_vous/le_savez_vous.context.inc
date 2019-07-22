@@ -32,6 +32,36 @@ function le_savez_vous_context_default_contexts() {
           'region' => 'slideshow',
           'weight' => '-10',
         ),
+        'bean-pro-liberal-accueil' => array(
+          'module' => 'bean',
+          'delta' => 'pro-liberal-accueil',
+          'region' => 'block-left-6',
+          'weight' => '-10',
+        ),
+        'bean-caa-accueil' => array(
+          'module' => 'bean',
+          'delta' => 'caa-accueil',
+          'region' => 'block-right-6',
+          'weight' => '-10',
+        ),
+        'views-trainings-block_home_training' => array(
+          'module' => 'views',
+          'delta' => 'trainings-block_home_training',
+          'region' => 'block-training',
+          'weight' => '-10',
+        ),
+        'views-news-block_zoom' => array(
+          'module' => 'views',
+          'delta' => 'news-block_zoom',
+          'region' => 'block-zoom',
+          'weight' => '-10',
+        ),
+        'views-news-block_news' => array(
+          'module' => 'views',
+          'delta' => 'news-block_news',
+          'region' => 'block-news',
+          'weight' => '-10',
+        ),
       ),
     ),
   );
