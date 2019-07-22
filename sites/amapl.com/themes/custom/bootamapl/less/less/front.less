@@ -287,10 +287,17 @@
     }
   }
   /* zoom *********************************************/
+
   #block-views-news-block-zoom {
     position: relative;
     .contextual-links-region {
       position: static;
+    }
+    .node-teaser-news {
+      @media screen and (min-width: @screen-md) {
+        height: 277px;
+        overflow: hidden;
+      }
     }
     h2.block-title {
       .title-home-3-cols;
@@ -304,6 +311,12 @@
   }
   /* Actualités ******************************************/
   #block-views-news-block-news {
+    .view-content {
+      @media screen and (min-width: @screen-md) {
+        height: 277px;
+        overflow: hidden;
+      }
+    }
     position: relative;
     .contextual-links-region {
       position: static;

@@ -1,0 +1,139 @@
+/* page de liste d'actualités */
+.page-s-informer-actualites {
+  .node-teaser-news {
+    h3.h3-news-list {
+      font-size: 2em;
+      font-weight: 900;
+    }
+    .field-name-field-news-image {
+      @media screen and (min-width: @screen-md) {
+        float: left;
+        margin-right: 20px;
+        max-width: 50%;
+      }
+    }
+  }
+  div.field-name-body {
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+  div.content {
+    &.both {
+      position: relative;
+      padding-left: 10px;
+      .field-name-field-news-image {
+        &:before {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 100%;
+          background: linear-gradient(
+            110deg,
+            @orange-caa-amapl 60%,
+            @blue-pl-amapl 60%
+          );
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        img {
+          border-left: 0;
+
+          &:after {
+            content: "";
+            display: block;
+            clear: both;
+          }
+        }
+      }
+    }
+    &.caa {
+      .field-name-field-news-image {
+        img {
+          border-left: 10px solid @orange-caa-amapl;
+        }
+      }
+    }
+    &.pl {
+      .field-name-field-news-image {
+        img {
+          border-left: 10px solid @blue-pl-amapl;
+        }
+      }
+    }
+  }
+  .more-link {
+    margin: 20px 0;
+    clear: both;
+    a {
+      text-align: right;
+      padding-right: 40px;
+      &:before {
+        position: static;
+        float: right;
+        margin: 0 10px 0 30px;
+      }
+    }
+    &.both {
+      a {
+        &:after {
+          background: linear-gradient(
+            110deg,
+            @orange-caa-amapl 60%,
+            @blue-pl-amapl 60%
+          );
+        }
+      }
+    }
+    &.caa {
+      a {
+        &:after {
+          background-color: @orange-caa-amapl;
+        }
+      }
+    }
+    &.pl {
+      a {
+        &:after {
+          background-color: @blue-pl-amapl;
+        }
+      }
+    }
+  }
+  #block-aggregator-feed-1 {
+    background-color: #61CFF7;
+    .more-link {
+      display: none;
+    }
+    @media screen and (min-width: @screen-md) {
+      margin-top: 90px;
+    }
+    padding: 20px 10px;
+    .title-block-aggregator {
+      color: white;
+      font-size: 1.4em;
+      margin-top: 0;
+    }
+    > ul {
+      margin: 0;
+      padding: 0;
+
+      > li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        a {
+          color: white;
+          display: block;
+          margin-bottom: 30px;
+          padding-top: 80px;
+          background: url(../images/separateur-dossiers.png) no-repeat 50% 0;
+        }
+      }
+    }
+  }
+}
+/* Fin de page de liste d'actualités */

@@ -47,6 +47,9 @@ img {
     }
   }
 }
+.page-header {
+  border: 0;
+}
 /* Fonctions ********************************************/
 .rounded(@radius: 8px) {
   border-radius: @radius;
@@ -350,3 +353,26 @@ img {
     }
   }
 }
+/* Toutes les pages sauf la page d'accueil ************************/
+/* Barre de séparation haute **************************************/
+body.not-front {
+  #under-main-title {
+    background-color: @light-grey-amapl;
+    &:before {
+      display: block;
+      content: "";
+      height: 61px;
+      background: url(../images/separateur-haut.png) no-repeat 50% 0;
+      border-bottom: 50px solid white;
+    }
+    h2.page-header {
+      background: url(../images/circl_mixte-top.png) no-repeat 0 -10px;
+      min-height: 140px;
+      padding-left: 172px;
+      padding-top: 30px;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+  }
+}
+
