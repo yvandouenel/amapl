@@ -27,13 +27,13 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Address'			, element : 'address' },
             */
 
-            { name : 'h2-home-yvan'		, element : 'h2', attributes : { 'class' : 'h2-home' }},
+            { name : 'Titre rond bleu', element : 'h3', attributes : { 'class' : 'title-pl title-col' }},
             { name : 'custom-quote'	, element : 'p', attributes : { 'class' : 'custom-quote' }},
             { name : 'important'	, element : 'p', attributes : { 'class' : 'important' }},
             { name : 'list-arrow', element : 'ul', attributes : { 'class' : 'list-arrow' }},
             { name : 'list-arrow-link', element : 'ul', attributes : { 'class' : 'list-arrow-link' }},
-            { name : 'separator-grey-bold', element : 'div', attributes : { 'class' : 'separator-grey-bold' }},
-            { name : 'separator-blue', element : 'div', attributes : { 'class' : 'separator-blue' }},
+            { name : 'pdf-bleu-centre', element : 'div', attributes : { 'class' : 'pdf-blue-center' }},
+            { name : 'pdf-orange-centre', element : 'div', attributes : { 'class' : 'pdf-orange-center' }},
             { name : 'separator-blue-bold', element : 'div', attributes : { 'class' : 'separator-blue-bold' }},
             { name : 'separator-transparent', element : 'div', attributes : { 'class' : 'separator-transparent' }},
             /* Inline Styles */
