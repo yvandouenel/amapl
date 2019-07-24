@@ -63,8 +63,7 @@ function page_amapl_field_default_field_instances() {
     'bundle' => 'page',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Première colonne avec un titre aux couleurs des PL.
-Deuxième  colonne avec un titre aux couleurs des  CAAA.',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -85,13 +84,17 @@ Deuxième  colonne avec un titre aux couleurs des  CAAA.',
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_page_2_cols',
-    'label' => '2 colonnes',
+    'label' => 'Contenu spécial',
     'required' => 0,
     'settings' => array(
       'add_mode' => 'select',
       'allowed_bundles' => array(
         '2_colonnes' => -1,
+        'drop_down_para' => 'drop_down_para',
+        'drop_down_para_orange' => 'drop_down_para_orange',
         'image_2_col' => -1,
+        'liste_pdf_bleus' => 'liste_pdf_bleus',
+        'liste_pdf_orange' => 'liste_pdf_orange',
         'paragraphe_simple' => -1,
         'titre_et_paragraphe' => 'titre_et_paragraphe',
         'titre_paragraphe_bouton' => -1,
@@ -99,7 +102,11 @@ Deuxième  colonne avec un titre aux couleurs des  CAAA.',
       ),
       'bundle_weights' => array(
         '2_colonnes' => 2,
+        'drop_down_para' => 15,
+        'drop_down_para_orange' => 19,
         'image_2_col' => 3,
+        'liste_pdf_bleus' => -14,
+        'liste_pdf_orange' => -16,
         'paragraphe_simple' => 4,
         'titre_et_paragraphe' => 12,
         'titre_paragraphe_bouton' => 5,
@@ -199,6 +206,293 @@ Deuxième  colonne avec un titre aux couleurs des  CAAA.',
       ),
       'type' => 'options_onoff',
       'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-drop_down_para-field_drop_down_title'.
+  $field_instances['paragraphs_item-drop_down_para-field_drop_down_title'] = array(
+    'bundle' => 'drop_down_para',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_drop_down_title',
+    'label' => 'Titre',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'paragraphs_item-drop_down_para-field_texte'.
+  $field_instances['paragraphs_item-drop_down_para-field_texte'] = array(
+    'bundle' => 'drop_down_para',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_texte',
+    'label' => 'Texte déroulant',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+        'show_token_tree' => 0,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-drop_down_para_orange-field_drop_down_title'.
+  $field_instances['paragraphs_item-drop_down_para_orange-field_drop_down_title'] = array(
+    'bundle' => 'drop_down_para_orange',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_drop_down_title',
+    'label' => 'Titre',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-drop_down_para_orange-field_texte'.
+  $field_instances['paragraphs_item-drop_down_para_orange-field_texte'] = array(
+    'bundle' => 'drop_down_para_orange',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_texte',
+    'label' => 'Texte',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+        'show_token_tree' => 0,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 34,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-liste_pdf_bleus-field_scald_file'.
+  $field_instances['paragraphs_item-liste_pdf_bleus-field_scald_file'] = array(
+    'bundle' => 'liste_pdf_bleus',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Ajoutez des fichiers pdf à télécharger (via un cliquer/glisser depuis scald) et il appraîtront avec une icône bleu et centrés 2 par 2.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(),
+        'type' => 'sdl_editor_representation',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_scald_file',
+    'label' => 'Fichiers attachés',
+    'required' => 0,
+    'settings' => array(
+      'allow_override' => 0,
+      'referencable_types' => array(
+        'audio' => 0,
+        'file' => 'file',
+        'gallery' => 0,
+        'image' => 0,
+        'twitter' => 0,
+        'video' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'atom_reference',
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
+      'type' => 'atom_reference_textfield',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'paragraphs_item-liste_pdf_orange-field_scald_file'.
+  $field_instances['paragraphs_item-liste_pdf_orange-field_scald_file'] = array(
+    'bundle' => 'liste_pdf_orange',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Ajoutez des fichiers pdf à télécharger (via un cliquer/glisser depuis scald) et il appraîtront avec une icône orange et centrés 2 par 2.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(),
+        'type' => 'sdl_editor_representation',
+        'weight' => 0,
+      ),
+      'paragraphs_editor_preview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'paragraphs_item',
+    'field_name' => 'field_scald_file',
+    'label' => 'Fichiers attachés',
+    'required' => 0,
+    'settings' => array(
+      'allow_override' => 0,
+      'referencable_types' => array(
+        'audio' => 0,
+        'file' => 'file',
+        'gallery' => 0,
+        'image' => 0,
+        'twitter' => 0,
+        'video' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'atom_reference',
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
+      'type' => 'atom_reference_textfield',
+      'weight' => 32,
     ),
   );
 
@@ -392,15 +686,19 @@ Deuxième  colonne avec un titre aux couleurs des  CAAA.',
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('2 colonnes');
+  t('Ajoutez des fichiers pdf à télécharger (via un cliquer/glisser depuis scald) et il appraîtront avec une icône bleu et centrés 2 par 2.');
+  t('Ajoutez des fichiers pdf à télécharger (via un cliquer/glisser depuis scald) et il appraîtront avec une icône orange et centrés 2 par 2.');
   t('Body');
+  t('Contenu spécial');
   t('Dans le cas où l\'on veut que le titre principal de la page soit mis en page de manière simple, sans icône sur sa gauche');
+  t('Fichiers attachés');
   t('Mots clés');
   t('Mots clés descriptifs de la page pour une  liaison avec des événements, des actualités et des articles. Si le terme "Tout" est présent, l\'article sera entouré de toutes les actus, tous les événements et tous les articles. L\'auto-complétion permet de retrouver les mots clés déjà utilisés après que vous ayez entré au moins 1 lettre.');
-  t('Première colonne avec un titre aux couleurs des PL.
-Deuxième  colonne avec un titre aux couleurs des  CAAA.');
+  t('Texte');
   t('Texte colonne droite');
   t('Texte colonne gauche');
+  t('Texte déroulant');
+  t('Titre');
   t('Titre colonne droite');
   t('Titre colonne gauche');
   t('Titre simple ?');

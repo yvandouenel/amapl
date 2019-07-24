@@ -42,6 +42,26 @@ function page_amapl_node_info() {
  */
 function page_amapl_paragraphs_info() {
   $items = array(
+    'drop_down_para' => array(
+      'name' => 'Titre et paragraphe déroulant bleu',
+      'bundle' => 'drop_down_para',
+      'locked' => '1',
+    ),
+    'drop_down_para_orange' => array(
+      'name' => 'Titre et paragraphe déroulant orange',
+      'bundle' => 'drop_down_para_orange',
+      'locked' => '1',
+    ),
+    'liste_pdf_bleus' => array(
+      'name' => 'Liste pdf bleus',
+      'bundle' => 'liste_pdf_bleus',
+      'locked' => '1',
+    ),
+    'liste_pdf_orange' => array(
+      'name' => 'Liste pdf orange',
+      'bundle' => 'liste_pdf_orange',
+      'locked' => '1',
+    ),
     'titre_et_paragraphe' => array(
       'name' => '2 cols - Titre et paragraphe',
       'bundle' => 'titre_et_paragraphe',
