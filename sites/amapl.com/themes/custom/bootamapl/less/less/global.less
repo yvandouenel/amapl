@@ -6,10 +6,15 @@ img {
   max-width: 100%;
 }
 /* liens *****************************************************/
+.rtecenter {
+  a {
+    margin: 20px auto !important;
+  }
+}
 .link-button {
-  display: table-cell;
+  display: block;
   color: white;
-  vertical-align: middle;
+  padding-top: 40px;
   text-align: center;
   font-weight: 900;
   font-size: 1.2em;
@@ -186,6 +191,11 @@ a.pdf {
 }
 /* fin des titres ***********************************************/
 /* textes *******************************************************/
+#block-system-main {
+  p {
+    font-size: 1.5em;
+  }
+}
 .col-txt {
   font-size: 1.6em;
   ul {
@@ -479,7 +489,6 @@ a.pdf {
     ul.menu.nav {
       @media screen and (min-width: @screen-md) {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-around;
         li {
           a {
