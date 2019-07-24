@@ -5,6 +5,15 @@ body {
 img {
   max-width: 100%;
 }
+/* responsive ************************************************/
+@media screen and (min-width: @screen-xl) {
+  .container {
+    width: 1400px !important;
+  }
+  .navbar.container {
+    max-width: 1400px !important;
+  }
+}
 /* liens *****************************************************/
 .rtecenter {
   a {
@@ -17,7 +26,7 @@ img {
   padding-top: 40px;
   text-align: center;
   font-weight: 900;
-  font-size: 1.2em;
+  font-size: 0.8em;
   margin: 20px;
   &:hover {
     text-decoration: none;
@@ -36,7 +45,7 @@ img {
   @media screen and (max-width: @screen-lg) {
     width: 260px;
     height: 71px;
-    font-size: 0.8em;
+
     &.link-blue-button {
       background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
     }
@@ -113,7 +122,55 @@ a.link-ok {
     border-bottom: 5px solid @blue-green-amapl;
   }
 }
-
+.paragraphs-item-liste-pdf-bleus {
+  .field-item {
+    width: 40%;
+    margin: 5px 5%;
+    float: left;
+    a.pdf {
+      background: url(../images/picto-pdf-bleu.png) no-repeat 40px 0;
+      font-size: 1.5em;
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+.paragraphs-item-liste-pdf-orange {
+  .field-item {
+    width: 40%;
+    margin: 5px 5%;
+    float: left;
+    a.pdf {
+      background: url(../images/picto-pdf-orange.png) no-repeat 40px 0;
+      font-size: 1.5em;
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+.pdf-orange-center {
+  .dnd-atom-wrapper {
+    width: 40%;
+    margin: 5px 5%;
+    float: left;
+    a.pdf {
+      background: url(../images/picto-pdf-orange.png) no-repeat 40px 0 !important;
+      background-size: 48px 48px !important;
+      font-size: 1.5em;
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
 a.pdf {
   display: block;
   margin: 15px 0;
@@ -187,6 +244,63 @@ a.pdf {
     background: url(../images/circl_title_caa.png) no-repeat 0 0;
     height: 120px;
     overflow: hidden;
+  }
+}
+.title-drop-down {
+  font-weight: 900;
+  font-size: 1.6em;
+  padding: 18px 30px;
+  margin: 40px 10px 20px 10px;
+  border-left: 15px solid #fff;
+  border-right: 15px solid #fff;
+  position: relative;
+  &:hover {
+    cursor: pointer;
+    background-color: @blue-green-amapl !important;
+  }
+  &.title-pl-drop-down {
+    background: @blue-light-pl-amapl url(../images/picto-deroule-bleu.png)
+      no-repeat 96% 4px;
+    &:before {
+      content: "";
+      width: 10px;
+      height: 100%;
+      background-color: #a7d3f3;
+      position: absolute;
+      top: 0;
+      left: -25px;
+    }
+    &:after {
+      content: "";
+      width: 10px;
+      height: 100%;
+      background-color: #a7d3f3;
+      position: absolute;
+      top: 0;
+      right: -25px;
+    }
+  }
+  &.title-caa-drop-down {
+    background: @orange-light-caa-amapl url(../images/picto-deroule-orange.png)
+      no-repeat 96% 4px;
+    &:before {
+      content: "";
+      width: 10px;
+      height: 100%;
+      background-color: #ffe78e;
+      position: absolute;
+      top: 0;
+      left: -25px;
+    }
+    &:after {
+      content: "";
+      width: 10px;
+      height: 100%;
+      background-color: #ffe78e;
+      position: absolute;
+      top: 0;
+      right: -25px;
+    }
   }
 }
 /* fin des titres ***********************************************/

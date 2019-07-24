@@ -12,6 +12,9 @@
   @media screen and (max-width: @screen-md) {
     margin: 20px auto 0 auto;
   }
+  @media screen and (min-width: @screen-xl) {
+    margin: 300px auto 0 auto;
+  }
 }
 
 .img-home-3-cols {
@@ -183,6 +186,10 @@
       width: 650px;
       height: 355px;
       overflow: hidden;
+      @media screen and (min-width: @screen-xl) {
+        right: 7%;
+        top: -20px;
+      }
       img {
         max-width: 650px;
         position: absolute;

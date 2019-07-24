@@ -5,7 +5,9 @@
  * Modify this file to override the Bootstrap Framework variables. You can copy
  * these variables directly from ../bootstrap/less/variables.less to this file.
  */
+/* screen size *******************/
 /* couleurs */
+/*#5EB8D5*/
 /*#5EB8D5*/
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -7524,6 +7526,15 @@ body {
 img {
   max-width: 100%;
 }
+/* responsive ************************************************/
+@media screen and (min-width: 1430px) {
+  .container {
+    width: 1400px !important;
+  }
+  .navbar.container {
+    max-width: 1400px !important;
+  }
+}
 /* liens *****************************************************/
 .rtecenter a {
   margin: 20px auto !important;
@@ -7534,7 +7545,7 @@ img {
   padding-top: 40px;
   text-align: center;
   font-weight: 900;
-  font-size: 1.2em;
+  font-size: 0.8em;
   margin: 20px;
 }
 .link-button:hover {
@@ -7557,7 +7568,6 @@ img {
   .link-button {
     width: 260px;
     height: 71px;
-    font-size: 0.8em;
     background-size: 260px 71px !important;
   }
   .link-button.link-blue-button {
@@ -7638,6 +7648,49 @@ a.link-ok:hover:after {
   text-decoration: none;
   border-bottom: 5px solid #6cf1b4;
 }
+.paragraphs-item-liste-pdf-bleus .field-item {
+  width: 40%;
+  margin: 5px 5%;
+  float: left;
+}
+.paragraphs-item-liste-pdf-bleus .field-item a.pdf {
+  background: url(../images/picto-pdf-bleu.png) no-repeat 40px 0;
+  font-size: 1.5em;
+}
+.paragraphs-item-liste-pdf-bleus:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.paragraphs-item-liste-pdf-orange .field-item {
+  width: 40%;
+  margin: 5px 5%;
+  float: left;
+}
+.paragraphs-item-liste-pdf-orange .field-item a.pdf {
+  background: url(../images/picto-pdf-orange.png) no-repeat 40px 0;
+  font-size: 1.5em;
+}
+.paragraphs-item-liste-pdf-orange:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.pdf-orange-center .dnd-atom-wrapper {
+  width: 40%;
+  margin: 5px 5%;
+  float: left;
+}
+.pdf-orange-center .dnd-atom-wrapper a.pdf {
+  background: url(../images/picto-pdf-orange.png) no-repeat 40px 0 !important;
+  background-size: 48px 48px !important;
+  font-size: 1.5em;
+}
+.pdf-orange-center:after {
+  content: "";
+  display: block;
+  clear: both;
+}
 a.pdf {
   display: block;
   margin: 15px 0;
@@ -7711,6 +7764,61 @@ a.pdf {
   background: url(../images/circl_title_caa.png) no-repeat 0 0;
   height: 120px;
   overflow: hidden;
+}
+.title-drop-down {
+  font-weight: 900;
+  font-size: 1.6em;
+  padding: 18px 30px;
+  margin: 40px 10px 20px 10px;
+  border-left: 15px solid #fff;
+  border-right: 15px solid #fff;
+  position: relative;
+}
+.title-drop-down:hover {
+  cursor: pointer;
+  background-color: #6cf1b4 !important;
+}
+.title-drop-down.title-pl-drop-down {
+  background: #4bcdf8 url(../images/picto-deroule-bleu.png) no-repeat 96% 4px;
+}
+.title-drop-down.title-pl-drop-down:before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: #a7d3f3;
+  position: absolute;
+  top: 0;
+  left: -25px;
+}
+.title-drop-down.title-pl-drop-down:after {
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: #a7d3f3;
+  position: absolute;
+  top: 0;
+  right: -25px;
+}
+.title-drop-down.title-caa-drop-down {
+  background: #ffb241 url(../images/picto-deroule-orange.png) no-repeat 96% 4px;
+}
+.title-drop-down.title-caa-drop-down:before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: #ffe78e;
+  position: absolute;
+  top: 0;
+  left: -25px;
+}
+.title-drop-down.title-caa-drop-down:after {
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: #ffe78e;
+  position: absolute;
+  top: 0;
+  right: -25px;
 }
 /* fin des titres ***********************************************/
 /* textes *******************************************************/
@@ -8067,6 +8175,11 @@ body.not-front #under-main-title h2.page-header.simple-title {
     margin: 20px auto 0 auto;
   }
 }
+@media screen and (min-width: 1430px) {
+  .title-home-3-cols {
+    margin: 300px auto 0 auto;
+  }
+}
 @media screen and (min-width: 992px) {
   .img-home-3-cols {
     position: absolute;
@@ -8217,6 +8330,12 @@ body.not-front #under-main-title h2.page-header.simple-title {
   height: 355px;
   overflow: hidden;
 }
+@media screen and (min-width: 1430px) {
+  .front #block-views-le-saviez-vous-ss-block #home-ss-illustrations {
+    right: 7%;
+    top: -20px;
+  }
+}
 .front #block-views-le-saviez-vous-ss-block #home-ss-illustrations img {
   max-width: 650px;
   position: absolute;
@@ -8344,6 +8463,11 @@ body.not-front #under-main-title h2.page-header.simple-title {
     margin: 20px auto 0 auto;
   }
 }
+@media screen and (min-width: 1430px) {
+  .three-cols-home #block-views-trainings-block-home-training h2.block-title {
+    margin: 300px auto 0 auto;
+  }
+}
 @media screen and (min-width: 992px) {
   .three-cols-home #block-views-trainings-block-home-training #top-training {
     position: absolute;
@@ -8381,6 +8505,11 @@ body.not-front #under-main-title h2.page-header.simple-title {
     margin: 20px auto 0 auto;
   }
 }
+@media screen and (min-width: 1430px) {
+  .three-cols-home #block-views-news-block-zoom h2.block-title {
+    margin: 300px auto 0 auto;
+  }
+}
 @media screen and (min-width: 992px) {
   .three-cols-home #block-views-news-block-zoom .field-name-field-news-image img {
     position: absolute;
@@ -8416,6 +8545,11 @@ body.not-front #under-main-title h2.page-header.simple-title {
 @media screen and (max-width: 992px) {
   .three-cols-home #block-views-news-block-news h2.block-title {
     margin: 20px auto 0 auto;
+  }
+}
+@media screen and (min-width: 1430px) {
+  .three-cols-home #block-views-news-block-news h2.block-title {
+    margin: 300px auto 0 auto;
   }
 }
 @media screen and (min-width: 992px) {
