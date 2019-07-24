@@ -1,4 +1,5 @@
 <?php
+  $simple_title = "complex-title";
 /**
  * @file
  * Default theme implementation to display a single Drupal page.
@@ -116,12 +117,14 @@
 
   </div>
 </header>
+<?php if (isset($node->field_titre_simple_['und'][0]['value']) &&
+$node->field_titre_simple_['und'][0]['value']) $simple_title = "simple-title" ?>
 <?php if (!empty($title)): ?>
-  <div id="under-main-title">
+  <div id="under-main-title" class="<?php print $simple_title; ?>">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2 class="page-header"><?php print $title; ?></h2>
+          <h2 class="page-header <?php print $simple_title; ?>"><?php print $title; ?></h2>
         </div>
       </div>
     </div>
@@ -175,25 +178,27 @@
       <?php endif; ?>
 
       <section<?php print $content_column_class; ?>>
-        <?php if (!empty($page['highlighted'])): ?>
-          <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
-        <?php endif; ?>
+        <div id="central-content-wrapper">
+          <?php if (!empty($page['highlighted'])): ?>
+            <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
+          <?php endif; ?>
 
-        <a id="main-content"></a>
-        <?php print render($title_prefix); ?>
+          <a id="main-content"></a>
+          <?php print render($title_prefix); ?>
 
-        <?php print render($title_suffix); ?>
-        <?php print $messages; ?>
-        <?php if (!empty($tabs)): ?>
-          <?php print render($tabs); ?>
-        <?php endif; ?>
-        <?php if (!empty($page['help'])): ?>
-          <?php print render($page['help']); ?>
-        <?php endif; ?>
-        <?php if (!empty($action_links)): ?>
-          <ul class="action-links"><?php print render($action_links); ?></ul>
-        <?php endif; ?>
-        <?php print render($page['content']); ?>
+          <?php print render($title_suffix); ?>
+          <?php print $messages; ?>
+          <?php if (!empty($tabs)): ?>
+            <?php print render($tabs); ?>
+          <?php endif; ?>
+          <?php if (!empty($page['help'])): ?>
+            <?php print render($page['help']); ?>
+          <?php endif; ?>
+          <?php if (!empty($action_links)): ?>
+            <ul class="action-links"><?php print render($action_links); ?></ul>
+          <?php endif; ?>
+          <?php print render($page['content']); ?>
+        </div>
       </section>
 
       <?php if (!empty($page['sidebar_second'])): ?>
