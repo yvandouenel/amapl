@@ -27,7 +27,7 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'Address'			, element : 'address' },
             */
 
-            { name : 'h2-home'		, element : 'h2', attributes : { 'class' : 'h2-home' }},
+            { name : 'h2-home-yvan'		, element : 'h2', attributes : { 'class' : 'h2-home' }},
             { name : 'custom-quote'	, element : 'p', attributes : { 'class' : 'custom-quote' }},
             { name : 'important'	, element : 'p', attributes : { 'class' : 'important' }},
             { name : 'list-arrow', element : 'ul', attributes : { 'class' : 'list-arrow' }},
@@ -41,17 +41,16 @@ if(typeof(CKEDITOR) !== 'undefined') {
             // These are core styles available as toolbar buttons. You may opt enabling
             // some of them in the "Styles" drop-down list, removing them from the toolbar.
 
-             { name : 'know-more'	, element : 'a', attributes : { 'class' : 'know-more' }},
-             { name : 'link-plus'	, element : 'a', attributes : { 'class' : 'link-plus' }},
-             { name : 'link-arrow'	, element : 'a', attributes : { 'class' : 'link-arrow' }},
-             { name : 'custom-date'	, element : 'span', attributes : { 'class' : 'custom-date' }},
-             { name : 'custom-location'	, element : 'span', attributes : { 'class' : 'custom-location' }},
-             { name : 'red-lppl'	, element : 'span', attributes : { 'class' : 'red-lppl' }}
+             { name : 'lien-bouton-bleu'	, element : 'a', attributes : { 'class' : 'link-blue-button link-button' }},
+             { name : 'lien-bouton-orange'	, element : 'a', attributes : { 'class' : 'link-orange-button link-button' }},
+             { name : 'lien-pouce-bleu'	, element : 'a', attributes : { 'class' : 'link-ok link-ok-blue' }},
+             { name : 'lien-pouce-orange'	, element : 'a', attributes : { 'class' : 'link-ok link-ok-orange' }},
+             /* { name : 'lien-bouton-bleu'		, element : 'a', attributes : { 'class' : 'link-blue-button' }} */
 
             /* Object Styles */
 
 
 
-            
+
     ]);
 }
