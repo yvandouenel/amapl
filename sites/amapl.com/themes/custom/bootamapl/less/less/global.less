@@ -5,12 +5,122 @@ body {
 img {
   max-width: 100%;
 }
-.title-smallcap-black {
-  text-transform: uppercase;
-  color: black;
-  font-size: 1.3em;
-  font-weight: 800;
+/* liens *****************************************************/
+.link-button {
+  display: table-cell;
+  color: white;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.2em;
+  margin: 20px;
+  &:hover {
+    text-decoration: none;
+  }
+  @media screen and (min-width: @screen-lg) {
+    width: 400px;
+    height: 108px;
+    &.link-blue-button {
+      background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    }
+    &.link-orange-button {
+      background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+    }
+    background-size: 400px 108px !important;
+  }
+  @media screen and (max-width: @screen-lg) {
+    width: 260px;
+    height: 71px;
+    font-size: 0.8em;
+    &.link-blue-button {
+      background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    }
+    &.link-orange-button {
+      background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+    }
+    background-size: 260px 71px !important;
+  }
 }
+a.link-ok {
+  display: block;
+  text-align: right;
+  padding: 140px 20px 0 0;
+  position: relative;
+  font-weight: 900;
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    width: 13px;
+    height: 19px;
+  }
+  &:hover {
+    text-decoration: none;
+    color: black;
+    &:after {
+      background: url(../images/puce-fleche-noire.png) no-repeat 0 0 !important;
+    }
+  }
+  @media screen and (min-width: @screen-lg) {
+    width: 400px;
+    height: 186px;
+    &.link-ok-blue {
+      background: url(../images/BNC-thumbUp.png) no-repeat 0 0;
+      &:after {
+        background: url(../images/puce-fleche-bleue.png) no-repeat 0 0;
+      }
+    }
+    &.link-ok-orange {
+      background: url(../images/CAA-thumbUp.png) no-repeat 0 0;
+      &:after {
+        background: url(../images/puce-fleche-orange.png) no-repeat 0 0;
+      }
+    }
+    background-size: 400px 186px !important;
+  }
+  @media screen and (max-width: @screen-lg) {
+    padding: 85px 20px 0 0;
+    width: 260px;
+    height: 121px;
+    &.link-ok-blue {
+      background: url(../images/BNC-thumbUp.png) no-repeat 0 0;
+      &:after {
+        background: url(../images/puce-fleche-bleue.png) no-repeat 0 0;
+        bottom: 10px;
+      }
+    }
+    &.link-ok-orange {
+      background: url(../images/CAA-thumbUp.png) no-repeat 0 0;
+      &:after {
+        background: url(../images/puce-fleche-orange.png) no-repeat 0 0;
+        bottom: 10px;
+      }
+    }
+    background-size: 260px 121px !important;
+  }
+}
+.hover-green {
+  display: inline;
+  &:hover {
+    text-decoration: none;
+    border-bottom: 5px solid @blue-green-amapl;
+  }
+}
+
+a.pdf {
+  display: block;
+  margin: 15px 0;
+  vertical-align: middle;
+  min-height: 48px;
+  padding-left: 100px;
+  padding-top: 10px;
+  background: url(../images/picto-pdf-bleu.png) no-repeat 40px 0;
+  background-size: 48px 48px !important;
+  color: black;
+}
+
 .more-link {
   a {
     display: block;
@@ -47,6 +157,68 @@ img {
     }
   }
 }
+/* fin des liens ******************************************************/
+/* titres *************************************************************/
+.title-smallcap-black {
+  text-transform: uppercase;
+  color: black;
+  font-size: 1.3em;
+  font-weight: 800;
+}
+.title-col {
+  text-transform: uppercase;
+  padding-left: 120px;
+  padding-top: 40px;
+  font-size: 2em;
+  font-weight: 900;
+  &.title-pl {
+    color: @blue-pl-amapl;
+    background: url(../images/circl_title_pl.png) no-repeat 0 0;
+    height: 120px;
+    overflow: hidden;
+  }
+  &.title-caa {
+    color: @orange-caa-amapl;
+    background: url(../images/circl_title_caa.png) no-repeat 0 0;
+    height: 120px;
+    overflow: hidden;
+  }
+}
+/* fin des titres ***********************************************/
+/* textes *******************************************************/
+.col-txt {
+  font-size: 1.6em;
+  ul {
+    list-style: none;
+    li {
+      margin-bottom: 25px;
+      padding-left: 30px;
+      background: url(../images/puce-fleche-noire.png) no-repeat 0 5px;
+      a {
+        .hover-green;
+      }
+    }
+  }
+  &.txt-pl {
+    ul {
+      li {
+        a {
+          color: @blue-pl-amapl;
+        }
+      }
+    }
+  }
+  &.txt-caa {
+    ul {
+      li {
+        a {
+          color: @orange-caa-amapl;
+        }
+      }
+    }
+  }
+}
+/* Fin des textes ************************************************/
 .page-header {
   border: 0;
 }
@@ -357,7 +529,9 @@ img {
 /* Barre de séparation haute **************************************/
 body.not-front {
   #under-main-title {
-    background-color: @light-grey-amapl;
+    &.complex-title {
+      background-color: @light-grey-amapl;
+    }
     &:before {
       display: block;
       content: "";
@@ -366,13 +540,26 @@ body.not-front {
       border-bottom: 50px solid white;
     }
     h2.page-header {
-      background: url(../images/circl_mixte-top.png) no-repeat 0 -10px;
-      min-height: 140px;
-      padding-left: 172px;
-      padding-top: 30px;
-      text-transform: uppercase;
-      font-weight: 900;
+      &.complex-title {
+        background: url(../images/circl_mixte-top.png) no-repeat 0 -10px;
+        min-height: 140px;
+        padding-left: 172px;
+        padding-top: 30px;
+        text-transform: uppercase;
+        font-weight: 900;
+        @media screen and (max-width: @screen-md) {
+          padding: 10px 0 20px 100px;
+          min-height: 80px;
+          font-size: 2em;
+          margin: 0 0 0 -20px;
+          background: url(../images/circl_mixte-top.png) no-repeat 0 -5px;
+          background-size: 100px 73px;
+        }
+      }
+      &.simple-title {
+        font-weight: 900;
+        font-size: 2.6em;
+      }
     }
   }
 }
-

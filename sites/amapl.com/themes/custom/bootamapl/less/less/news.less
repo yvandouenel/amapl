@@ -11,6 +11,11 @@
         margin-right: 20px;
         max-width: 50%;
       }
+      @media screen and (max-width: @screen-md) {
+        img {
+          margin-bottom: 10px;
+        }
+      }
     }
   }
   div.field-name-body {
@@ -22,26 +27,28 @@
   }
   div.content {
     &.both {
-      position: relative;
-      padding-left: 10px;
       .field-name-field-news-image {
-        &:before {
-          content: "";
-          display: block;
-          width: 10px;
-          height: 100%;
-          background: linear-gradient(
-            110deg,
-            @orange-caa-amapl 60%,
-            @blue-pl-amapl 60%
-          );
-          position: absolute;
-          top: 0;
-          left: 0;
+        position: relative;
+        padding-left: 10px;
+        display: block;
+        .field-item {
+          &:before {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 100%;
+            background: linear-gradient(
+              110deg,
+              @orange-caa-amapl 60%,
+              @blue-pl-amapl 60%
+            );
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
         }
         img {
           border-left: 0;
-
           &:after {
             content: "";
             display: block;
@@ -104,7 +111,7 @@
     }
   }
   #block-aggregator-feed-1 {
-    background-color: #61CFF7;
+    background-color: #61cff7;
     .more-link {
       display: none;
     }
@@ -127,11 +134,25 @@
         padding: 0;
         a {
           color: white;
+          font-size: 1.2em;
           display: block;
           margin-bottom: 30px;
           padding-top: 80px;
           background: url(../images/separateur-dossiers.png) no-repeat 50% 0;
         }
+      }
+    }
+    @media screen and (min-width: @screen-md) {
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -20px;
+        top: 0px;
+        width: 10px;
+        height: 100%;
+        background-color: #a1cef6;
       }
     }
   }
