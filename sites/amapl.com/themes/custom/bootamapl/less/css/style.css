@@ -7526,6 +7526,24 @@ body {
 img {
   max-width: 100%;
 }
+.vertical-line-blue-left:before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: #a7d3f3;
+  position: absolute;
+  top: 0;
+  left: -25px;
+}
+.vertical-line-orange-left:before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: #ffe78e;
+  position: absolute;
+  top: 0;
+  left: -25px;
+}
 /* responsive ************************************************/
 @media screen and (min-width: 1430px) {
   .container {
@@ -7536,6 +7554,35 @@ img {
   }
 }
 /* liens *****************************************************/
+.hover-underline-blue-green:hover {
+  text-decoration: none;
+}
+.hover-underline-blue-green:hover:after {
+  content: "";
+  height: 9px;
+  width: 100%;
+  background-color: #6cf1b4;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  z-index: -1;
+}
+.field a {
+  position: relative;
+}
+.field a:hover {
+  text-decoration: none;
+}
+.field a:hover:after {
+  content: "";
+  height: 9px;
+  width: 100%;
+  background-color: #6cf1b4;
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  z-index: -1;
+}
 .rtecenter a {
   margin: 20px auto !important;
 }
@@ -7721,6 +7768,7 @@ a.pdf {
 }
 .more-link a:hover:before {
   font-weight: bold;
+  color: #6cf1b4;
 }
 .more-link a:before {
   display: block;
@@ -7821,6 +7869,65 @@ a.pdf {
   right: -25px;
 }
 /* fin des titres ***********************************************/
+/* Listes à puce ************************************************/
+.field ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.field ul li {
+  font-size: 1.6em;
+  margin: 15px 0;
+  padding: 5px 0 5px 30px;
+  background: url(../images/mini-rond-mixte.png) no-repeat 5px 8px;
+}
+.field ul li.li-blue {
+  background: url(../images/mini-rond-PL.png) no-repeat 5px 8px;
+}
+.field ul li.li-orange {
+  background: url(../images/mini-rond-CAA.png) no-repeat 5px 8px;
+}
+.field ul.ul-blue {
+  padding: 15px 20px;
+  margin: 30px 0 30px 10px;
+  background-color: #4bcdf8;
+  color: white;
+  border-left: 15px solid white;
+  position: relative;
+}
+.field ul.ul-blue:before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: #a7d3f3;
+  position: absolute;
+  top: 0;
+  left: -25px;
+}
+.field ul.ul-blue li {
+  background: url(../images/mini-rond-blanc.png) no-repeat 5px 10px;
+}
+.field ul.ul-orange {
+  padding: 15px 20px;
+  margin: 30px 0 30px 10px;
+  background-color: #ffb241;
+  color: white;
+  border-left: 15px solid white;
+  position: relative;
+  margin-left: 10px;
+}
+.field ul.ul-orange:before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: #ffe78e;
+  position: absolute;
+  top: 0;
+  left: -25px;
+}
+.field ul.ul-orange li {
+  background: url(../images/mini-rond-blanc.png) no-repeat 5px 10px;
+}
 /* textes *******************************************************/
 #block-system-main p {
   font-size: 1.5em;
@@ -7848,6 +7955,41 @@ a.pdf {
 }
 .col-txt.txt-caa ul li a {
   color: #ff9d0f;
+}
+.para-blue {
+  padding: 15px 20px;
+  margin: 30px 0 30px 10px;
+  background-color: #4bcdf8;
+  color: white;
+  border-left: 15px solid white;
+  position: relative;
+}
+.para-blue:before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: #a7d3f3;
+  position: absolute;
+  top: 0;
+  left: -25px;
+}
+.para-orange {
+  padding: 15px 20px;
+  margin: 30px 0 30px 10px;
+  background-color: #ffb241;
+  color: white;
+  border-left: 15px solid white;
+  position: relative;
+  margin-left: 10px;
+}
+.para-orange:before {
+  content: "";
+  width: 10px;
+  height: 100%;
+  background-color: #ffe78e;
+  position: absolute;
+  top: 0;
+  left: -25px;
 }
 /* Fin des textes ************************************************/
 .page-header {
@@ -8368,13 +8510,18 @@ body.not-front #under-main-title h2.page-header.simple-title {
 }
 .two-cols-home > div.col-home-first a:hover:after {
   content: "";
-  height: 15px;
-  width: 50%;
+  height: 9px;
+  width: 100%;
   background-color: #6cf1b4;
   position: absolute;
-  bottom: 0;
-  left: 25%;
+  bottom: 2px;
+  left: 0;
   z-index: -1;
+}
+.two-cols-home > div.col-home-first a:hover:after {
+  height: 15px;
+  width: 50% !important;
+  left: 25%;
 }
 .two-cols-home > div.col-home-first img {
   max-width: 80%;
@@ -8440,11 +8587,15 @@ body.not-front #under-main-title h2.page-header.simple-title {
 }
 /* 3 colonnes : training, zoom et news *********************************/
 .three-cols-home {
+  display: flex;
   margin-top: 30px;
   /* training ********************************************************/
   /* zoom *********************************************/
   /* Actualités ******************************************/
-  /* Zoom ****************************************************************/
+}
+.three-cols-home #block-views-trainings-block-home-training {
+  position: static;
+  padding-bottom: 40px;
 }
 .three-cols-home #block-views-trainings-block-home-training h2.block-title {
   display: table;
@@ -8476,17 +8627,17 @@ body.not-front #under-main-title h2.page-header.simple-title {
     z-index: -1;
   }
 }
+.three-cols-home #block-views-trainings-block-home-training .more-link a {
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+}
 .three-cols-home #block-views-news-block-zoom {
-  position: relative;
+  position: static;
+  padding-bottom: 40px;
 }
 .three-cols-home #block-views-news-block-zoom .contextual-links-region {
   position: static;
-}
-@media screen and (min-width: 992px) {
-  .three-cols-home #block-views-news-block-zoom .node-teaser-news {
-    height: 277px;
-    overflow: hidden;
-  }
 }
 .three-cols-home #block-views-news-block-zoom h2.block-title {
   display: table;
@@ -8518,14 +8669,14 @@ body.not-front #under-main-title h2.page-header.simple-title {
     z-index: -1;
   }
 }
-.three-cols-home #block-views-news-block-news {
-  position: relative;
+.three-cols-home #block-views-news-block-zoom .more-link a {
+  position: absolute;
+  bottom: 0;
+  width: 95%;
 }
-@media screen and (min-width: 992px) {
-  .three-cols-home #block-views-news-block-news .view-content {
-    height: 277px;
-    overflow: hidden;
-  }
+.three-cols-home #block-views-news-block-news {
+  position: static;
+  padding-bottom: 40px;
 }
 .three-cols-home #block-views-news-block-news .contextual-links-region {
   position: static;
@@ -8578,24 +8729,12 @@ body.not-front #under-main-title h2.page-header.simple-title {
   border-radius: 30px 8px 8px 30px;
   background-clip: padding-box;
 }
-.three-cols-home #block-views-news-block-zoom .h3-bottom-home.pl a {
-  background: url(../images/picto_actu_bleu.png) no-repeat 0 0;
-  background-size: 60px 60px;
+.three-cols-home #block-views-news-block-news .more-link a {
+  position: absolute;
+  bottom: 0;
+  width: 95%;
 }
-.three-cols-home #block-views-news-block-zoom .h3-bottom-home.caa a {
-  background: url(../images/picto_actu_orange.png) no-repeat 0 0;
-  background-size: 60px 60px;
-}
-.three-cols-home #block-views-news-block-zoom .h3-bottom-home a {
-  background: url(../images/picto_actu_mixte.png) no-repeat 0 0;
-  background-size: 60px 60px;
-}
-.three-cols-home #block-views-news-block-zoom .h3-bottom-home a:hover {
-  text-decoration: none;
-  background-color: #6cf1b4;
-  border-radius: 30px 8px 8px 30px;
-  background-clip: padding-box;
-}
+/* Fin des 3 colonnes : training, zoom et news ********************/
 /* page de liste d'actualités */
 .page-s-informer-actualites .node-teaser-news h3.h3-news-list {
   font-size: 2em;

@@ -219,17 +219,12 @@
         color: @blue-pl-amapl;
         font-size: 1.6em;
         z-index: 0;
+        .hover-underline-blue-green;
         &:hover {
-          text-decoration: none;
           &:after {
-            content: "";
             height: 15px;
-            width: 50%;
-            background-color: @blue-green-amapl;
-            position: absolute;
-            bottom: 0;
+            width: 50% !important;
             left: 25%;
-            z-index: -1;
           }
         }
       }
@@ -284,28 +279,32 @@
 }
 /* 3 colonnes : training, zoom et news *********************************/
 .three-cols-home {
+  display: flex;
   margin-top: 30px;
+
   /* training ********************************************************/
   #block-views-trainings-block-home-training {
+    position: static;
+    padding-bottom: 40px;
     h2.block-title {
       .title-home-3-cols;
     }
     #top-training {
       .img-home-3-cols;
     }
+    .more-link a {
+      position: absolute;
+      bottom: 0;
+      width: 95%;
+    }
   }
-  /* zoom *********************************************/
 
+  /* zoom *********************************************/
   #block-views-news-block-zoom {
-    position: relative;
+    position: static;
+    padding-bottom: 40px;
     .contextual-links-region {
       position: static;
-    }
-    .node-teaser-news {
-      @media screen and (min-width: @screen-md) {
-        height: 277px;
-        overflow: hidden;
-      }
     }
     h2.block-title {
       .title-home-3-cols;
@@ -316,16 +315,16 @@
         .img-home-3-cols;
       }
     }
+    .more-link a {
+      position: absolute;
+      bottom: 0;
+      width: 95%;
+    }
   }
   /* Actualités ******************************************/
   #block-views-news-block-news {
-    .view-content {
-      @media screen and (min-width: @screen-md) {
-        height: 277px;
-        overflow: hidden;
-      }
-    }
-    position: relative;
+    position: static;
+    padding-bottom: 40px;
     .contextual-links-region {
       position: static;
     }
@@ -339,11 +338,11 @@
     .h3-bottom-home {
       .h3-zoom-news;
     }
-  }
-  /* Zoom ****************************************************************/
-  #block-views-news-block-zoom {
-    .h3-bottom-home {
-      .h3-zoom-news;
+    .more-link a {
+      position: absolute;
+      bottom: 0;
+      width: 95%;
     }
   }
 }
+/* Fin des 3 colonnes : training, zoom et news ********************/

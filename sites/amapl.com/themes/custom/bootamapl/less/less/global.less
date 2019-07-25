@@ -5,6 +5,28 @@ body {
 img {
   max-width: 100%;
 }
+.vertical-line-blue-left {
+  &:before {
+    content: "";
+    width: 10px;
+    height: 100%;
+    background-color: #a7d3f3;
+    position: absolute;
+    top: 0;
+    left: -25px;
+  }
+}
+.vertical-line-orange-left {
+  &:before {
+    content: "";
+    width: 10px;
+    height: 100%;
+    background-color: #ffe78e;
+    position: absolute;
+    top: 0;
+    left: -25px;
+  }
+}
 /* responsive ************************************************/
 @media screen and (min-width: @screen-xl) {
   .container {
@@ -15,6 +37,27 @@ img {
   }
 }
 /* liens *****************************************************/
+.hover-underline-blue-green {
+  &:hover {
+    text-decoration: none;
+    &:after {
+      content: "";
+      height: 9px;
+      width: 100%;
+      background-color: @blue-green-amapl;
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      z-index: -1;
+    }
+  }
+}
+.field {
+  a {
+    position: relative;
+    .hover-underline-blue-green;
+  }
+}
 .rtecenter {
   a {
     margin: 20px auto !important;
@@ -199,6 +242,7 @@ a.pdf {
       }
       &:before {
         font-weight: bold;
+        color: @blue-green-amapl;
       }
     }
     &:before {
@@ -261,15 +305,7 @@ a.pdf {
   &.title-pl-drop-down {
     background: @blue-light-pl-amapl url(../images/picto-deroule-bleu.png)
       no-repeat 96% 4px;
-    &:before {
-      content: "";
-      width: 10px;
-      height: 100%;
-      background-color: #a7d3f3;
-      position: absolute;
-      top: 0;
-      left: -25px;
-    }
+    .vertical-line-blue-left;
     &:after {
       content: "";
       width: 10px;
@@ -283,15 +319,7 @@ a.pdf {
   &.title-caa-drop-down {
     background: @orange-light-caa-amapl url(../images/picto-deroule-orange.png)
       no-repeat 96% 4px;
-    &:before {
-      content: "";
-      width: 10px;
-      height: 100%;
-      background-color: #ffe78e;
-      position: absolute;
-      top: 0;
-      left: -25px;
-    }
+    .vertical-line-orange-left;
     &:after {
       content: "";
       width: 10px;
@@ -304,6 +332,38 @@ a.pdf {
   }
 }
 /* fin des titres ***********************************************/
+/* Listes à puce ************************************************/
+.field {
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      font-size: 1.6em;
+      margin: 15px 0;
+      padding: 5px 0 5px 30px;
+      background: url(../images/mini-rond-mixte.png) no-repeat 5px 8px;
+      &.li-blue {
+        background: url(../images/mini-rond-PL.png) no-repeat 5px 8px;
+      }
+      &.li-orange {
+        background: url(../images/mini-rond-CAA.png) no-repeat 5px 8px;
+      }
+    }
+    &.ul-blue {
+      .para-blue;
+      li {
+        background: url(../images/mini-rond-blanc.png) no-repeat 5px 10px;
+      }
+    }
+    &.ul-orange {
+      .para-orange;
+      li {
+        background: url(../images/mini-rond-blanc.png) no-repeat 5px 10px;
+      }
+    }
+  }
+}
 /* textes *******************************************************/
 #block-system-main {
   p {
@@ -341,6 +401,25 @@ a.pdf {
       }
     }
   }
+}
+.para-blue {
+  padding: 15px 20px;
+  margin: 30px 0 30px 10px;
+  background-color: @blue-light-pl-amapl;
+  color: white;
+  border-left: 15px solid white;
+  position: relative;
+  .vertical-line-blue-left;
+}
+.para-orange {
+  padding: 15px 20px;
+  margin: 30px 0 30px 10px;
+  background-color: @orange-light-caa-amapl;
+  color: white;
+  border-left: 15px solid white;
+  position: relative;
+  margin-left: 10px;
+  .vertical-line-orange-left;
 }
 /* Fin des textes ************************************************/
 .page-header {
