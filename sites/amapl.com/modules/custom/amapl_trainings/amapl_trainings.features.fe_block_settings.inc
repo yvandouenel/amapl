@@ -27,6 +27,12 @@ function amapl_trainings_default_fe_block_settings() {
         'theme' => 'bartik',
         'weight' => 0,
       ),
+      'bootamapl' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootamapl',
+        'weight' => 0,
+      ),
       'lppl' => array(
         'region' => '',
         'status' => 0,
@@ -57,6 +63,12 @@ function amapl_trainings_default_fe_block_settings() {
         'region' => '',
         'status' => 0,
         'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'bootamapl' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootamapl',
         'weight' => 0,
       ),
       'lppl' => array(

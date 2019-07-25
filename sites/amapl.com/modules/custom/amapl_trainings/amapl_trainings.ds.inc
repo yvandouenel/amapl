@@ -92,7 +92,7 @@ function amapl_trainings_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'comments' => array(
-      'weight' => '0',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
     ),
@@ -268,51 +268,6 @@ function amapl_trainings_ds_field_settings_info() {
     ),
   );
   $export['node|training|landing_page_block'] = $ds_fieldsetting;
-
-  $ds_fieldsetting = new stdClass();
-  $ds_fieldsetting->api_version = 1;
-  $ds_fieldsetting->id = 'node|training|list';
-  $ds_fieldsetting->entity_type = 'node';
-  $ds_fieldsetting->bundle = 'training';
-  $ds_fieldsetting->view_mode = 'list';
-  $ds_fieldsetting->settings = array(
-    'recommendation_action' => array(
-      'weight' => '37',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'recommendations_number' => array(
-      'weight' => '36',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
-    'training_nid' => array(
-      'weight' => '35',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'show_title' => 0,
-        'title_wrapper' => '',
-        'ctools' => 'a:3:{s:4:"conf";a:5:{s:8:"sanitize";i:1;s:7:"context";s:25:"argument_entity_id:node_1";s:14:"override_title";i:0;s:19:"override_title_text";s:0:"";s:22:"override_title_heading";s:2:"h2";}s:4:"type";s:5:"token";s:7:"subtype";s:8:"node:nid";}',
-        'load_terms' => 0,
-        'ft' => array(),
-        'field_formatter_class' => '',
-      ),
-    ),
-    'title' => array(
-      'weight' => '37',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'link' => '1',
-        'wrapper' => 'h3',
-        'class' => '',
-        'ft' => array(),
-        'field_formatter_class' => '',
-      ),
-    ),
-  );
-  $export['node|training|list'] = $ds_fieldsetting;
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
@@ -687,6 +642,7 @@ function amapl_trainings_ds_layout_settings_info() {
         4 => 'field_related_training',
         5 => 'field_session_trainer',
         6 => 'body',
+        7 => 'field_session_target',
       ),
     ),
     'fields' => array(
@@ -697,6 +653,7 @@ function amapl_trainings_ds_layout_settings_info() {
       'field_related_training' => 'ds_content',
       'field_session_trainer' => 'ds_content',
       'body' => 'ds_content',
+      'field_session_target' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -721,21 +678,21 @@ function amapl_trainings_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'comments',
-        1 => 'field_related_training',
-        2 => 'field_session_dates',
-        3 => 'field_session_place',
-        4 => 'group_inscription',
-        5 => 'field_session_registration',
+        0 => 'field_session_place',
+        1 => 'comments',
+        2 => 'field_related_training',
+        3 => 'field_session_dates',
+        4 => 'field_session_registration',
+        5 => 'field_session_target',
       ),
     ),
     'fields' => array(
+      'field_session_place' => 'ds_content',
       'comments' => 'ds_content',
       'field_related_training' => 'ds_content',
       'field_session_dates' => 'ds_content',
-      'field_session_place' => 'ds_content',
-      'group_inscription' => 'ds_content',
       'field_session_registration' => 'ds_content',
+      'field_session_target' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -881,61 +838,6 @@ function amapl_trainings_ds_layout_settings_info() {
     'layout_disable_css' => FALSE,
   );
   $export['node|training|landing_page_block'] = $ds_layout;
-
-  $ds_layout = new stdClass();
-  $ds_layout->api_version = 1;
-  $ds_layout->id = 'node|training|list';
-  $ds_layout->entity_type = 'node';
-  $ds_layout->bundle = 'training';
-  $ds_layout->view_mode = 'list';
-  $ds_layout->layout = 'bootstrap_12';
-  $ds_layout->settings = array(
-    'regions' => array(
-      'central' => array(
-        0 => 'group_wrapper_teaser',
-        1 => 'group_sub_wrapper_teaser',
-        2 => 'training_nid',
-        3 => 'field_recommended_by',
-        4 => 'field_training_type',
-        5 => 'recommendations_number',
-        6 => 'title',
-        7 => 'recommendation_action',
-        8 => 'field_training_price',
-        9 => 'field_training_theme',
-        10 => 'field_training_duration',
-        11 => 'field_training_aims',
-        12 => 'field_training_teachers',
-        13 => 'field_training_related_brands',
-      ),
-    ),
-    'fields' => array(
-      'group_wrapper_teaser' => 'central',
-      'group_sub_wrapper_teaser' => 'central',
-      'training_nid' => 'central',
-      'field_recommended_by' => 'central',
-      'field_training_type' => 'central',
-      'recommendations_number' => 'central',
-      'title' => 'central',
-      'recommendation_action' => 'central',
-      'field_training_price' => 'central',
-      'field_training_theme' => 'central',
-      'field_training_duration' => 'central',
-      'field_training_aims' => 'central',
-      'field_training_teachers' => 'central',
-      'field_training_related_brands' => 'central',
-    ),
-    'classes' => array(),
-    'wrappers' => array(
-      'central' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
-  );
-  $export['node|training|list'] = $ds_layout;
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;

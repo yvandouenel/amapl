@@ -344,6 +344,9 @@ function amapl_trainings_strongarm() {
       'sessions' => array(
         'custom_settings' => FALSE,
       ),
+      'zoom' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
