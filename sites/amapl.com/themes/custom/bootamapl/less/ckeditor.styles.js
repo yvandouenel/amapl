@@ -28,16 +28,18 @@ if(typeof(CKEDITOR) !== 'undefined') {
             */
 
             { name : 'Titre rond bleu', element : 'h3', attributes : { 'class' : 'title-pl title-col' }},
-            { name : 'custom-quote'	, element : 'p', attributes : { 'class' : 'custom-quote' }},
-            { name : 'important'	, element : 'p', attributes : { 'class' : 'important' }},
-            { name : 'list-arrow', element : 'ul', attributes : { 'class' : 'list-arrow' }},
-            { name : 'list-arrow-link', element : 'ul', attributes : { 'class' : 'list-arrow-link' }},
+            { name : 'Titre rond orange', element : 'h3', attributes : { 'class' : 'title-caa title-col' }},
+            { name : 'paragraphe bleu'	, element : 'p', attributes : { 'class' : 'para-blue' }},
+            { name : 'paragraphe orange'	, element : 'p', attributes : { 'class' : 'para-orange' }},
+            { name : 'liste bleue'	, element : 'ul', attributes : { 'class' : 'ul-blue' }},
+            { name : 'liste orange'	, element : 'ul', attributes : { 'class' : 'ul-orange' }},
+            { name : 'puce bleue', element : 'li', attributes : { 'class' : 'li-blue' }},
+            { name : 'puce orange', element : 'li', attributes : { 'class' : 'li-orange' }},
+            { name : 'puce mixte', element : 'li', attributes : { 'class' : 'li-mixed' }},
             { name : 'pdf-bleu-centre', element : 'div', attributes : { 'class' : 'pdf-blue-center' }},
             { name : 'pdf-orange-centre', element : 'div', attributes : { 'class' : 'pdf-orange-center' }},
-            { name : 'separator-blue-bold', element : 'div', attributes : { 'class' : 'separator-blue-bold' }},
-            { name : 'separator-transparent', element : 'div', attributes : { 'class' : 'separator-transparent' }},
-            /* Inline Styles */
 
+            /* Inline Styles */
             // These are core styles available as toolbar buttons. You may opt enabling
             // some of them in the "Styles" drop-down list, removing them from the toolbar.
 
