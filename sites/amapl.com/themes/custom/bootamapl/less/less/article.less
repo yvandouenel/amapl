@@ -1,0 +1,58 @@
+.node-type-article {
+  .group-left {
+
+  }
+  .group-right {
+    padding: 20px;
+    a {
+      display: block;
+      font-size: 1.4em;
+      position: relative;
+      padding-top: 72px;
+      padding-bottom: 32px;
+      margin-bottom: 40px;
+      text-align: center;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 72px;
+        background: url(../images/picto_actu_mixte.png) no-repeat 50% 0;
+        z-index: 2;
+      }
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 10%;
+        width: 80%;
+        height: 1px;
+        background: @blue-green-amapl;
+        z-index: 1;
+      }
+    }
+  }
+  @media screen and (min-width: @screen-sm) {
+    .group-left {
+      width: 64%;
+    }
+    .group-right {
+      width: 33%;
+      margin-left: 2%;
+      background-color: @light-grey-amapl;
+      padding-left: 1%;
+    }
+  }
+  @media screen and (max-width: @screen-sm) {
+    .group-left {
+      width: 100%;
+      float: none;
+    }
+    .group-right {
+      width: 100%;
+      background-color: @light-grey-amapl;
+    }
+  }
+}

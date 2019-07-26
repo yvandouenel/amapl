@@ -7914,6 +7914,9 @@ h2.complex-title {
   padding: 5px 0 5px 30px;
   background: url(../images/mini-rond-mixte.png) no-repeat 5px 12px;
 }
+.field ul li li {
+  font-size: 1em;
+}
 .field ul li.li-blue {
   background: url(../images/mini-rond-PL.png) no-repeat 5px 12px;
 }
@@ -9131,3 +9134,56 @@ body.not-front #under-main-title h2.page-header.simple-title {
   width: 90%;
 }
 /* Fin colorbox *********************************************/
+.node-type-article .group-right {
+  padding: 20px;
+}
+.node-type-article .group-right a {
+  display: block;
+  font-size: 1.4em;
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 32px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.node-type-article .group-right a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 72px;
+  background: url(../images/picto_actu_mixte.png) no-repeat 50% 0;
+  z-index: 2;
+}
+.node-type-article .group-right a:before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  background: #6cf1b4;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .node-type-article .group-left {
+    width: 64%;
+  }
+  .node-type-article .group-right {
+    width: 33%;
+    margin-left: 2%;
+    background-color: #faf7f7;
+    padding-left: 1%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .node-type-article .group-left {
+    width: 100%;
+    float: none;
+  }
+  .node-type-article .group-right {
+    width: 100%;
+    background-color: #faf7f7;
+  }
+}
