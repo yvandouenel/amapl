@@ -265,6 +265,19 @@ a.pdf {
 }
 /* fin des liens ******************************************************/
 /* titres *************************************************************/
+h2.complex-title {
+  color: black;
+  background: url(../images/circl_mixte-top.png) no-repeat 0 -10px;
+  padding-left: 172px;
+  padding-top: 30px;
+  min-height: 120px;
+  text-transform: uppercase;
+  @media screen and (max-width: @screen-sm) {
+    background-size: 123px 90px;
+    font-size: 1.6em;
+    padding-left: 123px;
+  }
+}
 .title-smallcap-black {
   text-transform: uppercase;
   color: black;
@@ -764,9 +777,6 @@ body.not-front {
     }
     h2.page-header {
       &.complex-title {
-        .complex-title-mixed {
-
-        }
       }
       &.simple-title {
         font-weight: 900;

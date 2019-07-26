@@ -62,9 +62,17 @@
             padding: 15px;
             height: 100%;
 
-            background: -moz-linear-gradient(top, @light-grey-amapl 45%, white 0%);
+            background: -moz-linear-gradient(
+              top,
+              @light-grey-amapl 45%,
+              white 0%
+            );
             background: -linear-gradient(top, @light-grey-amapl 45%, white 0%);
-            background: -webkit-linear-gradient(top, @light-grey-amapl 45%, white 0%);
+            background: -webkit-linear-gradient(
+              top,
+              @light-grey-amapl 45%,
+              white 0%
+            );
             &:before {
               content: "";
               width: 82px;
@@ -93,12 +101,13 @@
               top: 20px;
               a {
                 color: black;
+                display: block;
                 position: relative;
+                font-size: 0.8em;
                 &:hover {
                   text-decoration: none;
                   color: @black-amapl;
                 }
-
               }
               margin-bottom: 20px;
             }
@@ -117,3 +126,112 @@
   }
 }
 /* fin page de liste des formations *************************/
+/* Page de formation ****************************************/
+.node-type-training {
+  #block-system-main {
+    font-size: 1.5em;
+    .field {
+      margin-top: 20px;
+      field-label-inline,
+      label-above {
+        line-height: 2em;
+      }
+    }
+    .field-name-field-scheduled-sessions {
+      padding: 10px;
+      background-color: @light-grey-amapl;
+      > .field-label {
+        text-transform: uppercase;
+        font-size: 1.2em;
+        font-weight: 900;
+        background: url(../images/next_btn.png) no-repeat 5px 12px;
+        padding-left: 70px;
+        padding-top: 20px;
+        min-height: 50px;
+      }
+      .view-display-id-next_sessions {
+        padding-left: 20px;
+
+        a.colorbox-node {
+          background: url(../images/puce-fleche-noire.png) no-repeat 5px 12px;
+          display: block;
+          padding-left: 30px;
+          margin: 15px 0 20px 0;
+          color: black;
+          &:hover {
+            background-color: @blue-green-amapl;
+          }
+        }
+      }
+    }
+
+    ul {
+      li {
+        font-size: 1em;
+        background: url(../images/puce-fleche-noire.png) no-repeat 5px 12px;
+      }
+    }
+    p {
+      font-size: 1em;
+    }
+    .field-name-field-training-teachers {
+      p > a {
+        padding-left: 40px;
+        background: url(../images/puce-fleche-noire.png) no-repeat 10px 5px;
+        display: block;
+        min-height: 25px;
+      }
+    }
+  }
+  &.not-logged-in {
+    .views-field-nothing {
+      display: none;
+    }
+  }
+  @media screen and (max-width: @screen-md) {
+    .ds-2col-fluid > .group-left {
+      float: none;
+      width: 100%;
+    }
+    .ds-2col-fluid > .group-right {
+      float: none;
+      width: 100%;
+    }
+  }
+
+}
+/* fin page formation ***************************************/
+/* colorbox *************************************************/
+#cboxLoadedContent {
+  padding: 20px;
+  .field-label,
+  .label-above {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.4em;
+  }
+  .field-name-node-link {
+
+  }
+  .group-first-row,
+  .group-second-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    > div {
+      width: 45%;
+
+    }
+  }
+  .field-name-field-session-registration {
+    > .field-label {
+      margin-top: 20px;
+    }
+    input,
+    select {
+      width: 90%;
+    }
+  }
+}
+
+/* Fin colorbox *********************************************/
