@@ -1,0 +1,119 @@
+/* page de liste des formations *************************/
+.page-formations {
+  #under-large-headband {
+    background-color: @light-grey-amapl;
+    padding-bottom: 30px;
+    h2.block-title {
+      .complex-title-mixed;
+    }
+  }
+  /* Formulaire de recherche *****************************/
+  .views-exposed-form {
+    > .views-exposed-widgets {
+      display: flex;
+      label {
+        white-space: nowrap;
+      }
+      @media screen and (max-width: @screen-lg) {
+        flex-wrap: wrap;
+        justify-content: start;
+      }
+      justify-content: space-between;
+      .views-exposed-widget {
+        display: flex;
+        float: none;
+        align-items: center;
+        justify-content: start;
+        label {
+          padding-right: 15px;
+        }
+        // cache les labels pour le champ "gratuit ?"
+        .form-item-field-training-free-value {
+          > label {
+            width: 3px;
+            height: 5px;
+            overflow: hidden;
+            padding-top: 1px;
+            color: #faf6f7;
+          }
+        }
+        .btn {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  /* Résultats *******************************************/
+  #views-bootstrap-grid-1 {
+    margin-top: 40px;
+    > .row {
+      display: flex;
+      flex-wrap: wrap;
+      .views-field {
+        height: 100%;
+        span.field-content {
+          display: block;
+          height: 100%;
+          padding: 30px 0;
+          article {
+            position: relative;
+            border: 3px solid @dark-grey-amapl;
+            padding: 15px;
+            height: 100%;
+
+            background: -moz-linear-gradient(top, @light-grey-amapl 45%, white 0%);
+            background: -linear-gradient(top, @light-grey-amapl 45%, white 0%);
+            background: -webkit-linear-gradient(top, @light-grey-amapl 45%, white 0%);
+            &:before {
+              content: "";
+              width: 82px;
+              height: 72px;
+              display: table;
+              margin: -56px auto 0 auto;
+              background: white url(../images/picto_formation_mixte.png)
+                no-repeat 0 0;
+              border-left: 5px solid white;
+              border-right: 5px solid white;
+            }
+            &.pl {
+              &:before {
+                background: white url(../images/picto_formation_bleu.png)
+                  no-repeat 0 0;
+              }
+            }
+            &.caa {
+              &:before {
+                background: white url(../images/picto_formation_orange.png)
+                  no-repeat 0 0;
+              }
+            }
+            h3.title-training-list {
+              position: absolute;
+              top: 20px;
+              a {
+                color: black;
+                position: relative;
+                &:hover {
+                  text-decoration: none;
+                  color: @black-amapl;
+                }
+
+              }
+              margin-bottom: 20px;
+            }
+            .bottom-fields-training-list {
+              margin-top: 30%;
+              p {
+                label {
+                  width: 150px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* fin page de liste des formations *************************/

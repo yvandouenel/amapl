@@ -7715,7 +7715,7 @@ a.link-ok:hover:after {
   float: left;
 }
 .paragraphs-item-liste-pdf-orange .field-item a.pdf {
-  background: url(../images/picto-pdf-orange.png) no-repeat 40px 0;
+  background: url(../images/picto-pdf-orange.png) no-repeat 10px 0;
   font-size: 1.5em;
 }
 .paragraphs-item-liste-pdf-orange:after {
@@ -7729,7 +7729,7 @@ a.link-ok:hover:after {
   float: left;
 }
 .pdf-orange-center .dnd-atom-wrapper a.pdf {
-  background: url(../images/picto-pdf-orange.png) no-repeat 40px 0 !important;
+  background: url(../images/picto-pdf-orange.png) no-repeat 10px 0 !important;
   background-size: 48px 48px !important;
   font-size: 1.5em;
 }
@@ -7743,9 +7743,9 @@ a.pdf {
   margin: 15px 0;
   vertical-align: middle;
   min-height: 48px;
-  padding-left: 100px;
+  padding-left: 70px;
   padding-top: 10px;
-  background: url(../images/picto-pdf-bleu.png) no-repeat 40px 0;
+  background: url(../images/picto-pdf-bleu.png) no-repeat 10px 0;
   background-size: 48px 48px !important;
   color: black;
 }
@@ -7793,6 +7793,24 @@ a.pdf {
   color: black;
   font-size: 1.3em;
   font-weight: 800;
+}
+.complex-title-mixed {
+  background: url(../images/circl_mixte-top.png) no-repeat 0 -10px;
+  min-height: 140px;
+  padding-left: 172px;
+  padding-top: 30px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+@media screen and (max-width: 992px) {
+  .complex-title-mixed {
+    padding: 10px 0 20px 100px;
+    min-height: 80px;
+    font-size: 2em;
+    margin: 0 0 0 -20px;
+    background: url(../images/circl_mixte-top.png) no-repeat 0 -5px;
+    background-size: 100px 73px;
+  }
 }
 .title-col {
   text-transform: uppercase;
@@ -7879,13 +7897,13 @@ a.pdf {
   font-size: 1.6em;
   margin: 15px 0;
   padding: 5px 0 5px 30px;
-  background: url(../images/mini-rond-mixte.png) no-repeat 5px 8px;
+  background: url(../images/mini-rond-mixte.png) no-repeat 5px 12px;
 }
 .field ul li.li-blue {
-  background: url(../images/mini-rond-PL.png) no-repeat 5px 8px;
+  background: url(../images/mini-rond-PL.png) no-repeat 5px 12px;
 }
 .field ul li.li-orange {
-  background: url(../images/mini-rond-CAA.png) no-repeat 5px 8px;
+  background: url(../images/mini-rond-CAA.png) no-repeat 5px 12px;
 }
 .field ul.ul-blue {
   padding: 15px 20px;
@@ -7905,7 +7923,7 @@ a.pdf {
   left: -25px;
 }
 .field ul.ul-blue li {
-  background: url(../images/mini-rond-blanc.png) no-repeat 5px 10px;
+  background: url(../images/mini-rond-blanc.png) no-repeat 5px 11px;
 }
 .field ul.ul-orange {
   padding: 15px 20px;
@@ -7926,7 +7944,7 @@ a.pdf {
   left: -25px;
 }
 .field ul.ul-orange li {
-  background: url(../images/mini-rond-blanc.png) no-repeat 5px 10px;
+  background: url(../images/mini-rond-blanc.png) no-repeat 5px 11px;
 }
 /* textes *******************************************************/
 #block-system-main p {
@@ -7939,9 +7957,10 @@ a.pdf {
   list-style: none;
 }
 .col-txt ul li {
+  font-size: 1em;
   margin-bottom: 25px;
   padding-left: 30px;
-  background: url(../images/puce-fleche-noire.png) no-repeat 0 5px;
+  background: url(../images/puce-fleche-noire.png) no-repeat 0 10px;
 }
 .col-txt ul li a {
   display: inline;
@@ -7949,6 +7968,9 @@ a.pdf {
 .col-txt ul li a:hover {
   text-decoration: none;
   border-bottom: 5px solid #6cf1b4;
+}
+.col-txt ul li a:after {
+  display: none;
 }
 .col-txt.txt-pl ul li a {
   color: #0095c7;
@@ -8278,24 +8300,6 @@ body.not-front #under-main-title:before {
   background: url(../images/separateur-haut.png) no-repeat 50% 0;
   border-bottom: 50px solid white;
 }
-body.not-front #under-main-title h2.page-header.complex-title {
-  background: url(../images/circl_mixte-top.png) no-repeat 0 -10px;
-  min-height: 140px;
-  padding-left: 172px;
-  padding-top: 30px;
-  text-transform: uppercase;
-  font-weight: 900;
-}
-@media screen and (max-width: 992px) {
-  body.not-front #under-main-title h2.page-header.complex-title {
-    padding: 10px 0 20px 100px;
-    min-height: 80px;
-    font-size: 2em;
-    margin: 0 0 0 -20px;
-    background: url(../images/circl_mixte-top.png) no-repeat 0 -5px;
-    background-size: 100px 73px;
-  }
-}
 body.not-front #under-main-title h2.page-header.simple-title {
   font-weight: 900;
   font-size: 2.6em;
@@ -8486,6 +8490,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
 }
 .two-cols-home > div {
   background-color: #faf7f7;
+  padding-bottom: 20px;
 }
 .two-cols-home > div.col-home-first {
   background: #faf7f7 url(../images/home_circl_pro-home.png) no-repeat 50% 0;
@@ -8898,3 +8903,122 @@ body.not-front #under-main-title h2.page-header.simple-title {
     overflow: hidden;
   }
 }
+/* page de liste des formations *************************/
+.page-formations {
+  /* Formulaire de recherche *****************************/
+  /* Résultats *******************************************/
+}
+.page-formations #under-large-headband {
+  background-color: #faf7f7;
+  padding-bottom: 30px;
+}
+.page-formations #under-large-headband h2.block-title {
+  background: url(../images/circl_mixte-top.png) no-repeat 0 -10px;
+  min-height: 140px;
+  padding-left: 172px;
+  padding-top: 30px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+@media screen and (max-width: 992px) {
+  .page-formations #under-large-headband h2.block-title {
+    padding: 10px 0 20px 100px;
+    min-height: 80px;
+    font-size: 2em;
+    margin: 0 0 0 -20px;
+    background: url(../images/circl_mixte-top.png) no-repeat 0 -5px;
+    background-size: 100px 73px;
+  }
+}
+.page-formations .views-exposed-form > .views-exposed-widgets {
+  display: flex;
+  justify-content: space-between;
+}
+.page-formations .views-exposed-form > .views-exposed-widgets label {
+  white-space: nowrap;
+}
+@media screen and (max-width: 1200px) {
+  .page-formations .views-exposed-form > .views-exposed-widgets {
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+}
+.page-formations .views-exposed-form > .views-exposed-widgets .views-exposed-widget {
+  display: flex;
+  float: none;
+  align-items: center;
+  justify-content: start;
+}
+.page-formations .views-exposed-form > .views-exposed-widgets .views-exposed-widget label {
+  padding-right: 15px;
+}
+.page-formations .views-exposed-form > .views-exposed-widgets .views-exposed-widget .form-item-field-training-free-value > label {
+  width: 3px;
+  height: 5px;
+  overflow: hidden;
+  padding-top: 1px;
+  color: #faf6f7;
+}
+.page-formations .views-exposed-form > .views-exposed-widgets .views-exposed-widget .btn {
+  margin-top: 0;
+}
+.page-formations #views-bootstrap-grid-1 {
+  margin-top: 40px;
+}
+.page-formations #views-bootstrap-grid-1 > .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.page-formations #views-bootstrap-grid-1 > .row .views-field {
+  height: 100%;
+}
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content {
+  display: block;
+  height: 100%;
+  padding: 30px 0;
+}
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article {
+  position: relative;
+  border: 3px solid #b9b8b8;
+  padding: 15px;
+  height: 100%;
+  background: -moz-linear-gradient(top, #faf7f7 45%, #ffffff 0%);
+  background: -linear-gradient(top, #faf7f7 45%, #ffffff 0%);
+  background: -webkit-linear-gradient(top, #faf7f7 45%, #ffffff 0%);
+}
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article:before {
+  content: "";
+  width: 82px;
+  height: 72px;
+  display: table;
+  margin: -56px auto 0 auto;
+  background: #ffffff url(../images/picto_formation_mixte.png) no-repeat 0 0;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+}
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article.pl:before {
+  background: #ffffff url(../images/picto_formation_bleu.png) no-repeat 0 0;
+}
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article.caa:before {
+  background: #ffffff url(../images/picto_formation_orange.png) no-repeat 0 0;
+}
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article h3.title-training-list {
+  position: absolute;
+  top: 20px;
+  margin-bottom: 20px;
+}
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article h3.title-training-list a {
+  color: black;
+  position: relative;
+}
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article h3.title-training-list a:hover {
+  text-decoration: none;
+  color: #424242;
+}
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article .bottom-fields-training-list {
+  margin-top: 30%;
+}
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article .bottom-fields-training-list p label {
+  width: 150px;
+}
+/* fin page de liste des formations *************************/
