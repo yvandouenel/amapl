@@ -18,7 +18,7 @@
             $(this).hide();
           }
         });
-        $("#edit-field-training-free-value-wrapper > label").text("Gratuit et payant ?");
+        $("#edit-field-training-free-value-wrapper > label").text("Tous tarifs ?");
       }
       /**
        * si "tout" est coché, on ne laisse que "free"
