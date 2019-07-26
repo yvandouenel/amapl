@@ -13,27 +13,58 @@ function amapl_trainings_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
-  $field_group->identifier = 'group_wrapper_teaser|node|training|teaser';
-  $field_group->group_name = 'group_wrapper_teaser';
+  $field_group->identifier = 'group_first_row|node|training_session|colorbox';
+  $field_group->group_name = 'group_first_row';
   $field_group->entity_type = 'node';
-  $field_group->bundle = 'training';
-  $field_group->mode = 'teaser';
+  $field_group->bundle = 'training_session';
+  $field_group->mode = 'colorbox';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'group wrapper teaser',
-    'weight' => '0',
+    'label' => 'group première ligne',
+    'weight' => '1',
     'children' => array(
-      0 => 'field_recommended_by',
-      1 => 'recommendation_action',
-      2 => 'recommendations_number',
-      3 => 'group_sub_wrapper_teaser',
+      0 => 'field_session_dates',
+      1 => 'field_session_place',
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'group wrapper teaser',
+      'label' => 'group première ligne',
       'instance_settings' => array(
         'id' => '',
-        'classes' => 'group-wrapper-teaser field-group-div',
+        'classes' => 'group-first-row field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups[''] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_second_row|node|training_session|colorbox';
+  $field_group->group_name = 'group_second_row';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'training_session';
+  $field_group->mode = 'colorbox';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'group deuxième ligne',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_related_training',
+      1 => 'field_session_trainer',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'group deuxième ligne',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-second-row field-group-div',
         'description' => '',
         'show_label' => '0',
         'label_element' => 'h3',
@@ -47,7 +78,8 @@ function amapl_trainings_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('group wrapper teaser');
+  t('group deuxième ligne');
+  t('group première ligne');
 
   return $field_groups;
 }
