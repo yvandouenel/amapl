@@ -130,6 +130,17 @@ $node->field_titre_simple_['und'][0]['value']) $simple_title = "simple-title" ?>
     </div>
   </div>
 <?php endif; ?>
+<?php if (!empty($page['large-headband'])): ?>
+  <div id="under-large-headband">
+    <div class="container">
+      <div class="row ">
+            <div class="col-md-12">
+              <?php print render($page['large-headband']); ?>
+            </div>
+      </div>
+    </div>
+  </div>
+<?php endif; ?>
 <div id="under-main-container">
   <div class="main-container <?php print $container_class; ?>">
 
