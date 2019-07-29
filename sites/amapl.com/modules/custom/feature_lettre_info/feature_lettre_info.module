@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Feature Lettre info feature.
+ */
+
+include_once 'feature_lettre_info.features.inc';
