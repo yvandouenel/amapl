@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Feature Fichiers téléchargement feature.
+ */
+
+include_once 'feature_downloading_files.features.inc';
