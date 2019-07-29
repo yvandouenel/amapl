@@ -1,5 +1,8 @@
 <?php
-  $simple_title = "complex-title";
+/**
+  * La variable $title_class provient du hook bootamapl_preprocess_page
+*/
+
 /**
  * @file
  * Default theme implementation to display a single Drupal page.
@@ -117,14 +120,13 @@
 
   </div>
 </header>
-<?php if (isset($node->field_titre_simple_['und'][0]['value']) &&
-$node->field_titre_simple_['und'][0]['value']) $simple_title = "simple-title" ?>
+
 <?php if (!empty($title)): ?>
-  <div id="under-main-title" class="<?php print $simple_title; ?>">
+  <div id="under-main-title" class="<?php print $title_class; ?>">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2 class="page-header <?php print $simple_title; ?>"><?php print $title; ?></h2>
+          <h2 class="page-header <?php print $title_class; ?>"><?php print $title; ?></h2>
         </div>
       </div>
     </div>
