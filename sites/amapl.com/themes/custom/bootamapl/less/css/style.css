@@ -7840,11 +7840,29 @@ h2.complex-title {
   height: 120px;
   overflow: hidden;
 }
+@media screen and (max-width: 768px) {
+  .title-col.title-pl {
+    background-size: 60px 60px;
+    padding-left: 70px;
+    padding-top: 10px;
+    height: 80px;
+    font-size: 1.4em;
+  }
+}
 .title-col.title-caa {
   color: #ff9d0f;
   background: url(../images/circl_title_caa.png) no-repeat 0 0;
   height: 120px;
   overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  .title-col.title-caa {
+    background-size: 60px 60px;
+    padding-left: 70px;
+    padding-top: 10px;
+    height: 80px;
+    font-size: 1.4em;
+  }
 }
 .title-drop-down {
   font-weight: 900;
@@ -8921,6 +8939,42 @@ body.not-front #under-main-title h2.page-header.simple-title {
     overflow: hidden;
   }
 }
+@media screen and (min-width: 992px) and screen and (max-width: 768px) {
+  .node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols .page-col-left.title-pl {
+    background-size: 60px 60px;
+    padding-left: 70px;
+    padding-top: 10px;
+    height: 80px;
+    font-size: 1.4em;
+  }
+}
+@media screen and (min-width: 992px) and screen and (max-width: 768px) {
+  .node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols .page-col-left.title-caa {
+    background-size: 60px 60px;
+    padding-left: 70px;
+    padding-top: 10px;
+    height: 80px;
+    font-size: 1.4em;
+  }
+}
+@media screen and (min-width: 992px) and screen and (max-width: 768px) {
+  .node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols .page-col-right.title-pl {
+    background-size: 60px 60px;
+    padding-left: 70px;
+    padding-top: 10px;
+    height: 80px;
+    font-size: 1.4em;
+  }
+}
+@media screen and (min-width: 992px) and screen and (max-width: 768px) {
+  .node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols .page-col-right.title-caa {
+    background-size: 60px 60px;
+    padding-left: 70px;
+    padding-top: 10px;
+    height: 80px;
+    font-size: 1.4em;
+  }
+}
 /* page de liste des formations *************************/
 .page-formations {
   /* Formulaire de recherche *****************************/
@@ -9004,25 +9058,10 @@ body.not-front #under-main-title h2.page-header.simple-title {
   background: -linear-gradient(top, #faf7f7 45%, #ffffff 0%);
   background: -webkit-linear-gradient(top, #faf7f7 45%, #ffffff 0%);
 }
-.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article:before {
-  content: "";
-  width: 82px;
-  height: 72px;
-  display: table;
-  margin: -56px auto 0 auto;
-  background: #ffffff url(../images/picto_formation_mixte.png) no-repeat 0 0;
-  border-left: 5px solid white;
-  border-right: 5px solid white;
-}
-.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article.pl:before {
-  background: #ffffff url(../images/picto_formation_bleu.png) no-repeat 0 0;
-}
-.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article.caa:before {
-  background: #ffffff url(../images/picto_formation_orange.png) no-repeat 0 0;
-}
 .page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article h3.title-training-list {
   position: absolute;
   top: 20px;
+  width: 92%;
   margin-bottom: 20px;
 }
 .page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article h3.title-training-list a {
@@ -9034,6 +9073,22 @@ body.not-front #under-main-title h2.page-header.simple-title {
 .page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article h3.title-training-list a:hover {
   text-decoration: none;
   color: #424242;
+}
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article h3.title-training-list a:before {
+  content: "";
+  width: 82px;
+  height: 72px;
+  display: table;
+  margin: -80px auto 0 auto;
+  background: #ffffff url(../images/picto_formation_mixte.png) no-repeat 0 0;
+  border-left: 5px solid white;
+  border-right: 5px solid white;
+}
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article h3.title-training-list a.pl:before {
+  background: #ffffff url(../images/picto_formation_bleu.png) no-repeat 0 0;
+}
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article h3.title-training-list a.caa:before {
+  background: #ffffff url(../images/picto_formation_orange.png) no-repeat 0 0;
 }
 .page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article .bottom-fields-training-list {
   margin-top: 30%;
@@ -9134,10 +9189,13 @@ body.not-front #under-main-title h2.page-header.simple-title {
   width: 90%;
 }
 /* Fin colorbox *********************************************/
-.node-type-article .group-right {
+.node-type-article #block-system-main {
+  padding-top: 40px;
+}
+.node-type-article #block-system-main .group-right {
   padding: 20px;
 }
-.node-type-article .group-right a {
+.node-type-article #block-system-main .group-right a {
   display: block;
   font-size: 1.4em;
   position: relative;
@@ -9146,7 +9204,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
   margin-bottom: 40px;
   text-align: center;
 }
-.node-type-article .group-right a:after {
+.node-type-article #block-system-main .group-right a:after {
   content: "";
   position: absolute;
   top: 0;
@@ -9156,7 +9214,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
   background: url(../images/picto_actu_mixte.png) no-repeat 50% 0;
   z-index: 2;
 }
-.node-type-article .group-right a:before {
+.node-type-article #block-system-main .group-right a:before {
   content: "";
   position: absolute;
   bottom: 0px;
@@ -9167,23 +9225,129 @@ body.not-front #under-main-title h2.page-header.simple-title {
   z-index: 1;
 }
 @media screen and (min-width: 768px) {
-  .node-type-article .group-left {
+  .node-type-article #block-system-main .group-left {
     width: 64%;
   }
-  .node-type-article .group-right {
+  .node-type-article #block-system-main .group-right {
     width: 33%;
     margin-left: 2%;
     background-color: #faf7f7;
     padding-left: 1%;
+    position: relative;
+  }
+  .node-type-article #block-system-main .group-right:before {
+    content: "";
+    width: 1%;
+    background-color: #b9b8b8;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: -3%;
   }
 }
 @media screen and (max-width: 768px) {
-  .node-type-article .group-left {
+  .node-type-article #block-system-main .group-left {
     width: 100%;
     float: none;
   }
-  .node-type-article .group-right {
+  .node-type-article #block-system-main .group-right {
     width: 100%;
     background-color: #faf7f7;
+    margin-top: 30px;
   }
+}
+.page-fichiers ul.links {
+  display: none;
+}
+.page-fichiers .all-files {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 768px) {
+  .page-fichiers .all-files {
+    flex-wrap: wrap;
+  }
+}
+.page-fichiers .all-files ul li {
+  background: url(../images/puce-fleche-noire.png) no-repeat 0 5px;
+  font-size: 1.2em;
+}
+@media screen and (max-width: 768px) {
+  .page-fichiers .all-files .img-file {
+    display: block;
+    width: 100%;
+  }
+}
+.page-fichiers .all-files .img-file img {
+  margin-right: 20px;
+  min-width: 100px;
+}
+@media screen and (max-width: 768px) {
+  .page-fichiers .all-files .img-file img {
+    display: table;
+    margin: 0 auto;
+  }
+}
+.page-fichiers .all-files .title-and-files {
+  flex-grow: 1;
+}
+.page-fichiers .all-files .title-and-files h3 {
+  margin-top: 0;
+  overflow: hidden;
+}
+.page-fichiers .all-files .title-and-files h3:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin-right: -100%;
+  margin-left: 20px;
+  border-top: 1px solid #000;
+  height: 10px;
+}
+.page-fichiers .all-files .title-and-files .field-type-file {
+  margin: 10px 0;
+}
+.page-fichiers .all-files .title-and-files .field-type-file a {
+  font-size: 1.5em;
+}
+@media screen and (min-width: 992px) {
+  .page-lettres-info .view-header {
+    height: 370px;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .page-lettres-info .views-row {
+    width: 46%;
+    margin-right: 4%;
+    float: left;
+  }
+}
+@media screen and (min-width: 992px) {
+  .page-lettres-info .attachment-after .views-row {
+    width: 45%;
+    margin-right: 4%;
+    float: left;
+  }
+}
+.page-lettres-info .attachment-after article.article-lettre-info h3 {
+  border-top: 5px solid #ff9d0f;
+}
+.page-lettres-info article.article-lettre-info {
+  position: relative;
+  margin-bottom: 50px;
+}
+.page-lettres-info article.article-lettre-info h3 {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  top: 78%;
+  padding: 20px 20px 25px 20px;
+  border-top: 5px solid #0095c7;
+  background-color: white;
+  color: black;
+  text-align: center;
 }

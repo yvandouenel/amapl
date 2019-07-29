@@ -312,12 +312,26 @@ h2.complex-title {
     background: url(../images/circl_title_pl.png) no-repeat 0 0;
     height: 120px;
     overflow: hidden;
+    @media screen and (max-width: @screen-sm) {
+      background-size: 60px 60px;
+      padding-left: 70px;
+      padding-top: 10px;
+      height: 80px;
+      font-size: 1.4em;
+    }
   }
   &.title-caa {
     color: @orange-caa-amapl;
     background: url(../images/circl_title_caa.png) no-repeat 0 0;
     height: 120px;
     overflow: hidden;
+    @media screen and (max-width: @screen-sm) {
+      background-size: 60px 60px;
+      padding-left: 70px;
+      padding-top: 10px;
+      height: 80px;
+      font-size: 1.4em;
+    }
   }
 }
 .title-drop-down {

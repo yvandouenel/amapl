@@ -1,0 +1,55 @@
+.page-fichiers {
+  ul.links {
+    display: none;
+  }
+  .all-files {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: @screen-sm) {
+      flex-wrap: wrap;
+    }
+    ul {
+      li {
+        background: url(../images/puce-fleche-noire.png) no-repeat 0 5px;
+        font-size: 1.2em;
+      }
+    }
+    .img-file {
+      @media screen and (max-width: @screen-sm) {
+        display: block;
+        width: 100%;
+      }
+      img {
+        margin-right: 20px;
+        min-width: 100px;
+        @media screen and (max-width: @screen-sm) {
+          display: table;
+          margin: 0 auto;
+        }
+      }
+    }
+    .title-and-files {
+      flex-grow: 1;
+      h3{
+        margin-top: 0;
+        overflow: hidden;
+       &:after{
+          content:'';
+          display:inline-block;
+          width:100%; height:100%;
+          margin-right: -100%;
+          margin-left: 20px;
+          border-top:1px solid #000;
+          height: 10px;
+        }
+      }
+      .field-type-file {
+        margin: 10px 0;
+        a {
+          font-size: 1.5em;
+        }
+      }
+    }
+    margin-bottom: 30px;
+  }
+}

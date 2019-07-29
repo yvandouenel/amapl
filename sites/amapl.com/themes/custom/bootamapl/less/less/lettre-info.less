@@ -1,0 +1,46 @@
+.page-lettres-info {
+  .view-header {
+    @media screen and (min-width: @screen-md) {
+      height: 370px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+  }
+  .views-row {
+    @media screen and (min-width: @screen-md) {
+      width: 46%;
+      margin-right: 4%;
+      float: left;
+    }
+  }
+  .attachment-after {
+    .views-row {
+      @media screen and (min-width: @screen-md) {
+        width: 45%;
+        margin-right: 4%;
+        float: left;
+      }
+    }
+    article.article-lettre-info {
+
+      h3 {
+        border-top: 5px solid @orange-caa-amapl;
+      }
+    }
+  }
+  article.article-lettre-info {
+    position: relative;
+    margin-bottom: 50px;
+    h3 {
+      position: absolute;
+      width: 90%;
+      left: 5%;
+      top: 78%;
+      padding: 20px 20px 25px 20px;
+      border-top: 5px solid @blue-pl-amapl;
+      background-color: white;
+      color: black;
+      text-align: center;
+    }
+  }
+}
