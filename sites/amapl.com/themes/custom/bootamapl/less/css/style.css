@@ -9564,6 +9564,19 @@ body.not-front #under-main-title h2.page-header.simple-title {
   background-color: #faf7f7;
   padding: 20px;
 }
+.page-entityform #h3-payment-online {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-top: 20px;
+}
+.page-entityform .payment-line_item-total {
+  background-color: #66D0F5;
+  font-size: 1.6em;
+  color: white;
+}
+.page-entityform .payment-line_item-total:hover {
+  background-color: #b9b8b8;
+}
 .page-entityform #edit-save {
   display: block;
   color: white;
