@@ -1,3 +1,26 @@
+.button-submit {
+  .link-button;
+    font-size: 1.4em;
+    padding-top: 0;
+    border: 0;
+    margin-left: 0;
+    @media screen and (min-width: @screen-lg) {
+      width: 400px;
+      height: 108px;
+      background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+      background-size: 400px 108px !important;
+    }
+    @media screen and (max-width: @screen-lg) {
+      width: 260px;
+      height: 71px;
+      background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+      background-size: 260px 71px !important;
+    }
+    &:hover {
+      background-color: @blue-green-amapl;
+      color: black;
+    }
+}
 .page-eform-submit {
   /* Cas spécifiques au formulaire pour les PL */
   &.page-eform-submit-inscription-amapl {
@@ -67,26 +90,29 @@
 
   /* Bouton de validation du formulaire*/
   button#edit-submit {
-    .link-button;
-    font-size: 1.4em;
-    padding-top: 0;
-    border: 0;
-    margin-left: 0;
-    @media screen and (min-width: @screen-lg) {
-      width: 400px;
-      height: 108px;
-      background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
-      background-size: 400px 108px !important;
-    }
-    @media screen and (max-width: @screen-lg) {
-      width: 260px;
-      height: 71px;
-      background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
-      background-size: 260px 71px !important;
-    }
-    &:hover {
-      background-color: @blue-green-amapl;
-      color: black;
-    }
+    .button-submit;
   }
 }
+/* Résultats *****************************************************/
+.page-entityform {
+  .entity-entityform {
+    .field {
+      font-size: 1.4em;
+      line-height: 2em;
+      p {
+        font-size: 1em !important;
+      }
+    }
+    #modify-subscribe-form {
+      font-size: 1.5em;
+    }
+  }
+  #payment-form-standalone {
+    background-color: @light-grey-amapl;
+    padding: 20px;
+  }
+  #edit-save {
+    .button-submit;
+  }
+}
+

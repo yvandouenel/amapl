@@ -9361,6 +9361,68 @@ body.not-front #under-main-title h2.page-header.simple-title {
 .page-lettres-info article.article-lettre-info:hover h3 {
   background-color: #6cf1b4;
 }
+.button-submit {
+  display: block;
+  color: white;
+  padding-top: 40px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 0.8em;
+  margin: 20px;
+  font-size: 1.4em;
+  padding-top: 0;
+  border: 0;
+  margin-left: 0;
+}
+.button-submit:hover {
+  text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  .button-submit {
+    width: 400px;
+    height: 108px;
+    background-size: 400px 108px !important;
+  }
+  .button-submit.link-blue-button {
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+  }
+  .button-submit.link-orange-button {
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .button-submit {
+    width: 260px;
+    height: 71px;
+    background-size: 260px 71px !important;
+  }
+  .button-submit.link-blue-button {
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+  }
+  .button-submit.link-orange-button {
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .button-submit {
+    width: 400px;
+    height: 108px;
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background-size: 400px 108px !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .button-submit {
+    width: 260px;
+    height: 71px;
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background-size: 260px 71px !important;
+  }
+}
+.button-submit:hover {
+  background-color: #6cf1b4;
+  color: black;
+}
 .page-eform-submit {
   /* Cas spécifiques au formulaire pour les PL */
   /* Fin de la zone des cas spécifiques au formulaire pour les PL */
@@ -9484,6 +9546,83 @@ body.not-front #under-main-title h2.page-header.simple-title {
   }
 }
 .page-eform-submit button#edit-submit:hover {
+  background-color: #6cf1b4;
+  color: black;
+}
+/* Résultats *****************************************************/
+.page-entityform .entity-entityform .field {
+  font-size: 1.4em;
+  line-height: 2em;
+}
+.page-entityform .entity-entityform .field p {
+  font-size: 1em !important;
+}
+.page-entityform .entity-entityform #modify-subscribe-form {
+  font-size: 1.5em;
+}
+.page-entityform #payment-form-standalone {
+  background-color: #faf7f7;
+  padding: 20px;
+}
+.page-entityform #edit-save {
+  display: block;
+  color: white;
+  padding-top: 40px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 0.8em;
+  margin: 20px;
+  font-size: 1.4em;
+  padding-top: 0;
+  border: 0;
+  margin-left: 0;
+}
+.page-entityform #edit-save:hover {
+  text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  .page-entityform #edit-save {
+    width: 400px;
+    height: 108px;
+    background-size: 400px 108px !important;
+  }
+  .page-entityform #edit-save.link-blue-button {
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+  }
+  .page-entityform #edit-save.link-orange-button {
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .page-entityform #edit-save {
+    width: 260px;
+    height: 71px;
+    background-size: 260px 71px !important;
+  }
+  .page-entityform #edit-save.link-blue-button {
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+  }
+  .page-entityform #edit-save.link-orange-button {
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-entityform #edit-save {
+    width: 400px;
+    height: 108px;
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background-size: 400px 108px !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .page-entityform #edit-save {
+    width: 260px;
+    height: 71px;
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background-size: 260px 71px !important;
+  }
+}
+.page-entityform #edit-save:hover {
   background-color: #6cf1b4;
   color: black;
 }
