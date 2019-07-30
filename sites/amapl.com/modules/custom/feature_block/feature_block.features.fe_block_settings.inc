@@ -12,82 +12,6 @@ function feature_block_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
-  $export['bean-edito'] = array(
-    'cache' => 1,
-    'custom' => 0,
-    'delta' => 'edito',
-    'module' => 'bean',
-    'node_types' => array(),
-    'pages' => '<front>',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'lppl' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'lppl',
-        'weight' => -23,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-      'vigipl' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'vigipl',
-        'weight' => -23,
-      ),
-    ),
-    'title' => '<none>',
-    'visibility' => 1,
-  );
-
-  $export['bean-je-m-installe'] = array(
-    'cache' => 1,
-    'custom' => 0,
-    'delta' => 'je-m-installe',
-    'module' => 'bean',
-    'node_types' => array(),
-    'pages' => '<front>',
-    'roles' => array(),
-    'themes' => array(
-      'bartik' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'bartik',
-        'weight' => 0,
-      ),
-      'lppl' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'lppl',
-        'weight' => -17,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-      'vigipl' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'vigipl',
-        'weight' => -17,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 1,
-  );
-
   $export['block-logo_constellation'] = array(
     'cache' => -1,
     'custom' => 0,
@@ -103,23 +27,23 @@ function feature_block_default_fe_block_settings() {
         'theme' => 'bartik',
         'weight' => 0,
       ),
+      'bootamapl' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootamapl',
+        'weight' => -28,
+      ),
       'lppl' => array(
         'region' => 'footer_first',
         'status' => 1,
         'theme' => 'lppl',
-        'weight' => 0,
+        'weight' => -28,
       ),
       'seven' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'seven',
         'weight' => 0,
-      ),
-      'vigipl' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'vigipl',
-        'weight' => -29,
       ),
     ),
     'title' => '',
@@ -141,23 +65,23 @@ function feature_block_default_fe_block_settings() {
         'theme' => 'bartik',
         'weight' => 0,
       ),
+      'bootamapl' => array(
+        'region' => 'navigation',
+        'status' => 1,
+        'theme' => 'bootamapl',
+        'weight' => -15,
+      ),
       'lppl' => array(
         'region' => 'user_first',
         'status' => 1,
         'theme' => 'lppl',
-        'weight' => -29,
+        'weight' => -15,
       ),
       'seven' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'seven',
         'weight' => 0,
-      ),
-      'vigipl' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'vigipl',
-        'weight' => -29,
       ),
     ),
     'title' => '<none>',
@@ -179,23 +103,23 @@ function feature_block_default_fe_block_settings() {
         'theme' => 'bartik',
         'weight' => 0,
       ),
+      'bootamapl' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootamapl',
+        'weight' => -30,
+      ),
       'lppl' => array(
         'region' => 'footer_first',
         'status' => 1,
         'theme' => 'lppl',
-        'weight' => -1,
+        'weight' => -30,
       ),
       'seven' => array(
         'region' => '',
         'status' => 0,
         'theme' => 'seven',
         'weight' => 0,
-      ),
-      'vigipl' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'vigipl',
-        'weight' => -27,
       ),
     ),
     'title' => 'Menu bas',
@@ -217,11 +141,17 @@ function feature_block_default_fe_block_settings() {
         'theme' => 'bartik',
         'weight' => 0,
       ),
-      'lppl' => array(
+      'bootamapl' => array(
         'region' => '',
         'status' => 0,
+        'theme' => 'bootamapl',
+        'weight' => -27,
+      ),
+      'lppl' => array(
+        'region' => 'content',
+        'status' => 1,
         'theme' => 'lppl',
-        'weight' => -20,
+        'weight' => -27,
       ),
       'seven' => array(
         'region' => '',
@@ -229,14 +159,8 @@ function feature_block_default_fe_block_settings() {
         'theme' => 'seven',
         'weight' => 0,
       ),
-      'vigipl' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'vigipl',
-        'weight' => -20,
-      ),
     ),
-    'title' => 'LE SAVEZ-VOUS ?',
+    'title' => '<none>',
     'visibility' => 1,
   );
 

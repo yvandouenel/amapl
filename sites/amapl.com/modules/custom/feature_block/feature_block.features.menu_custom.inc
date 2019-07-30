@@ -35,6 +35,5 @@ function feature_block_menu_default_menu_custom() {
   t('Menu haut');
   t('The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar.');
 
-
   return $menus;
 }

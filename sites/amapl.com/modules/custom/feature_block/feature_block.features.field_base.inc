@@ -10,14 +10,13 @@
 function feature_block_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_bouton'
+  // Exported field_base: 'field_bouton'.
   $field_bases['field_bouton'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_bouton',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -40,21 +39,13 @@ function feature_block_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_sous_titre'
+  // Exported field_base: 'field_sous_titre'.
   $field_bases['field_sous_titre'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_sous_titre',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -69,21 +60,13 @@ function feature_block_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_texte'
+  // Exported field_base: 'field_texte'.
   $field_bases['field_texte'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_texte',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',

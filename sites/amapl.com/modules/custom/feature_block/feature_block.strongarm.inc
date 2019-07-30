@@ -21,7 +21,7 @@ function feature_block_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_1_depth';
-  $strongarm->value = '0';
+  $strongarm->value = '1';
   $export['menu_block_1_depth'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -98,7 +98,7 @@ function feature_block_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_block_2_level';
-  $strongarm->value = '2';
+  $strongarm->value = '1';
   $export['menu_block_2_level'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -131,6 +131,9 @@ function feature_block_strongarm() {
     1 => 2,
     2 => 3,
     3 => 4,
+    4 => 5,
+    5 => 6,
+    6 => 7,
   );
   $export['menu_block_ids'] = $strongarm;
 
