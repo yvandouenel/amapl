@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the feature block feature.
- */
-
-include_once 'feature_block.features.inc';
