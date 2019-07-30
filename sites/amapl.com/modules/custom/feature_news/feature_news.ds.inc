@@ -24,12 +24,12 @@ function feature_news_ds_layout_settings_info() {
         1 => 'field_news_image',
         2 => 'field_scald_video',
         3 => 'field_scald_file',
+        4 => 'addtoany',
       ),
       'right' => array(
-        4 => 'field_news_linked',
-        5 => 'field_news_event_linked',
-        6 => 'field_news_article_linked',
-        7 => 'addtoany',
+        5 => 'field_news_linked',
+        6 => 'field_news_event_linked',
+        7 => 'field_news_article_linked',
       ),
     ),
     'fields' => array(
@@ -37,10 +37,10 @@ function feature_news_ds_layout_settings_info() {
       'field_news_image' => 'left',
       'field_scald_video' => 'left',
       'field_scald_file' => 'left',
+      'addtoany' => 'left',
       'field_news_linked' => 'right',
       'field_news_event_linked' => 'right',
       'field_news_article_linked' => 'right',
-      'addtoany' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
