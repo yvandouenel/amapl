@@ -13,6 +13,38 @@ function amapl_trainings_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'training_list';
+  $context->description = '';
+  $context->tag = 'Formations';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'formations' => 'formations',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views--exp-trainings-list_sessions' => array(
+          'module' => 'views',
+          'delta' => '-exp-trainings-list_sessions',
+          'region' => 'large-headband',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Formations');
+  $export['training_list'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'trainings_calendar';
   $context->description = '';
   $context->tag = 'Formations';
