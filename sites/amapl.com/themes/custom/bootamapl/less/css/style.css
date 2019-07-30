@@ -9263,6 +9263,12 @@ body.not-front #under-main-title h2.page-header.simple-title {
     margin-top: 30px;
   }
 }
+.page-fichiers #under-main-title.simple-title {
+  background-color: #faf7f7;
+}
+.page-fichiers #under-main-title.simple-title h2.simple-title {
+  padding-top: 30px;
+}
 .page-fichiers ul.links {
   display: none;
 }
