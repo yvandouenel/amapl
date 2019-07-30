@@ -9293,13 +9293,14 @@ body.not-front #under-main-title h2.page-header.simple-title {
   }
 }
 .page-fichiers .all-files .img-file img {
-  margin-right: 20px;
+  border-right: 20px solid white;
   min-width: 100px;
 }
 @media screen and (max-width: 768px) {
   .page-fichiers .all-files .img-file img {
     display: table;
     margin: 0 auto;
+    border: 0;
   }
 }
 .page-fichiers .all-files .title-and-files {
