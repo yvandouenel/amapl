@@ -782,7 +782,8 @@ h2.complex-title {
 /* Barre de séparation haute **************************************/
 body.not-front {
   #under-main-title {
-    &.complex-title {
+    &.complex-title,
+    &.pl-title {
       background-color: @light-grey-amapl;
     }
     &:before {
@@ -793,7 +794,11 @@ body.not-front {
       border-bottom: 50px solid white;
     }
     h2.page-header {
-      &.complex-title {
+      &.pl-title {
+        background: url(../images/circl_title_pl.png) no-repeat 0 0;
+        padding-left: 120px;
+        min-height: 140px;
+        padding-top: 30px;
       }
       &.simple-title {
         font-weight: 900;

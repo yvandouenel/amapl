@@ -1,0 +1,92 @@
+.page-eform-submit {
+  /* Cas spécifiques au formulaire pour les PL */
+  &.page-eform-submit-inscription-amapl {
+    fieldset {
+      legend {
+        background-color: @blue-pl-amapl;
+        .panel-title {
+          color: white !important;
+        }
+      }
+    }
+  }
+  label {
+    font-size: 1.4em;
+    p {
+      font-size: 1em !important;
+    }
+  }
+  /* Fin de la zone des cas spécifiques au formulaire pour les PL */
+  /* Zone de choix de l'antenne */
+  #edit-field-choix-antenne-und {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: @screen-md) {
+      flex-wrap: wrap
+    }
+  }
+  /* Bouton de réinitialisation du formulaire */
+  .entitytype-inscription_amapl-form #new-submission {
+    background-color: @blue-green-amapl;
+    background-image: none;
+    color: black;
+    font-weight: normal;
+    display: table;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 10px 0 20px 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  /* zone de choix de la forme juridique */
+  #edit-field-forme-juridique-und {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  /* Zone de paiement que l'on cache (excepté le résultat) */
+  .entitytype-inscription_amapl-form #edit-field-paiement {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: -1000em;
+    overflow: hidden;
+  }
+  /* Zone de choix de l'éditeur pour l'historique : on cache ! */
+  #field-historique-paiement-add-more-wrapper {
+    #edit-field-historique-paiement-und-0-format,
+    a.ckeditor_links {
+      display: none !important;
+    }
+  }
+  /* URL Redirect : on cache ! */
+  .redirect-list {
+    display: none;
+  }
+
+  /* Bouton de validation du formulaire*/
+  button#edit-submit {
+    .link-button;
+    font-size: 1.4em;
+    padding-top: 0;
+    border: 0;
+    margin-left: 0;
+    @media screen and (min-width: @screen-lg) {
+      width: 400px;
+      height: 108px;
+      background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+      background-size: 400px 108px !important;
+    }
+    @media screen and (max-width: @screen-lg) {
+      width: 260px;
+      height: 71px;
+      background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+      background-size: 260px 71px !important;
+    }
+    &:hover {
+      background-color: @blue-green-amapl;
+      color: black;
+    }
+  }
+}

@@ -8326,7 +8326,8 @@ h2.complex-title {
 }
 /* Toutes les pages sauf la page d'accueil ************************/
 /* Barre de séparation haute **************************************/
-body.not-front #under-main-title.complex-title {
+body.not-front #under-main-title.complex-title,
+body.not-front #under-main-title.pl-title {
   background-color: #faf7f7;
 }
 body.not-front #under-main-title:before {
@@ -8335,6 +8336,12 @@ body.not-front #under-main-title:before {
   height: 61px;
   background: url(../images/separateur-haut.png) no-repeat 50% 0;
   border-bottom: 50px solid white;
+}
+body.not-front #under-main-title h2.page-header.pl-title {
+  background: url(../images/circl_title_pl.png) no-repeat 0 0;
+  padding-left: 120px;
+  min-height: 140px;
+  padding-top: 30px;
 }
 body.not-front #under-main-title h2.page-header.simple-title {
   font-weight: 900;
@@ -9350,4 +9357,133 @@ body.not-front #under-main-title h2.page-header.simple-title {
   background-color: white;
   color: black;
   text-align: center;
+}
+.page-lettres-info article.article-lettre-info:hover h3 {
+  background-color: #6cf1b4;
+}
+.page-eform-submit {
+  /* Cas spécifiques au formulaire pour les PL */
+  /* Fin de la zone des cas spécifiques au formulaire pour les PL */
+  /* Zone de choix de l'antenne */
+  /* Bouton de réinitialisation du formulaire */
+  /* zone de choix de la forme juridique */
+  /* Zone de paiement que l'on cache (excepté le résultat) */
+  /* Zone de choix de l'éditeur pour l'historique : on cache ! */
+  /* URL Redirect : on cache ! */
+  /* Bouton de validation du formulaire*/
+}
+.page-eform-submit.page-eform-submit-inscription-amapl fieldset legend {
+  background-color: #0095c7;
+}
+.page-eform-submit.page-eform-submit-inscription-amapl fieldset legend .panel-title {
+  color: white !important;
+}
+.page-eform-submit label {
+  font-size: 1.4em;
+}
+.page-eform-submit label p {
+  font-size: 1em !important;
+}
+.page-eform-submit #edit-field-choix-antenne-und {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 992px) {
+  .page-eform-submit #edit-field-choix-antenne-und {
+    flex-wrap: wrap;
+  }
+}
+.page-eform-submit .entitytype-inscription_amapl-form #new-submission {
+  background-color: #6cf1b4;
+  background-image: none;
+  color: black;
+  font-weight: normal;
+  display: table;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 10px 0 20px 0;
+}
+.page-eform-submit .entitytype-inscription_amapl-form #new-submission:hover {
+  cursor: pointer;
+}
+.page-eform-submit #edit-field-forme-juridique-und {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.page-eform-submit .entitytype-inscription_amapl-form #edit-field-paiement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: -1000em;
+  overflow: hidden;
+}
+.page-eform-submit #field-historique-paiement-add-more-wrapper #edit-field-historique-paiement-und-0-format,
+.page-eform-submit #field-historique-paiement-add-more-wrapper a.ckeditor_links {
+  display: none !important;
+}
+.page-eform-submit .redirect-list {
+  display: none;
+}
+.page-eform-submit button#edit-submit {
+  display: block;
+  color: white;
+  padding-top: 40px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 0.8em;
+  margin: 20px;
+  font-size: 1.4em;
+  padding-top: 0;
+  border: 0;
+  margin-left: 0;
+}
+.page-eform-submit button#edit-submit:hover {
+  text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  .page-eform-submit button#edit-submit {
+    width: 400px;
+    height: 108px;
+    background-size: 400px 108px !important;
+  }
+  .page-eform-submit button#edit-submit.link-blue-button {
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+  }
+  .page-eform-submit button#edit-submit.link-orange-button {
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .page-eform-submit button#edit-submit {
+    width: 260px;
+    height: 71px;
+    background-size: 260px 71px !important;
+  }
+  .page-eform-submit button#edit-submit.link-blue-button {
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+  }
+  .page-eform-submit button#edit-submit.link-orange-button {
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-eform-submit button#edit-submit {
+    width: 400px;
+    height: 108px;
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background-size: 400px 108px !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .page-eform-submit button#edit-submit {
+    width: 260px;
+    height: 71px;
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background-size: 260px 71px !important;
+  }
+}
+.page-eform-submit button#edit-submit:hover {
+  background-color: #6cf1b4;
+  color: black;
 }
