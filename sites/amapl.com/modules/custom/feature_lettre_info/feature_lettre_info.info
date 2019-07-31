@@ -25,6 +25,7 @@ features[variable][] = comment_form_location_lettre_d_information
 features[variable][] = comment_lettre_d_information
 features[variable][] = comment_preview_lettre_d_information
 features[variable][] = comment_subject_field_lettre_d_information
+features[variable][] = ds_extras_view_modes_lettre_d_information
 features[variable][] = field_bundle_settings_node__lettre_d_information
 features[variable][] = language_content_type_lettre_d_information
 features[variable][] = menu_options_lettre_d_information
