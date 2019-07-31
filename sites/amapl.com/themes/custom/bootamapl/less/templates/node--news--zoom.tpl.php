@@ -101,7 +101,7 @@ $target = (isset($node->field_news_new_window['und'][0]['value']) &&
   <?php if (!$page): ?>
 
     <h3 class="<?php print $title_class ?> h3-bottom-home h3-news-list">
-      <a target="<?php print $target; ?>" href="<?php print $url; ?>"><?php print $title; ?></a>
+      <a target="<?php print $target; ?>" href="/<?php print $url; ?>"><?php print $title; ?></a>
     </h3>
 
   <?php endif; ?>
@@ -128,7 +128,7 @@ $target = (isset($node->field_news_new_window['und'][0]['value']) &&
 <?php
 if(isset($url)) {
   print '<div class="more-link ' . $title_class . '">
-  <a href="' . $url . '" target="' . $target . '">Lire la suite</a>
+  <a href="/' . $url . '" target="' . $target . '">Lire la suite</a>
   </div>';
 }
 
