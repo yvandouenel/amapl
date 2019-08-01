@@ -9714,6 +9714,9 @@ body.not-front #under-main-title h2.page-header.simple-title {
 .page-entityform {
   /* Tableau de paiement */
 }
+.page-entityform .field-name-field-historique-paiement ul li {
+  font-size: 1em !important;
+}
 .page-entityform .entity-entityform .field {
   font-size: 1.4em;
   line-height: 2em;
