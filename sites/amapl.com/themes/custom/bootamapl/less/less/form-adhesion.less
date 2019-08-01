@@ -22,13 +22,36 @@
   }
 }
 .page-eform-submit {
+  /* Titre principal */
+  #under-main-title h2.page-header.pl-title {
+    min-height: 107px !important;
+  }
   /* Cas spécifiques au formulaire pour les PL */
+  // Date
+  fieldset.date-combo .container-inline-date > .form-item {
+    margin-bottom: -10px;
+  }
+  .form-item-field-date-debut-und-0-value-date {
+    label {
+      display: none;
+    }
+  }
   &.page-eform-submit-inscription-amapl {
     fieldset {
       legend {
-        background-color: @blue-pl-amapl;
+        background-color: @blue-light-pl-amapl;
         .panel-title {
           color: white !important;
+          font-size: 1.3em;
+        }
+      }
+      fieldset {
+        legend {
+          background-color: white;
+          .panel-title {
+            font-size: 1em;
+            color: black !important;
+          }
         }
       }
     }
@@ -88,7 +111,7 @@
           flex-wrap: wrap;
           > div {
             width: 45%;
-            margin-right: 2.5%
+            margin-right: 2.5%;
           }
         }
       }
@@ -130,6 +153,25 @@
     font-size: 1.4em;
     p {
       font-size: 1em !important;
+    }
+  }
+  /* Année d'adhésion */
+  #edit-field-pour-les-revenus-und {
+    max-width: 100px;
+  }
+  /* Identification & activité */
+  .group-identification,
+  .group-activite {
+    div.panel-body {
+      @media screen and (min-width: @screen-md) {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        > div {
+          width: 45%;
+          margin-right: 2.5%;
+        }
+      }
     }
   }
   /* Zone de choix de l'antenne */
@@ -175,6 +217,10 @@
       display: none !important;
     }
   }
+  /* Historique : on cache ! */
+  #field-historique-paiement-add-more-wrapper {
+    display: none;
+  }
   /* URL Redirect : on cache ! */
   .redirect-list {
     display: none;
@@ -213,5 +259,54 @@
   }
   #edit-save {
     .button-submit;
+    margin-top: -5px;
+  }
+  /* Tableau de paiement */
+  #payment-form-standalone {
+    /* .tableheader-processed {
+      width: 48%;
+      border-right: 1px solid #ccc;
+      float: left;
+      margin-right: 20px;
+    } */
+    .tableheader-processed tr:nth-child(2),
+    .tableheader-processed tr th:nth-child(2),
+    .tableheader-processed tr td:nth-child(2),
+    .tableheader-processed tr th:nth-child(3),
+    .tableheader-processed tr td:nth-child(3),
+    .tableheader-processed tr th:nth-child(5),
+    .tableheader-processed tr td:nth-child(5),
+    #edit-payment-method-pmid-title {
+      display: none;
+    }
+    > div {
+      @media screen and (min-width: @screen-md) {
+        display: flex;
+        justify-content: flex-start;
+        align-content: top;
+        .table-responsive {
+          margin-right: 20px;
+          min-width: 60%;
+          tr td {
+            white-space: normal !important;
+            &:nth-child(4) {
+              font-size: 1.8em;
+              font-weight: 800;
+              white-space: nowrap !important;
+            }
+          }
+        }
+      }
+      @media screen and (max-width: @screen-md) {
+        tr td {
+          white-space: normal !important;
+          &:nth-child(4) {
+            font-size: 1.8em;
+            font-weight: 800;
+            white-space: nowrap !important;
+          }
+        }
+      }
+    }
   }
 }

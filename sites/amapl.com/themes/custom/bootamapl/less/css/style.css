@@ -8914,79 +8914,8 @@ body.not-front #under-main-title h2.page-header.simple-title {
 }
 /* Fin de page de liste d'actualités */
 @media screen and (min-width: 992px) {
-  .node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols .page-col-left {
-    text-transform: uppercase;
-    padding-left: 120px;
-    padding-top: 40px;
-    font-size: 2em;
-    font-weight: 900;
-  }
-  .node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols .page-col-left.title-pl {
-    color: #0095c7;
-    background: url(../images/circl_title_pl.png) no-repeat 0 0;
-    height: 120px;
-    overflow: hidden;
-  }
-  .node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols .page-col-left.title-caa {
-    color: #ff9d0f;
-    background: url(../images/circl_title_caa.png) no-repeat 0 0;
-    height: 120px;
-    overflow: hidden;
-  }
-  .node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols .page-col-right {
-    text-transform: uppercase;
-    padding-left: 120px;
-    padding-top: 40px;
-    font-size: 2em;
-    font-weight: 900;
-  }
-  .node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols .page-col-right.title-pl {
-    color: #0095c7;
-    background: url(../images/circl_title_pl.png) no-repeat 0 0;
-    height: 120px;
-    overflow: hidden;
-  }
-  .node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols .page-col-right.title-caa {
-    color: #ff9d0f;
-    background: url(../images/circl_title_caa.png) no-repeat 0 0;
-    height: 120px;
-    overflow: hidden;
-  }
-}
-@media screen and (min-width: 992px) and screen and (max-width: 768px) {
-  .node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols .page-col-left.title-pl {
-    background-size: 60px 60px;
-    padding-left: 70px;
-    padding-top: 10px;
-    height: 80px;
-    font-size: 1.4em;
-  }
-}
-@media screen and (min-width: 992px) and screen and (max-width: 768px) {
-  .node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols .page-col-left.title-caa {
-    background-size: 60px 60px;
-    padding-left: 70px;
-    padding-top: 10px;
-    height: 80px;
-    font-size: 1.4em;
-  }
-}
-@media screen and (min-width: 992px) and screen and (max-width: 768px) {
-  .node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols .page-col-right.title-pl {
-    background-size: 60px 60px;
-    padding-left: 70px;
-    padding-top: 10px;
-    height: 80px;
-    font-size: 1.4em;
-  }
-}
-@media screen and (min-width: 992px) and screen and (max-width: 768px) {
-  .node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols .page-col-right.title-caa {
-    background-size: 60px 60px;
-    padding-left: 70px;
-    padding-top: 10px;
-    height: 80px;
-    font-size: 1.4em;
+  .node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols #page-col-right a.pdf {
+    background: url(../images/picto-pdf-orange.png) no-repeat 0 0;
   }
 }
 /* page de liste des formations *************************/
@@ -9438,25 +9367,46 @@ body.not-front #under-main-title h2.page-header.simple-title {
   color: black;
 }
 .page-eform-submit {
+  /* Titre principal */
   /* Cas spécifiques au formulaire pour les PL */
   /* Fin de la zone des cas spécifiques au formulaire pour les PL */
   /* Cas spécifiques au formulaire pour les CAA */
   /* Fin de la zone des cas spécifiques au formulaire pour les CAA */
+  /* Année d'adhésion */
+  /* Identification & activité */
   /* Zone de choix de l'antenne */
   /* Bouton de réinitialisation du formulaire */
   /* zone de choix de la forme juridique */
   /* Zone de paiement que l'on cache (excepté le résultat) */
   /* Zone de choix de l'éditeur pour l'historique : on cache ! */
+  /* Historique : on cache ! */
   /* URL Redirect : on cache ! */
+}
+.page-eform-submit #under-main-title h2.page-header.pl-title {
+  min-height: 107px !important;
+}
+.page-eform-submit fieldset.date-combo .container-inline-date > .form-item {
+  margin-bottom: -10px;
+}
+.page-eform-submit .form-item-field-date-debut-und-0-value-date label {
+  display: none;
 }
 .page-eform-submit.page-eform-submit-inscription-amapl {
   /* Bouton de validation du formulaire*/
 }
 .page-eform-submit.page-eform-submit-inscription-amapl fieldset legend {
-  background-color: #0095c7;
+  background-color: #4bcdf8;
 }
 .page-eform-submit.page-eform-submit-inscription-amapl fieldset legend .panel-title {
   color: white !important;
+  font-size: 1.3em;
+}
+.page-eform-submit.page-eform-submit-inscription-amapl fieldset fieldset legend {
+  background-color: white;
+}
+.page-eform-submit.page-eform-submit-inscription-amapl fieldset fieldset legend .panel-title {
+  font-size: 1em;
+  color: black !important;
 }
 .page-eform-submit.page-eform-submit-inscription-amapl button#edit-submit {
   display: block;
@@ -9700,6 +9650,22 @@ body.not-front #under-main-title h2.page-header.simple-title {
 .page-eform-submit label p {
   font-size: 1em !important;
 }
+.page-eform-submit #edit-field-pour-les-revenus-und {
+  max-width: 100px;
+}
+@media screen and (min-width: 992px) {
+  .page-eform-submit .group-identification div.panel-body,
+  .page-eform-submit .group-activite div.panel-body {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .page-eform-submit .group-identification div.panel-body > div,
+  .page-eform-submit .group-activite div.panel-body > div {
+    width: 45%;
+    margin-right: 2.5%;
+  }
+}
 .page-eform-submit #edit-field-choix-antenne-und {
   display: flex;
   justify-content: space-between;
@@ -9738,10 +9704,16 @@ body.not-front #under-main-title h2.page-header.simple-title {
 .page-eform-submit #field-historique-paiement-add-more-wrapper a.ckeditor_links {
   display: none !important;
 }
+.page-eform-submit #field-historique-paiement-add-more-wrapper {
+  display: none;
+}
 .page-eform-submit .redirect-list {
   display: none;
 }
 /* Résultats *****************************************************/
+.page-entityform {
+  /* Tableau de paiement */
+}
 .page-entityform .entity-entityform .field {
   font-size: 1.4em;
   line-height: 2em;
@@ -9781,6 +9753,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
   padding-top: 0;
   border: 0;
   margin-left: 0;
+  margin-top: -5px;
 }
 .page-entityform #edit-save:hover {
   text-decoration: none;
@@ -9830,4 +9803,51 @@ body.not-front #under-main-title h2.page-header.simple-title {
 .page-entityform #edit-save:hover {
   background-color: #6cf1b4;
   color: black;
+}
+.page-entityform #payment-form-standalone {
+  /* .tableheader-processed {
+      width: 48%;
+      border-right: 1px solid #ccc;
+      float: left;
+      margin-right: 20px;
+    } */
+}
+.page-entityform #payment-form-standalone .tableheader-processed tr:nth-child(2),
+.page-entityform #payment-form-standalone .tableheader-processed tr th:nth-child(2),
+.page-entityform #payment-form-standalone .tableheader-processed tr td:nth-child(2),
+.page-entityform #payment-form-standalone .tableheader-processed tr th:nth-child(3),
+.page-entityform #payment-form-standalone .tableheader-processed tr td:nth-child(3),
+.page-entityform #payment-form-standalone .tableheader-processed tr th:nth-child(5),
+.page-entityform #payment-form-standalone .tableheader-processed tr td:nth-child(5),
+.page-entityform #payment-form-standalone #edit-payment-method-pmid-title {
+  display: none;
+}
+@media screen and (min-width: 992px) {
+  .page-entityform #payment-form-standalone > div {
+    display: flex;
+    justify-content: flex-start;
+    align-content: top;
+  }
+  .page-entityform #payment-form-standalone > div .table-responsive {
+    margin-right: 20px;
+    min-width: 60%;
+  }
+  .page-entityform #payment-form-standalone > div .table-responsive tr td {
+    white-space: normal !important;
+  }
+  .page-entityform #payment-form-standalone > div .table-responsive tr td:nth-child(4) {
+    font-size: 1.8em;
+    font-weight: 800;
+    white-space: nowrap !important;
+  }
+}
+@media screen and (max-width: 992px) {
+  .page-entityform #payment-form-standalone > div tr td {
+    white-space: normal !important;
+  }
+  .page-entityform #payment-form-standalone > div tr td:nth-child(4) {
+    font-size: 1.8em;
+    font-weight: 800;
+    white-space: nowrap !important;
+  }
 }
