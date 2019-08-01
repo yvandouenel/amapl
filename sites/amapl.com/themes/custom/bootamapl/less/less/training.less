@@ -98,18 +98,7 @@
                   border-left: 5px solid white;
                   border-right: 5px solid white;
                 }
-                &.pl {
-                  &:before {
-                    background: white url(../images/picto_formation_bleu.png)
-                      no-repeat 0 0;
-                  }
-                }
-                &.caa {
-                  &:before {
-                    background: white url(../images/picto_formation_orange.png)
-                      no-repeat 0 0;
-                  }
-                }
+
 
               }
               margin-bottom: 20px;
@@ -119,6 +108,22 @@
               p {
                 label {
                   width: 150px;
+                }
+              }
+            }
+            &.pl {
+              h3.title-training-list {
+                a:before {
+                  background: white url(../images/picto_formation_bleu.png)
+                    no-repeat 0 0;
+                }
+              }
+            }
+            &.caa {
+              h3.title-training-list {
+                a:before {
+                  background: white url(../images/picto_formation_orange.png)
+                    no-repeat 0 0;
                 }
               }
             }
@@ -201,7 +206,6 @@
       width: 100%;
     }
   }
-
 }
 /* fin page formation ***************************************/
 /* colorbox *************************************************/
@@ -214,16 +218,14 @@
     font-size: 1.4em;
   }
   .field-name-node-link {
-
   }
   .group-first-row,
-  .group-second-row{
+  .group-second-row {
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
     > div {
       width: 45%;
-
     }
   }
   .field-name-field-session-registration {

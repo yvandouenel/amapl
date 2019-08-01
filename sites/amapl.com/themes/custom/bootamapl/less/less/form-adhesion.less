@@ -1,25 +1,25 @@
 .button-submit {
   .link-button;
-    font-size: 1.4em;
-    padding-top: 0;
-    border: 0;
-    margin-left: 0;
-    @media screen and (min-width: @screen-lg) {
-      width: 400px;
-      height: 108px;
-      background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
-      background-size: 400px 108px !important;
-    }
-    @media screen and (max-width: @screen-lg) {
-      width: 260px;
-      height: 71px;
-      background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
-      background-size: 260px 71px !important;
-    }
-    &:hover {
-      background-color: @blue-green-amapl;
-      color: black;
-    }
+  font-size: 1.4em;
+  padding-top: 0;
+  border: 0;
+  margin-left: 0;
+  @media screen and (min-width: @screen-lg) {
+    width: 400px;
+    height: 108px;
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background-size: 400px 108px !important;
+  }
+  @media screen and (max-width: @screen-lg) {
+    width: 260px;
+    height: 71px;
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background-size: 260px 71px !important;
+  }
+  &:hover {
+    background-color: @blue-green-amapl;
+    color: black;
+  }
 }
 .page-eform-submit {
   /* Cas spécifiques au formulaire pour les PL */
@@ -32,20 +32,112 @@
         }
       }
     }
+    /* Bouton de validation du formulaire*/
+    button#edit-submit {
+      .button-submit;
+    }
   }
+  /* Fin de la zone des cas spécifiques au formulaire pour les PL */
+  /* Cas spécifiques au formulaire pour les CAA */
+  &.page-eform-submit-inscription-amapl-caa {
+    form > div > fieldset {
+      > legend {
+        background-color: @orange-caa-amapl;
+        .panel-title {
+          color: white !important;
+          font-weight: 700;
+        }
+      }
+    }
+    .group-exo-compta {
+      .panel-body {
+        display: flex;
+        justify-content: flex-start;
+        .field-name-field-date-du {
+          margin-right: 30px;
+        }
+        label.control-label {
+          display: none;
+        }
+      }
+    }
+    /* Forme juridique */
+    .form-item-field-forme-juridique-caa-und.form-group {
+      > label {
+        display: none;
+      }
+      #edit-field-forme-juridique-caa-und {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        > div {
+          width: 250px;
+          &:first-child {
+            display: none;
+          }
+        }
+      }
+    }
+    /* Identification */
+    .group-identification {
+      @media screen and (min-width: @screen-md) {
+        .panel-body {
+          display: flex;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          > div {
+            width: 45%;
+            margin-right: 2.5%
+          }
+        }
+      }
+    }
+    /* Régime fiscal */
+    #edit-field-imposition-benefices-und,
+    #edit-field-regime-declaratif-und,
+    #edit-field-situation-tva-und {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      > div {
+        padding-right: 40px;
+        &.form-item-field-imposition-benefices-und,
+        &.form-item-field-regime-declaratif-und,
+        &.form-item-field-situation-tva-und {
+          margin-top: 1px;
+        }
+      }
+    }
+    /* Bouton de soumission */
+    button#edit-submit {
+      .button-submit;
+      .link-button;
+      font-size: 1.4em;
+      padding-top: 0;
+      @media screen and (min-width: @screen-lg) {
+        background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+        background-size: 400px 108px !important;
+      }
+      @media screen and (max-width: @screen-lg) {
+        background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+        background-size: 260px 71px !important;
+      }
+    }
+  }
+  /* Fin de la zone des cas spécifiques au formulaire pour les CAA */
   label {
     font-size: 1.4em;
     p {
       font-size: 1em !important;
     }
   }
-  /* Fin de la zone des cas spécifiques au formulaire pour les PL */
   /* Zone de choix de l'antenne */
   #edit-field-choix-antenne-und {
     display: flex;
     justify-content: space-between;
     @media screen and (max-width: @screen-md) {
-      flex-wrap: wrap
+      flex-wrap: wrap;
     }
   }
   /* Bouton de réinitialisation du formulaire */
@@ -87,11 +179,6 @@
   .redirect-list {
     display: none;
   }
-
-  /* Bouton de validation du formulaire*/
-  button#edit-submit {
-    .button-submit;
-  }
 }
 /* Résultats *****************************************************/
 .page-entityform {
@@ -117,7 +204,7 @@
     padding-top: 20px;
   }
   .payment-line_item-total {
-    background-color: #66D0F5;
+    background-color: #66d0f5;
     font-size: 1.6em;
     color: white;
     &:hover {
@@ -128,4 +215,3 @@
     .button-submit;
   }
 }
-
