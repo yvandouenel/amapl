@@ -36,8 +36,6 @@ if(typeof(CKEDITOR) !== 'undefined') {
             { name : 'puce bleue', element : 'li', attributes : { 'class' : 'li-blue' }},
             { name : 'puce orange', element : 'li', attributes : { 'class' : 'li-orange' }},
             { name : 'puce mixte', element : 'li', attributes : { 'class' : 'li-mixed' }},
-            { name : 'pdf-bleu-centre', element : 'div', attributes : { 'class' : 'pdf-blue-center' }},
-            { name : 'pdf-orange-centre', element : 'div', attributes : { 'class' : 'pdf-orange-center' }},
 
             /* Inline Styles */
             // These are core styles available as toolbar buttons. You may opt enabling
