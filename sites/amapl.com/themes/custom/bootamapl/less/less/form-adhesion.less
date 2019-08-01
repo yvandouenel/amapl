@@ -96,9 +96,6 @@
 
         > div {
           width: 250px;
-          &:first-child {
-            display: none;
-          }
         }
       }
     }
@@ -203,7 +200,9 @@
     flex-wrap: wrap;
   }
   /* Zone de paiement que l'on cache (excepté le résultat) */
-  .entitytype-inscription_amapl-form #edit-field-paiement {
+
+  .entitytype-inscription_amapl-form #edit-field-paiement,
+  .field-type-paymentform {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -228,6 +227,14 @@
 }
 /* Résultats *****************************************************/
 .page-entityform {
+  // Historique de paiement
+  .field-name-field-historique-paiement {
+    ul {
+      li {
+        font-size: 1em !important;
+      }
+    }
+  }
   .entity-entityform {
     .field {
       font-size: 1.4em;

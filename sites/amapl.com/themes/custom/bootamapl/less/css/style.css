@@ -9504,9 +9504,6 @@ body.not-front #under-main-title h2.page-header.simple-title {
 .page-eform-submit.page-eform-submit-inscription-amapl-caa .form-item-field-forme-juridique-caa-und.form-group #edit-field-forme-juridique-caa-und > div {
   width: 250px;
 }
-.page-eform-submit.page-eform-submit-inscription-amapl-caa .form-item-field-forme-juridique-caa-und.form-group #edit-field-forme-juridique-caa-und > div:first-child {
-  display: none;
-}
 @media screen and (min-width: 992px) {
   .page-eform-submit.page-eform-submit-inscription-amapl-caa .group-identification .panel-body {
     display: flex;
@@ -9693,7 +9690,8 @@ body.not-front #under-main-title h2.page-header.simple-title {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.page-eform-submit .entitytype-inscription_amapl-form #edit-field-paiement {
+.page-eform-submit .entitytype-inscription_amapl-form #edit-field-paiement,
+.page-eform-submit .field-type-paymentform {
   position: absolute;
   width: 1px;
   height: 1px;
