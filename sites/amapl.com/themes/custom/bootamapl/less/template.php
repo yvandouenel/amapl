@@ -13,6 +13,9 @@ function bootamapl_preprocess_page(&$vars) {
    * Le tableau $vars permet de créer des variables que je pourrai ensuite
    * reprendre dans les différents template.
    * Exemple dans page.tpl.php : class="<?php print $title_class; ?>"
+   * S'il est facile de distinguer les différents nodes (clé ['node']),
+   * il a été moins facile de trouver comment distinguer les vues (via views_get_page_view())
+   * et encore moins facile de trouver comment distinguer les entity form (clé ['theme_hook_suggestions'])
   */
   //dpm($vars);
   $vars['title_class'] = "complex-title";
@@ -22,8 +25,13 @@ function bootamapl_preprocess_page(&$vars) {
   else if (views_get_page_view() && views_get_page_view()->name == "lettres_info" ){
     $vars['title_class'] = "simple-title";
   }
-  else if (isset($vars['theme_hook_suggestions'][2]) && $vars['theme_hook_suggestions'][2] == "page__eform__submit__inscription_amapl" ){
+  else if (isset($vars['theme_hook_suggestions'][2]) &&
+    $vars['theme_hook_suggestions'][2] == "page__eform__submit__inscription_amapl" ){
     $vars['title_class'] = "pl-title";
+  }
+  else if (isset($vars['theme_hook_suggestions'][2]) &&
+  $vars['theme_hook_suggestions'][2] == "page__eform__submit__inscription_amapl_caa" ){
+    $vars['title_class'] = "caa-title";
   }
   else if (isset($vars['node']) &&
     isset($vars['node']->field_titre_simple_['und'][0]['value']) &&
