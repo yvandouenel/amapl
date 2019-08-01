@@ -104,6 +104,35 @@ function feature_downloading_files_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Published status */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'downloading_file' => 'downloading_file',
+  );
+  /* Critère de filtrage: Contenu : Fichiers (field_files_img) */
+  $handler->display->display_options['filters']['field_files_img_value']['id'] = 'field_files_img_value';
+  $handler->display->display_options['filters']['field_files_img_value']['table'] = 'field_data_field_files_img';
+  $handler->display->display_options['filters']['field_files_img_value']['field'] = 'field_files_img_value';
+  $handler->display->display_options['filters']['field_files_img_value']['operator'] = 'not empty';
+  /* Critère de filtrage: Contenu : cible (field_session_target) */
+  $handler->display->display_options['filters']['field_session_target_value']['id'] = 'field_session_target_value';
+  $handler->display->display_options['filters']['field_session_target_value']['table'] = 'field_data_field_session_target';
+  $handler->display->display_options['filters']['field_session_target_value']['field'] = 'field_session_target_value';
+  $handler->display->display_options['filters']['field_session_target_value']['value'] = array(
+    'both' => 'both',
+    'pl' => 'pl',
+  );
   $handler->display->display_options['path'] = 'fichiers';
 
   /* Display: Page fichiers CAA (Fichier attaché) */
