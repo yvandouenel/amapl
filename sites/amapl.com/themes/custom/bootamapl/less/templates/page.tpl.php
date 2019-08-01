@@ -80,7 +80,7 @@
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
   <div >
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-4">
         <?php if ($logo): ?>
           <h1 id="h1-logo">
             <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>">
@@ -89,7 +89,7 @@
           </h1>
         <?php endif; ?>
       </div><!-- Fin col -->
-      <div class="col-md-6">
+      <div class="col-md-8">
         <div class="navbar-header">
           <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
