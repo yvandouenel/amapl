@@ -1402,6 +1402,1457 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_activity_details'.
+  $field_instances['entityform-inscription_amapl_caa-field_activity_details'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'A renseigner notamment lorsque vous choisissez "Autres" pour apporter toutes précisions utiles.',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 19,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_activity_details',
+    'label' => 'Précisions diverses',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+        'show_token_tree' => 0,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 23,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_adresse_correspondance'.
+  $field_instances['entityform-inscription_amapl_caa-field_adresse_correspondance'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_adresse_correspondance',
+    'label' => 'Adresse correspondance',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_adresse_professionnelle'.
+  $field_instances['entityform-inscription_amapl_caa-field_adresse_professionnelle'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_adresse_professionnelle',
+    'label' => 'Adresse professionnelle',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_assistance'.
+  $field_instances['entityform-inscription_amapl_caa-field_assistance'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => array(
+      0 => array(
+        'value' => 'non',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 23,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_assistance',
+    'label' => 'Assistance d’un expert comptable',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 25,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_assistance_adresse'.
+  $field_instances['entityform-inscription_amapl_caa-field_assistance_adresse'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 25,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_assistance_adresse',
+    'label' => 'Adresse',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 27,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_assistance_email'.
+  $field_instances['entityform-inscription_amapl_caa-field_assistance_email'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 28,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_assistance_email',
+    'label' => 'Email',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 30,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_assistance_fax'.
+  $field_instances['entityform-inscription_amapl_caa-field_assistance_fax'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 27,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_assistance_fax',
+    'label' => 'Fax',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 29,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_assistance_nom'.
+  $field_instances['entityform-inscription_amapl_caa-field_assistance_nom'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 24,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_assistance_nom',
+    'label' => 'Nom et prénom ou société',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 26,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_assistance_phone'.
+  $field_instances['entityform-inscription_amapl_caa-field_assistance_phone'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 26,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_assistance_phone',
+    'label' => 'Téléphone',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 28,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_autre_aga'.
+  $field_instances['entityform-inscription_amapl_caa-field_autre_aga'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 34,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_autre_aga',
+    'label' => 'Nom et adresse du précédent CGA ou OMGA',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 24,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_autre_provenance'.
+  $field_instances['entityform-inscription_amapl_caa-field_autre_provenance'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 36,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_autre_provenance',
+    'label' => 'Je connais l\'AMAPL grâce à',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+        'show_token_tree' => 0,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_autre_type_adhesion'.
+  $field_instances['entityform-inscription_amapl_caa-field_autre_type_adhesion'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 33,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_autre_type_adhesion',
+    'label' => 'Autre',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 21,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-inscription_amapl_caa-field_cgv'.
+  $field_instances['entityform-inscription_amapl_caa-field_cgv'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '<a href="/adherer/cgv" target="_blank">Voir les conditions d’adhésion</a>',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 31,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_cgv',
+    'label' => ' J’ai pris connaissance et accepte les conditions d’adhésion',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_choix_antenne'.
+  $field_instances['entityform-inscription_amapl_caa-field_choix_antenne'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 7,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_choix_antenne',
+    'label' => 'Choix de l\'agence',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-inscription_amapl_caa-field_code_ape'.
+  $field_instances['entityform-inscription_amapl_caa-field_code_ape'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 16,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_code_ape',
+    'label' => 'Code APE',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 18,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-inscription_amapl_caa-field_date_au'.
+  $field_instances['entityform-inscription_amapl_caa-field_date_au'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+        ),
+        'type' => 'date_default',
+        'weight' => 9,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_date_au',
+    'label' => 'au',
+    'required' => 1,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'd/m/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_date_debut'.
+  $field_instances['entityform-inscription_amapl_caa-field_date_debut'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => FALSE,
+        ),
+        'type' => 'date_default',
+        'weight' => 13,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_date_debut',
+    'label' => 'Date de début d’activité (ou de reprise d’activité après cessation)',
+    'required' => 1,
+    'settings' => array(
+      'default_value' => 'strtotime',
+      'default_value2' => 'same',
+      'default_value_code' => '-1 year',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'd/m/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-inscription_amapl_caa-field_date_du'.
+  $field_instances['entityform-inscription_amapl_caa-field_date_du'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+          'show_remaining_days' => 0,
+        ),
+        'type' => 'date_default',
+        'weight' => 8,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_date_du',
+    'label' => 'Du',
+    'required' => 1,
+    'settings' => array(
+      'default_value' => 'strtotime',
+      'default_value2' => 'same',
+      'default_value_code' => '-1 year',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'd/m/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'no_fieldset' => 0,
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-inscription_amapl_caa-field_email'.
+  $field_instances['entityform-inscription_amapl_caa-field_email'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 6,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_email',
+    'label' => 'Email',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'email',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'email_textfield',
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-inscription_amapl_caa-field_fj_autre'.
+  $field_instances['entityform-inscription_amapl_caa-field_fj_autre'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_fj_autre',
+    'label' => 'Autre forme juridique',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_forme_juridique_caa'.
+  $field_instances['entityform-inscription_amapl_caa-field_forme_juridique_caa'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 10,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_forme_juridique_caa',
+    'label' => 'Forme juridique',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_historique_paiement'.
+  $field_instances['entityform-inscription_amapl_caa-field_historique_paiement'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_historique_paiement',
+    'label' => 'Historique de paiement',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+        'show_token_tree' => 0,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_imposition_benefices'.
+  $field_instances['entityform-inscription_amapl_caa-field_imposition_benefices'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 20,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_imposition_benefices',
+    'label' => 'Imposition des bénéfices',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_nature_activite'.
+  $field_instances['entityform-inscription_amapl_caa-field_nature_activite'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 12,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_nature_activite',
+    'label' => 'Nature de l\'activité',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 14,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_nom_prenom'.
+  $field_instances['entityform-inscription_amapl_caa-field_nom_prenom'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_nom_prenom',
+    'label' => 'Nom et prénom',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-inscription_amapl_caa-field_non_pro'.
+  $field_instances['entityform-inscription_amapl_caa-field_non_pro'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 15,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_non_pro',
+    'label' => 'Activité non professionnelle',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 16,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_ou_denomination_sociale'.
+  $field_instances['entityform-inscription_amapl_caa-field_ou_denomination_sociale'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_ou_denomination_sociale',
+    'label' => 'Ou dénomination sociale',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_paiement_caa'.
+  $field_instances['entityform-inscription_amapl_caa-field_paiement_caa'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'paymentform',
+        'settings' => array(),
+        'type' => 'paymentform',
+        'weight' => 30,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_paiement_caa',
+    'label' => 'Paiement',
+    'required' => 0,
+    'settings' => array(
+      'currency_code' => 'EUR',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'paymentform',
+      'settings' => array(),
+      'type' => 'paymentform_line_item',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_payment_online'.
+  $field_instances['entityform-inscription_amapl_caa-field_payment_online'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 32,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_payment_online',
+    'label' => ' Je règle la cotisation en ligne par carte bancaire, condition de mon adhésion en ligne',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-inscription_amapl_caa-field_phone'.
+  $field_instances['entityform-inscription_amapl_caa-field_phone'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_phone',
+    'label' => 'Téléphone',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-inscription_amapl_caa-field_prix_caa'.
+  $field_instances['entityform-inscription_amapl_caa-field_prix_caa'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 35,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_prix_caa',
+    'label' => 'Prix TTC',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_provenance'.
+  $field_instances['entityform-inscription_amapl_caa-field_provenance'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 29,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_provenance',
+    'label' => 'Comment nous avez-vous connu ? ',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_regime_declaratif'.
+  $field_instances['entityform-inscription_amapl_caa-field_regime_declaratif'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 21,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_regime_declaratif',
+    'label' => 'Régime déclaratif',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 34,
+    ),
+  );
+
+  // Exported field_instance: 'entityform-inscription_amapl_caa-field_siret'.
+  $field_instances['entityform-inscription_amapl_caa-field_siret'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Si vous n\'avez pas encore de numéro de siret, entrez "En cours d\'attribution".',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 14,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_siret',
+    'label' => 'Numéro de siret',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 17,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_situation_tva'.
+  $field_instances['entityform-inscription_amapl_caa-field_situation_tva'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 22,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_situation_tva',
+    'label' => 'Situation TVA',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 35,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_source_etrangere'.
+  $field_instances['entityform-inscription_amapl_caa-field_source_etrangere'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 17,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_source_etrangere',
+    'label' => 'Revenus de source étrangère ?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 19,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'entityform-inscription_amapl_caa-field_type_adhesion_caa'.
+  $field_instances['entityform-inscription_amapl_caa-field_type_adhesion_caa'] = array(
+    'bundle' => 'inscription_amapl_caa',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 18,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'entityform',
+    'field_name' => 'field_type_adhesion_caa',
+    'label' => 'Type d\'adhesion',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 20,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t(' Je règle la cotisation en ligne par carte bancaire, condition de mon adhésion en ligne');
@@ -1414,6 +2865,7 @@ function feature_form_amapl_field_default_field_instances() {
   t('Adresse');
   t('Adresse correspondance');
   t('Adresse professionnelle');
+  t('Assistance d’un expert comptable');
   t('Assistance d’un professionnel');
   t('Autre');
   t('Autre forme juridique');
@@ -1421,14 +2873,17 @@ function feature_form_amapl_field_default_field_instances() {
   t('Code APE');
   t('Comment nous avez-vous connu ? ');
   t('Date de début d’activité (ou de reprise d’activité après cessation)');
+  t('Du');
   t('Email');
   t('Fax');
   t('Forme juridique');
   t('Historique de paiement');
+  t('Imposition des bénéfices');
   t('Je connais l\'AMAPL grâce à');
   t('L\'un des deux champs suivants est requis.<span class="form-required" title="Ce champ est requis.">*</span>');
   t('Nature de l\'activité');
   t('Nom et adresse de la précédente association agréée');
+  t('Nom et adresse du précédent CGA ou OMGA');
   t('Nom et prénom');
   t('Nom et prénom ou société');
   t('Nombre associés');
@@ -1440,9 +2895,13 @@ function feature_form_amapl_field_default_field_instances() {
   t('Profession');
   t('Précisions diverses');
   t('Revenus de source étrangère ?');
+  t('Régime déclaratif');
   t('Si vous n\'avez pas encore de numéro de siret, entrez "En cours d\'attribution".');
+  t('Situation TVA');
+  t('Type d\'adhesion');
   t('Type d\'adhésion');
   t('Téléphone');
+  t('au');
 
   return $field_instances;
 }

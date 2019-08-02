@@ -335,6 +335,35 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_date_au'.
+  $field_bases['field_date_au'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_date_au',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'date',
+    'settings' => array(
+      'cache_count' => 4,
+      'cache_enabled' => 0,
+      'granularity' => array(
+        'day' => 'day',
+        'hour' => 0,
+        'minute' => 0,
+        'month' => 'month',
+        'second' => 0,
+        'year' => 'year',
+      ),
+      'timezone_db' => '',
+      'todate' => '',
+      'tz_handling' => 'none',
+    ),
+    'translatable' => 0,
+    'type' => 'datetime',
+  );
+
   // Exported field_base: 'field_date_debut'.
   $field_bases['field_date_debut'] = array(
     'active' => 1,
@@ -342,6 +371,35 @@ function feature_form_amapl_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_date_debut',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'date',
+    'settings' => array(
+      'cache_count' => 4,
+      'cache_enabled' => 0,
+      'granularity' => array(
+        'day' => 'day',
+        'hour' => 0,
+        'minute' => 0,
+        'month' => 'month',
+        'second' => 0,
+        'year' => 'year',
+      ),
+      'timezone_db' => '',
+      'todate' => '',
+      'tz_handling' => 'none',
+    ),
+    'translatable' => 0,
+    'type' => 'datetime',
+  );
+
+  // Exported field_base: 'field_date_du'.
+  $field_bases['field_date_du'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_date_du',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'date',
@@ -430,6 +488,40 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'list_text',
   );
 
+  // Exported field_base: 'field_forme_juridique_caa'.
+  $field_bases['field_forme_juridique_caa'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_forme_juridique_caa',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'EI' => 'Entreprise individuelle',
+        'EURL' => 'EURL',
+        'EARL' => 'EARL',
+        'SDF' => 'Société de fait',
+        'SEP' => 'Société en Participation',
+        'SCI' => 'SCI',
+        'INDIVISION' => 'INDIVISION',
+        'SNC' => 'SNC',
+        'SCEA' => 'SCEA',
+        'SCS' => 'SCS',
+        'AUTRE' => 'Autre',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_historique_paiement'.
   $field_bases['field_historique_paiement'] = array(
     'active' => 1,
@@ -447,6 +539,32 @@ function feature_form_amapl_field_default_field_bases() {
     'settings' => array(),
     'translatable' => 0,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_imposition_benefices'.
+  $field_bases['field_imposition_benefices'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_imposition_benefices',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'BIC' => 'BIC',
+        'BA' => 'BA',
+        'source étrangère' => 'Cochez cette case si BIC/BA de source étrangère',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_micro_autoentrepreneur'.
@@ -592,6 +710,21 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'paymentform',
   );
 
+  // Exported field_base: 'field_paiement_caa'.
+  $field_bases['field_paiement_caa'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_paiement_caa',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'paymentform',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'paymentform',
+  );
+
   // Exported field_base: 'field_payment_online'.
   $field_bases['field_payment_online'] = array(
     'active' => 1,
@@ -685,6 +818,27 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_prix_caa'.
+  $field_bases['field_prix_caa'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_prix_caa',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_profession'.
   $field_bases['field_profession'] = array(
     'active' => 1,
@@ -743,6 +897,32 @@ function feature_form_amapl_field_default_field_bases() {
     'type' => 'list_text',
   );
 
+  // Exported field_base: 'field_regime_declaratif'.
+  $field_bases['field_regime_declaratif'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_regime_declaratif',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Micro' => 'Micro-BIC/BA',
+        'Réel simplifié' => 'Réel simplifié',
+        'Réel normal' => 'Réel normal',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_siret'.
   $field_bases['field_siret'] = array(
     'active' => 1,
@@ -762,6 +942,34 @@ function feature_form_amapl_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
+  );
+
+  // Exported field_base: 'field_situation_tva'.
+  $field_bases['field_situation_tva'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_situation_tva',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Exonéré' => 'Exonéré',
+        'Franchise' => 'Franchise en base',
+        'CA12' => 'CA12',
+        'CA3 mensuelles' => 'CA3 mensuelles',
+        'CA3 trimestrielles' => 'CA3 trimestrielles',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_source_etrangere'.
@@ -808,6 +1016,33 @@ function feature_form_amapl_field_default_field_bases() {
         'Première adhésion à une association agréée' => 'Première adhésion à une association agréée',
         'Adhésion suite à reprise d’activité après cessation' => 'Adhésion suite à reprise d’activité après cessation',
         'Adhésion suite à transfert d’association agréée' => 'Adhésion suite à transfert d’association agréée',
+        'Autres' => 'Autres',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_type_adhesion_caa'.
+  $field_bases['field_type_adhesion_caa'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_type_adhesion_caa',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Première adhésion à un CGA ou à un OMGA' => 'Première adhésion à un CGA ou à un OMGA',
+        'Adhésion suite à reprise d’activité après cessation' => 'Adhésion suite à reprise d’activité après cessation',
+        'Adhésion suite à transfert de CGA ou d\'OMGA' => 'Adhésion suite à transfert de CGA ou d\'OMGA',
         'Autres' => 'Autres',
       ),
       'allowed_values_function' => '',
