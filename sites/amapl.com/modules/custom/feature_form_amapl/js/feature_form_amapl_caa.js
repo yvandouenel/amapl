@@ -5,13 +5,16 @@
       let price,
         begin_fiscal_year,
         begin_activity_year,
+        this_year,
         individual_company,
         first_membership;
       first_membership = false;
       individual_company = false;
       first_adhesion = false;
       no_juridic_form = true;
-      price = 247 / 1.2;
+      price = (247 / 1.2).toFixed(10);
+      console.log("Premier prix : " + price);
+      this_year = new Date().getFullYear();
 
       //user identification
       var guid = function() {
@@ -23,11 +26,8 @@
         guid += screen.height || "";
         guid += screen.width || "";
         guid += screen.pixelDepth || "";
-
         return guid;
       };
-
-      var this_year = new Date().getFullYear();
 
       // gestion initiale des champs
       formeJuridique();
@@ -256,7 +256,6 @@
           .reverse()
           .join("-");
         begin_activity_year = new Date(begin_date).getFullYear();
-        console.log("begin_activity_year :", begin_activity_year);
 
         // compagnie individuelle ?
         individual_company = $("#edit-field-forme-juridique-caa-und-ei").is(
@@ -276,7 +275,7 @@
 
         // si case « Micro-BIC/BA » cochée → 99€.
         if ($("#edit-field-regime-declaratif-und-micro").is(":checked")) {
-          price = 99 / 1.2;
+          price = (99 / 1.2).toFixed(10);
         } else if (
         /* si date de début d’exercice comptable (begin_fiscal_year) égale à 2019 et année
         de début d’activité égales à 2019 et entreprise individuelle et première adhésion → 99€.  */
@@ -285,9 +284,9 @@
           individual_company == true &&
           first_membership == true
         ) {
-          price = 99 / 1.2;
+          price = (99 / 1.2).toFixed(10);
         } else {
-          price = 247 / 1.2;
+          price = (247 / 1.2).toFixed(10);
         }
 
         // Changement du prix dans le champ "Payment form"

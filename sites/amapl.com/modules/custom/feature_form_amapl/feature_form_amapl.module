@@ -9,23 +9,40 @@ include_once 'feature_form_amapl.features.inc';
  * Implements hook_entityform_confirm_page_alter().
  */
 function feature_form_amapl_entityform_confirm_page_alter(&$render_array, $entityform_type, $entityform_id) {
+  dpm("dans feature_form_amapl_entityform_confirm_page_alter");
 
   // Récupération d'un table d'entité avec une seule valeur : attention, on voit que le deuxième argument est un tableau
   $entity_array = entity_load('entityform', array($entityform_id));
 
   // Récupération de l'entité
   $entity = $entity_array[$entityform_id];
+  dpm($entity);
 
+  /** Cas communs aux PL et aux CAA ***********************************************************/
   $denomination = (isset($entity->field_nom_prenom['und'][0]['value']) ?
-    $entity->field_nom_prenom['und'][0]['value'] : $entity->field_ou_denomination_sociale['und'][0]['value']);
+  $entity->field_nom_prenom['und'][0]['value'] : $entity->field_ou_denomination_sociale['und'][0]['value']);
 
-  // Modification du champ description de paiement de l'entité
-  $entity->field_paiement['und'][0]['description'] =
-    '<a href="/entityform/' . $entityform_id . '">Adhesion AMAPL n°' . $entityform_id . '</a>' .
-    ' pour ' . $denomination . ' - ' . $entity->field_email['und'][0]['email'];
+  /** Cas spécifiques aux CAA ***********************************************************/
+  if(isset($entity->field_date_du['und'][0]['value'])) {
+    // Modification du champ description de paiement de l'entité
+    $entity->field_paiement_caa['und'][0]['description'] =
+      '<a href="/entityform/' . $entityform_id . '">Adhesion AMAPL n°' . $entityform_id . '</a>' .
+      ' pour ' . $denomination . ' - ' . $entity->field_email['und'][0]['email'];
 
-  // Modification du champ nom du paiement de l'entité
-  $entity->field_paiement['und'][0]['name'] = $entityform_id;
+    // Modification du champ nom du paiement de l'entité
+    $entity->field_paiement_caa['und'][0]['name'] = $entityform_id;
+  }
+
+  /** Cas spécifiques aux PL ***********************************************************/
+  else {
+    // Modification du champ description de paiement de l'entité
+    $entity->field_paiement['und'][0]['description'] =
+      '<a href="/entityform/' . $entityform_id . '">Adhesion AMAPL n°' . $entityform_id . '</a>' .
+      ' pour ' . $denomination . ' - ' . $entity->field_email['und'][0]['email'];
+
+    // Modification du champ nom du paiement de l'entité
+    $entity->field_paiement['und'][0]['name'] = $entityform_id;
+  }
 
   // Enregistrement de l'entité
   $entity->save();
@@ -37,13 +54,16 @@ function feature_form_amapl_entityform_confirm_page_alter(&$render_array, $entit
  * Implements hook_form_alter().
  */
 function feature_form_amapl_form_alter(&$form, &$form_state, $form_id) {
-//dpm($form_id);
+  /* PL  *******************************************************************************/
   if ($form_id == 'inscription_amapl_entityform_edit_form') {
     // Si le champ de paiement n'est pas encore initialisé, il faut initialiser
     $session_id = str_replace('-', '', strtolower(session_id()));
+
     if (empty($form['field_paiement']['und']['line_item']['#default_value'])) {
+
       // les valeurs par défaut du champ de payment sont modifiées
       $form['field_paiement']['und']['line_item']['#default_value'][0] = new stdClass();
+
       // Valeurs par défaut pour les champs de paiement
       $form['field_paiement']['und']['line_item']['#default_value'][0]->tax_rate = 0.2;
       $form['field_paiement']['und']['line_item']['#default_value'][0]->quantity = 1;
@@ -59,11 +79,11 @@ function feature_form_amapl_form_alter(&$form, &$form_state, $form_id) {
     // appel de la fonction chargée de vérifier les données entrées par l'utilisateur
     $form['#validate'][] = 'feature_form_amapl_form_validate';
   }
-  /* Nouveau formulaire pour les CAA  ****************************************************/
+
+  /* CAA  ********************************************************************************/
   if ($form_id == 'inscription_amapl_caa_entityform_edit_form') {
     // Si le champ de paiement n'est pas encore initialisé, il faut initialiser
     $session_id = str_replace('-', '', strtolower(session_id()));
-    dpm($form);
     if (empty($form['field_paiement_caa']['und']['line_item']['#default_value'])) {
       // les valeurs par défaut du champ de payment sont modifiées
       $form['field_paiement_caa']['und']['line_item']['#default_value'][0] = new stdClass();
@@ -80,12 +100,77 @@ function feature_form_amapl_form_alter(&$form, &$form_state, $form_id) {
     drupal_add_js(drupal_get_path('module', 'feature_form_amapl') . '/js/feature_form_amapl_caa.js');
 
     // appel de la fonction chargée de vérifier les données entrées par l'utilisateur
-    $form['#validate'][] = 'feature_form_amapl_form_validate';
+    $form['#validate'][] = 'feature_form_amapl_caa_form_validate';
   }
 }
 
 /*
- * Vérification des données entrées par l'utilisateur
+ * Vérification des données entrées par l'utilisateur - Cas des CAA
+ */
+function feature_form_amapl_caa_form_validate($form, &$form_state) {
+  drupal_add_js(drupal_get_path('module', 'feature_form_amapl') . '/js/feature_form_amapl_caa.js');
+  $price = 0;
+
+  // Micro-BIC/BA
+  $micro_bic_ba = ($form_state['values']['field_regime_declaratif']['und'][0]['value'] == 'Micro') ?
+  true : false;
+
+  // Entreprise individuelle
+  $entreprise_individuelle = ($form_state['values']['field_forme_juridique_caa']['und'][0]['value'] == 'EI') ?
+  true : false;
+
+  // premiere adhésion
+  $first_membership = ($form_state['values']['field_type_adhesion_caa']['und'][0]['value'] == 'Première adhésion à un CGA ou à un OMGA') ?
+  true : false;
+
+  /**
+   * Règle de gestion : si date actuelle > 31 mai, la date de débyt doit être supérieure ou égale au
+   * 01/01/de l’année en cours
+   * sinon, la première date doit être supérieure ou égale au 01/01/ de l’année n-1.
+   */
+  $today = date("Y-m-d H:i:s");
+  $this_year = date("Y");
+  $first_january = date($this_year . "-01-01 00:00:00");
+  $first_january_last_year = date(($this_year - 1) . "-01-01 00:00:00");
+  $thirty_one_may = date($this_year . "-05-31 23:59:59");
+
+  $begin_fiscal_year = substr($form_state['values']['field_date_du']['und'][0]['value'], 0, 4);
+  $end_fiscal_year = substr($form_state['values']['field_date_au']['und'][0]['value'], 0, 4);
+  $begin_activity_year = substr($form_state['values']['field_date_debut']['und'][0]['value'], 0, 4);
+
+  if($form_state['values']['field_date_du']['und'][0]['value'] >
+    $form_state['values']['field_date_au']['und'][0]['value']) {
+      form_set_error('field_date_du', t("Vous devez entrer date de début d'exercice comptable inférieure à la date de fin."));
+  }
+  else if($today > $thirty_one_may &
+    $form_state['values']['field_date_du']['und'][0]['value'] < $first_january) {
+    form_set_error('field_date_du', t("Vous devez entrer une date de début d'exercice comptable supérieure au 1er janvier de l'année en cours."));
+  }
+  else if($today < $thirty_one_may &
+    $form_state['values']['field_date_du']['und'][0]['value'] < $first_january_last_year) {
+    form_set_error('field_date_du', t("Vous devez entrer une date de début d'exercice comptable supérieure au 1er janvier de l'année passée."));
+  }
+
+  /** Définition du prix ****************************************************/
+  if ($micro_bic_ba ) {
+    $price = '99';
+  }
+  else if ($begin_fiscal_year == $this_year &&
+    $begin_activity_year == $this_year &&
+    $entreprise_individuelle &&
+    $first_membership) {
+      $price = '99';
+  }
+  else {
+    $price = '247';
+  }
+
+  $form_state['values']['field_prix']['und'][0]['value'] = round($price * 1.2);
+  $form_state['values']['field_paiement']['und'][0]['amount'] = $price;
+}
+
+/*
+ * Vérification des données entrées par l'utilisateur - Cas des PL
  */
 function feature_form_amapl_form_validate($form, &$form_state) {
   drupal_add_js(drupal_get_path('module', 'feature_form_amapl') . '/js/feature_form_amapl.js');
@@ -93,8 +178,6 @@ function feature_form_amapl_form_validate($form, &$form_state) {
   $current_year = date("Y");
   $begin_activity_year = substr($form_state['values']['field_date_debut']['und'][0]['value'], 0, 4);
   $year_income = $form_state['values']['field_pour_les_revenus']['und'][0]['value'];
-
-  //dpm($year_income);
 
   // forme juridique
   if ($form_state['values']['field_fj_autre']['und'][0]['value'] == '' && $form_state['values']['field_forme_juridique']['und'][0]['value'] == 'AUTRE') {
