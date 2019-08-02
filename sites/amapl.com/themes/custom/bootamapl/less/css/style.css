@@ -9852,9 +9852,33 @@ body.not-front #under-main-title h2.page-header.simple-title {
     white-space: nowrap !important;
   }
 }
-.page-entityform.page-entityform-178 #edit-save {
+.page-entityform.caa-form #edit-save {
   background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
 }
-.page-entityform.page-entityform-178 #edit-save:hover {
+.page-entityform.caa-form #edit-save:hover {
+  background-color: #6cf1b4 !important;
+}
+.page-entityform #title-show-hide-form-datas,
+.page-entityform a#modify-subscribe-form {
+  position: relative;
+  display: table;
+  padding-right: 20px;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+.page-entityform #title-show-hide-form-datas:after,
+.page-entityform a#modify-subscribe-form:after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
   background-color: #6cf1b4;
+  position: absolute;
+  right: 0;
+  top: 90%;
+}
+.page-entityform #title-show-hide-form-datas:hover,
+.page-entityform a#modify-subscribe-form:hover {
+  cursor: pointer;
+  color: #424242;
 }

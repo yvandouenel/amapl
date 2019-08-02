@@ -316,12 +316,35 @@
       }
     }
   }
-  &.page-entityform-178 {
+  &.caa-form {
     #edit-save {
       background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
       &:hover {
-        background-color: @blue-green-amapl;
+        background-color: @blue-green-amapl !important;
       }
     }
   }
+  #title-show-hide-form-datas,
+  a#modify-subscribe-form {
+    position: relative;
+    display: table;
+    padding-right: 20px;
+    white-space: nowrap;
+    margin-bottom: 10px;
+    &:after {
+      content: "";
+      display: block;
+      height: 5px;
+      width: 100%;
+      background-color: @blue-green-amapl;
+      position: absolute;
+      right: 0;
+      top: 90%;
+    }
+    &:hover {
+      cursor: pointer;
+      color: @black-amapl;
+    }
+  }
+
 }
