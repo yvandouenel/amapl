@@ -7,16 +7,16 @@
 include_once 'feature_form_amapl.features.inc';
 /**
  * Implements hook_entityform_confirm_page_alter().
+ * PL et CAA managed
  */
 function feature_form_amapl_entityform_confirm_page_alter(&$render_array, $entityform_type, $entityform_id) {
-  dpm("dans feature_form_amapl_entityform_confirm_page_alter");
+  //dpm("dans feature_form_amapl_entityform_confirm_page_alter");
 
   // Récupération d'un table d'entité avec une seule valeur : attention, on voit que le deuxième argument est un tableau
   $entity_array = entity_load('entityform', array($entityform_id));
 
   // Récupération de l'entité
   $entity = $entity_array[$entityform_id];
-  dpm($entity);
 
   /** Cas communs aux PL et aux CAA ***********************************************************/
   $denomination = (isset($entity->field_nom_prenom['und'][0]['value']) ?
@@ -52,6 +52,7 @@ function feature_form_amapl_entityform_confirm_page_alter(&$render_array, $entit
 
 /**
  * Implements hook_form_alter().
+ * PL et CAA managed
  */
 function feature_form_amapl_form_alter(&$form, &$form_state, $form_id) {
   /* PL  *******************************************************************************/
@@ -150,8 +151,13 @@ function feature_form_amapl_caa_form_validate($form, &$form_state) {
     $form_state['values']['field_date_du']['und'][0]['value'] < $first_january_last_year) {
     form_set_error('field_date_du', t("Vous devez entrer une date de début d'exercice comptable supérieure au 1er janvier de l'année passée."));
   }
+  /** nom et prénon ou dénomination sociale **********************************/
+  if ($form_state['values']['field_nom_prenom']['und'][0]['value'] == '' && $form_state['values']['field_ou_denomination_sociale']['und'][0]['value'] == '') {
+    form_set_error('field_nom_prenom', t("Vous devez entrer un nom et un prénom"));
+    form_set_error('field_ou_denomination_sociale', t('... ou renseigner le champ "Dénomination sociale".'));
+  }
 
-  /** Définition du prix ****************************************************/
+  /** Définition du prix *****************************************************/
   if ($micro_bic_ba ) {
     $price = '99';
   }
@@ -283,7 +289,6 @@ function feature_form_amapl_form_validate($form, &$form_state) {
  * Implements hook_entity_view().
  */
 function feature_form_amapl_entity_view($entity, $type, $view_mode, $langcode) {
-
   if ($type == "entityform") {
     global $user;
     drupal_add_js(drupal_get_path('module', 'feature_form_amapl') . '/js/feature_view_form_amapl.js');
