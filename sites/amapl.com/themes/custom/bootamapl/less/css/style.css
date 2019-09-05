@@ -7711,11 +7711,9 @@ a.link-ok:hover:after {
 }
 .view-files.view-display-id-attachment_1 a.pdf {
   background: url(../images/picto-pdf-orange.png) no-repeat 10px 0;
-  font-size: 1.5em;
 }
 .view-files.view-display-id-attachment_1 a.xls {
   background: url(../images/picto-xls-orange.png) no-repeat 10px 0;
-  font-size: 1.5em;
 }
 .paragraphs-item-liste-pdf-orange .field-item {
   width: 40%;
@@ -7739,12 +7737,10 @@ a.link-ok:hover:after {
 .pdf-orange-center .dnd-atom-wrapper a.pdf {
   background: url(../images/picto-pdf-orange.png) no-repeat 10px 0 !important;
   background-size: 48px 48px !important;
-  font-size: 1.5em;
 }
 .pdf-orange-center .dnd-atom-wrapper a.xls {
   background: url(../images/picto-xls-orange.png) no-repeat 10px 0 !important;
   background-size: 48px 48px !important;
-  font-size: 1.5em;
 }
 .pdf-orange-center:after {
   content: "";
@@ -7762,6 +7758,7 @@ a.xls {
   background: url(../images/picto-pdf-bleu.png) no-repeat 10px 0;
   background-size: 48px 48px !important;
   color: black;
+  font-size: 1.5em;
 }
 a.xls {
   background: url(../images/picto-xls-bleu.png) no-repeat 10px 0;
