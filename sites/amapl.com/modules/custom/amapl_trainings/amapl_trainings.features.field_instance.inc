@@ -3544,6 +3544,45 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   );
 
   // Exported field_instance:
+  // 'registration-inscription_amapl-field_amapl_form_payment'.
+  $field_instances['registration-inscription_amapl-field_amapl_form_payment'] = array(
+    'bundle' => 'inscription_amapl',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'La formation à laquelle vous vous inscrivez est payante. En cochant sur la case ci-dessus, vous vous engagez à la payer dans les meilleurs délais<a href="." target="_blank"></a>',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 5,
+      ),
+    ),
+    'ds_extras_field_template' => 'theme_field',
+    'entity_type' => 'registration',
+    'field_name' => 'field_amapl_form_payment',
+    'label' => 'Engagement de paiement',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance:
   // 'registration-inscription_amapl-field_amapl_form_rules'.
   $field_instances['registration-inscription_amapl-field_amapl_form_rules'] = array(
     'bundle' => 'inscription_amapl',
@@ -3640,6 +3679,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Début de sessions');
   t('Détail de l\'adresse');
   t('Email');
+  t('Engagement de paiement');
   t('Feuille d\'émargement');
   t('Formateurs');
   t('Formation');
@@ -3647,6 +3687,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Horaires et durée');
   t('Inscription');
   t('Introduction');
+  t('La formation à laquelle vous vous inscrivez est payante. En cochant sur la case ci-dessus, vous vous engagez à la payer dans les meilleurs délais<a href="." target="_blank"></a>');
   t('Lieu court');
   t('Méthode');
   t('Méthodes d\'évaluation');

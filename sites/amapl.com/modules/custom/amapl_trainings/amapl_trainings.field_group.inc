@@ -41,7 +41,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_first_row|node|training_session|colorbox'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -74,7 +74,7 @@ function amapl_trainings_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $field_groups[''] = $field_group;
+  $field_groups['group_second_row|node|training_session|colorbox'] = $field_group;
 
   // Translatables
   // Included for use with string extractors like potx.

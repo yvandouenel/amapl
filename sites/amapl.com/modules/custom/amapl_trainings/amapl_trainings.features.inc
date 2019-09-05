@@ -125,10 +125,10 @@ function amapl_trainings_default_registration_type() {
   $items = array();
   $items['inscription_amapl'] = entity_import('registration_type', '{
     "name" : "inscription_amapl",
-    "label" : "Inscription AMAPL",
+    "label" : "Inscription formation",
     "locked" : "0",
     "default_state" : null,
-    "data" : null,
+    "data" : { "held_expire" : "1", "held_expire_state" : "canceled" },
     "weight" : "0",
     "rdf_mapping" : []
   }');
