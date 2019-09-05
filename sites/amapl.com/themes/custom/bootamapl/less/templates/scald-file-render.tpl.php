@@ -6,6 +6,8 @@
 $file_type = "file";
 if (strpos($vars['thumbnail_source'], 'pdf') !== false) {
   $file_type = "pdf";
+} else if (strpos($vars['thumbnail_source'], 'excel') !== false) {
+  $file_type = "xls";
 }
 ?>
 
