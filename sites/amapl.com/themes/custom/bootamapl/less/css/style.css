@@ -9145,6 +9145,9 @@ body.not-front #under-main-title h2.page-header.simple-title {
 #cboxLoadedContent .field-name-field-session-registration select {
   width: 90%;
 }
+#cboxLoadedContent .no-payment {
+  display: none;
+}
 /* Fin colorbox *********************************************/
 .node-type-article #block-system-main {
   padding-top: 40px;
