@@ -488,6 +488,7 @@ function amapl_trainings_form_alter(&$form, &$form_state, $form_id) {
     } elseif ($form['#form_id'] == 'registration_form') {
         // récupération du node courant
         if ($node = menu_get_object()) {
+          drupal_add_js(drupal_get_path('module', 'amapl_trainings') . '/js/amapl_training_registration_check.js');
           // Get the nid
           $nid = $node->nid;
           // Vérification du caractère payant de la formation
@@ -495,12 +496,14 @@ function amapl_trainings_form_alter(&$form, &$form_state, $form_id) {
             $training_id = $node->field_related_training['und'][0]['target_id'];
             $training_node = node_load($training_id);
             // si formation payante, il faut que l'internaute coche pour s'assurer qu'il va payer
-            if(isset($training_node->field_training_free[und][0][value]) &&
+            if(array_key_exists('und', $training_node->field_training_free) &&
+            isset($training_node->field_training_free[und][0][value]) &&
             $training_node->field_training_free[und][0][value] == 0) {
               $form['field_amapl_form_payment']['und']['#required'] = TRUE;
             }
             // sinon, on cache le champ de paiement via une class css
-            else if(isset($training_node->field_training_free[und][0][value]) &&
+            else if(array_key_exists('und', $training_node->field_training_free) &&
+            isset($training_node->field_training_free[und][0][value]) &&
             $training_node->field_training_free[und][0][value] == 1) {
               $form['field_amapl_form_payment']['#attributes']['class'][0]
               .= " no-payment";
