@@ -7801,6 +7801,15 @@ a.xls {
   border-right: 30px solid #424242;
 }
 /* fin des liens ******************************************************/
+/* Formulaires ********************************************************/
+.form-required {
+  color: #db0017;
+}
+button.form-submit {
+  background-color: #db0017;
+  color: white;
+  font-size: 1.5em;
+}
 /* titres *************************************************************/
 h2.complex-title {
   color: black;
@@ -7932,6 +7941,9 @@ h2.complex-title {
   position: absolute;
   top: 0;
   right: -25px;
+}
+h3 {
+  font-size: 30px;
 }
 /* fin des titres ***********************************************/
 /* Listes à puce ************************************************/
@@ -9363,22 +9375,6 @@ body.not-front #under-main-title h2.page-header.simple-title {
     background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
   }
 }
-@media screen and (min-width: 1200px) {
-  .button-submit {
-    width: 400px;
-    height: 108px;
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
-    background-size: 400px 108px !important;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .button-submit {
-    width: 260px;
-    height: 71px;
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
-    background-size: 260px 71px !important;
-  }
-}
 .button-submit:hover {
   background-color: #6cf1b4;
   color: black;
@@ -9408,24 +9404,24 @@ body.not-front #under-main-title h2.page-header.simple-title {
 .page-eform-submit .form-item-field-date-debut-und-0-value-date label {
   display: none;
 }
-.page-eform-submit.page-eform-submit-inscription-amapl {
+.page-eform-submit.page-eform {
   /* Bouton de validation du formulaire*/
 }
-.page-eform-submit.page-eform-submit-inscription-amapl fieldset legend {
+.page-eform-submit.page-eform fieldset legend {
   background-color: #4bcdf8;
 }
-.page-eform-submit.page-eform-submit-inscription-amapl fieldset legend .panel-title {
+.page-eform-submit.page-eform fieldset legend .panel-title {
   color: white !important;
   font-size: 1.3em;
 }
-.page-eform-submit.page-eform-submit-inscription-amapl fieldset fieldset legend {
+.page-eform-submit.page-eform fieldset fieldset legend {
   background-color: white;
 }
-.page-eform-submit.page-eform-submit-inscription-amapl fieldset fieldset legend .panel-title {
+.page-eform-submit.page-eform fieldset fieldset legend .panel-title {
   font-size: 1em;
   color: black !important;
 }
-.page-eform-submit.page-eform-submit-inscription-amapl button#edit-submit {
+.page-eform-submit.page-eform button#edit-submit {
   display: block;
   color: white;
   padding-top: 40px;
@@ -9438,52 +9434,36 @@ body.not-front #under-main-title h2.page-header.simple-title {
   border: 0;
   margin-left: 0;
 }
-.page-eform-submit.page-eform-submit-inscription-amapl button#edit-submit:hover {
+.page-eform-submit.page-eform button#edit-submit:hover {
   text-decoration: none;
 }
 @media screen and (min-width: 1200px) {
-  .page-eform-submit.page-eform-submit-inscription-amapl button#edit-submit {
+  .page-eform-submit.page-eform button#edit-submit {
     width: 400px;
     height: 108px;
     background-size: 400px 108px !important;
   }
-  .page-eform-submit.page-eform-submit-inscription-amapl button#edit-submit.link-blue-button {
+  .page-eform-submit.page-eform button#edit-submit.link-blue-button {
     background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
   }
-  .page-eform-submit.page-eform-submit-inscription-amapl button#edit-submit.link-orange-button {
+  .page-eform-submit.page-eform button#edit-submit.link-orange-button {
     background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
   }
 }
 @media screen and (max-width: 1200px) {
-  .page-eform-submit.page-eform-submit-inscription-amapl button#edit-submit {
+  .page-eform-submit.page-eform button#edit-submit {
     width: 260px;
     height: 71px;
     background-size: 260px 71px !important;
   }
-  .page-eform-submit.page-eform-submit-inscription-amapl button#edit-submit.link-blue-button {
+  .page-eform-submit.page-eform button#edit-submit.link-blue-button {
     background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
   }
-  .page-eform-submit.page-eform-submit-inscription-amapl button#edit-submit.link-orange-button {
+  .page-eform-submit.page-eform button#edit-submit.link-orange-button {
     background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
   }
 }
-@media screen and (min-width: 1200px) {
-  .page-eform-submit.page-eform-submit-inscription-amapl button#edit-submit {
-    width: 400px;
-    height: 108px;
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
-    background-size: 400px 108px !important;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .page-eform-submit.page-eform-submit-inscription-amapl button#edit-submit {
-    width: 260px;
-    height: 71px;
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
-    background-size: 260px 71px !important;
-  }
-}
-.page-eform-submit.page-eform-submit-inscription-amapl button#edit-submit:hover {
+.page-eform-submit.page-eform button#edit-submit:hover {
   background-color: #6cf1b4;
   color: black;
 }
@@ -9595,22 +9575,6 @@ body.not-front #under-main-title h2.page-header.simple-title {
   }
   .page-eform-submit.page-eform-submit-inscription-amapl-caa button#edit-submit.link-orange-button {
     background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .page-eform-submit.page-eform-submit-inscription-amapl-caa button#edit-submit {
-    width: 400px;
-    height: 108px;
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
-    background-size: 400px 108px !important;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .page-eform-submit.page-eform-submit-inscription-amapl-caa button#edit-submit {
-    width: 260px;
-    height: 71px;
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
-    background-size: 260px 71px !important;
   }
 }
 .page-eform-submit.page-eform-submit-inscription-amapl-caa button#edit-submit:hover {
@@ -9802,22 +9766,6 @@ body.not-front #under-main-title h2.page-header.simple-title {
     background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
   }
 }
-@media screen and (min-width: 1200px) {
-  .page-entityform #edit-save {
-    width: 400px;
-    height: 108px;
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
-    background-size: 400px 108px !important;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .page-entityform #edit-save {
-    width: 260px;
-    height: 71px;
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
-    background-size: 260px 71px !important;
-  }
-}
 .page-entityform #edit-save:hover {
   background-color: #6cf1b4;
   color: black;
@@ -9840,6 +9788,12 @@ body.not-front #under-main-title h2.page-header.simple-title {
 .page-entityform #payment-form-standalone #edit-payment-method-pmid-title {
   display: none;
 }
+.page-entityform #payment-form-standalone .tableheader-processed tr th {
+  font-size: 2em;
+}
+.page-entityform #payment-form-standalone .tableheader-processed tr td {
+  font-size: 1.6em;
+}
 @media screen and (min-width: 992px) {
   .page-entityform #payment-form-standalone > div {
     display: flex;
@@ -9854,9 +9808,9 @@ body.not-front #under-main-title h2.page-header.simple-title {
     white-space: normal !important;
   }
   .page-entityform #payment-form-standalone > div .table-responsive tr td:nth-child(4) {
-    font-size: 1.8em;
     font-weight: 800;
     white-space: nowrap !important;
+    font-size: 2em;
   }
 }
 @media screen and (max-width: 992px) {

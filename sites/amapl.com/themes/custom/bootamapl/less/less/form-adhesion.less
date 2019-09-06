@@ -5,16 +5,10 @@
   border: 0;
   margin-left: 0;
   @media screen and (min-width: @screen-lg) {
-    width: 400px;
-    height: 108px;
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
-    background-size: 400px 108px !important;
+
   }
   @media screen and (max-width: @screen-lg) {
-    width: 260px;
-    height: 71px;
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
-    background-size: 260px 71px !important;
+
   }
   &:hover {
     background-color: @blue-green-amapl;
@@ -36,7 +30,7 @@
       display: none;
     }
   }
-  &.page-eform-submit-inscription-amapl {
+  &.page-eform {
     fieldset {
       legend {
         background-color: @blue-light-pl-amapl;
@@ -73,6 +67,10 @@
       }
     }
     .group-exo-compta {
+      .date-combo {
+
+
+      }
       .panel-body {
         display: flex;
         justify-content: flex-start;
@@ -286,6 +284,12 @@
     #edit-payment-method-pmid-title {
       display: none;
     }
+    .tableheader-processed tr th {
+      font-size: 2em;
+    }
+    .tableheader-processed tr td {
+      font-size: 1.6em;
+    }
     > div {
       @media screen and (min-width: @screen-md) {
         display: flex;
@@ -297,9 +301,9 @@
           tr td {
             white-space: normal !important;
             &:nth-child(4) {
-              font-size: 1.8em;
               font-weight: 800;
               white-space: nowrap !important;
+              font-size: 2em;
             }
           }
         }
