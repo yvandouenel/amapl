@@ -9622,6 +9622,9 @@ body.not-front #under-main-title h2.page-header.simple-title {
     background-size: 260px 71px !important;
   }
 }
+.page-eform-submit .pre-instructions {
+  font-size: 1.2em;
+}
 .page-eform-submit label {
   font-size: 1.4em;
 }
