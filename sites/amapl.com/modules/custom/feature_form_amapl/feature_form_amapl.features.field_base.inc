@@ -559,7 +559,6 @@ function feature_form_amapl_field_default_field_bases() {
       'allowed_values' => array(
         'BIC' => 'BIC',
         'BA' => 'BA',
-        'source étrangère' => 'Cochez cette case si BIC/BA de source étrangère',
       ),
       'allowed_values_function' => '',
     ),

@@ -155,7 +155,6 @@ features[field_instance][] = entityform-inscription_amapl_caa-field_historique_p
 features[field_instance][] = entityform-inscription_amapl_caa-field_imposition_benefices
 features[field_instance][] = entityform-inscription_amapl_caa-field_nature_activite
 features[field_instance][] = entityform-inscription_amapl_caa-field_nom_prenom
-features[field_instance][] = entityform-inscription_amapl_caa-field_non_pro
 features[field_instance][] = entityform-inscription_amapl_caa-field_ou_denomination_sociale
 features[field_instance][] = entityform-inscription_amapl_caa-field_paiement_caa
 features[field_instance][] = entityform-inscription_amapl_caa-field_payment_online

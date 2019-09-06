@@ -2412,44 +2412,6 @@ function feature_form_amapl_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'entityform-inscription_amapl_caa-field_non_pro'.
-  $field_instances['entityform-inscription_amapl_caa-field_non_pro'] = array(
-    'bundle' => 'inscription_amapl_caa',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 15,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'entityform',
-    'field_name' => 'field_non_pro',
-    'label' => 'Activité non professionnelle',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 16,
-    ),
-  );
-
   // Exported field_instance:
   // 'entityform-inscription_amapl_caa-field_ou_denomination_sociale'.
   $field_instances['entityform-inscription_amapl_caa-field_ou_denomination_sociale'] = array(
@@ -2695,7 +2657,7 @@ function feature_form_amapl_field_default_field_instances() {
     'entity_type' => 'entityform',
     'field_name' => 'field_regime_declaratif',
     'label' => 'Régime déclaratif',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -2768,7 +2730,7 @@ function feature_form_amapl_field_default_field_instances() {
     'entity_type' => 'entityform',
     'field_name' => 'field_situation_tva',
     'label' => 'Situation TVA',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
