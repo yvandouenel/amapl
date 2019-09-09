@@ -189,7 +189,11 @@ function le_savez_vous_views_default_views() {
   $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['content'] = '<div id="home-ss-illustrations">
 <img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character1.png" alt="medecin">
-<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character2.png" alt="infirmière">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character2.png" alt="coiffeuse">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character3.png" alt="ouvrier">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character4.png" alt="expert-comptable">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character5.png" alt="avocate">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character6.png" alt="boulanger">
 </div>';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Critère de tri: Draggableviews : Poids */
@@ -297,7 +301,11 @@ function le_savez_vous_views_default_views() {
     t('<h2 id="quatre-raisons">4 raisons d\'adhérer !</h2>'),
     t('<div id="home-ss-illustrations">
 <img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character1.png" alt="medecin">
-<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character2.png" alt="infirmière">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character2.png" alt="coiffeuse">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character3.png" alt="ouvrier">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character4.png" alt="expert-comptable">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character5.png" alt="avocate">
+<img src="/sites/amapl.com/themes/custom/bootamapl/less/images/homeslideshow/character6.png" alt="boulanger">
 </div>'),
     t('Le saviez-vous'),
     t('Page'),
