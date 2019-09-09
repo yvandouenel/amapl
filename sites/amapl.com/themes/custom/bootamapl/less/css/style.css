@@ -9584,6 +9584,12 @@ body.not-front #under-main-title h2.page-header.simple-title {
 .page-eform-submit.page-eform-submit-inscription-amapl-caa #edit-field-situation-tva-und > div.form-item-field-situation-tva-und {
   margin-top: 1px;
 }
+.page-eform-submit.page-eform-submit-inscription-amapl-caa #edit-field-regime-declaratif-und div.form-item-field-regime-declaratif-und:first-child {
+  display: none;
+}
+.page-eform-submit.page-eform-submit-inscription-amapl-caa #edit-field-situation-tva-und div.form-item-field-situation-tva-und:first-child {
+  display: none;
+}
 .page-eform-submit.page-eform-submit-inscription-amapl-caa button#edit-submit {
   border: 0;
   margin-left: 0;
