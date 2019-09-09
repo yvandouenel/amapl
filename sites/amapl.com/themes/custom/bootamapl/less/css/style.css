@@ -7702,7 +7702,6 @@ a.link-ok:hover:after {
 }
 .paragraphs-item-liste-pdf-bleus .field-item a.pdf {
   background: url(../images/picto-pdf-bleu.png) no-repeat 40px 0;
-  font-size: 1.5em;
 }
 .paragraphs-item-liste-pdf-bleus:after {
   content: "";
@@ -7722,7 +7721,6 @@ a.link-ok:hover:after {
 }
 .paragraphs-item-liste-pdf-orange .field-item a.pdf {
   background: url(../images/picto-pdf-orange.png) no-repeat 10px 0;
-  font-size: 1.5em;
 }
 .paragraphs-item-liste-pdf-orange:after {
   content: "";
@@ -7758,7 +7756,6 @@ a.xls {
   background: url(../images/picto-pdf-bleu.png) no-repeat 10px 0;
   background-size: 48px 48px !important;
   color: black;
-  font-size: 1.5em;
 }
 a.xls {
   background: url(../images/picto-xls-bleu.png) no-repeat 10px 0;
