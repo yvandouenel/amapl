@@ -4,12 +4,6 @@
   padding-top: 0;
   border: 0;
   margin-left: 0;
-  @media screen and (min-width: @screen-lg) {
-
-  }
-  @media screen and (max-width: @screen-lg) {
-
-  }
   &:hover {
     background-color: @blue-green-amapl;
     color: black;
@@ -17,7 +11,8 @@
 }
 .page-eform-submit {
   /* Titre principal */
-  #under-main-title h2.page-header.pl-title {
+  #under-main-title h2.page-header.pl-title,
+  #under-main-title h2.page-header.caa-title {
     min-height: 107px !important;
   }
   /* Cas spécifiques au formulaire pour les PL */
@@ -50,8 +45,23 @@
       }
     }
     /* Bouton de validation du formulaire*/
+    /* button#edit-submit {
+      .button-submit;
+    } */
+    /* Bouton de soumission */
     button#edit-submit {
       .button-submit;
+      .link-button;
+      font-size: 1.4em;
+      padding-top: 0;
+      @media screen and (min-width: @screen-lg) {
+        background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+        background-size: 400px 108px !important;
+      }
+      @media screen and (max-width: @screen-lg) {
+        background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+        background-size: 260px 71px !important;
+      }
     }
   }
   /* Fin de la zone des cas spécifiques au formulaire pour les PL */
@@ -68,8 +78,6 @@
     }
     .group-exo-compta {
       .date-combo {
-
-
       }
       .panel-body {
         display: flex;
@@ -181,17 +189,20 @@
     }
   }
   /* Bouton de réinitialisation du formulaire */
-  .entitytype-inscription_amapl-form #new-submission {
-    background-color: @blue-green-amapl;
-    background-image: none;
-    color: black;
-    font-weight: normal;
-    display: table;
-    padding: 8px;
-    border-radius: 8px;
-    margin: 10px 0 20px 0;
-    &:hover {
-      cursor: pointer;
+  .entitytype-inscription_amapl-form,
+  .entitytype-inscription_amapl_caa-form {
+    #new-submission {
+      background-color: @blue-green-amapl;
+      background-image: none;
+      color: black;
+      font-weight: normal;
+      display: table;
+      padding: 8px;
+      border-radius: 8px;
+      margin: 10px 0 20px 0;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
   /* zone de choix de la forme juridique */
@@ -325,10 +336,7 @@
   }
   &.caa-form {
     #edit-save {
-      background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
-      &:hover {
-        background-color: @blue-green-amapl !important;
-      }
+      .button-submit;
     }
   }
   #title-show-hide-form-datas,
@@ -353,5 +361,4 @@
       color: @black-amapl;
     }
   }
-
 }

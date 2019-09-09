@@ -7761,7 +7761,9 @@ a.xls {
   background: url(../images/picto-xls-bleu.png) no-repeat 10px 0;
 }
 .page-fichiers a.pdf,
-.page-fichiers a.xls {
+.entity-paragraphs-item a.pdf,
+.page-fichiers a.xls,
+.entity-paragraphs-item a.xls {
   font-size: 1.5em;
 }
 .more-link a {
@@ -9396,7 +9398,8 @@ body.not-front #under-main-title h2.page-header.simple-title {
   /* Historique : on cache ! */
   /* URL Redirect : on cache ! */
 }
-.page-eform-submit #under-main-title h2.page-header.pl-title {
+.page-eform-submit #under-main-title h2.page-header.pl-title,
+.page-eform-submit #under-main-title h2.page-header.caa-title {
   min-height: 107px !important;
 }
 .page-eform-submit fieldset.date-combo .container-inline-date > .form-item {
@@ -9407,6 +9410,10 @@ body.not-front #under-main-title h2.page-header.simple-title {
 }
 .page-eform-submit.page-eform {
   /* Bouton de validation du formulaire*/
+  /* button#edit-submit {
+      .button-submit;
+    } */
+  /* Bouton de soumission */
 }
 .page-eform-submit.page-eform fieldset legend {
   background-color: #4bcdf8;
@@ -9423,6 +9430,8 @@ body.not-front #under-main-title h2.page-header.simple-title {
   color: black !important;
 }
 .page-eform-submit.page-eform button#edit-submit {
+  border: 0;
+  margin-left: 0;
   display: block;
   color: white;
   padding-top: 40px;
@@ -9432,8 +9441,6 @@ body.not-front #under-main-title h2.page-header.simple-title {
   margin: 20px;
   font-size: 1.4em;
   padding-top: 0;
-  border: 0;
-  margin-left: 0;
 }
 .page-eform-submit.page-eform button#edit-submit:hover {
   text-decoration: none;
@@ -9467,6 +9474,47 @@ body.not-front #under-main-title h2.page-header.simple-title {
 .page-eform-submit.page-eform button#edit-submit:hover {
   background-color: #6cf1b4;
   color: black;
+}
+.page-eform-submit.page-eform button#edit-submit:hover {
+  text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  .page-eform-submit.page-eform button#edit-submit {
+    width: 400px;
+    height: 108px;
+    background-size: 400px 108px !important;
+  }
+  .page-eform-submit.page-eform button#edit-submit.link-blue-button {
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+  }
+  .page-eform-submit.page-eform button#edit-submit.link-orange-button {
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .page-eform-submit.page-eform button#edit-submit {
+    width: 260px;
+    height: 71px;
+    background-size: 260px 71px !important;
+  }
+  .page-eform-submit.page-eform button#edit-submit.link-blue-button {
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+  }
+  .page-eform-submit.page-eform button#edit-submit.link-orange-button {
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-eform-submit.page-eform button#edit-submit {
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background-size: 400px 108px !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .page-eform-submit.page-eform button#edit-submit {
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background-size: 260px 71px !important;
+  }
 }
 .page-eform-submit.page-eform-submit-inscription-amapl-caa {
   /* Forme juridique */
@@ -9657,7 +9705,8 @@ body.not-front #under-main-title h2.page-header.simple-title {
     flex-wrap: wrap;
   }
 }
-.page-eform-submit .entitytype-inscription_amapl-form #new-submission {
+.page-eform-submit .entitytype-inscription_amapl-form #new-submission,
+.page-eform-submit .entitytype-inscription_amapl_caa-form #new-submission {
   background-color: #6cf1b4;
   background-image: none;
   color: black;
@@ -9667,7 +9716,8 @@ body.not-front #under-main-title h2.page-header.simple-title {
   border-radius: 8px;
   margin: 10px 0 20px 0;
 }
-.page-eform-submit .entitytype-inscription_amapl-form #new-submission:hover {
+.page-eform-submit .entitytype-inscription_amapl-form #new-submission:hover,
+.page-eform-submit .entitytype-inscription_amapl_caa-form #new-submission:hover {
   cursor: pointer;
 }
 .page-eform-submit #edit-field-forme-juridique-und {
@@ -9828,10 +9878,50 @@ body.not-front #under-main-title h2.page-header.simple-title {
   }
 }
 .page-entityform.caa-form #edit-save {
-  background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+  display: block;
+  color: white;
+  padding-top: 40px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 0.8em;
+  margin: 20px;
+  font-size: 1.4em;
+  padding-top: 0;
+  border: 0;
+  margin-left: 0;
 }
 .page-entityform.caa-form #edit-save:hover {
-  background-color: #6cf1b4 !important;
+  text-decoration: none;
+}
+@media screen and (min-width: 1200px) {
+  .page-entityform.caa-form #edit-save {
+    width: 400px;
+    height: 108px;
+    background-size: 400px 108px !important;
+  }
+  .page-entityform.caa-form #edit-save.link-blue-button {
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+  }
+  .page-entityform.caa-form #edit-save.link-orange-button {
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .page-entityform.caa-form #edit-save {
+    width: 260px;
+    height: 71px;
+    background-size: 260px 71px !important;
+  }
+  .page-entityform.caa-form #edit-save.link-blue-button {
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+  }
+  .page-entityform.caa-form #edit-save.link-orange-button {
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+  }
+}
+.page-entityform.caa-form #edit-save:hover {
+  background-color: #6cf1b4;
+  color: black;
 }
 .page-entityform #title-show-hide-form-datas,
 .page-entityform a#modify-subscribe-form {
