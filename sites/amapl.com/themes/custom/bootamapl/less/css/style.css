@@ -7762,14 +7762,18 @@ a.xls {
 }
 .page-fichiers a.pdf,
 .entity-paragraphs-item a.pdf,
+.field-item > .dnd-atom-wrapper a.pdf,
 .page-fichiers a.xls,
-.entity-paragraphs-item a.xls {
+.entity-paragraphs-item a.xls,
+.field-item > .dnd-atom-wrapper a.xls {
   font-size: 1.5em;
 }
 .page-fichiers.paragraphs-item-titre-et-paragraphe a.pdf,
 .entity-paragraphs-item.paragraphs-item-titre-et-paragraphe a.pdf,
+.field-item > .dnd-atom-wrapper.paragraphs-item-titre-et-paragraphe a.pdf,
 .page-fichiers.paragraphs-item-titre-et-paragraphe a.xls,
-.entity-paragraphs-item.paragraphs-item-titre-et-paragraphe a.xls {
+.entity-paragraphs-item.paragraphs-item-titre-et-paragraphe a.xls,
+.field-item > .dnd-atom-wrapper.paragraphs-item-titre-et-paragraphe a.xls {
   font-size: 1em !important;
 }
 .more-link a {
