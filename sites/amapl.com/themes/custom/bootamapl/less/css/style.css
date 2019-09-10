@@ -7760,6 +7760,12 @@ a.xls {
 a.xls {
   background: url(../images/picto-xls-bleu.png) no-repeat 10px 0;
 }
+.page-fichiers.paragraphs-item-titre-et-paragraphe a.pdf,
+.entity-paragraphs-item.paragraphs-item-titre-et-paragraphe a.pdf,
+.page-fichiers.paragraphs-item-titre-et-paragraphe a.xls,
+.entity-paragraphs-item.paragraphs-item-titre-et-paragraphe a.xls {
+  font-size: 1.em;
+}
 .page-fichiers a.pdf,
 .entity-paragraphs-item a.pdf,
 .page-fichiers a.xls,
