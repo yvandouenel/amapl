@@ -91,7 +91,9 @@ function feature_lettre_info_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h3 class="title-pl title-col">Professionnel libéral</h3><p>Imprimée à 9 000 exemplaires, cette lettre d’information parait 4 fois par an, en mars, juin, septembre et décembre. Elle est adressée nominativement à tous les adhérents de l’Amapl et les conseils. Dans chaque numéro, nous prenons le temps de développer un point d’ordre juridique, fiscal ou social appelé « Le dossier », de mettre en avant des artistes adhérents, de faire un zoom sur une actualité chère à l’Amapl (formations, conférences, salons, etc.).</p>';
+  $handler->display->display_options['header']['area']['content'] = '<p><strong>Professions libérales</strong>, le Mag’ est imprimée à 11 000 exemplaires, cette lettre d’information parait quatre fois par an, en mars, juin, septembre et décembre. Elle est adressée nominativement à tous les professionnels libéraux adhérents de l’Amapl et aux conseils.
+
+Dans chaque numéro, nous prenons le temps de développer un sujet d’ordre juridique, fiscal ou social, de relayer des informations spécifiques à chaque professions, de mettre en avant des artistes adhérents, de faire un zoom sur une actualité chère à l’Amapl (formations, conférences, salons, etc.).</p>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['path'] = 'lettres-info';
 
@@ -103,8 +105,8 @@ function feature_lettre_info_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
-  $handler->display->display_options['header']['area']['content'] = '<h3 class="title-caa title-col">Commerçant, artisan, agriculteur</h3>
-<p>Imprimée à 9 000 exemplaires, cette lettre d’information parait 4 fois par an, en mars, juin, septembre et décembre. Elle est adressée nominativement à tous les adhérents de l’Amapl et les conseils. Dans chaque numéro, nous prenons le temps de développer un point d’ordre juridique, fiscal ou social appelé « Le dossier », de mettre en avant des artistes adhérents, de faire un zoom sur une actualité chère à l’Amapl (formations, conférences, salons, etc.).</p>';
+  $handler->display->display_options['header']['area']['content'] = '
+<p><strong>OGA informations</strong> est le journal d’information des artisans, commerçants et agriculteurs, adhérents de l’Amapl. Reflet des tendances du moments mais aussi référence en terme d’actualité professionnelle, OGA informations est aussi mis à disposition des conseils. Il est publié quatre fois par an en janvier, avril, juin et octobre.</p>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
@@ -153,10 +155,12 @@ function feature_lettre_info_views_default_views() {
     t('dernier »'),
     t('<h3 class="title-pl title-col">Professionnel libéral</h3>'),
     t('Lettres d\'info PL'),
-    t('<h3 class="title-pl title-col">Professionnel libéral</h3><p>Imprimée à 9 000 exemplaires, cette lettre d’information parait 4 fois par an, en mars, juin, septembre et décembre. Elle est adressée nominativement à tous les adhérents de l’Amapl et les conseils. Dans chaque numéro, nous prenons le temps de développer un point d’ordre juridique, fiscal ou social appelé « Le dossier », de mettre en avant des artistes adhérents, de faire un zoom sur une actualité chère à l’Amapl (formations, conférences, salons, etc.).</p>'),
+    t('<p><strong>Professions libérales</strong>, le Mag’ est imprimée à 11 000 exemplaires, cette lettre d’information parait quatre fois par an, en mars, juin, septembre et décembre. Elle est adressée nominativement à tous les professionnels libéraux adhérents de l’Amapl et aux conseils.
+
+Dans chaque numéro, nous prenons le temps de développer un sujet d’ordre juridique, fiscal ou social, de relayer des informations spécifiques à chaque professions, de mettre en avant des artistes adhérents, de faire un zoom sur une actualité chère à l’Amapl (formations, conférences, salons, etc.).</p>'),
     t('Fichiers attachés CAA'),
-    t('<h3 class="title-caa title-col">Commerçant, artisan, agriculteur</h3>
-<p>Imprimée à 9 000 exemplaires, cette lettre d’information parait 4 fois par an, en mars, juin, septembre et décembre. Elle est adressée nominativement à tous les adhérents de l’Amapl et les conseils. Dans chaque numéro, nous prenons le temps de développer un point d’ordre juridique, fiscal ou social appelé « Le dossier », de mettre en avant des artistes adhérents, de faire un zoom sur une actualité chère à l’Amapl (formations, conférences, salons, etc.).</p>'),
+    t('
+<p><strong>OGA informations</strong> est le journal d’information des artisans, commerçants et agriculteurs, adhérents de l’Amapl. Reflet des tendances du moments mais aussi référence en terme d’actualité professionnelle, OGA informations est aussi mis à disposition des conseils. Il est publié quatre fois par an en janvier, avril, juin et octobre.</p>'),
   );
   $export['lettres_info'] = $view;
 
