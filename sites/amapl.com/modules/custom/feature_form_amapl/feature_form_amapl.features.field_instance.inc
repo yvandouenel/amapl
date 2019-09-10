@@ -2025,7 +2025,7 @@ function feature_form_amapl_field_default_field_instances() {
     'label' => 'au',
     'required' => 1,
     'settings' => array(
-      'default_value' => 'now',
+      'default_value' => 'blank',
       'default_value2' => 'same',
       'default_value_code' => '',
       'default_value_code2' => '',
@@ -2076,7 +2076,7 @@ function feature_form_amapl_field_default_field_instances() {
     'label' => 'Date de début d’activité (ou de reprise d’activité après cessation)',
     'required' => 1,
     'settings' => array(
-      'default_value' => 'strtotime',
+      'default_value' => 'blank',
       'default_value2' => 'same',
       'default_value_code' => '-1 year',
       'default_value_code2' => '',
@@ -2126,7 +2126,7 @@ function feature_form_amapl_field_default_field_instances() {
     'label' => 'Du',
     'required' => 1,
     'settings' => array(
-      'default_value' => 'strtotime',
+      'default_value' => 'blank',
       'default_value2' => 'same',
       'default_value_code' => '-1 year',
       'default_value_code2' => '',
