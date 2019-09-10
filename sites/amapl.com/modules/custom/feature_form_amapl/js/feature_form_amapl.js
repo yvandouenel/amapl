@@ -46,6 +46,8 @@
       $('select#edit-field-pour-les-revenus-und option:contains("Choisir")').text('-- Choisissez une année --');
       // Effacer l'année 2017
       $('select#edit-field-pour-les-revenus-und option:contains("2017")').hide();
+      // Effacer l'année 2018
+      $('select#edit-field-pour-les-revenus-und option:contains("2018")').hide();
 
       /* Gestion des infobulles ***************************************************************************************/
       $(".form-item .description").each(function () {
@@ -61,7 +63,7 @@
             console.log($(this));
             console.log("son parent : ");
             console.log($(this).parent()); */
-            
+
             console.log("class du parent : " + $(this).parent().attr('class') + " a comparer avec form-type-textarea ");
           if ($(this).parent().hasClass("form-type-textarea")) {
             infobulle.insertBefore($(".form-textarea", $(this).parent()));
