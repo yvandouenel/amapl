@@ -9296,7 +9296,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
 }
 @media screen and (min-width: 992px) {
   .page-lettres-info .view-header {
-    height: 370px;
+    height: 250px;
     overflow: hidden;
     margin-bottom: 40px;
   }
