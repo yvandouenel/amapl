@@ -3553,7 +3553,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
       ),
     ),
     'deleted' => 0,
-    'description' => 'La formation à laquelle vous vous inscrivez est payante. En cochant sur la case ci-dessus, vous vous engagez à la payer dans les meilleurs délais<a href="." target="_blank"></a>',
+    'description' => 'L’inscription du stagiaire ne sera définitive qu\'à réception du paiement.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -3687,8 +3687,8 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Horaires et durée');
   t('Inscription');
   t('Introduction');
-  t('La formation à laquelle vous vous inscrivez est payante. En cochant sur la case ci-dessus, vous vous engagez à la payer dans les meilleurs délais<a href="." target="_blank"></a>');
   t('Lieu court');
+  t('L’inscription du stagiaire ne sera définitive qu\'à réception du paiement.');
   t('Méthode');
   t('Méthodes d\'évaluation');
   t('Nom');
