@@ -287,7 +287,9 @@
 }
 /* 3 colonnes : training, zoom et news *********************************/
 .three-cols-home {
-  display: flex;
+  @media screen and (min-width: @screen-md) {
+    display: flex;
+  }
   margin-top: 30px;
 
   /* training ********************************************************/

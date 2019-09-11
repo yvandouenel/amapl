@@ -8684,11 +8684,15 @@ body.not-front #under-main-title h2.page-header.simple-title {
 }
 /* 3 colonnes : training, zoom et news *********************************/
 .three-cols-home {
-  display: flex;
   margin-top: 30px;
   /* training ********************************************************/
   /* zoom *********************************************/
   /* Actualités ******************************************/
+}
+@media screen and (min-width: 992px) {
+  .three-cols-home {
+    display: flex;
+  }
 }
 .three-cols-home #block-views-trainings-block-home-training {
   position: static;
