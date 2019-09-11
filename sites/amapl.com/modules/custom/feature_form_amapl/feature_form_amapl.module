@@ -430,7 +430,9 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
   if ($payment->getStatus()->status == "payment_status_success") {
 
     if ($entity) {
-      $info_form_subscribe = get_form_infos($entity);
+      $form_info = get_form_infos($entity);
+      $info_form_subscribe = $form_info[0];
+      $benefice = $form_info[1];
 
       // Sends email to contact@amapl.com ****************************************
       $description_payment = current($payment->getLineItems())->description;
@@ -441,7 +443,7 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
       // Build email message
       $to = $mail_to;
       $from = "adhesions@amapl.com";
-      $mail_subject = 'Inscription AMAPL payée en ligne';
+      $mail_subject = 'Inscription AMAPL (' + $benefice + ') payée en ligne';
       $payment_date = date('d-m-y G:i:s');
       // Historique du paiement
       $payment_history = '';
@@ -503,23 +505,40 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
 }
 
 function get_form_infos($entity) {
+  $benefice = "BNC";
   $msg = '<table border="1" cellpadding="5">';
-
   // Antenne
   $msg .= '<tr><th>Agence : </th><td>' . $entity->field_choix_antenne['und'][0]['value'] . '</td></tr>';
 
-  // Année adhésion
+  // BIC/BA Exercice comptable à prendre en compte
+  if (!empty($entity->field_date_du)) {
+    $msg .= '<tr><th> Exercice comptable à prendre en compte : </th><td>du ' .
+    $entity->field_date_du['und'][0]['value'] . ' au ' .
+    $entity->field_date_au['und'][0]['value'] .
+    '</td></tr>';
+    $benefice = "BIC/BA";
+  }
+  // BNC Année adhésion
   if (!empty($entity->field_pour_les_revenus)) {
     $msg .= '<tr><th>Demande d\'adhésion pour les revenus :</th><td>' . $entity->field_pour_les_revenus['und'][0]['value'] . '</td></tr>';
   }
 
   // Forme juridique
   $msg .= '<tr><td colspan="2"><h3>Identification</h3></td></tr>';
-  $msg .= '<tr><th>Forme juridique : </th><td>' . $entity->field_forme_juridique['und'][0]['value'] . '</td></tr>';
+
+  // BNC Forme juridique
+  if (!empty($entity->field_forme_juridique)) {
+    $msg .= '<tr><th>Forme juridique : </th><td>' . $entity->field_forme_juridique['und'][0]['value'] . '</td></tr>';
+  }
+  // BIC/BA Forme juridique
+  if (!empty($entity->field_forme_juridique_caa)) {
+    $msg .= '<tr><th>Forme juridique : </th><td>' . $entity->field_forme_juridique_caa['und'][0]['value'] . '</td></tr>';
+  }
+  // Autre forme juridique
   if (!empty($entity->field_fj_autre)) {
     $msg .= '<tr><th>Autre forme juridique : </th><td>' . $entity->field_fj_autre['und'][0]['value'] . '</td></tr>';
   }
-
+  // BNC Nombre d'associés
   if (!empty($entity->field_nombre_associes)) {
     $msg .= '<tr><th>Nombre d\'associés : </th><td>' . $entity->field_nombre_associes['und'][0]['value'] . '</td></tr>';
   }
@@ -559,18 +578,24 @@ function get_form_infos($entity) {
   if (!empty($entity->field_code_ape)) {
     $msg .= '<tr><th>Code APE : </th><td>' . $entity->field_code_ape['und'][0]['value'] . '</td></tr>';
   }
-
+  // BNC Activité non professionnelle
   if (!empty($entity->field_non_pro) && $entity->field_non_pro['und'][0]['value']) {
     $msg .= '<tr><th>Activité non professionnelle : </th><td>Oui</td></tr>';
   }
   if (!empty($entity->field_source_etrangere) && $entity->field_source_etrangere['und'][0]['value']) {
     $msg .= '<tr><th>Revenus de sources étrangères : </th><td>Oui</td></tr>';
   }
+  // BNC - Adhésion Micro-BNC ou Auto-entrepreneur
   if (!empty($entity->field_micro_autoentrepreneur) && $entity->field_micro_autoentrepreneur['und'][0]['value']) {
     $msg .= '<tr><th>Adhésion Micro-BNC ou Auto-entrepreneur  : </th><td>Oui</td></tr>';
   }
+  // BNC - Type d\'adhésion
   if (!empty($entity->field_type_adhesion)) {
     $msg .= '<tr><th>Type d\'adhésion : </th><td>' . $entity->field_type_adhesion['und'][0]['value'] . '</td></tr>';
+  }
+  // BIC/BNC Type d'adhésion
+  if (!empty($entity->field_type_adhesion_caa)) {
+    $msg .= '<tr><th>Type d\'adhésion : </th><td>' . $entity->field_type_adhesion_caa['und'][0]['value'] . '</td></tr>';
   }
   if (!empty($entity->field_autre_type_adhesion)) {
     $msg .= '<tr><th>Autre type d\'adhésion :  </th><td>' . $entity->field_autre_type_adhesion['und'][0]['value'] . '</td></tr>';
@@ -578,11 +603,22 @@ function get_form_infos($entity) {
   if (!empty($entity->field_activity_details)) {
     $msg .= '<tr><th>Précisions diverses :  </th><td>' . $entity->field_activity_details['und'][0]['value'] . '</td></tr>';
   }
-
+  // BNC - Nom et adresse de la précédente AGA
   if (!empty($entity->field_autre_aga)) {
     $msg .= '<tr><th>Nom et adresse de la précédente AGA : </th><td>' . $entity->field_autre_aga['und'][0]['value'] . '</td></tr>';
   }
 
+  // BIC/BAC Régime fiscal
+  if (!empty($entity->field_imposition_benefices)) {
+    $msg .= '<tr><td colspan="2"><h3>Régime fiscal</h3></td></tr>';
+    $msg .= '<tr><th>Imposition des bénéfices : </th><td>' . $entity->field_imposition_benefices['und'][0]['value'] . '</td></tr>';
+    if (!empty($entity->field_regime_declaratif)) {
+      $msg .= '<tr><th>Régime déclaratif : </th><td>' . $entity->field_regime_declaratif['und'][0]['value'] . '</td></tr>';
+    }
+    if (!empty($entity->field_situation_tva)) {
+      $msg .= '<tr><th>Situaltion TVA : </th><td>' . $entity->field_situation_tva['und'][0]['value'] . '</td></tr>';
+    }
+  }
 
   // Tenue des documents comptables
   $msg .= '<tr><td colspan="2"><h3>Tenue des documents comptables</h3></td></tr>';
@@ -611,8 +647,14 @@ function get_form_infos($entity) {
 
   // Coût de l'adhésion
   $msg .= '<tr><td colspan="2"><h3>Coût de l\'adhésion</h3></td></tr>';
+
+  // BNC - Coût de l'adhésion
   if (!empty($entity->field_prix)) {
     $msg .= '<tr><th>Coût de l\'adhésion : </th><td>' . $entity->field_prix['und'][0]['value'] . '€</td></tr>';
+  }
+  // BIC/BA -  Coût de l'adhésion
+  if (!empty($entity->field_prix_caa)) {
+    $msg .= '<tr><th>Coût de l\'adhésion : </th><td>' . $entity->field_prix_caa['und'][0]['value'] . '€</td></tr>';
   }
   // Provenance
   $msg .= '<tr><td colspan="2"><h3>Provenance</h3></td></tr>';
@@ -634,8 +676,44 @@ function get_form_infos($entity) {
 
   $msg .= '</table>';
   $msg .= "<p>Association de gestion agréée déclarée n° 201300. Loi du 1er juillet 1901. Siret n° 314 686 924 00031. - Agrément fiscal n° 349 AA 4 - 1978. - www.amapl.com</p>";
+  $msg .= '<div style="font-size:0.8em;"><p><strong>En renseignant un bulletin d\'adhésion, je demande à adhérer à l’association AMAP.L., organisme mixte de gestion agréé, à compter des revenus ou de l’exercice mentionné sur le bulletin, et à l’appui de ma demande :</strong></p>
+  <p>M’engage à respecter les Statuts et le Réglement Intérieur de l\'Association, dont je reconnais avoir pris connaissance.</p>
+  <div class="dnd-atom-wrapper type-file context-sdl_editor_representation" contenteditable="false">
+  <div class="dnd-drop-wrapper"><!-- scald=181:sdl_editor_representation {"link":""} --><div class="image">
 
-  return $msg;
+  <a class="pdf" href="https://www.amapl.com/sites/amapl.com/files/atoms/files/statuts_a_jour_au_21_mars_2019_0.pdf" title="Statuts">
+    Statuts</a>
+  </div><!-- END scald=181 --></div>
+  </div>
+  <div class="dnd-atom-wrapper type-file context-sdl_editor_representation" contenteditable="false">
+  <div class="dnd-drop-wrapper"><!-- scald=182:sdl_editor_representation {"link":""} --><div class="image">
+
+  <a class="pdf" href="https://www.amapl.com/sites/amapl.com/files/atoms/files/ri_signe_au_16_octobre_2018.pdf" title="Règlement intérieur">
+    Règlement intérieur</a>
+  </div><!-- END scald=182 --></div>
+  </div>
+  <p>M’engage à informer l’association de tout changement intervenu concernant mon activité, ma forme juridique, mon identification, mon régime fiscal ou la tenue de mes documents comptables dans le mois qui suit cette modification.</p>
+  <p>M’engage à respecter les obligations qui me sont imposées en tant qu’adhérent d’une association exerçant une activité d’organisme mixte de gestion agréé visé par l’article 1649 quater K ter du Code général des impôts, dont je reconnais avoir pris connaissance pour la partie Association agréée visée aux articles 1649 quater F et suivants du Code général des impôts (professions libérales) et/ou pour la partie Centre de gestion agréé visée aux articles 1649 quater C et suivants du Code général des impôts (artisans, commerçants, agriculteurs), notamment&nbsp;:</p>
+  <p class="rteindent1">Pour les artisans, commerçants, agriculteurs, produire une comptabilité sincère et complète de l’activité. Pour les professions libérales, se conformer aux recommandations précisées à l’article 371 Y de l’annexe 2 du Code général des impôts, notamment tenir les documents prévus à l’article 99 du Code général des impôts conformément à l’un des plans comptables professionnels agréés par le ministre de l’économie et des finances (nomenclature comptabledes professions libérales prévue par l’arrêté du 30 janvier 1978).</p>
+  <p class="rteindent1">Pour les titulaires de revenus non commerciaux non professionnels, souscrire à l’engagement de la connaissance des revenus conformément à l’article 1649 quater F du Code général des impôts. De par cet engagement, je prends acte de mon obligation de souscrire des déclarations sincères et de suivre les recommandations qui me sont formulées par l’association.</p>
+  <p class="rteindent1">Déclarer les résultats et leurs annexes selon la procédure de transfert des données fiscales et comptables (TDFC). Je m’engage, à ce titre, à donner mandat à l’association si je ne télétransmets pas la déclaration de résultats et ses annexes par mes propres moyens.</p>
+  <p class="rteindent1">Communiquer à l’association les déclarations de résultats et leurs annexes, ainsi que toutes les autres déclarations, documents comptables et justificatifs sollicités dans le cadre des analyses et contrôles réalisés par l’association.</p>
+  <p>Autorise l’association à utiliser mes données personnelles dans le strict cadre et pour la seule réalisation de l’activité d’organisme mixte de gestion agréé, en ce compris la transmission d’informations particulières et générales sur l’activité et l’actualité de l’association, et à utiliser et transmettre de manière purement anonyme mes données professionnelles aux fins de réalisation d’études statistiques ou économiques.</p>
+  <p>Accuse réception de l’<a href="/fichiers">annexe au bulletin d’adhésion et de l’affiche</a> qui l’accompagne relatifs à l’acceptation des paiements par chèque ou par carte bancaire.</p>
+  <p><strong>En cas d\'adhésion en ligne, règle par carte bancaire la cotisation annuelle de l’association, condition de mon adhésion en ligne</strong>.</p>
+  <h3>Informations diverses</h3>
+  <h4>Extraits du BOFiP BOI-DJC-OA-20-10-20-10, n° 110</h4>
+  <p>Dans le cadre de leur mission d\'accompagnement, les associations sensibilisent leurs adhérents au respect de leurs obligations fiscales de paiement. Si vous rencontrez des difficultés de paiement, vous êtes invité à contacter le service des impôts dont vous dépendez. En cas de difficultés particulières, et sur demande, une information complémentaire relative aux dispositifs d'aide aux entreprises en difficulté est proposée par l'association.</p>
+  <h4>Extraits du BOFiP BOI-DJC-OA-20-30-10-10, n° 460</h4>
+  <p>Selon la nature de leur activité exercée à l\'étranger, les titulaires de revenus professionnels de source étrangère imposables à l'impôt sur le revenu en France, ou exonérés mais pris en compte pour le calcul du taux effectif, peuvent adhérer soit à un centre de gestion agréé, soit à une association agréée, sous réserve que ces revenus proviennent d'un État membre de l'Union Européenne, ou d'un autre État partie à l'accord sur l'Espace économique européen ayant conclu avec la France une convention d'assistance administrative en vue de lutter contre la fraude et l'évasion fiscales.</p>
+  <h4>Notes importantes</h4>
+  <p>En cas de société d’exercice, un seul bulletin doit être établi au nom de la Société et une seule cotisation est due.<br>
+  En cas d’exercice par un même contribuable d’activités relevant de régimes fiscaux différents (BIC, BA, BNC), une cotisation est due par activité exercée (même si un seul bulletin d’adhésion a été renseigné).<br>
+  Pour les adhérents non assistés d’un professionnel, l\'association tient à préciser que si elle est obligée d\'intervenir pour la mise en ordre de leur dossier à la suite d'un Contrôle de Cohérence et de Vraisemblance ayant révélé une mauvaise tenue des divers registres obligatoires, des honoraires seront réclamés à l'Adhérent pour cette Intervention.<br>
+  Conformément à la Loi Informatique et Libertés du 6 janvier 1978, vous disposez d\'un droit d\'accès et de rectification aux données personnelles vous concernant.</p>
+  </div>';
+
+  return array($msg, $benefice);
 }
 
 /**
