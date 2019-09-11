@@ -676,15 +676,20 @@ function get_form_infos($entity) {
 
   $msg .= '</table>';
   $msg .= "<p>Association de gestion agréée déclarée n° 201300. Loi du 1er juillet 1901. Siret n° 314 686 924 00031. - Agrément fiscal n° 349 AA 4 - 1978. - www.amapl.com</p>";
-  $msg .= '<div style="font-size:0.8em;"><p><strong>En renseignant un bulletin d\'adhésion, je demande à adhérer à l’association AMAP.L., organisme mixte de gestion agréé, à compter des revenus ou de l’exercice mentionné sur le bulletin, et à l’appui de ma demande :</strong></p>
-  <p>M’engage à respecter les Statuts et le Réglement Intérieur de l\'Association, dont je reconnais avoir pris connaissance.</p>
-  <div class="dnd-atom-wrapper type-file context-sdl_editor_representation" contenteditable="false">
+  $msg .= '<div style="font-size:0.8em;">'.
+  '<h2>CONDITIONS GÉNÉRALES D\'ADHÉSION</h2>' .
+  '<p><strong>En renseignant un bulletin d\'adhésion, je demande à adhérer à l’association AMAP.L., organisme mixte de gestion agréé, à compter des revenus ou de l’exercice mentionné sur le bulletin, et à l’appui de ma demande :</strong></p>
+  <p>M’engage à respecter les Statuts et le Réglement Intérieur de l\'Association, dont je reconnais avoir pris connaissance.</p>'.
+  '<ul><li>' .
+  '<div class="dnd-atom-wrapper type-file context-sdl_editor_representation" contenteditable="false">
   <div class="dnd-drop-wrapper"><!-- scald=181:sdl_editor_representation {"link":""} --><div class="image">
 
   <a class="pdf" href="https://www.amapl.com/sites/amapl.com/files/atoms/files/statuts_a_jour_au_21_mars_2019_0.pdf" title="Statuts">
     Statuts</a>
   </div><!-- END scald=181 --></div>
   </div>
+  </li>
+  <li>
   <div class="dnd-atom-wrapper type-file context-sdl_editor_representation" contenteditable="false">
   <div class="dnd-drop-wrapper"><!-- scald=182:sdl_editor_representation {"link":""} --><div class="image">
 
@@ -692,6 +697,8 @@ function get_form_infos($entity) {
     Règlement intérieur</a>
   </div><!-- END scald=182 --></div>
   </div>
+  </li>
+  </ul>
   <p>M’engage à informer l’association de tout changement intervenu concernant mon activité, ma forme juridique, mon identification, mon régime fiscal ou la tenue de mes documents comptables dans le mois qui suit cette modification.</p>
   <p>M’engage à respecter les obligations qui me sont imposées en tant qu’adhérent d’une association exerçant une activité d’organisme mixte de gestion agréé visé par l’article 1649 quater K ter du Code général des impôts, dont je reconnais avoir pris connaissance pour la partie Association agréée visée aux articles 1649 quater F et suivants du Code général des impôts (professions libérales) et/ou pour la partie Centre de gestion agréé visée aux articles 1649 quater C et suivants du Code général des impôts (artisans, commerçants, agriculteurs), notamment&nbsp;:</p>
   <p class="rteindent1">Pour les artisans, commerçants, agriculteurs, produire une comptabilité sincère et complète de l’activité. Pour les professions libérales, se conformer aux recommandations précisées à l’article 371 Y de l’annexe 2 du Code général des impôts, notamment tenir les documents prévus à l’article 99 du Code général des impôts conformément à l’un des plans comptables professionnels agréés par le ministre de l’économie et des finances (nomenclature comptabledes professions libérales prévue par l’arrêté du 30 janvier 1978).</p>
