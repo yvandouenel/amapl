@@ -7624,6 +7624,11 @@ img {
     background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .link-button {
+    font-size: 12px;
+  }
+}
 a.link-ok {
   display: block;
   text-align: right;
@@ -9395,6 +9400,11 @@ body.not-front #under-main-title h2.page-header.simple-title {
     background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .button-submit {
+    font-size: 12px;
+  }
+}
 .button-submit:hover {
   background-color: #6cf1b4;
   color: black;
@@ -9488,6 +9498,11 @@ body.not-front #under-main-title h2.page-header.simple-title {
     background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .page-eform-submit.page-eform button#edit-submit {
+    font-size: 12px;
+  }
+}
 .page-eform-submit.page-eform button#edit-submit:hover {
   background-color: #6cf1b4;
   color: black;
@@ -9519,6 +9534,11 @@ body.not-front #under-main-title h2.page-header.simple-title {
   }
   .page-eform-submit.page-eform button#edit-submit.link-orange-button {
     background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page-eform-submit.page-eform button#edit-submit {
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -9649,6 +9669,11 @@ body.not-front #under-main-title h2.page-header.simple-title {
     background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .page-eform-submit.page-eform-submit-inscription-amapl-caa button#edit-submit {
+    font-size: 12px;
+  }
+}
 .page-eform-submit.page-eform-submit-inscription-amapl-caa button#edit-submit:hover {
   background-color: #6cf1b4;
   color: black;
@@ -9680,6 +9705,11 @@ body.not-front #under-main-title h2.page-header.simple-title {
   }
   .page-eform-submit.page-eform-submit-inscription-amapl-caa button#edit-submit.link-orange-button {
     background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page-eform-submit.page-eform-submit-inscription-amapl-caa button#edit-submit {
+    font-size: 12px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -9843,6 +9873,11 @@ body.not-front #under-main-title h2.page-header.simple-title {
     background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .page-entityform #edit-save {
+    font-size: 12px;
+  }
+}
 .page-entityform #edit-save:hover {
   background-color: #6cf1b4;
   color: black;
@@ -9940,6 +9975,11 @@ body.not-front #under-main-title h2.page-header.simple-title {
   }
   .page-entityform.caa-form #edit-save.link-orange-button {
     background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page-entityform.caa-form #edit-save {
+    font-size: 12px;
   }
 }
 .page-entityform.caa-form #edit-save:hover {
