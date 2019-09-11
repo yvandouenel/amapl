@@ -7627,6 +7627,7 @@ img {
 @media screen and (max-width: 768px) {
   .link-button {
     font-size: 12px;
+    padding-top: 25px;
   }
 }
 a.link-ok {
@@ -9403,6 +9404,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
 @media screen and (max-width: 768px) {
   .button-submit {
     font-size: 12px;
+    padding-top: 25px;
   }
 }
 .button-submit:hover {
@@ -9501,6 +9503,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
 @media screen and (max-width: 768px) {
   .page-eform-submit.page-eform button#edit-submit {
     font-size: 12px;
+    padding-top: 25px;
   }
 }
 .page-eform-submit.page-eform button#edit-submit:hover {
@@ -9539,6 +9542,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
 @media screen and (max-width: 768px) {
   .page-eform-submit.page-eform button#edit-submit {
     font-size: 12px;
+    padding-top: 25px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -9672,6 +9676,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
 @media screen and (max-width: 768px) {
   .page-eform-submit.page-eform-submit-inscription-amapl-caa button#edit-submit {
     font-size: 12px;
+    padding-top: 25px;
   }
 }
 .page-eform-submit.page-eform-submit-inscription-amapl-caa button#edit-submit:hover {
@@ -9710,6 +9715,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
 @media screen and (max-width: 768px) {
   .page-eform-submit.page-eform-submit-inscription-amapl-caa button#edit-submit {
     font-size: 12px;
+    padding-top: 25px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -9876,6 +9882,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
 @media screen and (max-width: 768px) {
   .page-entityform #edit-save {
     font-size: 12px;
+    padding-top: 25px;
   }
 }
 .page-entityform #edit-save:hover {
@@ -9980,6 +9987,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
 @media screen and (max-width: 768px) {
   .page-entityform.caa-form #edit-save {
     font-size: 12px;
+    padding-top: 25px;
   }
 }
 .page-entityform.caa-form #edit-save:hover {
