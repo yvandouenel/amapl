@@ -443,7 +443,7 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
       // Build email message
       $to = $mail_to;
       $from = "adhesions@amapl.com";
-      $mail_subject = 'Inscription AMAPL (' + $benefice + ') payée en ligne';
+      $mail_subject = 'Inscription AMAPL (' . $benefice . ') payée en ligne';
       $payment_date = date('d-m-y G:i:s');
       // Historique du paiement
       $payment_history = '';
