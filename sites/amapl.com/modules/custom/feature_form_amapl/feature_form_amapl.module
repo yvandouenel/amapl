@@ -653,11 +653,14 @@ function get_form_infos($entity) {
     $msg .= '<tr><th>Coût de l\'adhésion : </th><td>' . $entity->field_prix['und'][0]['value'] . '€</td></tr>';
   }
   // BIC/BA -  Coût de l'adhésion
-  if (!empty($entity->field_prix_caa)) {
-    $msg .= '<tr><th>Coût de l\'adhésion : </th><td>' . $entity->field_prix_caa['und'][0]['value'] . '€</td></tr>';
+  if (!empty($entity->field_paiement_caa)) {
+    $msg .= '<tr><th>Coût de l\'adhésion : </th><td>' . ($entity->field_paiement_caa['und'][0]['amount'] * 1.2) . '€</td></tr>';
   }
   // Provenance
-  $msg .= '<tr><td colspan="2"><h3>Provenance</h3></td></tr>';
+  if (!empty($entity->field_provenance) || !empty($entity->field_autre_provenance)) {
+    $msg .= '<tr><td colspan="2"><h3>Provenance</h3></td></tr>';
+  }
+
   if (!empty($entity->field_provenance)) {
     $msg .= '<tr><th>Provenance : </th><td>' . $entity->field_provenance['und'][0]['value'] . '</td></tr>';
   }
