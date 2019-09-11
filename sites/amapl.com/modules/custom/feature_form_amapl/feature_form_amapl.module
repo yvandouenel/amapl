@@ -682,26 +682,7 @@ function get_form_infos($entity) {
   $msg .= '<div style="font-size:0.8em;">'.
   '<h2>CONDITIONS GÉNÉRALES D\'ADHÉSION</h2>' .
   '<p><strong>En renseignant un bulletin d\'adhésion, je demande à adhérer à l’association AMAP.L., organisme mixte de gestion agréé, à compter des revenus ou de l’exercice mentionné sur le bulletin, et à l’appui de ma demande :</strong></p>
-  <p>M’engage à respecter les Statuts et le Réglement Intérieur de l\'Association, dont je reconnais avoir pris connaissance.</p>'.
-  '<ul><li>' .
-  '<div class="dnd-atom-wrapper type-file context-sdl_editor_representation" contenteditable="false">
-  <div class="dnd-drop-wrapper"><!-- scald=181:sdl_editor_representation {"link":""} --><div class="image">
-
-  <a class="pdf" href="https://www.amapl.com/sites/amapl.com/files/atoms/files/statuts_a_jour_au_21_mars_2019_0.pdf" title="Statuts">
-    Statuts</a>
-  </div><!-- END scald=181 --></div>
-  </div>
-  </li>
-  <li>
-  <div class="dnd-atom-wrapper type-file context-sdl_editor_representation" contenteditable="false">
-  <div class="dnd-drop-wrapper"><!-- scald=182:sdl_editor_representation {"link":""} --><div class="image">
-
-  <a class="pdf" href="https://www.amapl.com/sites/amapl.com/files/atoms/files/ri_signe_au_16_octobre_2018.pdf" title="Règlement intérieur">
-    Règlement intérieur</a>
-  </div><!-- END scald=182 --></div>
-  </div>
-  </li>
-  </ul>
+  <p>M’engage à respecter les Statuts et le Réglement Intérieur de l\'Association, dont je reconnais avoir pris connaissance.</p>
   <p>M’engage à informer l’association de tout changement intervenu concernant mon activité, ma forme juridique, mon identification, mon régime fiscal ou la tenue de mes documents comptables dans le mois qui suit cette modification.</p>
   <p>M’engage à respecter les obligations qui me sont imposées en tant qu’adhérent d’une association exerçant une activité d’organisme mixte de gestion agréé visé par l’article 1649 quater K ter du Code général des impôts, dont je reconnais avoir pris connaissance pour la partie Association agréée visée aux articles 1649 quater F et suivants du Code général des impôts (professions libérales) et/ou pour la partie Centre de gestion agréé visée aux articles 1649 quater C et suivants du Code général des impôts (artisans, commerçants, agriculteurs), notamment&nbsp;:</p>
   <p class="rteindent1">Pour les artisans, commerçants, agriculteurs, produire une comptabilité sincère et complète de l’activité. Pour les professions libérales, se conformer aux recommandations précisées à l’article 371 Y de l’annexe 2 du Code général des impôts, notamment tenir les documents prévus à l’article 99 du Code général des impôts conformément à l’un des plans comptables professionnels agréés par le ministre de l’économie et des finances (nomenclature comptabledes professions libérales prévue par l’arrêté du 30 janvier 1978).</p>
@@ -709,7 +690,7 @@ function get_form_infos($entity) {
   <p class="rteindent1">Déclarer les résultats et leurs annexes selon la procédure de transfert des données fiscales et comptables (TDFC). Je m’engage, à ce titre, à donner mandat à l’association si je ne télétransmets pas la déclaration de résultats et ses annexes par mes propres moyens.</p>
   <p class="rteindent1">Communiquer à l’association les déclarations de résultats et leurs annexes, ainsi que toutes les autres déclarations, documents comptables et justificatifs sollicités dans le cadre des analyses et contrôles réalisés par l’association.</p>
   <p>Autorise l’association à utiliser mes données personnelles dans le strict cadre et pour la seule réalisation de l’activité d’organisme mixte de gestion agréé, en ce compris la transmission d’informations particulières et générales sur l’activité et l’actualité de l’association, et à utiliser et transmettre de manière purement anonyme mes données professionnelles aux fins de réalisation d’études statistiques ou économiques.</p>
-  <p>Accuse réception de l’<a href="/fichiers">annexe au bulletin d’adhésion et de l’affiche</a> qui l’accompagne relatifs à l’acceptation des paiements par chèque ou par carte bancaire.</p>
+  <p>Accuse réception de l’annexe au bulletin d’adhésion et de l’affiche qui l’accompagne relatifs à l’acceptation des paiements par chèque ou par carte bancaire.</p>
   <p><strong>En cas d\'adhésion en ligne, règle par carte bancaire la cotisation annuelle de l’association, condition de mon adhésion en ligne</strong>.</p>
   <h3>Informations diverses</h3>
   <h4>Extraits du BOFiP BOI-DJC-OA-20-10-20-10, n° 110</h4>
