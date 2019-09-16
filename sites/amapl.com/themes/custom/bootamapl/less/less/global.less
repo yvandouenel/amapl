@@ -65,10 +65,13 @@ img {
 }
 .field-name-body {
   .link-button {
-    font-size: 1.5em;
-    padding-top: 25px;
+    @media screen and (min-width: @screen-md) {
+      font-size: 1.5em;
+      padding-top: 25px;
+    }
   }
 }
+
 .link-button {
   display: block;
   color: white;

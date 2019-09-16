@@ -7586,9 +7586,11 @@ img {
 .rtecenter a {
   margin: 20px auto !important;
 }
-.field-name-body .link-button {
-  font-size: 1.5em;
-  padding-top: 25px;
+@media screen and (min-width: 992px) {
+  .field-name-body .link-button {
+    font-size: 1.5em;
+    padding-top: 25px;
+  }
 }
 .link-button {
   display: block;
