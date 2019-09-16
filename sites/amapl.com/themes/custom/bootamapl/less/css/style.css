@@ -7942,6 +7942,11 @@ h2.complex-title {
   top: 0;
   left: -25px;
 }
+@media screen and (max-width: 992px) {
+  .title-drop-down.title-pl-drop-down {
+    padding-right: 32px;
+  }
+}
 .title-drop-down.title-pl-drop-down:after {
   content: "";
   width: 10px;
