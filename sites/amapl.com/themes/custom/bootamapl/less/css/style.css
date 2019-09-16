@@ -8981,10 +8981,8 @@ body.not-front #under-main-title h2.page-header.simple-title {
   }
 }
 /* Fin de page de liste d'actualités */
-@media screen and (min-width: 992px) {
-  .node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols #page-col-right a.pdf {
-    background: url(../images/picto-pdf-orange.png) no-repeat 0 0;
-  }
+.node-type-page .paragraphs-item-titre-et-paragraphe > div.wrapper-cols #page-col-right a.pdf {
+  background: url(../images/picto-pdf-orange.png) no-repeat 0 0;
 }
 /* page de liste des formations *************************/
 .page-formations {
