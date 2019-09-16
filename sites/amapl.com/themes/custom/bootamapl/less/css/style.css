@@ -7592,6 +7592,11 @@ img {
     padding-top: 25px;
   }
 }
+@media screen and (max-width: 992px) {
+  .field-name-body .link-button {
+    font-size: 0.9em;
+  }
+}
 .link-button {
   display: block;
   color: white;
