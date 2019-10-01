@@ -7762,6 +7762,9 @@ a.link-ok:hover:after {
   display: block;
   clear: both;
 }
+.paragraphs-item-drop-down-para-orange a.pdf {
+  background: url(../images/picto-pdf-orange.png) no-repeat 10px 0;
+}
 a.pdf,
 a.xls {
   display: block;
