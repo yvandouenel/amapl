@@ -62,7 +62,7 @@ function atterrissage_aga_user_logout($account) {
         $goto = ('http://www.agaprofil.fr');
         break;
       case 'AGCS':
-        $goto = ('http://www.agcs-aga.com');
+        $goto = ('https://www.agcs-omga.fr');
         break;
       case 'AMAPL':
         $goto = ('http://www.amapl.com');
