@@ -335,11 +335,7 @@ function feature_news_field_default_field_instances() {
   // Exported field_instance: 'node-news-field_news_image'.
   $field_instances['node-news-field_news_image'] = array(
     'bundle' => 'news',
-    'default_value' => array(
-      0 => array(
-        'sid' => 221,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
