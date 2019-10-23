@@ -228,7 +228,7 @@
        Calcul global du prix de la cotisation
        */
       function calculatePrice() {
-        console.log("dans calculatePrice");
+        console.log("dans calculatePrice caa");
         // calcul de l'année de début de l'exercice comptable
         let begin_date = $(
           "#edit-field-date-du-und-0-value-datepicker-popup-0"
@@ -272,14 +272,22 @@
         } else if (
         /* si date de début d’exercice comptable (begin_fiscal_year) égale à 2019 et année
         de début d’activité égales à 2019 et entreprise individuelle et première adhésion → 99€.  */
-          begin_fiscal_year == this_year &&
-          begin_activity_year == this_year &&
+          ((begin_fiscal_year == this_year && begin_activity_year == this_year) ||
+          begin_fiscal_year == this_year + 1 && begin_activity_year == this_year + 1) &&
           individual_company == true &&
           first_membership == true
         ) {
           price = (99 / 1.2).toFixed(10);
-        } else {
+          console.log("cas 1");
+        } else if (begin_activity_year <= 2019 && begin_fiscal_year < 2020){
           price = (247 / 1.2).toFixed(10);
+          console.log("cas 2");
+        } else if (begin_fiscal_year == 2020){
+          price = (248 / 1.2).toFixed(10);
+          console.log("cas 3");
+        } else {
+          console.log("cas 4");
+          console.log("Begin activity year :", begin_activity_year);
         }
 
         // Changement du prix dans le champ "Payment form"
