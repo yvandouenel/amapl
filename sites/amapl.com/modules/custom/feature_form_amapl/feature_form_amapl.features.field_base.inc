@@ -789,6 +789,7 @@ function feature_form_amapl_field_default_field_bases() {
         2017 => 2017,
         2018 => 2018,
         2019 => 2019,
+        2020 => 2020,
       ),
       'allowed_values_function' => '',
     ),
