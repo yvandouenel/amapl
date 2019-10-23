@@ -1,6 +1,7 @@
 (function ($) {
   Drupal.behaviors.feature_form_amapl = {
     attach: function (context, settings) {
+      console.log("dans feature_form_amapl.js");
       var price,
         begin_activity_year,
         year_income,
@@ -99,7 +100,6 @@
       // micro-bnc ou autoentrepreneur
       $("#edit-field-micro-autoentrepreneur-und").change(function () {
         calculatePrice();
-
       });
       // Changement de statut
       $("#edit-field-forme-juridique-und input").change(function () {
@@ -259,8 +259,10 @@
        Calcul global du prix de la cotisation
        */
       function calculatePrice() {
+        console.log("dans calculatePrice");
 
         autoentrepreneur = $("#edit-field-micro-autoentrepreneur-und").is(":checked") ? true : false;
+        console.log("autoentrepreneur : " + autoentrepreneur);
         first_adhesion = $("#edit-field-type-adhesion-und-premire-adhsion-une-association-agre").is(":checked") ? true : false;
 
         // Année de début d'activité
@@ -268,7 +270,7 @@
           $("#edit-field-date-debut-und-0-value-datepicker-popup-0").val().length == 10) {
           begin_activity_year = $("#edit-field-date-debut-und-0-value-datepicker-popup-0").val().substr($("#edit-field-date-debut-und-0-value-datepicker-popup-0").val().length - 4);
         } else begin_activity_year = undefined;
-
+        console.log("Année de début d'activité : " + begin_activity_year);
         // Année des revenus
         if ($("#edit-field-pour-les-revenus-und").val() == "2017") {
           year_income = 2017;
@@ -279,27 +281,36 @@
         else if ($("#edit-field-pour-les-revenus-und").val() == "2019") {
           year_income = 2019;
         }
+        else if ($("#edit-field-pour-les-revenus-und").val() == "2020") {
+          year_income = 2020;
+        }
         else year_income = undefined;
-
-        // Micro BNC ou première adhésion avec une création d'activité en 2017
+        console.log("Année des revenus : " + year_income);
+        // Micro BNC ou première adhésion avec une création d'activité la même année
         if (autoentrepreneur ||
           (($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2017 && begin_activity_year == 2017 && first_adhesion)
             || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2018 && begin_activity_year == 2018 && first_adhesion))
-          || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2019 && begin_activity_year == 2019 && first_adhesion)) {
+          || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2019 && begin_activity_year == 2019 && first_adhesion)
+          || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2020 && begin_activity_year == 2020 && first_adhesion)) {
           if (year_income == 2017) price = "82.5";//80.833333333
           else if (year_income == 2018) price = "82.5";
           else if (year_income == 2019) price = "82.5";
+          else if (year_income == 2020) price = "82.5";
         }
 
         else if (societe_unipersonnelle) {
           if (year_income == 2017) price = "165";//162.5
           else if (year_income == 2018) price = "165";
           else if (year_income == 2019) price = "165";
+          else if (year_income == 2020) price = "165.833333333";
         }
         else if (societe || (other_form && $("#edit-field-nombre-associes-und-0-value").val() > 1)) {
+          console.log("choix année", year_income);
+
           if (year_income == 2017) price = "265";//260
           else if (year_income == 2018) price = "265";
           else if (year_income == 2019) price = "265";
+          else if (year_income == 2020) price = "265.833333333";
         }
         else if (no_juridic_form) {
           price = null;
@@ -308,6 +319,7 @@
           if (year_income == 2017) price = "165";//162.5
           else if (year_income == 2018) price = "165";
           else if (year_income == 2019) price = "165";
+          else if (year_income == 2020) price = "165.833333333";
         }
         if (price !== null && price !== undefined) {
           //console.log("Prix dans le if : " + price);
