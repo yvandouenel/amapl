@@ -95,6 +95,11 @@ function amapl_trainings_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_session_dates' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
   );
   $export['node|training_session|colorbox'] = $ds_fieldsetting;
 

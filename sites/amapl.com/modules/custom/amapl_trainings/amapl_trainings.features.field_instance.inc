@@ -2933,7 +2933,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'label' => 'above',
         'module' => 'date',
         'settings' => array(
-          'format_type' => 'news_long',
+          'format_type' => 'medium',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
