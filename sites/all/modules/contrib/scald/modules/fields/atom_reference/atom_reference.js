@@ -5,15 +5,16 @@
 (function($) {
 
   var $edit_link_model = $('<a target="_blank">')
-    .html(Drupal.t('Edit'))
     .addClass('ctools-use-modal ctools-modal-custom-style atom-reference-edit');
   var $view_link_model = $('<a target="_blank">')
-    .html(Drupal.t('View'))
     .addClass('atom-reference-view');
 
 Drupal.behaviors.atom_reference = {
   attach: function(context, settings) {
     var this_behavior_attach = this;
+
+    $edit_link_model.html(Drupal.t('Edit'));
+    $view_link_model.html(Drupal.t('View'));
 
     // Record if the edit target link modal frame is updated
     $('.ctools-modal-content form', context).bind('formUpdated', function() {
@@ -48,7 +49,7 @@ Drupal.behaviors.atom_reference = {
       // Build operations (remove reference, edit and view) structure.
       var $operation_wrapper = $('<div class="atom_reference_operations">');
       var $operation_buttons = $('<div id="ctools-button-0" class="buttons ctools-no-js ctools-button">')
-        .append('<div class="ctools-link"><a href="#" class="ctools-twisty ctools-text">' + Drupal.t('Operation') + '</a></div>')
+        .append('<div class="ctools-link"><a href="#" class="ctools-twisty ctools-text"><span class="element-invisible">' + Drupal.t('Operation') + '</span></a></div>')
         .append('<div class="ctools-content"><ul><li class="remove"><li class="edit"><li class="view"></ul></div>')
         .prependTo($operation_wrapper);
 
@@ -84,7 +85,7 @@ Drupal.behaviors.atom_reference = {
             // Permission granted for edit
 
             $edit_link_model.clone()
-              .attr('href', settings.basePath + 'atom/' + atom_id + '/edit/nojs')
+              .attr('href', settings.basePath + settings.pathPrefix + 'atom/' + atom_id + '/edit/nojs')
               .appendTo($operation_buttons.find('li.edit'));
             Drupal.behaviors.ZZCToolsModal.attach($operation_buttons);
             $operation_buttons.addClass('ctools-dropbutton');
@@ -95,7 +96,7 @@ Drupal.behaviors.atom_reference = {
             // Permission granted for view
 
             $view_link_model.clone()
-              .attr('href', settings.basePath + 'atom/' + atom_id)
+              .attr('href', settings.basePath + settings.pathPrefix + 'atom/' + atom_id)
               .appendTo($operation_buttons.find('li.view'));
             $operation_buttons.addClass('ctools-dropbutton');
           }
@@ -156,7 +157,7 @@ Drupal.behaviors.atom_reference = {
               if ($.grep(Drupal.dnd.Atoms[resource_id].actions, function(e){ return e == 'edit'; }).length > 0) {
                 // Permission granted for edit
 
-                var atom_edit_link = Drupal.settings.basePath + 'atom/' + resource_id + '/edit/nojs';
+                var atom_edit_link = settings.basePath + settings.pathPrefix + 'atom/' + resource_id + '/edit/nojs';
                 $edit_link_model.clone()
                   .attr('href', atom_edit_link)
                   .appendTo($operation_buttons.find('li.edit'));
@@ -168,7 +169,7 @@ Drupal.behaviors.atom_reference = {
               if ($.grep(Drupal.dnd.Atoms[resource_id].actions, function(e){ return e == 'view'; }).length > 0) {
                 // Permission granted for view
 
-                var atom_view_link = Drupal.settings.basePath + 'atom/' + resource_id;
+                var atom_view_link = settings.basePath + settings.pathPrefix + 'atom/' + resource_id;
                 $view_link_model.clone()
                   .attr('href', atom_view_link)
                   .appendTo($operation_buttons.find('li.view'));

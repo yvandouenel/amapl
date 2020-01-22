@@ -77,7 +77,7 @@ Drupal.dnd = {
     atom_ids = atom_ids.filter(Number);
 
     if (atom_ids.length) {
-      $.getJSON(Drupal.settings.basePath + 'atom/fetch/' + atom_ids.join() + '?context=' + context, function(data) {
+      $.getJSON(Drupal.settings.basePath + Drupal.settings.pathPrefix + 'atom/fetch/' + atom_ids.join() + '?context=' + context, function(data) {
         for (var atom_id in data) {
           if (Drupal.dnd.Atoms[atom_id]) {
             // Merge old data into the new return atom.
@@ -259,6 +259,7 @@ attach: function(context, settings) {
 
 renderLibrary: function(data, editor) {
   var library_wrapper = $(this);
+  var sidebarWidth = $(this).outerWidth();
 
   // Save the current status
   var dndStatus = {
@@ -280,7 +281,7 @@ renderLibrary: function(data, editor) {
   }
   library_wrapper.find('.summary .toggle').click(function() {
     // We toggle class only when animation finishes to avoid flash back.
-    scald_menu.animate({left: scald_menu.hasClass('search-on') ? '-42px' : '-256px'}, function() {
+    scald_menu.animate({left: scald_menu.hasClass('search-on') ? '-42px' : '-'+(sidebarWidth-20)+'px'}, function() {
       $(this).toggleClass('search-on');
     });
     // When display search, we certainly want to display the library, too.
@@ -290,7 +291,7 @@ renderLibrary: function(data, editor) {
   });
   library_wrapper.find('.scald-anchor').click(function() {
     // We toggle class only when animation finishes to avoid flash back.
-    library_wrapper.animate({right: library_wrapper.hasClass('library-on') ? '-276px' : '0'}, function() {
+    library_wrapper.animate({right: library_wrapper.hasClass('library-on') ? '-'+sidebarWidth+'px' : '0'}, function() {
       library_wrapper.toggleClass('library-on');
     });
   });
@@ -362,14 +363,8 @@ renderLibrary: function(data, editor) {
         return Drupal.dnd.insertAtom($(this).data('atom-id'));
       })
       .bind('dragstart', function(e) {
-        var dt = e.originalEvent.dataTransfer, id = e.target.id, $this = $(this);
-        var $img;
-        if ($this.is('img')) {
-          $img = $this;
-        }
-        else {
-          $this.find('img');
-        }
+        var dt = e.originalEvent.dataTransfer, $this = $(this);
+        var $img = $this.is('img') ? $this : $this.find('img');
         var id = $img.data('atom-id');
         dt.dropEffect = 'copy';
         dt.setData("Text", Drupal.dnd.Atoms[id].sas);
@@ -390,7 +385,7 @@ renderLibrary: function(data, editor) {
       });
   });
   // Makes pager links refresh the library instead of opening it in the browser window
-  library_wrapper.find('.pager a').click(function() {
+  library_wrapper.find('.pager a, .pagination a').click(function() {
     $.getJSON(this.href, function(data) {
       Drupal.behaviors.dndLibrary.renderLibrary.call(library_wrapper.get(0), data, $(editor));
     });
