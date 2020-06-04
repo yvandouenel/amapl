@@ -1,6 +1,9 @@
 <?php
 $title_class = (isset($node->field_session_target['und'][0]['value'])) ?
   $node->field_session_target['und'][0]['value'] : "";
+$mode = (isset($node->field_session_mode['und'][0]['taxonomy_term'])) ?
+  '<span class="mode-training-home">' . $node->field_session_mode['und'][0]['taxonomy_term']->name . '</span>'
+  : "";
 
 /**
  * @file
@@ -89,7 +92,12 @@ $title_class = (isset($node->field_session_target['und'][0]['value'])) ?
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
 
-    <h3 class="<?php print $title_class ?> h3-bottom-home"><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h3>
+    <h3 class="<?php print $title_class ?> h3-bottom-home">
+    <a href="<?php print $node_url; ?>">
+    <?php print $mode ?>
+    <?php print $title; ?>
+    </a>
+    </h3>
 
   <?php endif; ?>
   <?php print render($title_suffix); ?>

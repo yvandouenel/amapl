@@ -73,10 +73,22 @@
               @light-grey-amapl 45%,
               white 0%
             );
+            .wrapper-focus-training {
+              display: flex;
+              justify-content: space-between;
+              position: relative;
+              top: -10px;
+              > div {
+                background-color: black;
+                padding: 3px 6px;
+                color: white;
+                border-radius: 2px;
+              }
+            }
 
             h3.title-training-list {
               position: absolute;
-              top: 20px;
+              top: 35px;
               width: 92%;
               a {
                 color: black;
@@ -168,6 +180,13 @@
           color: black;
           &:hover {
             background-color: @blue-green-amapl;
+          }
+          span.mode-training {
+            background-color: black;
+            padding: 0 5px;
+            color: white;
+            border-radius: 4px;
+            margin-left: 10px;
           }
         }
       }

@@ -8472,6 +8472,18 @@ body.not-front #under-main-title h2.page-header.simple-title {
   border-radius: 30px 8px 8px 30px;
   background-clip: padding-box;
 }
+.h3-bottom-training a .mode-training-home {
+  font-size: 1rem;
+  display: inline-block;
+  padding: 3px;
+  background-color: black;
+  color: white;
+  float: left;
+  margin-top: -20px;
+}
+.front .field-name-field-session-mode {
+  display: none;
+}
 /* titre bas zoom et actu ************************************************/
 .h3-zoom-news.pl a {
   background: url(../images/picto_actu_bleu.png) no-repeat 0 0;
@@ -8706,6 +8718,15 @@ body.not-front #under-main-title h2.page-header.simple-title {
   background-color: #6cf1b4;
   border-radius: 30px 8px 8px 30px;
   background-clip: padding-box;
+}
+.h3-bottom-home a .mode-training-home {
+  font-size: 1rem;
+  display: inline-block;
+  padding: 3px;
+  background-color: black;
+  color: white;
+  float: left;
+  margin-top: -20px;
 }
 /* 3 colonnes : training, zoom et news *********************************/
 .three-cols-home {
@@ -9070,9 +9091,21 @@ body.not-front #under-main-title h2.page-header.simple-title {
   background: -linear-gradient(top, #faf7f7 45%, #ffffff 0%);
   background: -webkit-linear-gradient(top, #faf7f7 45%, #ffffff 0%);
 }
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article .wrapper-focus-training {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -10px;
+}
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article .wrapper-focus-training > div {
+  background-color: black;
+  padding: 3px 6px;
+  color: white;
+  border-radius: 2px;
+}
 .page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article h3.title-training-list {
   position: absolute;
-  top: 20px;
+  top: 35px;
   width: 92%;
   margin-bottom: 20px;
 }
@@ -9145,6 +9178,13 @@ body.not-front #under-main-title h2.page-header.simple-title {
 }
 .node-type-training #block-system-main .field-name-field-scheduled-sessions .view-display-id-next_sessions a.colorbox-node:hover {
   background-color: #6cf1b4;
+}
+.node-type-training #block-system-main .field-name-field-scheduled-sessions .view-display-id-next_sessions a.colorbox-node span.mode-training {
+  background-color: black;
+  padding: 0 5px;
+  color: white;
+  border-radius: 4px;
+  margin-left: 10px;
 }
 .node-type-training #block-system-main ul li {
   font-size: 1em;
