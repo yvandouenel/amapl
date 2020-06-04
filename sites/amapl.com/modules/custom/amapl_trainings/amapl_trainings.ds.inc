@@ -180,6 +180,7 @@ function amapl_trainings_ds_field_settings_info() {
     'field_scheduled_sessions' => array(
       'formatter_settings' => array(
         'ft' => array(
+          'lb' => 'Inscriptions',
           'lb-col' => TRUE,
         ),
       ),
@@ -242,6 +243,13 @@ function amapl_trainings_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_training_teachers' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb-col' => TRUE,
+        ),
+      ),
+    ),
     'field_training_type' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -250,13 +258,6 @@ function amapl_trainings_ds_field_settings_info() {
       ),
     ),
     'field_training_validation' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'lb-col' => TRUE,
-        ),
-      ),
-    ),
-    'field_training_teachers' => array(
       'formatter_settings' => array(
         'ft' => array(
           'lb-col' => TRUE,

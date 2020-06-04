@@ -537,6 +537,16 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Champ: Contenu : Mode de formaion */
+  $handler->display->display_options['fields']['field_session_mode']['id'] = 'field_session_mode';
+  $handler->display->display_options['fields']['field_session_mode']['table'] = 'field_data_field_session_mode';
+  $handler->display->display_options['fields']['field_session_mode']['field'] = 'field_session_mode';
+  $handler->display->display_options['fields']['field_session_mode']['label'] = '';
+  $handler->display->display_options['fields']['field_session_mode']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_session_mode']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_session_mode']['alter']['text'] = '<span class="mode-training">[field_session_mode] </span>';
+  $handler->display->display_options['fields']['field_session_mode']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_session_mode']['type'] = 'taxonomy_term_reference_plain';
   /* Champ: Première date */
   $handler->display->display_options['fields']['field_session_dates']['id'] = 'field_session_dates';
   $handler->display->display_options['fields']['field_session_dates']['table'] = 'field_data_field_session_dates';
@@ -592,7 +602,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = 'Session débutant le [field_session_dates] [field_session_place]';
+  $handler->display->display_options['fields']['title']['alter']['text'] = 'Session débutant le [field_session_dates] [field_session_place][field_session_mode] ';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['node_in_colorbox'] = TRUE;
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
@@ -1067,6 +1077,25 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['relationships']['field_related_training_target_id']['field'] = 'field_related_training_target_id';
   $handler->display->display_options['relationships']['field_related_training_target_id']['required'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Champ: Contenu : Mode de formaion */
+  $handler->display->display_options['fields']['field_session_mode']['id'] = 'field_session_mode';
+  $handler->display->display_options['fields']['field_session_mode']['table'] = 'field_data_field_session_mode';
+  $handler->display->display_options['fields']['field_session_mode']['field'] = 'field_session_mode';
+  $handler->display->display_options['fields']['field_session_mode']['label'] = '';
+  $handler->display->display_options['fields']['field_session_mode']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_session_mode']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_session_mode']['alter']['text'] = '<div class="mode-training"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>[field_session_mode]</div>';
+  $handler->display->display_options['fields']['field_session_mode']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_session_mode']['type'] = 'taxonomy_term_reference_plain';
+  /* Champ: Contenu : Focus */
+  $handler->display->display_options['fields']['field_session_focus']['id'] = 'field_session_focus';
+  $handler->display->display_options['fields']['field_session_focus']['table'] = 'field_data_field_session_focus';
+  $handler->display->display_options['fields']['field_session_focus']['field'] = 'field_session_focus';
+  $handler->display->display_options['fields']['field_session_focus']['label'] = '';
+  $handler->display->display_options['fields']['field_session_focus']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_session_focus']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_session_focus']['alter']['text'] = '<div class="focus-training">[field_session_focus]</div>';
+  $handler->display->display_options['fields']['field_session_focus']['element_label_colon'] = FALSE;
   /* Champ: Contenu : Titre */
   $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
   $handler->display->display_options['fields']['title_1']['table'] = 'node';
@@ -1127,6 +1156,10 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['fields']['nothing']['ui_name'] = 'Rendu global';
   $handler->display->display_options['fields']['nothing']['label'] = '';
   $handler->display->display_options['fields']['nothing']['alter']['text'] = '<article class="[field_session_target]">
+<div class="wrapper-focus-training">
+[field_session_mode]
+[field_session_focus]
+</div>
 <h3 class="title-training-list">[title_1]</h3>
 <div class="bottom-fields-training-list">
 <p><label>Thématique : </label>[field_training_domain]</p>
@@ -1317,8 +1350,9 @@ function amapl_trainings_views_default_views() {
     t('Nid'),
     t('Nombre de sessions'),
     t('Prochaines sessions d\'une formation'),
+    t('<span class="mode-training">[field_session_mode] </span>'),
     t('à [field_session_place]'),
-    t('Session débutant le [field_session_dates] [field_session_place]'),
+    t('Session débutant le [field_session_dates] [field_session_place][field_session_mode] '),
     t('Modifier'),
     t('Rechercher'),
     t('Sélectionnez n\'importe quel filtre et cliquez sur Appliquer pour voir les résultats'),
@@ -1329,7 +1363,13 @@ function amapl_trainings_views_default_views() {
     t('Gratuit ?'),
     t('Sessions'),
     t('<h3>Pas de résultats pour cette requête. Veuillez modifier vos critères de recherche.</h3>'),
+    t('<div class="mode-training"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>[field_session_mode]</div>'),
+    t('<div class="focus-training">[field_session_focus]</div>'),
     t('<article class="[field_session_target]">
+<div class="wrapper-focus-training">
+[field_session_mode]
+[field_session_focus]
+</div>
 <h3 class="title-training-list">[title_1]</h3>
 <div class="bottom-fields-training-list">
 <p><label>Thématique : </label>[field_training_domain]</p>

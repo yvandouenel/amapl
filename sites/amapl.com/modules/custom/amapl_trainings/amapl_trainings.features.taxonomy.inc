@@ -32,6 +32,29 @@ function amapl_trainings_taxonomy_default_vocabularies() {
         ),
       ),
     ),
+    'mode_de_formation' => array(
+      'name' => 'Mode de formation',
+      'machine_name' => 'mode_de_formation',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'taxonomy',
+      'weight' => 0,
+      'rdf_mapping' => array(
+        'rdftype' => array(
+          0 => 'skos:ConceptScheme',
+        ),
+        'name' => array(
+          'predicates' => array(
+            0 => 'dc:title',
+          ),
+        ),
+        'description' => array(
+          'predicates' => array(
+            0 => 'rdfs:comment',
+          ),
+        ),
+      ),
+    ),
     'target_groups' => array(
       'name' => 'Cibles',
       'machine_name' => 'target_groups',
