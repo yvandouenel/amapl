@@ -95,11 +95,6 @@ function amapl_trainings_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_session_dates' => array(
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
   );
   $export['node|training_session|colorbox'] = $ds_fieldsetting;
 
@@ -656,24 +651,30 @@ function amapl_trainings_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'title',
-        1 => 'group_first_row',
-        2 => 'group_second_row',
-        3 => 'field_session_registration',
-        4 => 'field_session_place',
+        1 => 'group_focus',
+        2 => 'field_session_focus',
+        3 => 'field_session_place',
+        4 => 'field_session_mode',
         5 => 'field_session_trainer',
-        6 => 'field_session_dates',
-        7 => 'field_related_training',
+        6 => 'group_first_row',
+        7 => 'field_session_dates',
+        8 => 'group_second_row',
+        9 => 'field_related_training',
+        10 => 'field_session_registration',
       ),
     ),
     'fields' => array(
       'title' => 'ds_content',
-      'group_first_row' => 'ds_content',
-      'group_second_row' => 'ds_content',
-      'field_session_registration' => 'ds_content',
+      'group_focus' => 'ds_content',
+      'field_session_focus' => 'ds_content',
       'field_session_place' => 'ds_content',
+      'field_session_mode' => 'ds_content',
       'field_session_trainer' => 'ds_content',
+      'group_first_row' => 'ds_content',
       'field_session_dates' => 'ds_content',
+      'group_second_row' => 'ds_content',
       'field_related_training' => 'ds_content',
+      'field_session_registration' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

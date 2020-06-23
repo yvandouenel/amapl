@@ -128,6 +128,7 @@ features[field_base][] = field_training_teachers
 features[field_base][] = field_training_type
 features[field_base][] = field_training_validation
 features[field_group][] = group_first_row|node|training_session|colorbox
+features[field_group][] = group_focus|node|training_session|colorbox
 features[field_group][] = group_second_row|node|training_session|colorbox
 features[field_instance][] = node-traineur-body
 features[field_instance][] = node-traineur-field_trainer_cv

@@ -21,7 +21,7 @@ function amapl_trainings_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'group première ligne',
-    'weight' => '1',
+    'weight' => '4',
     'children' => array(
       0 => 'field_session_dates',
       1 => 'field_session_place',
@@ -46,6 +46,39 @@ function amapl_trainings_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_focus|node|training_session|colorbox';
+  $field_group->group_name = 'group_focus';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'training_session';
+  $field_group->mode = 'colorbox';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Focus',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_session_focus',
+      1 => 'field_session_mode',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Focus',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-focus field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_focus|node|training_session|colorbox'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_second_row|node|training_session|colorbox';
   $field_group->group_name = 'group_second_row';
   $field_group->entity_type = 'node';
@@ -54,7 +87,7 @@ function amapl_trainings_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'group deuxième ligne',
-    'weight' => '2',
+    'weight' => '5',
     'children' => array(
       0 => 'field_related_training',
       1 => 'field_session_trainer',
@@ -78,6 +111,7 @@ function amapl_trainings_field_group_info() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Focus');
   t('group deuxième ligne');
   t('group première ligne');
 
