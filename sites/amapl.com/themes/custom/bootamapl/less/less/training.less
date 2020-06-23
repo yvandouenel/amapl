@@ -77,12 +77,13 @@
               display: flex;
               justify-content: space-between;
               position: relative;
-              top: -10px;
-              > div {
-                background-color: black;
-                padding: 3px 6px;
-                color: white;
-                border-radius: 2px;
+              top: -40px;
+              > .mode-training {
+                .box-black();
+                z-index: 2;
+              }
+              > .focus-training {
+                .box-red();
               }
             }
 

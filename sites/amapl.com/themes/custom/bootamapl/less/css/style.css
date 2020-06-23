@@ -9299,13 +9299,22 @@ body.not-front #under-main-title h2.page-header.simple-title {
   display: flex;
   justify-content: space-between;
   position: relative;
-  top: -10px;
+  top: -40px;
 }
-.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article .wrapper-focus-training > div {
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article .wrapper-focus-training > .mode-training {
   background-color: black;
-  padding: 3px 6px;
+  padding: 0 5px;
   color: white;
-  border-radius: 2px;
+  border-radius: 4px;
+  margin-right: 10px;
+  z-index: 2;
+}
+.page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article .wrapper-focus-training > .focus-training {
+  background-color: #c14747;
+  padding: 0 5px;
+  color: white;
+  border-radius: 4px;
+  margin-right: 10px;
 }
 .page-formations #views-bootstrap-grid-1 > .row .views-field span.field-content article h3.title-training-list {
   position: absolute;
