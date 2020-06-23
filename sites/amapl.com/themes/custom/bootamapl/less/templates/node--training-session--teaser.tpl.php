@@ -1,13 +1,13 @@
 <?php
 $title_class = (isset($node->field_session_target['und'][0]['value'])) ?
 $node->field_session_target['und'][0]['value'] : "";
+//dpm($node->field_session_mode['und'][0]['taxonomy_term']);
 $mode = (isset($node->field_session_mode['und'][0]['taxonomy_term'])) ?
   '<span class="mode-training-home">' . $node->field_session_mode['und'][0]['taxonomy_term']->name . '</span>'
   : "";
 $focus = (isset($node->field_session_focus['und'][0]['value'])) ?
-  '<span class="mode-training-home">' . $node->field_session_focus['und'][0]['value'] . '</span>'
-  : "";
-
+  '<span class="focus-training-home">' . $node->field_session_focus['und'][0]['value'] . '</span>': '';
+//dpm($node);
 /**
  * @file
  * Default theme implementation to display a node.
@@ -96,9 +96,11 @@ $focus = (isset($node->field_session_focus['und'][0]['value'])) ?
   <?php if (!$page): ?>
 
     <h3 class="<?php print $title_class ?> h3-bottom-home">
-    <a href="<?php print $node_url; ?>">
-    <?php print $focus ?><?php print $mode ?>
-    <?php print $title; ?>
+    <a href="<?php print $node_url; ?>" >
+      <div class="focus-mode-home-training">
+        <?php print $focus ?><?php print $mode ?>
+      </div>
+      <?php print $title; ?>
     </a>
     </h3>
 
