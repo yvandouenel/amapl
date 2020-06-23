@@ -182,11 +182,10 @@
             background-color: @blue-green-amapl;
           }
           span.mode-training {
-            background-color: black;
-            padding: 0 5px;
-            color: white;
-            border-radius: 4px;
-            margin-left: 10px;
+            .box-black();
+          }
+          span.focus-training {
+            .box-red();
           }
         }
       }
@@ -229,6 +228,15 @@
 /* fin page formation ***************************************/
 /* colorbox *************************************************/
 #cboxLoadedContent {
+  .group-focus {
+    display: flex;
+    .field-name-field-session-focus {
+      .box-red();
+    }
+    .taxonomy-term a {
+      .box-black();
+    }
+  }
   padding: 20px;
   .field-label,
   .label-above {

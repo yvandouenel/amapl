@@ -26,6 +26,21 @@ img {
     top: 0;
     left: -25px;
   }
+
+}
+.box-red {
+  background-color: #c14747;
+  padding: 0 5px;
+  color: white;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.box-black {
+  background-color: black;
+  padding: 0 5px;
+  color: white;
+  border-radius: 4px;
+  margin-right: 10px;
 }
 /* responsive ************************************************/
 @media screen and (min-width: @screen-xl) {
@@ -212,7 +227,6 @@ a.link-ok {
     float: left;
     a.pdf {
       background: url(../images/picto-pdf-orange.png) no-repeat 10px 0;
-
     }
   }
   &:after {
@@ -246,7 +260,8 @@ a.link-ok {
     background: url(../images/picto-pdf-orange.png) no-repeat 10px 0;
   }
 }
-a.pdf, a.xls {
+a.pdf,
+a.xls {
   display: block;
   margin: 15px 0;
   vertical-align: middle;
@@ -263,11 +278,13 @@ a.xls {
 .page-fichiers,
 .entity-paragraphs-item,
 .field-item > .dnd-atom-wrapper {
-  a.pdf, a.xls {
+  a.pdf,
+  a.xls {
     font-size: 1.5em;
   }
   &.paragraphs-item-titre-et-paragraphe {
-    a.pdf, a.xls {
+    a.pdf,
+    a.xls {
       font-size: 1em !important;
     }
   }

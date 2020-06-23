@@ -52,15 +52,24 @@
       background-color: @blue-green-amapl;
       .rounded(30px 8px 8px 30px);
     }
-    .mode-training-home{
-      font-size: 1rem;
-      display: inline-block;
-      padding: 3px;
-      background-color: black;
-      color: white;
-      float: left;
-      margin-top: -20px;
+    .focus-mode-home-training {
+      display: flex;
+      > .mode-training-home{
+        font-size: 1rem;
+        padding: 5px 10px;
+        background-color: black;
+        color: white;
+        margin: 0 20px 0 0;
+      }
+      > .focus-training-home{
+        font-size: 1rem;
+        padding: 5px 10px;
+        background-color: #C14747;
+        color: white;
+        margin: 0 20px 0 0;
+      }
     }
+    
   }
 }
 .front {
