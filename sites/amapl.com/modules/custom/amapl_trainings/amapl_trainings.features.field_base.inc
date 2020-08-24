@@ -98,6 +98,31 @@ function amapl_trainings_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
+  // Exported field_base: 'field_amapl_form_presen_distan'.
+  $field_bases['field_amapl_form_presen_distan'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_amapl_form_presen_distan',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'presence' => 'Présentiel',
+        'distance' => 'Distanciel',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_amapl_form_rules'.
   $field_bases['field_amapl_form_rules'] = array(
     'active' => 1,

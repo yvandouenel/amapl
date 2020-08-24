@@ -3010,61 +3010,6 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
     ),
   );
 
-  // Exported field_instance:
-  // 'node-training_session-field_session_disance_presence'.
-  $field_instances['node-training_session-field_session_disance_presence'] = array(
-    'bundle' => 'training_session',
-    'default_value' => array(
-      0 => array(
-        'value' => 'presence',
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'colorbox' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 16,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_session_disance_presence',
-    'label' => 'Si cette formation est dispensée en présentiel et distanciel, optez-vous pour :',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 3,
-    ),
-  );
-
   // Exported field_instance: 'node-training_session-field_session_duration'.
   $field_instances['node-training_session-field_session_duration'] = array(
     'bundle' => 'training_session',
@@ -3719,7 +3664,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -3758,7 +3703,44 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 8,
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'registration-inscription_amapl-field_amapl_form_presen_distan'.
+  $field_instances['registration-inscription_amapl-field_amapl_form_presen_distan'] = array(
+    'bundle' => 'inscription_amapl',
+    'default_value' => array(
+      0 => array(
+        'value' => 'presence',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 6,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'registration',
+    'field_name' => 'field_amapl_form_presen_distan',
+    'label' => 'Si cette formation est dispensée en présentiel et distanciel, optez-vous pour :',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 4,
     ),
   );
 
@@ -3797,7 +3779,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 

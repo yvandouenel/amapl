@@ -374,13 +374,13 @@ function amapl_trainings_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'who_is_registering' => array(
-          'weight' => '4',
+          'weight' => '5',
         ),
         'anon_mail' => array(
           'weight' => '3',
         ),
         'redirect' => array(
-          'weight' => '6',
+          'weight' => '7',
         ),
       ),
       'display' => array(),
