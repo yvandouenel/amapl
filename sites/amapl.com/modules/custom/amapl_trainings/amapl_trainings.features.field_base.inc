@@ -335,6 +335,31 @@ function amapl_trainings_field_default_field_bases() {
     'type' => 'date',
   );
 
+  // Exported field_base: 'field_session_disance_presence'.
+  $field_bases['field_session_disance_presence'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_session_disance_presence',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'presence' => 'Présentiel',
+        'distance' => 'Distanciel',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_session_duration'.
   $field_bases['field_session_duration'] = array(
     'active' => 1,

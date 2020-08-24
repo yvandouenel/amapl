@@ -2707,7 +2707,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -2769,7 +2769,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'label_help_description' => '',
       ),
       'type' => 'options_buttons',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -2919,7 +2919,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
@@ -3006,7 +3006,62 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'yearRange' => '-3:+3',
       ),
       'type' => 'date_multiselect',
-      'weight' => 5,
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-training_session-field_session_disance_presence'.
+  $field_instances['node-training_session-field_session_disance_presence'] = array(
+    'bundle' => 'training_session',
+    'default_value' => array(
+      0 => array(
+        'value' => 'presence',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'colorbox' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 16,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_session_disance_presence',
+    'label' => 'Si cette formation est dispensée en présentiel et distanciel, optez-vous pour :',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 3,
     ),
   );
 
@@ -3070,7 +3125,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'show_token_tree' => 0,
       ),
       'type' => 'text_textarea',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -3129,7 +3184,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -3263,7 +3318,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -3352,7 +3407,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
       'module' => 'registration',
       'settings' => array(),
       'type' => 'registration_select',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -3408,7 +3463,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -3469,7 +3524,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 16,
+      'weight' => 17,
     ),
   );
 
@@ -3541,7 +3596,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -3831,6 +3886,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Session financée par amapl Structure');
   t('Sessions liées');
   t('Sessions programmées et inscription');
+  t('Si cette formation est dispensée en présentiel et distanciel, optez-vous pour :');
   t('Si les horaires et la durée sont différents en fonction de chaque session, il est nécessaire de l\'indiquer ici avec un message type : "La formation dure entre 3 et 6h et se déroule le matin ou l\'après-midi en fonction de la session choisie. Vérifiez l\'information exacte en cliquant sur la session de votre choix."
 Si les horaires et la durée ne sont pas différents en fonction de la session, il seront automatiquement repris à la création de la session si vous laissez le champ horaires et durée vide lors de la création de la session."');
   t('Si vous laissez vide ce champ, il prendra automatiquement la valeur du champ "horaires et durée" de la formation correspondante. Attention, si ce champ évolue, la synchronisation ne se fera pas. Il vous faudra donc entrer vous même les horaires et la durée pour chaque session de la formation concernée.');
