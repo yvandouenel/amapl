@@ -3647,7 +3647,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
     'entity_type' => 'registration',
     'field_name' => 'field_amapl_form_member',
     'label' => 'Num. adhérent AMAPL',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
