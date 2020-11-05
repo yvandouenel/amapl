@@ -77,6 +77,7 @@ function amapl_trainings_user_default_permissions() {
   $permissions['create training content'] = array(
     'name' => 'create training content',
     'roles' => array(
+      'contrib formation' => 'contrib formation',
       'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
@@ -87,6 +88,7 @@ function amapl_trainings_user_default_permissions() {
   $permissions['create training_session content'] = array(
     'name' => 'create training_session content',
     'roles' => array(
+      'contrib formation' => 'contrib formation',
       'contributeur' => 'contributeur',
     ),
     'module' => 'node',
@@ -131,6 +133,7 @@ function amapl_trainings_user_default_permissions() {
   $permissions['delete own training content'] = array(
     'name' => 'delete own training content',
     'roles' => array(
+      'contrib formation' => 'contrib formation',
       'contributeur' => 'contributeur',
     ),
     'module' => 'node',
@@ -140,6 +143,7 @@ function amapl_trainings_user_default_permissions() {
   $permissions['delete own training_session content'] = array(
     'name' => 'delete own training_session content',
     'roles' => array(
+      'contrib formation' => 'contrib formation',
       'contributeur' => 'contributeur',
     ),
     'module' => 'node',
@@ -158,6 +162,7 @@ function amapl_trainings_user_default_permissions() {
   $permissions['edit any training content'] = array(
     'name' => 'edit any training content',
     'roles' => array(
+      'contrib formation' => 'contrib formation',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -166,7 +171,9 @@ function amapl_trainings_user_default_permissions() {
   // Exported permission: 'edit any training_session content'.
   $permissions['edit any training_session content'] = array(
     'name' => 'edit any training_session content',
-    'roles' => array(),
+    'roles' => array(
+      'contrib formation' => 'contrib formation',
+    ),
     'module' => 'node',
   );
 
@@ -183,6 +190,7 @@ function amapl_trainings_user_default_permissions() {
   $permissions['edit own training content'] = array(
     'name' => 'edit own training content',
     'roles' => array(
+      'contrib formation' => 'contrib formation',
       'contributeur' => 'contributeur',
     ),
     'module' => 'node',
@@ -192,6 +200,7 @@ function amapl_trainings_user_default_permissions() {
   $permissions['edit own training_session content'] = array(
     'name' => 'edit own training_session content',
     'roles' => array(
+      'contrib formation' => 'contrib formation',
       'contributeur' => 'contributeur',
     ),
     'module' => 'node',

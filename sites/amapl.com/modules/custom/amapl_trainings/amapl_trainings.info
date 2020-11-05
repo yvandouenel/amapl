@@ -222,6 +222,7 @@ features[user_permission][] = update any inscription_amapl registration
 features[user_permission][] = update own inscription_amapl registration
 features[user_permission][] = view inscription_amapl registration
 features[user_permission][] = view own inscription_amapl registration
+features[user_role][] = contrib formation
 features[variable][] = comment_anonymous_traineur
 features[variable][] = comment_anonymous_training_session
 features[variable][] = comment_default_mode_traineur
