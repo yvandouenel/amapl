@@ -269,7 +269,7 @@ function amapl_trainings_entity_view_alter(&$build, $type)
                 }
             }
             global $user;
-            if (in_array('webmaster', $user->roles) ||  in_array('contrib formation', $user->roles)) {
+            if (in_array('webmaster', $user->roles) ||  in_array('contrib formation', $user->roles) ||  in_array('administrator', $user->roles)) {
                 // On récupère l'info Formation financée par la structure
                 $funded = '/0';
                 if (isset($build['#node']->field_amapl_funded['und'][0]['value'])) {
