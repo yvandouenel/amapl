@@ -531,7 +531,11 @@ function feature_form_amapl_field_default_field_instances() {
   // 'entityform-inscription_amapl-field_choix_antenne'.
   $field_instances['entityform-inscription_amapl-field_choix_antenne'] = array(
     'bundle' => 'inscription_amapl',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'Nîmes',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1929,7 +1933,11 @@ function feature_form_amapl_field_default_field_instances() {
   // 'entityform-inscription_amapl_caa-field_choix_antenne'.
   $field_instances['entityform-inscription_amapl_caa-field_choix_antenne'] = array(
     'bundle' => 'inscription_amapl_caa',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 'Nîmes',
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(

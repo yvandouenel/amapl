@@ -33,12 +33,7 @@
 
       var this_year = new Date().getFullYear();
 
-      // gestion initiale des champs
-      formeJuridique();
-      calculatePrice();
-      manageFields();
-      manageYears();
-      newSubmission();
+
 
       $("#edit-field-prix-und-0-value").prop("readonly", true);
 
@@ -49,6 +44,18 @@
       $('select#edit-field-pour-les-revenus-und option:contains("2017")').hide();
       // Effacer l'année 2018
       $('select#edit-field-pour-les-revenus-und option:contains("2018")').hide();
+      // Effacer l'année 2019
+      $('select#edit-field-pour-les-revenus-und option:contains("2019")').hide();
+      $('select#edit-field-pour-les-revenus-und option').removeAttr('selected');
+      $('select#edit-field-pour-les-revenus-und option:last').attr('selected','selected');
+
+      // gestion initiale des champs
+      formeJuridique();
+      calculatePrice();
+      manageFields();
+      manageYears();
+      newSubmission();
+
 
       /* Gestion des infobulles ***************************************************************************************/
       $(".form-item .description").each(function () {
@@ -248,6 +255,7 @@
           $('#inscription-amapl-entityform-edit-form').trigger("reset");
           $('#inscription-amapl-entityform-edit-form').find('input:text, input:password, select, textarea').val('');
           $('#inscription-amapl-entityform-edit-form').find('input:radio, input:checkbox').prop('checked', false);
+          $('select#edit-field-pour-les-revenus-und option:last').attr('selected','selected');
           $('#edit-field-paiement-und-line-item-container-0-quantity').val(1);
           $('#edit-field-paiement-und-line-item-container-0-tax-rate').val(20);
           $('#edit-field-paiement-und-line-item-container-0-name').val(nomsystem);
@@ -284,6 +292,9 @@
         else if ($("#edit-field-pour-les-revenus-und").val() == "2020") {
           year_income = 2020;
         }
+        else if ($("#edit-field-pour-les-revenus-und").val() == "2021") {
+          year_income = 2021;
+        }
         else year_income = undefined;
         console.log("Année des revenus : " + year_income);
         // Micro BNC ou première adhésion avec une création d'activité la même année
@@ -291,11 +302,13 @@
           (($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2017 && begin_activity_year == 2017 && first_adhesion)
             || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2018 && begin_activity_year == 2018 && first_adhesion))
           || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2019 && begin_activity_year == 2019 && first_adhesion)
-          || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2020 && begin_activity_year == 2020 && first_adhesion)) {
+          || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2020 && begin_activity_year == 2020 && first_adhesion)
+          || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2021 && begin_activity_year == 2021 && first_adhesion)) {
           if (year_income == 2017) price = "82.5";//80.833333333
           else if (year_income == 2018) price = "82.5";
           else if (year_income == 2019) price = "82.5";
           else if (year_income == 2020) price = "82.5";
+          else if (year_income == 2021) price = "82.5";
         }
 
         else if (societe_unipersonnelle) {
@@ -303,6 +316,7 @@
           else if (year_income == 2018) price = "165";
           else if (year_income == 2019) price = "165";
           else if (year_income == 2020) price = "165.833333333";
+          else if (year_income == 2021) price = "165.833333333";
         }
         else if (societe || (other_form && $("#edit-field-nombre-associes-und-0-value").val() > 1)) {
           console.log("choix année", year_income);
@@ -311,6 +325,7 @@
           else if (year_income == 2018) price = "265";
           else if (year_income == 2019) price = "265";
           else if (year_income == 2020) price = "265.833333333";
+          else if (year_income == 2021) price = "265.833333333";
         }
         else if (no_juridic_form) {
           price = null;
@@ -320,6 +335,7 @@
           else if (year_income == 2018) price = "165";
           else if (year_income == 2019) price = "165";
           else if (year_income == 2020) price = "165.833333333";
+          else if (year_income == 2021) price = "165.833333333";
         }
         if (price !== null && price !== undefined) {
           //console.log("Prix dans le if : " + price);

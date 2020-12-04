@@ -171,7 +171,7 @@ function feature_form_amapl_caa_form_validate($form, &$form_state) {
   else if($begin_fiscal_year == 2019){
     $price = '247';
   }
-  else if($begin_fiscal_year == 2020){
+  else if($begin_fiscal_year == 2020 || $begin_fiscal_year == 2021){
     $price = '248';
   }
 
@@ -222,12 +222,17 @@ function feature_form_amapl_form_validate($form, &$form_state) {
         $form_state['values']['field_forme_juridique']['und'][0]['value'] == "EI" &&
         $year_income == 2020 && $begin_activity_year == 2020 &&
         $form_state['values']['field_type_adhesion']['und'][0]['value'] == "Première adhésion à une association agréée")
+      ||
+      (
+        $form_state['values']['field_forme_juridique']['und'][0]['value'] == "EI" &&
+        $year_income == 2021 && $begin_activity_year == 2021 &&
+        $form_state['values']['field_type_adhesion']['und'][0]['value'] == "Première adhésion à une association agréée")
     )
   ) {
     if ($year_income == 2017) {
       $price = '82.5';//'80.833333333'
     }
-    elseif($year_income == 2018 || $year_income == 2019 || $year_income == 2020) {
+    elseif($year_income == 2018 || $year_income == 2019 || $year_income == 2020 || $year_income == 2021) {
         $price = '82.5';
     }
   }
@@ -238,7 +243,7 @@ function feature_form_amapl_form_validate($form, &$form_state) {
       $price = '82.5';//'80.833333333'
     }
     else {
-      if ($year_income == 2018 || $year_income == 2019 || $year_income == 2020) {
+      if ($year_income == 2018 || $year_income == 2019 || $year_income == 2020 || $year_income == 2021) {
         $price = '82.5';
       }
     }
@@ -256,7 +261,7 @@ function feature_form_amapl_form_validate($form, &$form_state) {
       if ($year_income == 2018 || $year_income == 2019 ) {
         $price = '165';
       }
-      if ($year_income == 2020 ) {
+      if ($year_income == 2020 || $year_income == 2021) {
         $price = '165.833333333';
       }
     }
@@ -276,7 +281,7 @@ function feature_form_amapl_form_validate($form, &$form_state) {
     elseif ($year_income == 2018 || $year_income == 2019 ){
         $price = '265';
     }
-    elseif($year_income == 2020){
+    elseif($year_income == 2020 || $year_income == 2021){
         $price = '265.833333333';
     }
   }
