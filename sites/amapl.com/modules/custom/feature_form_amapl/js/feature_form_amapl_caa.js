@@ -15,6 +15,7 @@
       price = (247 / 1.2).toFixed(10);
       console.log("Premier prix : " + price);
       this_year = new Date().getFullYear();
+      console.log("this_year : " + this_year);
 
       //user identification
       var guid = function() {
@@ -282,10 +283,10 @@
         ) {
           price = (99 / 1.2).toFixed(10);
           console.log("cas 1");
-        } else if (begin_activity_year <= 2019 && begin_fiscal_year < 2020){
+        } else if ((begin_activity_year <= 2019 && begin_fiscal_year < 2020) || (begin_activity_year <= 2020 && begin_fiscal_year < 2021)){
           price = (247 / 1.2).toFixed(10);
           console.log("cas 2");
-        } else if (begin_fiscal_year == 2020){
+        } else if (begin_fiscal_year == 2020 || begin_fiscal_year == 2021){
           price = (248 / 1.2).toFixed(10);
           console.log("cas 3");
         } else {
