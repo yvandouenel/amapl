@@ -1,9 +1,7 @@
 # Ignore configuration files that may contain sensitive information.
 sites/*/settings*.php
-.htaccess
-sites/sites.php
-vigplblockhome.html
+
 # Ignore paths that contain user-generated content.
 sites/*/files
 sites/*/private
-phpinfo.php
+.idea/
