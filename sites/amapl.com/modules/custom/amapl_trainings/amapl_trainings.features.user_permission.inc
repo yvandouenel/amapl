@@ -31,7 +31,10 @@ function amapl_trainings_user_default_permissions() {
   // Exported permission: 'administer trainings'.
   $permissions['administer trainings'] = array(
     'name' => 'administer trainings',
-    'roles' => array(),
+    'roles' => array(
+      'contrib formation' => 'contrib formation',
+      'webmaster' => 'webmaster',
+    ),
     'module' => 'amapl_trainings',
   );
 
@@ -40,6 +43,7 @@ function amapl_trainings_user_default_permissions() {
     'name' => 'create inscription_amapl registration',
     'roles' => array(
       'anonymous user' => 'anonymous user',
+      'contrib formation' => 'contrib formation',
       'webmaster' => 'webmaster',
     ),
     'module' => 'registration',
@@ -107,6 +111,7 @@ function amapl_trainings_user_default_permissions() {
   $permissions['delete any training content'] = array(
     'name' => 'delete any training content',
     'roles' => array(
+      'contrib formation' => 'contrib formation',
       'webmaster' => 'webmaster',
     ),
     'module' => 'node',
@@ -124,6 +129,7 @@ function amapl_trainings_user_default_permissions() {
     'name' => 'delete own inscription_amapl registration',
     'roles' => array(
       'anonymous user' => 'anonymous user',
+      'contrib formation' => 'contrib formation',
       'webmaster' => 'webmaster',
     ),
     'module' => 'registration',
@@ -153,6 +159,7 @@ function amapl_trainings_user_default_permissions() {
   $permissions['delete terms in training_type'] = array(
     'name' => 'delete terms in training_type',
     'roles' => array(
+      'contrib formation' => 'contrib formation',
       'webmaster' => 'webmaster',
     ),
     'module' => 'taxonomy',
@@ -210,6 +217,7 @@ function amapl_trainings_user_default_permissions() {
   $permissions['edit terms in training_type'] = array(
     'name' => 'edit terms in training_type',
     'roles' => array(
+      'contrib formation' => 'contrib formation',
       'webmaster' => 'webmaster',
     ),
     'module' => 'taxonomy',
@@ -219,6 +227,7 @@ function amapl_trainings_user_default_permissions() {
   $permissions['update any inscription_amapl registration'] = array(
     'name' => 'update any inscription_amapl registration',
     'roles' => array(
+      'contrib formation' => 'contrib formation',
       'webmaster' => 'webmaster',
     ),
     'module' => 'registration',
@@ -229,6 +238,7 @@ function amapl_trainings_user_default_permissions() {
     'name' => 'update own inscription_amapl registration',
     'roles' => array(
       'anonymous user' => 'anonymous user',
+      'contrib formation' => 'contrib formation',
       'webmaster' => 'webmaster',
     ),
     'module' => 'registration',
@@ -238,6 +248,7 @@ function amapl_trainings_user_default_permissions() {
   $permissions['view inscription_amapl registration'] = array(
     'name' => 'view inscription_amapl registration',
     'roles' => array(
+      'contrib formation' => 'contrib formation',
       'contributeur' => 'contributeur',
       'webmaster' => 'webmaster',
     ),
@@ -249,6 +260,7 @@ function amapl_trainings_user_default_permissions() {
     'name' => 'view own inscription_amapl registration',
     'roles' => array(
       'anonymous user' => 'anonymous user',
+      'contrib formation' => 'contrib formation',
       'webmaster' => 'webmaster',
     ),
     'module' => 'registration',

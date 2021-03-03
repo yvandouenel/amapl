@@ -10,6 +10,264 @@
 function amapl_trainings_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'bean-intro_formation-field_label_formations'.
+  $field_instances['bean-intro_formation-field_label_formations'] = array(
+    'bundle' => 'intro_formation',
+    'default_value' => array(
+      0 => array(
+        'value' => 'Nos formations',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'markup_text_formatter',
+        'settings' => array(
+          'markup' => 'h3',
+        ),
+        'type' => 'markup_text',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'bean',
+    'field_name' => 'field_label_formations',
+    'label' => 'Label formations',
+    'required' => 1,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'bean-intro_formation-field_label_statistiques'.
+  $field_instances['bean-intro_formation-field_label_statistiques'] = array(
+    'bundle' => 'intro_formation',
+    'default_value' => array(
+      0 => array(
+        'value' => 'Statistiques 2020',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'markup_text_formatter',
+        'settings' => array(
+          'markup' => 'h3',
+        ),
+        'type' => 'markup_text',
+        'weight' => 9,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'bean',
+    'field_name' => 'field_label_statistiques',
+    'label' => 'Label statistiques',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 0,
+      'mee_enabled' => 0,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'show_token_tree' => 0,
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance: 'bean-intro_formation-field_logos_certifications'.
+  $field_instances['bean-intro_formation-field_logos_certifications'] = array(
+    'bundle' => 'intro_formation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'domainedo_media',
+        'settings' => array(
+          'link' => 0,
+        ),
+        'type' => 'full',
+        'weight' => 5,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'bean',
+    'field_name' => 'field_logos_certifications',
+    'label' => 'Logos certifications',
+    'required' => 0,
+    'settings' => array(
+      'allow_override' => 0,
+      'referencable_types' => array(
+        'audio' => 0,
+        'file' => 0,
+        'gallery' => 0,
+        'image' => 'image',
+        'twitter' => 0,
+        'video' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'atom_reference',
+      'settings' => array(
+        'context' => 'sdl_editor_representation',
+      ),
+      'type' => 'atom_reference_textfield',
+      'weight' => 36,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'bean-intro_formation-field_texte_certification_qualit'.
+  $field_instances['bean-intro_formation-field_texte_certification_qualit'] = array(
+    'bundle' => 'intro_formation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'bean',
+    'field_name' => 'field_texte_certification_qualit',
+    'label' => 'Texte certification qualité',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+        'show_token_tree' => 0,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 35,
+    ),
+  );
+
+  // Exported field_instance: 'bean-intro_formation-field_texte_formations'.
+  $field_instances['bean-intro_formation-field_texte_formations'] = array(
+    'bundle' => 'intro_formation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'bean',
+    'field_name' => 'field_texte_formations',
+    'label' => 'Texte formations',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+        'show_token_tree' => 0,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance: 'bean-intro_formation-field_texte_statistiques'.
+  $field_instances['bean-intro_formation-field_texte_statistiques'] = array(
+    'bundle' => 'intro_formation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'bean',
+    'field_name' => 'field_texte_statistiques',
+    'label' => 'Texte statistiques',
+    'required' => 0,
+    'settings' => array(
+      'context' => 'title',
+      'context_default' => 'sdl_editor_representation',
+      'dnd_enabled' => 1,
+      'mee_enabled' => 1,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+        'show_token_tree' => 0,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 34,
+    ),
+  );
+
   // Exported field_instance: 'node-traineur-body'.
   $field_instances['node-traineur-body'] = array(
     'bundle' => 'traineur',
@@ -3850,7 +4108,10 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Horaires et durée');
   t('Inscription');
   t('Introduction');
+  t('Label formations');
+  t('Label statistiques');
   t('Lieu court');
+  t('Logos certifications');
   t('L’inscription du stagiaire ne sera définitive qu\'à réception du paiement.');
   t('Mode de formaion');
   t('Méthode');
@@ -3874,7 +4135,10 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Si vous laissez vide ce champ, il prendra automatiquement la valeur du champ "horaires et durée" de la formation correspondante. Attention, si ce champ évolue, la synchronisation ne se fera pas. Il vous faudra donc entrer vous même les horaires et la durée pour chaque session de la formation concernée.');
   t('Statut de publication précédent');
   t('Tarif');
+  t('Texte certification qualité');
+  t('Texte formations');
   t('Texte libre (mais court) mis en valeur. Ex : annulé, reporté, complet, nouveau...');
+  t('Texte statistiques');
   t('Thématique');
   t('Type');
   t('Tél.');

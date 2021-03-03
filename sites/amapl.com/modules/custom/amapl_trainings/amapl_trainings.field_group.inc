@@ -109,11 +109,113 @@ function amapl_trainings_field_group_info() {
   );
   $field_groups['group_second_row|node|training_session|colorbox'] = $field_group;
 
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_stat_logos|bean|intro_formation|default';
+  $field_group->group_name = 'group_stat_logos';
+  $field_group->entity_type = 'bean';
+  $field_group->bundle = 'intro_formation';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'stat et logos',
+    'weight' => '8',
+    'children' => array(
+      0 => 'group_stat',
+      1 => 'group_text_logos',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'stat et logos',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-stat-logos',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_stat_logos|bean|intro_formation|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_stat|bean|intro_formation|default';
+  $field_group->group_name = 'group_stat';
+  $field_group->entity_type = 'bean';
+  $field_group->bundle = 'intro_formation';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_stat_logos';
+  $field_group->data = array(
+    'label' => 'stat',
+    'weight' => '10',
+    'children' => array(
+      0 => 'field_label_statistiques',
+      1 => 'field_texte_statistiques',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'stat',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-stat',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_stat|bean|intro_formation|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_text_logos|bean|intro_formation|default';
+  $field_group->group_name = 'group_text_logos';
+  $field_group->entity_type = 'bean';
+  $field_group->bundle = 'intro_formation';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_stat_logos';
+  $field_group->data = array(
+    'label' => 'Texte et logos',
+    'weight' => '11',
+    'children' => array(
+      0 => 'field_texte_certification_qualit',
+      1 => 'field_logos_certifications',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Texte et logos',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-text-logos',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_text_logos|bean|intro_formation|default'] = $field_group;
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Focus');
+  t('Texte et logos');
   t('group deuxième ligne');
   t('group première ligne');
+  t('stat');
+  t('stat et logos');
 
   return $field_groups;
 }
