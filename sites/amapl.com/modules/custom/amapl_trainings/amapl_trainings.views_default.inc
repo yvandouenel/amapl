@@ -1282,6 +1282,20 @@ Session débutant le [field_session_dates] [field_session_place]';
   );
   $handler->display->display_options['filters']['field_session_short_place_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_session_short_place_tid']['vocabulary'] = 'training_place';
+  /* Critère de filtrage: Contenu : Type (field_training_type) */
+  $handler->display->display_options['filters']['field_training_type_tid']['id'] = 'field_training_type_tid';
+  $handler->display->display_options['filters']['field_training_type_tid']['table'] = 'field_data_field_training_type';
+  $handler->display->display_options['filters']['field_training_type_tid']['field'] = 'field_training_type_tid';
+  $handler->display->display_options['filters']['field_training_type_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_training_type_tid']['expose']['operator_id'] = 'field_training_type_tid_op';
+  $handler->display->display_options['filters']['field_training_type_tid']['expose']['label'] = 'Format';
+  $handler->display->display_options['filters']['field_training_type_tid']['expose']['operator'] = 'field_training_type_tid_op';
+  $handler->display->display_options['filters']['field_training_type_tid']['expose']['identifier'] = 'field_training_type_tid';
+  $handler->display->display_options['filters']['field_training_type_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+  );
+  $handler->display->display_options['filters']['field_training_type_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_training_type_tid']['vocabulary'] = 'training_type';
   $handler->display->display_options['path'] = 'formations';
 
   /* Display: Bloc formation accueil */
@@ -1393,6 +1407,7 @@ Session débutant le [field_session_dates] [field_session_place]'),
     t('Mots clés : '),
     t('Lieu : '),
     t('Lieu court (field_session_short_place)'),
+    t('Format'),
     t('Bloc formation accueil'),
     t('Voir toutes les formations disponibles'),
     t('<img id="top-training" src="/sites/amapl.com/themes/custom/bootamapl/less/images/home_formations_img.png" alt="" />'),
