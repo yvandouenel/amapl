@@ -9394,6 +9394,19 @@ body.not-front #under-main-title h2.page-header.simple-title {
 .node-type-training #block-system-main .field label-above {
   line-height: 2em;
 }
+.node-type-training #block-system-main .field-name-field-accessibility {
+  position: relative;
+}
+.node-type-training #block-system-main .field-name-field-accessibility .field-label:after {
+  content: "";
+  display: block;
+  background: url(../images/accessibilite.png) no-repeat 100% 0;
+  width: 138px;
+  height: 28px;
+  position: absolute;
+  top: -6px;
+  left: 150px;
+}
 .node-type-training #block-system-main .field-name-field-scheduled-sessions {
   padding: 10px;
   background-color: #FAF7F7;

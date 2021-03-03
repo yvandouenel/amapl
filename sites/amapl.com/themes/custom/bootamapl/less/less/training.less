@@ -193,6 +193,21 @@
         line-height: 2em;
       }
     }
+    .field-name-field-accessibility {
+      position: relative;
+      .field-label {
+        &:after {
+          content: "";
+          display: block;
+          background: url(../images/accessibilite.png) no-repeat 100% 0;
+          width: 138px;
+          height: 28px;
+          position: absolute;
+          top: -6px;
+          left: 150px;
+        }
+      }
+    }
     .field-name-field-scheduled-sessions {
       padding: 10px;
       background-color: @light-grey-amapl;
