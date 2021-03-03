@@ -1,5 +1,40 @@
 /* page de liste des formations *************************/
+.field-name-field-texte-formations {
+  p {
+    font-size: 1.3em !important;
+  }
+}
+.group-stat-logos {
+  margin-top: 35px;
+  display: flex;
+  > div {
+    flex-basis: 50%;
+    .field-name-field-label-statistiques {
+      h3 {
+        margin-top: 0 !important;
+      }
+    }
+    .field-name-field-texte-certification-qualit {
+      margin-top: 5px;
+    }
+    .field-name-field-logos-certifications {
+      .field-items {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .field-item {
+          flex-basis: 30%;
+          img {
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
 .page-formations {
+
   #under-large-headband {
     background-color: @light-grey-amapl;
     padding-bottom: 30px;
