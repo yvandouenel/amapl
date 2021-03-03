@@ -26,11 +26,17 @@ function amapl_trainings_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'bean-bloc-formation' => array(
+          'module' => 'bean',
+          'delta' => 'bloc-formation',
+          'region' => 'header',
+          'weight' => '-10',
+        ),
         'views--exp-trainings-list_sessions' => array(
           'module' => 'views',
           'delta' => '-exp-trainings-list_sessions',
           'region' => 'large-headband',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
       ),
     ),

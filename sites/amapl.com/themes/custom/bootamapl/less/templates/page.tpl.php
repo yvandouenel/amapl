@@ -132,6 +132,16 @@
     </div>
   </div>
 <?php endif; ?>
+<header role="banner" id="page-header">
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-12">
+        <?php print render($page['header']); ?>
+      </div>
+    </div>
+  </div>
+
+</header> <!-- /#page-header -->
 <?php if (!empty($page['large-headband'])): ?>
   <div id="under-large-headband">
     <div class="container">
@@ -146,9 +156,7 @@
 <div id="under-main-container">
   <div class="main-container <?php print $container_class; ?>">
 
-    <header role="banner" id="page-header">
-      <?php print render($page['header']); ?>
-    </header> <!-- /#page-header -->
+
     <!-- Slide show -->
     <?php if (!empty($page['slideshow'])): ?>
       <div class="row">
