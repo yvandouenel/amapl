@@ -128,7 +128,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_rel'] = '';
-  /* Champ: Registration : Num. adhérent AMAPL */
+  /* Champ: Registration : Num. adhérent Amapl */
   $handler->display->display_options['fields']['field_amapl_form_member']['id'] = 'field_amapl_form_member';
   $handler->display->display_options['fields']['field_amapl_form_member']['table'] = 'field_data_field_amapl_form_member';
   $handler->display->display_options['fields']['field_amapl_form_member']['field'] = 'field_amapl_form_member';
@@ -207,7 +207,7 @@ function amapl_trainings_views_default_views() {
     t('registration_rel'),
     t('Date de début de session'),
     t('Titre de la session'),
-    t('Num. adhérent AMAPL'),
+    t('Num. adhérent Amapl'),
     t('Anonymous e-mail'),
     t('Nom'),
     t('Prénom'),

@@ -3967,7 +3967,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
     'ds_extras_field_template' => '',
     'entity_type' => 'registration',
     'field_name' => 'field_amapl_form_member',
-    'label' => 'Num. adhérent AMAPL',
+    'label' => 'Num. adhérent Amapl',
     'required' => 1,
     'settings' => array(
       'context' => 'title',
@@ -4024,7 +4024,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -4075,7 +4075,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
       ),
     ),
     'deleted' => 0,
-    'description' => 'Vous déclarez avoir accepté le <a href="/reglement-formation" target="_blank">règlement concernant les formations dispensées par l\'AMAPL</a>.',
+    'description' => 'Vous déclarez avoir accepté le <a href="/reglement-formation" target="_blank">règlement concernant les formations dispensées par l\'Amapl</a>.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -4146,6 +4146,45 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
     ),
   );
 
+  // Exported field_instance:
+  // 'registration-inscription_amapl-field_sale_conditions'.
+  $field_instances['registration-inscription_amapl-field_sale_conditions'] = array(
+    'bundle' => 'inscription_amapl',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Vous déclarez avoir accepté les <a href="/cgv" target="_blank">Conditions Générales de Vente de  l\'Amapl</a>.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 7,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'registration',
+    'field_name' => 'field_sale_conditions',
+    'label' => 'Conditions Générales de Vente',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 9,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Accessibilité');
@@ -4156,6 +4195,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Champ de recherche');
   t('Commentaire');
   t('Condition d\'enregistrement');
+  t('Conditions Générales de Vente');
   t('Contenu');
   t('Dates');
   t('Description');
@@ -4182,7 +4222,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Méthodes d\'évaluation');
   t('Nom');
   t('Nombre de participants');
-  t('Num. adhérent AMAPL');
+  t('Num. adhérent Amapl');
   t('Objectifs pédagogiques');
   t('Pré-requis');
   t('Précisez le nombre de participants min et max si nécessaire.');
@@ -4207,7 +4247,8 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Type');
   t('Tél.');
   t('Validation');
-  t('Vous déclarez avoir accepté le <a href="/reglement-formation" target="_blank">règlement concernant les formations dispensées par l\'AMAPL</a>.');
+  t('Vous déclarez avoir accepté le <a href="/reglement-formation" target="_blank">règlement concernant les formations dispensées par l\'Amapl</a>.');
+  t('Vous déclarez avoir accepté les <a href="/cgv" target="_blank">Conditions Générales de Vente de  l\'Amapl</a>.');
   t('Vous pouvez préciser si cette formation peut être prise en charge par les OPCA, ou autre mode de financement.');
   t('cible');
 
