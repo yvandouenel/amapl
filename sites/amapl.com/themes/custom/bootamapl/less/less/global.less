@@ -26,7 +26,6 @@ img {
     top: 0;
     left: -25px;
   }
-
 }
 .box-red {
   background-color: #c14747;
@@ -52,19 +51,22 @@ img {
   }
 }
 /* liens *****************************************************/
+.underline-blue-green {
+  text-decoration: none;
+  &:after {
+    content: "";
+    height: 9px;
+    width: 100%;
+    background-color: @blue-green-amapl;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    z-index: -1;
+  }
+}
 .hover-underline-blue-green {
   &:hover {
-    text-decoration: none;
-    &:after {
-      content: "";
-      height: 9px;
-      width: 100%;
-      background-color: @blue-green-amapl;
-      position: absolute;
-      bottom: 2px;
-      left: 0;
-      z-index: -1;
-    }
+    .underline-blue-green;
   }
 }
 .field {
