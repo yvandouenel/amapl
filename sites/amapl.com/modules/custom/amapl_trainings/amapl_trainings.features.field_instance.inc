@@ -940,7 +940,7 @@ function amapl_trainings_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 16,
+        'weight' => 17,
       ),
       'landing_page_block' => array(
         'label' => 'above',
@@ -1717,7 +1717,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 37,
+        'weight' => 38,
       ),
       'list' => array(
         'label' => 'above',
@@ -1971,11 +1971,11 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'weight' => 0,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 17,
+        'weight' => 16,
       ),
       'landing_page_block' => array(
         'label' => 'above',
@@ -2563,7 +2563,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 37,
       ),
       'list' => array(
         'label' => 'above',
@@ -4012,7 +4012,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
     'ds_extras_field_template' => 'theme_field',
     'entity_type' => 'registration',
     'field_name' => 'field_amapl_form_payment',
-    'label' => 'Engagement de paiement',
+    'label' => 'Je m\'engage à régler le prix de la formation',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -4203,7 +4203,6 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Début de sessions');
   t('Détail de l\'adresse');
   t('Email');
-  t('Engagement de paiement');
   t('Feuille d\'émargement');
   t('Focus');
   t('Formateurs');
@@ -4212,6 +4211,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Horaires et durée');
   t('Inscription');
   t('Introduction');
+  t('Je m\'engage à régler le prix de la formation');
   t('Label formations');
   t('Label statistiques');
   t('Lieu court');

@@ -221,7 +221,7 @@ function amapl_trainings_after_build($form, &$form_state)
  */
 function amapl_trainings_entity_view_alter(&$build, $type)
 {
-
+    
 //  if ($type == 'node' && $build['#bundle'] == 'training' && $build['#view_mode'] == 'full') {
     if ($type == 'node' && $build['#bundle'] == 'training') {
         drupal_add_css(drupal_get_path('module', 'amapl_trainings') . '/css/amapl_trainings.css');
@@ -303,8 +303,12 @@ function amapl_trainings_entity_view_alter(&$build, $type)
                     }
                 }
             }
-        }
+        } 
 
+    }
+    if ($type == 'node' && $build['#bundle'] == 'training_session') {
+    
+        
     }
 
 }
@@ -481,6 +485,17 @@ function amapl_trainings_views_pre_render(&$view)
  * Implements hook_form_alter().
  */
 function amapl_trainings_form_alter(&$form, &$form_state, $form_id) {
+    if ($form['#id'] == 'registration-form--2') {
+        // session 
+        $node_session = node_load($form["#entity"]->entity_id);
+
+        $node_training_id = $node_session->field_related_training['und'][0]['target_id'];
+        $node_training = node_load($node_training_id);
+
+        // Réécriture du label
+        $form["field_amapl_form_payment"]["und"]["#title"] .= " (" . strip_tags($node_training->field_training_price["und"][0]["value"]) .")";
+
+    }
     if ($form['#id'] == 'views-exposed-form-trainings-list-page') {
         $form['title']['#field_suffix'] = 'Vous ne vous souvenez plus exactement du libellé ?<br /> Une lettre suffit pour lancer la recherche.';
     } elseif ($form_id == 'training_session_node_form') {
