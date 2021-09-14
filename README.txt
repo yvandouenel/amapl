@@ -1,3 +1,11 @@
+Particulariés des projets drupal multisite
+Sans que je ne comprenne exactement pourquoi, il a fallu que je modifie le fichier
+/sites/sites.php
+de la façon suivante : 
+$sites['www.vigipl.com'] = 'bdpl.fr';
+
+Je suppose qu'il s'agit de faire la correspondance qui pose un pb depuis le changement 
+de nom du projet (bdpl -> vigipl)
 
 CONTENTS OF THIS FILE
 ---------------------
