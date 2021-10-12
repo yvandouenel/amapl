@@ -221,7 +221,7 @@ function amapl_trainings_after_build($form, &$form_state)
  */
 function amapl_trainings_entity_view_alter(&$build, $type)
 {
-    
+
 //  if ($type == 'node' && $build['#bundle'] == 'training' && $build['#view_mode'] == 'full') {
     if ($type == 'node' && $build['#bundle'] == 'training') {
         drupal_add_css(drupal_get_path('module', 'amapl_trainings') . '/css/amapl_trainings.css');
@@ -303,12 +303,12 @@ function amapl_trainings_entity_view_alter(&$build, $type)
                     }
                 }
             }
-        } 
+        }
 
     }
     if ($type == 'node' && $build['#bundle'] == 'training_session') {
-    
-        
+
+
     }
 
 }
@@ -485,8 +485,9 @@ function amapl_trainings_views_pre_render(&$view)
  * Implements hook_form_alter().
  */
 function amapl_trainings_form_alter(&$form, &$form_state, $form_id) {
+  //dpm( $form_id);
     if ($form['#id'] == 'registration-form--2') {
-        // session 
+        // session
         $node_session = node_load($form["#entity"]->entity_id);
 
         $node_training_id = $node_session->field_related_training['und'][0]['target_id'];
@@ -503,9 +504,20 @@ function amapl_trainings_form_alter(&$form, &$form_state, $form_id) {
     } elseif ($form['#form_id'] == 'registration_form') {
         // récupération du node courant
         if ($node = menu_get_object()) {
+          // Vérifie si la session est mixte
+          $tid = $node->field_session_mode['und'][0]['tid'];
+          $term = taxonomy_term_load($tid);
+          if (isset($term) && stripos($term->name, "ixte")) {
+          } else if (isset($term) && stripos($term->name, "sentie")){
+            $form['field_amapl_form_presen_distan']['#access'] = FALSE;
+          } else if (isset($term) && stripos($term->name, "distanc")){
+            $form["field_amapl_form_presen_distan"]['und']['#default_value'] = "distance";
+            $form['field_amapl_form_presen_distan']['#access'] = FALSE;
+          }
           drupal_add_js(drupal_get_path('module', 'amapl_trainings') . '/js/amapl_training_registration_check.js');
           // Get the nid
           $nid = $node->nid;
+
           // Vérification du caractère payant de la formation
           if (isset($node->field_related_training['und'][0]['target_id'])) {
             $training_id = $node->field_related_training['und'][0]['target_id'];

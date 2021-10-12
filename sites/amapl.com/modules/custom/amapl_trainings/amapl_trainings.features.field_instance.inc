@@ -4051,7 +4051,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
     'ds_extras_field_template' => '',
     'entity_type' => 'registration',
     'field_name' => 'field_amapl_form_presen_distan',
-    'label' => 'Si cette formation est dispensée en présentiel et distanciel, optez-vous pour :',
+    'label' => 'Cette formation est mixte, choisissez votre modalité :',
     'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -4192,6 +4192,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Attention, seul le résumé de champ sera repris dans le descriptif de la formation concernée');
   t('CV');
   t('Certification ou label');
+  t('Cette formation est mixte, choisissez votre modalité :');
   t('Champ de recherche');
   t('Commentaire');
   t('Condition d\'enregistrement');
@@ -4233,7 +4234,6 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Session financée par amapl Structure');
   t('Sessions liées');
   t('Sessions programmées et inscription');
-  t('Si cette formation est dispensée en présentiel et distanciel, optez-vous pour :');
   t('Si les horaires et la durée sont différents en fonction de chaque session, il est nécessaire de l\'indiquer ici avec un message type : "La formation dure entre 3 et 6h et se déroule le matin ou l\'après-midi en fonction de la session choisie. Vérifiez l\'information exacte en cliquant sur la session de votre choix."
 Si les horaires et la durée ne sont pas différents en fonction de la session, il seront automatiquement repris à la création de la session si vous laissez le champ horaires et durée vide lors de la création de la session."');
   t('Si vous laissez vide ce champ, il prendra automatiquement la valeur du champ "horaires et durée" de la formation correspondante. Attention, si ce champ évolue, la synchronisation ne se fera pas. Il vous faudra donc entrer vous même les horaires et la durée pour chaque session de la formation concernée.');
