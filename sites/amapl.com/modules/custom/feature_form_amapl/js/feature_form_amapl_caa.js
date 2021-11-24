@@ -286,7 +286,7 @@
         } else if ((begin_activity_year <= 2019 && begin_fiscal_year < 2020) || (begin_activity_year <= 2020 && begin_fiscal_year < 2021)){
           price = (247 / 1.2).toFixed(10);
           console.log("cas 2");
-        } else if (begin_fiscal_year == 2020 || begin_fiscal_year == 2021){
+        } else if (begin_fiscal_year == 2020 || begin_fiscal_year == 2021 || begin_fiscal_year == 2022){
           price = (248 / 1.2).toFixed(10);
           console.log("cas 3");
         } else {

@@ -46,6 +46,9 @@
       $('select#edit-field-pour-les-revenus-und option:contains("2018")').hide();
       // Effacer l'année 2019
       $('select#edit-field-pour-les-revenus-und option:contains("2019")').hide();
+      // Effacer l'année 2020
+      $('select#edit-field-pour-les-revenus-und option:contains("2020")').hide();
+
       $('select#edit-field-pour-les-revenus-und option').removeAttr('selected');
       $('select#edit-field-pour-les-revenus-und option:last').attr('selected','selected');
 
@@ -295,6 +298,9 @@
         else if ($("#edit-field-pour-les-revenus-und").val() == "2021") {
           year_income = 2021;
         }
+        else if ($("#edit-field-pour-les-revenus-und").val() == "2022") {
+          year_income = 2022;
+        }
         else year_income = undefined;
         console.log("Année des revenus : " + year_income);
         // Micro BNC ou première adhésion avec une création d'activité la même année
@@ -303,12 +309,13 @@
             || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2018 && begin_activity_year == 2018 && first_adhesion))
           || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2019 && begin_activity_year == 2019 && first_adhesion)
           || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2020 && begin_activity_year == 2020 && first_adhesion)
-          || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2021 && begin_activity_year == 2021 && first_adhesion)) {
+          || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2022 && begin_activity_year == 2022 && first_adhesion)) {
           if (year_income == 2017) price = "82.5";//80.833333333
           else if (year_income == 2018) price = "82.5";
           else if (year_income == 2019) price = "82.5";
           else if (year_income == 2020) price = "82.5";
           else if (year_income == 2021) price = "82.5";
+          else if (year_income == 2022) price = "82.5";
         }
 
         else if (societe_unipersonnelle) {
@@ -317,6 +324,7 @@
           else if (year_income == 2019) price = "165";
           else if (year_income == 2020) price = "165.833333333";
           else if (year_income == 2021) price = "165.833333333";
+          else if (year_income == 2022) price = "165.833333333";
         }
         else if (societe || (other_form && $("#edit-field-nombre-associes-und-0-value").val() > 1)) {
           console.log("choix année", year_income);
@@ -326,6 +334,7 @@
           else if (year_income == 2019) price = "265";
           else if (year_income == 2020) price = "265.833333333";
           else if (year_income == 2021) price = "265.833333333";
+          else if (year_income == 2022) price = "265.833333333";
         }
         else if (no_juridic_form) {
           price = null;
@@ -335,7 +344,7 @@
           else if (year_income == 2018) price = "165";
           else if (year_income == 2019) price = "165";
           else if (year_income == 2020) price = "165.833333333";
-          else if (year_income == 2021) price = "165.833333333";
+          else if (year_income == 2022) price = "165.833333333";
         }
         if (price !== null && price !== undefined) {
           //console.log("Prix dans le if : " + price);

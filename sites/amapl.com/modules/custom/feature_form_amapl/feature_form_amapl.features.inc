@@ -45,7 +45,15 @@ function feature_form_amapl_default_entityform_type() {
       "submissions_view" : "default",
       "user_submissions_view" : "default",
       "form_status" : "ENTITYFORM_OPEN",
-      "roles" : { "1" : "1", "2" : "2", "5" : "5", "4" : "4", "3" : "3", "6" : 0 },
+      "roles" : {
+        "1" : "1",
+        "2" : "2",
+        "5" : "5",
+        "4" : "4",
+        "3" : "3",
+        "7" : 0,
+        "6" : 0
+      },
       "resubmit_action" : "old",
       "redirect_path" : "",
       "instruction_pre" : {
@@ -85,7 +93,15 @@ function feature_form_amapl_default_entityform_type() {
       "submissions_view" : "default",
       "user_submissions_view" : "default",
       "form_status" : "ENTITYFORM_OPEN",
-      "roles" : { "1" : "1", "2" : "2", "5" : "5", "4" : "4", "3" : "3", "6" : 0 },
+      "roles" : {
+        "1" : "1",
+        "2" : "2",
+        "5" : "5",
+        "4" : "4",
+        "3" : "3",
+        "7" : 0,
+        "6" : 0
+      },
       "resubmit_action" : "old",
       "redirect_path" : "",
       "instruction_pre" : {
