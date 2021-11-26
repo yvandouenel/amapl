@@ -309,7 +309,7 @@
             || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2018 && begin_activity_year == 2018 && first_adhesion))
           || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2019 && begin_activity_year == 2019 && first_adhesion)
           || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2020 && begin_activity_year == 2020 && first_adhesion)
-          || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2022 && begin_activity_year == 2022 && first_adhesion)) {
+          || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2021 && begin_activity_year == 2021 && first_adhesion)) {
           if (year_income == 2017) price = "82.5";//80.833333333
           else if (year_income == 2018) price = "82.5";
           else if (year_income == 2019) price = "82.5";
