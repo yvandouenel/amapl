@@ -50,7 +50,7 @@
       $('select#edit-field-pour-les-revenus-und option:contains("2020")').hide();
 
       $('select#edit-field-pour-les-revenus-und option').removeAttr('selected');
-      $('select#edit-field-pour-les-revenus-und option:last').attr('selected','selected');
+      $('select#edit-field-pour-les-revenus-und option:last').attr('selected', 'selected');
 
       // gestion initiale des champs
       formeJuridique();
@@ -70,12 +70,12 @@
 
           $(this).hide(0);
           var infobulle = $('<img class="view-info" src="/sites/amapl.com/themes/custom/lppl/images/icons/infobulle.gif" />');
-            /* console.log("objet : ");
-            console.log($(this));
-            console.log("son parent : ");
-            console.log($(this).parent()); */
+          /* console.log("objet : ");
+          console.log($(this));
+          console.log("son parent : ");
+          console.log($(this).parent()); */
 
-            console.log("class du parent : " + $(this).parent().attr('class') + " a comparer avec form-type-textarea ");
+          console.log("class du parent : " + $(this).parent().attr('class') + " a comparer avec form-type-textarea ");
           if ($(this).parent().hasClass("form-type-textarea")) {
             infobulle.insertBefore($(".form-textarea", $(this).parent()));
             infobulle.css({
@@ -83,7 +83,7 @@
               "display": "block",
               "float": "right",
               "margin-right": "-30px"
-             });
+            });
             //console.log("Tjs et encore dans la gestion des infobulles ");
           } else {
             infobulle.insertAfter($(this).siblings('input'));
@@ -258,7 +258,7 @@
           $('#inscription-amapl-entityform-edit-form').trigger("reset");
           $('#inscription-amapl-entityform-edit-form').find('input:text, input:password, select, textarea').val('');
           $('#inscription-amapl-entityform-edit-form').find('input:radio, input:checkbox').prop('checked', false);
-          $('select#edit-field-pour-les-revenus-und option:last').attr('selected','selected');
+          $('select#edit-field-pour-les-revenus-und option:last').attr('selected', 'selected');
           $('#edit-field-paiement-und-line-item-container-0-quantity').val(1);
           $('#edit-field-paiement-und-line-item-container-0-tax-rate').val(20);
           $('#edit-field-paiement-und-line-item-container-0-name').val(nomsystem);
@@ -309,7 +309,9 @@
             || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2018 && begin_activity_year == 2018 && first_adhesion))
           || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2019 && begin_activity_year == 2019 && first_adhesion)
           || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2020 && begin_activity_year == 2020 && first_adhesion)
-          || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2021 && begin_activity_year == 2021 && first_adhesion)) {
+          || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2021 && begin_activity_year == 2021 && first_adhesion)
+          || ($("#edit-field-forme-juridique-und-ei").is(":checked") && year_income == 2022 && begin_activity_year == 2022 && first_adhesion)
+        ) {
           if (year_income == 2017) price = "82.5";//80.833333333
           else if (year_income == 2018) price = "82.5";
           else if (year_income == 2019) price = "82.5";
