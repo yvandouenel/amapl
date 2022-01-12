@@ -9548,6 +9548,18 @@ body.not-front #under-main-title h2.page-header.simple-title {
 #cboxLoadedContent .field-name-field-amapl-member {
   margin: 25px 0;
 }
+#cboxLoadedContent .form-type-checkbox label {
+  position: relative;
+  padding-left: 20px;
+}
+#cboxLoadedContent .form-type-checkbox label input {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: auto !important;
+}
 /* Fin colorbox *********************************************/
 /* Message de confirmation d'inscription à une formation */
 .registration-training-confirmation-msg .field {
