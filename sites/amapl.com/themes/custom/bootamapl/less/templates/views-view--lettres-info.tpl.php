@@ -46,7 +46,7 @@
       </div>
   <?php endif; ?>
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-12 ">
     <?php if ($header): ?>
       <div class="view-header">
         <?php print $header; ?>
