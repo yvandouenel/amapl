@@ -332,6 +332,7 @@ function amapl_trainings_node_view($node, $view_mode, $langcode)
     } elseif ($node->type == 'training_session' && $view_mode == 'colorbox') {
       //dpm("affichage de la session danns le display colorbox");
         drupal_add_js(drupal_get_path('module', 'amapl_trainings') . '/js/amapl_training_session_popup.js');
+        drupal_add_js(drupal_get_path('module', 'amapl_trainings') . '/js/amapl_training_session_member.js');
         drupal_add_css(drupal_get_path('module', 'amapl_trainings') . '/css/amapl_training_session_popup.css');
 
         // If visitor comes from training full node, we remove the link "Voir toutes les sessions".
