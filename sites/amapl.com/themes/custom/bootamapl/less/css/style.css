@@ -9251,8 +9251,8 @@ body.not-front #under-main-title h2.page-header.simple-title {
   flex-basis: 30%;
 }
 .group-stat-logos > div .field-name-field-logos-certifications .field-items .field-item img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: none !important;
+  max-height: none !important;
 }
 .page-formations {
   /* Formulaire de recherche *****************************/
