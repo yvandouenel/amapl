@@ -380,7 +380,7 @@ function amapl_trainings_strongarm() {
           'weight' => '3',
         ),
         'redirect' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
       ),
       'display' => array(),

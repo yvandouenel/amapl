@@ -3985,7 +3985,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -4024,7 +4024,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -4100,7 +4100,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -4147,6 +4147,45 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   );
 
   // Exported field_instance:
+  // 'registration-inscription_amapl-field_amapl_member'.
+  $field_instances['registration-inscription_amapl-field_amapl_member'] = array(
+    'bundle' => 'inscription_amapl',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 8,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'registration',
+    'field_name' => 'field_amapl_member',
+    'label' => 'Vous êtes adhérent de l\'AMAPL ?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance:
   // 'registration-inscription_amapl-field_sale_conditions'.
   $field_instances['registration-inscription_amapl-field_sale_conditions'] = array(
     'bundle' => 'inscription_amapl',
@@ -4181,7 +4220,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -4250,6 +4289,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Vous déclarez avoir accepté le <a href="/reglement-formation" target="_blank">règlement concernant les formations dispensées par l\'Amapl</a>.');
   t('Vous déclarez avoir accepté les <a href="/cgv" target="_blank">Conditions Générales de Vente de  l\'Amapl</a>.');
   t('Vous pouvez préciser si cette formation peut être prise en charge par les OPCA, ou autre mode de financement.');
+  t('Vous êtes adhérent de l\'AMAPL ?');
   t('cible');
 
   return $field_instances;
