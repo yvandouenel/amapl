@@ -4169,7 +4169,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
     'ds_extras_field_template' => '',
     'entity_type' => 'registration',
     'field_name' => 'field_amapl_member',
-    'label' => 'Vous êtes adhérent de l\'AMAPL ?',
+    'label' => 'Vous êtes adhérent de l\'Amapl ?',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -4289,7 +4289,7 @@ Si les horaires et la durée ne sont pas différents en fonction de la session, 
   t('Vous déclarez avoir accepté le <a href="/reglement-formation" target="_blank">règlement concernant les formations dispensées par l\'Amapl</a>.');
   t('Vous déclarez avoir accepté les <a href="/cgv" target="_blank">Conditions Générales de Vente de  l\'Amapl</a>.');
   t('Vous pouvez préciser si cette formation peut être prise en charge par les OPCA, ou autre mode de financement.');
-  t('Vous êtes adhérent de l\'AMAPL ?');
+  t('Vous êtes adhérent de l\'Amapl ?');
   t('cible');
 
   return $field_instances;

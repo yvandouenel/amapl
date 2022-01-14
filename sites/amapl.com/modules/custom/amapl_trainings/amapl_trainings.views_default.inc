@@ -101,7 +101,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['relationships']['registration_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['registration_rel']['field'] = 'registration_rel';
   $handler->display->display_options['relationships']['registration_rel']['required'] = TRUE;
-  /* Champ: Contenu : Dates */
+  /* Champ: Node : Dates */
   $handler->display->display_options['fields']['field_session_dates']['id'] = 'field_session_dates';
   $handler->display->display_options['fields']['field_session_dates']['table'] = 'field_data_field_session_dates';
   $handler->display->display_options['fields']['field_session_dates']['field'] = 'field_session_dates';
@@ -148,7 +148,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['fields']['field_amapl_form_first_name']['table'] = 'field_data_field_amapl_form_first_name';
   $handler->display->display_options['fields']['field_amapl_form_first_name']['field'] = 'field_amapl_form_first_name';
   $handler->display->display_options['fields']['field_amapl_form_first_name']['relationship'] = 'registration_rel';
-  /* Critère de tri: Contenu : Dates (field_session_dates) */
+  /* Critère de tri: Node : Dates (field_session_dates) */
   $handler->display->display_options['sorts']['field_session_dates_value']['id'] = 'field_session_dates_value';
   $handler->display->display_options['sorts']['field_session_dates_value']['table'] = 'field_data_field_session_dates';
   $handler->display->display_options['sorts']['field_session_dates_value']['field'] = 'field_session_dates_value';
@@ -281,7 +281,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'training' => 'training',
   );
-  /* Critère de filtrage: Contenu : Thématique (field_training_domain) */
+  /* Critère de filtrage: Node : Thématique (field_training_domain) */
   $handler->display->display_options['filters']['field_training_domain_tid']['id'] = 'field_training_domain_tid';
   $handler->display->display_options['filters']['field_training_domain_tid']['table'] = 'field_data_field_training_domain';
   $handler->display->display_options['filters']['field_training_domain_tid']['field'] = 'field_training_domain_tid';
@@ -319,7 +319,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'training' => 'training',
   );
-  /* Critère de filtrage: Contenu : Thématique (field_training_domain) */
+  /* Critère de filtrage: Node : Thématique (field_training_domain) */
   $handler->display->display_options['filters']['field_training_domain_tid']['id'] = 'field_training_domain_tid';
   $handler->display->display_options['filters']['field_training_domain_tid']['table'] = 'field_data_field_training_domain';
   $handler->display->display_options['filters']['field_training_domain_tid']['field'] = 'field_training_domain_tid';
@@ -338,7 +338,7 @@ function amapl_trainings_views_default_views() {
   );
   $handler->display->display_options['filters']['field_training_domain_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_training_domain_tid']['vocabulary'] = 'training_domains';
-  /* Critère de filtrage: Contenu : Champ de recherche (field_training_search) */
+  /* Critère de filtrage: Node : Champ de recherche (field_training_search) */
   $handler->display->display_options['filters']['field_training_search_value']['id'] = 'field_training_search_value';
   $handler->display->display_options['filters']['field_training_search_value']['table'] = 'field_data_field_training_search';
   $handler->display->display_options['filters']['field_training_search_value']['field'] = 'field_training_search_value';
@@ -356,7 +356,7 @@ function amapl_trainings_views_default_views() {
     6 => 0,
     3 => 0,
   );
-  /* Critère de filtrage: Contenu : Affichage dans le catalogue ? (field_training_catalog) */
+  /* Critère de filtrage: Node : Affichage dans le catalogue ? (field_training_catalog) */
   $handler->display->display_options['filters']['field_training_catalog_value']['id'] = 'field_training_catalog_value';
   $handler->display->display_options['filters']['field_training_catalog_value']['table'] = 'field_data_field_training_catalog';
   $handler->display->display_options['filters']['field_training_catalog_value']['field'] = 'field_training_catalog_value';
@@ -382,7 +382,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['relationships']['field_related_training_target_id']['table'] = 'field_data_field_related_training';
   $handler->display->display_options['relationships']['field_related_training_target_id']['field'] = 'field_related_training_target_id';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Filtre contextuel: Contenu : Formation (field_related_training) */
+  /* Filtre contextuel: Node : Formation (field_related_training) */
   $handler->display->display_options['arguments']['field_related_training_target_id']['id'] = 'field_related_training_target_id';
   $handler->display->display_options['arguments']['field_related_training_target_id']['table'] = 'field_data_field_related_training';
   $handler->display->display_options['arguments']['field_related_training_target_id']['field'] = 'field_related_training_target_id';
@@ -468,7 +468,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Filtre contextuel: Contenu : Formation (field_related_training) */
+  /* Filtre contextuel: Node : Formation (field_related_training) */
   $handler->display->display_options['arguments']['field_related_training_target_id']['id'] = 'field_related_training_target_id';
   $handler->display->display_options['arguments']['field_related_training_target_id']['table'] = 'field_data_field_related_training';
   $handler->display->display_options['arguments']['field_related_training_target_id']['field'] = 'field_related_training_target_id';
@@ -494,7 +494,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'training_session' => 'training_session',
   );
-  /* Critère de filtrage: Contenu : Dates (field_session_dates) */
+  /* Critère de filtrage: Node : Dates (field_session_dates) */
   $handler->display->display_options['filters']['field_session_dates_value']['id'] = 'field_session_dates_value';
   $handler->display->display_options['filters']['field_session_dates_value']['table'] = 'field_data_field_session_dates';
   $handler->display->display_options['filters']['field_session_dates_value']['field'] = 'field_session_dates_value';
@@ -537,7 +537,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Champ: Contenu : Focus */
+  /* Champ: Node : Focus */
   $handler->display->display_options['fields']['field_session_focus']['id'] = 'field_session_focus';
   $handler->display->display_options['fields']['field_session_focus']['table'] = 'field_data_field_session_focus';
   $handler->display->display_options['fields']['field_session_focus']['field'] = 'field_session_focus';
@@ -546,7 +546,7 @@ function amapl_trainings_views_default_views() {
   $handler->display->display_options['fields']['field_session_focus']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_session_focus']['alter']['text'] = '<span class="focus-training">[field_session_focus]</span>';
   $handler->display->display_options['fields']['field_session_focus']['element_label_colon'] = FALSE;
-  /* Champ: Contenu : Mode de formaion */
+  /* Champ: Node : Mode de formaion */
   $handler->display->display_options['fields']['field_session_mode']['id'] = 'field_session_mode';
   $handler->display->display_options['fields']['field_session_mode']['table'] = 'field_data_field_session_mode';
   $handler->display->display_options['fields']['field_session_mode']['field'] = 'field_session_mode';
@@ -591,7 +591,7 @@ function amapl_trainings_views_default_views() {
   );
   $handler->display->display_options['fields']['field_session_dates_1']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_session_dates_1']['delta_reversed'] = TRUE;
-  /* Champ: Contenu : Détail de l'adresse */
+  /* Champ: Node : Détail de l'adresse */
   $handler->display->display_options['fields']['field_session_place']['id'] = 'field_session_place';
   $handler->display->display_options['fields']['field_session_place']['table'] = 'field_data_field_session_place';
   $handler->display->display_options['fields']['field_session_place']['field'] = 'field_session_place';
@@ -631,7 +631,7 @@ Session débutant le [field_session_dates] [field_session_place]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Filtre contextuel: Contenu : Formation (field_related_training) */
+  /* Filtre contextuel: Node : Formation (field_related_training) */
   $handler->display->display_options['arguments']['field_related_training_target_id']['id'] = 'field_related_training_target_id';
   $handler->display->display_options['arguments']['field_related_training_target_id']['table'] = 'field_data_field_related_training';
   $handler->display->display_options['arguments']['field_related_training_target_id']['field'] = 'field_related_training_target_id';
@@ -809,14 +809,14 @@ Session débutant le [field_session_dates] [field_session_place]';
   $handler->display->display_options['fields']['title']['node_in_colorbox_width'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_height'] = '600';
   $handler->display->display_options['fields']['title']['node_in_colorbox_rel'] = '';
-  /* Champ: Contenu : Lieu court */
+  /* Champ: Node : Lieu court */
   $handler->display->display_options['fields']['field_session_short_place']['id'] = 'field_session_short_place';
   $handler->display->display_options['fields']['field_session_short_place']['table'] = 'field_data_field_session_short_place';
   $handler->display->display_options['fields']['field_session_short_place']['field'] = 'field_session_short_place';
   $handler->display->display_options['fields']['field_session_short_place']['relationship'] = 'field_training_session_linked_target_id';
   $handler->display->display_options['fields']['field_session_short_place']['label'] = 'Lieu';
   $handler->display->display_options['fields']['field_session_short_place']['type'] = 'taxonomy_term_reference_plain';
-  /* Champ: Contenu : Dates */
+  /* Champ: Node : Dates */
   $handler->display->display_options['fields']['field_session_dates']['id'] = 'field_session_dates';
   $handler->display->display_options['fields']['field_session_dates']['table'] = 'field_data_field_session_dates';
   $handler->display->display_options['fields']['field_session_dates']['field'] = 'field_session_dates';
@@ -837,7 +837,7 @@ Session débutant le [field_session_dates] [field_session_place]';
   $handler->display->display_options['fields']['field_session_dates']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_session_dates']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Critère de tri: Contenu : Dates (field_session_dates) */
+  /* Critère de tri: Node : Dates (field_session_dates) */
   $handler->display->display_options['sorts']['field_session_dates_value']['id'] = 'field_session_dates_value';
   $handler->display->display_options['sorts']['field_session_dates_value']['table'] = 'field_data_field_session_dates';
   $handler->display->display_options['sorts']['field_session_dates_value']['field'] = 'field_session_dates_value';
@@ -858,7 +858,7 @@ Session débutant le [field_session_dates] [field_session_place]';
   $handler->display->display_options['filters']['type']['value'] = array(
     'training' => 'training',
   );
-  /* Critère de filtrage: Contenu : Thématique (field_training_domain) */
+  /* Critère de filtrage: Node : Thématique (field_training_domain) */
   $handler->display->display_options['filters']['field_training_domain_tid']['id'] = 'field_training_domain_tid';
   $handler->display->display_options['filters']['field_training_domain_tid']['table'] = 'field_data_field_training_domain';
   $handler->display->display_options['filters']['field_training_domain_tid']['field'] = 'field_training_domain_tid';
@@ -877,7 +877,7 @@ Session débutant le [field_session_dates] [field_session_place]';
   );
   $handler->display->display_options['filters']['field_training_domain_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_training_domain_tid']['vocabulary'] = 'training_domains';
-  /* Critère de filtrage: Contenu : Champ de recherche (field_training_search) */
+  /* Critère de filtrage: Node : Champ de recherche (field_training_search) */
   $handler->display->display_options['filters']['field_training_search_value']['id'] = 'field_training_search_value';
   $handler->display->display_options['filters']['field_training_search_value']['table'] = 'field_data_field_training_search';
   $handler->display->display_options['filters']['field_training_search_value']['field'] = 'field_training_search_value';
@@ -895,14 +895,14 @@ Session débutant le [field_session_dates] [field_session_place]';
     6 => 0,
     3 => 0,
   );
-  /* Critère de filtrage: Contenu : Affichage dans le catalogue ? (field_training_catalog) */
+  /* Critère de filtrage: Node : Affichage dans le catalogue ? (field_training_catalog) */
   $handler->display->display_options['filters']['field_training_catalog_value']['id'] = 'field_training_catalog_value';
   $handler->display->display_options['filters']['field_training_catalog_value']['table'] = 'field_data_field_training_catalog';
   $handler->display->display_options['filters']['field_training_catalog_value']['field'] = 'field_training_catalog_value';
   $handler->display->display_options['filters']['field_training_catalog_value']['value'] = array(
     1 => '1',
   );
-  /* Critère de filtrage: Contenu : Lieu court (field_session_short_place) */
+  /* Critère de filtrage: Node : Lieu court (field_session_short_place) */
   $handler->display->display_options['filters']['field_session_short_place_tid']['id'] = 'field_session_short_place_tid';
   $handler->display->display_options['filters']['field_session_short_place_tid']['table'] = 'field_data_field_session_short_place';
   $handler->display->display_options['filters']['field_session_short_place_tid']['field'] = 'field_session_short_place_tid';
@@ -922,7 +922,7 @@ Session débutant le [field_session_dates] [field_session_place]';
   );
   $handler->display->display_options['filters']['field_session_short_place_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_session_short_place_tid']['vocabulary'] = 'training_place';
-  /* Critère de filtrage: Contenu : Gratuit ? (field_training_free) */
+  /* Critère de filtrage: Node : Gratuit ? (field_training_free) */
   $handler->display->display_options['filters']['field_training_free_value']['id'] = 'field_training_free_value';
   $handler->display->display_options['filters']['field_training_free_value']['table'] = 'field_data_field_training_free';
   $handler->display->display_options['filters']['field_training_free_value']['field'] = 'field_training_free_value';
@@ -939,7 +939,7 @@ Session débutant le [field_session_dates] [field_session_place]';
     6 => 0,
     3 => 0,
   );
-  /* Critère de filtrage: Contenu : Dates (field_session_dates) */
+  /* Critère de filtrage: Node : Dates (field_session_dates) */
   $handler->display->display_options['filters']['field_session_dates_value']['id'] = 'field_session_dates_value';
   $handler->display->display_options['filters']['field_session_dates_value']['table'] = 'field_data_field_session_dates';
   $handler->display->display_options['filters']['field_session_dates_value']['field'] = 'field_session_dates_value';
@@ -1087,7 +1087,7 @@ Session débutant le [field_session_dates] [field_session_place]';
   $handler->display->display_options['relationships']['field_related_training_target_id']['field'] = 'field_related_training_target_id';
   $handler->display->display_options['relationships']['field_related_training_target_id']['required'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Champ: Contenu : Mode de formaion */
+  /* Champ: Node : Mode de formaion */
   $handler->display->display_options['fields']['field_session_mode']['id'] = 'field_session_mode';
   $handler->display->display_options['fields']['field_session_mode']['table'] = 'field_data_field_session_mode';
   $handler->display->display_options['fields']['field_session_mode']['field'] = 'field_session_mode';
@@ -1097,7 +1097,7 @@ Session débutant le [field_session_dates] [field_session_place]';
   $handler->display->display_options['fields']['field_session_mode']['alter']['text'] = '<div class="mode-training"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>[field_session_mode]</div>';
   $handler->display->display_options['fields']['field_session_mode']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_session_mode']['type'] = 'taxonomy_term_reference_plain';
-  /* Champ: Contenu : Focus */
+  /* Champ: Node : Focus */
   $handler->display->display_options['fields']['field_session_focus']['id'] = 'field_session_focus';
   $handler->display->display_options['fields']['field_session_focus']['table'] = 'field_data_field_session_focus';
   $handler->display->display_options['fields']['field_session_focus']['field'] = 'field_session_focus';
@@ -1116,7 +1116,7 @@ Session débutant le [field_session_dates] [field_session_place]';
   $handler->display->display_options['fields']['title_1']['node_in_colorbox_width'] = '600';
   $handler->display->display_options['fields']['title_1']['node_in_colorbox_height'] = '600';
   $handler->display->display_options['fields']['title_1']['node_in_colorbox_rel'] = '';
-  /* Champ: Contenu : Dates */
+  /* Champ: Node : Dates */
   $handler->display->display_options['fields']['field_session_dates']['id'] = 'field_session_dates';
   $handler->display->display_options['fields']['field_session_dates']['table'] = 'field_data_field_session_dates';
   $handler->display->display_options['fields']['field_session_dates']['field'] = 'field_session_dates';
@@ -1133,7 +1133,7 @@ Session débutant le [field_session_dates] [field_session_place]';
   );
   $handler->display->display_options['fields']['field_session_dates']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_session_dates']['separator'] = ' - ';
-  /* Champ: Contenu : Lieu court */
+  /* Champ: Node : Lieu court */
   $handler->display->display_options['fields']['field_session_short_place']['id'] = 'field_session_short_place';
   $handler->display->display_options['fields']['field_session_short_place']['table'] = 'field_data_field_session_short_place';
   $handler->display->display_options['fields']['field_session_short_place']['field'] = 'field_session_short_place';
@@ -1141,7 +1141,7 @@ Session débutant le [field_session_dates] [field_session_place]';
   $handler->display->display_options['fields']['field_session_short_place']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_session_short_place']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_session_short_place']['type'] = 'taxonomy_term_reference_plain';
-  /* Champ: Contenu : Thématique */
+  /* Champ: Node : Thématique */
   $handler->display->display_options['fields']['field_training_domain']['id'] = 'field_training_domain';
   $handler->display->display_options['fields']['field_training_domain']['table'] = 'field_data_field_training_domain';
   $handler->display->display_options['fields']['field_training_domain']['field'] = 'field_training_domain';
@@ -1151,7 +1151,7 @@ Session débutant le [field_session_dates] [field_session_place]';
   $handler->display->display_options['fields']['field_training_domain']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_training_domain']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_training_domain']['delta_offset'] = '0';
-  /* Champ: Contenu : cible */
+  /* Champ: Node : cible */
   $handler->display->display_options['fields']['field_session_target']['id'] = 'field_session_target';
   $handler->display->display_options['fields']['field_session_target']['table'] = 'field_data_field_session_target';
   $handler->display->display_options['fields']['field_session_target']['field'] = 'field_session_target';
@@ -1179,7 +1179,7 @@ Session débutant le [field_session_dates] [field_session_place]';
 </article>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Critère de tri: Contenu : Début de sessions (field_session_begin) */
+  /* Critère de tri: Node : Début de sessions (field_session_begin) */
   $handler->display->display_options['sorts']['field_session_begin_value']['id'] = 'field_session_begin_value';
   $handler->display->display_options['sorts']['field_session_begin_value']['table'] = 'field_data_field_session_begin';
   $handler->display->display_options['sorts']['field_session_begin_value']['field'] = 'field_session_begin_value';
@@ -1199,13 +1199,13 @@ Session débutant le [field_session_dates] [field_session_place]';
   $handler->display->display_options['filters']['type']['value'] = array(
     'training_session' => 'training_session',
   );
-  /* Critère de filtrage: Contenu : Début de sessions (field_session_begin) */
+  /* Critère de filtrage: Node : Début de sessions (field_session_begin) */
   $handler->display->display_options['filters']['field_session_begin_value']['id'] = 'field_session_begin_value';
   $handler->display->display_options['filters']['field_session_begin_value']['table'] = 'field_data_field_session_begin';
   $handler->display->display_options['filters']['field_session_begin_value']['field'] = 'field_session_begin_value';
   $handler->display->display_options['filters']['field_session_begin_value']['operator'] = '>=';
   $handler->display->display_options['filters']['field_session_begin_value']['default_date'] = 'now-1';
-  /* Critère de filtrage: Contenu : Thématique (field_training_domain) */
+  /* Critère de filtrage: Node : Thématique (field_training_domain) */
   $handler->display->display_options['filters']['field_training_domain_tid']['id'] = 'field_training_domain_tid';
   $handler->display->display_options['filters']['field_training_domain_tid']['table'] = 'field_data_field_training_domain';
   $handler->display->display_options['filters']['field_training_domain_tid']['field'] = 'field_training_domain_tid';
@@ -1220,7 +1220,7 @@ Session débutant le [field_session_dates] [field_session_place]';
   );
   $handler->display->display_options['filters']['field_training_domain_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_training_domain_tid']['vocabulary'] = 'training_domains';
-  /* Critère de filtrage: Contenu : Gratuit ? (field_training_free) */
+  /* Critère de filtrage: Node : Gratuit ? (field_training_free) */
   $handler->display->display_options['filters']['field_training_free_value']['id'] = 'field_training_free_value';
   $handler->display->display_options['filters']['field_training_free_value']['table'] = 'field_data_field_training_free';
   $handler->display->display_options['filters']['field_training_free_value']['field'] = 'field_training_free_value';
@@ -1238,7 +1238,7 @@ Session débutant le [field_session_dates] [field_session_place]';
     6 => 0,
     3 => 0,
   );
-  /* Critère de filtrage: Contenu : Champ de recherche (field_training_search) */
+  /* Critère de filtrage: Node : Champ de recherche (field_training_search) */
   $handler->display->display_options['filters']['field_training_search_value']['id'] = 'field_training_search_value';
   $handler->display->display_options['filters']['field_training_search_value']['table'] = 'field_data_field_training_search';
   $handler->display->display_options['filters']['field_training_search_value']['field'] = 'field_training_search_value';
@@ -1252,7 +1252,7 @@ Session débutant le [field_session_dates] [field_session_place]';
   $handler->display->display_options['filters']['field_training_search_value']['expose']['remember_roles'] = array(
     2 => '2',
   );
-  /* Critère de filtrage: Contenu : Lieu court (field_session_short_place) */
+  /* Critère de filtrage: Node : Lieu court (field_session_short_place) */
   $handler->display->display_options['filters']['field_session_short_place_tid']['id'] = 'field_session_short_place_tid';
   $handler->display->display_options['filters']['field_session_short_place_tid']['table'] = 'field_data_field_session_short_place';
   $handler->display->display_options['filters']['field_session_short_place_tid']['field'] = 'field_session_short_place_tid';
@@ -1282,7 +1282,7 @@ Session débutant le [field_session_dates] [field_session_place]';
   );
   $handler->display->display_options['filters']['field_session_short_place_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_session_short_place_tid']['vocabulary'] = 'training_place';
-  /* Critère de filtrage: Contenu : Type (field_training_type) */
+  /* Critère de filtrage: Node : Type (field_training_type) */
   $handler->display->display_options['filters']['field_training_type_tid']['id'] = 'field_training_type_tid';
   $handler->display->display_options['filters']['field_training_type_tid']['table'] = 'field_data_field_training_type';
   $handler->display->display_options['filters']['field_training_type_tid']['field'] = 'field_training_type_tid';
@@ -1322,7 +1322,7 @@ Session débutant le [field_session_dates] [field_session_place]';
   $handler->display->display_options['header']['area']['content'] = '<img id="top-training" src="/sites/amapl.com/themes/custom/bootamapl/less/images/home_formations_img.png" alt="" />';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Critère de tri: Contenu : Début de sessions (field_session_begin) */
+  /* Critère de tri: Node : Début de sessions (field_session_begin) */
   $handler->display->display_options['sorts']['field_session_begin_value']['id'] = 'field_session_begin_value';
   $handler->display->display_options['sorts']['field_session_begin_value']['table'] = 'field_data_field_session_begin';
   $handler->display->display_options['sorts']['field_session_begin_value']['field'] = 'field_session_begin_value';
@@ -1342,7 +1342,7 @@ Session débutant le [field_session_dates] [field_session_place]';
   $handler->display->display_options['filters']['type']['value'] = array(
     'training_session' => 'training_session',
   );
-  /* Critère de filtrage: Contenu : Début de sessions (field_session_begin) */
+  /* Critère de filtrage: Node : Début de sessions (field_session_begin) */
   $handler->display->display_options['filters']['field_session_begin_value']['id'] = 'field_session_begin_value';
   $handler->display->display_options['filters']['field_session_begin_value']['table'] = 'field_data_field_session_begin';
   $handler->display->display_options['filters']['field_session_begin_value']['field'] = 'field_session_begin_value';
@@ -1369,7 +1369,7 @@ Session débutant le [field_session_dates] [field_session_place]';
     t('Catalogue des formations'),
     t('Mots clés'),
     t('Toutes les sessions d\'une formation'),
-    t('Contenu entity referenced from field_related_training'),
+    t('Node entity referenced from field_related_training'),
     t('Tout'),
     t('Liste formations'),
     t('Nid'),
@@ -1384,7 +1384,7 @@ Session débutant le [field_session_dates] [field_session_place]'),
     t('Rechercher'),
     t('Sélectionnez n\'importe quel filtre et cliquez sur Appliquer pour voir les résultats'),
     t('Options avancées'),
-    t('Contenu entity referenced from field_training_session_linked'),
+    t('Node entity referenced from field_training_session_linked'),
     t('Lieu'),
     t('Date'),
     t('Gratuit ?'),
