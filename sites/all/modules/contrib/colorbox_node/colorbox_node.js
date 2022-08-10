@@ -1,4 +1,17 @@
+/*
+ * @file
+ * Integration with the colorbox library/module
+ */
+
 (function ($) {
+    Drupal.ajax.prototype.commands.colorboxNodeReload = function (ajax, response) {
+        location.reload();
+    };
+
+    Drupal.ajax.prototype.commands.colorboxNodeRedirect = function (ajax, response) {
+        window.location.replace(response.data);
+    };
+
     Drupal.behaviors.colorboxNode = {
         // Lets find our class name and change our URL to
         // our defined menu path to open in a colorbox modal.
@@ -30,8 +43,49 @@
         }
     };
 
+    $.fn.colorboxNodeLaunch = function (settings) {
+        var $this = $(this).clone();
+
+        // Clear out the rel to prevent any confusion if not using the gallery class.
+        if(!$this.hasClass('colorbox-node-gallery')) {
+            $this.attr('rel', '');
+        }
+
+        if (!hrefIsSafe(settings.href)) {
+          return;
+        }
+        // Lets extract our width and height giving priority to the data attributes.
+        var innerWidth = $this.data('inner-width');
+        var innerHeight = $this.data('inner-height');
+        if (typeof innerWidth != 'undefined' && typeof innerHeight != 'undefined') {
+            var params = $.urlDataParams(innerWidth, innerHeight);
+        } else {
+            var params = $.urlParams(settings.href);
+        }
+
+        // If we did not find a width or height, lets use the default.
+        if (params.innerHeight == undefined) {
+            params.innerHeight = settings.height;
+        }
+        if (params.innerWidth == undefined) {
+            params.innerWidth = settings.width;
+        }
+
+        params.html = '<div id="colorboxNodeLoading"></div>';
+        params.onComplete = function () {
+            $this.colorboxNodeGroup();
+        };
+        params.open = true;
+
+        // Launch our colorbox with the provided settings
+        $this.colorbox($.extend({}, Drupal.settings.colorbox, params));
+    };
+
     // Bind our colorbox node functionality to an anchor
     $.fn.colorboxNode = function (options) {
+        var $this = this;
+        options = options || {};
+
         var settings = {
             'launch': true,
             'width': Drupal.settings.colorbox_node.width,
@@ -40,15 +94,17 @@
 
         $.extend(settings, options);
 
-        var href = $(this).attr('data-href');
-        if (typeof href == 'undefined' || href == false) {
-            href = $(this).attr('href');
+        settings.href = $this.attr('data-href');
+        if (typeof settings.href == 'undefined' || settings.href == false) {
+            settings.href = $this.attr('href');
         }
+        settings.href = Drupal.checkPlain(settings.href).replaceAll('&amp;', '&');
+
         // Create an element so we can parse our a URL no matter if its internal or external.
         var parse = document.createElement('a');
-        parse.href = href;
+        parse.href = settings.href;
 
-        if(!href) {
+        if(!settings.href) {
             alert(Drupal.t('No url found on element'));
         }
 
@@ -64,75 +120,50 @@
         }
 
         // If clean URL's are not turned on, lets check for that.
-        var url = $.getParameterByName('q', href);
+        var cleanURLs = $.getParameterByName('q', settings.href);
         if (base_path != '/') {
-            if (url != '') {
-                var link = pathname.replace(base_path, base_path + parse.search.replace('?q=', '?q=/' + path_prefix + 'colorbox/'));
+            if (cleanURLs != '') {
+                settings.link = pathname.replace(base_path, base_path + parse.search.replace('?q=', '?q=/' + path_prefix + 'colorbox/'));
             } else {
-                var link = pathname.replace(base_path, base_path + path_prefix + 'colorbox/') + parse.search;
+                settings.link = pathname.replace(base_path, base_path + path_prefix + 'colorbox/') + parse.search;
             }
         } else {
-            if (url != '') {
-                var link = base_path + parse.search.replace('?q=', '?q=/' + path_prefix + 'colorbox/');
+            if (cleanURLs != '') {
+                settings.link = base_path + parse.search.replace('?q=', '?q=/' + path_prefix + 'colorbox/');
             } else {
-                var link = base_path + path_prefix + 'colorbox' + pathname + parse.search;
+                settings.link = base_path + path_prefix + 'colorbox' + pathname + parse.search;
             }
         }
 
-        // Bind Ajax behaviors to all items showing the class.
+        // Bind Ajax behaviors to the element
         var element_settings = {};
+        element_settings.async = true;
 
         // This removes any loading/progress bar on the clicked link
         // and displays the colorbox loading screen instead.
         element_settings.progress = { 'type': 'none' };
         // For anchor tags, these will go to the target of the anchor rather
         // than the usual location.
-        if (href) {
-            element_settings.url = link;
+        if (settings.link) {
+            element_settings.url = settings.link;
             element_settings.event = 'click';
         }
 
-        $(this).click(function () {
-            var $this = $(this).clone();
-
-            // Clear out the rel to prevent any confusion if not using the gallery class.
-            if(!$this.hasClass('colorbox-node-gallery')) {
-                $this.attr('rel', '');
-            }
-
-            // Lets extract our width and height giving priority to the data attributes.
-            var innerWidth = $this.data('inner-width');
-            var innerHeight = $this.data('inner-height');
-            if (typeof innerWidth != 'undefined' && typeof innerHeight != 'undefined') {
-                var params = $.urlDataParams(innerWidth, innerHeight);
-            } else {
-                var params = $.urlParams(href);
-            }
-
-            // If we did not find a width or height, lets use the default.
-            if (params.innerHeight == undefined) params.innerHeight = settings.height;
-            if (params.innerWidth == undefined) params.innerWidth = settings.width;
-
-            params.html = '<div id="colorboxNodeLoading"></div>';
-            params.onComplete = function () {
-                $this.colorboxNodeGroup();
-            }
-            params.open = true;
-
-            // Launch our colorbox with the provided settings
-            $this.colorbox($.extend({}, Drupal.settings.colorbox, params));
-        });
-
         // Log our click handler to our ajax object
-        var base = $(this).attr('id');
+        var base = Drupal.checkPlain($(this).attr('id'));
         Drupal.ajax[base] = new Drupal.ajax(base, this, element_settings);
 
         // Default to auto click for manual call to this function.
         if (settings.launch) {
             Drupal.ajax[base].eventResponse(this, 'click');
-            $(this).click();
+            $(this).colorboxNodeLaunch(settings);
         }
-    }
+        else {
+            $(this).click(function () {
+                $(this).colorboxNodeLaunch(settings);
+            });
+        }
+    };
 
     // Allow for grouping on links to showcase a gallery with left/right arrows.
     // This function will find the next index of each link on the page by the rel
@@ -141,15 +172,15 @@
     $.fn.colorboxNodeGroup = function () {
         // Lets do setup our gallery type of functions.
         var $this = $(this);
-        var rel = $this.attr('rel');
-        if(rel && $this.hasClass('colorbox-node-gallery')) {
-            if ($('a.colorbox-node-gallery[rel="' + rel + '"]:not("#colorbox a[rel="' + rel + '"]")').length > 1) {
-                $related = $('a.colorbox-node-gallery[rel="' + rel + '"]:not("#colorbox a[rel="' + rel + '"]")');
+        var rel = Drupal.checkPlain($this.attr('rel'));
+        if (rel && $this.hasClass('colorbox-node-gallery')) {
+            if ($('a.colorbox-node-gallery[rel="' + rel + '"]:not(#colorbox a[rel="' + rel + '"])').length > 1) {
+                $related = $('a.colorbox-node-gallery[rel="' + rel + '"]:not(#colorbox a[rel="' + rel + '"])');
 
                 // filter $related array by href, to have mutliple colorbox links to the same target
                 // appear as one item in the gallery only
                 var $related_unique = [];
-                $related.each(function() {
+                $related.each(function () {
                     $.findHref($related_unique, this.href);
                     if (!$.findHref($related_unique, this.href).length) {
                         $related_unique.push(this);
@@ -164,11 +195,11 @@
                 // Show our gallery buttons
                 $('#cboxPrevious, #cboxNext').show();
                 $.colorbox.next = function () {
-                    index = getIndex(1);
+                    index = get_index(1);
                     $related[index].click();
                 };
                 $.colorbox.prev = function () {
-                    index = getIndex(-1);
+                    index = get_index(-1);
                     $related[index].click();
                 };
 
@@ -197,18 +228,18 @@
                 });
             }
 
-            function getIndex(increment) {
+            function get_index(increment) {
                 var max = $related.length;
                 var newIndex = (idx + increment) % max;
                 return (newIndex < 0) ? max + newIndex : newIndex;
             }
 
         }
-    }
+    };
 
     // Find a colorbox link by href in an array
-    $.findHref = function(items, href) {
-        return $.grep(items, function(n, i){
+    $.findHref = function (items, href) {
+        return $.grep(items, function (n, i) {
             return n.href == href;
         });
     };
@@ -231,6 +262,7 @@
                 case 'yes':
                     e[2] = true;
                     break;
+
                 case 'false':
                 case 'no':
                     e[2] = false;
@@ -252,15 +284,44 @@
         return {'innerWidth':innerWidth,'innerHeight':innerHeight};
     };
 
-    $.getParameterByName = function(name, href) {
+    $.getParameterByName = function (name, href) {
         name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
         var regexString = "[\\?&]" + name + "=([^&#]*)";
         var regex = new RegExp(regexString);
         var found = regex.exec(href);
-        if(found == null)
+        if (found == null) {
             return "";
-        else
+        }
+        else {
             return decodeURIComponent(found[1].replace(/\+/g, " "));
-    }
+        }
+    };
 
+    /**
+     * Returns true if the passed-in href string is safe for colorbox_load.
+     *
+     * @param href
+     *   The href string to be tested.
+     *
+     * @return
+     *   Boolean true if the href is safe.
+     */
+    function hrefIsSafe(href) {
+      var normalizedUrl = Drupal.absoluteUrl(href);
+
+      // Only local, non-file-system URLs are allowed.
+      if (!Drupal.urlIsLocal(normalizedUrl)) {
+        return false;
+      }
+
+      // Reject uploaded files from the public or private file system.
+      if (normalizedUrl.indexOf(Drupal.settings.colorbox.file_public_path) !== -1 ||
+        normalizedUrl.match(/\/system\/files\//) ||
+        normalizedUrl.match(/[?|&]q=system\/files\//)) {
+        return false;
+      }
+
+      // All checks passed.
+      return true;
+    }
 })(jQuery);

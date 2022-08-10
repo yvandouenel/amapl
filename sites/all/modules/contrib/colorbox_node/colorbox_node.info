@@ -6,9 +6,8 @@ dependencies[] = "colorbox"
 files[] = views/colorbox_node_handler_field_colorbox_node.inc
 files[] = views/colorbox_node_handler_field_colorbox_node_link.inc
 stylesheets[all][] = colorbox_node.css
-; Information added by Drupal.org packaging script on 2015-04-13
-version = "7.x-3.5"
+; Information added by Drupal.org packaging script on 2022-06-24
+version = "7.x-3.8"
 core = "7.x"
 project = "colorbox_node"
-datestamp = "1428944498"
-
+datestamp = "1656048765"
