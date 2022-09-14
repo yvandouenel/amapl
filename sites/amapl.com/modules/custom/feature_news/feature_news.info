@@ -40,6 +40,7 @@ features[ds_layout_settings][] = node|news|default
 features[ds_view_modes][] = zoom
 features[fe_block_settings][] = aggregator-category-1
 features[fe_block_settings][] = aggregator-feed-1
+features[fe_block_settings][] = aggregator-feed-2
 features[features_api][] = api:2
 features[field_base][] = field_flux_rss
 features[field_base][] = field_news_article_linked

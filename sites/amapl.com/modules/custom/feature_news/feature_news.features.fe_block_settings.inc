@@ -66,8 +66,8 @@ function feature_news_default_fe_block_settings() {
         'weight' => 0,
       ),
       'bootamapl' => array(
-        'region' => 'content',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'bootamapl',
         'weight' => -33,
       ),
@@ -84,8 +84,46 @@ function feature_news_default_fe_block_settings() {
         'weight' => 0,
       ),
     ),
-    'title' => 'Actualités base documentaire BNC',
+    'title' => 'Actualités BNCplus',
     'visibility' => 1,
+  );
+
+  $export['aggregator-feed-2'] = array(
+    'cache' => 1,
+    'custom' => 0,
+    'delta' => 'feed-2',
+    'module' => 'aggregator',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'bootamapl' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bootamapl',
+        'weight' => 0,
+      ),
+      'lppl' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'lppl',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'NEWS BNCplus',
+    'visibility' => 0,
   );
 
   return $export;

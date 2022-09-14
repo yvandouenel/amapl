@@ -52,7 +52,15 @@
     <h3 class="title-block-aggregator"><?php print $title; ?></h3>
   <?php endif;?>
   <?php print render($title_suffix); ?>
+  <div class="home-rss" >
+    <div>
+      <?php print $content ?>
+    </div>
 
-  <?php print $content ?>
+    <div class="more-link both">
+      <a href="/s-informer/actualites">Voir toutes les actualités</a>
+    </div>
+  </div>
+
 
 </section>
