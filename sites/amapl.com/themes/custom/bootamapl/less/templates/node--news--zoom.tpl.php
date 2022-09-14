@@ -127,8 +127,9 @@ $target = (isset($node->field_news_new_window['und'][0]['value']) &&
 </div>
 <?php
 if(isset($url)) {
+  //<a href="/' . $url . '" target="' . $target . '">Voir toutes les actualités</a>
   print '<div class="more-link ' . $title_class . '">
-  <a href="/' . $url . '" target="' . $target . '">Lire la suite</a>
+  <a href="/s-informer/actualites">Voir toutes les actualités</a>
   </div>';
 }
 
