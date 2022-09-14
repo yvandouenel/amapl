@@ -54,8 +54,9 @@
   <?php print render($title_suffix); ?>
 
   <?php print $content ?>
+
   <div class="more-link both">
-    <a href="/s-informer/actualites">Voir toutes les actualités</a>
+    <a target="_blank" href="https://www.bncplus.fr/">Visiter BNCplus</a>
   </div>
 
 </section>
