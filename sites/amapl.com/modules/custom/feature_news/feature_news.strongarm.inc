@@ -98,9 +98,6 @@ function feature_news_strongarm() {
       'sessions' => array(
         'custom_settings' => FALSE,
       ),
-      'list' => array(
-        'custom_settings' => FALSE,
-      ),
     ),
     'extra_fields' => array(
       'form' => array(
