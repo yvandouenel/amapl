@@ -7,7 +7,9 @@
 /* screen size *******************/
 /* couleurs */
 /*#5EB8D5*/
+/*@blue-light-pl-amapl:   #4BCDF8; /*#5EB8D5*/
 /*#5EB8D5*/
+/*@orange-light-caa-amapl: #FFB241;*/
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -7817,10 +7819,10 @@ img {
     background-size: 400px 108px !important;
   }
   .link-button.link-blue-button {
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 -4px;
   }
   .link-button.link-orange-button {
-    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 -4px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -8135,7 +8137,7 @@ h2.complex-title {
   background-color: #6CF1B4 !important;
 }
 .title-drop-down.title-pl-drop-down {
-  background: #4BCDF8 url(../images/picto-deroule-bleu.png) no-repeat 96% 4px;
+  background: #4bcdf857 url(../images/picto-deroule-bleu.png) no-repeat 96% 4px;
 }
 .title-drop-down.title-pl-drop-down:before {
   content: "";
@@ -8161,7 +8163,7 @@ h2.complex-title {
   right: -25px;
 }
 .title-drop-down.title-caa-drop-down {
-  background: #FFB241 url(../images/picto-deroule-orange.png) no-repeat 96% 4px;
+  background: #ffb2417a url(../images/picto-deroule-orange.png) no-repeat 96% 4px;
 }
 .title-drop-down.title-caa-drop-down:before {
   content: "";
@@ -8209,8 +8211,8 @@ h3 {
 .field ul.ul-blue {
   padding: 15px 20px;
   margin: 30px 0 30px 10px;
-  background-color: #4BCDF8;
-  color: white;
+  background-color: #4bcdf857;
+  color: black;
   border-left: 15px solid white;
   position: relative;
 }
@@ -8229,8 +8231,8 @@ h3 {
 .field ul.ul-orange {
   padding: 15px 20px;
   margin: 30px 0 30px 10px;
-  background-color: #FFB241;
-  color: white;
+  background-color: #ffb2417a;
+  color: black;
   border-left: 15px solid white;
   position: relative;
   margin-left: 10px;
@@ -8282,8 +8284,8 @@ h3 {
 .para-blue {
   padding: 15px 20px;
   margin: 30px 0 30px 10px;
-  background-color: #4BCDF8;
-  color: white;
+  background-color: #4bcdf857;
+  color: black;
   border-left: 15px solid white;
   position: relative;
 }
@@ -8299,8 +8301,8 @@ h3 {
 .para-orange {
   padding: 15px 20px;
   margin: 30px 0 30px 10px;
-  background-color: #FFB241;
-  color: white;
+  background-color: #ffb2417a;
+  color: black;
   border-left: 15px solid white;
   position: relative;
   margin-left: 10px;
@@ -9789,10 +9791,10 @@ body.not-front #under-main-title h2.page-header.simple-title {
     background-size: 400px 108px !important;
   }
   .button-submit.link-blue-button {
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 -4px;
   }
   .button-submit.link-orange-button {
-    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 -4px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -9852,7 +9854,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
   /* Bouton de soumission */
 }
 .page-eform-submit.page-eform fieldset legend {
-  background-color: #4BCDF8;
+  background-color: #4bcdf857;
 }
 .page-eform-submit.page-eform fieldset legend .panel-title {
   color: white !important;
@@ -9888,10 +9890,10 @@ body.not-front #under-main-title h2.page-header.simple-title {
     background-size: 400px 108px !important;
   }
   .page-eform-submit.page-eform button#edit-submit.link-blue-button {
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 -4px;
   }
   .page-eform-submit.page-eform button#edit-submit.link-orange-button {
-    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 -4px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -9927,10 +9929,10 @@ body.not-front #under-main-title h2.page-header.simple-title {
     background-size: 400px 108px !important;
   }
   .page-eform-submit.page-eform button#edit-submit.link-blue-button {
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 -4px;
   }
   .page-eform-submit.page-eform button#edit-submit.link-orange-button {
-    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 -4px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -10061,10 +10063,10 @@ body.not-front #under-main-title h2.page-header.simple-title {
     background-size: 400px 108px !important;
   }
   .page-eform-submit.page-eform-submit-inscription-amapl-caa button#edit-submit.link-blue-button {
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 -4px;
   }
   .page-eform-submit.page-eform-submit-inscription-amapl-caa button#edit-submit.link-orange-button {
-    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 -4px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -10100,10 +10102,10 @@ body.not-front #under-main-title h2.page-header.simple-title {
     background-size: 400px 108px !important;
   }
   .page-eform-submit.page-eform-submit-inscription-amapl-caa button#edit-submit.link-blue-button {
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 -4px;
   }
   .page-eform-submit.page-eform-submit-inscription-amapl-caa button#edit-submit.link-orange-button {
-    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 -4px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -10267,10 +10269,10 @@ body.not-front #under-main-title h2.page-header.simple-title {
     background-size: 400px 108px !important;
   }
   .page-entityform #edit-save.link-blue-button {
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 -4px;
   }
   .page-entityform #edit-save.link-orange-button {
-    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 -4px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -10372,10 +10374,10 @@ body.not-front #under-main-title h2.page-header.simple-title {
     background-size: 400px 108px !important;
   }
   .page-entityform.caa-form #edit-save.link-blue-button {
-    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 0;
+    background: url(../images/fond-btn-adh-BNC.png) no-repeat 0 -4px;
   }
   .page-entityform.caa-form #edit-save.link-orange-button {
-    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 0;
+    background: url(../images/fond-btn-adh-CAA.png) no-repeat 0 -4px;
   }
 }
 @media screen and (max-width: 1200px) {
