@@ -69,7 +69,7 @@
         margin: 0 20px 0 0;
       }
     }
-    
+
   }
 }
 .front {
@@ -260,8 +260,11 @@
         }
       }
       img {
-        max-width: 80%;
+        max-width: 20%;
         margin-top: 20px;
+        position: absolute;
+        bottom: 0;
+        left: 100px;
       }
     }
     &.col-home-second {
@@ -299,8 +302,11 @@
       }
 
       img {
-        max-width: 80%;
+        max-width: 20%;
         margin-top: 20px;
+        position: absolute;
+        bottom: 0;
+        right: 100px;
       }
     }
   }
@@ -354,8 +360,61 @@
       width: 95%;
     }
   }
-  /* Actualités ******************************************/
-  #block-views-news-block-news {
+  /* Actualités devenus rss de bncplus******************************************/
+  .col-news {
+    background: url(../images/home_actu_img.jpg) no-repeat 0 0;
+    div.home-rss{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      min-height: 350px;
+    }
+    h3.title-block-aggregator {
+      display: table;
+      padding: 10px 25px;
+      background-color: white;
+
+      margin: 300px auto 20px auto;
+      font-size: 2em;
+      color: black;
+      text-align: center;
+      z-index: 1;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin: 0;
+        padding: 0;
+        a {
+          position: relative;
+          font-size: 2rem;
+          color: black;
+          display: block;
+         margin-bottom: 20px;
+          padding-left: 90px;
+          &:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: "";
+            width: 80px;
+            height: 72px;
+            display: table;
+            border-right: 5px solid white;
+            background: white url(../images/picto_formation_bleu.png) no-repeat 0 0;
+            background-size: 60px 60px;
+
+          }
+        }
+      }
+    }
+    a[href="/aggregator/sources/2"] {
+      display: none;
+    }
+  }
+  /*#block-views-news-block-news {
     position: static;
     padding-bottom: 40px;
     .contextual-links-region {
@@ -376,6 +435,6 @@
       bottom: 0;
       width: 95%;
     }
-  }
+  }*/
 }
 /* Fin des 3 colonnes : training, zoom et news ********************/

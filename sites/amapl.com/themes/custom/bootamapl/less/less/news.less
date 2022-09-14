@@ -112,15 +112,19 @@
   }
   #block-aggregator-feed-1 {
     background-color: #61cff7;
-    .more-link {
+    a[href="/aggregator/sources/1"] {
       display: none;
+    }
+    .more-link a {
+      text-align: left;
+      color: black;
     }
     @media screen and (min-width: @screen-md) {
       margin-top: 90px;
     }
     padding: 20px 10px;
     .title-block-aggregator {
-      color: white;
+      color: black;
       font-size: 1.4em;
       margin-top: 0;
     }
@@ -133,7 +137,7 @@
         margin: 0;
         padding: 0;
         a {
-          color: white;
+          color: black;
           font-size: 1.2em;
           display: block;
           margin-bottom: 30px;

@@ -6845,84 +6845,84 @@ button.close {
   font-style: italic;
   font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOiCnqEu92Fr1Mu51QrEzAdKg.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOiCnqEu92Fr1Mu51QrEzAdKg.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: italic;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOjCnqEu92Fr1Mu51TjASc6CsE.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TjASc6CsE.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOkCnqEu92Fr1Mu51xIIzc.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xIIzc.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: italic;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOjCnqEu92Fr1Mu51S7ACc6CsE.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51S7ACc6CsE.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOjCnqEu92Fr1Mu51TzBic6CsE.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic6CsE.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: italic;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOjCnqEu92Fr1Mu51TLBCc6CsE.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TLBCc6CsE.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOkCnqEu92Fr1MmgVxIIzc.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1MmgVxIIzc.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmSU5fBBc9.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc9.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmEU9fBBc9.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc9.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc9.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/roboto/v29/KFOlCnqEu92Fr1MmYUtfBBc9.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmYUtfBBc9.ttf) format('truetype');
 }
 html.overlay-open .navbar-fixed-top {
   z-index: 400;
@@ -8867,8 +8867,11 @@ body.not-front #under-main-title h2.page-header.simple-title {
   left: 25%;
 }
 .two-cols-home > div.col-home-first img {
-  max-width: 80%;
+  max-width: 20%;
   margin-top: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 100px;
 }
 .two-cols-home > div.col-home-second {
   background: #FAF7F7 url(../images/home_circl_caa-home.png) no-repeat 50% 0;
@@ -8902,8 +8905,11 @@ body.not-front #under-main-title h2.page-header.simple-title {
   z-index: -1;
 }
 .two-cols-home > div.col-home-second img {
-  max-width: 80%;
+  max-width: 20%;
   margin-top: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
 }
 .h3-bottom-home.pl a {
   background: url(../images/picto_formation_bleu.png) no-repeat 0 0;
@@ -8950,7 +8956,29 @@ body.not-front #under-main-title h2.page-header.simple-title {
   margin-top: 30px;
   /* training ********************************************************/
   /* zoom *********************************************/
-  /* Actualités ******************************************/
+  /* Actualités devenus rss de bncplus******************************************/
+  /*#block-views-news-block-news {
+    position: static;
+    padding-bottom: 40px;
+    .contextual-links-region {
+      position: static;
+    }
+    h2.block-title {
+      .title-home-3-cols;
+      z-index: 1;
+    }
+    #top-news {
+      .img-home-3-cols;
+    }
+    .h3-bottom-home {
+      .h3-zoom-news;
+    }
+    .more-link a {
+      position: absolute;
+      bottom: 0;
+      width: 95%;
+    }
+  }*/
 }
 @media screen and (min-width: 992px) {
   .three-cols-home {
@@ -9038,65 +9066,56 @@ body.not-front #under-main-title h2.page-header.simple-title {
   bottom: 0;
   width: 95%;
 }
-.three-cols-home #block-views-news-block-news {
-  position: static;
-  padding-bottom: 40px;
+.three-cols-home .col-news {
+  background: url(../images/home_actu_img.jpg) no-repeat 0 0;
 }
-.three-cols-home #block-views-news-block-news .contextual-links-region {
-  position: static;
+.three-cols-home .col-news div.home-rss {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 350px;
 }
-.three-cols-home #block-views-news-block-news h2.block-title {
+.three-cols-home .col-news h3.title-block-aggregator {
   display: table;
   padding: 10px 25px;
   background-color: white;
-  width: 50%;
-  margin: 240px auto 0 auto;
-  text-transform: uppercase;
+  margin: 300px auto 20px auto;
   font-size: 2em;
   color: black;
   text-align: center;
   z-index: 1;
 }
-@media screen and (max-width: 992px) {
-  .three-cols-home #block-views-news-block-news h2.block-title {
-    margin: 20px auto 0 auto;
-  }
+.three-cols-home .col-news ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-@media screen and (min-width: 1430px) {
-  .three-cols-home #block-views-news-block-news h2.block-title {
-    margin: 300px auto 0 auto;
-  }
+.three-cols-home .col-news ul li {
+  margin: 0;
+  padding: 0;
 }
-@media screen and (min-width: 992px) {
-  .three-cols-home #block-views-news-block-news #top-news {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
+.three-cols-home .col-news ul li a {
+  position: relative;
+  font-size: 2rem;
+  color: black;
+  display: block;
+  margin-bottom: 20px;
+  padding-left: 90px;
 }
-.three-cols-home #block-views-news-block-news .h3-bottom-home.pl a {
-  background: url(../images/picto_actu_bleu.png) no-repeat 0 0;
-  background-size: 60px 60px;
-}
-.three-cols-home #block-views-news-block-news .h3-bottom-home.caa a {
-  background: url(../images/picto_actu_orange.png) no-repeat 0 0;
-  background-size: 60px 60px;
-}
-.three-cols-home #block-views-news-block-news .h3-bottom-home a {
-  background: url(../images/picto_actu_mixte.png) no-repeat 0 0;
-  background-size: 60px 60px;
-}
-.three-cols-home #block-views-news-block-news .h3-bottom-home a:hover {
-  text-decoration: none;
-  background-color: #6CF1B4;
-  border-radius: 30px 8px 8px 30px;
-  background-clip: padding-box;
-}
-.three-cols-home #block-views-news-block-news .more-link a {
+.three-cols-home .col-news ul li a:before {
   position: absolute;
-  bottom: 0;
-  width: 95%;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 80px;
+  height: 72px;
+  display: table;
+  border-right: 5px solid white;
+  background: white url(../images/picto_formation_bleu.png) no-repeat 0 0;
+  background-size: 60px 60px;
+}
+.three-cols-home .col-news a[href="/aggregator/sources/2"] {
+  display: none;
 }
 /* Fin des 3 colonnes : training, zoom et news ********************/
 /* page de liste d'actualités */
@@ -9176,8 +9195,12 @@ body.not-front #under-main-title h2.page-header.simple-title {
   background-color: #61cff7;
   padding: 20px 10px;
 }
-.page-s-informer-actualites #block-aggregator-feed-1 .more-link {
+.page-s-informer-actualites #block-aggregator-feed-1 a[href="/aggregator/sources/1"] {
   display: none;
+}
+.page-s-informer-actualites #block-aggregator-feed-1 .more-link a {
+  text-align: left;
+  color: black;
 }
 @media screen and (min-width: 992px) {
   .page-s-informer-actualites #block-aggregator-feed-1 {
@@ -9185,7 +9208,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
   }
 }
 .page-s-informer-actualites #block-aggregator-feed-1 .title-block-aggregator {
-  color: white;
+  color: black;
   font-size: 1.4em;
   margin-top: 0;
 }
@@ -9199,7 +9222,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
   padding: 0;
 }
 .page-s-informer-actualites #block-aggregator-feed-1 > ul > li a {
-  color: white;
+  color: black;
   font-size: 1.2em;
   display: block;
   margin-bottom: 30px;
