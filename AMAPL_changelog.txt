@@ -1,0 +1,3 @@
+AMAPL 1.0 - 2022-09-14
+----------------------------
+Première release sur la branche main alors que cela aurait dû être fait depuis des années ...
