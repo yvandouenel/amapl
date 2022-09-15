@@ -1,3 +1,7 @@
+AMAPL 1.0.1 - 2022-09-15
+----------------------------
+Amélioration de la page de vue des formations (modification de la zone de recherche + améliorations css responsive.)
+
 AMAPL 1.0.0 - 2022-09-14
 ----------------------------
 Première release sur la branche main alors que cela aurait dû être fait depuis des années ...
