@@ -4,6 +4,27 @@
     font-size: 1.3em !important;
   }
 }
+#block-views-exp-trainings-list-sessions {
+  @media screen and (min-width: @screen-md) {
+    background-color: @light-grey-amapl;
+    margin: 0 -500px;
+    #views-exposed-form-trainings-list-sessions {
+      margin: 0 500px;
+    }
+  }
+  @media screen and (max-width: @screen-md) {
+
+    #views-exposed-form-trainings-list-sessions {
+      label {
+        width: 100px;
+      }
+      input.form-text {
+        width: 200px;
+      }
+    }
+  }
+}
+
 .group-stat-logos {
   margin-top: 35px;
   display: flex;
@@ -341,7 +362,7 @@
         margin: 0;
         padding: 0;
         width: auto !important;
-        
+
       }
     }
   }

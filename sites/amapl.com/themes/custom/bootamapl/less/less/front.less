@@ -265,6 +265,9 @@
         position: absolute;
         bottom: 0;
         left: 100px;
+        @media screen and (max-width: @screen-md) {
+          left: 0;
+        }
       }
     }
     &.col-home-second {
@@ -307,6 +310,9 @@
         position: absolute;
         bottom: 0;
         right: 100px;
+        @media screen and (max-width: @screen-md) {
+          right: 0;
+        }
       }
     }
   }
