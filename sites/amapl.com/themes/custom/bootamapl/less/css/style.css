@@ -8875,6 +8875,11 @@ body.not-front #under-main-title h2.page-header.simple-title {
   bottom: 0;
   left: 100px;
 }
+@media screen and (max-width: 992px) {
+  .two-cols-home > div.col-home-first img {
+    left: 0;
+  }
+}
 .two-cols-home > div.col-home-second {
   background: #FAF7F7 url(../images/home_circl_caa-home.png) no-repeat 50% 0;
   padding-top: 150px;
@@ -8912,6 +8917,11 @@ body.not-front #under-main-title h2.page-header.simple-title {
   position: absolute;
   bottom: 0;
   right: 100px;
+}
+@media screen and (max-width: 992px) {
+  .two-cols-home > div.col-home-second img {
+    right: 100px;
+  }
 }
 .h3-bottom-home.pl a {
   background: url(../images/picto_formation_bleu.png) no-repeat 0 0;
