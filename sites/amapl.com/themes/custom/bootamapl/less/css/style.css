@@ -8920,7 +8920,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
 }
 @media screen and (max-width: 992px) {
   .two-cols-home > div.col-home-second img {
-    right: 100px;
+    right: 0;
   }
 }
 .h3-bottom-home.pl a {
@@ -9263,6 +9263,23 @@ body.not-front #under-main-title h2.page-header.simple-title {
 /* page de liste des formations *************************/
 .field-name-field-texte-formations p {
   font-size: 1.3em !important;
+}
+@media screen and (min-width: 992px) {
+  #block-views-exp-trainings-list-sessions {
+    background-color: #FAF7F7;
+    margin: 0 -500px;
+  }
+  #block-views-exp-trainings-list-sessions #views-exposed-form-trainings-list-sessions {
+    margin: 0 500px;
+  }
+}
+@media screen and (max-width: 992px) {
+  #block-views-exp-trainings-list-sessions #views-exposed-form-trainings-list-sessions label {
+    width: 100px;
+  }
+  #block-views-exp-trainings-list-sessions #views-exposed-form-trainings-list-sessions input.form-text {
+    width: 200px;
+  }
 }
 .group-stat-logos {
   margin-top: 35px;
