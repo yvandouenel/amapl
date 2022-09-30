@@ -1,0 +1,51 @@
+<?php
+// This allows drupal_var_export() to work.
+require_once 'includes/utility.inc';
+
+/**
+ * Implements hook_menu().
+ */
+function amapl_to_stripe_menu() {
+  $items = [];
+
+  $items['vers-stripe'] = [
+    'title' => 'Paiement de votre abonnement',
+    'page callback' => 'dump_stripe_iframe',
+    'access callback' => TRUE,
+    'access arguments' => ['access content'],
+    // permet de gérer les droits d'accès
+  ];
+
+  return $items;
+}
+
+function dump_stripe_iframe($payment_id = 0) {
+  $info_to_dump = [];
+  if($payment_id) {
+    $payment = entity_load_single('payment', $payment_id);
+    $entity_form_id = $payment->context_data['entity_id'];
+    $entity_form = entity_load_single('entityform', $entity_form_id);
+    $email_subscriber = $entity_form->field_email['und'][0]['email'];
+
+    $info_to_dump = [
+      'title' => 'Paiement sur stripe',
+      'payment_id' => $payment_id,
+      'entity_form_id' => $entity_form_id,
+      'email_subscriber' => $email_subscriber,
+    ];
+  }
+
+  return theme('amapl_to_stripe', $info_to_dump);
+}
+
+/*
+    Implements hook_theme();
+*/
+function amapl_to_stripe_theme($existing, $type, $theme, $path) {
+  return [
+    'amapl_to_stripe' => [
+      'variables' => ['title' => NULL],
+      'template' => 'amapl-to-stripe-page',
+    ],
+  ];
+}

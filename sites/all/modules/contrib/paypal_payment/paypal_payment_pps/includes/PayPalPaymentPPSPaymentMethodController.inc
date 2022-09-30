@@ -32,11 +32,11 @@ class PayPalPaymentPPSPaymentMethodController extends PaymentMethodController im
   /**
    * {@inheritdoc}
    */
-  public $controller_data_defaults = array(
+  public $controller_data_defaults = [
     'email_address' => '',
     'server' => self::SERVER_URL,
     'capture' => self::CAPTURE_AUTOMATIC,
-  );
+  ];
 
   /**
    * {@inheritdoc}
@@ -47,8 +47,33 @@ class PayPalPaymentPPSPaymentMethodController extends PaymentMethodController im
    * Constructs a new instance.
    */
   public function __construct() {
-    $currency_codes = array('AUD', 'BRL', 'CAD', 'CHF', 'CZK', 'DKK', 'EUR', 'GBP', 'HKD', 'HUF', 'ILS', 'JPY', 'MXN', 'MYR', 'NOK', 'NZD', 'PHP', 'PLN', 'SEK', 'SGD', 'THB', 'TRY', 'TWD', 'USD');
-    $this->currencies = array_fill_keys($currency_codes, array());
+    $currency_codes = [
+      'AUD',
+      'BRL',
+      'CAD',
+      'CHF',
+      'CZK',
+      'DKK',
+      'EUR',
+      'GBP',
+      'HKD',
+      'HUF',
+      'ILS',
+      'JPY',
+      'MXN',
+      'MYR',
+      'NOK',
+      'NZD',
+      'PHP',
+      'PLN',
+      'SEK',
+      'SGD',
+      'THB',
+      'TRY',
+      'TWD',
+      'USD',
+    ];
+    $this->currencies = array_fill_keys($currency_codes, []);
     $this->title = 'PayPal Payments Standard';
   }
 
@@ -64,7 +89,7 @@ class PayPalPaymentPPSPaymentMethodController extends PaymentMethodController im
   public function execute(Payment $payment) {
     entity_save('payment', $payment);
     $_SESSION['paypal_payment_pps_pid'] = $payment->pid;
-    drupal_goto('paypal_payment_pps/redirect/' . $payment->pid);
+    drupal_goto('/vers-stripe/'.$payment->pid);
   }
 
   /**
