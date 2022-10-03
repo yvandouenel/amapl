@@ -23,6 +23,7 @@ function dump_stripe_iframe($payment_id = 0) {
   $info_to_dump = [];
   if($payment_id) {
     $payment = entity_load_single('payment', $payment_id);
+    $payment_amount = round(floatval($payment->line_items[$payment->context_data['entity_id']]->amount * 100));
     $entity_form_id = $payment->context_data['entity_id'];
     $entity_form = entity_load_single('entityform', $entity_form_id);
     $email_subscriber = $entity_form->field_email['und'][0]['email'];
@@ -30,6 +31,7 @@ function dump_stripe_iframe($payment_id = 0) {
     $info_to_dump = [
       'title' => 'Paiement sur stripe',
       'payment_id' => $payment_id,
+      'payment_amount' => $payment_amount,
       'entity_form_id' => $entity_form_id,
       'email_subscriber' => $email_subscriber,
     ];
