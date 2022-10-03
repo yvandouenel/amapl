@@ -10,17 +10,18 @@
  * Available variables:
  * $title
  * $payment_id
+ * payment_amount
  * $entity_form_id
  * $email_subscriber
  * @ingroup templates
  */
 ?>
 <?php if (!empty($entity_form_id)): ?>
-  <iframe style="height: 80vh;"
+  <iframe style="height: 80vh;border:0;"
           id="iframe-stripe"
           title="Inline Frame Example"
           width="100%"
-          src="http://local.paiementd9.my?amount=${amount}&payment_id=${<?php print $payment_id; ?>&email=<?php print $email_subscriber; ?>">
+          src="http://local.paiementd9.my?amount=<?php print $payment_amount; ?>&payment_id=<?php print $payment_id; ?>&email=<?php print $email_subscriber; ?>">
   </iframe>
 <?php else: ?>
   <h2>Nous n'avons pas pu récupérer les informations concernant votre paiement,
