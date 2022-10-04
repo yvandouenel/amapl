@@ -32,10 +32,10 @@ function dump_stripe_iframe($payment_id = 0) {
       case "http://local.amapl.my":
         $base_url = "http://local.paiementd9.my/";
         break;
-      case "https://rece.amapl.com/":
+      case "https://rece.amapl.com":
         $base_url = "https://recepaiement.amapl.com/";
         break;
-      case "https://amapl.com/":
+      case "https://amapl.com":
         echo "https://paiement.amapl.com/";
         break;
     }
