@@ -21,7 +21,7 @@
           id="iframe-stripe"
           title="Inline Frame Example"
           width="100%"
-          src="http://local.paiementd9.my?amount=<?php print $payment_amount; ?>&payment_id=<?php print $payment_id; ?>&email=<?php print $email_subscriber; ?>">
+          src="https://recepaiement.amapl.com/?amount=<?php print $payment_amount; ?>&payment_id=<?php print $payment_id; ?>&email=<?php print $email_subscriber; ?>">
   </iframe>
 <?php else: ?>
   <h2>Nous n'avons pas pu récupérer les informations concernant votre paiement,
