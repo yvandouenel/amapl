@@ -27,6 +27,19 @@ function dump_stripe_iframe($payment_id = 0) {
     $entity_form_id = $payment->context_data['entity_id'];
     $entity_form = entity_load_single('entityform', $entity_form_id);
     $email_subscriber = $entity_form->field_email['und'][0]['email'];
+    $base_url = "";
+    switch ($GLOBALS['base_root']) {
+      case "http://local.amapl.my":
+        $base_url = "http://local.paiementd9.my/";
+        break;
+      case "https://rece.amapl.com/":
+        $base_url = "https://recepaiement.amapl.com/";
+        break;
+      case "https://amapl.com/":
+        echo "https://paiement.amapl.com/";
+        break;
+    }
+
 
     $info_to_dump = [
       'title' => 'Paiement sur stripe',
@@ -34,6 +47,8 @@ function dump_stripe_iframe($payment_id = 0) {
       'payment_amount' => $payment_amount,
       'entity_form_id' => $entity_form_id,
       'email_subscriber' => $email_subscriber,
+      'base_url' => $base_url,
+
     ];
   }
 

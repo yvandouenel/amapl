@@ -13,15 +13,17 @@
  * payment_amount
  * $entity_form_id
  * $email_subscriber
+ * $base_url
  * @ingroup templates
  */
 ?>
 <?php if (!empty($entity_form_id)): ?>
+
   <iframe style="height: 80vh;border:0;"
           id="iframe-stripe"
           title="Inline Frame Example"
           width="100%"
-          src="https://recepaiement.amapl.com/?amount=<?php print $payment_amount; ?>&payment_id=<?php print $payment_id; ?>&email=<?php print $email_subscriber; ?>">
+          src="<?php print $base_url;?>?amount=<?php print $payment_amount; ?>&payment_id=<?php print $payment_id; ?>&email=<?php print $email_subscriber; ?>">
   </iframe>
 <?php else: ?>
   <h2>Nous n'avons pas pu récupérer les informations concernant votre paiement,
