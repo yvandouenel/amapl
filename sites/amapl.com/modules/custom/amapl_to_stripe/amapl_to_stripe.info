@@ -1,0 +1,4 @@
+name = Amapl To Stripe
+description = Une page qui récupère les données après la création d'un paiement pour ouvrir une
+package = custom
+core = 7.x
