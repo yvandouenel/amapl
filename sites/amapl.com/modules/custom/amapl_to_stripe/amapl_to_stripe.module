@@ -9,7 +9,7 @@ function amapl_to_stripe_menu() {
   $items = [];
 
   $items['vers-stripe'] = [
-    'title' => 'Paiement de votre abonnement',
+    'title' => 'Paiement',
     'page callback' => 'dump_stripe_iframe',
     'access callback' => TRUE,
     'access arguments' => ['access content'],
