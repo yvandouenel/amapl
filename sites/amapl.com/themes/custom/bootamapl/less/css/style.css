@@ -8717,116 +8717,125 @@ body.not-front #under-main-title h2.page-header.simple-title {
 .front .view-display-id-block_zoom .field-name-body {
   font-size: 1.5em;
 }
-.front #under-main-container {
-  background: url(../images/home_bg_4_raisons.png) no-repeat 50% 0;
-}
-.front #block-views-le-saviez-vous-ss-block {
-  height: 340px;
-  position: relative;
-  color: white;
-}
-.front #block-views-le-saviez-vous-ss-block #quatre-raisons {
-  font-size: 3.2em;
-  margin: 25px 0;
-}
-.front #block-views-le-saviez-vous-ss-block .views-field-body {
-  font-size: 1.6em;
-}
-.front #block-views-le-saviez-vous-ss-block .views-field-body a {
-  color: #6CF1B4;
-}
-.front #block-views-le-saviez-vous-ss-block #views_slideshow_controls_text_le_saviez_vous_ss-block_1 {
-  position: absolute;
-  bottom: 50px;
-  width: 250px;
-  display: flex;
-  justify-content: space-between;
-  left: 100px;
-}
-.front #block-views-le-saviez-vous-ss-block #views_slideshow_controls_text_le_saviez_vous_ss-block_1 #views_slideshow_controls_text_pause_le_saviez_vous_ss-block_1 {
-  display: none;
-}
-.front #block-views-le-saviez-vous-ss-block #views_slideshow_controls_text_le_saviez_vous_ss-block_1 #views_slideshow_controls_text_previous_le_saviez_vous_ss-block_1 a {
-  background: url(../images/prev_btn.png) no-repeat 0 0;
-  width: 48px;
-  height: 48px;
-  text-indent: -2000px;
-  display: block;
-}
-.front #block-views-le-saviez-vous-ss-block #views_slideshow_controls_text_le_saviez_vous_ss-block_1 #views_slideshow_controls_text_next_le_saviez_vous_ss-block_1 a {
-  background: url(../images/next_btn.png) no-repeat 0 0;
-  width: 48px;
-  height: 48px;
-  text-indent: -2000px;
-  display: block;
-}
-.front #block-views-le-saviez-vous-ss-block #widget_pager_bottom_le_saviez_vous_ss-block_1 {
-  position: absolute;
-  z-index: 10;
-  bottom: 64px;
-  width: 130px;
-  display: flex;
-  justify-content: space-around;
-  left: 150px;
-}
-.front #block-views-le-saviez-vous-ss-block #widget_pager_bottom_le_saviez_vous_ss-block_1 .views_slideshow_pager_field_item a {
-  display: block;
-  width: 18px;
-  height: 18px;
-  text-indent: -2000px;
-  overflow: hidden;
-}
-.front #block-views-le-saviez-vous-ss-block #widget_pager_bottom_le_saviez_vous_ss-block_1 .views_slideshow_pager_field_item a:before {
-  content: "";
-  width: 18px;
-  height: 18px;
-  display: block;
-  background: url(../images/little_disk.png) no-repeat 0 0;
-  opacity: 0.5;
-}
-.front #block-views-le-saviez-vous-ss-block #widget_pager_bottom_le_saviez_vous_ss-block_1 .views_slideshow_pager_field_item.active a:before {
-  background: url(../images/little_disk.png) no-repeat 0 0;
-  opacity: 1;
-}
-@media screen and (min-width: 992px) {
-  .front #block-views-le-saviez-vous-ss-block .views-field-body {
-    font-size: 1.8em;
-    width: 500px;
+.front {
+  /*#under-main-container {
+    background: url(../images/home_bg_4_raisons.png) no-repeat 50% 0;
   }
-}
-@media screen and (max-width: 992px) {
-  .front #block-views-le-saviez-vous-ss-block .views-field-body {
-    width: 100%;
-  }
-  .front #block-views-le-saviez-vous-ss-block #home-ss-illustrations {
-    display: none;
-  }
-  .front #block-views-le-saviez-vous-ss-block #views_slideshow_controls_text_le_saviez_vous_ss-block_1 {
-    left: 50px;
-  }
-  .front #block-views-le-saviez-vous-ss-block #widget_pager_bottom_le_saviez_vous_ss-block_1 {
-    left: 110px;
-  }
-}
-.front #block-views-le-saviez-vous-ss-block #home-ss-illustrations {
-  position: absolute;
-  top: -20px;
-  right: 0px;
-  width: 650px;
-  height: 355px;
-  overflow: hidden;
-}
-@media screen and (min-width: 1430px) {
-  .front #block-views-le-saviez-vous-ss-block #home-ss-illustrations {
-    right: 7%;
-    top: -20px;
-  }
-}
-.front #block-views-le-saviez-vous-ss-block #home-ss-illustrations img {
-  max-width: 650px;
-  position: absolute;
-  top: 0px;
-  right: 0px;
+  #block-views-le-saviez-vous-ss-block {
+    height: 340px;
+    position: relative;
+    color: white;
+    #quatre-raisons {
+      font-size: 3.2em;
+      margin: 25px 0;
+    }
+    .views-field-body {
+      font-size: 1.6em;
+      a {
+        color: @blue-green-amapl;
+      }
+    }
+    #views_slideshow_controls_text_le_saviez_vous_ss-block_1 {
+      position: absolute;
+      bottom: 50px;
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
+      left: 100px;
+      #views_slideshow_controls_text_pause_le_saviez_vous_ss-block_1 {
+        display: none;
+      }
+      #views_slideshow_controls_text_previous_le_saviez_vous_ss-block_1 {
+        a {
+          background: url(../images/prev_btn.png) no-repeat 0 0;
+          width: 48px;
+          height: 48px;
+          text-indent: -2000px;
+          display: block;
+        }
+      }
+      #views_slideshow_controls_text_next_le_saviez_vous_ss-block_1 {
+        a {
+          background: url(../images/next_btn.png) no-repeat 0 0;
+          width: 48px;
+          height: 48px;
+          text-indent: -2000px;
+          display: block;
+        }
+      }
+    }
+    #widget_pager_bottom_le_saviez_vous_ss-block_1 {
+      position: absolute;
+      z-index: 10;
+      bottom: 64px;
+      width: 130px;
+      display: flex;
+      justify-content: space-around;
+      left: 150px;
+      .views_slideshow_pager_field_item {
+        a {
+          display: block;
+          width: 18px;
+          height: 18px;
+          text-indent: -2000px;
+          overflow: hidden;
+          &:before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            display: block;
+            background: url(../images/little_disk.png) no-repeat 0 0;
+            opacity: 0.5;
+          }
+        }
+        &.active {
+          a:before {
+            background: url(../images/little_disk.png) no-repeat 0 0;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: @screen-md) {
+      .views-field-body {
+        font-size: 1.8em;
+        width: 500px;
+      }
+    }
+    @media screen and (max-width: @screen-md) {
+      .views-field-body {
+        width: 100%;
+      }
+      #home-ss-illustrations {
+        display: none;
+      }
+      #views_slideshow_controls_text_le_saviez_vous_ss-block_1 {
+        left: 50px;
+      }
+      #widget_pager_bottom_le_saviez_vous_ss-block_1 {
+        left: 110px;
+      }
+    }
+
+    #home-ss-illustrations {
+      position: absolute;
+      top: -20px;
+      right: 0px;
+      width: 650px;
+      height: 355px;
+      overflow: hidden;
+      @media screen and (min-width: @screen-xl) {
+        right: 7%;
+        top: -20px;
+      }
+      img {
+        max-width: 650px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      }
+    }
+  }*/
 }
 .two-cols-home > div {
   background-color: #FAF7F7;
@@ -10453,4 +10462,167 @@ body.not-front #under-main-title h2.page-header.simple-title {
 .page-entityform a#modify-subscribe-form:hover {
   cursor: pointer;
   color: #424242;
+}
+.view-display-id-block_headband #headband-complex {
+  margin: 0 -600px;
+  height: 325px;
+  display: flex;
+  position: relative;
+}
+.view-display-id-block_headband #headband-complex > *#headband-col-1 {
+  width: 50%;
+  position: relative;
+  padding-left: 600px;
+}
+.view-display-id-block_headband #headband-complex > *#headband-col-2 {
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  left: calc(50% - 180px);
+  width: 360px !important;
+}
+.view-display-id-block_headband #headband-complex > *#headband-col-2 #headand-container {
+  width: 360px;
+  height: 360px;
+}
+.view-display-id-block_headband #headband-complex > *#headband-col-2 #headand-container:after after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.view-display-id-block_headband #headband-complex > *#headband-col-2 #headand-container .cutR {
+  clip-path: url(#cutR);
+}
+.view-display-id-block_headband #headband-complex > *#headband-col-2 #headand-container .blogMainArticleMedia {
+  float: left;
+  width: 350px;
+  height: 350px;
+}
+.view-display-id-block_headband #headband-complex > *#headband-col-2 #headand-container img {
+  margin: -5px 0;
+  display: block;
+  width: 350px !important;
+  height: 350px !important;
+}
+.view-display-id-block_headband #headband-complex > *#headband-col-3 {
+  padding-right: 600px;
+  width: 50%;
+}
+.view-display-id-block_headband #headband-complex > *#headband-col-3 div {
+  height: 100%;
+  /*margin-right: 600px;*/
+}
+.view-display-id-block_headband #headband-complex > *#headband-col-3 div .field-item {
+  padding: 20px;
+  padding-left: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.view-display-id-block_headband .node-mixt-headband {
+  position: relative;
+  color: white;
+}
+.view-display-id-block_headband .node-mixt-headband #quatre-raisons {
+  font-size: 3.2em;
+  margin: 25px 0;
+}
+.view-display-id-block_headband .node-mixt-headband .views-field-body {
+  font-size: 1.6em;
+}
+.view-display-id-block_headband .node-mixt-headband .views-field-body a {
+  color: #6CF1B4;
+}
+.view-display-id-block_headband .node-mixt-headband #views_slideshow_controls_text_le_saviez_vous_ss-block_slideshow_mixt_headband_1 {
+  position: absolute;
+  bottom: 50px;
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  right: 340px;
+}
+.view-display-id-block_headband .node-mixt-headband #views_slideshow_controls_text_le_saviez_vous_ss-block_slideshow_mixt_headband_1 #views_slideshow_controls_text_pause_le_saviez_vous_ss-block_slideshow_mixt_headband_1 {
+  display: none;
+}
+.view-display-id-block_headband .node-mixt-headband #views_slideshow_controls_text_le_saviez_vous_ss-block_slideshow_mixt_headband_1 #views_slideshow_controls_text_previous_le_saviez_vous_ss-block_slideshow_mixt_headband_1 a {
+  background: url(../images/prev_btn.png) no-repeat 0 0;
+  width: 48px;
+  height: 48px;
+  text-indent: -2000px;
+  display: block;
+}
+.view-display-id-block_headband .node-mixt-headband #views_slideshow_controls_text_le_saviez_vous_ss-block_slideshow_mixt_headband_1 #views_slideshow_controls_text_next_le_saviez_vous_ss-block_slideshow_mixt_headband_1 a {
+  background: url(../images/next_btn.png) no-repeat 0 0;
+  width: 48px;
+  height: 48px;
+  text-indent: -2000px;
+  display: block;
+}
+.view-display-id-block_headband .node-mixt-headband #widget_pager_bottom_le_saviez_vous_ss-block_slideshow_mixt_headband_1 {
+  position: absolute;
+  z-index: 10;
+  bottom: 64px;
+  width: 130px;
+  display: flex;
+  justify-content: space-around;
+  right: 410px;
+}
+.view-display-id-block_headband .node-mixt-headband #widget_pager_bottom_le_saviez_vous_ss-block_slideshow_mixt_headband_1 .views_slideshow_pager_field_item a {
+  display: block;
+  width: 18px;
+  height: 18px;
+  text-indent: -2000px;
+  overflow: hidden;
+}
+.view-display-id-block_headband .node-mixt-headband #widget_pager_bottom_le_saviez_vous_ss-block_slideshow_mixt_headband_1 .views_slideshow_pager_field_item a:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  display: block;
+  background: url(../images/little_disk.png) no-repeat 0 0;
+  opacity: 0.5;
+}
+.view-display-id-block_headband .node-mixt-headband #widget_pager_bottom_le_saviez_vous_ss-block_slideshow_mixt_headband_1 .views_slideshow_pager_field_item.active a:before {
+  background: url(../images/little_disk.png) no-repeat 0 0;
+  opacity: 1;
+}
+@media screen and (min-width: 992px) {
+  .view-display-id-block_headband .node-mixt-headband .views-field-body {
+    font-size: 1.8em;
+    width: 500px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .view-display-id-block_headband .node-mixt-headband .views-field-body {
+    width: 100%;
+  }
+  .view-display-id-block_headband .node-mixt-headband #home-ss-illustrations {
+    display: none;
+  }
+  .view-display-id-block_headband .node-mixt-headband #views_slideshow_controls_text_le_saviez_vous_ss-block_1 {
+    left: 50px;
+  }
+  .view-display-id-block_headband .node-mixt-headband #widget_pager_bottom_le_saviez_vous_ss-block_1 {
+    left: 110px;
+  }
+}
+.view-display-id-block_headband .node-mixt-headband #home-ss-illustrations {
+  position: absolute;
+  top: -20px;
+  right: 0px;
+  width: 650px;
+  height: 355px;
+  overflow: hidden;
+}
+@media screen and (min-width: 1430px) {
+  .view-display-id-block_headband .node-mixt-headband #home-ss-illustrations {
+    right: 7%;
+    top: -20px;
+  }
+}
+.view-display-id-block_headband .node-mixt-headband #home-ss-illustrations img {
+  max-width: 650px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
