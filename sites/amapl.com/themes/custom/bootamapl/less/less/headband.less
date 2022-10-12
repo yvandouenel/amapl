@@ -9,8 +9,8 @@
       &#headband-col-1 {
         width:50%;
         position: relative;
-        padding-left: 600px
-
+        padding-left: 600px;
+        color: white;
       }
       &#headband-col-2 {
         position: absolute;
@@ -18,8 +18,17 @@
         top: -10px;
         left: calc(50% - 180px);
         width: 360px !important;
+        #ajouts {
+          position: absolute;
+          z-index: 2;
+          top: 30px;
+          margin-left: 15px;
+        }
         #headand-container {
-
+          p {
+            font-size: 1.8rem;
+            color: black;
+          };
           width: 360px;
           height: 360px;
           &:after {
@@ -48,7 +57,7 @@
       }
       &#headband-col-3 {
         padding-right: 600px;
-
+        color: black;
         width: 50%;
         div {
           height: 100%;
@@ -61,6 +70,17 @@
           }
           /*margin-right: 600px;*/
         }
+        p {
+          font-size: 1.8rem;
+        }
+        ul {
+          padding-left: 0px;
+          li {
+            margin: 5px 0;
+            padding: 2px 0  2px 20px;
+            background: url(/sites/amapl.com/themes/custom/bootamapl/less/images/black-dot.png) no-repeat 0 15px;
+          }
+        }
       }
     }
 
@@ -71,7 +91,7 @@
   .node-mixt-headband {
 
     position: relative;
-    color: white;
+
     #quatre-raisons {
       font-size: 3.2em;
       margin: 25px 0;

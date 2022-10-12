@@ -10473,6 +10473,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
   width: 50%;
   position: relative;
   padding-left: 600px;
+  color: white;
 }
 .view-display-id-block_headband #headband-complex > *#headband-col-2 {
   position: absolute;
@@ -10481,9 +10482,19 @@ body.not-front #under-main-title h2.page-header.simple-title {
   left: calc(50% - 180px);
   width: 360px !important;
 }
+.view-display-id-block_headband #headband-complex > *#headband-col-2 #ajouts {
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+  margin-left: 15px;
+}
 .view-display-id-block_headband #headband-complex > *#headband-col-2 #headand-container {
   width: 360px;
   height: 360px;
+}
+.view-display-id-block_headband #headband-complex > *#headband-col-2 #headand-container p {
+  font-size: 1.8rem;
+  color: black;
 }
 .view-display-id-block_headband #headband-complex > *#headband-col-2 #headand-container:after after {
   content: "";
@@ -10506,6 +10517,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
 }
 .view-display-id-block_headband #headband-complex > *#headband-col-3 {
   padding-right: 600px;
+  color: black;
   width: 50%;
 }
 .view-display-id-block_headband #headband-complex > *#headband-col-3 div {
@@ -10519,9 +10531,19 @@ body.not-front #under-main-title h2.page-header.simple-title {
   flex-direction: column;
   justify-content: center;
 }
+.view-display-id-block_headband #headband-complex > *#headband-col-3 p {
+  font-size: 1.8rem;
+}
+.view-display-id-block_headband #headband-complex > *#headband-col-3 ul {
+  padding-left: 0px;
+}
+.view-display-id-block_headband #headband-complex > *#headband-col-3 ul li {
+  margin: 5px 0;
+  padding: 2px 0  2px 20px;
+  background: url(/sites/amapl.com/themes/custom/bootamapl/less/images/black-dot.png) no-repeat 0 15px;
+}
 .view-display-id-block_headband .node-mixt-headband {
   position: relative;
-  color: white;
 }
 .view-display-id-block_headband .node-mixt-headband #quatre-raisons {
   font-size: 3.2em;
