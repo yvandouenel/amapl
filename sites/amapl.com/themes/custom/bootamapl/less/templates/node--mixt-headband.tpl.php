@@ -88,6 +88,7 @@
       <div ><?php print $slideshow; ?></div>
     </div>
     <div id="headband-col-2" >
+      <img id="ajouts" src="sites/amapl.com/themes/custom/bootamapl/less/images/home_headband/ajouts.png" alt="">
       <div id="headand-container" >
         <div class="blogMainArticleMedia cutR">
           <?php print render($content['field_center_img']);?>
