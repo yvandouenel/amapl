@@ -60,4 +60,7 @@ function bootamapl_preprocess_node(&$vars) {
     $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->type . '__zoom';
     $vars['theme_hook_suggestions'][] = 'node__' . $vars['node']->nid . '__zoom';
   }
+  if ($vars['node']->type == "mixt_headband") {
+    $vars['slideshow'] = views_embed_view('le_saviez_vous_ss', 'block_slideshow_mixt_headband');
+  }
 }
