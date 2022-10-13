@@ -114,11 +114,11 @@ function feature_amapl_headband_field_default_field_instances() {
     'bundle' => 'mixt_headband',
     'default_value' => array(
       0 => array(
-        'value' => '#0487CD',
+        'value' => '#0889cd',
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Par défaut #0889cd',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -138,7 +138,7 @@ function feature_amapl_headband_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_left_color',
     'label' => 'Couleur de gauche',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'context' => 'title',
       'context_default' => 'sdl_editor_representation',
@@ -164,11 +164,11 @@ function feature_amapl_headband_field_default_field_instances() {
     'bundle' => 'mixt_headband',
     'default_value' => array(
       0 => array(
-        'value' => '#FFAE66',
+        'value' => '#ffae64',
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Par défaut : #ffae64',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -215,6 +215,8 @@ function feature_amapl_headband_field_default_field_instances() {
   t('Couleur de droite');
   t('Couleur de gauche');
   t('Image centrale');
+  t('Par défaut #0889cd');
+  t('Par défaut : #ffae64');
 
   return $field_instances;
 }
