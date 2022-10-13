@@ -12,6 +12,7 @@ activer le module amapl_headband
 activer la feature headband
 Changer le contexte /admin/structure/context/list/homepage/edit : ajouter dans la région slideshow : Vue : Bandeau: Bloc bandeau
 s'assurer qu'il y a bien un node headband
+Paramétrer le block du headband de manière à ne pas afficher le titre (Bandeau par défaut)
 
 Pour l'affichage des bandeaux, je me suis inspiré du blog suivant :
 http://tylerfrankenstein.com/code/drupal-render-view-node-template
