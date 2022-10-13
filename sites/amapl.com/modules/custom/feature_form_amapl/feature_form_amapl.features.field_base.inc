@@ -792,6 +792,7 @@ function feature_form_amapl_field_default_field_bases() {
         2020 => 2020,
         2021 => 2021,
         2022 => 2022,
+        2023 => 2023,
       ),
       'allowed_values_function' => '',
     ),

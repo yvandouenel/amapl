@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Feature bandeau Amapl feature.
+ */
+
+include_once 'feature_amapl_headband.features.inc';

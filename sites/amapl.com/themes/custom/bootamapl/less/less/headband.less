@@ -1,0 +1,206 @@
+.view-display-id-block_headband {
+  #headband-complex {
+    margin: 0 -600px;
+    height: 325px;
+    display: flex;
+    position: relative;
+    > * {
+
+      &#headband-col-1 {
+        width:50%;
+        position: relative;
+        padding-left: 600px;
+        color: white;
+      }
+      &#headband-col-2 {
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        left: calc(50% - 180px);
+        width: 360px !important;
+        #ajouts {
+          position: absolute;
+          z-index: 2;
+          top: 30px;
+          margin-left: 15px;
+        }
+        #headand-container {
+          p {
+            font-size: 1.8rem;
+            color: black;
+          };
+          width: 360px;
+          height: 360px;
+          &:after {
+            after {
+              content:"";
+              display: block;
+              clear: both;
+            }
+          }
+          .cutR {
+            clip-path: url(#cutR)
+          }
+
+          .blogMainArticleMedia {
+            float: left;
+            width: 350px;
+            height: 350px;
+          }
+          img {
+            margin: -5px 0;
+            display: block;
+            width: 360px !important;
+            height: 360px !important;
+          }
+        }
+      }
+      &#headband-col-3 {
+        padding-right: 600px;
+        color: black;
+        width: 50%;
+        div {
+          height: 100%;
+          .field-item {
+            padding: 20px;
+            padding-left: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          /*margin-right: 600px;*/
+        }
+        p {
+          font-size: 1.8rem;
+        }
+        ul {
+          padding-left: 0px;
+          li {
+            margin: 5px 0;
+            padding: 2px 0  2px 20px;
+            background: url(/sites/amapl.com/themes/custom/bootamapl/less/images/black-dot.png) no-repeat 0 15px;
+          }
+        }
+      }
+    }
+
+
+
+
+  }
+  .node-mixt-headband {
+
+    position: relative;
+
+    #quatre-raisons {
+      font-size: 3.2em;
+      margin: 25px 0;
+    }
+    .views-field-body {
+      font-size: 1.6em;
+      a {
+        color: @blue-green-amapl;
+      }
+    }
+    #views_slideshow_controls_text_le_saviez_vous_ss-block_slideshow_mixt_headband_1 {
+      position: absolute;
+      bottom: 50px;
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
+      right: 340px;
+      #views_slideshow_controls_text_pause_le_saviez_vous_ss-block_slideshow_mixt_headband_1 {
+        display: none;
+      }
+      #views_slideshow_controls_text_previous_le_saviez_vous_ss-block_slideshow_mixt_headband_1 {
+        a {
+          background: url(../images/prev_btn.png) no-repeat 0 0;
+          width: 48px;
+          height: 48px;
+          text-indent: -2000px;
+          display: block;
+        }
+      }
+      #views_slideshow_controls_text_next_le_saviez_vous_ss-block_slideshow_mixt_headband_1 {
+        a {
+          background: url(../images/next_btn.png) no-repeat 0 0;
+          width: 48px;
+          height: 48px;
+          text-indent: -2000px;
+          display: block;
+        }
+      }
+    }
+    #widget_pager_bottom_le_saviez_vous_ss-block_slideshow_mixt_headband_1 {
+      position: absolute;
+      z-index: 10;
+      bottom: 64px;
+      width: 130px;
+      display: flex;
+      justify-content: space-around;
+      right: 410px;
+      .views_slideshow_pager_field_item {
+        a {
+          display: block;
+          width: 18px;
+          height: 18px;
+          text-indent: -2000px;
+          overflow: hidden;
+          &:before {
+            content: "";
+            width: 18px;
+            height: 18px;
+            display: block;
+            background: url(../images/little_disk.png) no-repeat 0 0;
+            opacity: 0.5;
+          }
+        }
+        &.active {
+          a:before {
+            background: url(../images/little_disk.png) no-repeat 0 0;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    @media screen and (min-width: @screen-md) {
+      .views-field-body {
+        font-size: 1.8em;
+        width: 500px;
+      }
+    }
+    @media screen and (max-width: @screen-md) {
+      .views-field-body {
+        width: 100%;
+      }
+      #home-ss-illustrations {
+        display: none;
+      }
+      #views_slideshow_controls_text_le_saviez_vous_ss-block_1 {
+        left: 50px;
+      }
+      #widget_pager_bottom_le_saviez_vous_ss-block_1 {
+        left: 110px;
+      }
+    }
+
+    #home-ss-illustrations {
+      position: absolute;
+      top: -20px;
+      right: 0px;
+      width: 650px;
+      height: 355px;
+      overflow: hidden;
+      @media screen and (min-width: @screen-xl) {
+        right: 7%;
+        top: -20px;
+      }
+      img {
+        max-width: 650px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      }
+    }
+  }
+}

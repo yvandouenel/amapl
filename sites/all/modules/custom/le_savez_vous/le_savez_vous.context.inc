@@ -26,9 +26,9 @@ function le_savez_vous_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'views-le_saviez_vous_ss-block' => array(
+        'views-headband-block_headband' => array(
           'module' => 'views',
-          'delta' => 'le_saviez_vous_ss-block',
+          'delta' => 'headband-block_headband',
           'region' => 'slideshow',
           'weight' => '-10',
         ),
@@ -56,9 +56,9 @@ function le_savez_vous_context_default_contexts() {
           'region' => 'block-zoom',
           'weight' => '-10',
         ),
-        'views-news-block_news' => array(
-          'module' => 'views',
-          'delta' => 'news-block_news',
+        'aggregator-feed-2' => array(
+          'module' => 'aggregator',
+          'delta' => 'feed-2',
           'region' => 'block-news',
           'weight' => '-10',
         ),
