@@ -36,7 +36,7 @@ function dump_stripe_iframe($payment_id = 0) {
         $base_url = "https://recepaiement.amapl.com/";
         break;
       case "https://amapl.com":
-        echo "https://paiement.amapl.com/";
+        $base_url =  "https://paiement.amapl.com/";
         break;
     }
 
