@@ -13,17 +13,17 @@ function feature_form_amapl_entityform_confirm_page_alter(&$render_array, $entit
   //dpm("dans feature_form_amapl_entityform_confirm_page_alter");
 
   // Récupération d'un table d'entité avec une seule valeur : attention, on voit que le deuxième argument est un tableau
-  $entity_array = entity_load('entityform', array($entityform_id));
+  $entity_array = entity_load('entityform', [$entityform_id]);
 
   // Récupération de l'entité
   $entity = $entity_array[$entityform_id];
 
   /** Cas communs aux PL et aux CAA ***********************************************************/
   $denomination = (isset($entity->field_nom_prenom['und'][0]['value']) ?
-  $entity->field_nom_prenom['und'][0]['value'] : $entity->field_ou_denomination_sociale['und'][0]['value']);
+    $entity->field_nom_prenom['und'][0]['value'] : $entity->field_ou_denomination_sociale['und'][0]['value']);
 
   /** Cas spécifiques aux CAA ***********************************************************/
-  if(isset($entity->field_date_du['und'][0]['value'])) {
+  if (isset($entity->field_date_du['und'][0]['value'])) {
     // Modification du champ description de paiement de l'entité
     $entity->field_paiement_caa['und'][0]['description'] =
       '<a href="/entityform/' . $entityform_id . '">Adhesion AMAPL n°' . $entityform_id . '</a>' .
@@ -114,15 +114,15 @@ function feature_form_amapl_caa_form_validate($form, &$form_state) {
 
   // Micro-BIC/BA
   $micro_bic_ba = ($form_state['values']['field_regime_declaratif']['und'][0]['value'] == 'Micro') ?
-  true : false;
+    TRUE : FALSE;
 
   // Entreprise individuelle
   $entreprise_individuelle = ($form_state['values']['field_forme_juridique_caa']['und'][0]['value'] == 'EI') ?
-  true : false;
+    TRUE : FALSE;
 
   // premiere adhésion
   $first_membership = ($form_state['values']['field_type_adhesion_caa']['und'][0]['value'] == 'Première adhésion à un CGA ou à un OMGA') ?
-  true : false;
+    TRUE : FALSE;
 
   /**
    * Règle de gestion : si date actuelle > 31 mai, la date de début doit être supérieure ou égale au
@@ -139,17 +139,21 @@ function feature_form_amapl_caa_form_validate($form, &$form_state) {
   $end_fiscal_year = substr($form_state['values']['field_date_au']['und'][0]['value'], 0, 4);
   $begin_activity_year = substr($form_state['values']['field_date_debut']['und'][0]['value'], 0, 4);
 
-  if($form_state['values']['field_date_du']['und'][0]['value'] >
+  if ($form_state['values']['field_date_du']['und'][0]['value'] >
     $form_state['values']['field_date_au']['und'][0]['value']) {
-      form_set_error('field_date_du', t("Vous devez entrer date de début d'exercice comptable inférieure à la date de fin."));
+    form_set_error('field_date_du', t("Vous devez entrer date de début d'exercice comptable inférieure à la date de fin."));
   }
-  else if($today > $thirty_one_may &
-    $form_state['values']['field_date_du']['und'][0]['value'] < $first_january) {
-    form_set_error('field_date_du', t("Vous devez entrer une date de début d'exercice comptable supérieure au 1er janvier de l'année en cours."));
-  }
-  else if($today < $thirty_one_may &
-    $form_state['values']['field_date_du']['und'][0]['value'] < $first_january_last_year) {
-    form_set_error('field_date_du', t("Vous devez entrer une date de début d'exercice comptable supérieure au 1er janvier de l'année passée."));
+  else {
+    if ($today > $thirty_one_may &
+      $form_state['values']['field_date_du']['und'][0]['value'] < $first_january) {
+      form_set_error('field_date_du', t("Vous devez entrer une date de début d'exercice comptable supérieure au 1er janvier de l'année en cours."));
+    }
+    else {
+      if ($today < $thirty_one_may &
+        $form_state['values']['field_date_du']['und'][0]['value'] < $first_january_last_year) {
+        form_set_error('field_date_du', t("Vous devez entrer une date de début d'exercice comptable supérieure au 1er janvier de l'année passée."));
+      }
+    }
   }
   /** nom et prénon ou dénomination sociale **********************************/
   if ($form_state['values']['field_nom_prenom']['und'][0]['value'] == '' && $form_state['values']['field_ou_denomination_sociale']['und'][0]['value'] == '') {
@@ -158,21 +162,30 @@ function feature_form_amapl_caa_form_validate($form, &$form_state) {
   }
 
   /** Définition du prix *****************************************************/
-  if ($micro_bic_ba ) {
+  if ($micro_bic_ba) {
     $price = '99';
   }
-  else if (
-    (($begin_fiscal_year == $this_year && $begin_activity_year == $this_year) ||
-    ($begin_fiscal_year == $this_year + 1 && $begin_activity_year == $this_year + 1)) &&
-    $entreprise_individuelle &&
-    $first_membership) {
+  else {
+    if (
+      (($begin_fiscal_year == $this_year && $begin_activity_year == $this_year) ||
+        ($begin_fiscal_year == $this_year + 1 && $begin_activity_year == $this_year + 1)) &&
+      $entreprise_individuelle &&
+      $first_membership) {
       $price = '99';
-  }
-  else if($begin_fiscal_year == 2019){
-    $price = '247';
-  }
-  else if($begin_fiscal_year == 2020 || $begin_fiscal_year == 2021 || $begin_fiscal_year == 2022){
-    $price = '248';
+    }
+    else {
+      if ($begin_fiscal_year == 2019) {
+        $price = '247';
+      }
+      else {
+        if ($begin_fiscal_year == 2020 ||
+          $begin_fiscal_year == 2021 ||
+          $begin_fiscal_year == 2022 ||
+          $begin_fiscal_year == 2023) {
+          $price = '248';
+        }
+      }
+    }
   }
 
   $form_state['values']['field_prix']['und'][0]['value'] = round($price * 1.2);
@@ -231,14 +244,23 @@ function feature_form_amapl_form_validate($form, &$form_state) {
       (
         $form_state['values']['field_forme_juridique']['und'][0]['value'] == "EI" &&
         $year_income == 2022 && $begin_activity_year == 2022 &&
+        $form_state['values']['field_type_adhesion']['und'][0]['value'] == "Première adhésion à une association agréée") ||
+      (
+        $form_state['values']['field_forme_juridique']['und'][0]['value'] == "EI" &&
+        $year_income == 2023 && $begin_activity_year == 2023 &&
         $form_state['values']['field_type_adhesion']['und'][0]['value'] == "Première adhésion à une association agréée")
     )
   ) {
     if ($year_income == 2017) {
       $price = '82.5';//'80.833333333'
     }
-    elseif($year_income == 2018 || $year_income == 2019 || $year_income == 2020 || $year_income == 2021 || $year_income == 2022) {
-        $price = '82.5';
+    elseif ($year_income == 2018 ||
+      $year_income == 2019 ||
+      $year_income == 2020 ||
+      $year_income == 2021 ||
+      $year_income == 2022 ||
+      $year_income == 2023) {
+      $price = '82.5';
     }
   }
 
@@ -248,7 +270,13 @@ function feature_form_amapl_form_validate($form, &$form_state) {
       $price = '82.5';//'80.833333333'
     }
     else {
-      if ($year_income == 2018 || $year_income == 2019 || $year_income == 2020 || $year_income == 2021 || $year_income == 2022) {
+      if ($year_income == 2018 ||
+        $year_income == 2019 ||
+        $year_income == 2020 ||
+        $year_income == 2021 ||
+        $year_income == 2022 ||
+        $year_income == 2023
+      ) {
         $price = '82.5';
       }
     }
@@ -263,10 +291,14 @@ function feature_form_amapl_form_validate($form, &$form_state) {
       $price = '165';//162.5
     }
     else {
-      if ($year_income == 2018 || $year_income == 2019 ) {
+      if ($year_income == 2018 || $year_income == 2019) {
         $price = '165';
       }
-      if ($year_income == 2020 || $year_income == 2021 || $year_income == 2022) {
+      if ($year_income == 2020 ||
+        $year_income == 2021 ||
+        $year_income == 2022 ||
+        $year_income == 2023
+      ) {
         $price = '165.833333333';
       }
     }
@@ -283,11 +315,14 @@ function feature_form_amapl_form_validate($form, &$form_state) {
     if ($year_income == 2017) {
       $price = '265';//260
     }
-    elseif ($year_income == 2018 || $year_income == 2019 ){
-        $price = '265';
+    elseif ($year_income == 2018 || $year_income == 2019) {
+      $price = '265';
     }
-    elseif($year_income == 2020 || $year_income == 2021 || $year_income == 2022){
-        $price = '265.833333333';
+    elseif ($year_income == 2020 ||
+      $year_income == 2021 ||
+      $year_income == 2022 ||
+      $year_income == 2023) {
+      $price = '265.833333333';
     }
   }
   else {
@@ -295,7 +330,7 @@ function feature_form_amapl_form_validate($form, &$form_state) {
       $price = '165';//162.5
     }
     else {
-      if ($year_income == 2018 || $year_income == 2019 ) {
+      if ($year_income == 2018 || $year_income == 2019) {
         $price = '165';
       }
     }
@@ -402,7 +437,7 @@ function changeHistoricalPayment(Payment $payment) {
       }
 
       // Récupération d'un tableau d'entités qui correspondent à ce paiement (normalement une seule)
-      $entity_array = entity_load('entityform', array($value));
+      $entity_array = entity_load('entityform', [$value]);
       foreach ($entity_array as $entity) {
         // Modification du champ historique de paiement de l'entité
         if (isset($historique) && $historique != '') {
@@ -478,19 +513,19 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
         $info_form_subscribe;
 
       // envoie aux administrateurs
-      $params = array('subject' => $mail_subject, 'body' => $mail_body);
+      $params = ['subject' => $mail_subject, 'body' => $mail_body];
       $type = 'status';
       if (drupal_mail('feature_form_amapl', 'form_amapl_paid', $to, language_default(), $params, $from)) {
-        $message = t('Validation request email message sent successfully to %fullname (%to)', array(
+        $message = t('Validation request email message sent successfully to %fullname (%to)', [
           '%fullname' => $full_name,
-          '%to' => $to
-        ));
+          '%to' => $to,
+        ]);
       }
       else {
-        $message = t('Email message could not be sent to %fullname (%to)', array(
+        $message = t('Email message could not be sent to %fullname (%to)', [
           '%fullname' => $full_name,
-          '%to' => $to
-        ));
+          '%to' => $to,
+        ]);
         $type = 'warning';
       }
       // envoie aux administrateurs
@@ -503,19 +538,19 @@ function feature_form_amapl_payment_status_change(Payment $payment, PaymentStatu
         $mail_body =
           "<p>Madame, Monsieur,<br>Votre demande d’adhésion et le paiement des sommes indiquées ci-après ont bien été enregistrés et envoyés à l’AMAPL. <br>Une confirmation d’adhésion vous sera adressée prochainement par l’association, après vérification du respect des délais d’adhésion en vigueur.<br>Un remboursement du règlement pourra avoir lieu en cas de rejet de l’adhésion pour ce motif.<br>Sincères salutations.<br>L’équipe AMAPL</p>" .
           $info_form_subscribe;
-        $params = array('subject' => $mail_subject, 'body' => $mail_body);
+        $params = ['subject' => $mail_subject, 'body' => $mail_body];
 
         if (drupal_mail('feature_form_amapl', 'form_amapl_paid', $to, language_default(), $params, $from)) {
-          $message = t('Validation request email message sent successfully to %fullname (%to)', array(
+          $message = t('Validation request email message sent successfully to %fullname (%to)', [
             '%fullname' => $full_name,
-            '%to' => $to
-          ));
+            '%to' => $to,
+          ]);
         }
         else {
-          $message = t('Email message could not be sent to %fullname (%to)', array(
+          $message = t('Email message could not be sent to %fullname (%to)', [
             '%fullname' => $full_name,
-            '%to' => $to
-          ));
+            '%to' => $to,
+          ]);
           $type = 'warning';
         }
         // envoie au nouvel adhérent
@@ -534,9 +569,9 @@ function get_form_infos($entity) {
   // BIC/BA Exercice comptable à prendre en compte
   if (!empty($entity->field_date_du)) {
     $msg .= '<tr><th> Exercice comptable à prendre en compte : </th><td>du ' .
-    $entity->field_date_du['und'][0]['value'] . ' au ' .
-    $entity->field_date_au['und'][0]['value'] .
-    '</td></tr>';
+      $entity->field_date_du['und'][0]['value'] . ' au ' .
+      $entity->field_date_au['und'][0]['value'] .
+      '</td></tr>';
     $benefice = "BIC/BA";
   }
   // BNC Année adhésion
@@ -700,9 +735,9 @@ function get_form_infos($entity) {
 
   $msg .= '</table>';
   $msg .= "<p>Association de gestion agréée déclarée n° 201300. Loi du 1er juillet 1901. Siret n° 314 686 924 00031. - Agrément fiscal n° 349 AA 4 - 1978. - www.amapl.com</p>";
-  $msg .= '<div style="font-size:0.8em;">'.
-  '<h2>CONDITIONS GÉNÉRALES D\'ADHÉSION</h2>' .
-  '<p><strong>En renseignant un bulletin d\'adhésion, je demande à adhérer à l’association AMAP.L., organisme mixte de gestion agréé, à compter des revenus ou de l’exercice mentionné sur le bulletin, et à l’appui de ma demande :</strong></p>
+  $msg .= '<div style="font-size:0.8em;">' .
+    '<h2>CONDITIONS GÉNÉRALES D\'ADHÉSION</h2>' .
+    '<p><strong>En renseignant un bulletin d\'adhésion, je demande à adhérer à l’association AMAP.L., organisme mixte de gestion agréé, à compter des revenus ou de l’exercice mentionné sur le bulletin, et à l’appui de ma demande :</strong></p>
   <p>M’engage à respecter les Statuts et le Réglement Intérieur de l\'Association, dont je reconnais avoir pris connaissance.</p>
   <p>M’engage à informer l’association de tout changement intervenu concernant mon activité, ma forme juridique, mon identification, mon régime fiscal ou la tenue de mes documents comptables dans le mois qui suit cette modification.</p>
   <p>M’engage à respecter les obligations qui me sont imposées en tant qu’adhérent d’une association exerçant une activité d’organisme mixte de gestion agréé visé par l’article 1649 quater K ter du Code général des impôts, dont je reconnais avoir pris connaissance pour la partie Association agréée visée aux articles 1649 quater F et suivants du Code général des impôts (professions libérales) et/ou pour la partie Centre de gestion agréé visée aux articles 1649 quater C et suivants du Code général des impôts (artisans, commerçants, agriculteurs), notamment&nbsp;:</p>
@@ -725,7 +760,7 @@ function get_form_infos($entity) {
   Conformément à la Loi Informatique et Libertés du 6 janvier 1978, vous disposez d\'un droit d\'accès et de rectification aux données personnelles vous concernant.</p>
   </div>';
 
-  return array($msg, $benefice);
+  return [$msg, $benefice];
 }
 
 /**
@@ -750,7 +785,7 @@ function feature_form_amapl_node_view($node, $view_mode, $langcode) {
       $paymentpath = '/payment/' . $_SESSION['paypal_payment_pps_pid'] . '/view';
       /*drupal_goto('payment/' . $_SESSION['paypal_payment_pps_pid'] . '/view');*/
       // appel du js
-      drupal_add_js(array('feature_form_amapl' => array('paymentpath' => $paymentpath)), array('type' => 'setting'));
+      drupal_add_js(['feature_form_amapl' => ['paymentpath' => $paymentpath]], ['type' => 'setting']);
       drupal_add_js(drupal_get_path('module', 'feature_form_amapl') . '/js/gotopayment.js');
     }
   }
