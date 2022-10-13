@@ -1,0 +1,30 @@
+<?php
+// This allows drupal_var_export() to work.
+require_once 'includes/utility.inc';
+
+/**
+ * Implements hook_node_postsave().
+ */
+function amapl_headband_node_postsave($node, $op) {
+  watchdog('amapl_headband', "{$op} node {$node->nid} de type {$node->type} et de statut {$node->status}");
+
+  if ($node->type == 'mixt_headband' && $node->status == 1) {
+    // Récupération de tous les nodes mixt_headband
+    $query = new EntityFieldQuery();
+    $result = $query->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'mixt_headband')
+      ->execute();
+    $nodes_headband = node_load_multiple(array_keys($result['node']));
+
+    foreach ($nodes_headband as $node_headband) {
+      //watchdog('amapl_headband_foreach', "{$op} node {$node->nid} de type {$node->type} et de statut {$node->status}");
+      if ($node_headband->status == 1 && $node_headband->nid != $node->nid) {
+        $node_headband->status = 0;
+        node_save($node_headband);
+      }
+    }
+
+
+  }
+
+}

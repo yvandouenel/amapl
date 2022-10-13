@@ -1,0 +1,4 @@
+name = Amapl headband
+description = Après l'enregistrement d'un bandeau activé, le hook node_postsave va désactiver tous les autres
+package = custom
+core = 7.x
