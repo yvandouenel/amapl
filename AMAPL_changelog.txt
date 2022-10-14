@@ -1,3 +1,11 @@
+AMAPL 1.0.6 - 2022-10-14
+---------------------------
+Ajout d'un champ de recherche pour les formation (distance, présence...) optimisation du bandeau pour les smartphones
+
+AMAPL 1.0.5 - 2022-10-13
+---------------------------
+Hotfix pour pb de chargement de la bonne url de prod pour l'iframe de paiement
+
 AMAPL 1.0.4 - 2022-10-13
 ----------------------------
 Realease 3 oubliée !!! Passage à stripe + headband modifié
