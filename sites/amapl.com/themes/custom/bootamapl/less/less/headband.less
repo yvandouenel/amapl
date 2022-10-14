@@ -1,18 +1,36 @@
 .view-display-id-block_headband {
   #headband-complex {
-    margin: 0 -600px;
-    height: 325px;
     display: flex;
+    @media screen and (max-width: @screen-md) {
+     flex-direction: column;
+
+    }
+    @media screen and (min-width: @screen-md) {
+      height: 325px;
+      margin: 0 -600px;
+    }
     position: relative;
     > * {
 
       &#headband-col-1 {
-        width:50%;
-        position: relative;
-        padding-left: 600px;
         color: white;
+        @media screen and (min-width: @screen-md) {
+          width:50%;
+          position: relative;
+          padding-left: 600px;
+        }
+        @media screen and (max-width: @screen-md) {
+          margin-left: -15px;
+          padding-left: 15px;
+          height: 290px;
+          position: relative;
+        }
+
       }
       &#headband-col-2 {
+        @media screen and (max-width: @screen-md) {
+          display: none;
+        }
         position: absolute;
         z-index: 1;
         top: -10px;
@@ -56,14 +74,24 @@
         }
       }
       &#headband-col-3 {
-        padding-right: 600px;
+
         color: black;
-        width: 50%;
+        @media screen and (min-width: @screen-md) {
+          width:50%;
+          position: relative;
+          padding-right: 600px;
+        }
+        @media screen and (max-width: @screen-md) {
+          margin-left: -15px;
+        }
         div {
           height: 100%;
           .field-item {
             padding: 20px;
             padding-left: 200px;
+            @media screen and (max-width: @screen-md) {
+              padding-left: 15px;
+            }
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -94,10 +122,16 @@
 
     #quatre-raisons {
       font-size: 3.2em;
+      @media screen and (max-width: @screen-md) {
+        font-size: 1.5em;
+      }
       margin: 25px 0;
     }
     .views-field-body {
       font-size: 1.6em;
+      @media screen and (max-width: @screen-md) {
+        font-size: 1.2em;
+      }
       a {
         color: @blue-green-amapl;
       }
@@ -108,7 +142,13 @@
       width: 250px;
       display: flex;
       justify-content: space-between;
-      right: 340px;
+
+      @media screen and (min-width: @screen-md) {
+        right: 340px;
+      }
+      @media screen and (max-width: @screen-md) {
+        right: calc(100% - 290px);
+      }
       #views_slideshow_controls_text_pause_le_saviez_vous_ss-block_slideshow_mixt_headband_1 {
         display: none;
       }
@@ -138,7 +178,12 @@
       width: 130px;
       display: flex;
       justify-content: space-around;
-      right: 410px;
+      @media screen and (min-width: @screen-md) {
+        right: 410px;
+      }
+      @media screen and (max-width: @screen-md) {
+        right: calc(100% - 225px);
+      }
       .views_slideshow_pager_field_item {
         a {
           display: block;
