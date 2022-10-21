@@ -71,8 +71,29 @@ function feature_amapl_headband_views_default_views() {
     'mixt_headband' => 'mixt_headband',
   );
 
-  /* Display: Bloc bandeau */
-  $handler = $view->new_display('block', 'Bloc bandeau', 'block_headband');
+  /* Display: Bloc bandeau mixte */
+  $handler = $view->new_display('block', 'Bloc bandeau mixte', 'block_headband');
+
+  /* Display: Bloc bandeau unique */
+  $handler = $view->new_display('block', 'Bloc bandeau unique', 'block_unique_headband');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Bandeau unique';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Critère de filtrage: Contenu : Published status */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Critère de filtrage: Contenu : Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'unique_headband' => 'unique_headband',
+  );
   $translatables['headband'] = array(
     t('Master'),
     t('Bandeau'),
@@ -82,7 +103,9 @@ function feature_amapl_headband_views_default_views() {
     t('Trier par'),
     t('Asc'),
     t('Desc'),
-    t('Bloc bandeau'),
+    t('Bloc bandeau mixte'),
+    t('Bloc bandeau unique'),
+    t('Bandeau unique'),
   );
   $export['headband'] = $view;
 

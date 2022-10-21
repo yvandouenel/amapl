@@ -33,6 +33,14 @@ function feature_amapl_headband_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'unique_headband' => array(
+      'name' => t('Bandeau unique'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
   );
   drupal_alter('node_info', $items);
   return $items;
