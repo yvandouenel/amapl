@@ -84,7 +84,19 @@
 
   <?php endif; ?>
   <div id="headand-unique-container" style="background-color:<?php print($content['field_left_color'][0]["#markup"]) ?>">
-    <div id="left-headband-unique"><?php print render($content['body']);?></div>
+    <img id="star" src="sites/amapl.com/themes/custom/bootamapl/less/images/home_headband/etoile.svg" alt="">
+    <img id="lines" src="sites/amapl.com/themes/custom/bootamapl/less/images/home_headband/traits.svg" alt="">
+    <div id="left-headband-unique">
+      <div class="container">
+       <div class="row">
+         <div class="col-lg-9 col-md-6">
+
+
+           <?php print render($content['body']);?>
+         </div>
+       </div>
+      </div>
+    </div>
     <div class="blogMainArticleMedia cutRight">
       <?php print render($content['field_right_img']);?>
     </div>
