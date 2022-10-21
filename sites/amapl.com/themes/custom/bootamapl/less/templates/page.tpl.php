@@ -142,6 +142,9 @@
   </div>
 
 </header> <!-- /#page-header -->
+<?php if (!empty($page['unique-headband'])): ?>
+  <?php print render($page['unique-headband']); ?>
+<?php endif; ?>
 <?php if (!empty($page['large-headband'])): ?>
   <div id="under-large-headband">
     <div class="container">
