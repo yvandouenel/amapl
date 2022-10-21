@@ -1,3 +1,7 @@
+AMAPL 1.0.7 - 2022-10-21
+---------------------------
+Ajout du type de contenu headband unique avec le système d'affichage en tant que bandeau d'accueil
+
 AMAPL 1.0.6 - 2022-10-14
 ---------------------------
 Ajout d'un champ de recherche pour les formation (distance, présence...) optimisation du bandeau pour les smartphones
