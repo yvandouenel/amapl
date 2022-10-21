@@ -10717,3 +10717,33 @@ body.not-front #under-main-title h2.page-header.simple-title {
   top: 0px;
   right: 0px;
 }
+.view-display-id-block_headband #headand-unique-container {
+  position: relative;
+  height: 320px;
+  width: 100%;
+  display: block;
+  background-image: url(/sites/amapl.com/themes/custom/bootamapl/less/images/home_headband/genou.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+.view-display-id-block_headband #headand-unique-container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.view-display-id-block_headband #headand-unique-container .cutRight {
+  clip-path: url(#cutRight);
+}
+.view-display-id-block_headband #headand-unique-container .blogMainArticleMedia {
+  float: right;
+}
+.view-display-id-block_headband #headand-unique-container .image {
+  margin: -20px 0 0 0;
+  display: block;
+  max-width: 100%;
+}
+.view-display-id-block_headband #headand-unique-container #left-headband-unique {
+  width: calc(100% - 500px);
+  position: absolute;
+}

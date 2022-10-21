@@ -248,4 +248,38 @@
       }
     }
   }
+  #headand-unique-container {
+    position: relative;
+    height: 320px;
+    width: 100%;
+
+    display: block;
+    background-image: url(/sites/amapl.com/themes/custom/bootamapl/less/images/home_headband/genou.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .cutRight {
+      clip-path: url(#cutRight)
+    }
+
+    .blogMainArticleMedia {
+      float: right;
+    }
+    .image {
+      margin: -20px 0 0 0;
+      display: block;
+      max-width: 100%
+    }
+    #left-headband-unique {
+      width: calc(100% - 500px);
+      position: absolute;
+    }
+  }
 }
+
+
