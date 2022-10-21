@@ -2,7 +2,7 @@
   #headband-complex {
     display: flex;
     @media screen and (max-width: @screen-md) {
-     flex-direction: column;
+      flex-direction: column;
 
     }
     @media screen and (min-width: @screen-md) {
@@ -10,12 +10,13 @@
       margin: 0 -600px;
     }
     position: relative;
+
     > * {
 
       &#headband-col-1 {
         color: white;
         @media screen and (min-width: @screen-md) {
-          width:50%;
+          width: 50%;
           position: relative;
           padding-left: 600px;
         }
@@ -27,6 +28,7 @@
         }
 
       }
+
       &#headband-col-2 {
         @media screen and (max-width: @screen-md) {
           display: none;
@@ -36,26 +38,31 @@
         top: -10px;
         left: calc(50% - 180px);
         width: 360px !important;
+
         #ajouts {
           position: absolute;
           z-index: 2;
           top: 30px;
           margin-left: 15px;
         }
+
         #headand-container {
           p {
             font-size: 1.8rem;
             color: black;
-          };
+          }
+        ;
           width: 360px;
           height: 360px;
+
           &:after {
             after {
-              content:"";
+              content: "";
               display: block;
               clear: both;
             }
           }
+
           .cutR {
             clip-path: url(#cutR)
           }
@@ -65,6 +72,7 @@
             width: 350px;
             height: 350px;
           }
+
           img {
             margin: -5px 0;
             display: block;
@@ -73,19 +81,22 @@
           }
         }
       }
+
       &#headband-col-3 {
 
         color: black;
         @media screen and (min-width: @screen-md) {
-          width:50%;
+          width: 50%;
           position: relative;
           padding-right: 600px;
         }
         @media screen and (max-width: @screen-md) {
           margin-left: -15px;
         }
+
         div {
           height: 100%;
+
           .field-item {
             padding: 20px;
             padding-left: 200px;
@@ -96,16 +107,20 @@
             flex-direction: column;
             justify-content: center;
           }
+
           /*margin-right: 600px;*/
         }
+
         p {
           font-size: 1.8rem;
         }
+
         ul {
           padding-left: 0px;
+
           li {
             margin: 5px 0;
-            padding: 2px 0  2px 20px;
+            padding: 2px 0 2px 20px;
             background: url(/sites/amapl.com/themes/custom/bootamapl/less/images/black-dot.png) no-repeat 0 15px;
           }
         }
@@ -113,9 +128,8 @@
     }
 
 
-
-
   }
+
   .node-mixt-headband {
 
     position: relative;
@@ -127,15 +141,18 @@
       }
       margin: 25px 0;
     }
+
     .views-field-body {
       font-size: 1.6em;
       @media screen and (max-width: @screen-md) {
         font-size: 1.2em;
       }
+
       a {
         color: @blue-green-amapl;
       }
     }
+
     #views_slideshow_controls_text_le_saviez_vous_ss-block_slideshow_mixt_headband_1 {
       position: absolute;
       bottom: 50px;
@@ -149,9 +166,11 @@
       @media screen and (max-width: @screen-md) {
         right: calc(100% - 290px);
       }
+
       #views_slideshow_controls_text_pause_le_saviez_vous_ss-block_slideshow_mixt_headband_1 {
         display: none;
       }
+
       #views_slideshow_controls_text_previous_le_saviez_vous_ss-block_slideshow_mixt_headband_1 {
         a {
           background: url(../images/prev_btn.png) no-repeat 0 0;
@@ -161,6 +180,7 @@
           display: block;
         }
       }
+
       #views_slideshow_controls_text_next_le_saviez_vous_ss-block_slideshow_mixt_headband_1 {
         a {
           background: url(../images/next_btn.png) no-repeat 0 0;
@@ -171,6 +191,7 @@
         }
       }
     }
+
     #widget_pager_bottom_le_saviez_vous_ss-block_slideshow_mixt_headband_1 {
       position: absolute;
       z-index: 10;
@@ -184,6 +205,7 @@
       @media screen and (max-width: @screen-md) {
         right: calc(100% - 225px);
       }
+
       .views_slideshow_pager_field_item {
         a {
           display: block;
@@ -191,6 +213,7 @@
           height: 18px;
           text-indent: -2000px;
           overflow: hidden;
+
           &:before {
             content: "";
             width: 18px;
@@ -200,6 +223,7 @@
             opacity: 0.5;
           }
         }
+
         &.active {
           a:before {
             background: url(../images/little_disk.png) no-repeat 0 0;
@@ -208,6 +232,7 @@
         }
       }
     }
+
     @media screen and (min-width: @screen-md) {
       .views-field-body {
         font-size: 1.8em;
@@ -218,12 +243,15 @@
       .views-field-body {
         width: 100%;
       }
+
       #home-ss-illustrations {
         display: none;
       }
+
       #views_slideshow_controls_text_le_saviez_vous_ss-block_1 {
         left: 50px;
       }
+
       #widget_pager_bottom_le_saviez_vous_ss-block_1 {
         left: 110px;
       }
@@ -240,6 +268,7 @@
         right: 7%;
         top: -20px;
       }
+
       img {
         max-width: 650px;
         position: absolute;
@@ -248,36 +277,102 @@
       }
     }
   }
+
+}
+
+#block-views-headband-block-unique-headband {
   #headand-unique-container {
     position: relative;
     height: 320px;
     width: 100%;
-
+    margin: 0 -0px;
     display: block;
     background-image: url(/sites/amapl.com/themes/custom/bootamapl/less/images/home_headband/genou.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 100% 0;
+    #star {
+      position: absolute;
+      top: 220px;
+      right: 415px;
+      max-width: 60px!important;
+      z-index: 2;
+    }
+    #lines {
+      position: absolute;
+      top: 70px;
+      right: 415px;
+      max-width: 40px!important;
+      z-index: 2;
+    }
     &:after {
       content: "";
       display: block;
       clear: both;
     }
+
     .cutRight {
       clip-path: url(#cutRight)
     }
 
     .blogMainArticleMedia {
-      float: right;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
     }
-    .image {
+
+    .img-responsive {
+      @media screen and (max-width: @screen-md) {
+        display: none;
+      }
       margin: -20px 0 0 0;
       display: block;
-      max-width: 100%
+      max-width: 100%;
+      position: relative;
+      left: 30px;
     }
-    #left-headband-unique {
-      width: calc(100% - 500px);
-      position: absolute;
+
+
+    .field-name-body {
+      color: white;
+
+      h3 {
+        font-size: 4rem;
+      }
+
+      h4 {
+        font-style: italic;
+        font-size: 3rem;
+        font-weight: bold;
+
+        a {
+          display: inline;
+          background-image: linear-gradient(transparent 60%, #A53747 40%);
+          background-repeat: no-repeat;
+          background-size: 0% 100%;
+          transition: background-size 1.5s;
+          cursor: pointer;
+          background-size: 100% 100%;
+        }
+      }
+
+      a {
+        color: white;
+      }
+
+      ul {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        li {
+          flex-basis: 32%;
+          margin: 3px 0;
+          font-weight: bold;
+        }
+      }
     }
   }
 }
