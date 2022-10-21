@@ -15,6 +15,7 @@ function domainedo_media_user_default_permissions() {
     'name' => 'access scald dnd library',
     'roles' => array(
       'administrator' => 'administrator',
+      'contrib formation' => 'contrib formation',
       'webmaster' => 'webmaster',
     ),
     'module' => 'scald_dnd_library',
@@ -71,6 +72,7 @@ function domainedo_media_user_default_permissions() {
     'name' => 'create atom of any type',
     'roles' => array(
       'administrator' => 'administrator',
+      'contrib formation' => 'contrib formation',
       'webmaster' => 'webmaster',
     ),
     'module' => 'scald',
@@ -143,6 +145,7 @@ function domainedo_media_user_default_permissions() {
     'name' => 'edit any atom',
     'roles' => array(
       'administrator' => 'administrator',
+      'contrib formation' => 'contrib formation',
       'webmaster' => 'webmaster',
     ),
     'module' => 'scald',
@@ -153,6 +156,7 @@ function domainedo_media_user_default_permissions() {
     'name' => 'edit own atom',
     'roles' => array(
       'administrator' => 'administrator',
+      'contrib formation' => 'contrib formation',
       'webmaster' => 'webmaster',
     ),
     'module' => 'scald',
@@ -163,6 +167,7 @@ function domainedo_media_user_default_permissions() {
     'name' => 'fetch any atom',
     'roles' => array(
       'administrator' => 'administrator',
+      'contrib formation' => 'contrib formation',
       'webmaster' => 'webmaster',
     ),
     'module' => 'scald',
@@ -173,6 +178,7 @@ function domainedo_media_user_default_permissions() {
     'name' => 'fetch own atom',
     'roles' => array(
       'administrator' => 'administrator',
+      'contrib formation' => 'contrib formation',
     ),
     'module' => 'scald',
   );
@@ -193,6 +199,7 @@ function domainedo_media_user_default_permissions() {
       'administrator' => 'administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'contrib formation' => 'contrib formation',
       'webmaster' => 'webmaster',
     ),
     'module' => 'scald',
@@ -203,6 +210,7 @@ function domainedo_media_user_default_permissions() {
     'name' => 'view own atom',
     'roles' => array(
       'administrator' => 'administrator',
+      'contrib formation' => 'contrib formation',
       'webmaster' => 'webmaster',
     ),
     'module' => 'scald',

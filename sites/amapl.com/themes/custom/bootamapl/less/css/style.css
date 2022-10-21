@@ -10580,7 +10580,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
 }
 .view-display-id-block_headband #headband-complex > *#headband-col-3 ul li {
   margin: 5px 0;
-  padding: 2px 0  2px 20px;
+  padding: 2px 0 2px 20px;
   background: url(/sites/amapl.com/themes/custom/bootamapl/less/images/black-dot.png) no-repeat 0 15px;
 }
 .view-display-id-block_headband .node-mixt-headband {
@@ -10716,4 +10716,89 @@ body.not-front #under-main-title h2.page-header.simple-title {
   position: absolute;
   top: 0px;
   right: 0px;
+}
+#block-views-headband-block-unique-headband #headand-unique-container {
+  position: relative;
+  height: 320px;
+  width: 100%;
+  margin: 0 0px;
+  display: block;
+  background-image: url(/sites/amapl.com/themes/custom/bootamapl/less/images/home_headband/genou.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+#block-views-headband-block-unique-headband #headand-unique-container #star {
+  position: absolute;
+  top: 220px;
+  right: 415px;
+  max-width: 60px!important;
+  z-index: 2;
+}
+#block-views-headband-block-unique-headband #headand-unique-container #lines {
+  position: absolute;
+  top: 70px;
+  right: 415px;
+  max-width: 40px!important;
+  z-index: 2;
+}
+#block-views-headband-block-unique-headband #headand-unique-container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#block-views-headband-block-unique-headband #headand-unique-container .cutRight {
+  clip-path: url(#cutRight);
+}
+#block-views-headband-block-unique-headband #headand-unique-container .blogMainArticleMedia {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+#block-views-headband-block-unique-headband #headand-unique-container .img-responsive {
+  margin: -20px 0 0 0;
+  display: block;
+  max-width: 100%;
+  position: relative;
+  left: 30px;
+}
+@media screen and (max-width: 992px) {
+  #block-views-headband-block-unique-headband #headand-unique-container .img-responsive {
+    display: none;
+  }
+}
+#block-views-headband-block-unique-headband #headand-unique-container .field-name-body {
+  color: white;
+}
+#block-views-headband-block-unique-headband #headand-unique-container .field-name-body h3 {
+  font-size: 4rem;
+}
+#block-views-headband-block-unique-headband #headand-unique-container .field-name-body h4 {
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: bold;
+}
+#block-views-headband-block-unique-headband #headand-unique-container .field-name-body h4 a {
+  display: inline;
+  background-image: linear-gradient(transparent 60%, #A53747 40%);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 1.5s;
+  cursor: pointer;
+  background-size: 100% 100%;
+}
+#block-views-headband-block-unique-headband #headand-unique-container .field-name-body a {
+  color: white;
+}
+#block-views-headband-block-unique-headband #headand-unique-container .field-name-body ul {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#block-views-headband-block-unique-headband #headand-unique-container .field-name-body ul li {
+  flex-basis: 32%;
+  margin: 3px 0;
+  font-weight: bold;
 }

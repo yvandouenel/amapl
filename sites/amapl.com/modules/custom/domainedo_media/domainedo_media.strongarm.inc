@@ -13,6 +13,23 @@ function domainedo_media_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_unique_headband';
+  $strongarm->value = 'edit-submission';
+  $export['additional_settings__active_tab_unique_headband'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ds_extras_view_modes_unique_headband';
+  $strongarm->value = array(
+    0 => 'default',
+    1 => 'teaser',
+  );
+  $export['ds_extras_view_modes_unique_headband'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'scald_actions_powers';
   $strongarm->value = array(
     'fetch' => 0,
@@ -194,6 +211,14 @@ function domainedo_media_strongarm() {
     'lettre_info' => array(
       'name' => 'lettre_info',
       'title' => 'lettre info',
+      'description' => '',
+      'render_language' => 'XHTML',
+      'parseable' => TRUE,
+      'formats' => array(),
+    ),
+    'headband_unique' => array(
+      'name' => 'headband_unique',
+      'title' => 'headband unique',
       'description' => '',
       'render_language' => 'XHTML',
       'parseable' => TRUE,

@@ -172,17 +172,36 @@ function domainedo_media_image_default_styles() {
     ),
   );
 
+  // Exported image style: unique_headband.
+  $styles['unique_headband'] = array(
+    'label' => 'Bandeau unique',
+    'effects' => array(
+      7 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 523,
+          'height' => 378,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
   // Exported image style: zoom-desktop.
   $styles['zoom-desktop'] = array(
     'label' => 'zoom-desktop450x350',
     'effects' => array(
-      3 => array(
-        'name' => 'image_scale_and_crop',
+      4 => array(
+        'name' => 'manualcrop_crop_and_scale',
         'data' => array(
           'width' => 450,
           'height' => 350,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 0,
+          'style_name' => 'zoom-desktop',
         ),
-        'weight' => 1,
+        'weight' => 0,
       ),
     ),
   );

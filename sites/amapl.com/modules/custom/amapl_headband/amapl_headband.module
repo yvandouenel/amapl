@@ -8,11 +8,11 @@ require_once 'includes/utility.inc';
 function amapl_headband_node_postsave($node, $op) {
   watchdog('amapl_headband', "{$op} node {$node->nid} de type {$node->type} et de statut {$node->status}");
 
-  if ($node->type == 'mixt_headband' && $node->status == 1) {
+  if (($node->type == 'mixt_headband' || $node->type == 'unique_headband') && $node->status == 1) {
     // Récupération de tous les nodes mixt_headband
     $query = new EntityFieldQuery();
     $result = $query->entityCondition('entity_type', 'node')
-      ->entityCondition('bundle', 'mixt_headband')
+      ->entityCondition('bundle', array('mixt_headband','unique_headband'), 'IN')
       ->execute();
     $nodes_headband = node_load_multiple(array_keys($result['node']));
 
