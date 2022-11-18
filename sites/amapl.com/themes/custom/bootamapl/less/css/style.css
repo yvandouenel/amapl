@@ -9088,7 +9088,16 @@ body.not-front #under-main-title h2.page-header.simple-title {
   width: 95%;
 }
 .three-cols-home .col-news {
-  background: url(../images/home_actu_img.jpg) no-repeat 0 0;
+  position: relative;
+}
+.three-cols-home .col-news .region-block-news {
+  margin: 0 -15px;
+}
+.three-cols-home .col-news #img-home-bnc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 .three-cols-home .col-news div.home-rss {
   display: flex;
@@ -9096,26 +9105,16 @@ body.not-front #under-main-title h2.page-header.simple-title {
   flex-direction: column;
   min-height: 350px;
 }
-.three-cols-home .col-news h3.title-block-aggregator {
-  display: table;
-  padding: 10px 25px;
-  background-color: white;
-  margin: 300px auto 20px auto;
-  font-size: 2em;
-  color: black;
-  text-align: center;
-  z-index: 1;
-}
-.three-cols-home .col-news ul {
+.three-cols-home .col-news div.home-rss ul {
   list-style: none;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+.three-cols-home .col-news div.home-rss ul li {
   margin: 0;
   padding: 0;
 }
-.three-cols-home .col-news ul li {
-  margin: 0;
-  padding: 0;
-}
-.three-cols-home .col-news ul li a {
+.three-cols-home .col-news div.home-rss ul li a {
   position: relative;
   font-size: 2rem;
   color: black;
@@ -9123,7 +9122,7 @@ body.not-front #under-main-title h2.page-header.simple-title {
   margin-bottom: 20px;
   padding-left: 90px;
 }
-.three-cols-home .col-news ul li a:before {
+.three-cols-home .col-news div.home-rss ul li a:before {
   position: absolute;
   left: 0;
   top: 0;
@@ -9134,6 +9133,30 @@ body.not-front #under-main-title h2.page-header.simple-title {
   border-right: 5px solid white;
   background: white url(../images/picto_formation_bleu.png) no-repeat 0 0;
   background-size: 60px 60px;
+}
+.three-cols-home .col-news h2.block-title {
+  display: table;
+  padding: 10px 25px;
+  background-color: white;
+  width: 50%;
+  margin: 240px auto 0 auto;
+  text-transform: uppercase;
+  font-size: 2em;
+  color: black;
+  z-index: 1;
+  text-align: center;
+  font-size: 2.47rem;
+  height: 50px;
+}
+@media screen and (max-width: 992px) {
+  .three-cols-home .col-news h2.block-title {
+    margin: 20px auto 0 auto;
+  }
+}
+@media screen and (min-width: 1430px) {
+  .three-cols-home .col-news h2.block-title {
+    margin: 300px auto 0 auto;
+  }
 }
 .three-cols-home .col-news a[href="/aggregator/sources/2"] {
   display: none;

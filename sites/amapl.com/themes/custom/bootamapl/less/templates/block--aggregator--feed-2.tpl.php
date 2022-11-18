@@ -45,14 +45,17 @@
  * @ingroup templates
  */
 ?>
-<section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
+<section id="<?php print $block_html_id; ?>"
+         class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
+  <img id="img-home-bnc"
+       src="/sites/amapl.com/themes/custom/bootamapl/less/images/home_actu_img.jpg"
+       alt="">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
-    <h3 class="title-block-aggregator"><?php print $title; ?></h3>
-  <?php endif;?>
+    <h2 class="block-title"><?php print $title; ?></h2>
+  <?php endif; ?>
   <?php print render($title_suffix); ?>
-  <div class="home-rss" >
+  <div class="home-rss">
     <div>
       <?php print $content ?>
     </div>
