@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Date administration code.
+ * Date administration functionality.
  */
 
 /**
@@ -14,13 +14,22 @@ function date_default_formatter_settings_form($field, $instance, $view_mode, $fo
   $formatter = $display['type'];
   $form = array();
 
+  $date_formats = date_format_type_options();
   $form['format_type'] = array(
     '#title' => t('Choose how users view dates and times:'),
     '#type' => 'select',
-    '#options' => date_format_type_options(),
+    '#options' => $date_formats + array('custom' => t('Custom')),
     '#default_value' => $settings['format_type'],
     '#description' => t('To add or edit options, visit <a href="@date-time-page">Date and time settings</a>.', array('@date-time-page' => url('admin/config/regional/date-time'))),
     '#weight' => 0,
+  );
+
+  $form['custom_date_format'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Custom date format'),
+    '#description' => t('If "Custom", see the <a href="@url" target="_blank">PHP manual</a> for date formats. Otherwise, enter the number of different time units to display, which defaults to 2.', array('@url' => 'http://php.net/manual/function.date.php')),
+    '#default_value' => isset($settings['custom_date_format']) ? $settings['custom_date_format'] : '',
+    '#dependency' => array('edit-options-settings-format-type' => array('custom')),
   );
 
   $form['fromto'] = array(
@@ -116,6 +125,14 @@ function date_interval_formatter_settings_form($field, $instance, $view_mode, $f
     '#default_value' => $settings['interval_display'],
     '#weight' => 0,
   );
+  if (!empty($field['settings']['todate'])) {
+    $form['use_end_date'] = array(
+      '#title' => t('Use End date'),
+      '#description' => 'Use the End date, instead of the start date',
+      '#type' => 'checkbox',
+      '#default_value' => $settings['use_end_date'],
+    );
+  }
   return $form;
 }
 
@@ -179,14 +196,16 @@ function date_default_formatter_settings_summary($field, $instance, $view_mode) 
 /**
  * Settings summary for the interval formatter.
  *
- * @TODO Add settings later.
+ * @todo Add settings later.
  */
 function date_interval_formatter_settings_summary($field, $instance, $view_mode) {
   $summary = array();
   $display = $instance['display'][$view_mode];
   $settings = $display['settings'];
   $formatter = $display['type'];
-  $summary[] = t('Display time ago, showing @interval units.', array('@interval' => $settings['interval']));
+  $field = ($settings['use_end_date'] == 1) ? 'End' : 'Start';
+  $summary[] = t('Display time ago, showing @interval units. Using @field Date',
+    array('@interval' => $settings['interval'], '@field' => $field));
 
   return $summary;
 }
@@ -265,6 +284,8 @@ function _date_field_instance_settings_form($field, $instance) {
     'field' => $field,
     'instance' => $instance,
   );
+
+  // Trigger hook_date_field_instance_settings_form_alter().
   drupal_alter('date_field_instance_settings_form', $form, $context);
 
   return $form;
@@ -273,7 +294,7 @@ function _date_field_instance_settings_form($field, $instance) {
 /**
  * Form validation handler for _date_field_instance_settings_form().
  */
-function date_field_instance_settings_form_validate(&$form, &$form_state) {
+function _date_field_instance_settings_form_validate(&$form, &$form_state) {
   $settings = $form_state['values']['instance']['settings'];
 
   if ($settings['default_value'] == 'strtotime') {
@@ -333,7 +354,7 @@ function _date_field_widget_settings_form($field, $instance) {
       '#type' => 'textfield',
       '#title' => t('Custom input format'),
       '#default_value' => $settings['input_format_custom'],
-      '#description' => t("Override the input format selected above. Define a php date format string like 'm-d-Y H:i' (see <a href=\"@link\">http://php.net/date</a> for more details).", array('@link' => 'http://php.net/date')),
+      '#description' => t("Override the input format selected above. Define a PHP date format string like 'm-d-Y H:i' (see <a href=\"@link\">http://php.net/date</a> for more details).", array('@link' => 'http://php.net/date')),
       '#weight' => 5,
       '#fieldset' => 'date_format',
       '#attributes' => array('class' => array('indent')),
@@ -359,14 +380,16 @@ function _date_field_widget_settings_form($field, $instance) {
       '#weight' => 6,
     );
     $form['increment'] = array(
-      '#type' => 'select', '#title' => t('Time increments'),
+      '#type' => 'select',
+      '#title' => t('Time increments'),
       '#default_value' => $settings['increment'],
       '#options' => array(
         1 => t('1 minute'),
         5 => t('5 minute'),
         10 => t('10 minute'),
         15 => t('15 minute'),
-        30 => t('30 minute')),
+        30 => t('30 minute'),
+      ),
       '#weight' => 7,
       '#fieldset' => 'date_format',
     );
@@ -421,7 +444,7 @@ function _date_field_widget_settings_form($field, $instance) {
     '#description' => $description,
   );
   $form['advanced']['text_parts'] = array(
-    '#theme' => $widget['type'] == 'date_select' ? 'date_text_parts' : '',
+    '#theme' => $widget['type'] == 'date_select' ? 'date_text_parts' : NULL,
   );
   $text_parts = (array) $settings['text_parts'];
   foreach (date_granularity_names() as $key => $value) {
@@ -451,6 +474,7 @@ function _date_field_widget_settings_form($field, $instance) {
     'field' => $field,
     'instance' => $instance,
   );
+  // Trigger hook_date_field_widget_settings_form_alter().
   drupal_alter('date_field_widget_settings_form', $form, $context);
 
   return $form;
@@ -459,7 +483,7 @@ function _date_field_widget_settings_form($field, $instance) {
 /**
  * Form validation handler for _date_field_widget_settings_form().
  */
-function date_field_widget_settings_form_validate(&$form, &$form_state) {
+function _date_field_widget_settings_form_validate(&$form, &$form_state) {
   // The widget settings are in the wrong place in the form because of #tree on
   // the top level.
   $settings = $form_state['values']['instance']['widget']['settings'];
@@ -558,34 +582,13 @@ function _date_field_settings_form($field, $instance, $has_data) {
     '#value' => date_get_timezone_db($tz_handling),
   );
 
-  $form['cache_enabled'] = array(
-    '#type' => 'checkbox',
-    '#title' => t('Cache dates'),
-    '#description' => t('Date objects can be created and cached as date fields are loaded rather than when they are displayed to improve performance.'),
-    '#default_value' => !empty($settings['cache_enabled']),
-    '#weight' => 10,
-  );
-  $form['cache_count'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Maximum dates per field'),
-    '#default_value' => (isset($settings['cache_count'])) ? $settings['cache_count'] : 4,
-    '#description' => t("If set to '0', all date values on every entity will be cached. Note that caching every date on fields that may have a large number of multiple or repeating values may create a significant performance penalty when the cache is cleared. The suggested setting for multiple value and repeating fields is no more than 4 values per field."),
-    '#size' => 3,
-    '#weight' => 11,
-    '#states' => array(
-      'visible' => array(
-        'input[name="field[settings][cache_enabled]"]' => array(
-          'checked' => TRUE,
-        ),
-      ),
-    ),
-  );
-
   $context = array(
     'field' => $field,
     'instance' => $instance,
     'has_data' => $has_data,
   );
+
+  // Trigger hook_date_field_settings_form_alter().
   drupal_alter('date_field_settings_form', $form, $context);
 
   return $form;
@@ -594,7 +597,7 @@ function _date_field_settings_form($field, $instance, $has_data) {
 /**
  * Form validation handler for _date_field_settings_form().
  */
-function date_field_settings_validate(&$form, &$form_state) {
+function _date_field_settings_validate(&$form, &$form_state) {
   $field = &$form_state['values']['field'];
 
   if ($field['settings']['tz_handling'] == 'none') {
@@ -623,15 +626,6 @@ function date_field_settings_validate(&$form, &$form_state) {
 
   // Don't save the pseudo values created in the UI.
   unset($field['settings']['enddate_get'], $field['settings']['enddate_required']);
-
-  if (!empty($field['settings']['cache_enabled'])) {
-    if (!is_numeric($field['settings']['cache_count'])) {
-      form_set_error('field[settings][cache_count]', t('The number of cache values must be a number.'));
-    }
-    elseif ($field['settings']['cache_count'] < 0) {
-      form_set_error('field[settings][cache_count]', t('The number of cache values must be a number 0 or greater.'));
-    }
-  }
 }
 
 /**
