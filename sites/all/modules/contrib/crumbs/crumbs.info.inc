@@ -17,7 +17,7 @@ function crumbs_permission() {
 function crumbs_menu() {
   $base = 'admin/structure/crumbs';
   $items = array();
-  $items["$base"] = array(
+  $items[$base] = array(
     'title' => 'Crumbs',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('crumbs_admin_weights_form'),
@@ -94,10 +94,14 @@ function crumbs_menu() {
   );
 
   if (module_exists('menu')) {
+    // Placeholder route for <nolink> items from special_menu_items module.
+    /* @see menu_link_load() */
     $items['crumbs/special-menu-item/%menu_link'] = array(
       'access callback' => TRUE,
+      /* @see crumbs_special_menu_link_page() */
       'page callback' => 'crumbs_special_menu_link_page',
       'page arguments' => array(2),
+      /* @see crumbs_special_menu_link_title() */
       'title callback' => 'crumbs_special_menu_link_title',
       'title arguments' => array(2),
       'type' => MENU_CALLBACK,
