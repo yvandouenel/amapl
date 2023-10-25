@@ -366,56 +366,61 @@
       width: 95%;
     }
   }
+
   /* Actualités devenus rss de bncplus******************************************/
   .col-news {
-    background: url(../images/home_actu_img.jpg) no-repeat 0 0;
+    position: relative;
+    .region-block-news {
+      margin: 0 -15px;
+    }
+    #img-home-bnc {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
     div.home-rss{
       display: flex;
       justify-content: space-between;
       flex-direction: column;
       min-height: 350px;
-    }
-    h3.title-block-aggregator {
-      display: table;
-      padding: 10px 25px;
-      background-color: white;
-
-      margin: 300px auto 20px auto;
-      font-size: 2em;
-      color: black;
-      text-align: center;
-      z-index: 1;
-    }
-    ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      li {
-        margin: 0;
+      ul {
+        list-style: none;
+        margin: 20px 0 0 0;
         padding: 0;
-        a {
-          position: relative;
-          font-size: 2rem;
-          color: black;
-          display: block;
-         margin-bottom: 20px;
-          padding-left: 90px;
-          &:before {
-            position: absolute;
-            left: 0;
-            top: 0;
-            content: "";
-            width: 80px;
-            height: 72px;
-            display: table;
-            border-right: 5px solid white;
-            background: white url(../images/picto_formation_bleu.png) no-repeat 0 0;
-            background-size: 60px 60px;
+        li {
+          margin: 0;
+          padding: 0;
+          a {
+            position: relative;
+            font-size: 2rem;
+            color: black;
+            display: block;
+            margin-bottom: 20px;
+            padding-left: 90px;
+            &:before {
+              position: absolute;
+              left: 0;
+              top: 0;
+              content: "";
+              width: 80px;
+              height: 72px;
+              display: table;
+              border-right: 5px solid white;
+              background: white url(../images/picto_formation_bleu.png) no-repeat 0 0;
+              background-size: 60px 60px;
 
+            }
           }
         }
       }
     }
+    h2.block-title {
+      .title-home-3-cols;
+      font-size: 2.47rem;
+      height: 50px;
+    }
+
     a[href="/aggregator/sources/2"] {
       display: none;
     }

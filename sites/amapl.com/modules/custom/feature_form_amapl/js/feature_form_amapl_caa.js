@@ -289,7 +289,8 @@
         } else if (begin_fiscal_year == 2020 ||
           begin_fiscal_year == 2021 ||
           begin_fiscal_year == 2022 ||
-          begin_fiscal_year == 2023
+          begin_fiscal_year == 2023 ||
+          begin_fiscal_year == 2024
         ){
           price = (248 / 1.2).toFixed(10);
           console.log("cas 3");
