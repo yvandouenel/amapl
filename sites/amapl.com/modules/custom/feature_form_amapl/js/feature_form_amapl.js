@@ -50,6 +50,8 @@
       $('select#edit-field-pour-les-revenus-und option:contains("2020")').hide();
       // Effacer l'année 2021
       $('select#edit-field-pour-les-revenus-und option:contains("2021")').hide();
+      // Effacer l'année 2022
+      $('select#edit-field-pour-les-revenus-und option:contains("2022")').hide();
 
       $('select#edit-field-pour-les-revenus-und option').removeAttr('selected');
       $('select#edit-field-pour-les-revenus-und option:last').attr('selected', 'selected');
